@@ -1,0 +1,582 @@
+// Converts a px amount to rem
+@function toRem($pxAmount) {
+    @return ($pxAmount/16) * 1rem;
+}
+
+$questrial: 'Questrial', sans-serif;
+$headerHeight: 4rem; 
+
+$projCardWidth: toRem(250);
+$projCardMargin: toRem(20);
+
+
+@media (min-width: 769px) {
+    $size_h1: toRem(50);
+    $size_h2: toRem(20);
+    $size_p: toRem(16);    
+}
+
+@media (max-width: 768px) {
+    $size_h1: toRem(48);
+    $size_h2: toRem(18);
+    $size_p: toRem(14);
+}
+
+@media (max-width: 480px) {
+    $size_h1: toRem(42);
+    $size_h2: toRem(14);
+    $size_p: toRem(10);
+}
+
+@media (max-width: 200px) {
+    $size_h1: toRem(36);
+    $size_h2: toRem(10);
+    $size_p: toRem(6);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+div.app {
+    width: 100%;
+}
+
+$size_h1: toRem(50);
+$size_h2: toRem(40);
+$size_h3: toRem(30);
+$size_h4: toRem(22);
+$size_h5: toRem(20);
+$size_p: toRem(14);
+
+h1 {
+    font-family: 'Zilla Slab', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: toRem(50);
+    line-height: auto;
+
+    color: #000000;
+}
+
+h2 {
+    font-family: 'Zilla Slab', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: toRem(40); 
+    line-height: auto;
+
+    color: #000000;
+}
+
+h3 {
+    font-family: 'Zilla Slab', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: toRem(30); 
+    line-height: auto;
+
+    color: #000000;
+}
+
+h4 {
+    font-family: 'Zilla Slab', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: toRem(22); 
+    line-height: auto;
+
+    color: #000000;
+}
+
+h5 {
+    font-family: 'Zilla Slab', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: toRem(12); 
+    line-height: auto;
+
+    color: #000000;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: toRem(14);
+    line-height: auto;
+}     
+
+
+header {
+    $divRight: 32rem;
+    $divLeft: 5rem;
+    $marginWidth: 2rem;
+
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: $headerHeight;
+    z-index: 1;
+
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+
+    overflow: hidden;
+    filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+    background-color: #ffffff;
+
+    img {
+        width: $divLeft/2;
+    }
+
+    img.navIcon {
+        width: $divLeft/3;
+    }
+
+    .left {
+        width: $divLeft;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        margin-left: $marginWidth/2;
+    }
+
+    .right {
+        width: $divRight;
+        height: 100%;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+
+        margin-right: $marginWidth;
+    }
+
+    button {
+        width: $divLeft/1.5;
+        height: $divLeft/1.5;
+
+        border: none;
+        background-color: #00000000;
+    }
+
+    // a.button {
+    //     width: $divRight/4;
+    //     height: inherit;
+      
+    //     font-family: $questrial;
+    //     font-style: normal;
+    //     font-weight: normal;
+    //     font-size: $size_h4;
+    //     line-height: $headerHeight;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     text-decoration: none;
+
+    //     color: #000000;
+    //     background-color: #00000000;        
+    // }
+
+    .buttonNav {
+        width: $divRight/4;
+        height: inherit;
+      
+        font-family: $questrial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: $size_h4;
+        line-height: $headerHeight;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    
+        color: #000000;
+        background-color: #00000000;  
+    }
+
+    .buttonNav:hover {
+        font-family: $questrial;
+
+        color: #aaaaaa;
+    }
+}
+
+div.menu {
+    $divLeft: 5rem;
+    $marginWidth: 2rem;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    min-width: toRem(192);
+    max-width: toRem(300);
+    height: 100%;
+    z-index: 1;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    overflow: hidden;
+    filter: drop-shadow(-1px 1px 4px rgba(0, 0, 0, 0.25));
+    background-color: #ffffff;
+
+    div.buttonClose {
+        width: 50%;
+        height: $headerHeight;
+        margin-bottom: toRem(80);
+        margin-right: $marginWidth;
+
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-end;
+        align-items: center;
+        align-self: flex-end;
+
+        button {
+            width: $divLeft/1.5;
+            height: $divLeft/1.5;
+
+            border: none;
+            background-color: #00000000;
+        }
+
+        img.navIcon {
+            width: $divLeft/3;
+        }
+    }
+
+    div.buttons {
+        $buttonHeight: toRem(75);
+
+        width: 100%;
+        height: $buttonHeight*4;
+        margin-bottom: toRem(50);
+
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .buttonNav {
+            width: 80%;
+            height: $buttonHeight;
+            padding-left: toRem(30);
+        
+            font-family: $questrial;
+            font-style: normal;
+            font-weight: normal;
+            font-size: $size_h4;
+            line-height: $headerHeight;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            text-decoration: none;
+        
+            color: #000000;
+            background-color: #00000000;  
+        }
+    }
+
+
+}
+
+
+#contact {
+    position: fixed;
+    top: 35vh;
+    left: 2.5rem;
+    height: 15rem;
+    z-index: 1;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+
+    button {
+        border-radius: 100%;
+        width: 3.125rem;
+        height: 3.125rem;
+
+        border: .2rem solid;
+        border-color: #000000;
+        background-color: #ffffffff;
+
+        img {
+            width: 65%;
+            opacity: 1;
+        }
+    }
+
+}
+
+
+div.background {
+    width: 100%;
+    max-height: toRem(500);
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    overflow: hidden;
+
+    img.desktop {
+        width: 100%;
+        min-width: toRem(1000);
+        height: auto;
+
+        
+        filter: grayscale(50%);
+    }
+
+    img.mobile {
+        width: 100%;
+        min-width: toRem(300);
+        height: auto;
+    }
+}
+
+
+div.content {
+    position: relative;
+    width: 100%;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-self: center;
+
+    background-color: #ffffff;
+
+    overflow: auto;
+
+    div.intro {
+        position: relative;
+        width: 100%;
+    
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-self: center;
+    
+        background-color: #3E4A68;
+    
+        overflow: auto;
+    
+        div.text {
+            position: relative;
+            width: 70%;
+            // margin: 0 10rem 5rem 10rem;
+    
+            margin-bottom: 5rem;
+            margin-left: auto;
+            margin-right: auto;
+    
+            display: flex;
+            flex-flow: column wrap;
+            align-self: flex-end;
+        }
+    
+        h1 {
+            font-weight: 400;
+            color: #ffffff;
+        }
+    
+        h4 {
+            font-family: $questrial;
+            line-height: 2rem;
+            color: #ffffff;
+        }
+    }
+    
+    div.wrapper {
+        position: relative;
+        width: 75%;
+        margin: auto;
+        margin-bottom: toRem(150);
+
+        .titleUnderscore {
+            position: relative;
+            width: 3rem;
+            height: .2rem;
+
+            margin-top: toRem(-25);
+            margin-bottom: toRem(30);
+
+            background-color: #000000;
+        }
+
+        h2 {
+            position: relative;
+            width: 100%;
+        }
+
+        h3 {
+            position: relative;
+            width: 100%;
+            margin-top: toRem(0);
+        }
+    }
+    
+    div.projects {
+        position: relative;
+        width: 100%;
+        margin: auto;
+
+        .titleUnderscore {
+            position: relative;
+            width: 3rem;
+            height: .2rem;
+
+            margin-top: toRem(-25);
+            margin-bottom: toRem(30);
+            margin-left: 12.5%;
+
+            background-color: #000000;
+        }
+
+        h2 {
+            position: relative;
+            width: 75%;
+            margin-left: 12.5%;
+        }
+
+        h3 {
+            position: relative;
+            width: 75%;
+            margin-top: toRem(0);
+            margin-left: 12.5%;
+        }
+    
+        div.cardsDesktop {
+            position: relative;
+            width: 75%;
+            margin: auto;
+            margin-bottom: toRem(100);
+
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: flex-start;
+        
+            overflow: auto;
+        }
+
+        div.cardsMobile {
+            position: relative;
+            width: 87.5%;
+            margin-left: 12.5%;
+            margin-bottom: toRem(100);
+
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+        
+            overflow: auto;
+        }
+
+        div.card {
+            width: $projCardWidth;
+            margin: $projCardMargin;
+
+            display: flex;
+            flex-flow: column;
+            flex-shrink: 0;
+            justify-content: flex-start;
+            align-items: flex-start;
+            overflow: hidden;
+    
+            border-radius: toRem(10);
+            border: none;
+            background-color: #ffffff;
+            filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
+    
+            div.imageHolder {
+                width: $projCardWidth;
+                max-height: $projCardWidth;
+    
+                background-color: #aaaaaa;
+    
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+    
+            div.text {
+                width: $projCardWidth;
+                min-height: $projCardWidth;
+                padding: toRem(20);
+                padding-bottom: toRem(10);
+    
+                display: flex;
+                flex-flow: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+    
+                h4 {
+                    margin-top: toRem(-5);
+                }
+    
+                p {
+                    margin-top: toRem(-20);
+                }          
+            }
+    
+            div.tags {
+                position: relative;
+                width: 100%;
+                bottom: 0;
+                
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-top: auto;
+    
+                h5 {
+                    margin-top: toRem(-5);
+    
+                    font-family: 'Poppins', sans-serif;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: toRem(12);
+                    line-height: toRem(5);
+                }
+
+            }  
+            
+        }
+
+        div.cardLast {
+            width: $projCardMargin;
+            margin: $projCardMargin;
+
+            // display: flex;
+            // flex-flow: column;
+            flex-shrink: 0;
+            // justify-content: flex-start;
+            // align-items: flex-start;
+            // overflow: hidden;
+    
+            // border-radius: toRem(10);
+            // background-color: #ffffff;
+            // filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
+        }
+
+    }
+}
+
+
+
