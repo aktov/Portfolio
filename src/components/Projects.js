@@ -58,7 +58,7 @@ const Others = (props) => {
               />
       )}
       
-      {!(props.screenWidth > 768) && <div className='cardLast'> </div>}
+      {(props.screenWidth <= 768) && <div className='cardLast'> </div>}
     </div>
   );
 }
@@ -70,8 +70,8 @@ class Projects extends React.Component {
       <div className='projects'>
         <SectionTitle title='projects'/> 
 
-        <h3> RECENT </h3>
-        <h3> OTHER PROJECTS </h3>
+        <h4> RECENT </h4>
+        <h4> OTHER PROJECTS </h4>
         <Others screenWidth={this.props.screenWidth} />
 
       </div> 

@@ -31,7 +31,7 @@ class Mobile extends React.Component {
 
         <Background screenWidth={this.props.screenWidth} />
 
-        <Content/>
+        <Content screenWidth={this.props.screenWidth} />
       </div>
     );
   }

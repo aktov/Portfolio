@@ -31,7 +31,7 @@ class ProjectCard extends React.Component {
         </div>
 
         <div className='text'>
-          <h4> {this.props.title} </h4>
+          <h4 className='cardTitle'> {this.props.title} </h4>
           <p> {this.props.desc} </p>
 
           {this.props.tags && <Tags names={this.props.tags} color={this.props.color} />}
