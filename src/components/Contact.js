@@ -1,5 +1,4 @@
 import React from 'react';
-import '../App.scss';
 
 // import linkedin from '../images/iconIn.png';
 import mail from '../images/iconEmail.png';

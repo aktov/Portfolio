@@ -1,5 +1,4 @@
 import React from 'react';
-import '../App.scss';
 
 import bckgrdDesktop from '../images/background.svg';
 import bckgrdMobile from '../images/backgroundMobile.png';

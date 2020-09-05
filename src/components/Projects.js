@@ -1,5 +1,4 @@
 import React from 'react';
-import '../App.scss';
 
 import Card from './ProjectCard.js';
 import SectionTitle from './SectionTitle';
@@ -9,9 +8,12 @@ import img_inTune from '../images/cardImage_inTune.png';
 
 const projectCards = [
   {
-    title: 'PROJECT TITLE',
-    descr: 'Lorem ipsum yada yadda something something cool here sweet and simple',
-    image: undefined
+    title: 'yahoo mobile redesign',
+    descr: 'Initial user testing on students found that the Yahoo mobile site had several key usability issues. My team and I prototyped redesigns of Yahoo’s site for mobile, which aimed to increase efficiency and decrease user errors.',
+    image: undefined,
+    tags: ['Figma', 'user testing', 'wireframing', 'prototyping'],
+    color: '#B187F3',
+    link: undefined
   },
   {
     title: 'PROJ PARKING FINE',
@@ -23,13 +25,19 @@ const projectCards = [
   },
   {
     title: 'INTUNE VISUALIZER',
-    descr: 'Lorem ipsum yada yadda something something cool here sweet and simple',
-    image: img_inTune
+    descr: 'A web app for Spotify and Last.fm users to visualize the music history and genres of themselves and their friends',
+    image: img_inTune,
+    tags: ['HTML', 'CSS', 'bootstrap', 'javascript', 'jquery', 'firebase', 'node.js', 'last.fm api'],
+    color: '#709CE3',
+    link: undefined
   },
   {
-    title: 'PROJECT TITLE2',
-    descr: 'Lorem ipsum yada yadda something something cool here sweet and simple',
-    image: undefined
+    title: 'PREPD',
+    descr: 'A web app to aid meal prepping by supplying the user with quick access to recipes and easy organization',
+    image: undefined,
+    tags: ['HTML', 'CSS', 'bootstrap', 'javascript', 'jquery', 'node.js'],
+    color: '#FFAC46',
+    link: undefined
   },
   {
     title: 'PROJECT TITLE3',

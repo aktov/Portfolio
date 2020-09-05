@@ -1,5 +1,4 @@
 import React from 'react';
-import '../App.scss';
 
 class SectionTitle extends React.Component {
   render() {

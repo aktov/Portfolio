@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.scss';
+
 import logo from '../images/logoBlack.svg';
 
 import Navigation from './Navigation.js';

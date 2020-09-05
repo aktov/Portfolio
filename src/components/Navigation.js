@@ -1,5 +1,4 @@
 import React from 'react';
-import '../App.scss';
 
 import NavMenu from './NavMenu.js';
 
