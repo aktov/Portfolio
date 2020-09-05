@@ -1,29 +1,9 @@
 import React from 'react';
 
 import Contact from './Contact.js';
+import NavButtons from './NavButtons.js';
 
-import nav from '../images/nav.svg';
 import close from '../images/close.svg';
-
-
-const headerCategories = [
-  {name: 'about', link: '.'},
-  {name: 'experience', link: '.'},
-  {name: 'projects', link: '.'},
-  {name: 'resume', link: '.'},
-]
-
-const HeaderButton = (props) => {
-  function handleClick(e) {
-    e.preventDefault();
-  }
-
-  return (
-    <a href={props.link} className='buttonNav' onClick={handleClick}> {props.text} </a>
-  );
-}
-
-
 
 class NavMenu extends React.Component {
   constructor(props) {
@@ -36,20 +16,13 @@ class NavMenu extends React.Component {
     this.props.toggleMenu();
   }
 
-
   render() {
     return (
       <div className='menu'>
         <div className='buttonClose'>
           <button onClick={this.handleClick}> <img className='navIcon' src={close} alt='Close'/> </button>
         </div>
-        <div className='buttons'>
-          {headerCategories.map((category) => 
-          <HeaderButton key={category.name} 
-                        text={category.name} 
-                        link={category.link}/>
-          )}
-        </div>
+        <NavButtons/>
         <Contact/> 
       </div>
     );

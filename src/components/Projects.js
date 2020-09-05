@@ -76,6 +76,7 @@ class Projects extends React.Component {
   render() {
     return (
       <div className='projects'>
+        <div id='anchor_projects' className='anchor'></div>
         <SectionTitle title='projects'/> 
 
         <h4> RECENT </h4>

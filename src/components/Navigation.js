@@ -1,36 +1,15 @@
 import React from 'react';
 
-import NavMenu from './NavMenu.js';
+// import NavMenu from './NavMenu.js';
+import NavButtons from './NavButtons.js';
 
 import nav from '../images/nav.svg';
-
-
-const headerCategories = [
-  {name: 'about', link: '.'},
-  {name: 'experience', link: '.'},
-  {name: 'projects', link: '.'},
-  {name: 'resume', link: '.'},
-]
-
-const HeaderButton = (props) => {
-  function handleClick(e) {
-    e.preventDefault();
-  }
-
-  return (
-    <a href={props.link} className='buttonNav' onClick={handleClick}> {props.text} </a>
-  );
-}
 
 // Navigation component for the desktop version of the site
 const NavDesktop = (props) => {
   return (
     <div className='right' style={{ justifyContent: "space-around" }}>
-      {headerCategories.map((category) => 
-        <HeaderButton key={category.name} 
-                      text={category.name} 
-                      link={category.link}/>
-      )}
+      <NavButtons/>
     </div> 
   );
 }

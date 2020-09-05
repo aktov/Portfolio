@@ -12,7 +12,7 @@ const Intro = (props) => {
   }
 
   return (
-    <div className='intro'> 
+    <div id='div_intro' className='intro'> 
       <div className='text'>
         <h1 style={{ fontSize: resizeFont(props.screenWidth) }}> I'm Alex, a designer & developer </h1>
         <h4> {`
@@ -29,6 +29,7 @@ const Intro = (props) => {
 const About = (props) => {
   return (
     <div className='wrapper'>
+      <div id='anchor_about' className='anchor'></div>
       <SectionTitle title='about me'/> 
         <div className='content'>
           <div className='text'>
@@ -47,6 +48,7 @@ const About = (props) => {
 const Experience = (props) => {
   return (
     <div className='wrapper'>
+      <div id='anchor_experience' className='anchor'></div>
       <SectionTitle title='experience'/> 
 
     </div> 
