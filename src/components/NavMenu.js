@@ -9,21 +9,26 @@ class NavMenu extends React.Component {
   constructor(props) {
     super(props)
 
-    this.handleClick = this.handleClick.bind(this);
+    this.closeMenu = this.closeMenu.bind(this);
   }
 
-  handleClick(e) {
+  closeMenu(e) {
     this.props.toggleMenu();
   }
 
   render() {
     return (
       <div className='menu'>
-        <div className='buttonClose'>
-          <button onClick={this.handleClick}> <img className='navIcon' src={close} alt='Close'/> </button>
+        <div className='outside'>
+          <button onClick={this.closeMenu}> </button>
         </div>
-        <NavButtons/>
-        <Contact/> 
+        <div className='inside'>
+          <div className='buttonClose'>
+            <button onClick={this.closeMenu}> <img className='navIcon' src={close} alt='Close'/> </button>
+          </div>
+          <NavButtons/>
+          <Contact screenWidth={this.props.screenWidth} /> 
+        </div>
       </div>
     );
   }

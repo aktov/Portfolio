@@ -16,7 +16,7 @@ class Desktop extends React.Component {
         <Header useMobileNav={false} />
         <Background screenWidth={this.props.screenWidth} />
         
-        <Contact/> 
+        <Contact screenWidth={this.props.screenWidth} /> 
         <Content screenWidth={this.props.screenWidth} />
       </div>
     );

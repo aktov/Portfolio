@@ -226,88 +226,111 @@ header {
 }
 
 div.menu {
-    $divLeft: 5rem;
-    $marginWidth: 2rem;
-
     position: fixed;
     top: 0;
-    right: 0;
-    width: 60%;
-    min-width: toRem(192);
-    max-width: toRem(300);
-    height: 100%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     z-index: 1;
 
     display: flex;
-    flex-flow: column;
-    justify-content: flex-start;
-    align-items: center;
+    flex-flow: row;
 
-    overflow: hidden;
-    filter: drop-shadow(-1px 1px 4px rgba(0, 0, 0, 0.25));
-    background-color: #ffffff;
-
-    div.buttonClose {
-        width: 50%;
-        height: $headerHeight;
-        margin-bottom: toRem(80);
-        margin-right: $marginWidth;
-
-        display: flex;
-        flex-flow: row;
-        justify-content: flex-end;
-        align-items: center;
-        align-self: flex-end;
+    div.outside {
+        height: 100%;
+        flex-grow: 4;
 
         button {
-            width: $divLeft/1.5;
-            height: $divLeft/1.5;
+            width: 100%;
+            height: 100%;
 
             border: none;
+            outline: none;
             background-color: #00000000;
-        }
-
-        img.navIcon {
-            width: $divLeft/3;
-            max-width: 100%;
         }
     }
 
-    div.buttons {
-        $buttonHeight: toRem(75);
+    div.inside {
+        $divLeft: 5rem;
+        $marginWidth: 2rem;
 
-        width: 100%;
-        height: $buttonHeight*4;
-        margin-bottom: toRem(50);
+        width: 60%;
+        min-width: toRem(192);
+        max-width: toRem(300);
+        height: 100%;
 
         display: flex;
         flex-flow: column;
         justify-content: flex-start;
-        align-items: flex-start;
+        align-items: center;
 
-        .buttonNav {
-            width: 80%;
-            height: $buttonHeight;
-            padding-left: toRem(30);
-        
-            font-family: $questrial;
-            font-style: normal;
-            font-weight: normal;
-            font-size: $size_h4;
-            line-height: $headerHeight;
+        overflow: hidden;
+        filter: drop-shadow(-1px 1px 4px rgba(0, 0, 0, 0.25));
+        background-color: #ffffff;
+
+        div.buttonClose {
+            width: 50%;
+            height: $headerHeight;
+            margin-bottom: 15%;
+            margin-right: $marginWidth;
+
             display: flex;
-            justify-content: flex-start;
+            flex-flow: row;
+            flex-shrink: 0;
+            justify-content: flex-end;
             align-items: center;
+            align-self: flex-end;
 
-            border: none;
-            outline: none;
-            color: #000000;
-            background-color: #00000000;  
+            button {
+                width: $divLeft/1.5;
+                height: $divLeft/1.5;
+
+                border: none;
+                background-color: #00000000;
+            }
+
+            img.navIcon {
+                width: $divLeft/3;
+                max-width: 100%;
+            }
         }
 
-        .buttonNav:hover {
-            font-family: $questrial;
-            color: #aaaaaa;
+        div.buttons {
+            $buttonHeight: toRem(75);
+
+            width: 100%;
+            height: $buttonHeight*4;
+            margin-bottom: 15%;
+
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            .buttonNav {
+                width: 80%;
+                height: $buttonHeight;
+                padding-left: toRem(30);
+            
+                font-family: $questrial;
+                font-style: normal;
+                font-weight: normal;
+                font-size: $size_h4;
+                line-height: $headerHeight;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                border: none;
+                outline: none;
+                color: #000000;
+                background-color: #00000000;  
+            }
+
+            .buttonNav:hover {
+                font-family: $questrial;
+                color: #aaaaaa;
+            }
         }
     }
 }
@@ -317,10 +340,10 @@ a.active {
 }
 
 
-#contact {
+div.contact {
     position: fixed;
     top: 35vh;
-    left: 2.5rem;
+    left: 2.5%;
     height: 15rem;
     z-index: 1;
 
@@ -333,9 +356,12 @@ a.active {
         width: 3.125rem;
         height: 3.125rem;
 
+        outline: none;
         border: .2rem solid;
         border-color: #000000;
         background-color: #ffffffff;
+
+        cursor: pointer;
 
         img {
             width: 65%;

@@ -26,7 +26,8 @@ class Mobile extends React.Component {
     return (
       <div className='app'>
         <Header useMobileNav={true} toggleMenu={this.toggleMenu}/>
-        {this.state.menuOpen && <NavMenu toggleMenu={this.toggleMenu}/> }
+        {this.state.menuOpen && 
+        <NavMenu toggleMenu={this.toggleMenu} screenWidth={this.props.screenWidth} /> }
 
         <Background screenWidth={this.props.screenWidth} />
 
