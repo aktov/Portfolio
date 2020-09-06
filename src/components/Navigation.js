@@ -1,6 +1,5 @@
 import React from 'react';
 
-// import NavMenu from './NavMenu.js';
 import NavButtons from './NavButtons.js';
 
 import nav from '../images/nav.svg';
@@ -22,7 +21,11 @@ const NavMobile = (props) => {
 
   return (
     <div className='right' style={{ justifyContent: "flex-end" }}>
-      <button onClick={handleClick}> <img className='navIcon' src={nav} alt='Menu'/> </button>
+      <button 
+        onClick={handleClick} 
+        aria-label='Open nav menu'> 
+        <img className='navIcon' src={nav} alt='Menu'/> 
+      </button>
     </div> 
   );
 }

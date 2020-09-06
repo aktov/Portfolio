@@ -8,10 +8,10 @@ const headerCategories = [
 ]
 
 // Button component
-const HeaderButton = (props) => {
-  function handleClick(e) {
-    e.preventDefault();
+const Button = (props) => {
 
+  function handleClick(e) {
+    // e.preventDefault();
     let anchor = document.getElementById('anchor_' + props.text);
     if (anchor) {
       anchor.scrollIntoView({behavior: 'smooth', block: 'start'});
@@ -19,13 +19,13 @@ const HeaderButton = (props) => {
   }
 
   return (
-    <a  href={`#anchor_${props.text}`} 
+    <button  //href={`#anchor_${props.text}`} 
         id={props.text} 
-        className='buttonNav' 
+        className='buttonNav'
         onClick={handleClick}
         aria-label={`Go to ${props.text}`}>
         {props.text}
-    </a>
+    </button>
   );
 }
 
@@ -34,8 +34,8 @@ class NavButtons extends React.Component {
     return (
       <div className='buttons'>
         {headerCategories.map((category) => 
-        <HeaderButton key={category.name} 
-                      text={category.name}/>
+        <Button key={category.name} 
+                text={category.name}/>
         )}
       </div>
     );

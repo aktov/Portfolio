@@ -5,11 +5,21 @@ import logo from '../images/logoBlack.svg';
 import Navigation from './Navigation.js';
 
 class Header extends React.Component {
+  handleClick(e) {
+    document.getElementById('anchor_page').scrollIntoView({behavior: 'smooth', block: 'start'});
+  }
+
   render() {
     return (
     <header className='header'>
-      <div className='left'> <a href='.'> <img src={logo} alt='Home'/> </a> </div>
-      {/* {this.props.useMobileNav ? <NavMobile toggleMenu={this.props.toggleMenu}/> : <Navigation/>} */}
+      <div className='left'> 
+        <button 
+          onClick={this.handleClick}
+          aria-label='Go back to top'>
+          <img src={logo} alt='Back to top'/> 
+        </button> 
+      </div>
+      
       <Navigation useMobileNav={this.props.useMobileNav} toggleMenu={this.props.toggleMenu} />
     </header>
     );

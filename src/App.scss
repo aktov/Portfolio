@@ -177,17 +177,19 @@ header {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                text-decoration: none;
-            
+
+                outline: none;
                 color: #000000;
-                background-color: #00000000;  
+                background-color: #00000000; 
+                
+                cursor: pointer;
             }
         
             .buttonNav:hover {
                 font-family: $questrial;
-        
                 color: #aaaaaa;
             }
+
         }
     }
 
@@ -196,7 +198,10 @@ header {
         height: $divLeft/1.5;
 
         border: none;
+        outline: none;
         background-color: #00000000;
+
+        cursor: pointer;
     }
 
     // a.button {
@@ -293,14 +298,22 @@ div.menu {
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            text-decoration: none;
-        
+
+            border: none;
+            outline: none;
             color: #000000;
             background-color: #00000000;  
         }
+
+        .buttonNav:hover {
+            font-family: $questrial;
+            color: #aaaaaa;
+        }
     }
+}
 
-
+a.active {
+    color: #ffffff
 }
 
 
@@ -456,7 +469,8 @@ div.content {
             .text {
                 width: 50%;
                 margin-bottom: toRem(30);
-                flex-grow: 2;
+                flex-grow: 1;
+                flex-basis: 50%;
 
                 p {
                     margin-top: 0;
@@ -481,7 +495,7 @@ div.content {
                 width: 35%;
                 max-width: toRem(150);
                 height: auto;
-                margin-right: toRem(50);              
+                margin-right: 5%;              
             }
 
             .mobile {
