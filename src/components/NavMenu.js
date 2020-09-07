@@ -18,7 +18,7 @@ class NavMenu extends React.Component {
 
   render() {
     return (
-      <div className='menu'>
+      <div className={this.props.menuOpen ? 'menu menuIn' : 'menu menuOut'}>
         <div className='outside'>
           <button onClick={this.closeMenu}> </button>
         </div>

@@ -17,6 +17,7 @@ class Header extends React.Component {
           onClick={this.handleClick}
           aria-label='Go back to top'>
           <img src={logo} alt='Back to top'/> 
+          <span className='toolTip'> scroll back to top </span>
         </button> 
       </div>
       

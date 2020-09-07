@@ -1,30 +1,16 @@
 import React from 'react';
 
-import Card from './ProjectCard.js';
+import Card from './Card.js';
 import SectionTitle from './SectionTitle';
 
-import img_parking from '../images/cardImage_parking.png';
 import img_inTune from '../images/cardImage_inTune.png';
+import img_prepd from '../images/cardImage_prepd.png';
+import img_yahoo from '../images/cardImage_yahoo.png';
+import img_parking from '../images/cardImage_parking.png';
 
-const projectCards = [
+const projects_web = [
   {
-    title: 'yahoo mobile redesign',
-    descr: 'Initial user testing on students found that the Yahoo mobile site had several key usability issues. My team and I prototyped redesigns of Yahoo’s site for mobile, which aimed to increase efficiency and decrease user errors.',
-    image: undefined,
-    tags: ['Figma', 'user testing', 'wireframing', 'prototyping'],
-    color: '#B187F3',
-    link: undefined
-  },
-  {
-    title: 'PROJ PARKING FINE',
-    descr: 'A potential solution to remedy the parking frustrations of various users on campus',
-    image: img_parking,
-    tags: ['Figma', 'storyboarding', 'diagramming', 'wireframing', 'prototyping', 'user testing'],
-    color: '#536D90',
-    link: undefined
-  },
-  {
-    title: 'INTUNE VISUALIZER',
+    title: 'intune visualizer',
     descr: 'A web app for Spotify and Last.fm users to visualize the music history and genres of themselves and their friends',
     image: img_inTune,
     tags: ['HTML', 'CSS', 'bootstrap', 'javascript', 'jquery', 'firebase', 'node.js', 'last.fm api'],
@@ -32,9 +18,9 @@ const projectCards = [
     link: undefined
   },
   {
-    title: 'PREPD',
+    title: 'prepd',
     descr: 'A web app to aid meal prepping by supplying the user with quick access to recipes and easy organization',
-    image: undefined,
+    image: img_prepd,
     tags: ['HTML', 'CSS', 'bootstrap', 'javascript', 'jquery', 'node.js'],
     color: '#FFAC46',
     link: undefined
@@ -51,11 +37,30 @@ const projectCards = [
   },
 ];
 
+const projects_figma = [
+  {
+    title: 'yahoo mobile redesign',
+    descr: 'Check out the creative process behind redesigning mobile to improve user experience & satisfaction',
+    image: img_yahoo,
+    tags: ['Figma', 'user testing', 'wireframing', 'prototyping'],
+    color: '#B187F3',
+    link: undefined
+  },
+  {
+    title: 'proj. parking fine',
+    descr: 'A potential solution to remedy the parking frustrations of various users on UCSD\'s campus',
+    image: img_parking,
+    tags: ['Figma', 'storyboarding', 'diagramming', 'wireframing', 'prototyping', 'user testing'],
+    color: '#536D90',
+    link: undefined
+  },
+];
+
 
 const Others = (props) => {
   return (
     <div className={props.screenWidth > 768 ? 'cardsDesktop' : 'cardsMobile'}>
-      {projectCards.map((card) => 
+      {props.projects.map((card) => 
         <Card key={card.title.toString()} 
               title={card.title}
               desc={card.descr}
@@ -80,9 +85,10 @@ class Projects extends React.Component {
         <SectionTitle title='projects'/> 
 
         <h4> RECENT </h4>
-        <h4> OTHER PROJECTS </h4>
-        <Others screenWidth={this.props.screenWidth} />
-
+        <h4> WEB DEVELOPMENT </h4>
+        <Others projects={projects_web} screenWidth={this.props.screenWidth} />
+        <h4> FIGMA PROTOTYPES & DESIGNS </h4>
+        <Others projects={projects_figma} screenWidth={this.props.screenWidth} />
       </div> 
     );
   }

@@ -8,6 +8,8 @@ $headerHeight: 4rem;
 
 $projCardWidth: toRem(250);
 $projCardMargin: toRem(20);
+$transitionTimingCard: .2s;
+$transitionTimingMenu: .3s;
 
 
 @media (min-width: 769px) {
@@ -41,6 +43,8 @@ $projCardMargin: toRem(20);
 
 div.app {
     width: 100%;
+    max-width: toRem(1920);
+    margin: auto;
 }
 
 $size_h1: toRem(50);
@@ -107,7 +111,6 @@ p {
     font-size: toRem(14);
     line-height: auto;
 }     
-
 
 header {
     $divRight: 32rem;
@@ -202,6 +205,25 @@ header {
         background-color: #00000000;
 
         cursor: pointer;
+
+        .toolTip {
+            position: absolute;
+            top: 35%;
+            left: toRem(85);
+            z-index: 1;
+
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: toRem(13);
+
+            opacity: 0;
+            transition: opacity ease-out .2s;
+        }
+    }
+
+    button:hover .toolTip {
+        opacity: 1;
     }
 
     // a.button {
@@ -225,16 +247,36 @@ header {
 
 }
 
+div.menuOut {
+    width: 60vw;
+    left: 120%;    
+    transition: all cubic-bezier(0.5, 0, 0.75, 0) $transitionTimingMenu;
+    
+    div.outside {
+        display: none;
+    }
+}
+
+div.menuIn {
+    width: 100vw;
+    left: 0;
+    transition: all cubic-bezier(0.25, 1, 0.5, 1) $transitionTimingMenu;
+
+    div.outside {
+        display: flex;
+    }
+}
+
 div.menu {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100vw;
     height: 100vh;
     z-index: 1;
 
     display: flex;
     flex-flow: row;
+    justify-content: flex-end;
 
     div.outside {
         height: 100%;
@@ -351,16 +393,21 @@ div.contact {
     flex-flow: column wrap;
     justify-content: space-around;
 
+    button:hover {
+        width: toRem(200)
+    }
+
     button {
         border-radius: 100%;
-        width: 3.125rem;
-        height: 3.125rem;
+        width: toRem(50);
+        height: toRem(50);
 
         outline: none;
         border: .2rem solid;
         border-color: #000000;
         background-color: #ffffffff;
 
+        transition: width ease-out .5s;
         cursor: pointer;
 
         img {
@@ -592,6 +639,11 @@ div.content {
             overflow: auto;
         }
 
+        div.card:hover {
+            margin-top: $projCardMargin/2;
+            margin-bottom: $projCardMargin*1.5;
+        }
+
         div.card {
             width: $projCardWidth;
             margin: $projCardMargin;
@@ -607,6 +659,8 @@ div.content {
             border: none;
             background-color: #ffffff;
             filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
+
+            transition: all ease-in-out $transitionTimingCard;
     
             div.imageHolder {
                 width: $projCardWidth;

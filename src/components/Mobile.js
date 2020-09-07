@@ -18,21 +18,22 @@ class Mobile extends React.Component {
   }
 
   toggleMenu() {
-    console.log('hello');
     this.setState((state, props) => ({menuOpen: !state.menuOpen}));
   }
 
   render() {
     return (
+      <>
+      <Header useMobileNav={true} toggleMenu={this.toggleMenu}/>
       <div className='app'>
-        <Header useMobileNav={true} toggleMenu={this.toggleMenu}/>
-        {this.state.menuOpen && 
-        <NavMenu toggleMenu={this.toggleMenu} screenWidth={this.props.screenWidth} /> }
-
+        {/* {this.state.menuOpen && 
+          
+        } */}
+        <NavMenu toggleMenu={this.toggleMenu} screenWidth={this.props.screenWidth} menuOpen={this.state.menuOpen}/> 
         <Background screenWidth={this.props.screenWidth} />
-
         <Content screenWidth={this.props.screenWidth} />
       </div>
+      </>
     );
   }
 }

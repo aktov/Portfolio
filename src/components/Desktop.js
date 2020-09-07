@@ -12,13 +12,14 @@ class Desktop extends React.Component {
 
   render() {
     return (
+      <>
+      <Header useMobileNav={false} />
       <div className='app'>
-        <Header useMobileNav={false} />
         <Background screenWidth={this.props.screenWidth} />
-        
         <Contact screenWidth={this.props.screenWidth} /> 
         <Content screenWidth={this.props.screenWidth} />
       </div>
+      </>
     );
   }
 }

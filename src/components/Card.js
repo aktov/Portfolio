@@ -12,7 +12,7 @@ const Tags = (props) => {
 }
 
 
-class ProjectCard extends React.Component {
+class Card extends React.Component {
   constructor(props) {
     super(props)
 
@@ -41,4 +41,4 @@ class ProjectCard extends React.Component {
 
 }
 
-export default ProjectCard;
+export default Card;
