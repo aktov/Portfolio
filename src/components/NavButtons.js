@@ -1,9 +1,9 @@
 import React from 'react';
 
 const headerCategories = [
-  {name: 'about'},
-  {name: 'experience'},
   {name: 'projects'},
+  {name: 'experience'},
+  {name: 'about'},
   {name: 'resume'},
 ]
 

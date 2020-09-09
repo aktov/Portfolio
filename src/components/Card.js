@@ -26,7 +26,7 @@ class Card extends React.Component {
     return (
       <div className='card'>
         <div className='imageHolder'>
-          {this.props.image && <img src={this.props.image} alt={this.props.title}/>}  
+          {this.props.image && <img src={this.props.image} alt={this.props.title} draggable='false' />}  
         </div>
 
         <div className='text'>
