@@ -5,7 +5,7 @@ const Tags = (props) => {
   return (
     <div className='tags'>
       {props.names.map((name) =>
-        <h5 key={name} style={{ color: props.color}}> {name.toUpperCase()} </h5>
+        <h6 key={name} style={{ color: props.color}}> {name.toUpperCase()} </h6>
       )}
     </div>
   );
