@@ -52,7 +52,7 @@ $size_h2: toRem(40);
 $size_h3: toRem(30);
 $size_h4: toRem(22);
 $size_h5: toRem(20);
-$size_h6: toRem(20);
+$size_h6: toRem(12);
 $size_p: toRem(14);
 
 h1 {
@@ -319,7 +319,10 @@ div.menu {
                 height: $divLeft/1.5;
 
                 border: none;
+                outline: none;
                 background-color: #00000000;
+
+                cursor: pointer;
             }
 
             img.navIcon {
@@ -358,6 +361,8 @@ div.menu {
                 outline: none;
                 color: #000000;
                 background-color: #00000000;  
+
+                cursor: pointer;
             }
 
             .buttonNav:hover {
@@ -654,14 +659,14 @@ div.content {
             .desktop {
                 width: 50%;
                 min-width: toRem(50);
-                max-width: toRem(200);
+                max-width: toRem(300);
                 height: auto;
                 margin-right: 5%;              
             }
 
             .mobile {
                 width: 100%;
-                max-width: toRem(200);
+                max-width: toRem(250);
                 height: auto;
                 margin-right: 0;
             }
@@ -793,7 +798,7 @@ div.content {
             border: none;
             background-color: #ffffff;
             filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
-            cursor: pointer;
+            // cursor: pointer;
 
             transition: all ease-in-out $transitionTimingCard;
     
@@ -828,6 +833,7 @@ div.content {
     
                 p {
                     margin-top: toRem(-20);
+                    margin-bottom: toRem(30);
                 }          
             }
     
@@ -838,22 +844,40 @@ div.content {
                 
                 display: flex;
                 flex-flow: row wrap;
-                justify-content: space-between;
+                justify-content: flex-start;
                 align-items: flex-start;
                 margin-top: auto;
     
                 h6 {
                     margin-top: toRem(-10);
+                    padding-right: toRem(10);
     
                     font-family: 'Poppins', sans-serif;
                     font-style: normal;
                     font-weight: 600;
-                    font-size: toRem(12);
                     line-height: toRem(3);
                 }
-
             }  
-            
+
+            button {
+                width: 50%;
+                margin-bottom: toRem(10);
+                padding: toRem(5) toRem(20);
+
+                align-self: center;
+                border-radius: toRem(100);
+                border: toRem(2) dotted #000000;
+                outline: none;
+
+                font-family: 'Zilla Slab', sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: $size_h1;
+                color: #000000;
+                background-color: #ffffff;
+
+                cursor: pointer;
+            }
         }
 
         div.cardLast {

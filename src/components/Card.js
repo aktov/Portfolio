@@ -5,9 +5,17 @@ const Tags = (props) => {
   return (
     <div className='tags'>
       {props.names.map((name) =>
-        <h6 key={name} style={{ color: props.color}}> {name.toUpperCase()} </h6>
+        <h6 key={name} style={{color: props.color}}> {name.toUpperCase()} </h6>
       )}
     </div>
+  );
+}
+
+
+const Button = (props) => {
+  return (
+    // <button className='buttonView' style={{backgroundColor: props.color}}> {'->'} </button>
+    <button className='buttonView'>  </button>
   );
 }
 
@@ -34,6 +42,7 @@ class Card extends React.Component {
           <p> {this.props.desc} </p>
 
           {this.props.tags && <Tags names={this.props.tags} color={this.props.color} />}
+          <Button color={this.props.color} />
         </div>
       </div>
     );
