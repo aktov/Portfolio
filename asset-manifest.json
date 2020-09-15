@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.f63248ba.chunk.css",
+    "main.js": "/Portfolio/static/js/main.859dd432.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.859dd432.chunk.js.map",
+    "runtime-main.js": "/Portfolio/static/js/runtime-main.e54d9742.js",
+    "runtime-main.js.map": "/Portfolio/static/js/runtime-main.e54d9742.js.map",
+    "static/js/2.339d0bd1.chunk.js": "/Portfolio/static/js/2.339d0bd1.chunk.js",
+    "static/js/2.339d0bd1.chunk.js.map": "/Portfolio/static/js/2.339d0bd1.chunk.js.map",
+    "index.html": "/Portfolio/index.html",
+    "precache-manifest.6663101b4315fbaa12b23d956af0d8fc.js": "/Portfolio/precache-manifest.6663101b4315fbaa12b23d956af0d8fc.js",
+    "service-worker.js": "/Portfolio/service-worker.js",
+    "static/css/main.f63248ba.chunk.css.map": "/Portfolio/static/css/main.f63248ba.chunk.css.map",
+    "static/js/2.339d0bd1.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.339d0bd1.chunk.js.LICENSE.txt",
+    "static/media/background.svg": "/Portfolio/static/media/background.2d123c60.svg",
+    "static/media/backgroundMobile.png": "/Portfolio/static/media/backgroundMobile.34bc1cc4.png",
+    "static/media/backgroundNew.png": "/Portfolio/static/media/backgroundNew.a908368b.png",
+    "static/media/backgroundNewMobile.png": "/Portfolio/static/media/backgroundNewMobile.7ffeda96.png",
+    "static/media/bullet.svg": "/Portfolio/static/media/bullet.69aa4055.svg",
+    "static/media/cardImage_inTune.png": "/Portfolio/static/media/cardImage_inTune.25be27b9.png",
+    "static/media/cardImage_parking.png": "/Portfolio/static/media/cardImage_parking.127144e1.png",
+    "static/media/cardImage_prepd.png": "/Portfolio/static/media/cardImage_prepd.73459827.png",
+    "static/media/cardImage_yahoo.png": "/Portfolio/static/media/cardImage_yahoo.d303690c.png",
+    "static/media/close.svg": "/Portfolio/static/media/close.c1a83000.svg",
+    "static/media/figmaLogo_black.svg": "/Portfolio/static/media/figmaLogo_black.2382de07.svg",
+    "static/media/iconEmail.svg": "/Portfolio/static/media/iconEmail.e424033e.svg",
+    "static/media/logoBlack.svg": "/Portfolio/static/media/logoBlack.0445fa97.svg",
+    "static/media/nav.svg": "/Portfolio/static/media/nav.e60c145e.svg",
+    "static/media/open.svg": "/Portfolio/static/media/open.a9510199.svg",
+    "static/media/profilePic.png": "/Portfolio/static/media/profilePic.0e8e8486.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e54d9742.js",
+    "static/js/2.339d0bd1.chunk.js",
+    "static/css/main.f63248ba.chunk.css",
+    "static/js/main.859dd432.chunk.js"
+  ]
+}
