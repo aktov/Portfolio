@@ -19,23 +19,16 @@ const Buttons = (props) => {
   return (
     <div className='buttons'>
       {props.props.github && <a href={props.props.github} target="_blank" rel="noopener noreferrer">
-        <button> 
           <img src={github} alt='github' draggable='false' />     
           <span className='toolTip'> github </span>
-        </button>
       </a> }
       {props.props.figma && <a href={props.props.figma} target="_blank" rel="noopener noreferrer">
-        <button> 
           <img src={figma} alt='figma' draggable='false' /> 
           <span className='toolTip'> figma </span> 
-        </button>
-        
       </a> }
       <a href={props.props.link} target="_blank" rel="noopener noreferrer">
-        <button> 
           <img src={arrow} alt='arrow' draggable='false' /> 
           <span className='toolTip'> link </span>
-        </button>
       </a>
     </div>
   );

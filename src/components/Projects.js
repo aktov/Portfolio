@@ -6,7 +6,8 @@ import SectionTitle from './SectionTitle';
 import img_inTune from '../images/cardImage_inTune.png';
 import img_prepd from '../images/cardImage_prepd.png';
 import img_yahoo from '../images/cardImage_yahoo.png';
-import img_parking from '../images/cardImage_parking.png';
+import img_parking from '../images/cardImage_parking.jpg';
+import img_csa from '../images/cardImage_csa.png';
 
 
 const projects_recent = [
@@ -22,12 +23,30 @@ const projects_recent = [
   {
     title: 'csa website design',
     descr: 'A website prototype for Cambodian Student Association @UCSD, built for desktop and mobile',
-    image: undefined,
+    image: img_csa,
     tags: ['Figma', 'wireframing', 'prototyping', 'user testing'],
     color: '#DA8484',
     figma: 'https://github.com/aktov/Prepd',
     link: undefined
   },
+  {
+    title: 'test 1',
+    descr: 'A website prototype for Cambodian Student Association @UCSD, built for desktop and mobile',
+    image: undefined,
+    tags: ['Figma', 'wireframing', 'prototyping', 'user testing'],
+    color: '#DA8484',
+    figma: undefined,
+    link: undefined
+  },  
+  {
+    title: 'test 2',
+    descr: 'A website prototype for Cambodian Student Association @UCSD, built for desktop and mobile',
+    image: undefined,
+    tags: ['Figma', 'wireframing', 'prototyping', 'user testing'],
+    color: '#DA8484',
+    figma: undefined,
+    link: undefined
+  },  
 ];
 const projects_web = [
   {
@@ -57,7 +76,7 @@ const projects_figma = [
     image: undefined,
     tags: ['Figma', 'prototyping'],
     color: '#D34F67',
-    figma: true,
+    figma: 'true',
     link: undefined
   },
   {

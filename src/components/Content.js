@@ -49,13 +49,7 @@ const About = (props) => {
   );
 }
 
-const style = {
-  marginRight: '2rem',
-  alignSelf: 'flex-end',
-  fontFamily: 'Poppins',
-  fontWeight: 400,
-  fontSize: '1rem',
-}
+
 
 class Content extends React.Component {
   render() {
@@ -66,7 +60,6 @@ class Content extends React.Component {
         <About screenWidth={this.props.screenWidth} />
         <Experience screenWidth={this.props.screenWidth} />
         <Projects screenWidth={this.props.screenWidth} />
-        <h6 style={style}> Designed and built by Alex Tov </h6>
       </div>
     );
   }

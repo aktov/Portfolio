@@ -52,15 +52,15 @@ $size_h1: toRem(50);
 $size_h2: toRem(40);
 $size_h3: toRem(30);
 $size_h4: toRem(22);
-$size_h5: toRem(20);
+$size_h5: toRem(18);
 $size_h6: toRem(12);
-$size_p: toRem(14);
+$size_p: toRem(16);
 
 h1 {
     font-family: 'Zilla Slab', serif;
     font-style: normal;
     font-weight: 500;
-    font-size: toRem(50);
+    font-size: $size_h1;
     line-height: normal;
 
     color: $baseTextColor;
@@ -70,7 +70,7 @@ h2 {
     font-family: 'Zilla Slab', serif;
     font-style: normal;
     font-weight: 500;
-    font-size: toRem(40); 
+    font-size: $size_h2; 
     line-height: normal;
 
     color: $baseTextColor;
@@ -80,7 +80,7 @@ h3 {
     font-family: 'Zilla Slab', serif;
     font-style: normal;
     font-weight: 500;
-    font-size: toRem(30); 
+    font-size: $size_h3; 
     line-height: normal;
 
     color: $baseTextColor;
@@ -90,7 +90,7 @@ h4 {
     font-family: 'Zilla Slab', serif;
     font-style: normal;
     font-weight: 500;
-    font-size: toRem(22); 
+    font-size: $size_h4; 
     line-height: normal;
 
     color: $baseTextColor;
@@ -100,7 +100,7 @@ h5 {
     font-family: 'Zilla Slab', serif;
     font-style: normal;
     font-weight: 500;
-    font-size: toRem(18); 
+    font-size: $size_h5; 
     line-height: normal;
 
     color: $baseTextColor;
@@ -110,7 +110,7 @@ h6 {
     font-family: 'Zilla Slab', serif;
     font-style: normal;
     font-weight: 500;
-    font-size: toRem(12); 
+    font-size: $size_h6; 
     line-height: normal;
 
     color: $baseTextColor;
@@ -120,7 +120,7 @@ p {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: toRem(14);
+    font-size: $size_p;
     line-height: normal;
 
     color: $baseTextColor;
@@ -195,18 +195,16 @@ header {
                 justify-content: center;
                 align-items: center;
 
-                outline: none;
+                // outline: none;
                 color: $baseTextColor;
-                background-color: #00000000; 
+                background-color: transparent; 
                 
                 cursor: pointer;
             }
         
-            @media (hover: hover) {
-                .buttonNav:hover {
-                    font-family: $questrial;
-                    color: #aaaaaa;
-                }
+            .buttonNav:hover {
+                font-family: $questrial;
+                color: #aaaaaa;
             }
         }
     }
@@ -216,8 +214,8 @@ header {
         height: $divLeft/1.5;
 
         border: none;
-        outline: none;
-        background-color: #00000000;
+        // outline: none;
+        background-color: transparent;
 
         cursor: pointer;
 
@@ -238,10 +236,8 @@ header {
         }
     }
 
-    @media (hover: hover) {
-        button:hover .toolTip {
-            opacity: 1;
-        }
+    button:hover .toolTip {
+        opacity: 1;
     }
 }
 
@@ -285,8 +281,8 @@ div.menu {
             height: 100%;
 
             border: none;
-            outline: none;
-            background-color: #00000000;
+            // outline: none;
+            background-color: transparent;
         }
     }
 
@@ -326,8 +322,8 @@ div.menu {
                 height: $divLeft/1.5;
 
                 border: none;
-                outline: none;
-                background-color: #00000000;
+                // outline: none;
+                background-color: transparent;
 
                 cursor: pointer;
             }
@@ -365,18 +361,11 @@ div.menu {
                 align-items: center;
 
                 border: none;
-                outline: none;
+                // outline: none;
                 color: $baseTextColor;
-                background-color: #00000000;  
+                background-color: transparent;  
 
                 cursor: pointer;
-            }
-
-            @media (hover: hover) {
-                .buttonNav:hover {
-                    font-family: $questrial;
-                    color: #aaaaaa;
-                }
             }
         }
     }
@@ -395,14 +384,11 @@ div.contact {
     flex-flow: column wrap;
     justify-content: space-between;
 
-    @media (hover: hover) {
-        div.button:hover {
-            width: toRem(55);
-            // height: toRem(55);
+    div.button:hover {
+        width: toRem(55);
 
-            .toolTip {
-                opacity: 1;
-            }
+        .toolTip {
+            opacity: 1;
         }
     }
     
@@ -428,7 +414,7 @@ div.contact {
             height: 100%;
 
             flex-shrink: 0;
-            outline: none;
+            // outline: none;
             border-radius: toRem(100);
             // border: .2rem solid;
             border: none;
@@ -474,7 +460,7 @@ div.background {
     width: 100%;
     max-height: toRem(600);
     position: relative;
-    // margin-bottom: toRem(50);
+    margin-bottom: toRem(50);
     display: flex;
     flex-flow: row;
     justify-content: flex-start;
@@ -509,15 +495,15 @@ div.background {
         justify-content: center;
         align-self: center;
     
-        background-color: #00000000;
+        background-color: transparent;
     
-        overflow: auto;
+        overflow: hidden;
     
         div.text {
             position: relative;
             width: 60%;
             margin: auto;
-            margin-bottom: 7rem;
+            margin-bottom: 3rem;
     
             display: flex;
             flex-flow: column wrap;
@@ -536,6 +522,30 @@ div.background {
             font-weight: 500;
             line-height: normal;
             color: $baseTextColor;
+        }
+
+        button {
+            width: auto;
+            height: auto;
+            padding: toRem(10) toRem(20);
+            margin-top: toRem(40);
+        
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: $size_h5;
+            line-height: normal;
+            align-self: center;
+    
+            // border: toRem(2) dotted $baseTextColor;
+            border: none;
+            border-radius: toRem(100);
+            // outline: none;
+            color: $baseTextColor;
+            background-color: #ffffff;  
+    
+            filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
+            cursor: pointer;
         }
     }
 }
@@ -701,10 +711,10 @@ div.content {
 
             h5 {
                 margin: toRem(3) 0;
-                font-family: 'Montserrat', sans-serif;
+                font-family: 'Poppins', sans-serif;
                 font-style: normal;
-                font-weight: 600;
-                font-size: toRem(14);
+                font-weight: 500;
+                font-size: $size_p;
             }
 
             .phrases {
@@ -720,7 +730,7 @@ div.content {
                     align-items: flex-start;
 
                     img {
-                        margin: toRem(5) toRem(10);
+                        margin: toRem(8) toRem(10);
                     }
 
                     p {
@@ -772,7 +782,7 @@ div.content {
             justify-content: center;
             align-items: flex-start;
         
-            overflow: auto;
+            overflow: hidden;
         }
 
         div.cardsMobile {
@@ -786,14 +796,8 @@ div.content {
             justify-content: flex-start;
             align-items: flex-start;
         
-            overflow: auto;
+            overflow-x: scroll;
         }
-
-        // div.card:hover {
-        //     // margin-top: $projCardMargin/2;
-        //     // margin-bottom: $projCardMargin*1.5;
-
-        // }
 
         div.card {
             width: $projCardWidth;
@@ -883,30 +887,29 @@ div.content {
                 justify-content: space-between;
                 align-items: stretch;
 
-                @media (hover: hover) {
-                    button:hover {
-                        img {
-                            height: toRem(25);
-                        }
-                        .toolTip {
-                            // display: inline-block;
-                            opacity: 1;
-                        }
+                a:hover {
+                    img {
+                        height: toRem(25);
+                    }
+                    .toolTip {
+                        // display: inline-block;
+                        opacity: 1;
                     }
                 }
 
-                button:only-child {
+                a:only-child {
                     margin-left: auto;
                 }
 
-                button {
+                a {
                     position: relative;
                     width: toRem(35);
                     height: toRem(35);
 
                     border-radius: toRem(100);
                     border: none;
-                    outline: none;
+                    // outline: none;
+                    display: flex;
 
                     font-family: 'Zilla Slab', sans-serif;
                     font-style: normal;
@@ -944,8 +947,8 @@ div.content {
                         font-style: normal;
                         font-weight: 500;
                         font-size: toRem(13);
-            
-                        white-space: nowrap;
+                    
+                        text-align: center;
                         border-radius: toRem(40);
                         color: $baseTextColor;
                         background-color: transparent;
@@ -966,5 +969,25 @@ div.content {
     }
 }
 
+.footer {
+    position: relative;
+    width: 100%;
+    height: toRem(50);
 
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+
+    overflow: hidden;
+
+    h6 {
+        margin-left: auto;
+
+        padding-right: 2rem;
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size: '.875rem';
+    }
+}
 
