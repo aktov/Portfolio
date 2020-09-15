@@ -1,6 +1,7 @@
 import React from 'react';
 
 import bckgrdDesktopNew from '../images/backgroundNew.png';
+import bckgrdMobileNew from '../images/backgroundNewMobile.png';
 import bckgrdDesktop from '../images/background.svg';
 import bckgrdMobile from '../images/backgroundMobile.png';
 
@@ -8,14 +9,17 @@ const Intro = (props) => {
   // Does nothing atm
   function resizeFont(screenWidth) {
     const defaultFontSize = 16;
+    const newSize = props.screenWidth < 480 ? '2.5rem' : '3.125rem'
+
+    return newSize;
   }
 
   return (
     <div className='intro'> 
-      <div className='text'>
+      <div className='text' style={props.screenWidth <= 768 ? {width: '75%'} : null}>
         <h1 style={{ fontSize: resizeFont(props.screenWidth) }}> I'm Alex, a designer & developer </h1>
-        <h4> As a recent graduate, I'm currently looking for internship or full-time opportunities to work with awesome people! </h4>
-        <h4> If you're interested with what I have to offer, feel free to send me a message! </h4>
+        <h5> As a recent graduate, I'm currently looking for internship or full-time opportunities to work with awesome people! </h5>
+        <h5> If you're interested with what I have to offer, feel free to send me a message! </h5>
       </div>
     </div>   
   );
@@ -27,11 +31,11 @@ class Background extends React.Component {
       <div className='background'> 
         <img
           className={this.props.screenWidth < 480 ? 'mobile' : 'desktop'} 
-          src={this.props.screenWidth < 480 ? bckgrdMobile : bckgrdDesktopNew} 
+          src={this.props.screenWidth < 480 ? bckgrdMobileNew : bckgrdDesktopNew} 
           alt='Background'
         />
 
-        <Intro/>
+        <Intro screenWidth={this.props.screenWidth}/>
       </div>
     );
   }

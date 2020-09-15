@@ -517,7 +517,7 @@ div.background {
             position: relative;
             width: 60%;
             margin: auto;
-            // margin-bottom: 5rem;
+            margin-bottom: 7rem;
     
             display: flex;
             flex-flow: column wrap;
@@ -530,11 +530,11 @@ div.background {
             color: $baseTextColor;
         }
     
-        h4 {
+        h5 {
             margin: toRem(5) 0;
             font-family: 'Poppins';
             font-weight: 500;
-            line-height: toRem(30);
+            line-height: normal;
             color: $baseTextColor;
         }
     }

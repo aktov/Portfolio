@@ -8,6 +8,27 @@ import img_prepd from '../images/cardImage_prepd.png';
 import img_yahoo from '../images/cardImage_yahoo.png';
 import img_parking from '../images/cardImage_parking.png';
 
+
+const projects_recent = [
+  {
+    title: 'hour memo',
+    descr: 'A web app for Spotify and Last.fm users to visualize the music history and genres of themselves and their friends',
+    image: undefined,
+    tags: ['HTML', 'CSS', 'bootstrap', 'javascript', 'jquery', 'firebase', 'node.js', 'last.fm api'],
+    color: '#87B573',
+    github: 'https://github.com/aktov/inTuneVisualizer',
+    link: undefined,
+  },
+  {
+    title: 'csa website design',
+    descr: 'A website prototype for Cambodian Student Association @UCSD, built for desktop and mobile',
+    image: undefined,
+    tags: ['Figma', 'wireframing', 'prototyping', 'user testing'],
+    color: '#DA8484',
+    figma: 'https://github.com/aktov/Prepd',
+    link: undefined
+  },
+];
 const projects_web = [
   {
     title: 'intune visualizer',
@@ -26,16 +47,6 @@ const projects_web = [
     color: '#FFAC46',
     github: 'https://github.com/aktov/Prepd',
     link: undefined
-  },
-  {
-    title: 'PROJECT TITLE3',
-    descr: 'Lorem ipsum yada yadda something something cool here sweet and simple',
-    image: undefined
-  },
-  {
-    title: 'PROJECT TITLE4',
-    descr: 'Lorem ipsum yada yadda something something cool here sweet and simple',
-    image: undefined
   },
 ];
 
@@ -95,11 +106,12 @@ const Others = (props) => {
 class Projects extends React.Component {
   render() {
     return (
-      <div className='projects'>
+      <div className='projects' style={this.props.screenWidth > 768 ? {width: '90%'} : null}>
         <div id='anchor_projects' className='anchor'></div>
         <SectionTitle title='projects'/> 
 
         <h4> RECENT </h4>
+        <Others projects={projects_recent} screenWidth={this.props.screenWidth} />
         <h4> WEB DEVELOPMENT </h4>
         <Others projects={projects_web} screenWidth={this.props.screenWidth} />
         <h4> FIGMA PROTOTYPES & DESIGNS </h4>
