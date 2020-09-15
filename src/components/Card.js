@@ -1,5 +1,8 @@
 import React from 'react';
 
+import arrow from '../images/open.svg';
+import github from '../images/GitHub-Mark-120px-plus.png';
+import figma from '../images/figmaLogo_black.svg';
 
 const Tags = (props) => {
   return (
@@ -12,27 +15,53 @@ const Tags = (props) => {
 }
 
 
-const Button = (props) => {
+const Buttons = (props) => {
   return (
-    // <button className='buttonView' style={{backgroundColor: props.color}}> {'->'} </button>
-    <button className='buttonView'>  </button>
+    <div className='buttons'>
+      {props.props.github && <a href={props.props.github} target="_blank" rel="noopener noreferrer">
+        <button> 
+          <img src={github} alt='github' draggable='false' />     
+          <span className='toolTip'> github </span>
+        </button>
+      </a> }
+      {props.props.figma && <a href={props.props.figma} target="_blank" rel="noopener noreferrer">
+        <button> 
+          <img src={figma} alt='figma' draggable='false' /> 
+          <span className='toolTip'> figma </span> 
+        </button>
+        
+      </a> }
+      <a href={props.props.link} target="_blank" rel="noopener noreferrer">
+        <button> 
+          <img src={arrow} alt='arrow' draggable='false' /> 
+          <span className='toolTip'> link </span>
+        </button>
+      </a>
+    </div>
   );
 }
 
 
 class Card extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
-    this.handleHover = this.handleHover.bind(this);
+    this.handleMouseEnter = this.handleMouseEnter.bind(this);
+    this.handleMouseLeave = this.handleMouseLeave.bind(this);
   }
 
-  handleHover(e) {
+  handleMouseEnter(e) {
+    console.log('hiii');
   }
+
+  handleMouseLeave(e) {
+    console.log('byeee');
+  }
+
 
   render() {
     return (
-      <div className='card'>
+      <div className='card' onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
         <div className='imageHolder'>
           {this.props.image && <img src={this.props.image} alt={this.props.title} draggable='false' />}  
         </div>
@@ -42,7 +71,7 @@ class Card extends React.Component {
           <p> {this.props.desc} </p>
 
           {this.props.tags && <Tags names={this.props.tags} color={this.props.color} />}
-          <Button color={this.props.color} />
+          <Buttons props={this.props} />
         </div>
       </div>
     );

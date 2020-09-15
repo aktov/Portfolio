@@ -15,7 +15,8 @@ const projects_web = [
     image: img_inTune,
     tags: ['HTML', 'CSS', 'bootstrap', 'javascript', 'jquery', 'firebase', 'node.js', 'last.fm api'],
     color: '#709CE3',
-    link: undefined
+    github: 'https://github.com/aktov/inTuneVisualizer',
+    link: undefined,
   },
   {
     title: 'prepd',
@@ -23,6 +24,7 @@ const projects_web = [
     image: img_prepd,
     tags: ['HTML', 'CSS', 'bootstrap', 'javascript', 'jquery', 'node.js'],
     color: '#FFAC46',
+    github: 'https://github.com/aktov/Prepd',
     link: undefined
   },
   {
@@ -39,11 +41,21 @@ const projects_web = [
 
 const projects_figma = [
   {
+    title: 'portfolio design',
+    descr: 'The design of this current portfolio, first prototyped on figma',
+    image: undefined,
+    tags: ['Figma', 'prototyping'],
+    color: '#D34F67',
+    figma: true,
+    link: undefined
+  },
+  {
     title: 'yahoo mobile redesign',
-    descr: 'Check out the creative process behind redesigning mobile to improve user experience & satisfaction',
+    descr: 'Here\'s the creative process behind redesigning mobile to improve user experience & satisfaction',
     image: img_yahoo,
     tags: ['Figma', 'user testing', 'wireframing', 'prototyping'],
     color: '#B187F3',
+    figma: 'https://www.figma.com/proto/pUOIhb7GiEGQeFotepQkQY/COGS-187A-Final-(Copy)?node-id=21%3A175&scaling=scale-down',
     link: undefined
   },
   {
@@ -52,6 +64,7 @@ const projects_figma = [
     image: img_parking,
     tags: ['Figma', 'storyboarding', 'diagramming', 'wireframing', 'prototyping', 'user testing'],
     color: '#536D90',
+    figma: 'https://www.figma.com/proto/FJIhLsq3WEDOox5VfArU3fuF/Parking-Fine-Kiosk?node-id=5%3A2&scaling=contain',
     link: undefined
   },
 ];
@@ -67,6 +80,8 @@ const Others = (props) => {
               image={card.image} 
               tags={card.tags}
               color={card.color}
+              github={card.github}
+              figma={card.figma}
               link={card.link}
               />
       )}

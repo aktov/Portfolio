@@ -8,7 +8,7 @@ import nav from '../images/nav.svg';
 
 class NavMobile extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.handleClick = this.handleClick.bind(this);
   }

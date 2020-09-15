@@ -7,7 +7,7 @@ import close from '../images/close.svg';
 
 class NavMenu extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.closeMenu = this.closeMenu.bind(this);
   }

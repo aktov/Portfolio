@@ -1,5 +1,6 @@
 import React from 'react';
 
+import bckgrdDesktopNew from '../images/backgroundNew.png';
 import bckgrdDesktop from '../images/background.svg';
 import bckgrdMobile from '../images/backgroundMobile.png';
 
@@ -13,8 +14,8 @@ const Intro = (props) => {
     <div className='intro'> 
       <div className='text'>
         <h1 style={{ fontSize: resizeFont(props.screenWidth) }}> I'm Alex, a designer & developer </h1>
-        <h4> My dream is to apply my skills and knowledge to help contribute for a better tomorrow. </h4>
-        <h4> I’m currently looking for opportunities to ... </h4>
+        <h4> As a recent graduate, I'm currently looking for internship or full-time opportunities to work with awesome people! </h4>
+        <h4> If you're interested with what I have to offer, feel free to send me a message! </h4>
       </div>
     </div>   
   );
@@ -26,7 +27,7 @@ class Background extends React.Component {
       <div className='background'> 
         <img
           className={this.props.screenWidth < 480 ? 'mobile' : 'desktop'} 
-          src={this.props.screenWidth < 480 ? bckgrdMobile : bckgrdDesktop} 
+          src={this.props.screenWidth < 480 ? bckgrdMobile : bckgrdDesktopNew} 
           alt='Background'
         />
 

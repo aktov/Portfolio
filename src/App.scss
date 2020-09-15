@@ -5,6 +5,7 @@
 
 $questrial: 'Questrial', sans-serif;
 $headerHeight: 4rem; 
+$baseTextColor: #444444;
 
 $projCardWidth: toRem(250);
 $projCardMargin: toRem(20);
@@ -62,7 +63,7 @@ h1 {
     font-size: toRem(50);
     line-height: normal;
 
-    color: #000000;
+    color: $baseTextColor;
 }
 
 h2 {
@@ -72,7 +73,7 @@ h2 {
     font-size: toRem(40); 
     line-height: normal;
 
-    color: #000000;
+    color: $baseTextColor;
 }
 
 h3 {
@@ -82,7 +83,7 @@ h3 {
     font-size: toRem(30); 
     line-height: normal;
 
-    color: #000000;
+    color: $baseTextColor;
 }
 
 h4 {
@@ -92,7 +93,7 @@ h4 {
     font-size: toRem(22); 
     line-height: normal;
 
-    color: #000000;
+    color: $baseTextColor;
 }
 
 h5 {
@@ -102,7 +103,7 @@ h5 {
     font-size: toRem(18); 
     line-height: normal;
 
-    color: #000000;
+    color: $baseTextColor;
 }
 
 h6 {
@@ -112,7 +113,7 @@ h6 {
     font-size: toRem(12); 
     line-height: normal;
 
-    color: #000000;
+    color: $baseTextColor;
 }
 
 p {
@@ -121,6 +122,8 @@ p {
     font-weight: 400;
     font-size: toRem(14);
     line-height: normal;
+
+    color: $baseTextColor;
 }     
 
 header {
@@ -193,17 +196,18 @@ header {
                 align-items: center;
 
                 outline: none;
-                color: #000000;
+                color: $baseTextColor;
                 background-color: #00000000; 
                 
                 cursor: pointer;
             }
         
-            .buttonNav:hover {
-                font-family: $questrial;
-                color: #aaaaaa;
+            @media (hover: hover) {
+                .buttonNav:hover {
+                    font-family: $questrial;
+                    color: #aaaaaa;
+                }
             }
-
         }
     }
 
@@ -227,14 +231,17 @@ header {
             font-style: normal;
             font-weight: 500;
             font-size: toRem(13);
+            color: $baseTextColor;
 
             opacity: 0;
-            transition: opacity ease-out .2s;
+            transition: opacity ease-out $transitionTimingCard;
         }
     }
 
-    button:hover .toolTip {
-        opacity: 1;
+    @media (hover: hover) {
+        button:hover .toolTip {
+            opacity: 1;
+        }
     }
 }
 
@@ -359,15 +366,17 @@ div.menu {
 
                 border: none;
                 outline: none;
-                color: #000000;
+                color: $baseTextColor;
                 background-color: #00000000;  
 
                 cursor: pointer;
             }
 
-            .buttonNav:hover {
-                font-family: $questrial;
-                color: #aaaaaa;
+            @media (hover: hover) {
+                .buttonNav:hover {
+                    font-family: $questrial;
+                    color: #aaaaaa;
+                }
             }
         }
     }
@@ -386,12 +395,14 @@ div.contact {
     flex-flow: column wrap;
     justify-content: space-between;
 
-    div.button:hover {
-        width: toRem(55);
-        // height: toRem(55);
+    @media (hover: hover) {
+        div.button:hover {
+            width: toRem(55);
+            // height: toRem(55);
 
-        .toolTip {
-            opacity: 1;
+            .toolTip {
+                opacity: 1;
+            }
         }
     }
     
@@ -403,7 +414,7 @@ div.contact {
         margin-left: 0;
 
         overflow: visible;
-        transition: all ease-out .2s;
+        transition: all ease-out $transitionTimingCard;
         
         a {
             width: 100%;
@@ -421,7 +432,7 @@ div.contact {
             border-radius: toRem(100);
             // border: .2rem solid;
             border: none;
-            border-color: #000000;
+            color: $baseTextColor;
             background-color: #ffffffff;     
             z-index: 3;       
 
@@ -450,14 +461,12 @@ div.contact {
 
             white-space: nowrap;
             border-radius: toRem(40);
+            color: $baseTextColor;
             background-color: #ffffff;
             opacity: 0;
-            transition: opacity ease-out .2s;
+            transition: opacity ease-out $transitionTimingCard;
         }
     }
-
-
-
 }
 
 
@@ -506,9 +515,9 @@ div.background {
     
         div.text {
             position: relative;
-            width: 70%;
+            width: 60%;
             margin: auto;
-            margin-bottom: 5rem;
+            // margin-bottom: 5rem;
     
             display: flex;
             flex-flow: column wrap;
@@ -516,15 +525,17 @@ div.background {
         }
     
         h1 {
-            font-weight: 400;
-            color: #ffffff;
+            font-family: 'Poppins';
+            font-weight: 600;
+            color: $baseTextColor;
         }
     
         h4 {
             margin: toRem(5) 0;
-            font-family: $questrial;
+            font-family: 'Poppins';
+            font-weight: 500;
             line-height: toRem(30);
-            color: #ffffff;
+            color: $baseTextColor;
         }
     }
 }
@@ -601,7 +612,7 @@ div.content {
             margin-top: toRem(-25);
             margin-bottom: toRem(30);
 
-            background-color: #000000;
+            background-color: $baseTextColor;
         }
 
         h3 {
@@ -628,7 +639,7 @@ div.content {
 
                 p {
                     margin-top: 0;
-                    color: #3E4A68;
+                    color: $baseTextColor;
                 }
             }
 
@@ -734,7 +745,7 @@ div.content {
             margin-bottom: toRem(30);
             margin-left: 12.5%;
 
-            background-color: #000000;
+            background-color: $baseTextColor;;
         }
 
         h3 {
@@ -778,10 +789,11 @@ div.content {
             overflow: auto;
         }
 
-        div.card:hover {
-            margin-top: $projCardMargin/2;
-            margin-bottom: $projCardMargin*1.5;
-        }
+        // div.card:hover {
+        //     // margin-top: $projCardMargin/2;
+        //     // margin-bottom: $projCardMargin*1.5;
+
+        // }
 
         div.card {
             width: $projCardWidth;
@@ -798,7 +810,6 @@ div.content {
             border: none;
             background-color: #ffffff;
             filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
-            // cursor: pointer;
 
             transition: all ease-in-out $transitionTimingCard;
     
@@ -807,6 +818,7 @@ div.content {
                 max-height: $projCardWidth;
     
                 background-color: #aaaaaa;
+                cursor: pointer;
     
                 img {
                     width: 100%;
@@ -859,41 +871,96 @@ div.content {
                 }
             }  
 
-            button {
-                width: 50%;
-                margin-bottom: toRem(10);
-                padding: toRem(5) toRem(20);
+            div.buttons {
+                position: relative;
+                width: 40%;
+                height: toRem(30);
+                margin-bottom: toRem(5);
+                margin-left: auto;
 
-                align-self: center;
-                border-radius: toRem(100);
-                border: toRem(2) dotted #000000;
-                outline: none;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: stretch;
 
-                font-family: 'Zilla Slab', sans-serif;
-                font-style: normal;
-                font-weight: 700;
-                font-size: $size_h1;
-                color: #000000;
-                background-color: #ffffff;
+                @media (hover: hover) {
+                    button:hover {
+                        img {
+                            height: toRem(25);
+                        }
+                        .toolTip {
+                            // display: inline-block;
+                            opacity: 1;
+                        }
+                    }
+                }
 
-                cursor: pointer;
+                button:only-child {
+                    margin-left: auto;
+                }
+
+                button {
+                    position: relative;
+                    width: toRem(35);
+                    height: toRem(35);
+
+                    border-radius: toRem(100);
+                    border: none;
+                    outline: none;
+
+                    font-family: 'Zilla Slab', sans-serif;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: $size_h1;
+                    color: $baseTextColor;
+                    background-color: transparent;
+
+                    cursor: pointer;
+
+                    img {
+                        position: relative;
+                        width: auto;
+                        height: toRem(20);
+                        margin: auto;
+
+                        display: flex;
+                        align-self: center;
+
+                        filter: contrast(.8);
+                        transition: all ease-out .1s;
+                    }
+
+                    .toolTip {
+                        $width: toRem(80);
+
+                        position: absolute;
+                        width: $width;
+                        height: 100%;
+                        bottom: toRem(20);
+                        left: 50%;
+                        margin-left: -$width/2;
+            
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: toRem(13);
+            
+                        white-space: nowrap;
+                        border-radius: toRem(40);
+                        color: $baseTextColor;
+                        background-color: transparent;
+                        opacity: 0;
+                        // display: none;
+                        transition: opacity ease-out $transitionTimingCard;
+                    }
+                }
             }
         }
 
         div.cardLast {
             width: $projCardMargin;
             margin: $projCardMargin;
-
-            // display: flex;
-            // flex-flow: column;
             flex-shrink: 0;
-            // justify-content: flex-start;
-            // align-items: flex-start;
-            // overflow: hidden;
-    
-            // border-radius: toRem(10);
-            // background-color: #ffffff;
-            // filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
         }
 
     }

@@ -62,7 +62,7 @@ class Content extends React.Component {
     return (
       <div className='content'>
         <div id='anchor_page' className='anchor' style={{top: '-1000px'}}></div>
-        <Intro/>
+        {/* <Intro/> */}
         <About screenWidth={this.props.screenWidth} />
         <Experience screenWidth={this.props.screenWidth} />
         <Projects screenWidth={this.props.screenWidth} />
