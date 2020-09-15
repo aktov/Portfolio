@@ -1,0 +1,94 @@
+self.__precacheManifest = (self.__precacheManifest || []).concat([
+  {
+    "revision": "c07fafa075bad4d02d5620559cda051c",
+    "url": "/Portfolio/index.html"
+  },
+  {
+    "revision": "cbaa25cc3d0f465d072a",
+    "url": "/Portfolio/static/css/main.abbed9c8.chunk.css"
+  },
+  {
+    "revision": "1c839281dd3b32dda53b",
+    "url": "/Portfolio/static/js/2.61ab6cbf.chunk.js"
+  },
+  {
+    "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
+    "url": "/Portfolio/static/js/2.61ab6cbf.chunk.js.LICENSE.txt"
+  },
+  {
+    "revision": "cbaa25cc3d0f465d072a",
+    "url": "/Portfolio/static/js/main.2b9d420c.chunk.js"
+  },
+  {
+    "revision": "25d735113174e2e503ba",
+    "url": "/Portfolio/static/js/runtime-main.e54d9742.js"
+  },
+  {
+    "revision": "a908368ba9f593ec72f7e1ae0d56a449",
+    "url": "/Portfolio/static/media/background.a908368b.png"
+  },
+  {
+    "revision": "1fcc18ba40c4d9c203966a667611dc1c",
+    "url": "/Portfolio/static/media/backgroundMobile.1fcc18ba.png"
+  },
+  {
+    "revision": "a0a3d6cb35225145400f57dd03391a0d",
+    "url": "/Portfolio/static/media/backgroundNew.a0a3d6cb.png"
+  },
+  {
+    "revision": "2a75da17a180188e7458b380a74c8150",
+    "url": "/Portfolio/static/media/backgroundNewMobile.2a75da17.png"
+  },
+  {
+    "revision": "69aa4055836ad13571fd16f157ceecbd",
+    "url": "/Portfolio/static/media/bullet.69aa4055.svg"
+  },
+  {
+    "revision": "9e3318686c73e36b137567f4944379d8",
+    "url": "/Portfolio/static/media/cardImage_csa.9e331868.png"
+  },
+  {
+    "revision": "47d0ccc3d328d04a0d39f2ec919544cd",
+    "url": "/Portfolio/static/media/cardImage_inTune.47d0ccc3.png"
+  },
+  {
+    "revision": "11e71b5163c6f9254ce22334419132ee",
+    "url": "/Portfolio/static/media/cardImage_parking.11e71b51.jpg"
+  },
+  {
+    "revision": "0b2f1ab199af924c599502072fb634f1",
+    "url": "/Portfolio/static/media/cardImage_prepd.0b2f1ab1.png"
+  },
+  {
+    "revision": "d303690cd570dee08f3f74ac4a562f5b",
+    "url": "/Portfolio/static/media/cardImage_yahoo.d303690c.png"
+  },
+  {
+    "revision": "c1a83000f7d3c831e17ff9122b931af9",
+    "url": "/Portfolio/static/media/close.c1a83000.svg"
+  },
+  {
+    "revision": "2382de07512b7b01891c78ea39e61b7e",
+    "url": "/Portfolio/static/media/figmaLogo_black.2382de07.svg"
+  },
+  {
+    "revision": "e424033e1506f9ef9df9e5c739453104",
+    "url": "/Portfolio/static/media/iconEmail.e424033e.svg"
+  },
+  {
+    "revision": "0445fa9729f1d54464e4364156c34ba0",
+    "url": "/Portfolio/static/media/logoBlack.0445fa97.svg"
+  },
+  {
+    "revision": "e60c145e4f386b52c50364bef8497d89",
+    "url": "/Portfolio/static/media/nav.e60c145e.svg"
+  },
+  {
+    "revision": "a951019991a5d7f0a98e46c968534b90",
+    "url": "/Portfolio/static/media/open.a9510199.svg"
+  },
+  {
+    "revision": "0e8e848669cd338b0b24dd73c738ac60",
+    "url": "/Portfolio/static/media/profilePic.0e8e8486.png"
+  }
+]);
