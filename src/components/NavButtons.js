@@ -16,10 +16,15 @@ const Button = (props) => {
     if (anchor) {
       anchor.scrollIntoView({behavior: 'smooth', block: 'start'});
     }
+
+    // Closes the menu after a 500 ms delay
+    // if (props.closeMenu) {
+    //   setTimeout(() => {props.closeMenu()}, 500);
+    // }
   }
 
   return (
-    <button  //href={`#anchor_${props.text}`} 
+    <button  
         id={props.text} 
         className='buttonNav'
         onClick={handleClick}
@@ -35,7 +40,9 @@ class NavButtons extends React.Component {
       <div className='buttons'>
         {headerCategories.map((category) => 
         <Button key={category.name} 
-                text={category.name}/>
+                text={category.name}
+                closeMenu={this.props.closeMenu}  
+                />
         )}
       </div>
     );

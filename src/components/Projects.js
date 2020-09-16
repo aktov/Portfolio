@@ -29,24 +29,6 @@ const projects_recent = [
     figma: 'https://github.com/aktov/Prepd',
     link: undefined
   },
-  {
-    title: 'test 1',
-    descr: 'A website prototype for Cambodian Student Association @UCSD, built for desktop and mobile',
-    image: undefined,
-    tags: ['Figma', 'wireframing', 'prototyping', 'user testing'],
-    color: '#DA8484',
-    figma: undefined,
-    link: undefined
-  },  
-  {
-    title: 'test 2',
-    descr: 'A website prototype for Cambodian Student Association @UCSD, built for desktop and mobile',
-    image: undefined,
-    tags: ['Figma', 'wireframing', 'prototyping', 'user testing'],
-    color: '#DA8484',
-    figma: undefined,
-    link: undefined
-  },  
 ];
 const projects_web = [
   {

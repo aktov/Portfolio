@@ -1,6 +1,6 @@
 import React from 'react';
 
-import arrow from '../images/open.svg';
+import open from '../images/open.svg';
 import github from '../images/GitHub-Mark-120px-plus.png';
 import figma from '../images/figmaLogo_black.svg';
 
@@ -27,7 +27,7 @@ const Buttons = (props) => {
           <span className='toolTip'> figma </span> 
       </a> }
       <a href={props.props.link} target="_blank" rel="noopener noreferrer">
-          <img src={arrow} alt='arrow' draggable='false' /> 
+          <img src={open} alt='open' draggable='false' /> 
           <span className='toolTip'> link </span>
       </a>
     </div>

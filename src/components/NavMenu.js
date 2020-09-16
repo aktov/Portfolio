@@ -26,7 +26,7 @@ class NavMenu extends React.Component {
           <div className='buttonClose'>
             <button onClick={this.closeMenu}> <img className='navIcon' src={close} alt='Close'/> </button>
           </div>
-          <NavButtons/>
+          <NavButtons closeMenu={this.closeMenu}/>
           <Contact screenWidth={this.props.screenWidth} /> 
         </div>
       </div>
