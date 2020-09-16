@@ -71,8 +71,8 @@ class Background extends React.Component {
           alt='background'
           style={{visibility: 'hidden', zIndex: 100}}
         />
-        <Carousel />
-        <Intro screenWidth={this.props.screenWidth}/>
+        <Carousel screenWidth={this.props.screenWidth} />
+        <Intro screenWidth={this.props.screenWidth} />
       </div>
     );
   }

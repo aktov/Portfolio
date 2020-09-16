@@ -1,13 +1,10 @@
 import React from 'react';
 
 import stasis from '../images/background_stasis.svg';
+import stasisMobile from '../images/background_stasisMobile.svg';
 import over from '../images/background_overlay.svg';
 import under from '../images/background_underlay.svg';
 
-
-const moveLeft = ' moveLeft';
-const moveRight = ' moveRight';
-const center = '';
 
 
 class Image extends React.Component {
@@ -15,14 +12,14 @@ class Image extends React.Component {
     super(props)
 
     this.state = {
-      direction: center,
+      direction: '',
       movingLeft: false
     };
     this.move = this.move.bind(this);
   }
 
   move() {
-    this.setState({direction: this.state.movingLeft ? moveLeft : moveRight});
+    this.setState({direction: this.state.movingLeft ? ' moveLeft': ' moveRight'});
     setTimeout(() => {
       this.setState(state => ({movingLeft: !state.movingLeft}))
     }, this.props.completionTime);
@@ -46,7 +43,9 @@ class Image extends React.Component {
       <img 
         id={this.props.id}
         className={
-          this.props.className + ' desktop' + (this.props.static ? '' : this.state.direction)
+          this.props.className + ' desktop' + 
+          (this.props.static ? '' : this.state.direction) + 
+          (this.props.slower ? 'Slow' : '')
         }
         src={this.props.src}
         alt={this.props.alt}
@@ -69,7 +68,7 @@ class Carousel extends React.Component {
         <Image 
           id='background_stasis'
           className='stasis'
-          src={stasis}
+          src={this.props.screenWidth < 480 ? stasisMobile : stasis}
           alt='background_stasis'
           static={true}
         /> 
@@ -78,6 +77,7 @@ class Carousel extends React.Component {
           className='over'
           src={over}
           alt='background_overlay'
+          static={false}
           completionTime={10000}
         />
         <Image
@@ -85,7 +85,9 @@ class Carousel extends React.Component {
           className='under'
           src={under}
           alt='background_underlay'
+          static={false}
           completionTime={10000}
+          slower={true}
         />
       </div>
     );
