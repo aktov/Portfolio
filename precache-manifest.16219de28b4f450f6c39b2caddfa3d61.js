@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7fbc68190eba6d8b5bcd84595594416f",
+    "revision": "faa475c8225098d4bc6d1720d31da2bc",
     "url": "/Portfolio/index.html"
   },
   {
-    "revision": "64e49dd4569408b89f72",
-    "url": "/Portfolio/static/css/main.8f7f5384.chunk.css"
+    "revision": "5b18ec13fffaa5bda846",
+    "url": "/Portfolio/static/css/main.70d70fb9.chunk.css"
   },
   {
-    "revision": "9fd23bee632c9e635337",
-    "url": "/Portfolio/static/js/2.30836c84.chunk.js"
+    "revision": "99184561a84a66e7a724",
+    "url": "/Portfolio/static/js/2.63aadfe3.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/Portfolio/static/js/2.30836c84.chunk.js.LICENSE.txt"
+    "url": "/Portfolio/static/js/2.63aadfe3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "64e49dd4569408b89f72",
-    "url": "/Portfolio/static/js/main.eb79151a.chunk.js"
+    "revision": "5b18ec13fffaa5bda846",
+    "url": "/Portfolio/static/js/main.22a2c254.chunk.js"
   },
   {
     "revision": "25d735113174e2e503ba",
     "url": "/Portfolio/static/js/runtime-main.e54d9742.js"
   },
   {
-    "revision": "babc96b32d1b4678e482b4da35094ca2",
-    "url": "/Portfolio/static/media/arrow.babc96b3.svg"
+    "revision": "f632bccec5f891245d37a5ebda2da683",
+    "url": "/Portfolio/static/media/arrow_down.f632bcce.svg"
   },
   {
     "revision": "a908368ba9f593ec72f7e1ae0d56a449",
@@ -42,6 +42,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2a75da17a180188e7458b380a74c8150",
     "url": "/Portfolio/static/media/backgroundNewMobile.2a75da17.png"
+  },
+  {
+    "revision": "7beaaed82448c12985074405315126dc",
+    "url": "/Portfolio/static/media/background_overlay.7beaaed8.svg"
+  },
+  {
+    "revision": "85447a2158461f7f46cc15987e7914a9",
+    "url": "/Portfolio/static/media/background_stasis.85447a21.svg"
+  },
+  {
+    "revision": "c0ab53315b759510bc79cef038160728",
+    "url": "/Portfolio/static/media/background_underlay.c0ab5331.svg"
   },
   {
     "revision": "69aa4055836ad13571fd16f157ceecbd",
