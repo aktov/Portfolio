@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7ea7f6a236d77dd7fad46a1b0c927b9b",
+    "revision": "f1c80f431e94199b4aba846f9bf3eb8e",
     "url": "/Portfolio/index.html"
   },
   {
-    "revision": "ef87b1adcd77649661f8",
-    "url": "/Portfolio/static/css/main.8d5ee060.chunk.css"
+    "revision": "83697d144eab3023268e",
+    "url": "/Portfolio/static/css/main.7b5a48ae.chunk.css"
   },
   {
     "revision": "364340cb0361e875b395",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portfolio/static/js/2.8e36c359.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ef87b1adcd77649661f8",
-    "url": "/Portfolio/static/js/main.04d6456a.chunk.js"
+    "revision": "83697d144eab3023268e",
+    "url": "/Portfolio/static/js/main.56c8e5f8.chunk.js"
   },
   {
     "revision": "25d735113174e2e503ba",
@@ -72,24 +72,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portfolio/static/media/cardImage_csa.c266ad47.png"
   },
   {
-    "revision": "47d0ccc3d328d04a0d39f2ec919544cd",
-    "url": "/Portfolio/static/media/cardImage_inTune.47d0ccc3.png"
+    "revision": "a4c2567e9939bcec8fc7b89fcea91d93",
+    "url": "/Portfolio/static/media/cardImage_inTune.a4c2567e.png"
   },
   {
-    "revision": "11e71b5163c6f9254ce22334419132ee",
-    "url": "/Portfolio/static/media/cardImage_parking.11e71b51.jpg"
+    "revision": "f281e5a3a99b3650edc3176f0fa3b4c7",
+    "url": "/Portfolio/static/media/cardImage_parking.f281e5a3.png"
   },
   {
     "revision": "8b6b3cfb183aef7e85204c846e67d566",
     "url": "/Portfolio/static/media/cardImage_portfolio.8b6b3cfb.png"
   },
   {
-    "revision": "0b2f1ab199af924c599502072fb634f1",
-    "url": "/Portfolio/static/media/cardImage_prepd.0b2f1ab1.png"
+    "revision": "518c2977fdad89ac86f7c1de6e2f276d",
+    "url": "/Portfolio/static/media/cardImage_prepd.518c2977.png"
   },
   {
-    "revision": "5b15edd7534c4d1f3838f42297d46faf",
-    "url": "/Portfolio/static/media/cardImage_yahoo.5b15edd7.png"
+    "revision": "91d739f899926cd3b3b5429354c5b2ef",
+    "url": "/Portfolio/static/media/cardImage_yahoo.91d739f8.png"
   },
   {
     "revision": "c1a83000f7d3c831e17ff9122b931af9",
