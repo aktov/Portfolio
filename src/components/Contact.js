@@ -85,9 +85,7 @@ const Button = (props) => {
   return (
     <div className='button' style={props.screenWidth > 768 ? null : btnStyleMobile} >
       <a href={props.buttonInfo.href} target="_blank" rel="noopener noreferrer">
-        <button> 
-          <img src={props.buttonInfo.src} alt={props.buttonInfo.alt} draggable='false' /> 
-        </button>
+        <img src={props.buttonInfo.src} alt={props.buttonInfo.alt} draggable='false' /> 
       </a>
       <span className='toolTip' style={props.screenWidth > 768 ? null : spanStyleMobile}>
         {props.buttonInfo.toolTip}

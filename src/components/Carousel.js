@@ -13,16 +13,21 @@ class Image extends React.Component {
 
     this.state = {
       direction: '',
-      movingLeft: false
+      movingLeft: false,
     };
     this.move = this.move.bind(this);
   }
 
   move() {
-    this.setState({direction: this.state.movingLeft ? ' moveLeft': ' moveRight'});
-    setTimeout(() => {
-      this.setState(state => ({movingLeft: !state.movingLeft}))
-    }, this.props.completionTime);
+    if (this.props.playAnim) {
+      this.setState({direction: this.state.movingLeft ? ' moveLeft': ' moveRight'});
+      setTimeout(() => {
+        this.setState(state => ({movingLeft: !state.movingLeft}))
+      }, this.props.completionTime);
+    }
+    else {
+      this.setState({direction: ''});
+    }
   }
 
   stopMoveAnim() {
@@ -30,8 +35,10 @@ class Image extends React.Component {
   }
 
   componentDidMount() {
-    setTimeout(this.move, 1);
-    this.moveCloudAnim = setInterval(this.move, this.props.completionTime*2);
+    if (this.props.playAnim) {
+      setTimeout(this.move, 1);
+      this.moveCloudAnim = setInterval(this.move, this.props.completionTime*2);
+    }
   }
 
   componentWillUnmount() {
@@ -43,9 +50,7 @@ class Image extends React.Component {
       <img 
         id={this.props.id}
         className={
-          this.props.className + ' desktop' + 
-          (this.props.static ? '' : this.state.direction) + 
-          (this.props.slower ? 'Slow' : '')
+          this.props.className + ((this.props.static || !this.props.playAnim) ? '' : this.state.direction)
         }
         src={this.props.src}
         alt={this.props.alt}
@@ -58,9 +63,8 @@ class Image extends React.Component {
 class Carousel extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {};
   }
+
 
   render() {
     return (
@@ -70,24 +74,26 @@ class Carousel extends React.Component {
           className='stasis'
           src={this.props.screenWidth < 480 ? stasisMobile : stasis}
           alt='background_stasis'
+          playAnim={this.props.playAnim}
           static={true}
         /> 
         <Image 
           id='background_overlay'
-          className='over'
+          className={this.props.screenWidth < 480 ? 'over' : 'overSlower'}
           src={over}
           alt='background_overlay'
+          playAnim={this.props.playAnim}
           static={false}
-          completionTime={10000}
+          completionTime={this.props.screenWidth < 480 ? 10000 : 20000}
         />
         <Image
           id='background_underlay'
-          className='under'
+          className={this.props.screenWidth < 480 ? 'under' : 'underSlower'}
           src={under}
           alt='background_underlay'
+          playAnim={this.props.playAnim}
           static={false}
-          completionTime={10000}
-          slower={true}
+          completionTime={this.props.screenWidth < 480 ? 10000 : 20000}
         />
       </div>
     );

@@ -1,4 +1,5 @@
 import React from 'react';
+import smoothscroll from 'smoothscroll-polyfill';
 
 import Carousel from './Carousel.js';
 
@@ -8,6 +9,8 @@ import bckgrdDesktop from '../images/background.png';
 import bckgrdMobile from '../images/backgroundMobile.png';
 import arrow from '../images/arrow_down.svg';
 import stasis from '../images/background_stasis.svg';
+
+smoothscroll.polyfill();
 
 const Intro = (props) => {
   // Does nothing atm
@@ -28,7 +31,7 @@ const Intro = (props) => {
   return (
     <div className='intro'> 
       <div className='text' style={props.screenWidth <= 768 ? {width: '75%'} : null}>
-        <h1 style={{ fontSize: resizeFont(props.screenWidth) }}> I'm Alex, a designer & developer </h1>
+        <h1 style={{ fontSize: resizeFont(props.screenWidth) }}> I'm Alex, an interaction & UX designer </h1>
         <h5> As a recent graduate, I'm currently looking for internship or full-time opportunities to work with awesome people! </h5>
         <h5> If you're interested with what I have to offer, feel free to send me a message! </h5>
         {props.screenWidth <= 768 && 
@@ -49,11 +52,19 @@ class Background extends React.Component {
   constructor(props) {
     super(props);
 
-    this.handleMouseEnter = this.handleMouseEnter.bind(this);
+    this.state = {
+      carouselPlay: true
+    }
+
+    this.toggleCarousel = this.toggleCarousel.bind(this);
   }
 
-  handleMouseEnter(e) {
-    // this.moveClouds();
+  toggleCarousel(e) {
+    console.log(this.state.carouselPlay);
+    this.setState(state => ({
+        carouselPlay: !state.carouselPlay
+      })
+    );
   }
 
   render() {
@@ -61,17 +72,9 @@ class Background extends React.Component {
       <div 
         className='background' 
         style={this.props.screenWidth < 480 ? {maxHeight: '800px'} : null}
-        onClick={this.handleMouseEnter} 
+        onClick={this.toggleCarousel} 
       > 
-        <img
-          // className={this.props.screenWidth < 480 ? 'mobile' : 'desktop'} 
-          // src={this.props.screenWidth < 480 ? bckgrdMobile : bckgrdDesktop} 
-          className='desktop'
-          src={stasis}
-          alt='background'
-          style={{visibility: 'hidden', zIndex: 100}}
-        />
-        <Carousel screenWidth={this.props.screenWidth} />
+        <Carousel screenWidth={this.props.screenWidth} playAnim={this.state.carouselPlay} />
         <Intro screenWidth={this.props.screenWidth} />
       </div>
     );

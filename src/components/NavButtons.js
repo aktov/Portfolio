@@ -1,4 +1,6 @@
 import React from 'react';
+import smoothscroll from 'smoothscroll-polyfill';
+smoothscroll.polyfill();
 
 const headerCategories = [
   {name: 'projects'},
@@ -11,7 +13,6 @@ const headerCategories = [
 const Button = (props) => {
 
   function handleClick(e) {
-    // e.preventDefault();
     let anchor = document.getElementById('anchor_' + props.text);
     if (anchor) {
       anchor.scrollIntoView({behavior: 'smooth', block: 'start'});
@@ -26,7 +27,7 @@ const Button = (props) => {
   return (
     <button  
         id={props.text} 
-        className='buttonNav'
+        className='buttonNav outlineNone'
         onClick={handleClick}
         aria-label={`Go to ${props.text}`}>
         {props.text}

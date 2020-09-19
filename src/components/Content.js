@@ -43,7 +43,6 @@ const About = (props) => {
         <div className={props.screenWidth > 640 ? 'pic desktop' : 'pic mobile'}> 
           <img src={prof} alt='ProfilePic' draggable='false' /> 
         </div>
-        {props.screenWidth <= 768 && <Contact screenWidth={props.screenWidth} />}
       </div>
     </div> 
   );

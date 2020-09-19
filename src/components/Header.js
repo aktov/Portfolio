@@ -1,8 +1,11 @@
 import React from 'react';
+import smoothscroll from 'smoothscroll-polyfill';
 
 import logo from '../images/logoBlack.svg';
 
 import Navigation from './Navigation.js';
+
+smoothscroll.polyfill();
 
 class Header extends React.Component {
   handleClick(e) {
@@ -14,6 +17,7 @@ class Header extends React.Component {
     <header className='header'>
       <div className='left'> 
         <button 
+          className='outlineNone'
           onClick={this.handleClick}
           aria-label='Go back to top'>
           <img src={logo} alt='Back to top' draggable='false' /> 

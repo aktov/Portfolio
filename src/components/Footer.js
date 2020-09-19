@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Contact from './Contact.js';
 
 
 class Footer extends React.Component {
@@ -7,7 +8,7 @@ class Footer extends React.Component {
   render() {
     return (
       <div className='footer'>
-
+        {/* <Contact screenWidth={this.props.screenWidth} /> */}
         <h6> 2020 [what a year], Designed and built by Alex Tov </h6>
       </div>
     );

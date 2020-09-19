@@ -26,10 +26,10 @@ const Buttons = (props) => {
           <img src={figma} alt='figma' draggable='false' /> 
           <span className='toolTip'> figma </span> 
       </a> }
-      <a href={props.props.link} target="_blank" rel="noopener noreferrer">
+      {props.props.link && <a href={props.props.link} target="_blank" rel="noopener noreferrer">
           <img src={open} alt='open' draggable='false' /> 
           <span className='toolTip'> link </span>
-      </a>
+      </a> }
     </div>
   );
 }
@@ -54,7 +54,12 @@ class Card extends React.Component {
 
   render() {
     return (
-      <div className='card' onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
+      <div 
+        className='card' 
+        style={this.props.screenWidth >= 480 ? {margin: '1rem 1.5rem'} : {margin: '1rem 1rem'}}
+        onMouseEnter={this.handleMouseEnter} 
+        onMouseLeave={this.handleMouseLeave}
+      >
         <div className='imageHolder'>
           {this.props.image && <img src={this.props.image} alt={this.props.title} draggable='false' />}  
         </div>
