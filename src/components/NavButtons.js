@@ -3,10 +3,7 @@ import smoothscroll from 'smoothscroll-polyfill';
 smoothscroll.polyfill();
 
 const headerCategories = [
-  {name: 'projects'},
-  {name: 'experience'},
-  {name: 'about'},
-  {name: 'resume'},
+  'projects', 'experience', 'about', 'resume'
 ]
 
 // Button component
@@ -40,8 +37,8 @@ class NavButtons extends React.Component {
     return (
       <div className='buttons'>
         {headerCategories.map((category) => 
-        <Button key={category.name} 
-                text={category.name}
+        <Button key={category} 
+                text={category}
                 closeMenu={this.props.closeMenu}  
                 />
         )}
