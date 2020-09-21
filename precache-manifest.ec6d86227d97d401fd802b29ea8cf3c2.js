@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "83208bfdd5b07955d63e12e0f9d1e665",
+    "revision": "22491c907c68ef89a41296287d117bbe",
     "url": "/Portfolio/index.html"
   },
   {
-    "revision": "d0e143fed4a54c705c2c",
-    "url": "/Portfolio/static/css/main.920d9c51.chunk.css"
+    "revision": "7fb8a1d1523761a3b884",
+    "url": "/Portfolio/static/css/main.81aca9bc.chunk.css"
   },
   {
-    "revision": "2c38b4969aca5ff4d67b",
-    "url": "/Portfolio/static/js/2.af49cb67.chunk.js"
+    "revision": "fb29a9d4087a66bded82",
+    "url": "/Portfolio/static/js/2.fed4a9d8.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/Portfolio/static/js/2.af49cb67.chunk.js.LICENSE.txt"
+    "url": "/Portfolio/static/js/2.fed4a9d8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d0e143fed4a54c705c2c",
-    "url": "/Portfolio/static/js/main.a509e9b7.chunk.js"
+    "revision": "7fb8a1d1523761a3b884",
+    "url": "/Portfolio/static/js/main.a71eb19a.chunk.js"
   },
   {
     "revision": "25d735113174e2e503ba",
@@ -65,35 +65,59 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "0a6acc20a223ca169b834ac369d5ea32",
-    "url": "/Portfolio/static/media/cardImage_chrispy.0a6acc20.png"
+    "url": "/Portfolio/static/media/cardImageM_chrispy.0a6acc20.png"
   },
   {
     "revision": "c266ad473c96794cf75c10f2b1d85fc5",
-    "url": "/Portfolio/static/media/cardImage_csa.c266ad47.png"
+    "url": "/Portfolio/static/media/cardImageM_csa.c266ad47.png"
   },
   {
     "revision": "a4c2567e9939bcec8fc7b89fcea91d93",
-    "url": "/Portfolio/static/media/cardImage_inTune.a4c2567e.png"
+    "url": "/Portfolio/static/media/cardImageM_inTune.a4c2567e.png"
   },
   {
     "revision": "85d6e390680e9b5bb664d986bc777cc5",
-    "url": "/Portfolio/static/media/cardImage_memo.85d6e390.png"
+    "url": "/Portfolio/static/media/cardImageM_memo.85d6e390.png"
   },
   {
     "revision": "f281e5a3a99b3650edc3176f0fa3b4c7",
-    "url": "/Portfolio/static/media/cardImage_parking.f281e5a3.png"
+    "url": "/Portfolio/static/media/cardImageM_parking.f281e5a3.png"
   },
   {
     "revision": "8b6b3cfb183aef7e85204c846e67d566",
-    "url": "/Portfolio/static/media/cardImage_portfolio.8b6b3cfb.png"
+    "url": "/Portfolio/static/media/cardImageM_portfolio.8b6b3cfb.png"
   },
   {
     "revision": "4496f29e6714f084aa673d08f698682c",
-    "url": "/Portfolio/static/media/cardImage_prepd.4496f29e.png"
+    "url": "/Portfolio/static/media/cardImageM_prepd.4496f29e.png"
   },
   {
     "revision": "91d739f899926cd3b3b5429354c5b2ef",
-    "url": "/Portfolio/static/media/cardImage_yahoo.91d739f8.png"
+    "url": "/Portfolio/static/media/cardImageM_yahoo.91d739f8.png"
+  },
+  {
+    "revision": "65240c4d200d14d5aa771544b478e64c",
+    "url": "/Portfolio/static/media/cardImage_chrispy.65240c4d.png"
+  },
+  {
+    "revision": "38da5737d4a15778ef676bdda85e3e1e",
+    "url": "/Portfolio/static/media/cardImage_csa.38da5737.png"
+  },
+  {
+    "revision": "2e2252eef697416be7af4b13abc8d4b9",
+    "url": "/Portfolio/static/media/cardImage_memo.2e2252ee.png"
+  },
+  {
+    "revision": "bef796dbcd5d29ff744365139c1b019c",
+    "url": "/Portfolio/static/media/cardImage_parking.bef796db.png"
+  },
+  {
+    "revision": "9946abd65880bc3422cb9660150fd376",
+    "url": "/Portfolio/static/media/cardImage_portfolio.9946abd6.png"
+  },
+  {
+    "revision": "c985d1928d846fc5a047e653bc9364e9",
+    "url": "/Portfolio/static/media/cardImage_yahoo.c985d192.png"
   },
   {
     "revision": "c1a83000f7d3c831e17ff9122b931af9",
