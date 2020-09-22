@@ -31,7 +31,14 @@ const Intro = (props) => {
 
 const About = (props) => {
   return (
-    <div className='wrapper'>
+    <div 
+      className='wrapper'
+      data-aos='fade' 
+      data-aos-offset='100' 
+      data-aos-easing='ease-out-sine'
+      data-aos-duration='400'
+      data-aos-once={true}
+    >
       <div id='anchor_about' className='anchor'></div>
       <SectionTitle title='about me'/> 
       <div className='about'>
@@ -41,7 +48,14 @@ const About = (props) => {
           <p> I love working on projects entailing UI/UX design, but on my free time I also enjoy creating 3D artwork, shooting photography, and traveling. Speaking of traveling, I am currently based in the Bay Area, but I’m willing to start a new chapter in LA or NY as well! </p>
           <p> If you’re interested in getting to know me more or want to hear more about my projects, feel free to message me. I’d love to connect or collaborate! </p>
         </div>
-        <div className={props.screenWidth > 640 ? 'pic desktop' : 'pic mobile'}> 
+        <div 
+          className={props.screenWidth > 640 ? 'pic desktop' : 'pic mobile'}
+          data-aos='fade' 
+          data-aos-offset='0' 
+          data-aos-easing='ease-out-sine'
+          data-aos-duration='400'
+          data-aos-once={true}
+        > 
           <LazyLoad height={200} offset={100}>
             <img src={prof} alt='ProfilePic' draggable='false' /> 
           </LazyLoad>

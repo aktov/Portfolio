@@ -1,4 +1,6 @@
 import React from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './App.scss';
 
 import Desktop from './components/Desktop.js'; 
@@ -31,6 +33,7 @@ class App extends React.Component {
   }
 
   render() {
+    AOS.init();
     return (
         this.state.screenWidth > breakpoint ? 
         <Desktop screenWidth={this.state.screenWidth}/> : 

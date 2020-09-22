@@ -15,7 +15,14 @@ const Phrase = (props) => {
 
 const JobListing = (props) => {
   return (
-      <div className='experience'>
+      <div 
+        className='experience'
+        data-aos='fade' 
+        data-aos-offset='50' 
+        data-aos-easing='ease-out-sine'
+        data-aos-duration='400'
+        data-aos-once={true}
+      >
         <h4> {props.title.toUpperCase()} </h4>
         <h5> {props.location.toUpperCase()} </h5>
         <h5> {props.period.toUpperCase()} </h5> 
@@ -31,7 +38,15 @@ const JobListing = (props) => {
 class Experience extends React.Component {
   render() {
     return (
-      <div className='wrapper' style={this.props.screenWidth > 768 ? {width: '50%'} : null} >
+      <div 
+        className='wrapper' 
+        style={this.props.screenWidth > 768 ? {width: '50%'} : null} 
+        data-aos='fade' 
+        data-aos-offset='200' 
+        data-aos-easing='ease-out-sine'
+        data-aos-duration='400'
+        data-aos-once={true}
+      >
         <div id='anchor_experience' className='anchor'></div>
         <SectionTitle title='experience'/> 
         <JobListing 

@@ -55,9 +55,6 @@ const Buttons = (props) => {
 }
 
 
-
-
-
 class Card extends React.Component {
   constructor(props) {
     super(props);
@@ -88,6 +85,11 @@ class Card extends React.Component {
           style={this.props.screenWidth >= 480 ? {margin: '1rem 1.5rem'} : {margin: '1rem 1rem'}}
           onMouseEnter={this.handleMouseEnter} 
           onMouseLeave={this.handleMouseLeave}
+          data-aos='fade' 
+          data-aos-offset='200' 
+          data-aos-easing='ease-out-sine'
+          data-aos-duration='400'
+          data-aos-once={true}
         >
           
           <div className='imageHolder' style={{backgroundColor: this.props.color}}>

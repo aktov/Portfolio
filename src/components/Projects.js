@@ -150,7 +150,14 @@ const Others = (props) => {
 class Projects extends React.Component {
   render() {
     return (
-      <div className='projects'> {/*style={this.props.screenWidth > 768 ? {width: '100%'} : null}>*/}
+      <div 
+        className='projects'
+        data-aos='fade' 
+        data-aos-offset='200' 
+        data-aos-easing='ease-out-sine'
+        data-aos-duration='400'
+        data-aos-once={true}
+      > {/*style={this.props.screenWidth > 768 ? {width: '100%'} : null}>*/}
         <div id='anchor_projects' className='anchor'></div>
         <SectionTitle title='projects'/> 
 
