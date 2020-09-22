@@ -9,7 +9,7 @@ class Footer extends React.Component {
     return (
       <div className='footer'>
         {/* <Contact screenWidth={this.props.screenWidth} /> */}
-        <h6> 2020 [what a year], Designed and built by Alex Tov </h6>
+        <h6> Designed and built by Alex Tov </h6>
       </div>
     );
   }

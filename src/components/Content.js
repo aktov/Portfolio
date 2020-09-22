@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 
 import SectionTitle from './SectionTitle';
 import Experience from './Experience.js';
@@ -41,7 +42,9 @@ const About = (props) => {
           <p> If you’re interested in getting to know me more or want to hear more about my projects, feel free to message me. I’d love to connect or collaborate! </p>
         </div>
         <div className={props.screenWidth > 640 ? 'pic desktop' : 'pic mobile'}> 
-          <img src={prof} alt='ProfilePic' draggable='false' /> 
+          <LazyLoad height={200} offset={100}>
+            <img src={prof} alt='ProfilePic' draggable='false' /> 
+          </LazyLoad>
         </div>
       </div>
     </div> 

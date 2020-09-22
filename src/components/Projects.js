@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 
 import Card from './Card.js';
 import SectionTitle from './SectionTitle';
@@ -120,22 +121,24 @@ const Others = (props) => {
   return (
     <div className={props.screenWidth > 768 ? 'cardsDesktop' : 'cardsMobile'}>
       {props.projects.map((card) => 
-        <Card key={card.title.toString()} 
-              title={card.title}
-              desc={card.descr}
-              image={card.image} 
-              imageM={card.imageM}
-              tags={card.tags}
-              color={card.color}
-              github={card.github}
-              figmaD={card.figmaD}
-              figmaM={card.figmaM}
-              figmaA={card.figmaA}
-              figmaB={card.figmaB}
-              figma={card.figma}
-              link={card.link}
-              screenWidth={props.screenWidth}
-              />
+        <LazyLoad height={200} offset={100} overflow={true}>
+          <Card key={card.title.toString()} 
+                title={card.title}
+                desc={card.descr}
+                image={card.image} 
+                imageM={card.imageM}
+                tags={card.tags}
+                color={card.color}
+                github={card.github}
+                figmaD={card.figmaD}
+                figmaM={card.figmaM}
+                figmaA={card.figmaA}
+                figmaB={card.figmaB}
+                figma={card.figma}
+                link={card.link}
+                screenWidth={props.screenWidth}
+          />
+        </LazyLoad>  
       )}
       
       {(props.screenWidth <= 768) && <div className='cardLast'> </div>}

@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 
 import open from '../images/open.svg';
 import github from '../images/GitHub-Mark-120px-plus.png';
@@ -17,7 +18,6 @@ const Tags = (props) => {
     </div>
   );
 }
-
 
 const Buttons = (props) => {
   return (
@@ -89,9 +89,13 @@ class Card extends React.Component {
           onMouseEnter={this.handleMouseEnter} 
           onMouseLeave={this.handleMouseLeave}
         >
+          
           <div className='imageHolder' style={{backgroundColor: this.props.color}}>
-            {this.props.image && <img src={this.props.image} alt={this.props.title} draggable='false' />}  
+            <LazyLoad height={200} offset={100}>
+              {this.props.image && <img src={this.props.image} alt={this.props.title} draggable='false' />} 
+            </LazyLoad>
           </div>
+         
 
           <div className={this.state.mouseEntered ? 'descWrapper expand' : 'descWrapper'} style={false ? {height:'27%'} : null}>
             <div className='text'>
@@ -117,7 +121,9 @@ class Card extends React.Component {
           onMouseLeave={this.handleMouseLeave}
         >
           <div className='imageHolder'>
-            {this.props.imageM && <img src={this.props.imageM} alt={this.props.title} draggable='false' />}  
+            <LazyLoad height={200} offset={100} overflow={true}>
+              {this.props.imageM && <img src={this.props.imageM} alt={this.props.title} draggable='false' />}  
+            </LazyLoad>
           </div>
         
           <div className='text'>
