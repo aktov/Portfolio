@@ -298,6 +298,10 @@ header {
     button:hover .toolTip {
         opacity: 1;
     }
+
+    a {
+        text-decoration: none;
+    }
 }
 
 div.menuOut {
@@ -945,7 +949,7 @@ div.content {
             align-items: flex-start;
         
             overflow-x: scroll;
-            
+
             .lazyload-wrapper  {
                 width: 100%;
                 max-width: 100%;
@@ -1416,3 +1420,30 @@ div.content {
     }
 }
 
+.sadButton {
+    width: auto;
+    height: auto;
+    padding: toRem(10) toRem(20);
+    margin-top: toRem(40);
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: $size_h5;
+    line-height: normal;
+    align-self: center;
+
+    // border: toRem(2) dotted $baseTextColor;
+    border: none;
+    border-radius: toRem(100);
+    color: $baseTextColor;
+    background-color: #ffffff;  
+
+    -webkit-filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
+    -moz-filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
+    -ms-filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
+    -o-filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}

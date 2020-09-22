@@ -1,5 +1,6 @@
 import React from 'react';
 import LazyLoad from 'react-lazyload';
+import { Link } from 'react-router-dom';
 
 import open from '../images/open.svg';
 import github from '../images/GitHub-Mark-120px-plus.png';
@@ -46,10 +47,10 @@ const Buttons = (props) => {
           <img src={figmaB} alt='figmaB' draggable='false' /> 
           <span className='toolTip'> figma version B </span> 
       </a> }
-      {props.props.link && <a href={props.props.link} target="_blank" rel="noopener noreferrer">
+      {props.props.link && <Link to={props.props.link} rel="noopener noreferrer">
           <img src={open} alt='open' draggable='false' /> 
           <span className='toolTip'> link </span>
-      </a> }
+      </Link> }
     </div>
   );
 }

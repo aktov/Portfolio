@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import smoothscroll from 'smoothscroll-polyfill';
 smoothscroll.polyfill();
 
@@ -22,13 +23,24 @@ const Button = (props) => {
   }
 
   return (
-    <button  
-        id={props.text} 
-        className='buttonNav outlineNone'
-        onClick={handleClick}
-        aria-label={`Go to ${props.text}`}>
-        {props.text}
-    </button>
+    props.text === 'resume' ? 
+      <Link to='/resume'> 
+        <button  
+            id={props.text} 
+            className='buttonNav outlineNone'
+            onClick={handleClick}
+            aria-label={`Go to ${props.text}`}>
+            {props.text}
+        </button>
+      </Link>
+    :
+      <button  
+          id={props.text} 
+          className='buttonNav outlineNone'
+          onClick={handleClick}
+          aria-label={`Go to ${props.text}`}>
+          {props.text}
+      </button>
   );
 }
 

@@ -62,7 +62,7 @@ const projects_design = [
     color: '#DA8484',
     figmaD: 'https://www.figma.com/proto/RGXkafFb1qTKCbGmfZSUDq/COGS187B-Final-Prototype?node-id=236%3A2&scaling=scale-down-width',
     figmaM: 'https://www.figma.com/proto/HK3nRrbz73hPQqSlTNTDmu/COGS187B-Final-Prototype-Copy?node-id=241%3A0&scaling=contain',
-    link: ' '
+    link: '/csa'
   },
   {
     title: 'yahoo mobile redesign',
@@ -72,7 +72,7 @@ const projects_design = [
     tags: ['Figma', 'user testing', 'wireframing', 'prototyping'],
     color: '#C19FF7',
     figma: 'https://www.figma.com/proto/pUOIhb7GiEGQeFotepQkQY/COGS-187A-Final-(Copy)?node-id=21%3A175&scaling=scale-down',
-    link: ' '
+    link: '/yahoo'
   },
   {
     title: 'parking fine',
@@ -82,7 +82,7 @@ const projects_design = [
     tags: ['Figma', 'storyboarding', 'diagramming', 'wireframing', 'prototyping', 'user testing'],
     color: '#536D90',
     figma: 'https://www.figma.com/proto/FJIhLsq3WEDOox5VfArU3fuF/Parking-Fine-Kiosk?node-id=5%3A2&scaling=contain',
-    link: ' '
+    link: '/parking'
   },
 ];
 const projects_web = [
