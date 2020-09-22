@@ -3,24 +3,11 @@ import smoothscroll from 'smoothscroll-polyfill';
 
 import Carousel from './Carousel.js';
 
-import bckgrdDesktopNew from '../images/backgroundNew.png';
-import bckgrdMobileNew from '../images/backgroundNewMobile.png';
-import bckgrdDesktop from '../images/background.png';
-import bckgrdMobile from '../images/backgroundMobile.png';
 import arrow from '../images/arrow_down.svg';
-import stasis from '../images/background_stasis.svg';
 
 smoothscroll.polyfill();
 
 const Intro = (props) => {
-  // Does nothing atm
-  function resizeFont(screenWidth) {
-    const defaultFontSize = 16;
-    const newSize = props.screenWidth < 480 ? '2.5rem' : '3.125rem'
-
-    return newSize;
-  }
-
   function handleClick(e) {
     let anchor = document.getElementById('anchor_projects');
     if (anchor) {
@@ -31,7 +18,7 @@ const Intro = (props) => {
   return (
     <div className='intro'> 
       <div className='text' style={props.screenWidth <= 768 ? {width: '75%'} : null}>
-        <h1 style={{ fontSize: resizeFont(props.screenWidth) }}> I'm Alex, an interaction & UX designer </h1>
+        <h1 style={{ fontSize: props.screenWidth < 480 ? '2.5rem' : '3.125rem' }}> I'm Alex, an interaction & UX designer </h1>
         <h5> As a recent graduate, I'm currently looking for internship or full-time opportunities to work with awesome people! </h5>
         <h5> If you're interested with what I have to offer, feel free to send me a message! </h5>
         {props.screenWidth <= 768 && 

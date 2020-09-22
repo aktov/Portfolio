@@ -7,10 +7,6 @@ import Contact from './Contact.js';
 import Content from './Content.js';
 
 class Desktop extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <>

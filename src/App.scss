@@ -818,6 +818,7 @@ div.content {
                         align-self: flex-start;
                     }
                 }
+                
             }
 
             .desktop {
@@ -1278,6 +1279,8 @@ div.content {
                     max-width: 100%;
                     margin-top: toRem(-5);
                     margin-left: 0;
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 600;
                 }
     
                 p {
@@ -1433,7 +1436,6 @@ div.content {
     line-height: normal;
     align-self: center;
 
-    // border: toRem(2) dotted $baseTextColor;
     border: none;
     border-radius: toRem(100);
     color: $baseTextColor;

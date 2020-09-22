@@ -4,30 +4,8 @@ import LazyLoad from 'react-lazyload';
 import SectionTitle from './SectionTitle';
 import Experience from './Experience.js';
 import Projects from './Projects.js';
-import Contact from './Contact.js';
 
 import prof from '../images/profilePic.png';
-
-const Intro = (props) => {
-  // Does nothing atm
-  function resizeFont(screenWidth) {
-    const defaultFontSize = 16;
-  }
-
-  return (
-    <div id='div_intro' className='intro'> 
-      <div className='text'>
-        <h1 style={{ fontSize: resizeFont(props.screenWidth) }}> I'm Alex, a designer & developer </h1>
-        <h4> {`
-        My dream is to apply my skills and knowledge to help contribute for a better tomorrow.
-        I’m currently looking for opportunities to ...
-        `}
-        </h4>
-      </div>
-    </div>   
-  );
-}
-
 
 const About = (props) => {
   return (
@@ -72,7 +50,6 @@ class Content extends React.Component {
     return (
       <div className='content'>
         <div id='anchor_page' className='anchor' style={{top: '-1000px'}}></div>
-        {/* <Intro/> */}
         <About screenWidth={this.props.screenWidth} />
         <Experience screenWidth={this.props.screenWidth} />
         <Projects screenWidth={this.props.screenWidth} />

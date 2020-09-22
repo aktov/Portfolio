@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Contact from './Contact.js';
+// import Contact from './Contact.js';
 
 
 class Footer extends React.Component {

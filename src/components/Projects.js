@@ -4,15 +4,16 @@ import LazyLoad from 'react-lazyload';
 import Card from './Card.js';
 import SectionTitle from './SectionTitle';
 
-import imgM_inTune from '../images/cardImageM_inTune.png';
-import imgM_prepd from '../images/cardImageM_prepd.png';
+// import imgM_inTune from '../images/cardImageM_inTune.png';
+// import imgM_prepd from '../images/cardImageM_prepd.png';
+// Mobile images
+import imgM_portfolio from '../images/cardImageM_portfolio.png';
+import imgM_memo from '../images/cardImageM_memo.png';
+import imgM_chrispy from '../images/cardImageM_chrispy.png';
+import imgM_csa from '../images/cardImageM_csa.png';
 import imgM_yahoo from '../images/cardImageM_yahoo.png';
 import imgM_parking from '../images/cardImageM_parking.png';
-import imgM_csa from '../images/cardImageM_csa.png';
-import imgM_portfolio from '../images/cardImageM_portfolio.png';
-import imgM_chrispy from '../images/cardImageM_chrispy.png';
-import imgM_memo from '../images/cardImageM_memo.png';
-
+// Desktop images
 import img_portfolio from '../images/cardImage_portfolio.png';
 import img_memo from '../images/cardImage_memo.png';
 import img_chrispy from '../images/cardImage_chrispy.png';
@@ -85,35 +86,35 @@ const projects_design = [
     link: '/parking'
   },
 ];
-const projects_web = [
-  // {
-  //   title: 'hour memo',
-  //   descr: 'A web app for Spotify and Last.fm users to visualize the music history and genres of themselves and their friends',
-  //   image: undefined,
-  //   tags: ['HTML', 'CSS', 'bootstrap', 'javascript', 'jquery', 'firebase', 'node.js', 'last.fm api'],
-  //   color: '#87B573',
-  //   github: undefined,
-  //   link: undefined,
-  // },
-  {
-    title: 'intune visualizer',
-    descr: 'A web app for Spotify and Last.fm users to visualize the music history and genres of themselves and their friends',
-    imageM: imgM_inTune,
-    tags: ['HTML', 'CSS', 'bootstrap', 'javascript', 'jquery', 'firebase', 'node.js', 'last.fm api'],
-    color: '#709CE3',
-    github: 'https://github.com/aktov/inTuneVisualizer',
-    link: undefined,
-  },
-  {
-    title: 'prepd',
-    descr: 'A web app to aid meal prepping by supplying the user with quick access to recipes and easy organization',
-    imageM: imgM_prepd,
-    tags: ['HTML', 'CSS', 'bootstrap', 'javascript', 'jquery', 'node.js'],
-    color: '#FFAC46',
-    github: 'https://github.com/aktov/Prepd',
-    link: undefined
-  },
-];
+// const projects_web = [
+//   {
+//     title: 'hour memo',
+//     descr: 'A web app for Spotify and Last.fm users to visualize the music history and genres of themselves and their friends',
+//     image: undefined,
+//     tags: ['HTML', 'CSS', 'bootstrap', 'javascript', 'jquery', 'firebase', 'node.js', 'last.fm api'],
+//     color: '#87B573',
+//     github: undefined,
+//     link: undefined,
+//   },
+//   {
+//     title: 'intune visualizer',
+//     descr: 'A web app for Spotify and Last.fm users to visualize the music history and genres of themselves and their friends',
+//     imageM: imgM_inTune,
+//     tags: ['HTML', 'CSS', 'bootstrap', 'javascript', 'jquery', 'firebase', 'node.js', 'last.fm api'],
+//     color: '#709CE3',
+//     github: 'https://github.com/aktov/inTuneVisualizer',
+//     link: undefined,
+//   },
+//   {
+//     title: 'prepd',
+//     descr: 'A web app to aid meal prepping by supplying the user with quick access to recipes and easy organization',
+//     imageM: imgM_prepd,
+//     tags: ['HTML', 'CSS', 'bootstrap', 'javascript', 'jquery', 'node.js'],
+//     color: '#FFAC46',
+//     github: 'https://github.com/aktov/Prepd',
+//     link: undefined
+//   },
+// ];
 
 
 
@@ -121,22 +122,27 @@ const Others = (props) => {
   return (
     <div className={props.screenWidth > 768 ? 'cardsDesktop' : 'cardsMobile'}>
       {props.projects.map((card) => 
-        <LazyLoad height={200} offset={100} overflow={true}>
-          <Card key={card.title.toString()} 
-                title={card.title}
-                desc={card.descr}
-                image={card.image} 
-                imageM={card.imageM}
-                tags={card.tags}
-                color={card.color}
-                github={card.github}
-                figmaD={card.figmaD}
-                figmaM={card.figmaM}
-                figmaA={card.figmaA}
-                figmaB={card.figmaB}
-                figma={card.figma}
-                link={card.link}
-                screenWidth={props.screenWidth}
+        <LazyLoad 
+          height={200} 
+          offset={100} 
+          overflow={true}
+          key={card.title.toString()}
+        >
+          <Card
+            title={card.title}
+            desc={card.descr}
+            image={card.image} 
+            imageM={card.imageM}
+            tags={card.tags}
+            color={card.color}
+            github={card.github}
+            figmaD={card.figmaD}
+            figmaM={card.figmaM}
+            figmaA={card.figmaA}
+            figmaB={card.figmaB}
+            figma={card.figma}
+            link={card.link}
+            screenWidth={props.screenWidth}
           />
         </LazyLoad>  
       )}
