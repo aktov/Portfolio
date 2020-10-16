@@ -6,7 +6,6 @@ import './App.scss';
 
 import Desktop from './components/Desktop.js'; 
 import Mobile from './components/Mobile.js'; 
-import Resume from './components/Pages/Resume.js';
 import CSA from './components/Pages/CSA.js';
 import Yahoo from './components/Pages/Yahoo.js';
 import Parking from './components/Pages/Parking.js';
@@ -30,7 +29,6 @@ class App extends React.Component {
   }
 
   componentDidUpdate() {
-    console.log(this.state.screenWidth);
   }
 
   componentWillUnmount() {
@@ -46,9 +44,6 @@ class App extends React.Component {
             <Desktop screenWidth={this.state.screenWidth}/> : 
             <Mobile screenWidth={this.state.screenWidth}/>
             }
-          </Route>
-          <Route path='/resume'>
-            <Resume />
           </Route>
           <Route path='/csa'>
             <CSA />

@@ -60,6 +60,11 @@ class Background extends React.Component {
         className='background' 
         style={this.props.screenWidth < 480 ? {maxHeight: '800px'} : null}
         onClick={this.toggleCarousel} 
+        data-aos='fade' 
+        data-aos-offset='100' 
+        data-aos-easing='ease-out-sine'
+        data-aos-duration='400'
+        data-aos-once={true}
       > 
         <Carousel screenWidth={this.props.screenWidth} playAnim={this.state.carouselPlay} />
         <Intro screenWidth={this.props.screenWidth} />

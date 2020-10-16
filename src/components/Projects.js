@@ -23,17 +23,6 @@ import img_parking from '../images/cardImage_parking.png';
 
 const projects_figma = [
   {
-    title: 'this portfolio',
-    descr: 'Check out the mobile & desktop prototypes of the first iteration of this current portfolio',
-    image: img_portfolio,
-    imageM: imgM_portfolio,
-    tags: ['Figma', 'prototyping'],
-    color: '#93B0E9',
-    figmaD: 'https://www.figma.com/proto/7zBJtA5xKYSNlq1RKzRwJa/Portfolio?node-id=1%3A2&scaling=scale-down-width&hide-ui=1',
-    figmaM: 'https://www.figma.com/proto/7zBJtA5xKYSNlq1RKzRwJa/Portfolio?node-id=82%3A0&viewport=243%2C287%2C0.09107169508934021&scaling=scale-down',
-    link: undefined
-  },
-  {
     title: 'memos',
     descr: 'A partial prototype of a quick and simple to-do list app to keep track of your personal tasks',
     image: img_memo,
@@ -51,6 +40,17 @@ const projects_figma = [
     color: '#E1B4D5',
     figmaA: 'https://www.figma.com/proto/KMOZJky4Yot11PJTmKXvOH/chrispyroll?node-id=3%3A0&viewport=157%2C214%2C0.18325643241405487&scaling=scale-down-width&hide-ui=1',
     figmaB: 'https://www.figma.com/proto/KMOZJky4Yot11PJTmKXvOH/chrispyroll?node-id=3%3A1135&viewport=293%2C331%2C0.18345798552036285&scaling=scale-down-width&hide-ui=1',
+  },
+  {
+    title: 'portfolio prototype',
+    descr: 'Check out the mobile & desktop prototypes of the first iteration of this current portfolio',
+    image: img_portfolio,
+    imageM: imgM_portfolio,
+    tags: ['Figma', 'prototyping'],
+    color: '#93B0E9',
+    figmaD: 'https://www.figma.com/proto/7zBJtA5xKYSNlq1RKzRwJa/Portfolio?node-id=1%3A2&scaling=scale-down-width&hide-ui=1',
+    figmaM: 'https://www.figma.com/proto/7zBJtA5xKYSNlq1RKzRwJa/Portfolio?node-id=82%3A0&viewport=243%2C287%2C0.09107169508934021&scaling=scale-down',
+    link: undefined
   },
 ];
 const projects_design = [
@@ -159,7 +159,7 @@ class Projects extends React.Component {
       <div 
         className='projects'
         data-aos='fade' 
-        data-aos-offset='200' 
+        data-aos-offset='50' 
         data-aos-easing='ease-out-sine'
         data-aos-duration='400'
         data-aos-once={true}
@@ -167,9 +167,9 @@ class Projects extends React.Component {
         <div id='anchor_projects' className='anchor'></div>
         <SectionTitle title='projects'/> 
 
-        <h4 style={{marginBottom: '.625rem'}}> FIGMA PROTOTYPES & MOCKUPS </h4>
+        <h4 style={{ marginBottom: '.625rem' }}> {'figma prototypes & mockups'.toUpperCase()} </h4>
         <Others projects={projects_figma} screenWidth={this.props.screenWidth} />
-        <h4 style={{marginBottom: '.625rem'}}> USER-CENTERED DESIGN PROCESSES </h4>
+        <h4 style={{marginBottom: '.625rem'}}> {'user-centered design processes'.toUpperCase()} </h4>
         <Others projects={projects_design} screenWidth={this.props.screenWidth} />
         {/* <h4 style={{marginBottom: '.625rem'}}> WEB DEVELOPMENT </h4>
         <Others projects={projects_web} screenWidth={this.props.screenWidth} /> */}

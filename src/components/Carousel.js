@@ -5,8 +5,6 @@ import stasisMobile from '../images/background_stasisMobile.svg';
 import over from '../images/background_overlay.svg';
 import under from '../images/background_underlay.svg';
 
-
-
 class Image extends React.Component {
   constructor(props) {
     super(props)

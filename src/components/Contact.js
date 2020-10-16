@@ -82,7 +82,16 @@ const spanStyleMobile = {
 
 const Button = (props) => {
   return (
-    <div className='button' style={props.screenWidth > 768 ? null : btnStyleMobile} >
+    <div 
+      className='button' 
+      style={props.screenWidth > 768 ? null : btnStyleMobile} 
+      data-aos='fade' 
+      data-aos-offset='100' 
+      data-aos-delay={props.delay * 150}
+      data-aos-easing='ease-out-sine'
+      data-aos-duration='400'
+      data-aos-once={true}
+    >
       <a href={props.buttonInfo.href} target="_blank" rel="noopener noreferrer">
         <img src={props.buttonInfo.src} alt={props.buttonInfo.alt} draggable='false' /> 
       </a>
@@ -99,8 +108,13 @@ class Contact extends React.Component {
   render() {
     return (
       <div className='contact' style={this.props.screenWidth > 768 ? null : styleMobile}> 
-        {buttons.map(button =>
-          <Button key={button.alt} buttonInfo={button} screenWidth={this.props.screenWidth} />
+        {buttons.map((button, index) =>
+          <Button 
+            key={button.alt} 
+            buttonInfo={button} 
+            screenWidth={this.props.screenWidth} 
+            delay={index}
+          />
         )}
         
       </div>

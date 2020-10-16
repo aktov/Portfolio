@@ -87,7 +87,7 @@ class Card extends React.Component {
           onMouseEnter={this.handleMouseEnter} 
           onMouseLeave={this.handleMouseLeave}
           data-aos='fade' 
-          data-aos-offset='200' 
+          data-aos-offset='100' 
           data-aos-easing='ease-out-sine'
           data-aos-duration='400'
           data-aos-once={true}
@@ -101,13 +101,16 @@ class Card extends React.Component {
          
 
           <div className={this.state.mouseEntered ? 'descWrapper expand' : 'descWrapper'} style={false ? {height:'27%'} : null}>
-            <div className='text'>
-              {!this.state.mouseEntered && <h4 className='cardTitle alone'> {this.props.title.toUpperCase()} </h4>}
-              {this.state.mouseEntered && <>
+            {this.state.mouseEntered ? 
+              <div className='text'>
                 <h4 className='cardTitle'> {this.props.title.toUpperCase()} </h4>
                 <p> {this.props.desc} </p> 
-              </>}
-            </div>
+              </div>
+              :
+              <div className='text'>
+                <h4 className='cardTitle alone'> {this.props.title.toUpperCase()} </h4>
+              </div>             
+            }
             <div className='other'>
               {this.state.mouseEntered && <>
                 <Buttons props={this.props} />
@@ -119,7 +122,7 @@ class Card extends React.Component {
       :
         <div 
           className='cardMobile'
-          style={this.props.screenWidth >= 480 ? {margin: '1rem 1.5rem'} : {margin: '1rem 1rem'}}
+          style={this.props.screenWidth >= 480 ? {margin: '1rem 1.5rem'} : {margin: '1rem inherit'}}
           onMouseEnter={this.handleMouseEnter} 
           onMouseLeave={this.handleMouseLeave}
         >

@@ -2,7 +2,7 @@ import React from 'react';
 import LazyLoad from 'react-lazyload';
 
 import SectionTitle from './SectionTitle';
-import Experience from './Experience.js';
+import Resume from './Resume.js';
 import Projects from './Projects.js';
 
 import prof from '../images/profilePic.png';
@@ -29,7 +29,7 @@ const About = (props) => {
         <div 
           className={props.screenWidth > 640 ? 'pic desktop' : 'pic mobile'}
           data-aos='fade' 
-          data-aos-offset='0' 
+          data-aos-offset='50' 
           data-aos-easing='ease-out-sine'
           data-aos-duration='400'
           data-aos-once={true}
@@ -51,7 +51,7 @@ class Content extends React.Component {
       <div className='content'>
         <div id='anchor_page' className='anchor' style={{top: '-1000px'}}></div>
         <About screenWidth={this.props.screenWidth} />
-        <Experience screenWidth={this.props.screenWidth} />
+        <Resume screenWidth={this.props.screenWidth} />
         <Projects screenWidth={this.props.screenWidth} />
       </div>
     );

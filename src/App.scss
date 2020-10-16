@@ -181,7 +181,7 @@ p {
 }     
 
 header {
-    $divRight: 32rem;
+    $divRight: 24rem;
     $divLeft: 5rem;
     $marginWidth: 2rem;
 
@@ -266,6 +266,10 @@ header {
                 font-family: $questrial;
                 color: #aaaaaa;
             }
+
+            a {
+                text-decoration: none;
+            }
         }
     }
 
@@ -297,10 +301,6 @@ header {
 
     button:hover .toolTip {
         opacity: 1;
-    }
-
-    a {
-        text-decoration: none;
     }
 }
 
@@ -431,6 +431,10 @@ div.menu {
                 background-color: transparent;  
 
                 cursor: pointer;
+            }
+
+            a {
+                text-decoration: none;
             }
         }
     }
@@ -734,7 +738,6 @@ div.content {
     align-self: center;
 
     background-color: #ffffff;
-
     overflow: auto;
 
     .anchor {
@@ -770,7 +773,7 @@ div.content {
             margin-top: toRem(0);
         }
 
-        .about {
+        div.about {
             width: 100%;
             display: flex;
             flex-flow: row wrap;
@@ -837,32 +840,155 @@ div.content {
             }
         }
 
-        .experience {
+        div.resume {
+            position: relative;
             width: 100%;
             margin: auto;
-            margin-bottom: toRem(50);
+            margin-bottom: toRem(100);
 
             display: flex;
             flex-flow: column;
+            justify-content: flex-start;
+            align-items: flex-start;
 
-            h4 {
-                margin-bottom: toRem(10);
-                font-family: 'Zilla Slab', sans-serif;
-                font-style: normal;
-                font-weight: 500;
-                font-size: toRem(24);
+            div.education {
+                position: relative;
+                width: 100%;
+                min-width: toRem(240);
+                margin: auto;
+                margin-top: 0;
+                margin-bottom: $sectionMarginBottom;
+        
+                display: flex;
+                flex-flow: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                h4 {
+                    margin-bottom: toRem(5);
+                    font-family: 'Poppins', sans-serif;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: toRem(20);
+                }
+
+                h4:first-of-type {
+                    margin-bottom: toRem(10);
+                    font-family: 'Poppins', sans-serif;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: $size_h4;
+                }                
+        
+                h5 {
+                    margin: toRem(3) 0;
+                    font-family: 'Poppins', sans-serif;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: $size_p;
+                }
             }
 
-            h5 {
-                margin: toRem(3) 0;
-                font-family: 'Poppins', sans-serif;
-                font-style: normal;
-                font-weight: 500;
-                font-size: $size_p;
+            div.experience {
+                position: relative;
+                width: 100%;
+                min-width: toRem(240);
+                margin: auto;
+                margin-top: 0;
+                margin-bottom: $sectionMarginBottom;
+            
+                display: flex;
+                flex-flow: column;
+                justify-content: flex-start;
+                align-items: center;
+
+                h4 {
+                    margin-bottom: toRem(10);
+                    font-family: 'Poppins', sans-serif;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: $size_h4;
+                }
+
+                div.listing {
+                    width: 100%;
+                    margin: auto;
+                    margin-bottom: toRem(30);
+
+                    display: flex;
+                    flex-flow: column;
+
+                    h4 {
+                        margin-bottom: toRem(5);
+                        font-family: 'Poppins', sans-serif;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: toRem(20);
+                    }
+
+                    h5 {
+                        margin: toRem(3) 0;
+                        font-family: 'Poppins', sans-serif;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: $size_p;
+                    }
+                }
+
+                div.listing:last-child {
+                    margin-bottom: toRem(0);
+                }
             }
 
+            div.skills {
+                position: relative;
+                width: 100%;
+                min-width: toRem(240);
+                // margin: auto;
+                margin-top: 0;
+                margin-bottom: $sectionMarginBottom;
+            
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                h4 {
+                    margin-bottom: toRem(10);
+                    font-family: 'Poppins', sans-serif;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: $size_h4;
+                }                
+                
+                .phrases {
+                    width: 32%;
+                    min-width: toRem(240);
+                    margin-top: toRem(10);
+                    margin-bottom: toRem(30);
+
+                    h4 {
+                    margin-bottom: toRem(5);
+                    font-family: 'Poppins', sans-serif;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: toRem(20);
+                    }
+
+                    h5 {
+                        margin: toRem(3) 0;
+                        font-family: 'Poppins', sans-serif;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: $size_p;
+                    }
+                }             
+            }
+            
             .phrases {
-                margin-top: toRem(20);
+                width: 100%;
+                margin-top: toRem(10);
+                margin-bottom: toRem(0);
 
                 .phrase {
                     display: flex;
@@ -874,7 +1000,9 @@ div.content {
                     align-items: flex-start;
 
                     img {
-                        margin: toRem(8) toRem(10);
+                        margin: toRem(9) toRem(10);
+                        width: toRem(8);
+                        height: auto;
                     }
 
                     p {
@@ -884,6 +1012,7 @@ div.content {
             }
         }
     }
+
     
     div.projects {
         position: relative;
@@ -913,6 +1042,10 @@ div.content {
             width: 75%;
             margin-top: toRem(0);
             margin-left: 12.5%;
+            
+            font-family: 'Poppins', sans-serif;
+            font-style: normal;
+            font-weight: 500;
         }
     
         div.cardsDesktop {
@@ -958,6 +1091,12 @@ div.content {
                 flex-flow: row wrap;
                 justify-content: center;
                 align-items: flex-start;
+            }
+
+            .lazyload-wrapper:first-child {
+                div.cardMobile {
+                    margin-left: 0;
+                }
             }
         }
 
@@ -1058,7 +1197,6 @@ div.content {
                     h4.cardTitle {
                         width: 100%;
                         max-width: 100%;
-                        // margin-top: toRem(-5);
                         margin-left: 0;
                         margin: 0;
 
@@ -1423,11 +1561,14 @@ div.content {
     }
 }
 
+
+
 .sadButton {
     width: auto;
     height: auto;
     padding: toRem(10) toRem(20);
     margin-top: toRem(40);
+    margin-bottom: toRem(100);
 
     font-family: 'Poppins';
     font-style: normal;
