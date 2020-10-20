@@ -90,7 +90,7 @@ class Resume extends React.Component {
     return (
       <div 
         className='wrapper' 
-        style={this.props.screenWidth > 768 ? {width: '60%'} : null}
+        style={this.props.screenWidth > 768 ? {width: '60%', paddingLeft: '5rem'} : null}
       >
         <div id='anchor_resume' className='anchor'></div>
         <SectionTitle title='resume'/> 

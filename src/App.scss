@@ -7,7 +7,7 @@ $questrial: 'Questrial', sans-serif;
 $headerHeight: 4rem; 
 $baseTextColor: #444444;
 
-$sectionMarginBottom: toRem(100);
+$sectionMarginBottom: toRem(150);
 $projCardWidth: toRem(250);
 $projCardMargin: toRem(16);
 $transitionTimingCard: .2s;
@@ -843,8 +843,6 @@ div.content {
         div.resume {
             position: relative;
             width: 100%;
-            margin: auto;
-            margin-bottom: toRem(100);
 
             display: flex;
             flex-flow: column;
@@ -857,7 +855,7 @@ div.content {
                 min-width: toRem(240);
                 margin: auto;
                 margin-top: 0;
-                margin-bottom: $sectionMarginBottom;
+                margin-bottom: toRem(50);
         
                 display: flex;
                 flex-flow: column;
@@ -895,7 +893,7 @@ div.content {
                 min-width: toRem(240);
                 margin: auto;
                 margin-top: 0;
-                margin-bottom: $sectionMarginBottom;
+                margin-bottom: toRem(50);
             
                 display: flex;
                 flex-flow: column;
@@ -944,9 +942,6 @@ div.content {
                 position: relative;
                 width: 100%;
                 min-width: toRem(240);
-                // margin: auto;
-                margin-top: 0;
-                margin-bottom: $sectionMarginBottom;
             
                 display: flex;
                 flex-flow: row wrap;
