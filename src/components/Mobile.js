@@ -3,7 +3,6 @@ import React from 'react';
 import Header from './Header.js';
 import Footer from './Footer.js';
 import Background from './Background.js';
-// import Contact from './Contact.js';
 import Content from './Content.js';
 import NavMenu from './NavMenu.js';
 

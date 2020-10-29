@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import smoothscroll from 'smoothscroll-polyfill';
 smoothscroll.polyfill();
 
@@ -25,6 +26,7 @@ const Button = (props) => {
   }
 
   return (
+    <Link to='/'> 
     <button  
       id={props.text} 
       className='buttonNav outlineNone'
@@ -32,6 +34,7 @@ const Button = (props) => {
       aria-label={`Go to ${props.text}`}>
       {props.text}
     </button>
+    </Link>
   );
 }
 
@@ -42,7 +45,7 @@ class NavButtons extends React.Component {
         {headerCategories.map((category) => 
         <Button key={category} 
                 text={category}
-                closeMenu={this.props.closeMenu}  
+                closeMenu={this.props.closeMenu} 
                 />
         )}
       </div>

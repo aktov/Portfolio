@@ -8,7 +8,7 @@ import nav from '../images/nav.svg';
 const NavDesktop = (props) => {
   return (
     <div className='right' style={{ justifyContent: "space-around" }}>
-      <NavButtons/>
+      <NavButtons />
     </div> 
   );
 }

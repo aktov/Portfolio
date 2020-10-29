@@ -10,6 +10,7 @@ import SectionTitle from './SectionTitle';
 import imgM_portfolio from '../images/cardImageM_portfolio.png';
 import imgM_memo from '../images/cardImageM_memo.png';
 import imgM_chrispy from '../images/cardImageM_chrispy.png';
+import imgM_hon from '../images/cardImageM_hon.png';
 import imgM_csa from '../images/cardImageM_csa.png';
 import imgM_yahoo from '../images/cardImageM_yahoo.png';
 import imgM_parking from '../images/cardImageM_parking.png';
@@ -17,6 +18,7 @@ import imgM_parking from '../images/cardImageM_parking.png';
 import img_portfolio from '../images/cardImage_portfolio.png';
 import img_memo from '../images/cardImage_memo.png';
 import img_chrispy from '../images/cardImage_chrispy.png';
+import img_hon from '../images/cardImage_hon.png';
 import img_csa from '../images/cardImage_csa.png';
 import img_yahoo from '../images/cardImage_yahoo.png';
 import img_parking from '../images/cardImage_parking.png';
@@ -30,6 +32,7 @@ const projects_figma = [
     tags: ['Figma', 'prototyping'],
     color: '#ABD7BD',
     figma: 'https://www.figma.com/proto/pYpfd7iu01oqtaIC9lmUkQ/Memo-App?node-id=3%3A545&viewport=553%2C217%2C0.19214384257793427&scaling=scale-down',
+    default: 'https://www.figma.com/proto/pYpfd7iu01oqtaIC9lmUkQ/Memo-App?node-id=3%3A545&viewport=553%2C217%2C0.19214384257793427&scaling=scale-down'
   },
   {
     title: 'chrispyroll',
@@ -40,20 +43,31 @@ const projects_figma = [
     color: '#E1B4D5',
     figmaA: 'https://www.figma.com/proto/KMOZJky4Yot11PJTmKXvOH/chrispyroll?node-id=3%3A0&viewport=157%2C214%2C0.18325643241405487&scaling=scale-down-width&hide-ui=1',
     figmaB: 'https://www.figma.com/proto/KMOZJky4Yot11PJTmKXvOH/chrispyroll?node-id=3%3A1135&viewport=293%2C331%2C0.18345798552036285&scaling=scale-down-width&hide-ui=1',
+    default: 'https://www.figma.com/proto/KMOZJky4Yot11PJTmKXvOH/chrispyroll?node-id=3%3A0&viewport=157%2C214%2C0.18325643241405487&scaling=scale-down-width&hide-ui=1',
   },
-  {
-    title: 'portfolio prototype',
-    descr: 'Check out the mobile & desktop prototypes of the first iteration of this current portfolio',
-    image: img_portfolio,
-    imageM: imgM_portfolio,
-    tags: ['Figma', 'prototyping'],
-    color: '#93B0E9',
-    figmaD: 'https://www.figma.com/proto/7zBJtA5xKYSNlq1RKzRwJa/Portfolio?node-id=1%3A2&scaling=scale-down-width&hide-ui=1',
-    figmaM: 'https://www.figma.com/proto/7zBJtA5xKYSNlq1RKzRwJa/Portfolio?node-id=82%3A0&viewport=243%2C287%2C0.09107169508934021&scaling=scale-down',
-    link: undefined
-  },
+  // {
+  //   title: 'portfolio prototype',
+  //   descr: 'Check out the mobile & desktop prototypes of the first iteration of this current portfolio',
+  //   image: img_portfolio,
+  //   imageM: imgM_portfolio,
+  //   tags: ['Figma', 'prototyping'],
+  //   color: '#93B0E9',
+  //   figmaD: 'https://www.figma.com/proto/7zBJtA5xKYSNlq1RKzRwJa/Portfolio?node-id=1%3A2&scaling=scale-down-width&hide-ui=1',
+  //   figmaM: 'https://www.figma.com/proto/7zBJtA5xKYSNlq1RKzRwJa/Portfolio?node-id=82%3A0&viewport=243%2C287%2C0.09107169508934021&scaling=scale-down',
+  //   link: undefined
+  // },
 ];
 const projects_design = [
+  {
+    title: 'hon-media blogsite design',
+    descr: 'A desktop design for Hon-Media\'s upcoming blog website',
+    image: img_hon,
+    imageM: imgM_hon,
+    tags: ['Figma', 'prototyping'],
+    color: '#9F9FDF',
+    figma: 'https://www.figma.com/proto/4IWvFVdQfykksXa7kEZE95/blog.hon-media?node-id=266%3A5650&viewport=8238%2C659%2C0.7337678074836731&scaling=scale-down-width',
+    link: '/hon'
+  },
   {
     title: 'csa website design',
     descr: 'A website prototype for Cambodian Student Association @UCSD, built for desktop & mobile',
@@ -72,7 +86,8 @@ const projects_design = [
     imageM: imgM_yahoo,
     tags: ['Figma', 'user testing', 'wireframing', 'prototyping'],
     color: '#C19FF7',
-    figma: 'https://www.figma.com/proto/pUOIhb7GiEGQeFotepQkQY/COGS-187A-Final-(Copy)?node-id=21%3A175&scaling=scale-down',
+    figma1: 'https://www.figma.com/proto/pUOIhb7GiEGQeFotepQkQY/Yahoo-Mobile-Redesign?node-id=2%3A3&viewport=177%2C180%2C0.07531154155731201&scaling=scale-down',
+    figma2:'https://www.figma.com/proto/pUOIhb7GiEGQeFotepQkQY/Yahoo-Mobile-Redesign?node-id=21%3A175&viewport=368%2C198%2C0.09464660286903381&scaling=scale-down',
     link: '/yahoo'
   },
   {
@@ -140,7 +155,10 @@ const Others = (props) => {
             figmaM={card.figmaM}
             figmaA={card.figmaA}
             figmaB={card.figmaB}
+            figma1={card.figma1}
+            figma2={card.figma2}
             figma={card.figma}
+            default={card.default}
             link={card.link}
             screenWidth={props.screenWidth}
           />

@@ -41,7 +41,7 @@ const Skills = (props) => {
           data-aos-once={true}
         >
           <h4> {key} </h4>
-          {skillsList[key].map((phrase, index) => 
+          {skillsList[key].map((phrase) => 
             <Phrase key={key + '/' + phrase} text={phrase}/>
           )}
         </div>
@@ -53,7 +53,7 @@ const Skills = (props) => {
 
 
 const skillsList = {
-  'Programming': [
+  'Languages': [
     'HTML/CSS',
     'Javascript',
     'Lua'
@@ -74,9 +74,9 @@ const skillsList = {
     'Affinity Diagrams'
   ],
   'Design Programs & Software': [
+    'Figma',
     'Google: Slides, Drawings',
     'Adobe: Photoshop, Lightroom, Illustrator',
-    'Figma',
     'AutoCAD',
     'Blender',
     'SketchUp'

@@ -9,6 +9,8 @@ import figmaM from '../images/figmaM.svg';
 import figmaD from '../images/figmaD.svg';
 import figmaA from '../images/figmaA.svg';
 import figmaB from '../images/figmaB.svg';
+import figma1 from '../images/figma1.svg';
+import figma2 from '../images/figma2.svg';
 
 const Tags = (props) => {
   return (
@@ -46,6 +48,14 @@ const Buttons = (props) => {
       {props.props.figmaB && <a href={props.props.figmaB} target="_blank" rel="noopener noreferrer">
           <img src={figmaB} alt='figmaB' draggable='false' /> 
           <span className='toolTip'> figma version B </span> 
+      </a> }
+      {props.props.figma1 && <a href={props.props.figma1} target="_blank" rel="noopener noreferrer">
+          <img src={figma1} alt='figma1' draggable='false' /> 
+          <span className='toolTip'> figma redesign 1 </span> 
+      </a> }
+      {props.props.figma2 && <a href={props.props.figma2} target="_blank" rel="noopener noreferrer">
+          <img src={figma2} alt='figma1' draggable='false' /> 
+          <span className='toolTip'> figma redesign 2 </span> 
       </a> }
       {props.props.link && <Link to={props.props.link} rel="noopener noreferrer">
           <img src={open} alt='open' draggable='false' /> 
@@ -95,7 +105,16 @@ class Card extends React.Component {
           
           <div className='imageHolder' style={{backgroundColor: this.props.color}}>
             <LazyLoad height={200} offset={100}>
-              {this.props.image && <img src={this.props.image} alt={this.props.title} draggable='false' />} 
+              {this.props.default &&
+                <a href={this.props.default} target="_blank" rel="noopener noreferrer">
+                  <img src={this.props.image} alt={this.props.title} draggable='false' />
+                </a>
+              }
+              {this.props.link &&
+                <Link to={this.props.link} rel="noopener noreferrer">
+                  <img src={this.props.image} alt={this.props.title} draggable='false' />
+                </Link>
+              } 
             </LazyLoad>
           </div>
          
@@ -128,7 +147,16 @@ class Card extends React.Component {
         >
           <div className='imageHolder'>
             <LazyLoad height={200} offset={100} overflow={true}>
-              {this.props.imageM && <img src={this.props.imageM} alt={this.props.title} draggable='false' />}  
+              {this.props.default &&
+                <a href={this.props.default} target="_blank" rel="noopener noreferrer">
+                  <img src={this.props.imageM} alt={this.props.title} draggable='false' />
+                </a>
+              }
+              {this.props.link &&
+                <Link to={this.props.link} rel="noopener noreferrer">
+                  <img src={this.props.imageM} alt={this.props.title} draggable='false' />
+                </Link>
+              } 
             </LazyLoad>
           </div>
         
