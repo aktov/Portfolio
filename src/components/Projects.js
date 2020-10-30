@@ -7,7 +7,7 @@ import SectionTitle from './SectionTitle';
 // import imgM_inTune from '../images/cardImageM_inTune.png';
 // import imgM_prepd from '../images/cardImageM_prepd.png';
 // Mobile images
-import imgM_portfolio from '../images/cardImageM_portfolio.png';
+// import imgM_portfolio from '../images/cardImageM_portfolio.png';
 import imgM_memo from '../images/cardImageM_memo.png';
 import imgM_chrispy from '../images/cardImageM_chrispy.png';
 import imgM_hon from '../images/cardImageM_hon.png';
@@ -15,7 +15,7 @@ import imgM_csa from '../images/cardImageM_csa.png';
 import imgM_yahoo from '../images/cardImageM_yahoo.png';
 import imgM_parking from '../images/cardImageM_parking.png';
 // Desktop images
-import img_portfolio from '../images/cardImage_portfolio.png';
+// import img_portfolio from '../images/cardImage_portfolio.png';
 import img_memo from '../images/cardImage_memo.png';
 import img_chrispy from '../images/cardImage_chrispy.png';
 import img_hon from '../images/cardImage_hon.png';

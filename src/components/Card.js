@@ -141,7 +141,7 @@ class Card extends React.Component {
       :
         <div 
           className='cardMobile'
-          style={this.props.screenWidth >= 480 ? {margin: '1rem 1.5rem'} : {margin: '1rem inherit'}}
+          style={this.props.screenWidth >= 768 ? {margin: '1rem 1.5rem'} : {margin: '1rem inherit'}}
           onMouseEnter={this.handleMouseEnter} 
           onMouseLeave={this.handleMouseLeave}
         >

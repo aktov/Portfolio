@@ -9,7 +9,10 @@ import Contact from '../Contact.js';
 import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 
+import img_arrow from '../../images/arrowUp.svg';
 import banner from '../../images/banner_yahoo.png';
+import figma1 from '../../images/figma1.svg';
+import figma2 from '../../images/figma2.svg';
 import pic1 from '../../images/yahoo/1.png';
 import pic2 from '../../images/yahoo/2.png';
 import pic3 from '../../images/yahoo/3.png';
@@ -26,15 +29,6 @@ import pic13 from '../../images/yahoo/13.png';
 import pic14 from '../../images/yahoo/14.png';
 import pic15 from '../../images/yahoo/15.png';
 import pic16 from '../../images/yahoo/16.png';
-
-const style = {
-  width: '90%',
-  margin: 'auto',
-  display: 'flex',
-  flexFlow: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-}
 
 const Bullets = (props) => {
   return (
@@ -82,6 +76,12 @@ class Yahoo extends React.Component {
     this.toggleMenu = this.toggleMenu.bind(this);
   }
 
+  goToTop(e) {
+    if (document.getElementById('anchor_page')) {
+      document.getElementById('anchor_page').scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
+  }
+
   toggleMenu() {
     this.setState((state, props) => ({menuOpen: !state.menuOpen}));
   }
@@ -106,20 +106,42 @@ class Yahoo extends React.Component {
         }
 
         <div className='content' style={{marginTop:'3rem'}}>
+          <div id='anchor_page' className='anchor' style={{top: '-1000px'}}></div>
           <img className='banner' src={banner} alt='Yahoo' draggable='false'/>
           <div className='pages' style={this.props.screenWidth > 640 ? {marginTop:'3rem'} : {width: '75%', marginTop:'3rem'}}>
 
             <h3 className='title'> {'Yahoo Mobile Redesign'.toUpperCase()} </h3>
 
             <div className='intro'>
-              <div className='col'> 
+              <div className='col' style={this.props.screenWidth > 640 ? null : {width: '100%'} }> 
                 <h4 className='heading'> ROLE </h4>
                 <h4> UI/UX Designer </h4>
                 <br/>
                 <h4 className='heading'> TEAM </h4>
                 <h4> Alex Tov, Hao He, Noah Carniglia, Miguel Morales </h4>
+                <br/>
+                <h4 className='heading'> FIGMA LINKS </h4>
+                <div className='buttons'>
+                  <a 
+                    href='https://www.figma.com/proto/pUOIhb7GiEGQeFotepQkQY/Yahoo-Mobile-Redesign?node-id=2%3A3&viewport=177%2C180%2C0.07531154155731201&scaling=scale-down'
+                    target='_blank' 
+                    rel='noopener noreferrer'
+                  >
+                    <img src={figma1} alt='figma1' draggable='false' /> 
+                    <span className='toolTip'> figma redesign 1 </span> 
+                  </a> 
+                  <a 
+                    href='https://www.figma.com/proto/pUOIhb7GiEGQeFotepQkQY/Yahoo-Mobile-Redesign?node-id=21%3A175&viewport=368%2C198%2C0.09464660286903381&scaling=scale-down'  
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <img src={figma2} alt='figma1' draggable='false' /> 
+                    <span className='toolTip'> figma redesign 2 </span> 
+                  </a> 
+                </div>
+                <br/>
               </div>
-              <div className='col'>
+              <div className='col' style={this.props.screenWidth > 640 ? null : {width: '100%'} }>
                 <h4 className='heading'> SUMMARY </h4>
                 <h4> My team and I redesigned the navigation of Yahoo's mobile site by making it more consistent and accessible. </h4>
               </div>
@@ -285,16 +307,13 @@ class Yahoo extends React.Component {
               </p>
             </div>
 
-            <Link to='/'> <button className='sadButton'> return home </button> </Link>
           </div>
         </div>
-
-        
-
-
-
       </div>
 
+      <button className='topButton' style={{backgroundColor: '#C19FF7'}} onClick={this.goToTop}> 
+        <img src={img_arrow} alt='Back to top' />
+      </button>
       <Footer screenWidth={this.props.screenWidth} />
       </>
     );

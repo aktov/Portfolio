@@ -1,5 +1,6 @@
 import React from 'react';
 import { HashRouter as Router, Route } from 'react-router-dom'
+import history from './components/history.js';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.scss';
@@ -40,7 +41,7 @@ class App extends React.Component {
   render() {
     AOS.init();
     return (
-        <Router basename='/'>
+        <Router basename='/' history={history}>
           <ScrollToTop />
           <Route exact path='/'>
             {this.state.screenWidth > breakpoint ? 
