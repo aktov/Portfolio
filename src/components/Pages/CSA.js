@@ -11,22 +11,63 @@ import SectionTitle from '../SectionTitle.js';
 
 import img_arrow from '../../images/arrowUp.svg';
 import banner from '../../images/banner_csa.png';
-import pic1 from '../../images/yahoo/1.png';
-import pic2 from '../../images/yahoo/2.png';
-import pic3 from '../../images/yahoo/3.png';
-import pic4 from '../../images/yahoo/4.png';
-import pic5 from '../../images/yahoo/5.png';
-import pic6 from '../../images/yahoo/6.png';
-import pic7 from '../../images/yahoo/7.png';
-import pic8 from '../../images/yahoo/8.png';
-import pic9 from '../../images/yahoo/9.png';
-import pic10 from '../../images/yahoo/10.png';
-import pic11 from '../../images/yahoo/11.png';
-import pic12 from '../../images/yahoo/12.png';
-import pic13 from '../../images/yahoo/13.png';
-import pic14 from '../../images/yahoo/14.png';
-import pic15 from '../../images/yahoo/15.png';
-import pic16 from '../../images/yahoo/16.png';
+import figmaD from '../../images/figmaD.svg';
+import figmaM from '../../images/figmaM.svg';
+import pic1 from '../../images/csa/1.png';
+import pic2 from '../../images/csa/2.png';
+import pic3 from '../../images/csa/3.png';
+import pic4 from '../../images/csa/4.png';
+import pic5 from '../../images/csa/5.png';
+import pic6 from '../../images/csa/6.png';
+import pic7 from '../../images/csa/7.png';
+import pic8 from '../../images/csa/8.png';
+import pic9 from '../../images/csa/9.png';
+import pic10 from '../../images/csa/10.png';
+import pic11 from '../../images/csa/11.png';
+import pic12 from '../../images/csa/12.png';
+import pic13 from '../../images/csa/13.png';
+import pic14 from '../../images/csa/14.png';
+import pic15 from '../../images/csa/15.png';
+import pic16 from '../../images/csa/16.png';
+import pic17 from '../../images/csa/17.png';
+import pic18 from '../../images/csa/18.png';
+import pic19 from '../../images/csa/19.png';
+import pic20 from '../../images/csa/20.png';
+import pic21 from '../../images/csa/21.png';
+import pic22 from '../../images/csa/22.png';
+import pic23 from '../../images/csa/23.png';
+import pic24 from '../../images/csa/24.png';
+import pic25 from '../../images/csa/25.png';
+import pic26 from '../../images/csa/26.png';
+import pic27 from '../../images/csa/27.png';
+import pic28 from '../../images/csa/28.png';
+import pic29 from '../../images/csa/29.png';
+import pic30 from '../../images/csa/30.png';
+import pic31 from '../../images/csa/31.png';
+import pic32 from '../../images/csa/32.png';
+import pic33 from '../../images/csa/33.png';
+import pic34 from '../../images/csa/34.png';
+import pic35 from '../../images/csa/35.png';
+import pic36 from '../../images/csa/36.png';
+import pic37 from '../../images/csa/37.png';
+import pic38 from '../../images/csa/38.png';
+import pic39 from '../../images/csa/39.png';
+import pic40 from '../../images/csa/40.png';
+import pic41 from '../../images/csa/41.png';
+import pic42 from '../../images/csa/42.png';
+import pic43 from '../../images/csa/43.png';
+import pic44 from '../../images/csa/44.png';
+import pic45 from '../../images/csa/45.png';
+import pic46 from '../../images/csa/46.png';
+import pic47 from '../../images/csa/47.png';
+import pic48 from '../../images/csa/48.png';
+import pic49 from '../../images/csa/49.png';
+import pic50 from '../../images/csa/50.png';
+import pic51 from '../../images/csa/51.png';
+import pic52 from '../../images/csa/52.png';
+import pic53 from '../../images/csa/53.png';
+import pic54 from '../../images/csa/54.png';
+import pic55 from '../../images/csa/55.png';
 
 const Bullets = (props) => {
   return (
@@ -36,11 +77,11 @@ const Bullets = (props) => {
     )}
   </div>
   );
-}
+};
 
 const Image = (props) => {
   return (
-    <div className='imageHolder'>
+    <div className='imageHolder' style={props.style || null}>
       <LazyLoad 
         height={200} 
         offset={100}
@@ -49,19 +90,61 @@ const Image = (props) => {
       </LazyLoad>
     </div>
   );
-}
+};
 
 const goals = [
-  'Learn how to conduct user research and analysis',
-  'Understand how to pinpoint usability errors and its source, as well as communicate the pros and cons of a UI design through our observations',
-  'Learn how to create high fidelity prototypes using Figma',
-  'Understand the importance of a user-centered design approach'
-]
+  'Learn how to build a strong, communicative relationship with our client, as well as how to be flexible during times where they are unresponsive',
+  'Learn the importance of understanding the client’s background, needs, and motivation prior to designing, as well as understanding those of their intended users through user research',
+  'Learn how to promote our client’s brand effectively',
+  'Practice information design techniques such as micro copying',
+  'Learn and attempt best practices for the info architecture and navigation of a website'
+];
 
-const issues = [
-  'The site lacked a standard menu navigation that was clear and intuitive to process',
-  'The site had inconsistent headers that varied through different pages of the site, which increased the time it took for users to navigate'
-]
+const categories = [
+  'History & Background',
+  'Users',
+  'Content',
+  'Aesthetics',
+  'Competition'
+];
+
+const priorities = [
+  'Professional and visually pleasing website',
+  'Clean and unique presentation, emphasizing images',
+  'Easy and intuitive navigation/information architecture',
+  'Users visiting the site should hope to leave with new-found knowledge on Cambodia’s history and culture and info about Cambodian Americans here in America',
+  'Presenting a friendly and inviting image as a student org',
+  'Promote a brand that emphasizes inclusiveness and culture',
+  'Have a website theme with similar colors to the Cambodian flag (Red, White, Blue)',
+  'Website will help bring in more members',
+];
+
+const needs = [
+  'Find out about key information from the home page',
+  'Easily access Cambodian culture and history',
+  'Find a direct way to contact current members',
+  'Gather enough information from the page to ultimately join the club'
+];
+
+const elements = [
+  'Branding',
+  'Functionality',
+  'Content',
+  'Site Architecture',
+  'Navigation',
+  'Design'
+];
+
+const pages = [
+  'A HOME page that at a glance displays what the org is all about',
+  'An ABOUT page which provides users will background info or history about the org',
+  'A MEMBERS page where users can see who’s involved in the org',
+  'An EVENT page or calendar where users can see upcoming events and details',
+  'Some form of CONTACT info, whether it be social media links or a dedicated page for typing inquiries'
+];
+
+const imageMarginNoTop = {marginTop: '0rem'};
+const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
 
 class CSA extends React.Component {
   constructor(props) {
@@ -118,166 +201,452 @@ class CSA extends React.Component {
                 <h4 className='heading'> TEAM </h4>
                 <h4> Alex Tov, Hao Yang He, Elaine Nguyen, Elizabeth Turrubiartes-Campos </h4>
                 <br/>
+                <h4 className='heading'> FIGMA LINKS </h4>
+                <div className='buttons'>
+                  <a 
+                    href='https://www.figma.com/proto/HK3nRrbz73hPQqSlTNTDmu/CSA-Website-Design?node-id=236%3A2&viewport=147%2C303%2C0.03458884358406067&scaling=scale-down-width'
+                    target='_blank' 
+                    rel='noopener noreferrer'
+                  >
+                    <img src={figmaD} alt='figmaD' draggable='false' /> 
+                    <span className='toolTip'> figma desktop </span> 
+                  </a> 
+                  <a 
+                    href='https://www.figma.com/proto/HK3nRrbz73hPQqSlTNTDmu/CSA-Website-Design?node-id=241%3A0&viewport=176%2C217%2C0.07083262503147125&scaling=scale-down'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <img src={figmaM} alt='figmaM' draggable='false' /> 
+                    <span className='toolTip'> figma mobile </span> 
+                  </a> 
+                </div>
+                <br/>
               </div>
               <div className='col' style={this.props.screenWidth > 640 ? null : {width: '100%'} }>
                 <h4 className='heading'> SUMMARY </h4>
-                <h4> My team and I redesigned the navigation of Yahoo's mobile site by making it more consistent and accessible. </h4>
+                <h4> 
+                  My team and I designed a brand new website for CSA, an organization at UCSD. We worked alongside them
+                  and made sure that our design was right on track with what they envisioned.
+                </h4>
               </div>
             </div>
 
             <div className='section'>
               <SectionTitle title='intro'/> 
               <h4 className='heading'> MOTIVATION </h4>
-              <p> Our task for this project was to identify a mobile site that we found lacking, and create a new design for it that would solve those issues. </p>
-              <p> Back in high school, I remember going on Yahoo.com and doing everything on it, from using its email, to reading its variety of news articles, to even using its search browser. But as time went on, I quickly abandoned it for Google and its suite. My teammates all felt the same and so we agreed on Yahoo.</p>
+              <p> 
+                Our task this quarter was to go out into the real world and find ourselves a client who wants a new website.
+                The mission was to work alongside them throughout the quarter and to make sure that their needs are met.
+                We needed to make sure that the website wasn't designed the way we wanted it, but rather designed the way 
+                the client's users would like it. This was going to be our first real-life experience with user-centered design.
+              </p>
               <br/>
               <h4 className='heading'> GOALS </h4>
-              <p> These were the goals I personally had in mind while undergoing this project: </p>
+              <p> These were the goals we had in mind while undergoing this project: </p>
               <Bullets info={goals}/>  
             </div>          
                       
             <div className='section'>
-              <SectionTitle title='users & research'/> 
-              <h4 className='heading'> INITIAL USER TESTING </h4>
+              <SectionTitle title='client interviews'/> 
+              <h4 className='heading'> GETTING TO KNOW OUR CLIENT </h4>
               <p> 
-                To redesign something, we first need to get an idea of what users want, and so 
-                this is where user testing is essential.  After we created interview questions and tasks for our users to 
-                answer and perform, we met with four users and conducted the testing. Our goal was to observe how they 
-                interacted with the site while attempted to complete a task. How well did they know the site? 
-                Where were their struggles, if any? What could be made better to make this task easier and quicker to complete? 
-                Answers to these questions would allow us to gauge potential usability issues with Yahoo’s site. 
+                After reaching out to several organizations and businesses, we decided to take Cambodian Student Association 
+                (CSA) of UCSD as our client. At the time, the organization said they only had a Facebook page, and while 
+                that sufficed, they stated it would be nice to have a website. 
               </p>
               <p>
-                After testing, we found that the users we tested all shared the same experience with using Yahoo; 
-                they had used it quite often before, but slowly moved away from it for other sites.
+                We met with Janica and Keith, two representatives of the org, in order to get a better idea of 
+                what CSA is and what their needs are. Prior to our first meeting with them, we thought of five categories
+                that we focused our questions toward:
+              </p>
+              <Bullets info={categories}/>  
+              <br/>
+              <h4 className='subheading'> HISTORY & BACKGROUND </h4>
+              <p>
+                Our client is a non-profit organization started in 2004 to provide a community for UCSD Cambodian students, 
+                to build connections, and to educate others on Cambodia. Throughout the years, the Cambodian Student 
+                Association has developed a culture that resembles a close knit family and strives to support one another. 
+                CSA has also built ties with off-campus Khmer (Cambodian) communities in Southern California. 
               </p>
               <br/>
-              <h4 className='heading'> USABILITY ISSUES </h4>
+              <h4 className='subheading'> USERS </h4>
+              <p>
+                Our client has a very clear mission and audience in mind for their org. They want their site to serve as a 
+                place for education and recruitment of potential members. Using the country as a common interest, they want 
+                to reach out to the public and raise awareness of their presence in the country, as well as the world. 
+                Keeping the culture and traditions of Cambodia as a centerpiece, they want to highlight their history, as 
+                well as their involvement with other Cambodian organizations.
+              </p>
+              <br/>
+              <h4 className='subheading'> CONTENT </h4>
+              <p>
+                As a student organization, CSA holds general body meetings which are often themed and feature icebreakers 
+                and games, and also hosts socials and even language lessons occasionally. The org also has big events where 
+                they receive sponsorships and make money by selling food through fundraising on campus and campus events. 
+              </p>
+              <p>
+                When asked specifically what content they would like on the website, the client requested that about 25% 
+                of the website should be on the history/background on Cambodia and the remaining 75% should be on content 
+                regarding the org, such as: the mission statement, an introduction to CSA, a section for the weekly/biweekly 
+                newsletter, announcements, upcoming events, and their google calendar. In particular, they wanted to highlight 
+                the upcoming Annual Culture Show. For images, the client wanted the logo, group pictures, and pictures 
+                of Cambodia featured on the website. 
+              </p>
+              <br/>
+              <h4 className='subheading'> AESTHETICS </h4>
+              <p>
+                Our client, being a culture organization, wants to heavily emphasize Cambodian culture on their website. 
+                However, they want to avoid anything too cluttered or text heavy; this is not supposed to be a Wikipedia 
+                page on Cambodia. Rather, they want the site to be quite minimal, with more pictures than words. Of course, 
+                words will be needed for the history and background portion of the site, but they would wish for the pictures
+                to tell the story. As for the theme, they want a website that is minimal, creative, and colorful. 
+                For branding, they want to promote themselves as fun and inclusive.
+              </p>
+              <br/>
+              <h4 className='subheading'> COMPETITION </h4>
+              <p>
+                Our clients want to emphasize the fact that they are a Cambodian culture organization on campus, which to 
+                our knowledge, is the only one on campus. They also want to highlight the underrepresentation of Cambodians 
+                in the States, which can be simply observed when food is brought into the picture. “When was the last time 
+                you saw a Cambodian restaurant?” is what Janica asked us. 
+              </p>
+              <br/>
+              <h4 className='heading'> PRIORITY LIST </h4>
               <p> 
-                For each user we tested, we recorded their top three issues they had with completing their task. 
-                After looking through all 12 issues, we came to conclude that the issues boiled down to these two main ones:
+                After breaking down the information Janica and Keith provided, we created a prioritized list of goals 
+                to help us keep track of their expectations throughout this project timeline.
               </p>
-              <Bullets info={issues}/>  
-              <p>
-                We further concluded that these issues were exacerbated by the site’s unintuitive organization and 
-                layout of important information, such as links to other pages or section titles. In other words, their 
-                information architecture was not well laid out.
-              </p>
-              <p>
-                Currently it is unclear how to navigate through pages without using the search bar. 
-                Navigational elements to pages for sports, weather, and finance are initially hidden and are all found 
-                in an unexpected location. Additionally, once on those pages, the navigation and menu layout are all different 
-                from each other as well as the home page’s, which only creates more issues.
-              </p>
-              <Image src={pic1} />
-              <Image src={pic2} />
-              <Image src={pic3} />
-              <h4 className='heading'> COMPETITIVE ANALYSIS </h4>
-              <p>
-                To help with our redesign, we analyzed the mobile layouts of three other frequently-visited sites, MSN, 
-                New York Times, and Bing. Without even spending an extensive amount of time on these sites, we realized 
-                that the issues Yahoo’s mobile site suffered from were nonexistent on these. 
-              </p>
-              <p>
-                Pages within the websites had consistent headers and recognizable icons. All three sites also had better 
-                information architecture that was easy to follow.
-              </p>
-              <Image src={pic4} />
-              <Image src={pic5} />
-              <Image src={pic6} />
-            </div>      
+              <Bullets info={priorities}/>  
+            </div>
 
             <div className='section'>
-              <SectionTitle title='redesign'/> 
-              <h4 className='heading'> SKETCHES & WIREFRAMES </h4>
-              <Image src={pic7} />
-              <h4 className='heading'> PROTOTYPES </h4>
-              <p> 
-                After sketching, we chose the two sketches (the checked-marked ones above) that were the most
-                feasible and proceeded onto high-fidelity prototypes of them.
+              <SectionTitle title='users'/> 
+              <h4 className='heading'> USER INTERVIEWS </h4>
+              <p>
+                Our best approach at finding users to interview was to message Janica and Keith and ask them about potential 
+                org members and affiliates. Does CSA have any sponsors? What about faculty advisors? Other affiliated 
+                organizations? We also interviewed random students on campus, but because CSA was a particularly small org, 
+                we weren’t surprised when a lot of them haven’t heard of CSA. 
               </p>
               <br/>
-              <h4 className='subheading'> REDESIGN 1 </h4>
-              <p> 
-                This redesign focuses on the ease of accessibility straight from the landing page of the website.
-              </p>
-              <Image src={pic8} />
+
+              <h4 className='heading'> PERSONAS </h4>
               <p>
-                Side menus for primary site navigation and for user profile features can be accessed consistently 
-                throughout the site.
+                We were able to conduct and record data for at least nine interviews, which were a mix of students, alumnis 
+                of the org, and faculty advisors for the org. From talking and interviewing them, we were able to gain a 
+                sense of the different tasks and demands that each user wanted/performed. Conveniently, out of all the 
+                interviews, we were able to extrapolate three main groups of users: students, university affiliates, and 
+                alumni; these would become our personas.
               </p>
-              <Image src={pic9} />
-              <Image src={pic10} />
-              <Image src={pic11} />
-              <h4 className='subheading'> REDESIGN 2 </h4>
-              <p> 
-                This redesign focuses on better navigation transparency and improving the search bar.
-              </p>
-              <Image src={pic12} />
+              <Image src={pic1} style={imageMarginLessBottom} />
+              <Image src={pic2} style={imageMarginLessBottom} />
+              <Image src={pic3} style={imageMarginNoTop} />
+
+              <h4 className='heading'> USE CASES </h4>
               <p>
-                A fixed menu icon on all pages allows the user to easily navigate throughout the site, while a fixed profile
-                icon allows easy access to email and notifications.
+                For each of the personas, we created a couple user scenarios for each, and various use cases for each of 
+                those scenarios. We tried to cover as many possible user cases that came to mind. We asked ourselves, 
+                “What would be my goal for coming onto this website?”. The scenarios and respective user cases that we 
+                created are charted below.
               </p>
-              <Image src={pic13} />
-              <Image src={pic14} />
-              <Image src={pic15} />
-            </div>     
+              <Image src={pic4} style={imageMarginLessBottom} />
+              <Image src={pic5} style={imageMarginLessBottom} />
+              <Image src={pic6} style={imageMarginNoTop} />
+
+              <h4 className='subheading'> USE CASES SUMMARY TABLE </h4>
+              <p>
+                To make things even easier, we took all the use cases across all scenarios and personas and then 
+                placed them in a chart. This helped us better visualize the variety of needs that users want. It 
+                was this chart that we constantly came back to, over and over, throughout the project, to make sure 
+                that we were hitting all the needs - it definitely helped us stay on the right track.
+              </p>
+              <Image src={pic7} style={imageMarginNoTop} />
+
+              <h4 className='heading'> FEATURES & FUNCTIONALITIES </h4>
+              <p>
+                To further break down the information we gathered from our use cases, we materialized the use cases 
+                into actual features, elements, and functions that can be added onto the website (the left-most 
+                column). Then based on if the person/group of people had requested it, or would benefit from it, 
+                we gave their respective box (along the same row) an X mark.
+                This allowed us to detemine which user(s) a feature or function would most benefit from a quick glance.
+              </p>
+              <Image src={pic8} style={imageMarginNoTop} />
+
+              <h4 className='heading'> KEY USER NEEDS </h4>
+              <p>
+                From the data we gathered and the tables we made, we were able to visualize and identify four main
+                user needs across all three personas as follows:
+              </p>
+              <Bullets info={needs} />
+            </div>
 
             <div className='section'>
-              <SectionTitle title='evaluation'/> 
-              <h4 className='heading'> USER TESTING SECOND ROUND </h4>
+              <SectionTitle title='competitive analysis'/> 
               <p>
-                For our second rounding of user testing, we decided to directly compare our two prototypes and have each of 
-                the users not only interact with both of them, but also vote on the preferred one. They however, will not be 
-                simply choosing one over the other; we created a list of five questions that directly compared features of 
-                both, and had each user vote on a prototype per question. After testing all users, we totalled up the 
-                votes for each prototype and the one with the most votes was the redesign we decided to go with.
+                To further generate more ideas on our design for our client’s website, we decided to analyze the 
+                websites of five competitor sites. Our competitors are the sites of other college organizations.
+                These sites all had similar features and content, but how their methods of presentation 
+                differed vastly from site to site. Our analyses allowed us to not only see what worked and what 
+                didn’t work on their sites, but also gain new insight into how we can potentially go about our 
+                designs. We critiqued each site on six elements:
               </p>
-              <p>
-                We conducted this round of user testing similarly to how we conducted the first round. For each user, we 
-                randomized the order in which we presented the prototypes to minimize biases that could result. After the 
-                testing, we showed them the original site and asked for their honest opinion on which they liked better, the 
-                redesigns or the original.
-              </p>
-              <Image src={pic16} />
+              <Bullets info={elements} />
+              <br/>
 
-              <h4 className='heading'> RESULTS </h4>
+              <h4 className='heading'> COMPETITOR SITES </h4>
+              <Image src={pic9} style={imageMarginNoTop} />
+
+              <h4 className='subheading'> BRANDING </h4>
+              <p> What impression does the site give off? </p>
+              <Image src={pic10} style={imageMarginLessBottom} />
+
+              <h4 className='subheading'> FUNCTIONALITY </h4>
+              <p> What does the website allow users to do? </p>
+              <Image src={pic11} style={imageMarginLessBottom} />
+
+              <h4 className='subheading'> CONTENT </h4>
+              <p> What does the website show users? </p>
+              <Image src={pic12} style={imageMarginLessBottom} />
+
+              <h4 className='subheading'> SITE ARCHITECTURE </h4>
+              <p> What does the website show users? </p>
+              <Image src={pic13} style={imageMarginLessBottom} />
+
+              <h4 className='subheading'> NAVIGATION </h4>
+              <p> How will the user navigate the website? </p>
+              <Image src={pic14} style={imageMarginLessBottom} />
+
+              <h4 className='subheading'> DESIGN </h4>
+              <p> What design elements do others do well? </p>
+              <Image src={pic15} style={imageMarginNoTop} />
+            </div>
+
+            <div className='section'>
+              <SectionTitle title='mood boards'/> 
               <p>
-                Tallying up the points from the five questions for all four users, both designs actually had the same 
-                amount of points. We decided to not proceed with a tiebreaker and focused on the bigger point:  
-                All users said that they much preferred the redesigns over the original site.
+                This website will have a minimalist appearance that is at the same time attention-grabbing. Because 
+                our client is a cultural organization that focuses on social aspects, we also want to portray a tone
+                 that is friendly, inviting, and welcoming. This is especially important as one of our main target 
+                 user groups includes new students interested in joining and we certainly do not want any part of the 
+                 website to push them away. In portraying information, we want to stay simple yet informative which 
+                 means we will avoid blocks of text. The color palette we will be working will be some combination 
+                 of pastel colors against a white backdrop. Our typography choice will be a combination of Sans-serif 
+                 fonts that is bold in appearance and easily readable.
               </p>
               <br/>
-              <h4 className='heading'> ANALYSIS </h4>
+              <h4 className='heading'> COLORS </h4>
+              <Image src={pic16} style={imageMarginLessBottom} />
+              <h4 className='heading'> IMAGERY </h4>
+              <Image src={pic17} style={imageMarginLessBottom} />
+              <h4 className='heading'> WEBSITE LAYOUT </h4>
+              <Image src={pic18} style={imageMarginNoTop} />
+            </div>
+
+            <div className='section'>
+              <SectionTitle title='wireframing'/> 
+              <h4 className='heading'> SITE ARCHITECTURE </h4>
               <p>
-                As with every redesign, there are always trade offs with the old design. For instance, avid users of the 
-                old site with a mental map of where everything on the site is, might question the lay out of the redesigns 
-                since it is not like the older design. For the most part, we tried to keep everything pretty similar to how 
-                the old site was like. Our redesigns were fashioned in their styling and fonts, and we added more features 
-                than we removed. The biggest differences that our redesigns have with the old design are the separation of 
-                the profile and menu icons, and fixing the same navigation menu to every page; these are the only differences 
-                we expect to cause some disturbances to older, avid users of the site.
+                From what we observed from our competitive analysis, we saw that other college org sites more or less 
+                had these elements below. We thought it was for the best if we use a similar structure as well.
+              </p>
+              <Bullets info={pages} />
+              <Image src={pic19} style={imageMarginNoTop} />
+
+              <h4 className='heading'> SKETCHES </h4>
+              <Image src={pic20} style={imageMarginNoTop} />
+
+              <h4 className='heading'> WIREFRAMES </h4>
+              <br/>
+              <h4 className='subheading'> NAVIGATION </h4>
+              <p>
+                From our competitive analysis, we learned that good and consistent navigation is an absolute necessity. 
+                This is because an effective navigation system is the anchor and skeleton of an entire website and for this 
+                reason, we made its development our first priority.
+              </p>
+              <Image src={pic21}  style={imageMarginNoTop} />
+
+              <h4 className='subheading'> HOME PAGE & FOOTER </h4>
+              <p>
+                The home page is the first page users will see and it will provide the user with an overall preview of
+                CSA's mission and brand. To start off, users are greeted with a large banner of the organization showcasing 
+                members and a mantra. Below this banner is a card which displays brief but important announcements or 
+                updates from our client. Furthermore, users are then introduced to the organization via a short introduction 
+                summary as well as sign up for a newsletter.
+              </p>
+              <Image src={pic22}  style={imageMarginNoTop} />
+
+              <h4 className='subheading'> ABOUT </h4>
+              <p>
+                The about us page gives users more insight into the organization. Users can read a bit about 
+                CSA's history and Cambodian culture here, but they are also given the option to head over to the
+                dedicated history and culture page where they can read more. Logos and links of CSA's 
+                affiliations are also shown here.
+              </p>
+              <Image src={pic23}  style={imageMarginNoTop} />
+
+              <h4 className='subheading'> HISTORY & CULTURE </h4>
+              <p>
+                This page is all about information and background.Users can learn more about CSA's 
+                mission statement, founding, and the history and culture of Cambodia.
+              </p>
+              <Image src={pic24}  style={imageMarginNoTop} />
+
+              <h4 className='subheading'> MEMBERS </h4>
+              <p>
+                The members page is where users can find pictures, descriptions, and contact 
+                information of board members and faculty advisors.
+              </p>
+              <Image src={pic25}  style={imageMarginNoTop} />
+
+              <h4 className='subheading'> EVENTS </h4>
+              <p>
+                The events page allows the users to keep up with both upcoming and past events 
+                hosted by CSA. It also has three sub pages, two of which are dedicated pages for
+                upcoming and past events, and the third one being a page for photos.
+              </p>
+              <Image src={pic26}  style={imageMarginNoTop} />
+
+              <h4 className='subheading'> UPCOMING EVENTS </h4>
+              <p>
+                This page allows users to check on upcoming events via a calendar and dedicated posts. 
+                They can see the event details such as time and location.
+              </p>
+              <Image src={pic27}  style={imageMarginNoTop} />
+
+              <h4 className='subheading'> PAST EVENTS </h4>
+              <p>
+                This page features an archive of previous events throughout the years. Users can scroll 
+                to see past event details as well as pictures.
+              </p>
+              <Image src={pic28}  style={imageMarginNoTop} />
+
+              <h4 className='subheading'> PHOTO GALLERY </h4>
+              <p>
+                Media and photos from events can be viewed here. Photos will be categorized by year and 
+                event, and will feature modal pop ups.
+              </p>
+              <Image src={pic29}  style={imageMarginNoTop} />
+
+              <h4 className='subheading'> CONTACT </h4>
+              <p>
+                This page allows users to directly contact CSA via a form that they can fill out. For users 
+                interested in learning more about the organization, they can submit their email in a newsletter 
+                sign up to get content delivered straight to their inbox.
+              </p>
+              <Image src={pic30}  style={imageMarginNoTop} />
+
+              <h4 className='heading'> USER TESTING ROUND 1 </h4>
+              <p>
+                After we finished these wireframe screens, we gathered five users who were open to test
+                the site. We gave each of them the same five tasks, all of which involved navigating the
+                site to find various elements.
+              </p>
+              <p>
+                Every user was able to efficiently and effectively finish their tasks, which meant that
+                navigating the site was no problem, at least for students. We weren't able to say the same
+                for the other two personas, since we weren't able to get users that fit into them. Regardless,
+                it was still a great sign and we moved onto prototyping.
               </p>
             </div>
 
             <div className='section'>
+              <SectionTitle title='prototyping'/>
+              <h4 className='heading'> FIRST ITERATION </h4>
+              <p>
+                With content finally received from our client, we were able to add images, content, and color
+                onto our first prototype.
+              </p>
+              <p>
+                Check out the Figma files for&nbsp;
+                <a 
+                  href='https://www.figma.com/proto/VTvDvW5qe1iFnrzCF3W8X3/COGS-187B-Prototype-1?node-id=241%3A0&viewport=215%2C178%2C0.11381050199270248&scaling=scale-down'
+                  target='_blank' 
+                  rel='noopener noreferrer'
+                >mobile</a>
+                &nbsp;and&nbsp;
+                <a 
+                  href='https://www.figma.com/proto/VTvDvW5qe1iFnrzCF3W8X3/COGS-187B-Prototype-1?node-id=236%3A2&viewport=157%2C288%2C0.03742421790957451&scaling=scale-down-width'
+                  target='_blank' 
+                  rel='noopener noreferrer'
+                >desktop</a>
+                &nbsp;here.
+              </p>
+              <Image src={pic31}  style={imageMarginLessBottom} />
+              <Image src={pic32}  style={imageMarginNoTop} />
+              <Image src={pic33}  style={imageMarginLessBottom} />
+              <Image src={pic34}  style={imageMarginLessBottom} />
+              <Image src={pic35}  style={imageMarginLessBottom} />
+              <Image src={pic36}  style={imageMarginLessBottom} />
+              <Image src={pic37}  style={imageMarginNoTop} />
+
+              <h4 className='heading'> FINAL ITERATION </h4>
+              <p>
+                We weren't too satisfied with the first iteration, and CSA was able to provide us with more images,
+                so for round two, we decided to go all out with the images. CSA is a student organization after all, 
+                and they're trying to make themselves seem welcoming; let's have images speak for themselves. 
+              </p>
+
+              <h4 className='subheading'> LINKS </h4>
+
+              <h4 className='subheading'> HOME </h4>
+              <p>
+                We gave the home page, and other pages as well, image carousel banners that line the tops and middles
+                to give a more friendly, down-to-earth feel. The announcements card has been replaced with a toggleable
+                pull out so that it's not too prominent to those who don't care for it so much.
+              </p>
+              <Image src={pic38}  style={imageMarginLessBottom} />
+              <Image src={pic39}  style={imageMarginNoTop} />
+
+              <h4 className='subheading'> ABOUT </h4>
+              <Image src={pic40}  style={imageMarginLessBottom} />
+              <Image src={pic41}  style={imageMarginNoTop} />
+
+              <h4 className='subheading'> HISTORY & CULTURE </h4>
+              <Image src={pic42}  style={imageMarginLessBottom} />
+              <Image src={pic43}  style={imageMarginNoTop} />
+
+              <h4 className='subheading'> MEMBERS </h4>
+              <Image src={pic44}  style={imageMarginLessBottom} />
+              <Image src={pic45}  style={imageMarginNoTop} />
+
+              <h4 className='subheading'> EVENTS </h4>
+              <Image src={pic46}  style={imageMarginLessBottom} />
+              <Image src={pic47}  style={imageMarginNoTop} />
+
+              <h4 className='subheading'> UPCOMING EVENTS </h4>
+              <Image src={pic48}  style={imageMarginLessBottom} />
+              <Image src={pic49}  style={imageMarginNoTop} />
+
+              <h4 className='subheading'> PAST EVENTS </h4>
+              <Image src={pic50}  style={imageMarginLessBottom} />
+              <Image src={pic51}  style={imageMarginNoTop} />
+
+              <h4 className='subheading'> PHOTO GALLERY </h4>
+              <Image src={pic52}  style={imageMarginLessBottom} />
+              <Image src={pic53}  style={imageMarginNoTop} />
+
+              <h4 className='subheading'> CONTACT </h4>
+              <Image src={pic54}  style={imageMarginLessBottom} />
+              <Image src={pic55}  style={imageMarginNoTop} />
+            </div> 
+
+            <div className='section'>
               <SectionTitle title='lessons learned'/> 
               <p>
-                Despite some unpredicted weaknesses that we encountered, we think that the overall benefits from our 
-                redesigns outweigh the weaknesses we had and still would want to push forward our redesigns. We believe 
-                our rationales for the redesign still hold, especially with the features that the users enjoyed. For features 
-                that had some issues such as redesign 2’s filter system, we believe that through iteration, those can be 
-                improved to meet the functioning standards that we initially wanted. 
+                For our first time working with actual clients outside the classroom, this was an amazing learning
+                experience. As excited as we were to jump right into designing, we realized how important communication
+                with the client is, especially when we didn't have any content or images to work with. It's a team effort
+                between the designers and the client to produce a website that truly reflects their brand and identity.
+                More importantly, we also needed to prioritize their users; this website isn't just for CSA, its for potential
+                people interesting in learning more about or even joining the organization. We wanted to design a site that
+                would leave those users with a lasting impression.
               </p>
               <p>
-                From this project,  we learned that coming up with a redesign is a doable task, but coming up with multiple 
-                redesigns is a bit harder. It was also helpful and educational to critique, compare, and contrast our chosen 
-                website with the site of competitors to see how each worked (or did not work) for its own design space and 
-                intended audiences.
-              </p>
-              <p>
-                User testing and feedback is crucial for any redesign, and that we should always focus on what the user wants, 
-                not what we think the user wants.
+                When it comes to a team working together on a project, there are bound to be some inconsistencies
+                with stylings and conflicts when it comes to whose idea to use. This project taught me how to deal with
+                sitations like these, and the importance of team communcation and management. Tasks had to be distributed, 
+                meeting schedules needed to be arranged, ideas and information had to be shared; there's no time for lack
+                of communication. 
               </p>
               <p>
                 Thanks for taking your time to read this, and I hope it was enjoyable!
@@ -285,7 +654,6 @@ class CSA extends React.Component {
               </p>
             </div>
 
-            <Link to='/'> <button className='sadButton'> return home </button> </Link>
           </div>
         </div>
       </div>

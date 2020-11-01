@@ -38,11 +38,11 @@ const Bullets = (props) => {
     )}
   </div>
   );
-}
+};
 
 const Image = (props) => {
   return (
-    <div className='imageHolder'>
+    <div className='imageHolder' style={props.style || null}>
       <LazyLoad 
         height={200} 
         offset={100}
@@ -51,19 +51,22 @@ const Image = (props) => {
       </LazyLoad>
     </div>
   );
-}
+};
 
 const goals = [
   'Learn how to conduct user research and analysis',
   'Understand how to pinpoint usability errors and its source, as well as communicate the pros and cons of a UI design through our observations',
   'Learn how to create high fidelity prototypes using Figma',
   'Understand the importance of a user-centered design approach'
-]
+];
 
 const issues = [
   'The site lacked a standard menu navigation that was clear and intuitive to process',
   'The site had inconsistent headers that varied through different pages of the site, which increased the time it took for users to navigate'
-]
+];
+
+const imageMarginNoTop = {marginTop: '0rem'};
+const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
 
 class Yahoo extends React.Component {
   constructor(props) {
@@ -284,13 +287,6 @@ class Yahoo extends React.Component {
 
             <div className='section'>
               <SectionTitle title='lessons learned'/> 
-              <p>
-                Despite some unpredicted weaknesses that we encountered, we think that the overall benefits from our 
-                redesigns outweigh the weaknesses we had and still would want to push forward our redesigns. We believe 
-                our rationales for the redesign still hold, especially with the features that the users enjoyed. For features 
-                that had some issues such as redesign 2’s filter system, we believe that through iteration, those can be 
-                improved to meet the functioning standards that we initially wanted. 
-              </p>
               <p>
                 From this project,  we learned that coming up with a redesign is a doable task, but coming up with multiple 
                 redesigns is a bit harder. It was also helpful and educational to critique, compare, and contrast our chosen 

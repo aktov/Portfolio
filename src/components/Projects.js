@@ -75,8 +75,8 @@ const projects_design = [
     imageM: imgM_csa,
     tags: ['Figma', 'wireframing', 'prototyping', 'user testing'],
     color: '#DA8484',
-    figmaD: 'https://www.figma.com/proto/RGXkafFb1qTKCbGmfZSUDq/COGS187B-Final-Prototype?node-id=236%3A2&scaling=scale-down-width',
-    figmaM: 'https://www.figma.com/proto/HK3nRrbz73hPQqSlTNTDmu/COGS187B-Final-Prototype-Copy?node-id=241%3A0&scaling=contain',
+    figmaD: 'https://www.figma.com/proto/HK3nRrbz73hPQqSlTNTDmu/CSA-Website-Design?node-id=236%3A2&viewport=147%2C303%2C0.03458884358406067&scaling=scale-down-width',
+    figmaM: 'https://www.figma.com/proto/HK3nRrbz73hPQqSlTNTDmu/CSA-Website-Design?node-id=241%3A0&viewport=176%2C217%2C0.07083262503147125&scaling=scale-down',
     link: '/csa'
   },
   {

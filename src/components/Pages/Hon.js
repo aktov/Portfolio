@@ -40,7 +40,7 @@ const Bullets = (props) => {
     )}
   </div>
   );
-}
+};
 
 const Image = (props) => {
   return (
@@ -53,7 +53,7 @@ const Image = (props) => {
       </LazyLoad>
     </div>
   );
-}
+};
 
 const needsClients = [
   'read posts easily',
@@ -63,12 +63,12 @@ const needsClients = [
   'navigate to Hon-Media\'s main site',
   'engage with the posts by liking or commenting',
   'easily share the posts on my own social media or email',
-]
+];
 
 const needsDevs = [
   'easily create new posts on the site',
   'manage the posts that are currently online'
-]
+];
 
 const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
@@ -162,7 +162,7 @@ class Hon extends React.Component {
             </div>          
                       
             <div className='section'>
-              <SectionTitle title='NEED FINDING'/> 
+              <SectionTitle title='need finding'/> 
               <h4 className='heading'> USER NEEDS </h4>
               <p> 
                 Based on how Hon-Media described their blog, it's clear to me that there are two main user groups
@@ -189,7 +189,7 @@ class Hon extends React.Component {
             </div>      
 
             <div className='section'>
-              <SectionTitle title='WIREFRAMING'/> 
+              <SectionTitle title='wireframing'/> 
               <h4 className='heading'> SITE ARCHITECTURE </h4>
               <p> 
                 Based on the user needs described above, it seems like the site should have four main features,
@@ -227,7 +227,7 @@ class Hon extends React.Component {
             </div>  
 
             <div className='section'>
-              <SectionTitle title='PROTOTYPING'/> 
+              <SectionTitle title='prototyping'/> 
               <p>
                 With the wireframes finished and feedback received from Hon-Media, I worked on fleshing out the
                 designs and features. 
@@ -345,7 +345,7 @@ class Hon extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='FINAL THOUGHTS'/> 
+              <SectionTitle title='final thoughts'/> 
               <p>
                 I've got to say, I was a bit intimidated by this project at the start. It was my first time
                 having the freedom to design as I pleased. In all the past projects I've done, I have had at least
