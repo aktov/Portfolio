@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import LazyLoad from 'react-lazyload';
 
 import Header from '../Header.js';
@@ -8,8 +7,8 @@ import NavMenu from '../NavMenu.js';
 import Contact from '../Contact.js';
 import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
+import TopButton from '../TopButton.js';
 
-import img_arrow from '../../images/arrowUp.svg';
 import banner from '../../images/banner_yahoo.png';
 import figma1 from '../../images/figma1.svg';
 import figma2 from '../../images/figma2.svg';
@@ -47,11 +46,32 @@ const Image = (props) => {
         height={200} 
         offset={100}
       >
-        <img src={props.src} alt='' draggable='false' /> 
+        <img 
+          src={props.src} 
+          alt='' 
+          draggable='false'           
+          data-aos='fade' 
+          data-aos-offset='50' 
+          data-aos-easing='ease-out-sine'
+          data-aos-duration='400'
+          data-aos-once={true}
+        /> 
       </LazyLoad>
     </div>
   );
 };
+
+const Tags = (props) => {
+  return (
+    <div className='tags'>
+      {props.names.map((name) =>
+        <h5 key={name} style={{color: props.color}}> {name.toUpperCase()} </h5>
+      )}
+    </div>
+  );
+}
+
+const tags = ['Figma', 'user testing', 'wireframing', 'prototyping']
 
 const goals = [
   'Learn how to conduct user research and analysis',
@@ -65,8 +85,7 @@ const issues = [
   'The site had inconsistent headers that varied through different pages of the site, which increased the time it took for users to navigate'
 ];
 
-const imageMarginNoTop = {marginTop: '0rem'};
-const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
+const color = '#C19FF7';
 
 class Yahoo extends React.Component {
   constructor(props) {
@@ -110,9 +129,19 @@ class Yahoo extends React.Component {
 
         <div className='content' style={{marginTop:'3rem'}}>
           <div id='anchor_page' className='anchor' style={{top: '-1000px'}}></div>
-          <img className='banner' src={banner} alt='Yahoo' draggable='false'/>
+          <img 
+            className='banner' 
+            src={banner} 
+            alt='Banner' 
+            draggable='false'        
+            data-aos='fade' 
+            data-aos-offset='50' 
+            data-aos-easing='ease-out-sine'
+            data-aos-duration='400'
+            data-aos-once={true}
+          />
           <div className='pages' style={this.props.screenWidth > 640 ? {marginTop:'3rem'} : {width: '75%', marginTop:'3rem'}}>
-
+            <Tags names={tags} color={color}/>
             <h3 className='title'> {'Yahoo Mobile Redesign'.toUpperCase()} </h3>
 
             <div className='intro'>
@@ -307,9 +336,7 @@ class Yahoo extends React.Component {
         </div>
       </div>
 
-      <button className='topButton' style={{backgroundColor: '#C19FF7'}} onClick={this.goToTop}> 
-        <img src={img_arrow} alt='Back to top' />
-      </button>
+      <TopButton color={color} />
       <Footer screenWidth={this.props.screenWidth} />
       </>
     );

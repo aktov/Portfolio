@@ -185,10 +185,10 @@ class Projects extends React.Component {
         <div id='anchor_projects' className='anchor'></div>
         <SectionTitle title='projects'/> 
 
-        <h4 style={{ marginBottom: '.625rem' }}> {'figma prototypes & mockups'.toUpperCase()} </h4>
-        <Others projects={projects_figma} screenWidth={this.props.screenWidth} />
         <h4 style={{marginBottom: '.625rem'}}> {'user-centered design processes'.toUpperCase()} </h4>
         <Others projects={projects_design} screenWidth={this.props.screenWidth} />
+        <h4 style={{ marginBottom: '.625rem' }}> {'figma prototypes & mockups'.toUpperCase()} </h4>
+        <Others projects={projects_figma} screenWidth={this.props.screenWidth} />
         {/* <h4 style={{marginBottom: '.625rem'}}> WEB DEVELOPMENT </h4>
         <Others projects={projects_web} screenWidth={this.props.screenWidth} /> */}
       </div> 

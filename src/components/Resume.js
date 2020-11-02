@@ -34,6 +34,7 @@ const Skills = (props) => {
       {Object.keys(skillsList).map(key =>
         <div 
           className='phrases'
+          key={key}
           data-aos='fade' 
           data-aos-offset='50' 
           data-aos-easing='ease-out-sine'
@@ -41,7 +42,7 @@ const Skills = (props) => {
           data-aos-once={true}
         >
           <h4> {key} </h4>
-          {skillsList[key].map((phrase) => 
+          {skillsList[key].map(phrase => 
             <Phrase key={key + '/' + phrase} text={phrase}/>
           )}
         </div>

@@ -1,0 +1,51 @@
+import React from 'react';
+
+import img_arrow from '../images/arrowUp.svg';
+
+class TopButton extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      visible: false
+    }
+
+    this.goToTop = this.goToTop.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+  
+  goToTop(e) {
+    if (document.getElementById('anchor_page') && this.state.visible) {
+      document.getElementById('anchor_page').scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
+  }
+
+  handleScroll() {
+    this.setState({visible: window.pageYOffset > window.innerHeight/2 ? true : false});
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+  
+  render() {
+    return ( 
+      <button 
+        className={this.state.visible ? 'topButton' : 'hide topButton'}
+        style={{
+          backgroundColor: this.props.color,
+          cursor: this.state.visible ? 'pointer' : 'default',
+        }} 
+        onClick={this.goToTop}
+      > 
+        <img src={img_arrow} alt='Back to top' />
+      </button> 
+    );
+  };
+}
+
+export default TopButton;

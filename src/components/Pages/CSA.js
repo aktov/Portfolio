@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import LazyLoad from 'react-lazyload';
 
 import Header from '../Header.js';
@@ -8,8 +7,8 @@ import NavMenu from '../NavMenu.js';
 import Contact from '../Contact.js';
 import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
+import TopButton from '../TopButton.js';
 
-import img_arrow from '../../images/arrowUp.svg';
 import banner from '../../images/banner_csa.png';
 import figmaD from '../../images/figmaD.svg';
 import figmaM from '../../images/figmaM.svg';
@@ -86,11 +85,32 @@ const Image = (props) => {
         height={200} 
         offset={100}
       >
-        <img src={props.src} alt='' draggable='false' /> 
+        <img 
+          src={props.src} 
+          alt='' 
+          draggable='false'           
+          data-aos='fade' 
+          data-aos-offset='50' 
+          data-aos-easing='ease-out-sine'
+          data-aos-duration='400'
+          data-aos-once={true}
+        /> 
       </LazyLoad>
     </div>
   );
 };
+
+const Tags = (props) => {
+  return (
+    <div className='tags'>
+      {props.names.map((name) =>
+        <h5 key={name} style={{color: props.color}}> {name.toUpperCase()} </h5>
+      )}
+    </div>
+  );
+}
+
+const tags = ['Figma', 'wireframing', 'prototyping', 'user testing'];
 
 const goals = [
   'Learn how to build a strong, communicative relationship with our client, as well as how to be flexible during times where they are unresponsive',
@@ -145,6 +165,7 @@ const pages = [
 
 const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
+const color = '#DA8484';
 
 class CSA extends React.Component {
   constructor(props) {
@@ -152,15 +173,10 @@ class CSA extends React.Component {
 
     this.state = {
       menuOpen: false,
+      showTopButton: false,
     }
 
     this.toggleMenu = this.toggleMenu.bind(this);
-  }
-
-  goToTop(e) {
-    if (document.getElementById('anchor_page')) {
-      document.getElementById('anchor_page').scrollIntoView({behavior: 'smooth', block: 'start'});
-    }
   }
 
   toggleMenu() {
@@ -188,9 +204,19 @@ class CSA extends React.Component {
 
         <div className='content' style={{marginTop:'3rem'}}>
           <div id='anchor_page' className='anchor' style={{top: '-1000px'}}></div>
-          <img className='banner' src={banner} alt='Yahoo' draggable='false'/>
+          <img 
+            className='banner' 
+            src={banner} 
+            alt='Banner' 
+            draggable='false'           
+            data-aos='fade' 
+            data-aos-offset='50' 
+            data-aos-easing='ease-out-sine'
+            data-aos-duration='400'
+            data-aos-once={true}  
+          />
           <div className='pages' style={this.props.screenWidth > 640 ? {marginTop:'3rem'} : {width: '75%', marginTop:'3rem'}}>
-
+            <Tags names={tags} color={color}/>
             <h3 className='title'> {'CSA Website Design'.toUpperCase()} </h3>
 
             <div className='intro'>
@@ -587,6 +613,27 @@ class CSA extends React.Component {
               </p>
 
               <h4 className='subheading'> LINKS </h4>
+              <div className='buttons'>
+                  <a 
+                    href='https://www.figma.com/proto/HK3nRrbz73hPQqSlTNTDmu/CSA-Website-Design?node-id=236%3A2&viewport=147%2C303%2C0.03458884358406067&scaling=scale-down-width'
+                    target='_blank' 
+                    rel='noopener noreferrer'
+                  >
+                    <img src={figmaD} alt='figmaD' draggable='false' /> 
+                    <span className='toolTip'> figma desktop </span> 
+                  </a> 
+                  <a 
+                    href='https://www.figma.com/proto/HK3nRrbz73hPQqSlTNTDmu/CSA-Website-Design?node-id=241%3A0&viewport=176%2C217%2C0.07083262503147125&scaling=scale-down'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <img src={figmaM} alt='figmaM' draggable='false' /> 
+                    <span className='toolTip'> figma mobile </span> 
+                  </a> 
+                </div>
+                <br/>
+
+
 
               <h4 className='subheading'> HOME </h4>
               <p>
@@ -658,9 +705,7 @@ class CSA extends React.Component {
         </div>
       </div>
 
-      <button className='topButton' style={{backgroundColor: '#DA8484'}} onClick={this.goToTop}> 
-        <img src={img_arrow} alt='Back to top' />
-      </button>
+      <TopButton color={color} />
       <Footer screenWidth={this.props.screenWidth} />
       </>
     );

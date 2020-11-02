@@ -247,10 +247,10 @@ header {
                 height: inherit;
                 padding: 0 toRem(20);
               
-                font-family: $questrial;
+                font-family: 'Poppins';
                 font-style: normal;
-                font-weight: normal;
-                font-size: $size_h4;
+                font-weight: 500;
+                font-size: $size_h5;
                 line-height: $headerHeight;
                 display: flex;
                 justify-content: center;
@@ -263,7 +263,7 @@ header {
             }
         
             .buttonNav:hover {
-                font-family: $questrial;
+                font-family: 'Poppins';
                 color: #aaaaaa;
             }
 
@@ -417,10 +417,10 @@ div.menu {
                 height: $buttonHeight;
                 padding-left: toRem(30);
             
-                font-family: $questrial;
+                font-family: 'Poppins';
                 font-style: normal;
-                font-weight: normal;
-                font-size: $size_h4;
+                font-weight: 500;
+                font-size: $size_h5;
                 line-height: $headerHeight;
                 display: flex;
                 justify-content: flex-start;
@@ -463,6 +463,7 @@ div.contact {
             transform: scale(1.375, 1.375);
         }
         .toolTip {
+            visibility: visible;
             opacity: 1;
         }
     }
@@ -529,6 +530,7 @@ div.contact {
             color: $baseTextColor;
             background-color: #ffffff;
             opacity: 0;
+            visibility: hidden;
             transition: opacity ease-out $transitionTimingCard;
         }
     }
@@ -1003,7 +1005,7 @@ div.content {
                     }
 
                     p {
-                        margin: 0 toRem(10);    
+                        margin: 0 toRem(5);    
                     }
                 }
             }
@@ -1715,6 +1717,117 @@ div.content {
                 }
             }
         }
+
+        div.buttons {
+            position: relative;
+            width: toRem(100);
+            min-width: toRem(100);
+            height: toRem(50);
+
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+
+            a:hover {
+                img {
+                    // height: toRem(25);
+                    -webkit-transform: scale(1.25, 1.25);
+                    -moz-transform: scale(1.25, 1.25);
+                    -ms-transform: scale(1.25, 1.25);
+                    -o-transform: scale(1.25, 1.25);
+                    transform: scale(1.25, 1.25);
+                }
+                .toolTip {
+                    opacity: 1;
+                }
+            }
+
+            a:only-child {
+                margin-right: auto;
+            }
+
+            a {
+                position: relative;
+                width: toRem(50);
+                height: toRem(50);
+
+                border-radius: toRem(100);
+                border: none;
+                display: flex;
+
+                font-family: 'Zilla Slab', sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: $size_h1;
+                color: $baseTextColor;
+                background-color: transparent;
+
+                cursor: pointer;
+
+                img {
+                    position: relative;
+                    width: auto;
+                    height: toRem(35);
+                    margin: auto;
+
+                    display: flex;
+                    align-self: center;
+
+                    -webkit-filter: contrast(.8);
+                    -moz-filter: contrast(.8);
+                    -ms-filter: contrast(.8);
+                    -o-filter: contrast(.8);
+                    filter: contrast(.8);
+                    transition: all ease-out .1s;
+                }
+
+                .toolTip {
+                    $width: toRem(120);
+
+                    position: absolute;
+                    width: $width;
+                    height: 100%;
+                    top: toRem(50);
+                    left: 50%;
+                    margin-left: -$width/2;
+        
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: toRem(13);
+                
+                    text-align: center;
+                    border-radius: toRem(40);
+                    color: $baseTextColor;
+                    background-color: transparent;
+                    opacity: 0;
+                    // display: none;
+                    transition: opacity ease-out $transitionTimingCard;
+                }
+            }
+        }
+
+        div.tags {
+            position: relative;
+            width: 100%;
+            
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-bottom: auto;
+
+            h5 {
+                margin-top: toRem(-10);
+                padding-right: toRem(10);
+
+                font-family: 'Poppins', sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+        }  
         
         .phrases {
             width: 100%;
@@ -1837,6 +1950,14 @@ button.topButton {
     border-radius: toRem(100);
     color: $baseTextColor;
     cursor: pointer;
+    outline: none;
+
+    opacity: 1;
+    transition: opacity ease-out $transitionTimingCard;
+}
+
+button.hide.topButton{
+    opacity: 0;
 }
 
 

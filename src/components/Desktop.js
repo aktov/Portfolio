@@ -5,6 +5,7 @@ import Footer from './Footer.js';
 import Background from './Background.js';
 import Contact from './Contact.js';
 import Content from './Content.js';
+import TopButton from './TopButton.js';
 
 class Desktop extends React.Component {
   render() {
@@ -16,6 +17,8 @@ class Desktop extends React.Component {
         <Contact screenWidth={this.props.screenWidth} /> 
         <Content screenWidth={this.props.screenWidth} />
       </div>
+      
+      <TopButton color='#B8C4E4' />
       <Footer screenWidth={this.props.screenWidth} />
       </>
     );

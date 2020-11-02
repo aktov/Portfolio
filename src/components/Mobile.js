@@ -5,6 +5,7 @@ import Footer from './Footer.js';
 import Background from './Background.js';
 import Content from './Content.js';
 import NavMenu from './NavMenu.js';
+import TopButton from './TopButton.js';
 
 class Mobile extends React.Component {
   constructor(props) {
@@ -33,6 +34,8 @@ class Mobile extends React.Component {
         <Background screenWidth={this.props.screenWidth} />
         <Content screenWidth={this.props.screenWidth} />
       </div>
+
+      <TopButton color='#B8C4E4' />
       <Footer screenWidth={this.props.screenWidth} />
       </>
     );

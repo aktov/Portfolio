@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import LazyLoad from 'react-lazyload';
 
 import Header from '../Header.js';
@@ -8,8 +7,8 @@ import NavMenu from '../NavMenu.js';
 import Contact from '../Contact.js';
 import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
+import TopButton from '../TopButton.js';
 
-import img_arrow from '../../images/arrowUp.svg';
 import banner from '../../images/banner_hon.png';
 import figma from '../../images/figmaLogo_black.svg';
 import pic1 from '../../images/hon/1.png';
@@ -49,11 +48,32 @@ const Image = (props) => {
         height={200} 
         offset={100}
       >
-        <img src={props.src} alt='' draggable='false' /> 
+        <img 
+          src={props.src} 
+          alt='' 
+          draggable='false'           
+          data-aos='fade' 
+          data-aos-offset='50' 
+          data-aos-easing='ease-out-sine'
+          data-aos-duration='400'
+          data-aos-once={true}
+        /> 
       </LazyLoad>
     </div>
   );
 };
+
+const Tags = (props) => {
+  return (
+    <div className='tags'>
+      {props.names.map((name) =>
+        <h5 key={name} style={{color: props.color}}> {name.toUpperCase()} </h5>
+      )}
+    </div>
+  );
+}
+
+const tags = ['Figma', 'prototyping'];
 
 const needsClients = [
   'read posts easily',
@@ -72,6 +92,10 @@ const needsDevs = [
 
 const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
+const color = '#9F9FDF'
+
+
+
 
 class Hon extends React.Component {
   constructor(props) {
@@ -115,13 +139,42 @@ class Hon extends React.Component {
 
         <div className='content' style={{marginTop:'3rem'}}>
           <div id='anchor_page' className='anchor' style={{top: '-1000px'}}></div>
-          <img className='banner' src={banner} alt='Yahoo' draggable='false'/>
+          <img 
+            className='banner' 
+            src={banner} 
+            alt='Banner' 
+            draggable='false'          
+            data-aos='fade' 
+            data-aos-offset='50' 
+            data-aos-easing='ease-out-sine'
+            data-aos-duration='400'
+            data-aos-once={true}  
+          />
           <div className='pages' style={this.props.screenWidth > 640 ? {marginTop:'3rem'} : {width: '75%', marginTop:'3rem'}}>
-
-            <h3 className='title'> {'Hon-Media Blogsite Design'.toUpperCase()} </h3>
+            <Tags names={tags} color={color}/>
+            <h3 
+              className='title'
+              data-aos='fade' 
+              data-aos-offset='50' 
+              data-aos-easing='ease-out-sine'
+              data-aos-duration='400'
+              data-aos-delay='200'
+              data-aos-once={true}
+            > 
+              {'Hon-Media Blogsite Design'.toUpperCase()} 
+            </h3>
 
             <div className='intro'>
-              <div className='col' style={this.props.screenWidth > 640 ? null : {width: '100%'} }> 
+              <div 
+                className='col' 
+                style={this.props.screenWidth > 640 ? null : {width: '100%'}}
+                data-aos='fade' 
+                data-aos-offset='50' 
+                data-aos-easing='ease-out-sine'
+                data-aos-duration='400'
+                data-aos-delay='400'
+                data-aos-once={true}
+              > 
                 <h4 className='heading'> ROLE </h4>
                 <h4> UI/UX Designer </h4>              
                 <br/>
@@ -138,7 +191,16 @@ class Hon extends React.Component {
                 </div>
                 <br/>
               </div>
-              <div className='col' style={this.props.screenWidth > 640 ? null : {width: '100%'} }>
+              <div 
+                className='col' 
+                style={this.props.screenWidth > 640 ? null : {width: '100%'}}
+                data-aos='fade' 
+                data-aos-offset='50' 
+                data-aos-easing='ease-out-sine'
+                data-aos-duration='400'
+                data-aos-delay='400'
+                data-aos-once={true}
+              >
                 <h4 className='heading'> SUMMARY </h4>
                 <h4> 
                   I designed a blogsite for Hon-Media that has features two different views, one for regular users, 
@@ -363,10 +425,7 @@ class Hon extends React.Component {
         </div>
       </div>
 
-
-      <button className='topButton' style={{backgroundColor: '#9F9FDF'}} onClick={this.goToTop}> 
-        <img src={img_arrow} alt='Back to top' />
-      </button>
+      <TopButton color={color} />
       <Footer screenWidth={this.props.screenWidth} />
       </>
     );

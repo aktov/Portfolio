@@ -32,7 +32,7 @@ const Button = (props) => {
       className='buttonNav outlineNone'
       onClick={handleClick}
       aria-label={`Go to ${props.text}`}>
-      {props.text}
+      {props.text.toUpperCase()}
     </button>
     </Link>
   );
