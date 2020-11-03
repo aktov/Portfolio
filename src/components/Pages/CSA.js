@@ -346,7 +346,7 @@ class CSA extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='users'/> 
+              <SectionTitle title='users & need finding'/> 
               <h4 className='heading'> USER INTERVIEWS </h4>
               <p>
                 Our best approach at finding users to interview was to message Janica and Keith and ask them about potential 

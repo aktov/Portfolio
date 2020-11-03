@@ -6,7 +6,8 @@ const Phrase = (props) => {
   return (
     <div className='phrase'>
       <img src={bullet} alt='bullet' />
-      <p> {props.text} </p>
+
+      {props.ital ? <p> <i> {props.text} </i> </p> : <p> {props.text} </p>}
     </div>
   );
 }
