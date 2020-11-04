@@ -32,6 +32,9 @@ import pic22 from '../../images/parking/22.png';
 import pic23 from '../../images/parking/23.png';
 import pic24 from '../../images/parking/24.png';
 import pic25 from '../../images/parking/25.png';
+import pic26 from '../../images/parking/26.png';
+import pic27 from '../../images/parking/27.png';
+import pic28 from '../../images/parking/28.png';
 
 const Bullets = (props) => {
   return (
@@ -396,9 +399,17 @@ class Parking extends React.Component {
               </p>
               <Bullets info={affin} ital />
               <br/>
+              <br/>
+              <br/>
 
               <h4 className='heading'> PERSONAS </h4>
-              <p> The home page starts off with a featured blogs section, with recent posts below. </p>
+              <p> 
+                Our user data showed three main groups of people, students, faculty/staff, and visitors. We
+                developed personas for those groups to try to understand their needs and situations better.
+              </p>
+              <Image src={pic26} style={imageMarginLessBottom}/>
+              <Image src={pic27} style={imageMarginLessBottom}/>
+              <Image src={pic28} style={imageMarginNoTop}/>
 
               <h4 className='heading'> IDENTITY MODEL </h4>
               <p> 
