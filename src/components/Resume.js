@@ -56,7 +56,7 @@ const Skills = (props) => {
 const skillsList = {
   'Languages': [
     'HTML/CSS',
-    'Javascript',
+    'JavaScript',
     'Lua'
   ],
   'Frameworks': [
