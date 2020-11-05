@@ -1,5 +1,5 @@
 ## Link
-[https://alextov.com]
+[Check out my portfolio here!](https://alextov.com)
 
 ## Final Thoughts
 It was frustrating at first learning it (all the compile errors), but after trial and error, and much help
