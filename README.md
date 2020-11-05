@@ -1,5 +1,5 @@
 ## Link
-[alextov.com]
+[https://alextov.com]
 
 ## Final Thoughts
 It was frustrating at first learning it (all the compile errors), but after trial and error, and much help
