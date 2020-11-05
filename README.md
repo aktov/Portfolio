@@ -1,5 +1,3 @@
-**Doubling as my portfolio, this project was my first on-hands experience with React.js!**
-
 ## Final Thoughts
 It was frustrating at first learning it (all the compile errors), but after trial and error, and much help
 from the react docs, I eventually got the hang of basic functions and structures. I can definitely say that
