@@ -5,7 +5,7 @@ import SectionTitle from './SectionTitle';
 import Resume from './Resume.js';
 import Projects from './Projects.js';
 
-import prof from '../images/profilePic.png';
+import prof from '../images/profilePic2.jpg';
 
 const About = (props) => {
   return (
