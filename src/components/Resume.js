@@ -17,10 +17,10 @@ const Education = (props) => {
       {/* <SectionTitle title='education'/> */}
       <h4> {'education'.toUpperCase()} </h4>
 
-      <h4> {'University of California, San Diego'} </h4>
-      <h5> {'B.S. Cognitive Science, Human Computer Interaction Specialization'} </h5>
+      <h4> {'B.S. Cognitive Science, Human Computer Interaction Specialization'} </h4>
+      <h5> {'University of California San Diego'} </h5>
       {/* <h5> {'Human Computer Interaction Specialization'} </h5> */}
-      <h5> {'March 2020'.toUpperCase()}  </h5> 
+      <h5> {'Mar. 2020'.toUpperCase()}  </h5> 
     </div>
   );
 }
@@ -54,14 +54,15 @@ const Skills = (props) => {
 
 
 const skillsList = {
-  'Languages': [
+  'Languages & Others': [
     'HTML/CSS',
     'JavaScript',
     'Lua'
   ],
   'Frameworks': [
-    'React',
-    'Sass'
+    'React.js',
+    'Tailwind CSS',
+    'Sass',
   ],
   'UI Methods': [
     'Wireframing',
@@ -69,15 +70,17 @@ const skillsList = {
     'Prototyping'
   ],
   'UX Methods': [
-    'User Personas',
+    'User Testing',
+    'Personas',
     'Storyboards',
     'Competitive Analyses',
-    'Affinity Diagrams'
+    'Affinity Diagrams',
+    'Mood Boards'
   ],
-  'Design Programs & Software': [
+  'Design Apps': [
     'Figma',
     'Google: Slides, Drawings',
-    'Adobe: Photoshop, Lightroom, Illustrator',
+    'Adobe: Photoshop, Lightroom',
     'AutoCAD',
     'Blender',
     'SketchUp'
