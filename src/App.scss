@@ -101,9 +101,9 @@ h2 {
 }
 
 h3 {
-    font-family: 'Zilla Slab', serif;
+    font-family: 'Poppins', serif;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: $size_h3; 
     line-height: normal;
 
@@ -197,12 +197,12 @@ header {
     align-items: center;
 
     overflow: hidden;
-    -webkit-filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
-    -moz-filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
-    -ms-filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
-    -o-filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
-    filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    -webkit-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.10));
+    -moz-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.10));
+    -ms-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.10));
+    -o-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.10));
+    filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.10));
+    box-shadow: 0px 1px 24px rgba(0, 0, 0, 0.10);
     background-color: #ffffff;
 
     img {
@@ -363,12 +363,12 @@ div.menu {
         align-items: center;
 
         overflow: hidden;
-        -webkit-filter: drop-shadow(-1px 1px 4px rgba(0, 0, 0, 0.25));
-        -moz-filter: drop-shadow(-1px 1px 4px rgba(0, 0, 0, 0.25));
-        -ms-filter: drop-shadow(-1px 1px 4px rgba(0, 0, 0, 0.25));
-        -o-filter: drop-shadow(-1px 1px 4px rgba(0, 0, 0, 0.25));
-        filter: drop-shadow(-1px 1px 4px rgba(0, 0, 0, 0.25));
-        box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.25);
+        -webkit-filter: drop-shadow(-1px 1px 24px rgba(0, 0, 0, 0.10));
+        -moz-filter: drop-shadow(-1px 1px 24px rgba(0, 0, 0, 0.10));
+        -ms-filter: drop-shadow(-1px 1px 24px rgba(0, 0, 0, 0.10));
+        -o-filter: drop-shadow(-1px 1px 24px rgba(0, 0, 0, 0.10));
+        filter: drop-shadow(-1px 1px 24px rgba(0, 0, 0, 0.10));
+        box-shadow: -1px 1px 24px rgba(0, 0, 0, 0.10);
         background-color: #ffffff;
 
         div.buttonClose {
@@ -915,16 +915,29 @@ div.content {
                 div.listing {
                     width: 100%;
                     margin: auto;
-                    margin-bottom: toRem(30);
+                    margin-bottom: toRem(24);
 
                     display: flex;
                     flex-flow: column;
+                    
+                    padding: toRem(24) toRem(24);
+
+                    border-radius: toRem(10);
+                    border: none;
+                    background-color: #ffffff;
+                    -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
+                    -moz-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
+                    -ms-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
+                    -o-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
+                    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10);
+
 
                     h4 {
                         margin-bottom: toRem(5);
                         font-family: 'Poppins', sans-serif;
                         font-style: normal;
-                        font-weight: 500;
+                        font-weight: 600;
                         font-size: toRem(20);
                     }
 
@@ -1113,15 +1126,15 @@ div.content {
             align-self: flex-start;
             overflow: hidden;
     
-            border-radius: toRem(5);
+            border-radius: toRem(10);
             border: none;
             background-color: #ffffff;
-            -webkit-filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
-            -moz-filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
-            -ms-filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
-            -o-filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
-            filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
-            box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
+            -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
+            -moz-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
+            -ms-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
+            -o-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
+            filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
 
             transition: all ease-in-out $transitionTimingCard;
     
@@ -1177,12 +1190,12 @@ div.content {
 
                 background-color: #ffffff;
 
-                -webkit-filter: drop-shadow(0px -1px 4px rgba(0, 0, 0, 0.25));
-                -moz-filter: drop-shadow(0px -1px 4px rgba(0, 0, 0, 0.25));
-                -ms-filter: drop-shadow(0px -1px 4px rgba(0, 0, 0, 0.25));
-                -o-filter: drop-shadow(0px -1px 4px rgba(0, 0, 0, 0.25));
-                filter: drop-shadow(0px -1px 4px rgba(0, 0, 0, 0.25));
-                box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25);
+                -webkit-filter: drop-shadow(0px -1px 14px rgba(0, 0, 0, 0.10));
+                -moz-filter: drop-shadow(0px -1px 14px rgba(0, 0, 0, 0.10));
+                -ms-filter: drop-shadow(0px -1px 14px rgba(0, 0, 0, 0.10));
+                -o-filter: drop-shadow(0px -1px 14px rgba(0, 0, 0, 0.10));
+                filter: drop-shadow(0px -1px 14px rgba(0, 0, 0, 0.10));
+                box-shadow: 0px -1px 14px rgba(0, 0, 0, 0.10);
 
                 -webkit-transition: all .2s ease-out;
                 -moz-transition: all .2s ease-out;

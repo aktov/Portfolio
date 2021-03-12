@@ -19,8 +19,7 @@ const Intro = (props) => {
     <div className='intro'> 
       <div className='text' style={props.screenWidth <= 768 ? {width: '75%'} : null}>
         <h1 style={{ fontSize: props.screenWidth < 480 ? '2.5rem' : '3.125rem' }}> I'm Alex, an interaction & product designer </h1>
-        <h5> As a recent graduate, I'm currently looking for internship or full-time opportunities to bring what I do best onto the team to create designs that your users will love! </h5>
-        {/* <h5> If you're interested with what I have to offer, feel free to send me a message! </h5> */}
+        <h5> I'm currently looking for internship or full-time opportunities to bring what I do best onto the team to create designs that your users will love! </h5>
         {props.screenWidth <= 768 && 
 
         <button onClick={handleClick}> 

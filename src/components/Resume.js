@@ -20,7 +20,7 @@ const Education = (props) => {
       <h4> {'B.S. Cognitive Science, Human Computer Interaction Specialization'} </h4>
       <h5> {'University of California San Diego'} </h5>
       {/* <h5> {'Human Computer Interaction Specialization'} </h5> */}
-      <h5> {'Mar. 2020'.toUpperCase()}  </h5> 
+      <h5> {'March 2020'}  </h5> 
     </div>
   );
 }
@@ -54,7 +54,7 @@ const Skills = (props) => {
 
 
 const skillsList = {
-  'Languages & Others': [
+  'Languages & Info': [
     'HTML/CSS',
     'JavaScript',
     'Lua'
