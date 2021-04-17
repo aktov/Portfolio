@@ -8,8 +8,10 @@ import SectionTitle from './SectionTitle';
 // import imgM_prepd from '../images/cardImageM_prepd.png';
 // Mobile images
 // import imgM_portfolio from '../images/cardImageM_portfolio.png';
+import imgM_okizeme from '../images/cardImageM_okizeme.png';
 import imgM_memo from '../images/cardImageM_memo.png';
 import imgM_chrispy from '../images/cardImageM_chrispy.png';
+import imgM_alike from '../images/cardImageM_alike.png';
 import imgM_boba from '../images/cardImageM_boba.png';
 import imgM_signup from '../images/cardImageM_signup.png';
 import imgM_hon from '../images/cardImageM_hon.png';
@@ -18,8 +20,10 @@ import imgM_yahoo from '../images/cardImageM_yahoo.png';
 import imgM_parking from '../images/cardImageM_parking.png';
 // Desktop images
 // import img_portfolio from '../images/cardImage_portfolio.png';
+import img_okizeme from '../images/cardImage_okizeme.png';
 import img_memo from '../images/cardImage_memo.png';
 import img_chrispy from '../images/cardImage_chrispy.png';
+import img_alike from '../images/cardImage_alike.png';
 import img_boba from '../images/cardImage_boba.png';
 import img_signup from '../images/cardImage_signup.png';
 import img_hon from '../images/cardImage_hon.png';
@@ -28,6 +32,17 @@ import img_yahoo from '../images/cardImage_yahoo.png';
 import img_parking from '../images/cardImage_parking.png';
 
 const projects_figma = [
+  {
+    title: 'okizeme',
+    descr: 'A modern redesign for my client\'s website. Click on this card to check out their site, or tap the icons to view the prototypes!',
+    image: img_okizeme,
+    imageM: imgM_okizeme,
+    tags: ['prototyping'],
+    color: '#F5C0B9',
+    figmaM: 'https://www.figma.com/proto/MgWQKucfltlZVzvE0cxUhQ/Okizeme-Design?page-id=106%3A81&node-id=106%3A82&viewport=366%2C-150%2C0.25410154461860657&scaling=scale-down',
+    figmaD: 'https://www.figma.com/proto/MgWQKucfltlZVzvE0cxUhQ/Okizeme-Design?page-id=0%3A1&node-id=1%3A2&viewport=411%2C660%2C0.10949171334505081&scaling=scale-down-width',
+    default: 'https://okizeme.com/'
+  },
   {
     title: 'memos',
     descr: 'A partial prototype of a quick and simple to-do list app to keep track of your personal tasks',
@@ -62,6 +77,15 @@ const projects_figma = [
   // },
 ];
 const projects_design = [
+  {
+    title: 'alike (coming soon)',
+    descr: 'A showcase of the work I\'ve done for my current internship at Alike!',
+    image: img_alike,
+    imageM: imgM_alike,
+    tags: ['wireframing', 'prototyping', 'user testing'],
+    color: '#688CD0',
+    default: 'https://www.alike.dating/'
+  },
   {
     title: 'boba tracker (coming soon)',
     descr: 'An app design for boba tea enthusiasts to record and track their purchases and spending!',
@@ -209,9 +233,9 @@ class Projects extends React.Component {
         <div id='anchor_projects' className='anchor'></div>
         <SectionTitle title='projects'/> 
 
-        <h4 style={{marginBottom: '.625rem'}}> {'user-centered design processes'.toUpperCase()} </h4>
+        <h4 style={{marginBottom: '.625rem'}}> {'UI/UX design processes'.toUpperCase()} </h4>
         <Others projects={projects_design} screenWidth={this.props.screenWidth} />
-        <h4 style={{ marginBottom: '.625rem' }}> {'mockups & prototypes'.toUpperCase()} </h4>
+        <h4 style={{ marginBottom: '.625rem' }}> {'UI mockup & prototype designs'.toUpperCase()} </h4>
         <Others projects={projects_figma} screenWidth={this.props.screenWidth} />
         {/* <h4 style={{marginBottom: '.625rem'}}> WEB DEVELOPMENT </h4>
         <Others projects={projects_web} screenWidth={this.props.screenWidth} /> */}

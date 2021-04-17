@@ -43,6 +43,15 @@ class Experience extends React.Component {
 
           <JobListing 
             title='UI/UX Designer'
+            location='Alike, Remote'
+            period='Mar. 2021 - Current'
+            info={[
+              'Designed prototypes of app screens on Figma for the software dev team to mimic and push onto the real thing',
+              'More to come!'
+            ]}
+          />
+          <JobListing 
+            title='UI/UX Designer'
             location='Hon-Media, Remote'
             period='Sept. 2020 - Current'
             info={[
