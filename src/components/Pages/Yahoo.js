@@ -27,7 +27,7 @@ import pic12 from '../../images/yahoo/12.png';
 import pic13 from '../../images/yahoo/13.png';
 import pic14 from '../../images/yahoo/14.png';
 import pic15 from '../../images/yahoo/15.png';
-import pic16 from '../../images/yahoo/16.png';
+// import pic16 from '../../images/yahoo/16.png';
 
 const Bullets = (props) => {
   return (
@@ -71,7 +71,7 @@ const Tags = (props) => {
   );
 }
 
-const tags = ['Figma', 'user testing', 'wireframing', 'prototyping']
+const tags = ['user testing', 'wireframing', 'prototyping']
 
 const goals = [
   'Learn how to conduct user research and analysis',
@@ -84,6 +84,8 @@ const issues = [
   'The site lacked a standard menu navigation that was clear and intuitive to process',
   'The site had inconsistent headers that varied through different pages of the site, which increased the time it took for users to navigate'
 ];
+
+const smallerImage = {marginTop: '0rem', width: '70%'}
 
 const color = '#C19FF7';
 
@@ -160,7 +162,7 @@ class Yahoo extends React.Component {
                     rel='noopener noreferrer'
                   >
                     <img src={figma1} alt='figma1' draggable='false' /> 
-                    <span className='toolTip'> figma redesign 1 </span> 
+                    <span className='toolTip'> Redesign 1 proto </span> 
                   </a> 
                   <a 
                     href='https://www.figma.com/proto/pUOIhb7GiEGQeFotepQkQY/Yahoo-Mobile-Redesign?node-id=21%3A175&viewport=368%2C198%2C0.09464660286903381&scaling=scale-down'  
@@ -168,7 +170,7 @@ class Yahoo extends React.Component {
                     rel='noopener noreferrer'
                   >
                     <img src={figma2} alt='figma1' draggable='false' /> 
-                    <span className='toolTip'> figma redesign 2 </span> 
+                    <span className='toolTip'> Redesign 2 proto </span> 
                   </a> 
                 </div>
                 <br/>
@@ -223,9 +225,9 @@ class Yahoo extends React.Component {
                 in an unexpected location. Additionally, once on those pages, the navigation and menu layout are all different 
                 from each other as well as the home page’s, which only creates more issues.
               </p>
-              <Image src={pic1} />
-              <Image src={pic2} />
-              <Image src={pic3} />
+              <Image src={pic1} style={this.props.screenWidth > 640 ? smallerImage : null}/>
+              <Image src={pic2} style={this.props.screenWidth > 640 ? smallerImage : null}/>
+              <Image src={pic3} style={this.props.screenWidth > 640 ? smallerImage : null}/>
               <h4 className='heading'> COMPETITIVE ANALYSIS </h4>
               <p>
                 To help with our redesign, we analyzed the mobile layouts of three other frequently-visited sites, MSN, 
@@ -236,15 +238,15 @@ class Yahoo extends React.Component {
                 Pages within the websites had consistent headers and recognizable icons. All three sites also had better 
                 information architecture that was easy to follow.
               </p>
-              <Image src={pic4} />
-              <Image src={pic5} />
-              <Image src={pic6} />
+              <Image src={pic4} style={this.props.screenWidth > 640 ? smallerImage : null}/>
+              <Image src={pic5} style={this.props.screenWidth > 640 ? smallerImage : null}/>
+              <Image src={pic6} style={this.props.screenWidth > 640 ? smallerImage : null}/>
             </div>      
 
             <div className='section'>
               <SectionTitle title='redesign'/> 
               <h4 className='heading'> SKETCHES & WIREFRAMES </h4>
-              <Image src={pic7} />
+              <Image src={pic7} style={this.props.screenWidth > 640 ? smallerImage : null}/>
               <h4 className='heading'> PROTOTYPES </h4>
               <p> 
                 After sketching, we chose the two sketches (the checked-marked ones above) that were the most
@@ -255,26 +257,26 @@ class Yahoo extends React.Component {
               <p> 
                 This redesign focuses on the ease of accessibility straight from the landing page of the website.
               </p>
-              <Image src={pic8} />
+              <Image src={pic8} style={this.props.screenWidth > 640 ? smallerImage : null}/>
               <p>
                 Side menus for primary site navigation and for user profile features can be accessed consistently 
                 throughout the site.
               </p>
-              <Image src={pic9} />
-              <Image src={pic10} />
-              <Image src={pic11} />
+              <Image src={pic9} style={this.props.screenWidth > 640 ? smallerImage : null}/>
+              <Image src={pic10} style={this.props.screenWidth > 640 ? smallerImage : null}/>
+              <Image src={pic11} style={this.props.screenWidth > 640 ? smallerImage : null}/>
               <h4 className='subheading'> REDESIGN 2 </h4>
               <p> 
                 This redesign focuses on better navigation transparency and improving the search bar.
               </p>
-              <Image src={pic12} />
+              <Image src={pic12} style={this.props.screenWidth > 640 ? smallerImage : null}/>
               <p>
                 A fixed menu icon on all pages allows the user to easily navigate throughout the site, while a fixed profile
                 icon allows easy access to email and notifications.
               </p>
-              <Image src={pic13} />
-              <Image src={pic14} />
-              <Image src={pic15} />
+              <Image src={pic13} style={this.props.screenWidth > 640 ? smallerImage : null}/>
+              <Image src={pic14} style={this.props.screenWidth > 640 ? smallerImage : null}/>
+              <Image src={pic15} style={this.props.screenWidth > 640 ? smallerImage : null}/>
             </div>     
 
             <div className='section'>
@@ -293,8 +295,8 @@ class Yahoo extends React.Component {
                 testing, we showed them the original site and asked for their honest opinion on which they liked better, the 
                 redesigns or the original.
               </p>
-              <Image src={pic16} />
-
+              {/* <Image src={pic16} /> */}
+              <br/>
               <h4 className='heading'> RESULTS </h4>
               <p>
                 Tallying up the points from the five questions for all four users, both designs actually had the same 

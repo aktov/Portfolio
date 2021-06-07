@@ -7,7 +7,7 @@ smoothscroll.polyfill();
 //   'projects', 'experience', 'about', 'resume'
 // ]
 const headerCategories = [
-  'about', 'resume', 'projects'
+  'projects', 'about', 'resume'
 ]
 
 // Button component
@@ -16,7 +16,7 @@ const Button = (props) => {
   function handleClick(e) {
     let anchor = document.getElementById('anchor_' + props.text);
     if (anchor) {
-      anchor.scrollIntoView({behavior: 'smooth', block: 'start'});
+      setTimeout(() => {anchor.scrollIntoView({behavior: 'smooth', block: 'start'})}, 2000);
     }
 
     // Closes the menu after a 500 ms delay
@@ -26,7 +26,7 @@ const Button = (props) => {
   }
 
   return (
-    <Link to='/'> 
+    <Link to={props.text === 'projects' ? '/' : '/'+ props.text}> 
     <button  
       id={props.text} 
       className='buttonNav outlineNone'

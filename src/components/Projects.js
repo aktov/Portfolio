@@ -10,28 +10,38 @@ import SectionTitle from './SectionTitle';
 // import imgM_portfolio from '../images/cardImageM_portfolio.png';
 import imgM_okizeme from '../images/cardImageM_okizeme.png';
 import imgM_memo from '../images/cardImageM_memo.png';
-import imgM_chrispy from '../images/cardImageM_chrispy.png';
+// import imgM_chrispy from '../images/cardImageM_chrispy.png';
 import imgM_alike from '../images/cardImageM_alike.png';
 import imgM_boba from '../images/cardImageM_boba.png';
 import imgM_signup from '../images/cardImageM_signup.png';
 import imgM_hon from '../images/cardImageM_hon.png';
 import imgM_csa from '../images/cardImageM_csa.png';
 import imgM_yahoo from '../images/cardImageM_yahoo.png';
-import imgM_parking from '../images/cardImageM_parking.png';
+// import imgM_parking from '../images/cardImageM_parking.png';
 // Desktop images
 // import img_portfolio from '../images/cardImage_portfolio.png';
 import img_okizeme from '../images/cardImage_okizeme.png';
 import img_memo from '../images/cardImage_memo.png';
-import img_chrispy from '../images/cardImage_chrispy.png';
+// import img_chrispy from '../images/cardImage_chrispy.png';
 import img_alike from '../images/cardImage_alike.png';
 import img_boba from '../images/cardImage_boba.png';
 import img_signup from '../images/cardImage_signup.png';
 import img_hon from '../images/cardImage_hon.png';
 import img_csa from '../images/cardImage_csa.png';
 import img_yahoo from '../images/cardImage_yahoo.png';
-import img_parking from '../images/cardImage_parking.png';
+// import img_parking from '../images/cardImage_parking.png';
 
 const projects_figma = [
+  {
+    title: 'edushare',
+    descr: 'A sign up flow for an app where teachers can socialize and share ideas in one community!',
+    image: img_signup,
+    imageM: imgM_signup,
+    tags: ['wireframing', 'mockups', 'prototyping'],
+    color: '#BBE2F2',
+    figma: 'https://www.figma.com/proto/zMITtMqtG9hcvJLDGtUC8G/Edushare?node-id=10%3A84&viewport=-523%2C272%2C0.2671932876110077&scaling=scale-down',
+    link: '/edushare'
+  },
   {
     title: 'okizeme',
     descr: 'A modern redesign for my client\'s website. Click on this card to check out their site, or tap the icons to view the prototypes!',
@@ -49,21 +59,21 @@ const projects_figma = [
     image: img_memo,
     imageM: imgM_memo,
     tags: ['prototyping'],
-    color: '#ABD7BD',
+    color: '#BFDFCC',
     figma: 'https://www.figma.com/proto/pYpfd7iu01oqtaIC9lmUkQ/Memo-App?node-id=3%3A545&viewport=553%2C217%2C0.19214384257793427&scaling=scale-down',
     default: 'https://www.figma.com/proto/pYpfd7iu01oqtaIC9lmUkQ/Memo-App?node-id=3%3A545&viewport=553%2C217%2C0.19214384257793427&scaling=scale-down'
   },
-  {
-    title: 'chrispyroll',
-    descr: 'A mockup mimicry of the desktop version of twist.moe, with two different versions A & B',
-    image: img_chrispy,
-    imageM: imgM_chrispy,
-    tags: ['mockup'],
-    color: '#E1B4D5',
-    figmaA: 'https://www.figma.com/proto/KMOZJky4Yot11PJTmKXvOH/chrispyroll?node-id=3%3A0&viewport=157%2C214%2C0.18325643241405487&scaling=scale-down-width&hide-ui=1',
-    figmaB: 'https://www.figma.com/proto/KMOZJky4Yot11PJTmKXvOH/chrispyroll?node-id=3%3A1135&viewport=293%2C331%2C0.18345798552036285&scaling=scale-down-width&hide-ui=1',
-    default: 'https://www.figma.com/proto/KMOZJky4Yot11PJTmKXvOH/chrispyroll?node-id=3%3A0&viewport=157%2C214%2C0.18325643241405487&scaling=scale-down-width&hide-ui=1',
-  },
+  // {
+  //   title: 'chrispyroll',
+  //   descr: 'A mockup mimicry of the desktop version of twist.moe, with two different versions A & B',
+  //   image: img_chrispy,
+  //   imageM: imgM_chrispy,
+  //   tags: ['mockup'],
+  //   color: '#E1B4D5',
+  //   figmaA: 'https://www.figma.com/proto/KMOZJky4Yot11PJTmKXvOH/chrispyroll?node-id=3%3A0&viewport=157%2C214%2C0.18325643241405487&scaling=scale-down-width&hide-ui=1',
+  //   figmaB: 'https://www.figma.com/proto/KMOZJky4Yot11PJTmKXvOH/chrispyroll?node-id=3%3A1135&viewport=293%2C331%2C0.18345798552036285&scaling=scale-down-width&hide-ui=1',
+  //   default: 'https://www.figma.com/proto/KMOZJky4Yot11PJTmKXvOH/chrispyroll?node-id=3%3A0&viewport=157%2C214%2C0.18325643241405487&scaling=scale-down-width&hide-ui=1',
+  // },
   // {
   //   title: 'portfolio prototype',
   //   descr: 'Check out the mobile & desktop prototypes of the first iteration of this current portfolio',
@@ -78,40 +88,32 @@ const projects_figma = [
 ];
 const projects_design = [
   {
-    title: 'alike (coming soon)',
+    title: 'alike',
     descr: 'A showcase of the work I\'ve done for my current internship at Alike!',
     image: img_alike,
     imageM: imgM_alike,
     tags: ['wireframing', 'prototyping', 'user testing'],
     color: '#688CD0',
-    default: 'https://www.alike.dating/'
+    // default: 'https://www.alike.dating/',
+    link: '/alike'
   },
   {
-    title: 'boba tracker (coming soon)',
+    title: 'boba tracker',
     descr: 'An app design for boba tea enthusiasts to record and track their purchases and spending!',
     image: img_boba,
     imageM: imgM_boba,
-    tags: ['user testing', 'prototyping'],
+    tags: ['wireframing', 'mockups', 'user testing'],
     color: '#E0F1F3',
     figma: 'https://www.figma.com/proto/A4YCf5Qx8THEGF7iDGfwJa/Boba-Buddy?node-id=6%3A755&viewport=589%2C191%2C0.09667579084634781&scaling=scale-down',
-    default: 'https://www.figma.com/proto/A4YCf5Qx8THEGF7iDGfwJa/Boba-Buddy?node-id=6%3A755&viewport=589%2C191%2C0.09667579084634781&scaling=scale-down'
-  },
-  {
-    title: 'edushare (coming soon)',
-    descr: 'A sign up flow for an app where teachers can socialize and share ideas in one community!',
-    image: img_signup,
-    imageM: imgM_signup,
-    tags: ['wireframing', 'mockups'],
-    color: '#BBE2F2',
-    figma: 'https://www.figma.com/proto/zMITtMqtG9hcvJLDGtUC8G/Edushare?node-id=10%3A84&viewport=-523%2C272%2C0.2671932876110077&scaling=scale-down',
-    default: 'https://www.figma.com/proto/zMITtMqtG9hcvJLDGtUC8G/Edushare?node-id=10%3A84&viewport=-523%2C272%2C0.2671932876110077&scaling=scale-down'
+    // default: 'https://www.figma.com/proto/A4YCf5Qx8THEGF7iDGfwJa/Boba-Buddy?node-id=6%3A755&viewport=589%2C191%2C0.09667579084634781&scaling=scale-down'
+    link: '/boba'
   },
   {
     title: 'hon-media blogsite design',
     descr: 'A desktop design for Hon-Media\'s upcoming blog website.',
     image: img_hon,
     imageM: imgM_hon,
-    tags: ['prototyping'],
+    tags: ['mockups', 'prototyping'],
     color: '#9F9FDF',
     figma: 'https://www.figma.com/proto/4IWvFVdQfykksXa7kEZE95/blog.hon-media?node-id=266%3A5650&viewport=8238%2C659%2C0.7337678074836731&scaling=scale-down-width',
     link: '/hon'
@@ -138,16 +140,16 @@ const projects_design = [
     figma2:'https://www.figma.com/proto/pUOIhb7GiEGQeFotepQkQY/Yahoo-Mobile-Redesign?node-id=21%3A175&viewport=368%2C198%2C0.09464660286903381&scaling=scale-down',
     link: '/yahoo'
   },
-  {
-    title: 'parking fine',
-    descr: 'A potential remedy to the parking frustrations of various users on UCSD\'s campus.',
-    image: img_parking,
-    imageM: imgM_parking,
-    tags: ['storyboarding', 'diagramming', 'wireframing', 'prototyping', 'user testing'],
-    color: '#536D90',
-    figma: 'https://www.figma.com/proto/FJIhLsq3WEDOox5VfArU3fuF/Parking-Fine-Kiosk?node-id=5%3A2&scaling=contain',
-    link: '/parking'
-  },
+  // {
+  //   title: 'parking fine',
+  //   descr: 'A potential remedy to the parking frustrations of various users on UCSD\'s campus.',
+  //   image: img_parking,
+  //   imageM: imgM_parking,
+  //   tags: ['storyboarding', 'diagramming', 'wireframing', 'prototyping', 'user testing'],
+  //   color: '#536D90',
+  //   figma: 'https://www.figma.com/proto/FJIhLsq3WEDOox5VfArU3fuF/Parking-Fine-Kiosk?node-id=5%3A2&scaling=contain',
+  //   link: '/parking'
+  // },
 ];
 // const projects_web = [
 //   {
@@ -186,9 +188,9 @@ const Others = (props) => {
     <div className={props.screenWidth > 768 ? 'cardsDesktop' : 'cardsMobile'}>
       {props.projects.map((card) => 
         <LazyLoad 
-          height={200} 
-          offset={100} 
-          overflow={true}
+          height={100} 
+          offset={50} 
+          overflow={false}
           key={card.title.toString()}
         >
           <Card

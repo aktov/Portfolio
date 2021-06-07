@@ -21,7 +21,7 @@ class TopButton extends React.Component {
   }
 
   handleScroll() {
-    this.setState({visible: window.pageYOffset > window.innerHeight/2 ? true : false});
+    this.setState({visible: window.pageYOffset > window.innerHeight/1 ? true : false});
   }
 
   componentDidMount() {

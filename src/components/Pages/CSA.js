@@ -18,30 +18,30 @@ import pic3 from '../../images/csa/3.png';
 import pic4 from '../../images/csa/4.png';
 import pic5 from '../../images/csa/5.png';
 import pic6 from '../../images/csa/6.png';
-import pic7 from '../../images/csa/7.png';
+// import pic7 from '../../images/csa/7.png';
 import pic8 from '../../images/csa/8.png';
 import pic9 from '../../images/csa/9.png';
-import pic10 from '../../images/csa/10.png';
-import pic11 from '../../images/csa/11.png';
-import pic12 from '../../images/csa/12.png';
-import pic13 from '../../images/csa/13.png';
-import pic14 from '../../images/csa/14.png';
-import pic15 from '../../images/csa/15.png';
+// import pic10 from '../../images/csa/10.png';
+// import pic11 from '../../images/csa/11.png';
+// import pic12 from '../../images/csa/12.png';
+// import pic13 from '../../images/csa/13.png';
+// import pic14 from '../../images/csa/14.png';
+// import pic15 from '../../images/csa/15.png';
 import pic16 from '../../images/csa/16.png';
 import pic17 from '../../images/csa/17.png';
 import pic18 from '../../images/csa/18.png';
 import pic19 from '../../images/csa/19.png';
 import pic20 from '../../images/csa/20.png';
-import pic21 from '../../images/csa/21.png';
-import pic22 from '../../images/csa/22.png';
-import pic23 from '../../images/csa/23.png';
-import pic24 from '../../images/csa/24.png';
-import pic25 from '../../images/csa/25.png';
-import pic26 from '../../images/csa/26.png';
-import pic27 from '../../images/csa/27.png';
-import pic28 from '../../images/csa/28.png';
-import pic29 from '../../images/csa/29.png';
-import pic30 from '../../images/csa/30.png';
+// import pic21 from '../../images/csa/21.png';
+// import pic22 from '../../images/csa/22.png';
+// import pic23 from '../../images/csa/23.png';
+// import pic24 from '../../images/csa/24.png';
+// import pic25 from '../../images/csa/25.png';
+// import pic26 from '../../images/csa/26.png';
+// import pic27 from '../../images/csa/27.png';
+// import pic28 from '../../images/csa/28.png';
+// import pic29 from '../../images/csa/29.png';
+// import pic30 from '../../images/csa/30.png';
 import pic31 from '../../images/csa/31.png';
 import pic32 from '../../images/csa/32.png';
 import pic33 from '../../images/csa/33.png';
@@ -53,20 +53,22 @@ import pic38 from '../../images/csa/38.png';
 import pic39 from '../../images/csa/39.png';
 import pic40 from '../../images/csa/40.png';
 import pic41 from '../../images/csa/41.png';
-import pic42 from '../../images/csa/42.png';
-import pic43 from '../../images/csa/43.png';
+// import pic42 from '../../images/csa/42.png';
+// import pic43 from '../../images/csa/43.png';
 import pic44 from '../../images/csa/44.png';
 import pic45 from '../../images/csa/45.png';
 import pic46 from '../../images/csa/46.png';
 import pic47 from '../../images/csa/47.png';
-import pic48 from '../../images/csa/48.png';
-import pic49 from '../../images/csa/49.png';
-import pic50 from '../../images/csa/50.png';
-import pic51 from '../../images/csa/51.png';
-import pic52 from '../../images/csa/52.png';
-import pic53 from '../../images/csa/53.png';
-import pic54 from '../../images/csa/54.png';
-import pic55 from '../../images/csa/55.png';
+// import pic48 from '../../images/csa/48.png';
+// import pic49 from '../../images/csa/49.png';
+// import pic50 from '../../images/csa/50.png';
+// import pic51 from '../../images/csa/51.png';
+// import pic52 from '../../images/csa/52.png';
+// import pic53 from '../../images/csa/53.png';
+// import pic54 from '../../images/csa/54.png';
+// import pic55 from '../../images/csa/55.png';
+import pic56 from '../../images/csa/56.png';
+import pic57 from '../../images/csa/57.png';
 
 const Bullets = (props) => {
   return (
@@ -110,7 +112,7 @@ const Tags = (props) => {
   );
 }
 
-const tags = ['Figma', 'wireframing', 'prototyping', 'user testing'];
+const tags = ['wireframing', 'prototyping', 'user testing'];
 
 const goals = [
   'Learn how to build a strong, communicative relationship with our client, as well as how to be flexible during times where they are unresponsive',
@@ -120,13 +122,13 @@ const goals = [
   'Learn and attempt best practices for the info architecture and navigation of a website'
 ];
 
-const categories = [
-  'History & Background',
-  'Users',
-  'Content',
-  'Aesthetics',
-  'Competition'
-];
+// const categories = [
+//   'History & Background',
+//   'Users',
+//   'Content',
+//   'Aesthetics',
+//   'Competition'
+// ];
 
 const priorities = [
   'Professional and visually pleasing website',
@@ -165,6 +167,8 @@ const pages = [
 
 const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
+const smallerImage = {marginTop: '0rem', width: '70%'}
+const smallerImageLess = {marginTop: '0rem', marginBottom: '2rem', width: '70%'}
 const color = '#DA8484';
 
 class CSA extends React.Component {
@@ -235,7 +239,7 @@ class CSA extends React.Component {
                     rel='noopener noreferrer'
                   >
                     <img src={figmaD} alt='figmaD' draggable='false' /> 
-                    <span className='toolTip'> figma desktop </span> 
+                    <span className='toolTip'> Desktop prototype </span> 
                   </a> 
                   <a 
                     href='https://www.figma.com/proto/HK3nRrbz73hPQqSlTNTDmu/CSA-Website-Design?node-id=241%3A0&viewport=176%2C217%2C0.07083262503147125&scaling=scale-down'
@@ -243,7 +247,7 @@ class CSA extends React.Component {
                     rel='noopener noreferrer'
                   >
                     <img src={figmaM} alt='figmaM' draggable='false' /> 
-                    <span className='toolTip'> figma mobile </span> 
+                    <span className='toolTip'> Mobile prototype </span> 
                   </a> 
                 </div>
                 <br/>
@@ -261,14 +265,11 @@ class CSA extends React.Component {
               <SectionTitle title='intro'/> 
               <h4 className='heading'> MOTIVATION </h4>
               <p> 
-                Our task this quarter was to go out into the real world and find ourselves a client who wants a new website.
-                The mission was to work alongside them throughout the quarter and to make sure that their needs are met.
-                We needed to make sure that the website wasn't designed the way we wanted it, but rather designed the way 
-                the client's users would like it. This was going to be our first real-life experience with user-centered design.
+                Our task was to find ourselves a client in need of a new website and design them a functional website prototype
+                based on their users' needs and goals.
               </p>
               <br/>
               <h4 className='heading'> GOALS </h4>
-              <p> These were the goals we had in mind while undergoing this project: </p>
               <Bullets info={goals}/>  
             </div>          
                       
@@ -276,18 +277,15 @@ class CSA extends React.Component {
               <SectionTitle title='client interviews'/> 
               <h4 className='heading'> GETTING TO KNOW OUR CLIENT </h4>
               <p> 
-                After reaching out to several organizations and businesses, we decided to take Cambodian Student Association 
-                (CSA) of UCSD as our client. At the time, the organization said they only had a Facebook page, and while 
-                that sufficed, they stated it would be nice to have a website. 
+                Cambodian Student Association (CSA) was our client. 
               </p>
               <p>
-                We met with Janica and Keith, two representatives of the org, in order to get a better idea of 
-                what CSA is and what their needs are. Prior to our first meeting with them, we thought of five categories
-                that we focused our questions toward:
+                We met with Janica and Keith, two representatives of CSA, in order to get a better idea of 
+                what the org is, who their users are, and what goals they wanted the site to meet.
               </p>
-              <Bullets info={categories}/>  
+              {/* <Bullets info={categories}/>   */}
               <br/>
-              <h4 className='subheading'> HISTORY & BACKGROUND </h4>
+              {/* <h4 className='subheading'> HISTORY & BACKGROUND </h4>
               <p>
                 Our client is a non-profit organization started in 2004 to provide a community for UCSD Cambodian students, 
                 to build connections, and to educate others on Cambodia. Throughout the years, the Cambodian Student 
@@ -336,7 +334,7 @@ class CSA extends React.Component {
                 in the States, which can be simply observed when food is brought into the picture. “When was the last time 
                 you saw a Cambodian restaurant?” is what Janica asked us. 
               </p>
-              <br/>
+              <br/> */}
               <h4 className='heading'> PRIORITY LIST </h4>
               <p> 
                 After breaking down the information Janica and Keith provided, we created a prioritized list of goals 
@@ -357,46 +355,48 @@ class CSA extends React.Component {
               <br/>
 
               <h4 className='heading'> PERSONAS </h4>
-              <p>
+              {/* <p>
                 We were able to conduct and record data for at least nine interviews, which were a mix of students, alumnis 
                 of the org, and faculty advisors for the org. From talking and interviewing them, we were able to gain a 
                 sense of the different tasks and demands that each user wanted/performed. Conveniently, out of all the 
                 interviews, we were able to extrapolate three main groups of users: students, university affiliates, and 
                 alumni; these would become our personas.
-              </p>
-              <Image src={pic1} style={imageMarginLessBottom} />
-              <Image src={pic2} style={imageMarginLessBottom} />
-              <Image src={pic3} style={imageMarginNoTop} />
+              </p> */}
+              <Image src={pic1} style={this.props.screenWidth > 640 ? smallerImage : imageMarginLessBottom}/>
+              <Image src={pic2} style={this.props.screenWidth > 640 ? smallerImage : imageMarginLessBottom}/>
+              <Image src={pic3} style={this.props.screenWidth > 640 ? smallerImage : imageMarginNoTop}/>
 
               <h4 className='heading'> USE CASES </h4>
-              <p>
+              {/* <p>
                 For each of the personas, we created a couple user scenarios for each, and various use cases for each of 
                 those scenarios. We tried to cover as many possible user cases that came to mind. We asked ourselves, 
                 “What would be my goal for coming onto this website?”. The scenarios and respective user cases that we 
                 created are charted below.
-              </p>
-              <Image src={pic4} style={imageMarginLessBottom} />
-              <Image src={pic5} style={imageMarginLessBottom} />
-              <Image src={pic6} style={imageMarginNoTop} />
+              </p> */}
+              <Image src={pic4} style={this.props.screenWidth > 640 ? smallerImageLess : imageMarginLessBottom}/>
+              <Image src={pic5} style={this.props.screenWidth > 640 ? smallerImageLess : imageMarginLessBottom}/>
+              <Image src={pic6} style={this.props.screenWidth > 640 ? smallerImage : imageMarginNoTop}/>
 
-              <h4 className='subheading'> USE CASES SUMMARY TABLE </h4>
+              {/* <h4 className='subheading'> USE CASES SUMMARY TABLE </h4>
               <p>
                 To make things even easier, we took all the use cases across all scenarios and personas and then 
                 placed them in a chart. This helped us better visualize the variety of needs that users want. It 
                 was this chart that we constantly came back to, over and over, throughout the project, to make sure 
                 that we were hitting all the needs - it definitely helped us stay on the right track.
               </p>
-              <Image src={pic7} style={imageMarginNoTop} />
+              <Image src={pic7} style={smallerImage} /> */}
 
               <h4 className='heading'> FEATURES & FUNCTIONALITIES </h4>
               <p>
-                To further break down the information we gathered from our use cases, we materialized the use cases 
+                {/* To further break down the information we gathered from our use cases, we materialized the use cases 
                 into actual features, elements, and functions that can be added onto the website (the left-most 
                 column). Then based on if the person/group of people had requested it, or would benefit from it, 
                 we gave their respective box (along the same row) an X mark.
-                This allowed us to detemine which user(s) a feature or function would most benefit from a quick glance.
+                This allowed us to detemine which user(s) a feature or function would most benefit from a quick glance. */}
+
+                Here were the use cases broken down into a readable table.
               </p>
-              <Image src={pic8} style={imageMarginNoTop} />
+              <Image src={pic8} style={this.props.screenWidth > 640 ? smallerImage : imageMarginNoTop}/>
 
               <h4 className='heading'> KEY USER NEEDS </h4>
               <p>
@@ -422,7 +422,7 @@ class CSA extends React.Component {
               <h4 className='heading'> COMPETITOR SITES </h4>
               <Image src={pic9} style={imageMarginNoTop} />
 
-              <h4 className='subheading'> BRANDING </h4>
+              {/* <h4 className='subheading'> BRANDING </h4>
               <p> What impression does the site give off? </p>
               <Image src={pic10} style={imageMarginLessBottom} />
 
@@ -444,12 +444,12 @@ class CSA extends React.Component {
 
               <h4 className='subheading'> DESIGN </h4>
               <p> What design elements do others do well? </p>
-              <Image src={pic15} style={imageMarginNoTop} />
+              <Image src={pic15} style={imageMarginNoTop} /> */}
             </div>
 
             <div className='section'>
               <SectionTitle title='mood boards'/> 
-              <p>
+              {/* <p>
                 This website will have a minimalist appearance that is at the same time attention-grabbing. Because 
                 our client is a cultural organization that focuses on social aspects, we also want to portray a tone
                  that is friendly, inviting, and welcoming. This is especially important as one of our main target 
@@ -458,7 +458,7 @@ class CSA extends React.Component {
                  means we will avoid blocks of text. The color palette we will be working will be some combination 
                  of pastel colors against a white backdrop. Our typography choice will be a combination of Sans-serif 
                  fonts that is bold in appearance and easily readable.
-              </p>
+              </p> */}
               <br/>
               <h4 className='heading'> COLORS </h4>
               <Image src={pic16} style={imageMarginLessBottom} />
@@ -482,8 +482,13 @@ class CSA extends React.Component {
               <Image src={pic20} style={imageMarginNoTop} />
 
               <h4 className='heading'> WIREFRAMES </h4>
+              <p>
+                Here are just a few screens of our wireframes!
+              </p>
               <br/>
-              <h4 className='subheading'> NAVIGATION </h4>
+              <Image src={pic56}  style={imageMarginLessBottom} />
+              <Image src={pic57}  style={imageMarginNoTop} />
+              {/* <h4 className='subheading'> NAVIGATION </h4>
               <p>
                 From our competitive analysis, we learned that good and consistent navigation is an absolute necessity. 
                 This is because an effective navigation system is the anchor and skeleton of an entire website and for this 
@@ -559,9 +564,9 @@ class CSA extends React.Component {
                 interested in learning more about the organization, they can submit their email in a newsletter 
                 sign up to get content delivered straight to their inbox.
               </p>
-              <Image src={pic30}  style={imageMarginNoTop} />
+              <Image src={pic30}  style={imageMarginNoTop} /> */}
 
-              <h4 className='heading'> USER TESTING ROUND 1 </h4>
+              {/* <h4 className='heading'> USER TESTING ROUND 1 </h4>
               <p>
                 After we finished these wireframe screens, we gathered five users who were open to test
                 the site. We gave each of them the same five tasks, all of which involved navigating the
@@ -572,7 +577,7 @@ class CSA extends React.Component {
                 navigating the site was no problem, at least for students. We weren't able to say the same
                 for the other two personas, since we weren't able to get users that fit into them. Regardless,
                 it was still a great sign and we moved onto prototyping.
-              </p>
+              </p> */}
             </div>
 
             <div className='section'>
@@ -611,7 +616,7 @@ class CSA extends React.Component {
                 so for round two, we decided to go all out with the images. CSA is a student organization after all, 
                 and they're trying to make themselves seem welcoming; let's have images speak for themselves. 
               </p>
-
+              <br/>
               <h4 className='subheading'> LINKS </h4>
               <div className='buttons'>
                   <a 
@@ -632,15 +637,16 @@ class CSA extends React.Component {
                   </a> 
                 </div>
                 <br/>
+                <br/>
 
 
 
               <h4 className='subheading'> HOME </h4>
-              <p>
+              {/* <p>
                 We gave the home page, and other pages as well, image carousel banners that line the tops and middles
                 to give a more friendly, down-to-earth feel. The announcements card has been replaced with a toggleable
                 pull out so that it's not too prominent to those who don't care for it so much.
-              </p>
+              </p> */}
               <Image src={pic38}  style={imageMarginLessBottom} />
               <Image src={pic39}  style={imageMarginNoTop} />
 
@@ -648,9 +654,9 @@ class CSA extends React.Component {
               <Image src={pic40}  style={imageMarginLessBottom} />
               <Image src={pic41}  style={imageMarginNoTop} />
 
-              <h4 className='subheading'> HISTORY & CULTURE </h4>
+              {/* <h4 className='subheading'> HISTORY & CULTURE </h4>
               <Image src={pic42}  style={imageMarginLessBottom} />
-              <Image src={pic43}  style={imageMarginNoTop} />
+              <Image src={pic43}  style={imageMarginNoTop} /> */}
 
               <h4 className='subheading'> MEMBERS </h4>
               <Image src={pic44}  style={imageMarginLessBottom} />
@@ -660,21 +666,21 @@ class CSA extends React.Component {
               <Image src={pic46}  style={imageMarginLessBottom} />
               <Image src={pic47}  style={imageMarginNoTop} />
 
-              <h4 className='subheading'> UPCOMING EVENTS </h4>
+              {/* <h4 className='subheading'> UPCOMING EVENTS </h4>
               <Image src={pic48}  style={imageMarginLessBottom} />
-              <Image src={pic49}  style={imageMarginNoTop} />
+              <Image src={pic49}  style={imageMarginNoTop} /> */}
 
-              <h4 className='subheading'> PAST EVENTS </h4>
+              {/* <h4 className='subheading'> PAST EVENTS </h4>
               <Image src={pic50}  style={imageMarginLessBottom} />
-              <Image src={pic51}  style={imageMarginNoTop} />
+              <Image src={pic51}  style={imageMarginNoTop} /> */}
 
-              <h4 className='subheading'> PHOTO GALLERY </h4>
+              {/* <h4 className='subheading'> PHOTO GALLERY </h4>
               <Image src={pic52}  style={imageMarginLessBottom} />
               <Image src={pic53}  style={imageMarginNoTop} />
 
               <h4 className='subheading'> CONTACT </h4>
               <Image src={pic54}  style={imageMarginLessBottom} />
-              <Image src={pic55}  style={imageMarginNoTop} />
+              <Image src={pic55}  style={imageMarginNoTop} /> */}
             </div> 
 
             <div className='section'>

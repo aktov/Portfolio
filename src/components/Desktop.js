@@ -18,7 +18,7 @@ class Desktop extends React.Component {
         <Content screenWidth={this.props.screenWidth} />
       </div>
       
-      <TopButton color='#B8C4E4' />
+      <TopButton color='#FFC0C0' />
       <Footer screenWidth={this.props.screenWidth} />
       </>
     );

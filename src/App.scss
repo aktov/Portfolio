@@ -539,19 +539,19 @@ div.contact {
 
 div.background {
     width: 100%;
-    height: toRem(600);
-    max-height: toRem(600);
+    // height: toRem(600);
+    // max-height: toRem(600);
     position: relative;
     margin-top: $headerHeight + toRem(-1);
     margin-bottom: toRem(50);
     display: flex;
     flex-flow: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-end;
     overflow: hidden;
 
     background-color: #CFD8E8;//#EAEFF7;
-    cursor: pointer;
+    // cursor: pointer;
 
     div.carousel {
         position: absolute;
@@ -676,7 +676,7 @@ div.background {
             position: relative;
             width: 60%;
             margin: auto;
-            margin-bottom: 3rem;
+            margin-top: 10rem;
     
             display: flex;
             flex-flow: column wrap;
@@ -685,12 +685,13 @@ div.background {
     
         h1 {
             font-family: 'Poppins';
-            font-weight: 600;
+            font-weight: 700;
             color: $baseTextColor;
         }
     
         h5 {
             margin: toRem(5) 0;
+            font-size: toRem(24);
             font-family: 'Poppins';
             font-weight: 500;
             line-height: normal;
@@ -897,9 +898,9 @@ div.content {
                 margin-bottom: toRem(50);
             
                 display: flex;
-                flex-flow: column;
-                justify-content: flex-start;
-                align-items: center;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: stretch;
 
                 h4 {
                     margin-bottom: toRem(10);
@@ -910,24 +911,25 @@ div.content {
                 }
 
                 div.listing {
-                    width: 100%;
-                    margin: auto;
-                    margin-bottom: toRem(24);
+                    width: 45%;
+                    height: auto;
+                    margin: toRem(16);
 
                     display: flex;
                     flex-flow: column;
+                    justify-content: flex-start;
                     
-                    padding: toRem(24) toRem(24);
+                    padding: toRem(32) toRem(32);
 
                     border-radius: toRem(10);
                     border: none;
                     background-color: #ffffff;
-                    -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
-                    -moz-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
-                    -ms-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
-                    -o-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
-                    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
-                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10);
+                    // -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
+                    // -moz-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
+                    // -ms-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
+                    // -o-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
+                    // filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
+                    // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10);
 
 
                     h4 {
@@ -947,9 +949,48 @@ div.content {
                     }
                 }
 
-                div.listing:last-child {
-                    margin-bottom: toRem(0);
+                div.listingM {
+                    width: 100%;
+                    height: auto;
+                    margin: auto;
+                    margin-bottom: toRem(24);
+
+                    display: flex;
+                    flex-flow: column;
+                    
+                    padding: toRem(32) toRem(32);
+
+                    border-radius: toRem(10);
+                    border: none;
+                    background-color: #ffffff;
+                    // -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
+                    // -moz-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
+                    // -ms-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
+                    // -o-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
+                    // filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
+                    // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10);
+
+
+                    h4 {
+                        margin-bottom: toRem(5);
+                        font-family: 'Poppins', sans-serif;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: toRem(20);
+                    }
+
+                    h5 {
+                        margin: toRem(3) 0;
+                        font-family: 'Poppins', sans-serif;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: $size_p;
+                    }
                 }
+
+                // div.listing:last-child {
+                //     // margin-bottom: toRem(0);
+                // }
             }
 
             div.skills {
@@ -959,8 +1000,8 @@ div.content {
             
                 display: flex;
                 flex-flow: row wrap;
-                justify-content: flex-start;
-                align-items: flex-start;
+                justify-content: center;
+                align-items: stretch;
 
                 h4 {
                     margin-bottom: toRem(10);
@@ -971,10 +1012,19 @@ div.content {
                 }                
                 
                 .phrases {
-                    width: 32%;
+                    width: 25%;
+                    height: auto;
+                    margin: toRem(16);
                     min-width: toRem(240);
-                    margin-top: toRem(10);
-                    margin-bottom: toRem(30);
+                    padding: toRem(32);
+
+                    background-color: #ffffff;
+                    border-radius: toRem(10);
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    
 
                     h4 {
                     margin-bottom: toRem(5);
@@ -991,7 +1041,59 @@ div.content {
                         font-weight: 500;
                         font-size: $size_p;
                     }
-                }             
+                }    
+                
+                .phrasesM {
+                    width: 100%;
+                    height: auto;
+                    margin: toRem(16);
+                    min-width: toRem(240);
+                    padding: toRem(32);
+
+                    background-color: #ffffff;
+                    border-radius: toRem(10);
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    
+
+                    h4 {
+                    margin-bottom: toRem(5);
+                    font-family: 'Poppins', sans-serif;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: toRem(20);
+                    }
+
+                    h5 {
+                        margin: toRem(3) 0;
+                        font-family: 'Poppins', sans-serif;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: $size_p;
+                    }
+
+                    .phrase {
+                        display: flex;
+                        width: 90%;
+                        margin-bottom: toRem(10);
+    
+                        flex-flow: row;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+    
+                        img {
+                            margin: toRem(9) toRem(10);
+                            width: toRem(8);
+                            height: auto;
+                        }
+    
+                        p {
+                            margin: 0 toRem(5);    
+                        }
+                    }
+                }   
             }
             
             .phrases {
@@ -1264,14 +1366,14 @@ div.content {
 
                     div.buttons {
                         position: relative;
-                        width: 40%;
+                        width: 100%;
                         height: toRem(30);
                         margin-left: auto;
                         margin-bottom: toRem(5);
 
                         display: flex;
                         flex-flow: row nowrap;
-                        justify-content: space-between;
+                        justify-content: flex-end;
                         align-items: center;
 
                         a:hover {
@@ -1296,6 +1398,7 @@ div.content {
                             position: relative;
                             width: toRem(35);
                             height: toRem(35);
+                            margin-left: toRem(16);
 
                             border-radius: toRem(100);
                             border: none;
@@ -1469,7 +1572,7 @@ div.content {
 
             div.buttons {
                 position: relative;
-                width: 40%;
+                width: 100%;
                 height: toRem(30);
                 margin-top: auto;
                 margin-bottom: toRem(5);
@@ -1477,7 +1580,7 @@ div.content {
 
                 display: flex;
                 flex-flow: row nowrap;
-                justify-content: space-between;
+                justify-content: flex-end;
                 align-items: stretch;
 
                 a:only-child {
@@ -1488,6 +1591,7 @@ div.content {
                     position: relative;
                     width: toRem(35);
                     height: toRem(35);
+                    margin-left: toRem(16);
 
                     border-radius: toRem(100);
                     border: none;
@@ -1553,6 +1657,12 @@ div.content {
 
     img.banner {
         width: 100%;
+        -webkit-filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.10));
+        -moz-filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.10));
+        -ms-filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.10));
+        -o-filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.10));
+        filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.10));
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.10);
     }
     div.pages {
         position: relative;
@@ -1599,13 +1709,13 @@ div.content {
 
             div.buttons {
                 position: relative;
-                width: 25%;
+                width: 100%;
                 min-width: toRem(100);
                 height: toRem(50);
 
                 display: flex;
                 flex-flow: row nowrap;
-                justify-content: space-between;
+                justify-content: flex-start;
                 align-items: center;
 
                 a:hover {
@@ -1623,6 +1733,7 @@ div.content {
                 }
 
                 a:only-child {
+                    // margin-left: auto;
                     margin-right: auto;
                 }
 
@@ -1630,6 +1741,7 @@ div.content {
                     position: relative;
                     width: toRem(50);
                     height: toRem(50);
+                    margin-right: toRem(24);
 
                     border-radius: toRem(100);
                     border: none;
@@ -1986,7 +2098,29 @@ div.content {
 }
 
 .footer {
-    position: relative;
+    position: fixed;
+    width: 100%;
+    height: toRem(50);
+    bottom: 0px;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    overflow: visible;
+
+    h6 {
+        margin-right: auto;
+
+        padding-left: 2rem;
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size: '.875rem';
+    }
+}
+
+.footerM {
     width: 100%;
     height: toRem(50);
 
@@ -1996,10 +2130,6 @@ div.content {
     align-items: center;
 
     overflow: visible;
-
-    .contact {
-        margin-bottom: 0;
-    }
 
     h6 {
         margin-right: auto;

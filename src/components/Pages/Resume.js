@@ -1,5 +1,4 @@
 import React from 'react';
-import LazyLoad from 'react-lazyload';
 
 import Header from '../Header.js';
 import Footer from '../Footer.js';
@@ -7,9 +6,15 @@ import NavMenu from '../NavMenu.js';
 import Contact from '../Contact.js';
 import ResumeActual from '../Resume.js';
 
-import bannerD from '../../images/bannerD_about.svg';
-import bannerM from '../../images/bannerM_about.svg';
-import prof from '../../images/profilePic2.jpg';
+import background from '../../images/backgroundIII.svg';
+
+
+const backgroundStyle = {
+  width:'100%',
+  height: 'auto',
+  zIndex: '2'
+}
+
 
 class Resume extends React.Component {
   constructor(props) {
@@ -41,7 +46,7 @@ class Resume extends React.Component {
         doc={this.props.doc}
       />
 
-      <div className='app'>
+      <div className='app' style={{backgroundColor: '#F0E6E7'}}>
         {/* Show Navmenu if on mobile */}
         {!(this.props.screenWidth > 768) &&
           <NavMenu toggleMenu={this.toggleMenu} screenWidth={this.props.screenWidth} menuOpen={this.state.menuOpen}/> 
@@ -51,11 +56,11 @@ class Resume extends React.Component {
           <Contact screenWidth={this.props.screenWidth} /> 
         }
 
-        <div className='content' style={{marginTop:'3rem'}}>
+        <div className='content' style={{marginTop:'3rem', backgroundColor: '#F0E6E7'}}>
           <div id='anchor_page' className='anchor' style={{top: '-1000px'}}></div>
-          <img 
+          {/* <img 
             className='banner' 
-            src={this.props.screenWidth > 640 ? bannerM : bannerD} 
+            src={this.props.screenWidth > 640 ? bannerD : bannerM} 
             alt='Banner' 
             draggable='false'          
             data-aos='fade' 
@@ -63,12 +68,9 @@ class Resume extends React.Component {
             data-aos-easing='ease-out-sine'
             data-aos-duration='400'
             data-aos-once={true}  
-          />
+          /> */}
 
-
-
-
-          <div className='pages' style={this.props.screenWidth > 640 ? {marginTop:'3rem'} : {width: '75%', marginTop:'3rem'}}>
+          <div className='pages' style={this.props.screenWidth > 640 ? {marginTop:'7rem', marginBottom: '0rem'} : {width: '75%', marginTop:'5rem', marginBottom: '0rem'}}>
 
             <h3 
               className='title'
@@ -76,14 +78,14 @@ class Resume extends React.Component {
               data-aos-offset='50' 
               data-aos-easing='ease-out-sine'
               data-aos-duration='400'
-              data-aos-delay='200'
               data-aos-once={true}
+              // style={{marginTop: '5rem'}}
             > 
-              {'Resume'.toUpperCase()} 
+              {'UI/UX Designer'.toUpperCase()} 
             </h3>
 
             <div className='intro'>
-              <div 
+              {/* <div 
                 className='col' 
                 style={this.props.screenWidth > 640 ? null : {width: '100%'}}
                 data-aos='fade' 
@@ -97,15 +99,15 @@ class Resume extends React.Component {
                 <h4> UI/UX Designer </h4>              
 
                 <br/>
-              </div>
+              </div> */}
               <div 
                 className='col' 
-                style={this.props.screenWidth > 640 ? null : {width: '100%'}}
+                style={this.props.screenWidth > 640 ? {width: '100%'} : {width: '100%'}}
                 data-aos='fade' 
                 data-aos-offset='50' 
                 data-aos-easing='ease-out-sine'
                 data-aos-duration='400'
-                data-aos-delay='400'
+                data-aos-delay='100'
                 data-aos-once={true}
               >
                 <h4 className='heading'> SUMMARY </h4>
@@ -116,13 +118,18 @@ class Resume extends React.Component {
               </div>
             </div>
 
-            <ResumeActual screenWidth={this.props.screenWidth} />
-                      
+            <ResumeActual screenWidth={this.props.screenWidth} />        
           </div>
         </div>
-      </div>
 
-      <Footer screenWidth={this.props.screenWidth} />
+        <img 
+          src={background}
+          alt={'background'}
+          style={backgroundStyle}
+        /> 
+
+        <Footer screenWidth={this.props.screenWidth} color='#405E7A' />
+      </div>  
       </>
     );
   }

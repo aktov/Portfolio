@@ -11,6 +11,8 @@ import TopButton from '../TopButton.js';
 
 import banner from '../../images/banner_hon.png';
 import figma from '../../images/figmaLogo_black.svg';
+import open from '../../images/open.svg';
+
 import pic1 from '../../images/hon/1.png';
 import pic2 from '../../images/hon/2.png';
 import pic3 from '../../images/hon/3.png';
@@ -18,18 +20,20 @@ import pic4 from '../../images/hon/4.png';
 import pic6 from '../../images/hon/6.png';
 import pic7 from '../../images/hon/7.png';
 import pic8 from '../../images/hon/8.png';
-import pic9 from '../../images/hon/9.png';
-import pic10 from '../../images/hon/10.png';
-import pic11 from '../../images/hon/11.png';
-import pic12 from '../../images/hon/12.png';
+// import pic9 from '../../images/hon/9.png';
+// import pic10 from '../../images/hon/10.png';
+// import pic11 from '../../images/hon/11.png';
+// import pic12 from '../../images/hon/12.png';
 import pic13 from '../../images/hon/13.png';
-import pic14 from '../../images/hon/14.png';
+// import pic14 from '../../images/hon/14.png';
 import pic15 from '../../images/hon/15.png';
 import pic16 from '../../images/hon/16.png';
 import pic17 from '../../images/hon/17.png';
 import pic18 from '../../images/hon/18.png';
 import pic19 from '../../images/hon/19.png';
 import pic20 from '../../images/hon/20.png';
+import pic21 from '../../images/hon/21.png';
+import pic22 from '../../images/hon/22.png';
 
 const Bullets = (props) => {
   return (
@@ -73,7 +77,7 @@ const Tags = (props) => {
   );
 }
 
-const tags = ['Figma', 'prototyping'];
+const tags = ['mockups', 'prototyping'];
 
 const needsClients = [
   'read posts easily',
@@ -181,12 +185,21 @@ class Hon extends React.Component {
                 <h4 className='heading'> FIGMA LINKS </h4>
                 <div className='buttons'>
                   <a 
+                    href='https://blog.hon-media.com/'
+                    target='_blank' 
+                    rel='noopener noreferrer'
+                  >
+                    <img src={open} alt='link' draggable='false' /> 
+                    <span className='toolTip'> Check out the blog! </span> 
+                  </a> 
+
+                  <a 
                     href='https://www.figma.com/proto/4IWvFVdQfykksXa7kEZE95/blog.hon-media?node-id=266%3A5650&viewport=8238%2C659%2C0.7337678074836731&scaling=scale-down-width'
                     target='_blank' 
                     rel='noopener noreferrer'
                   >
                     <img src={figma} alt='figma' draggable='false' /> 
-                    <span className='toolTip'> figma </span> 
+                    <span className='toolTip'> Figma prototype </span> 
                   </a> 
                 </div>
                 <br/>
@@ -259,12 +272,12 @@ class Hon extends React.Component {
                 read blog posts on a separate page, and be able to interact with the post and share it, as well
                 as find related posts.
               </p>
-              <p>
+              {/* <p>
                 The blogsite should also have links to Hon-Media\'s main site and their contact info'.
               </p>
               <p>
                 Lastly, Hon-Media team members should have a way to create and manage content on the site.
-              </p>
+              </p> */}
               <Image src={pic1} />
 
               <h4 className='heading'> HOME PAGE </h4>
@@ -319,7 +332,7 @@ class Hon extends React.Component {
               </p>
               <Image src={pic8} style={imageMarginNoTop}/>
 
-              <h4 className='heading'> DEVELOPER VIEW </h4>
+              {/* <h4 className='heading'> DEVELOPER VIEW </h4>
               <p>
                 Team members that have logged in will see a slightly different view of the site, as shown on the
                 right image. The top-left most elements (the purple button and the eye icon) signify to the member
@@ -339,13 +352,13 @@ class Hon extends React.Component {
               <p>
                 Options modal pops up after the team member selects the gear icon for a 'featured' post.
               </p>
-              <Image src={pic11} style={imageMarginNoTop}/>
-              <h4 className='heading'> DEVELOPER EXCLUSIVE SCREENS </h4>
+              <Image src={pic11} style={imageMarginNoTop}/> */}
+              {/* <h4 className='heading'> DEVELOPER EXCLUSIVE SCREENS </h4>
               <p>
                 These screens are accessed via the dev drop-down menu and can only be accessed as a team member.
                 Key screens are discussed in more detail below.
               </p>
-              <Image src={pic12} style={imageMarginNoTop}/>
+              <Image src={pic12} style={imageMarginNoTop}/> */}
 
               <h4 className='subheading'> POST CREATION </h4>
               <p>
@@ -356,13 +369,13 @@ class Hon extends React.Component {
               </p>
               <Image src={pic13} style={imageMarginNoTop}/>
 
-              <h4 className='subheading'> SUCCESS STORY BUSINESS </h4>
+              {/* <h4 className='subheading'> SUCCESS STORY BUSINESS </h4>
               <p>
                 Success story creation/edit screens are similar to post creation/edit screens. These will create
                 new cards under the 'success story' page. Quotes about the business will be atop blog posts written
                 about the business, and each business has its own unique tag.
               </p>
-              <Image src={pic14} style={imageMarginNoTop}/>
+              <Image src={pic14} style={imageMarginNoTop}/> */}
 
               <h4 className='subheading'> MANAGING POSTS </h4>
               <p>
@@ -404,6 +417,14 @@ class Hon extends React.Component {
               </p>
               <Image src={pic19} style={imageMarginLessBottom}/>
               <Image src={pic20} style={imageMarginNoTop}/>
+
+              <h4 className='heading'> FINAL ITERATION </h4>
+              <p>
+                After assessing the amount of articles Hon-Media currently has and the timecrunch for the devs, I decided to strip 
+                down the blog site to this simpler but cleaner version.
+              </p>
+              <Image src={pic21} style={imageMarginLessBottom}/>
+              <Image src={pic22} style={imageMarginNoTop}/>
             </div>
 
             <div className='section'>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Experience from './Experience.js';
-import SectionTitle from './SectionTitle.js';
+// import SectionTitle from './SectionTitle.js';
 import Phrase from './Phrase.js';
 
 const Education = (props) => {
@@ -12,6 +12,7 @@ const Education = (props) => {
       data-aos-offset='50' 
       data-aos-easing='ease-out-sine'
       data-aos-duration='400'
+      data-aos-delay='200'
       data-aos-once={true}
     >
       {/* <SectionTitle title='education'/> */}
@@ -33,7 +34,7 @@ const Skills = (props) => {
       
       {Object.keys(skillsList).map(key =>
         <div 
-          className='phrases'
+          className={props.screenWidth <= 1024 ? 'phrasesM' : 'phrases'}
           key={key}
           data-aos='fade' 
           data-aos-offset='50' 
@@ -94,15 +95,15 @@ class Resume extends React.Component {
     return (
       <div 
         className='wrapper' 
-        style={this.props.screenWidth > 768 ? {width: '60%', paddingLeft: '5rem'} : null}
+        style={{width: '100%', marginBottom: '0rem'}}
       >
-        <div id='anchor_resume' className='anchor'></div>
-        <SectionTitle title='resume'/> 
+        {/* <div id='anchor_resume' className='anchor'></div> */}
+        {/* <SectionTitle title='resume'/>  */}
 
         <div className='resume'>
           <Education/>
-          <Experience/>
-          <Skills/>
+          <Experience screenWidth={this.props.screenWidth}/>
+          <Skills screenWidth={this.props.screenWidth}/>
         </div>
       </div>
     );

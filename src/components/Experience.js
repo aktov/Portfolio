@@ -1,13 +1,11 @@
 import React from 'react'
 
-// import SectionTitle from './SectionTitle';
-
 import Phrase from './Phrase.js';
 
 const JobListing = (props) => {
   return (
       <div 
-        className='listing'
+        className={props.screenWidth <= 1024 ? 'listingM' : 'listing'}
         data-aos='fade' 
         data-aos-offset='50' 
         data-aos-easing='ease-out-sine'
@@ -35,22 +33,27 @@ class Experience extends React.Component {
           data-aos-offset='100' 
           data-aos-easing='ease-out-sine'
           data-aos-duration='400'
+          data-aos-delay='300'
           data-aos-once={true}
         >
           <div id='anchor_experience' className='anchor'></div>
           {/* <SectionTitle title='work experience'/>  */}
-          <h4> {'experience'.toUpperCase()} </h4>
+          <h4 style={{marginBottom: '1rem'}}> {'experience'.toUpperCase()} </h4>
 
           <JobListing 
+            screenWidth={this.props.screenWidth}
             title='UI/UX Designer'
             location='Alike, Remote'
             period='Mar. 2021 - Current'
             info={[
-              'Designed prototypes of app screens on Figma for the software dev team to mimic and push onto the real thing',
-              'More to come!'
+              'Modified and updated existing app screens with UI designs more aligned with modern trends and styles (e.g. navigation bar, headers, icons, and many other specific screens)',
+              'Designed prototypes of new app screens and new user flows on Figma for the dev team to create',
+              'Used Figma Prototyping to turn our static prototype screens into a functional, interactable flow which better helped the developers visualize the app and its functionality',
+              'Helped quadruple the conversion rate of app downloads to users'
             ]}
           />
           <JobListing 
+            screenWidth={this.props.screenWidth}
             title='UI/UX Designer'
             location='Hon-Media, Remote'
             period='Sept. 2020 - Current'
@@ -61,6 +64,7 @@ class Experience extends React.Component {
             ]}
           />
           <JobListing 
+            screenWidth={this.props.screenWidth}
             title='Computing Services Technical Assistant'
             location='UCSD Extension, San Diego, CA'
             period='Sept. 2017 - Mar. 2020'
@@ -71,6 +75,7 @@ class Experience extends React.Component {
             ]}
           />
           <JobListing 
+            screenWidth={this.props.screenWidth}
             title='Website Graphics Designer'
             location='US Trading Company, Hayward, CA'
             period='Jun. - Aug. 2017'

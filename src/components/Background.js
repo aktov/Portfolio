@@ -5,6 +5,8 @@ import Carousel from './Carousel.js';
 
 import arrow from '../images/arrow_down.svg';
 
+import background from '../images/backgroundII.svg';
+
 smoothscroll.polyfill();
 
 const Intro = (props) => {
@@ -18,8 +20,9 @@ const Intro = (props) => {
   return (
     <div className='intro'> 
       <div className='text' style={props.screenWidth <= 768 ? {width: '75%'} : null}>
-        <h1 style={{ fontSize: props.screenWidth < 480 ? '2.5rem' : '3.125rem' }}> I'm Alex, an interaction & product designer </h1>
-        <h5> I'm currently looking for internship or full-time opportunities to bring what I do best onto the team to create designs that your users will love! </h5>
+        <h1 style={{ fontSize: props.screenWidth < 480 ? '2.5rem' : '3.125rem' }}> I'm Alex, </h1>
+        <h1 style={{ fontSize: props.screenWidth < 480 ? '2rem' : '2.8rem', marginTop: '-2rem' }}> a UI/UX designer </h1>
+        <h5 style={{ fontSize: props.screenWidth < 480 ? '1rem' : '1.5rem' }}> I’m currently looking for full-time or internship opportunities to bring what I love doing onto the team to create outstanding experiences for your users! </h5>
         {props.screenWidth <= 768 && 
 
         <button onClick={handleClick}> 
@@ -32,7 +35,10 @@ const Intro = (props) => {
 }
 
 
-
+const backgroundStyle = {
+  width:'200%',
+  height: 'auto',
+}
 
 class Background extends React.Component {
   constructor(props) {
@@ -65,7 +71,12 @@ class Background extends React.Component {
         data-aos-duration='400'
         data-aos-once={true}
       > 
-        <Carousel screenWidth={this.props.screenWidth} playAnim={this.state.carouselPlay} />
+        <img 
+          src={background}
+          alt={'background'}
+          style={backgroundStyle}
+        /> 
+        {/* <Carousel screenWidth={this.props.screenWidth} playAnim={this.state.carouselPlay} /> */}
         <Intro screenWidth={this.props.screenWidth} />
       </div>
     );

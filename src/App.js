@@ -10,10 +10,14 @@ import Mobile from './components/Mobile.js';
 
 import About from './components/Pages/About.js'; 
 import Resume from './components/Pages/Resume.js'; 
+
+import Alike from './components/Pages/Alike.js'; 
+import Boba from './components/Pages/Boba.js'; 
+import Edushare from './components/Pages/Edushare.js'; 
 import Hon from './components/Pages/Hon.js'; 
 import CSA from './components/Pages/CSA.js';
 import Yahoo from './components/Pages/Yahoo.js';
-import Parking from './components/Pages/Parking.js';
+// import Parking from './components/Pages/Parking.js';
 import ScrollToTop from './components/ScrollToTop.js';
 
 const breakpoint = 768;
@@ -58,6 +62,16 @@ class App extends React.Component {
           <Route path='/resume'>
             <Resume screenWidth={this.state.screenWidth}/>
           </Route>
+
+          <Route path='/alike'>
+            <Alike screenWidth={this.state.screenWidth}/>
+          </Route>
+          <Route path='/boba'>
+            <Boba screenWidth={this.state.screenWidth}/>
+          </Route>
+          <Route path='/edushare'>
+            <Edushare screenWidth={this.state.screenWidth}/>
+          </Route>
           <Route path='/hon'>
             <Hon screenWidth={this.state.screenWidth}/>
           </Route>
@@ -67,9 +81,9 @@ class App extends React.Component {
           <Route path='/yahoo'>
             <Yahoo screenWidth={this.state.screenWidth}/>
           </Route>
-          <Route path='/parking'>
+          {/* <Route path='/parking'>
             <Parking screenWidth={this.state.screenWidth}/>
-          </Route>
+          </Route> */}
         </Router>
     );
   }

@@ -27,19 +27,19 @@ const Buttons = (props) => {
     <div className='buttons'>
       {props.props.github && <a href={props.props.github} target="_blank" rel="noopener noreferrer">
           <img src={github} alt='github' draggable='false' />     
-          <span className='toolTip'> github </span>
+          <span className='toolTip'> Github </span>
       </a> }
       {props.props.figma && <a href={props.props.figma} target="_blank" rel="noopener noreferrer">
           <img src={figma} alt='figma' draggable='false' /> 
-          <span className='toolTip'> figma </span> 
+          <span className='toolTip'> Figma prototype </span> 
       </a> }
       {props.props.figmaD && <a href={props.props.figmaD} target="_blank" rel="noopener noreferrer">
           <img src={figmaD} alt='figmaDesktop' draggable='false' /> 
-          <span className='toolTip'> figma desktop </span> 
+          <span className='toolTip'> Desktop proto </span> 
       </a> }
       {props.props.figmaM && <a href={props.props.figmaM} target="_blank" rel="noopener noreferrer">
           <img src={figmaM} alt='figmaMobile' draggable='false' /> 
-          <span className='toolTip'> figma mobile </span> 
+          <span className='toolTip'> Mobile prototype </span> 
       </a> }
       {props.props.figmaA && <a href={props.props.figmaA} target="_blank" rel="noopener noreferrer">
           <img src={figmaA} alt='figmaA' draggable='false' /> 
@@ -51,15 +51,15 @@ const Buttons = (props) => {
       </a> }
       {props.props.figma1 && <a href={props.props.figma1} target="_blank" rel="noopener noreferrer">
           <img src={figma1} alt='figma1' draggable='false' /> 
-          <span className='toolTip'> figma redesign 1 </span> 
+          <span className='toolTip'> Redesign 1 proto </span> 
       </a> }
       {props.props.figma2 && <a href={props.props.figma2} target="_blank" rel="noopener noreferrer">
           <img src={figma2} alt='figma1' draggable='false' /> 
-          <span className='toolTip'> figma redesign 2 </span> 
+          <span className='toolTip'> Redesign 2 proto </span> 
       </a> }
       {props.props.link && <Link to={props.props.link} rel="noopener noreferrer">
           <img src={open} alt='open' draggable='false' /> 
-          <span className='toolTip'> link </span>
+          <span className='toolTip'> Read more! </span>
       </Link> }
     </div>
   );
