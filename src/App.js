@@ -3,6 +3,7 @@ import { HashRouter as Router, Route } from 'react-router-dom'
 import history from './components/history.js';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 import './App.scss';
 
 import Desktop from './components/Desktop.js'; 
@@ -48,6 +49,7 @@ class App extends React.Component {
   render() {
     AOS.init();
     return (
+      <ParallaxProvider>
         <Router basename='/' history={history}>
           <ScrollToTop />
           <Route exact path='/'>
@@ -85,6 +87,7 @@ class App extends React.Component {
             <Parking screenWidth={this.state.screenWidth}/>
           </Route> */}
         </Router>
+      </ParallaxProvider>
     );
   }
 }

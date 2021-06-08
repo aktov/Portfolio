@@ -9,6 +9,7 @@ import Contact from '../Contact.js';
 import prof from '../../images/profilePic2.jpg';
 import background from '../../images/backgroundIV.svg';
 
+
 const backgroundStyle = {
   width:'100%',
   height: 'auto',
@@ -25,12 +26,6 @@ class About extends React.Component {
     }
 
     this.toggleMenu = this.toggleMenu.bind(this);
-  }
-
-  goToTop(e) {
-    if (document.getElementById('anchor_page')) {
-      document.getElementById('anchor_page').scrollIntoView({behavior: 'smooth', block: 'start'});
-    }
   }
 
   toggleMenu() {
