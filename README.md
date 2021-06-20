@@ -10,6 +10,7 @@ simulating a multiple page application. Components made this project so much mor
 old tactic of copy/pasting entire HTML chunks to duplicate an element.
 
 ## Plugins Used
-I'd like to thank the creators of these plugins for already inventing the wheel.
+I'd like to thank the creators of these plugins; they definitely helped this portfolio look more awesome!
 * [https://github.com/michalsnik/aos]
 * [https://github.com/iamdustan/smoothscroll]
+* [https://www.npmjs.com/package/react-scroll-parallax]

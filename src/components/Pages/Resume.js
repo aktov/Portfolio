@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Parallax } from 'react-scroll-parallax';
 
 import Title from '../Title';
 import Experience from '../Experience';
@@ -66,6 +65,7 @@ class Resume extends React.Component {
         </div> */}
 
       </div>
+      
     );
   }
 }
