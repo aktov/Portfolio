@@ -99,11 +99,6 @@ const design = [
   'How is the font size? Are any words too small to read? Too big? Is it comfortable?'
 ]
 
-const takeaways = [
-  'Transparency'
-]
-
-
 const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
 const smallerImage = {marginTop: '0rem', width: '70%'}

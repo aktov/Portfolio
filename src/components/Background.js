@@ -2,8 +2,6 @@ import React from 'react';
 import smoothscroll from 'smoothscroll-polyfill';
 import { Parallax } from 'react-scroll-parallax';
 
-import arrow from '../images/arrow_down.svg';
-
 import overlay from '../images/banner/overlay.svg';
 import underlay from '../images/banner/underlay.svg';
 import layer1 from '../images/banner/Layer01.svg';
@@ -20,19 +18,40 @@ import layer6 from '../images/banner/Layer06.svg';
 smoothscroll.polyfill();
 
 const Intro = (props) => {
-  function handleClick(e) {
-    let anchor = document.getElementById('anchor_projects');
-    if (anchor) {
-      anchor.scrollIntoView({behavior: 'smooth', block: 'start'});
-    }
-  }
+  // function handleClick(e) {
+  //   let anchor = document.getElementById('anchor_projects');
+  //   if (anchor) {
+  //     anchor.scrollIntoView({behavior: 'smooth', block: 'start'});
+  //   }
+  // }
 
   return (
     <div className='intro'> 
       <div className='text' style={props.screenWidth <= 768 ? {width: '75%'} : null}>
-        <h1 style={{ fontSize: props.screenWidth < 480 ? '2.5rem' : '3.125rem' }}> I'm Alex, </h1>
-        <h1 style={{ fontSize: props.screenWidth < 480 ? '2rem' : '2.8rem', marginTop: '-2rem' }}> a UI/UX designer </h1>
-        <h5 style={{ fontSize: props.screenWidth < 480 ? '1rem' : '1.5rem' }}> I’m currently looking for full-time or internship opportunities to bring what I love doing onto the team to create outstanding experiences for your users! </h5>
+        <h1 style={{ fontSize: props.screenWidth < 480 ? '2.5rem' : '3.125rem' }}
+                  data-aos='fade' 
+                  data-aos-offset='-300' 
+                  data-aos-easing='ease-out-sine'
+                  data-aos-duration='600'
+                  data-aos-delay='300'
+                  data-aos-once={true}
+                  > I'm Alex, </h1>
+        <h1 style={{ fontSize: props.screenWidth < 480 ? '2rem' : '2.8rem', marginTop: '-2rem' }}
+                  data-aos='fade' 
+                  data-aos-offset='-300' 
+                  data-aos-easing='ease-out-sine'
+                  data-aos-duration='600'
+                  data-aos-delay='1000'
+                  data-aos-once={true}
+                  > a UI/UX designer </h1>
+        <h5 style={{ fontSize: props.screenWidth < 480 ? '1rem' : '1.25rem' }}
+                  data-aos='fade' 
+                  data-aos-offset='-300' 
+                  data-aos-easing='ease-out-sine'
+                  data-aos-duration='800'
+                  data-aos-delay='2000'
+                  data-aos-once={true}
+                  > I’m currently looking for full-time or internship opportunities to bring what I love doing onto the team to create outstanding experiences for your users! </h5>
         {/* {props.screenWidth <= 768 && 
 
         <button onClick={handleClick}> 
@@ -44,18 +63,7 @@ const Intro = (props) => {
   );
 }
 
-
-const backgroundStyle = {
-  width:'100%',
-  height: 'auto',
-}
-
 class Background extends React.Component {
-  constructor(props) {
-    super(props);
-
-  }
-
   render() {
     return (
       <div 
@@ -75,6 +83,7 @@ class Background extends React.Component {
               src={underlay}
               alt={'background'}
               style={{width:'100%'}}
+              draggable='false' 
           />
         </Parallax>
         <Parallax
@@ -84,6 +93,7 @@ class Background extends React.Component {
               src={layer6}
               alt={'background'}
               style={{width:'100%'}}
+              draggable='false' 
           />
         </Parallax>
         <Parallax
@@ -93,6 +103,7 @@ class Background extends React.Component {
               src={layer5}
               alt={'background'}
               style={{width: '100%'}}
+              draggable='false' 
           />
         </Parallax>
         <Parallax
@@ -104,6 +115,7 @@ class Background extends React.Component {
               src={layer45}
               alt={'background'}
               style={{width:'20%'}}
+              draggable='false' 
           />
         </Parallax>
         <Parallax
@@ -113,6 +125,7 @@ class Background extends React.Component {
               src={layer4}
               alt={'background'}
               style={{width:'100%'}}
+              draggable='false' 
           />
         </Parallax>
         <Parallax
@@ -124,6 +137,7 @@ class Background extends React.Component {
               src={layer35}
               alt={'background'}
               style={{width:'15%'}}
+              draggable='false' 
           />
         </Parallax>
         <Parallax
@@ -133,6 +147,7 @@ class Background extends React.Component {
               src={layer3}
               alt={'background'}
               style={{width:'100%'}}
+              draggable='false' 
           />
         </Parallax>
         <Parallax
@@ -144,6 +159,7 @@ class Background extends React.Component {
               src={layer25}
               alt={'background'}
               style={{width:'50%'}}
+              draggable='false' 
           />
         </Parallax>
         <Parallax
@@ -153,6 +169,7 @@ class Background extends React.Component {
               src={layer2}
               alt={'background'}
               style={{width: '100%'}}
+              draggable='false' 
           />
         </Parallax>
         <Parallax
@@ -168,16 +185,18 @@ class Background extends React.Component {
               src={layer1}
               alt={'background'}
               style={{width: '100%'}}
+              draggable='false' 
           />
         </Parallax>
         <Parallax
           x={[0,-7]}
-          styleOuter={{bottom: '-10px'}}
+          styleOuter={{bottom: '-12px'}}
         >
           <img 
               src={overlay}
               alt={'background'}
               style={{width: '200%'}}
+              draggable='false' 
           />
         </Parallax>
       </div>

@@ -3,7 +3,7 @@ import { HashRouter as Router, Route } from 'react-router-dom'
 import history from './components/history.js';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
+import { ParallaxProvider } from 'react-scroll-parallax';
 import './App.scss';
 
 import Desktop from './components/Desktop.js'; 
@@ -52,6 +52,7 @@ class App extends React.Component {
       <ParallaxProvider>
         <Router basename='/' history={history}>
           <ScrollToTop />
+          <div id='anchor_page' className='anchor' style={{top: '-50rem'}}></div>
           <Route exact path='/'>
             {this.state.screenWidth > breakpoint ? 
             <Desktop screenWidth={this.state.screenWidth}/> : 

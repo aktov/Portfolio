@@ -2,25 +2,141 @@ import React from 'react'
 
 import Phrase from './Phrase.js';
 
+// import open from '../images/open.svg';
+
 const JobListing = (props) => {
   return (
+    <>
+    {props.screenWidth > 768 ?
+      <>
       <div 
-        className={props.screenWidth <= 1024 ? 'listingM' : 'listing'}
+        className='listing'
+        style={props.highlight ? {paddingLeft: '5%'} : null}
+        data-aos='fade' 
+        data-aos-offset='200' 
+        data-aos-easing='ease-out-sine'
+        data-aos-duration='400'
+        data-aos-once={true}
+      >
+        {props.highlight ? 
+          <>
+            <div
+              style={{
+                position: 'absolute',
+                top: '0',
+                left: '0',
+                width: '3%',
+                minWidth: '16px',
+                height: '100%',
+                backgroundColor: '#8CA7BF',
+                zIndex: -1
+              }}
+            />
+            {/* <div
+              style={{
+                position: 'absolute',
+                top: '0rem',
+                right: '0rem',
+                width: '8rem',
+                height: '8rem',
+                backgroundColor: '#8CA7BF',
+                overflow: 'hidden'
+              }}
+            >
+              <div
+                style={{
+                  position: 'absolute',
+                  top: '0',
+                  right: '0',
+                  width: '16rem',
+                  height: '16rem',
+                  backgroundColor: '#FFFFFF',
+                  borderRadius: '8rem',
+                }}
+              />
+            </div> */}
+            <h4> {props.title} </h4>
+            {/* <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {'@' + props.location} <img src={open}/></a> </h5> */}
+            <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {'@' + props.location} </a> </h5>
+            <h5> {props.period} </h5> 
+            <div className='phrases'>
+              {props.info.map((phrase, index) => 
+                <Phrase key={props.title + '/' + index} text={phrase}/>
+              )}
+            </div>
+          </>
+          :
+          <>
+            <h4> {props.title} </h4>
+            <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {'@' + props.location} </a> </h5>
+            <h5> {props.period} </h5> 
+            <div className='phrases'>
+              {props.info.map((phrase, index) => 
+                <Phrase key={props.title + '/' + index} text={phrase}/>
+              )}
+            </div>
+          </>
+        }
+      </div>
+      </>
+    :
+      <div 
+        className='listing'
         data-aos='fade' 
         data-aos-offset='50' 
         data-aos-easing='ease-out-sine'
         data-aos-duration='400'
         data-aos-once={true}
       >
-        <h4> {props.title} </h4>
-        <h5> {props.location} </h5>
-        <h5> {props.period} </h5> 
-        <div className='phrases'>
-          {props.info.map((phrase, index) => 
-            <Phrase key={props.title + '/' + index} text={phrase}/>
-          )}
-        </div>
-      </div>
+        {props.highlight ? 
+          <>
+            <div
+              style={{
+                position: 'absolute',
+                top: '0rem',
+                right: '0rem',
+                width: '4rem',
+                height: '4rem',
+                backgroundColor: '#8CA7BF',
+                overflow: 'hidden'
+              }}
+            >
+              <div
+                style={{
+                  position: 'absolute',
+                  bottom: '-4rem',
+                  left: '-4rem',
+                  width: '8rem',
+                  height: '8rem',
+                  backgroundColor: '#FFFFFF',
+                  borderRadius: '4rem',
+                }}
+              />
+            </div>
+            <h4> {props.title} </h4>
+            <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {'@' + props.location} </a> </h5>
+            <h5> {props.period} </h5> 
+            <div className='phrases'>
+              {props.info.map((phrase, index) => 
+                <Phrase key={props.title + '/' + index} text={phrase}/>
+              )}
+            </div>
+          </>
+          :
+          <>
+            <h4> {props.title} </h4>
+            <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {'@' + props.location} </a> </h5>
+            <h5> {props.period} </h5> 
+            <div className='phrases'>
+              {props.info.map((phrase, index) => 
+                <Phrase key={props.title + '/' + index} text={phrase}/>
+              )}
+            </div>
+          </>
+        }
+      </div>   
+    }
+    </>
   );
 }
 
@@ -36,15 +152,13 @@ class Experience extends React.Component {
           data-aos-delay='300'
           data-aos-once={true}
         >
-          <div id='anchor_experience' className='anchor'></div>
-          {/* <SectionTitle title='work experience'/>  */}
-          <h4 style={{marginBottom: '1rem'}}> {'experience'.toUpperCase()} </h4>
-
           <JobListing 
             screenWidth={this.props.screenWidth}
             title='UI/UX Designer'
-            location='Alike, Remote'
+            location='Alike'
+            link='https://www.alike.dating/'
             period='Mar. 2021 - Current'
+            highlight={true}
             info={[
               'Modified and updated existing app screens with UI designs more aligned with modern trends and styles (e.g. navigation bar, headers, icons, and many other specific screens)',
               'Designed prototypes of new app screens and new user flows on Figma for the dev team to create',
@@ -55,8 +169,10 @@ class Experience extends React.Component {
           <JobListing 
             screenWidth={this.props.screenWidth}
             title='UI/UX Designer'
-            location='Hon-Media, Remote'
+            location='Hon-Media'
+            link='https://hon-media.com/'
             period='Sept. 2020 - Current'
+            highlight={true}
             info={[
               'Initiated the blog website development by starting off with user research and then proceeding onto wireframes and Figma prototypes',
               'Walked through the design choices of the prototype with team members during critique and feedback sessions',
@@ -66,7 +182,8 @@ class Experience extends React.Component {
           <JobListing 
             screenWidth={this.props.screenWidth}
             title='Computing Services Technical Assistant'
-            location='UCSD Extension, San Diego, CA'
+            location='UCSD Extension'
+            link='https://extension.ucsd.edu/courses-and-programs?gclid=CjwKCAjwq7aGBhADEiwA6uGZp8glMnCeS0HOaSlp0KuQzu7T42I22yywjRB6MzFP-S1DLl8k889VIBoCNugQAvD_BwE'
             period='Sept. 2017 - Mar. 2020'
             info={[
               'Solved technical issues that instructors struggled with e.g. projector connectivity, audio, internet',
@@ -77,7 +194,8 @@ class Experience extends React.Component {
           <JobListing 
             screenWidth={this.props.screenWidth}
             title='Website Graphics Designer'
-            location='US Trading Company, Hayward, CA'
+            location='US Trading Co.'
+            link='https://www.ustrading.com/en/'
             period='Jun. - Aug. 2017'
             info={[
               'Photographed new products',

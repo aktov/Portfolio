@@ -1,8 +1,8 @@
 import React from 'react';
-import LazyLoad from 'react-lazyload';
+// import LazyLoad from 'react-lazyload';
 
 import Card from './Card.js';
-import SectionTitle from './SectionTitle';
+import Title from './Title';
 
 // import imgM_inTune from '../images/cardImageM_inTune.png';
 // import imgM_prepd from '../images/cardImageM_prepd.png';
@@ -187,32 +187,26 @@ const Others = (props) => {
   return (
     <div className={props.screenWidth > 768 ? 'cardsDesktop' : 'cardsMobile'}>
       {props.projects.map((card) => 
-        <LazyLoad 
-          height={100} 
-          offset={50} 
-          overflow={false}
+        <Card
+          title={card.title}
           key={card.title.toString()}
-        >
-          <Card
-            title={card.title}
-            desc={card.descr}
-            image={card.image} 
-            imageM={card.imageM}
-            tags={card.tags}
-            color={card.color}
-            github={card.github}
-            figmaD={card.figmaD}
-            figmaM={card.figmaM}
-            figmaA={card.figmaA}
-            figmaB={card.figmaB}
-            figma1={card.figma1}
-            figma2={card.figma2}
-            figma={card.figma}
-            default={card.default}
-            link={card.link}
-            screenWidth={props.screenWidth}
-          />
-        </LazyLoad>  
+          desc={card.descr}
+          image={card.image} 
+          imageM={card.imageM}
+          tags={card.tags}
+          color={card.color}
+          github={card.github}
+          figmaD={card.figmaD}
+          figmaM={card.figmaM}
+          figmaA={card.figmaA}
+          figmaB={card.figmaB}
+          figma1={card.figma1}
+          figma2={card.figma2}
+          figma={card.figma}
+          default={card.default}
+          link={card.link}
+          screenWidth={props.screenWidth}
+        />
       )}
       
       {(props.screenWidth <= 768) && <div className='cardLast'> </div>}
@@ -226,21 +220,19 @@ class Projects extends React.Component {
     return (
       <div 
         className='projects'
-        data-aos='fade' 
-        data-aos-offset='50' 
-        data-aos-easing='ease-out-sine'
-        data-aos-duration='400'
-        data-aos-once={true}
+        // data-aos='fade' 
+        // data-aos-offset='50' 
+        // data-aos-easing='ease-out-sine'
+        // data-aos-duration='400'
+        // data-aos-once={true}
       > {/*style={this.props.screenWidth > 768 ? {width: '100%'} : null}>*/}
         <div id='anchor_projects' className='anchor'></div>
-        <SectionTitle title='projects'/> 
+        <Title title='projects' screenWidth={this.props.screenWidth} /> 
 
-        <h4 style={{marginBottom: '.625rem'}}> {'UI/UX design processes'.toUpperCase()} </h4>
+        <h4 style={{marginBottom: '.625rem', fontWeight: '600', fontSize:'1.5rem'}}> {'case studies'.toUpperCase()} </h4>
         <Others projects={projects_design} screenWidth={this.props.screenWidth} />
-        <h4 style={{ marginBottom: '.625rem' }}> {'UI mockup & prototype designs'.toUpperCase()} </h4>
+        <h4 style={{marginBottom: '.625rem', fontWeight: '600', fontSize:'1.5rem' }}> {'UI mockup & prototype designs'.toUpperCase()} </h4>
         <Others projects={projects_figma} screenWidth={this.props.screenWidth} />
-        {/* <h4 style={{marginBottom: '.625rem'}}> WEB DEVELOPMENT </h4>
-        <Others projects={projects_web} screenWidth={this.props.screenWidth} /> */}
       </div> 
     );
   }

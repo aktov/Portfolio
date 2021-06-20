@@ -97,14 +97,15 @@ class Card extends React.Component {
           onMouseEnter={this.handleMouseEnter} 
           onMouseLeave={this.handleMouseLeave}
           data-aos='fade' 
-          data-aos-offset='100' 
+          data-aos-offset='50' 
           data-aos-easing='ease-out-sine'
           data-aos-duration='400'
           data-aos-once={true}
         >
           
           <div className='imageHolder' style={{backgroundColor: this.props.color}}>
-            <LazyLoad height={200} offset={100}>
+            {/* <LazyLoad height={200} offset={100}> */}
+            <div className='lazyload-wrapper'>
               {this.props.default &&
                 <a href={this.props.default} target="_blank" rel="noopener noreferrer">
                   <img src={this.props.image} alt={this.props.title} draggable='false' />
@@ -115,7 +116,8 @@ class Card extends React.Component {
                   <img src={this.props.image} alt={this.props.title} draggable='false' />
                 </Link>
               } 
-            </LazyLoad>
+            </div>  
+            {/* </LazyLoad> */}
           </div>
          
 
@@ -146,7 +148,8 @@ class Card extends React.Component {
           onMouseLeave={this.handleMouseLeave}
         >
           <div className='imageHolder'>
-            <LazyLoad height={200} offset={100} overflow={true}>
+            <LazyLoad height={250} offset={2000} overflow={true}>
+            {/* <div className='lazyload-wrapper'> */}
               {this.props.default &&
                 <a href={this.props.default} target="_blank" rel="noopener noreferrer">
                   <img src={this.props.imageM} alt={this.props.title} draggable='false' />
@@ -157,6 +160,7 @@ class Card extends React.Component {
                   <img src={this.props.imageM} alt={this.props.title} draggable='false' />
                 </Link>
               } 
+            {/* </div> */}
             </LazyLoad>
           </div>
         

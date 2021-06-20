@@ -16,17 +16,18 @@ const Button = (props) => {
   function handleClick(e) {
     let anchor = document.getElementById('anchor_' + props.text);
     if (anchor) {
-      setTimeout(() => {anchor.scrollIntoView({behavior: 'smooth', block: 'start'})}, 2000);
+      setTimeout(() => {anchor.scrollIntoView({behavior: 'smooth', block: 'start'})}, 0);
     }
 
     // Closes the menu after a 500 ms delay
-    // if (props.closeMenu) {
-    //   setTimeout(() => {props.closeMenu()}, 500);
-    // }
+    if (props.closeMenu) {
+      setTimeout(() => {props.closeMenu()}, 0);
+    }
   }
 
   return (
-    <Link to={props.text === 'projects' ? '/' : '/'+ props.text}> 
+    // <Link to={props.text === 'projects' ? '/' : '/'+ props.text}> 
+    <Link to='/'> 
     <button  
       id={props.text} 
       className='buttonNav outlineNone'
