@@ -226,7 +226,7 @@ class Projects extends React.Component {
         // data-aos-duration='400'
         // data-aos-once={true}
       > {/*style={this.props.screenWidth > 768 ? {width: '100%'} : null}>*/}
-        <div id='anchor_projects' className='anchor'></div>
+        <div id='projects' className='anchor' style={this.props.screenWidth > 640 ? null : {marginTop: '-1rem'}}></div>
         <Title title='projects' screenWidth={this.props.screenWidth} /> 
 
         <h4 style={{marginBottom: '.625rem', fontWeight: '600', fontSize:'1.5rem'}}> {'case studies'.toUpperCase()} </h4>

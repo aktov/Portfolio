@@ -37,7 +37,7 @@ class About extends React.Component {
   render() {
     return (
       <div className='about'>
-        <div id='anchor_about' className='anchor' style={this.props.screenWidth > 640 ? {top: '15rem'} : {top: '1rem'}}></div>
+        <div id='about' className='anchor' style={this.props.screenWidth > 640 ? {top: '15rem'} : {top: '1rem'}}></div>
         <img src={toplay} alt='clouds' draggable='false' style={{position: 'absolute', width: '100%', top: '0'}}/> 
 
         {this.props.screenWidth > 640 ? 
@@ -224,35 +224,35 @@ class About extends React.Component {
         :
         <>
           <div className='background_about'>
-            <Parallax y={[-20,20]} styleOuter={{position: 'relative', overflow: 'visible'}}>
+            <Parallax y={[-5,50]} styleOuter={{position: 'relative', overflow: 'visible'}}>
               <img 
                   src={layer5}
                   alt={'background'}
                   style={{width:'100%'}}
               />
             </Parallax>
-            <Parallax y={[-20,20]} styleOuter={{overflow: 'visible'}}>
+            <Parallax y={[-5,50]} styleOuter={{overflow: 'visible'}}>
               <img 
                   src={layer4}
                   alt={'background'}
                   style={{width:'100%'}}
               />
             </Parallax>
-            <Parallax y={[-20,20]} styleOuter={{overflow: 'visible'}}>
+            <Parallax y={[-5,50]} styleOuter={{overflow: 'visible'}}>
               <img 
                   src={layer3}
                   alt={'background'}
                   style={{width:'100%'}}
               />
             </Parallax>
-            <Parallax y={[-20,20]} styleOuter={{overflow: 'visible'}}>
+            <Parallax y={[-5,50]} styleOuter={{overflow: 'visible'}}>
               <img 
                   src={layer2}
                   alt={'background'}
                   style={{width:'100%'}}
               />
             </Parallax>
-            <Parallax y={[-20,20]} styleOuter={{overflow: 'visible'}}>
+            <Parallax y={[-5,50]} styleOuter={{overflow: 'visible'}}>
               <img 
                   src={layer1}
                   alt={'background'}

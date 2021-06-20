@@ -1,6 +1,5 @@
 import React from 'react';
 import { HashRouter as Router, Route } from 'react-router-dom'
-import history from './components/history.js';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ParallaxProvider } from 'react-scroll-parallax';
@@ -19,7 +18,6 @@ import Hon from './components/Pages/Hon.js';
 import CSA from './components/Pages/CSA.js';
 import Yahoo from './components/Pages/Yahoo.js';
 // import Parking from './components/Pages/Parking.js';
-import ScrollToTop from './components/ScrollToTop.js';
 
 const breakpoint = 768;
 
@@ -50,8 +48,7 @@ class App extends React.Component {
     AOS.init();
     return (
       <ParallaxProvider>
-        <Router basename='/' history={history}>
-          <ScrollToTop />
+        <Router basename='/'>
           <div id='anchor_page' className='anchor' style={{top: '-50rem'}}></div>
           <Route exact path='/'>
             {this.state.screenWidth > breakpoint ? 
@@ -84,9 +81,6 @@ class App extends React.Component {
           <Route path='/yahoo'>
             <Yahoo screenWidth={this.state.screenWidth}/>
           </Route>
-          {/* <Route path='/parking'>
-            <Parking screenWidth={this.state.screenWidth}/>
-          </Route> */}
         </Router>
       </ParallaxProvider>
     );

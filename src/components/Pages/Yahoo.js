@@ -99,6 +99,10 @@ class Yahoo extends React.Component {
 
     this.toggleMenu = this.toggleMenu.bind(this);
   }
+  
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
 
   goToTop(e) {
     if (document.getElementById('anchor_page')) {

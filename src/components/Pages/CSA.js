@@ -182,6 +182,10 @@ class CSA extends React.Component {
 
     this.toggleMenu = this.toggleMenu.bind(this);
   }
+  
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
 
   toggleMenu() {
     this.setState((state, props) => ({menuOpen: !state.menuOpen}));

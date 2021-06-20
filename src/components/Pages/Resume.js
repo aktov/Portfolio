@@ -8,7 +8,7 @@ class Resume extends React.Component {
   render() {
     return (
       <div className='resume'>
-        <div id='anchor_resume' className='anchor' style={this.props.screenWidth > 640 ? {top: '0rem'} : {top: '1rem'}}></div>
+        <div id='resume' className='anchor' style={this.props.screenWidth > 640 ? {top: '0rem'} : {top: '-1rem'}}></div>
         {/* <img src={toplay} alt='clouds' draggable='false' style={{position: 'absolute', width: '100%', top: '0'}}/>  */}
 
         

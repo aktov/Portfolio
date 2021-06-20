@@ -118,6 +118,10 @@ class Boba extends React.Component {
 
     this.toggleMenu = this.toggleMenu.bind(this);
   }
+  
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
 
   goToTop(e) {
     if (document.getElementById('anchor_page')) {
@@ -328,46 +332,49 @@ class Boba extends React.Component {
               <p>
                 From this round of user testing, I wanted to takeaway these 4 things. Here's a summary of what I discovered.
               </p>
-              <p>
+              <p style={{marginBottom: 0}}>
                 <b>Transparency</b><br/>
-                <p>
-                  I wanted to make sure users knew what my icons meant or what each button did. <br/>
-                  Furthermore, are navigational elements placed in consistent spots? Are they expecting a certain element to go in a certain spot?
-                </p>
-                <p>
-                  For the most part, users stated that the designs were very intuitive. They found buttons easily understandable and were correct on their assumptions for what
-                  their taps would do.
-                </p>
               </p>
               <p>
+                I wanted to make sure users knew what my icons meant or what each button did. <br/>
+                Furthermore, are navigational elements placed in consistent spots? Are they expecting a certain element to go in a certain spot?
+              </p>
+              <p>
+                For the most part, users stated that the designs were very intuitive. They found buttons easily understandable and were correct on their assumptions for what
+                their taps would do.
+              </p>
+
+              <p style={{marginBottom: 0}}>
                 <b>Convenience</b><br/>
-                <p>
-                  Can certain tasks be done with ease? Can it be done with one hand to encourage on-the-go and quick data entry? <br/>
-                  I want this app to be as frictionless as possible, when I followed up with users on the survey as to why they didn't keep track of their finances more,
-                  some stated that it was because they got lazy or it was too much of a hassle to log their expenses, especially on spreadsheets.
-                </p>
-                <p>
-                  Users stated that they would be inclined to use this app; the user flow to adding an entry seemed very quick, easy, and straightforward.
-                </p>
               </p>
               <p>
+                Can certain tasks be done with ease? Can it be done with one hand to encourage on-the-go and quick data entry? <br/>
+                I want this app to be as frictionless as possible, when I followed up with users on the survey as to why they didn't keep track of their finances more,
+                some stated that it was because they got lazy or it was too much of a hassle to log their expenses, especially on spreadsheets.
+              </p>
+              <p>
+                Users stated that they would be inclined to use this app; the user flow to adding an entry seemed very quick, easy, and straightforward.
+              </p>
+
+              <p style={{marginBottom: 0}}>
                 <b>Navigation</b><br/>
-                <p>
-                  Do users struggle with navigating the app? This ties strongly with convenience I believe, I want user flows to be as effortless as possible.
-                </p>
-                <p>
-                  Users had no trouble navigating the app once they tapped on each nav bar icon and found out what each page represented or what they could do on it.
-                  Most users were able to get down the task of adding a new entry within a minute or less!
-                </p>
               </p>
               <p>
+                Do users struggle with navigating the app? This ties strongly with convenience I believe, I want user flows to be as effortless as possible.
+              </p>
+              <p>
+                Users had no trouble navigating the app once they tapped on each nav bar icon and found out what each page represented or what they could do on it.
+                Most users were able to get down the task of adding a new entry within a minute or less!
+              </p>
+
+              <p style={{marginBottom: 0}}>
                 <b>User Goals</b><br/>
-                <p>
-                  This one is more of a personal one: Does this app satisfy all the user goals and features/functionalities I had in mind at the start?
-                </p>
-                <p>
-                  From this round of user testing, I'd say so!
-                </p>
+              </p>
+              <p>
+                This one is more of a personal one: Does this app satisfy all the user goals and features/functionalities I had in mind at the start?
+              </p>
+              <p>
+                From this round of user testing, I'd say so!
               </p>
             </div>
 

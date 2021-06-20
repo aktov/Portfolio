@@ -7,7 +7,11 @@ import Contact from './Contact.js';
 import Content from './Content.js';
 import TopButton from './TopButton.js';
 
-class Desktop extends React.Component {
+class Desktop extends React.Component {  
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   render() {
     return (
       <>

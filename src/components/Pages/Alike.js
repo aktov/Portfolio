@@ -95,6 +95,10 @@ class Alike extends React.Component {
     this.toggleMenu = this.toggleMenu.bind(this);
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   goToTop(e) {
     if (document.getElementById('anchor_page')) {
       document.getElementById('anchor_page').scrollIntoView({behavior: 'smooth', block: 'start'});

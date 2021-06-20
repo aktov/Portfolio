@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import smoothscroll from 'smoothscroll-polyfill';
 smoothscroll.polyfill();
 
@@ -14,7 +15,8 @@ const headerCategories = [
 const Button = (props) => {
 
   function handleClick(e) {
-    let anchor = document.getElementById('anchor_' + props.text);
+    let anchor = document.getElementById(props.text);
+    console.log(window.location.hash);
     if (anchor) {
       setTimeout(() => {anchor.scrollIntoView({behavior: 'smooth', block: 'start'})}, 0);
     }
@@ -26,10 +28,9 @@ const Button = (props) => {
   }
 
   return (
-    // <Link to={props.text === 'projects' ? '/' : '/'+ props.text}> 
-    <Link to='/'> 
+    <Link to={window.location.hash == '#/' || window.location.hash.includes('#/#') ? '/' : '/#' + props.text}> 
     <button  
-      id={props.text} 
+      id={'button_'+ props.text} 
       className='buttonNav outlineNone'
       onClick={handleClick}
       aria-label={`Go to ${props.text}`}>
