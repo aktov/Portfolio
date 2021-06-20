@@ -147,7 +147,7 @@ class About extends React.Component {
         {this.props.screenWidth > 640 ? 
         <>
           <div className='background_about'>
-            <Parallax y={[-35,31]} styleOuter={{position: 'relative', overflow: 'visible'}}>
+            <Parallax y={[-25,41]} styleOuter={{position: 'relative', overflow: 'visible'}}>
               <img 
                   src={layer5}
                   alt={'background'}
@@ -160,7 +160,7 @@ class About extends React.Component {
                   data-aos-once={true}
               />
             </Parallax>
-            <Parallax y={[-35,34]} styleOuter={{overflow: 'visible'}}>
+            <Parallax y={[-25,44]} styleOuter={{overflow: 'visible'}}>
               <img 
                   src={layer4}
                   alt={'background'}
@@ -173,7 +173,7 @@ class About extends React.Component {
                   data-aos-once={true}
               />
             </Parallax>
-            <Parallax y={[-35,37]} styleOuter={{overflow: 'visible'}}>
+            <Parallax y={[-25,47]} styleOuter={{overflow: 'visible'}}>
               <img 
                   src={layer3}
                   alt={'background'}
@@ -186,7 +186,7 @@ class About extends React.Component {
                   data-aos-once={true}
               />
             </Parallax>
-            <Parallax y={[-15,25]} styleOuter={{overflow: 'visible'}}>
+            <Parallax y={[-10,25]} styleOuter={{overflow: 'visible'}}>
               <img 
                   src={layer2}
                   alt={'background'}
@@ -199,7 +199,7 @@ class About extends React.Component {
                   data-aos-once={true}
               />
             </Parallax>
-            <Parallax y={[-5,10]}>
+            <Parallax y={[0,10]}>
               <img 
                   src={layer1}
                   alt={'background'}
