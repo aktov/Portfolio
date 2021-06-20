@@ -224,42 +224,35 @@ class About extends React.Component {
         :
         <>
           <div className='background_about'>
-            <Parallax y={[-100,100]} styleOuter={{overflow: 'visible'}}>
-              <img 
-                  src={layer6}
-                  alt={'background'}
-                  style={{width:'100%'}}
-              />
-            </Parallax>
-            <Parallax y={[-100,100]} styleOuter={{position: 'relative', overflow: 'visible'}}>
+            <Parallax y={[-50,50]} styleOuter={{position: 'relative', overflow: 'visible'}}>
               <img 
                   src={layer5}
                   alt={'background'}
                   style={{width:'100%'}}
               />
             </Parallax>
-            <Parallax y={[-100,100]} styleOuter={{overflow: 'visible'}}>
+            <Parallax y={[-50,50]} styleOuter={{overflow: 'visible'}}>
               <img 
                   src={layer4}
                   alt={'background'}
                   style={{width:'100%'}}
               />
             </Parallax>
-            <Parallax y={[-100,100]} styleOuter={{overflow: 'visible'}}>
+            <Parallax y={[-50,50]} styleOuter={{overflow: 'visible'}}>
               <img 
                   src={layer3}
                   alt={'background'}
                   style={{width:'100%'}}
               />
             </Parallax>
-            <Parallax y={[-100,100]} styleOuter={{overflow: 'visible'}}>
+            <Parallax y={[-50,50]} styleOuter={{overflow: 'visible'}}>
               <img 
                   src={layer2}
                   alt={'background'}
                   style={{width:'100%'}}
               />
             </Parallax>
-            <Parallax y={[-100,100]}>
+            <Parallax y={[-50,50]}>
               <img 
                   src={layer1}
                   alt={'background'}
