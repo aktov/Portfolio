@@ -16,7 +16,7 @@ const Button = (props) => {
 
   function handleClick(e) {
     let anchor = document.getElementById(props.text);
-    console.log(window.location.hash);
+    
     if (anchor) {
       setTimeout(() => {anchor.scrollIntoView({behavior: 'smooth', block: 'start'})}, 0);
     }

@@ -26,6 +26,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       screenWidth: window.innerWidth,
+      hasLoadedOnce: false
     }
 
     this.handleResize = () => {
@@ -35,9 +36,9 @@ class App extends React.Component {
 
   componentDidMount() {
     window.addEventListener('resize', this.handleResize);
-  }
-
-  componentDidUpdate() {
+    console.log(this.state.hasLoadedOnce);
+    this.setState({hasLoadedOnce: true});
+    console.log(this.state.hasLoadedOnce);
   }
 
   componentWillUnmount() {
@@ -52,8 +53,8 @@ class App extends React.Component {
           <div id='anchor_page' className='anchor' style={{top: '-50rem'}}></div>
           <Route exact path='/'>
             {this.state.screenWidth > breakpoint ? 
-            <Desktop screenWidth={this.state.screenWidth}/> : 
-            <Mobile screenWidth={this.state.screenWidth}/>
+            <Desktop screenWidth={this.state.screenWidth} loaded={this.state.hasLoadedOnce} update={this.updateLoaded}/> : 
+            <Mobile screenWidth={this.state.screenWidth} loaded={this.state.hasLoadedOnce} update={this.updateLoaded}/>
             }
           </Route>
           <Route path='/about'>

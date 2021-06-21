@@ -220,12 +220,7 @@ class Projects extends React.Component {
     return (
       <div 
         className='projects'
-        // data-aos='fade' 
-        // data-aos-offset='50' 
-        // data-aos-easing='ease-out-sine'
-        // data-aos-duration='400'
-        // data-aos-once={true}
-      > {/*style={this.props.screenWidth > 768 ? {width: '100%'} : null}>*/}
+      > 
         <div id='projects' className='anchor' style={this.props.screenWidth > 640 ? null : {marginTop: '-1rem'}}></div>
         <Title title='projects' screenWidth={this.props.screenWidth} /> 
 

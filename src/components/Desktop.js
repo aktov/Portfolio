@@ -17,7 +17,7 @@ class Desktop extends React.Component {
       <>
       <Header useMobileNav={false} />
       <div className='app'>
-        <Background screenWidth={this.props.screenWidth} />
+        <Background screenWidth={this.props.screenWidth} loaded={this.props.loaded}/>
         <Contact screenWidth={this.props.screenWidth} /> 
         <Content screenWidth={this.props.screenWidth} />
       </div>
