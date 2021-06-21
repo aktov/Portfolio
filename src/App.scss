@@ -54,6 +54,10 @@ img { -ms-interpolation-mode: bicubic; }
     outline: none;
 }
 
+button, a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 div.app {
     width: 100%;
     max-width: toRem(1920);
