@@ -214,7 +214,7 @@ class Background extends React.Component {
           y={[0,80]}
           styleOuter={{bottom: '80vh'}}
         >
-          <Intro screenWidth={this.props.screenWidth} loaded={this.props.loaded}/>
+          <Intro screenWidth={this.props.screenWidth}/>
         </Parallax>
         <Parallax
           y={[0,20]}

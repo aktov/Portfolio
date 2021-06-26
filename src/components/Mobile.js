@@ -31,7 +31,7 @@ class Mobile extends React.Component {
           
         } */}
         <NavMenu toggleMenu={this.toggleMenu} screenWidth={this.props.screenWidth} menuOpen={this.state.menuOpen}/> 
-        <Background screenWidth={this.props.screenWidth} loaded={this.props.hasLoadedOnce}/>
+        <Background screenWidth={this.props.screenWidth} />
         <Content screenWidth={this.props.screenWidth} />
       </div>
 
