@@ -27,10 +27,22 @@ class Intro extends React.Component {
   componentDidMount() {
     if (window.sessionStorage.getItem('animationHasRanBefore')) {
       this.setState({doAnimate: false});
+      console.log('oh');
     }
     else {
       this.setState({doAnimate: true});
       window.sessionStorage.setItem('animationHasRanBefore', 1);
+      window.location.reload();
+      window.location.reload();
+      window.location.reload();
+      window.location.reload();
+      window.location.reload();
+      console.log('ughdasdadsfasf');
+      setTimeout(function(){
+        window.location.reload();
+        console.log('ugh');
+      }, 3000);
+      console.log('ughdasd');
     }
   }
 
