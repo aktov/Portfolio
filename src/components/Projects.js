@@ -16,7 +16,7 @@ import imgM_boba from '../images/cardImageM_boba.png';
 import imgM_signup from '../images/cardImageM_signup.png';
 import imgM_hon from '../images/cardImageM_hon.png';
 import imgM_csa from '../images/cardImageM_csa.png';
-import imgM_yahoo from '../images/cardImageM_yahoo.png';
+// import imgM_yahoo from '../images/cardImageM_yahoo.png';
 // import imgM_parking from '../images/cardImageM_parking.png';
 // Desktop images
 // import img_portfolio from '../images/cardImage_portfolio.png';
@@ -28,7 +28,7 @@ import img_boba from '../images/cardImage_boba.png';
 import img_signup from '../images/cardImage_signup.png';
 import img_hon from '../images/cardImage_hon.png';
 import img_csa from '../images/cardImage_csa.png';
-import img_yahoo from '../images/cardImage_yahoo.png';
+// import img_yahoo from '../images/cardImage_yahoo.png';
 // import img_parking from '../images/cardImage_parking.png';
 
 const projects_figma = [
@@ -129,17 +129,17 @@ const projects_design = [
     figmaM: 'https://www.figma.com/proto/HK3nRrbz73hPQqSlTNTDmu/CSA-Website-Design?node-id=241%3A0&viewport=176%2C217%2C0.07083262503147125&scaling=scale-down',
     link: '/csa'
   },
-  {
-    title: 'yahoo mobile redesign',
-    descr: 'The creative process behind redesigning mobile to improve user experience & satisfaction.',
-    image: img_yahoo,
-    imageM: imgM_yahoo,
-    tags: ['user testing', 'wireframing', 'prototyping'],
-    color: '#C19FF7',
-    figma1: 'https://www.figma.com/proto/pUOIhb7GiEGQeFotepQkQY/Yahoo-Mobile-Redesign?node-id=2%3A3&viewport=177%2C180%2C0.07531154155731201&scaling=scale-down',
-    figma2:'https://www.figma.com/proto/pUOIhb7GiEGQeFotepQkQY/Yahoo-Mobile-Redesign?node-id=21%3A175&viewport=368%2C198%2C0.09464660286903381&scaling=scale-down',
-    link: '/yahoo'
-  },
+  // {
+  //   title: 'yahoo mobile redesign',
+  //   descr: 'The creative process behind redesigning mobile to improve user experience & satisfaction.',
+  //   image: img_yahoo,
+  //   imageM: imgM_yahoo,
+  //   tags: ['user testing', 'wireframing', 'prototyping'],
+  //   color: '#C19FF7',
+  //   figma1: 'https://www.figma.com/proto/pUOIhb7GiEGQeFotepQkQY/Yahoo-Mobile-Redesign?node-id=2%3A3&viewport=177%2C180%2C0.07531154155731201&scaling=scale-down',
+  //   figma2:'https://www.figma.com/proto/pUOIhb7GiEGQeFotepQkQY/Yahoo-Mobile-Redesign?node-id=21%3A175&viewport=368%2C198%2C0.09464660286903381&scaling=scale-down',
+  //   link: '/yahoo'
+  // },
   // {
   //   title: 'parking fine',
   //   descr: 'A potential remedy to the parking frustrations of various users on UCSD\'s campus.',

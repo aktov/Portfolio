@@ -3,15 +3,16 @@ import React from 'react';
 import Phrase from './Phrase.js';
 
 const skillsList = {
-  'Languages': [
+  'Programming': [
     'HTML/CSS',
     'JavaScript',
     'Lua'
   ],
   'Frameworks': [
-    'React.js',
+    'Experience w React.js',
     'Tailwind CSS',
     'Sass',
+    'MJML'
   ],
   'UI Methods': [
     'Wireframing',
@@ -26,13 +27,14 @@ const skillsList = {
     'Affinity Diagrams',
     'Mood Boards'
   ],
-  'Design Apps': [
+  'Applications & Software': [
     'Figma',
-    'Google: Slides, Drawings',
+    'Maze.co',
+    'Typeform',
+    'Squarespace',
     'Adobe: Photoshop, Lightroom',
-    'AutoCAD',
-    'Blender',
-    'SketchUp'
+    'Google Suite',
+    'Microsoft Office',
   ]
 }
 

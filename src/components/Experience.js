@@ -155,15 +155,30 @@ class Experience extends React.Component {
           <JobListing 
             screenWidth={this.props.screenWidth}
             title='UI/UX Designer'
-            location='Alike'
-            link='https://www.alike.dating/'
-            period='Mar. 2021 - Current'
+            location='Artist Crowdfund Exchange'
+            link='https://www.ace.fan/'
+            period='August 2021 - Current'
             highlight={true}
             info={[
-              'Modified and updated existing app screens with UI designs more aligned with modern trends and styles (e.g. navigation bar, headers, icons, and many other specific screens)',
-              'Designed prototypes of new app screens and new user flows on Figma for the dev team to create',
-              'Used Figma Prototyping to turn our static prototype screens into a functional, interactable flow which better helped the developers visualize the app and its functionality',
-              'Helped quadruple the conversion rate of app downloads to users'
+              'Designed 70% of the app’s current screens.',
+              'Built a style guide and flexible component library for our Figma team to allow for consistency throughout different screens and features.',
+              'Conducted user interviews and created surveys to gather data to drive my initial designs for new features.',
+              'Led prototyping sessions with our developers to communicate the designs and animations.',
+              'Created pitch decks for the company’s founders to showcase for potential partners, investors, and seed fundraising.'
+            ]}
+          />
+          <JobListing 
+            screenWidth={this.props.screenWidth}
+            title='UI/UX Designer'
+            location='Alike'
+            link='https://www.alike.dating/'
+            period='March 2021 - August 2021'
+            // highlight={true}
+            info={[
+              'Modified and updated existing app screens with UI designs more aligned with modern trends and styles.',
+              'Designed prototypes of new app screens and new user flows on Figma for the dev team to create.',
+              'Used Figma Prototyping to turn our static prototype screens into a functional, interactable flow which better helped the developers visualize the app and its functionality.',
+              'Helped quadruple the conversion rate of app downloads to users.'
             ]}
           />
           <JobListing 
@@ -171,12 +186,12 @@ class Experience extends React.Component {
             title='UI/UX Designer'
             location='Hon-Media'
             link='https://hon-media.com/'
-            period='Sept. 2020 - Current'
-            highlight={true}
+            period='September 2020 - July 2021'
+            // highlight={true}
             info={[
-              'Initiated the blog website development by starting off with user research and then proceeding onto wireframes and Figma prototypes',
-              'Walked through the design choices of the prototype with team members during critique and feedback sessions',
-              'Utilized Tailwind CSS to ensure the web & mobile responsiveness of blog site'
+              'Initiated the blog website development by starting off with user research and then proceeding onto wireframes and Figma prototypes.',
+              'Walked through the design choices of the prototype with team members during critique and feedback sessions.',
+              'Utilized Tailwind CSS to ensure the web & mobile responsiveness of blog site.'
             ]}
           />
           <JobListing 
@@ -184,11 +199,11 @@ class Experience extends React.Component {
             title='Computing Services Technical Assistant'
             location='UCSD Extension'
             link='https://extension.ucsd.edu/courses-and-programs?gclid=CjwKCAjwq7aGBhADEiwA6uGZp8glMnCeS0HOaSlp0KuQzu7T42I22yywjRB6MzFP-S1DLl8k889VIBoCNugQAvD_BwE'
-            period='Sept. 2017 - Mar. 2020'
+            period='September 2017 - March 2020'
             info={[
-              'Solved technical issues that instructors struggled with e.g. projector connectivity, audio, internet',
-              'Improved the team’s workflow efficiency by actively reorganizing computer components based on their frequency of usage',
-              'Upgraded computer hardware/software e.g. RAM, memory, hard drive images'
+              'Solved technical issues that instructors struggled with e.g. projector connectivity, audio, internet.',
+              'Improved the team’s workflow efficiency by actively reorganizing computer components based on their frequency of usage.',
+              'Upgraded computer hardware/software e.g. RAM, memory, hard drive images.'
             ]}
           />
           <JobListing 
@@ -196,11 +211,11 @@ class Experience extends React.Component {
             title='Website Graphics Designer'
             location='US Trading Co.'
             link='https://www.ustrading.com/en/'
-            period='Jun. - Aug. 2017'
+            period='June 2017 - August 2017'
             info={[
-              'Photographed new products',
-              'Edited product photos in Adobe Lightroom and Photoshop for pre-uploading',
-              'Used Adobe InDesign to update the existing website catalog with new photos'
+              'Photographed new products.',
+              'Edited product photos in Adobe Lightroom and Photoshop for pre-uploading.',
+              'Used Adobe InDesign to update the existing website catalog with new photos.'
             ]}
           />
         </div>

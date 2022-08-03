@@ -83,7 +83,7 @@ class Intro extends React.Component {
             data-aos-delay='2000'
             data-aos-once={true}
           > 
-            I’m currently looking for full-time or internship opportunities to bring what I love doing onto the team to create outstanding experiences for your users! 
+            I’m currently looking for full-time opportunities to bring what I love doing onto the team to create outstanding experiences for your users! 
           </h5>
           </>
           :
@@ -95,7 +95,7 @@ class Intro extends React.Component {
             a UI/UX designer 
           </h1>
           <h5 style={{ fontSize: this.props.screenWidth < 480 ? '1rem' : '1.25rem' }}> 
-            I’m currently looking for full-time or internship opportunities to bring what I love doing onto the team to create outstanding experiences for your users! 
+            I’m currently looking for full-time opportunities to bring what I love doing onto the team to create outstanding experiences for your users! 
           </h5>
           </>
           }
