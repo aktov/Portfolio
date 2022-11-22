@@ -28,7 +28,7 @@ const Button = (props) => {
   }
 
   return (
-    <Link to={window.location.hash == '#/' || window.location.hash.includes('#/#') ? '/' : '/#' + props.text}> 
+    <Link to={window.location.hash === '#/' || window.location.hash.includes('#/#') ? '/' : '/#' + props.text}> 
     <button  
       id={'button_'+ props.text} 
       className='buttonNav outlineNone'

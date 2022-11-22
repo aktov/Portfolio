@@ -36,14 +36,14 @@ class App extends React.Component {
   componentDidMount() {
     window.addEventListener('resize', this.handleResize);
     
-    if (window.sessionStorage.getItem('siteLoaded')) {
-      this.setState({doAnimate: false});
-    }
-    else {
-      this.setState({doAnimate: true});
-      window.sessionStorage.setItem('siteLoaded', 1);
-      window.location.reload();
-    }
+    // if (window.sessionStorage.getItem('siteLoaded')) {
+    //   this.setState({doAnimate: false});
+    // }
+    // else {
+    //   this.setState({doAnimate: true});
+    //   window.sessionStorage.setItem('siteLoaded', 1);
+    //   window.location.reload();
+    // }
   }
 
   componentWillUnmount() {

@@ -32,7 +32,7 @@ const skillsList = {
     'Maze.co',
     'Typeform',
     'Squarespace',
-    'Adobe: Photoshop, Lightroom',
+    'Adobe Lightroom',
     'Google Suite',
     'Microsoft Office',
   ]

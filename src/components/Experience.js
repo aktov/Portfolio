@@ -13,7 +13,7 @@ const JobListing = (props) => {
         className='listing'
         style={props.highlight ? {paddingLeft: '5%'} : null}
         data-aos='fade' 
-        data-aos-offset='200' 
+        data-aos-offset='50' 
         data-aos-easing='ease-out-sine'
         data-aos-duration='400'
         data-aos-once={true}
@@ -154,17 +154,18 @@ class Experience extends React.Component {
         >
           <JobListing 
             screenWidth={this.props.screenWidth}
-            title='UI/UX Designer'
+            title='Lead UI/UX Designer'
             location='Artist Crowdfund Exchange'
             link='https://www.ace.fan/'
-            period='August 2021 - Current'
-            highlight={true}
+            period='August 2021 - October 2022'
+            // highlight={true}
             info={[
-              'Designed 70% of the app’s current screens.',
-              'Built a style guide and flexible component library for our Figma team to allow for consistency throughout different screens and features.',
-              'Conducted user interviews and created surveys to gather data to drive my initial designs for new features.',
-              'Led prototyping sessions with our developers to communicate the designs and animations.',
-              'Created pitch decks for the company’s founders to showcase for potential partners, investors, and seed fundraising.'
+              'Conducted user interviews and surveys to gather data to drive my initial designs for new features and updates.',
+              'Led prototyping sessions with our developers to respond to their questions and ensured they understood the functionality of new features and visual animations.',
+              'Guided monthly UX-focused feature backlog prioritizations to strike a balance between company goals and user needs.',
+              'Collaborated with company founders to create pitch decks for prospective stakeholders and seed fundraising.',
+              'Built a style guide and flexible component library in our Figma Team for brand consistency and design cohesion throughout different screens and features.',
+              'Designed 5 new & major features, 3 of which are currently live on the app, accounting for 50% of the app’s screens. (Onboarding, Events, Profiles)'
             ]}
           />
           <JobListing 
@@ -175,10 +176,9 @@ class Experience extends React.Component {
             period='March 2021 - August 2021'
             // highlight={true}
             info={[
-              'Modified and updated existing app screens with UI designs more aligned with modern trends and styles.',
-              'Designed prototypes of new app screens and new user flows on Figma for the dev team to create.',
-              'Used Figma Prototyping to turn our static prototype screens into a functional, interactable flow which better helped the developers visualize the app and its functionality.',
-              'Helped quadruple the conversion rate of app downloads to users.'
+              'Updated existing app screens with designs more aligned with modern trends and styles.',
+              'Worked directly with the CEO to draft wireframes of future features to meet the needs and expectations of our users.',
+              'Transformed static mockup screens into interactive prototypes to better help the developers visualize app features and functionality.'
             ]}
           />
           <JobListing 
@@ -189,9 +189,9 @@ class Experience extends React.Component {
             period='September 2020 - July 2021'
             // highlight={true}
             info={[
-              'Initiated the blog website development by starting off with user research and then proceeding onto wireframes and Figma prototypes.',
-              'Walked through the design choices of the prototype with team members during critique and feedback sessions.',
-              'Utilized Tailwind CSS to ensure the web & mobile responsiveness of blog site.'
+              'Spearheaded the company\'s blog website development by designing its initial wireframes, mockups, and final prototype.',
+              'Organized design critique sessions with project managers and software developers to showcase usability flows and features.',
+              'Ensured the web & mobile responsiveness of the blog site by utilizing Tailwind CSS.'
             ]}
           />
           <JobListing 

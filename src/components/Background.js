@@ -17,94 +17,48 @@ import layer6 from '../images/banner/Layer06.svg';
 smoothscroll.polyfill();
 
 class Intro extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      doAnimate: true
-    }
-  }
+  // constructor(props) {
+  //   super(props);
+  //   // this.state = {
+  //   //   doAnimate: true
+  //   // }
+  // }
 
-  componentDidMount() {
-    if (window.sessionStorage.getItem('animationHasRanBefore')) {
-      this.setState({doAnimate: false});
-      console.log('oh');
-    }
-    else {
-      this.setState({doAnimate: true});
-      window.sessionStorage.setItem('animationHasRanBefore', 1);
-      window.location.reload();
-      window.location.reload();
-      window.location.reload();
-      window.location.reload();
-      window.location.reload();
-      console.log('ughdasdadsfasf');
-      setTimeout(function(){
-        window.location.reload();
-        console.log('ugh');
-      }, 3000);
-      console.log('ughdasd');
-    }
-  }
+  // componentDidMount() {
+  //   if (window.sessionStorage.getItem('animationHasRanBefore')) {
+  //     this.setState({doAnimate: false});
+  //     console.log('oh');
+  //   }
+  //   else {
+  //     this.setState({doAnimate: true});
+  //     window.sessionStorage.setItem('animationHasRanBefore', 1);
+  //     window.location.reload();
+  //     window.location.reload();
+  //     window.location.reload();
+  //     window.location.reload();
+  //     window.location.reload();
+  //     console.log('ughdasdadsfasf');
+  //     setTimeout(function(){
+  //       window.location.reload();
+  //       console.log('ugh');
+  //     }, 3000);
+  //     console.log('ughdasd');
+  //   }
+  // }
 
   render() {
     return (
       <div className='intro'> 
         <div className='text' style={this.props.screenWidth <= 768 ? {width: '75%'} : null}>
-        {this.state.doAnimate == true ? 
-          <>
-          <h1 
-            style={{ fontSize: this.props.screenWidth < 480 ? '2.5rem' : '3.125rem' }}
-            data-aos='fade' 
-            data-aos-offset='-300' 
-            data-aos-easing='ease-out-sine'
-            data-aos-duration='600'
-            data-aos-delay='300'
-            data-aos-once={true}
-          > 
-            I'm Alex, 
-          </h1>
-          <h1 
-            style={{ fontSize: this.props.screenWidth < 480 ? '2rem' : '2.8rem', marginTop: '-2rem' }}
-            data-aos='fade' 
-            data-aos-offset='-300' 
-            data-aos-easing='ease-out-sine'
-            data-aos-duration='600'
-            data-aos-delay='1000'
-            data-aos-once={true}
-          > 
-            a UI/UX designer 
-          </h1>
-          <h5 
-            style={{ fontSize: this.props.screenWidth < 480 ? '1rem' : '1.25rem' }}
-            data-aos='fade' 
-            data-aos-offset='-300' 
-            data-aos-easing='ease-out-sine'
-            data-aos-duration='800'
-            data-aos-delay='2000'
-            data-aos-once={true}
-          > 
-            I’m currently looking for full-time opportunities to bring what I love doing onto the team to create outstanding experiences for your users! 
-          </h5>
-          </>
-          :
-          <>
           <h1 style={{ fontSize: this.props.screenWidth < 480 ? '2.5rem' : '3.125rem' }}> 
             I'm Alex, 
           </h1>
           <h1 style={{ fontSize: this.props.screenWidth < 480 ? '2rem' : '2.8rem', marginTop: '-2rem' }}> 
-            a UI/UX designer 
+            a UI/UX designer. 
           </h1>
-          <h5 style={{ fontSize: this.props.screenWidth < 480 ? '1rem' : '1.25rem' }}> 
+          {/* <h5 style={{ fontSize: this.props.screenWidth < 480 ? '1rem' : '1.25rem' }}> 
             I’m currently looking for full-time opportunities to bring what I love doing onto the team to create outstanding experiences for your users! 
-          </h5>
-          </>
-          }
-          {/* {props.screenWidth <= 768 && 
-
-          <button onClick={handleClick}> 
-            view projects
-            <img src={arrow} alt='arrow' style={{marginLeft: '10px'}}/>
-          </button>} */}
+          </h5> */}
         </div>
       </div>   
     );
