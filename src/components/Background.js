@@ -2,17 +2,32 @@ import React from 'react';
 import smoothscroll from 'smoothscroll-polyfill';
 import { Parallax } from 'react-scroll-parallax';
 
-import overlay from '../images/banner/overlay.svg';
-import underlay from '../images/banner/underlay.svg';
-import layer1 from '../images/banner/Layer01.svg';
-import layer2 from '../images/banner/Layer02.svg';
-import layer25 from '../images/banner/Layer02-5.svg';
-import layer3 from '../images/banner/Layer03.svg';
-import layer35 from '../images/banner/Layer03-5.svg';
-import layer4 from '../images/banner/Layer04.svg';
-import layer45 from '../images/banner/Layer04-5.svg';
-import layer5 from '../images/banner/Layer05.svg';
-import layer6 from '../images/banner/Layer06.svg';
+//for both
+import overlay from '../images/banner3/Overlay.svg';
+
+// For desktop
+import underlay_des from '../images/banner3/Underlay.svg';
+import layer1_des from '../images/banner3/Layer01.svg';
+import layer2_des from '../images/banner3/Layer02.svg';
+import layer25_des from '../images/banner3/Layer02-5.svg';
+import layer3_des from '../images/banner3/Layer03.svg';
+import layer35_des from '../images/banner3/Layer03-5.svg';
+import layer4_des from '../images/banner3/Layer04.svg';
+import layer45_des from '../images/banner3/Layer04-5.svg';
+import layer5_des from '../images/banner3/Layer05.svg';
+import layer6_des from '../images/banner3/Layer06.svg';
+
+// For mobile
+import underlay_mob from '../images/banner/Underlay.svg';
+import layer1_mob from '../images/banner/Layer01.svg';
+import layer2_mob from '../images/banner/Layer02.svg';
+import layer25_mob from '../images/banner/Layer02-5.svg';
+import layer3_mob from '../images/banner/Layer03.svg';
+import layer35_mob from '../images/banner/Layer03-5.svg';
+import layer4_mob from '../images/banner/Layer04.svg';
+import layer45_mob from '../images/banner/Layer04-5.svg';
+import layer5_mob from '../images/banner/Layer05.svg';
+import layer6_mob from '../images/banner/Layer06.svg';
 
 smoothscroll.polyfill();
 
@@ -81,88 +96,95 @@ class Background extends React.Component {
         {this.props.screenWidth > 640 ?
         <>
         <Parallax
-          y={[-40,80]}
+          y={[0,150]}
+          styleOuter={{bottom: '10rem'}}
         >
           <img 
-              src={underlay}
+              src={underlay_des}
+              alt={'background'}
+              style={{width:'180%'}}
+              draggable='false' 
+          />
+        </Parallax>
+        <Parallax
+          y={[0,200]}
+        >
+          <img 
+              src={layer6_des}
               alt={'background'}
               style={{width:'100%'}}
               draggable='false' 
           />
         </Parallax>
         <Parallax
-          y={[-50,80]}
+          y={[0,150]}
         >
           <img 
-              src={layer6}
-              alt={'background'}
-              style={{width:'100%'}}
-              draggable='false' 
-          />
-        </Parallax>
-        <Parallax
-          y={[-50,80]}
-        >
-          <img 
-              src={layer5}
+              src={layer5_des}
               alt={'background'}
               style={{width: '100%'}}
               draggable='false' 
           />
         </Parallax>
         <Parallax
-          x={[0,3]}
-          y={[0,80]}
-          styleOuter={{left: '50vw', bottom: '29rem'}}
-        >
-          <img 
-              src={layer45}
-              alt={'background'}
-              style={{width:'20%'}}
-              draggable='false' 
-          />
-        </Parallax>
-        <Parallax
-          y={[-40,70]}
-        >
-          <img 
-              src={layer4}
-              alt={'background'}
-              style={{width:'100%'}}
-              draggable='false' 
-          />
-        </Parallax>
-        <Parallax
-          x={[0,-3]}
+          x={[0,-2]}
           y={[0,150]}
-          styleOuter={{left: '75vw', bottom: '23rem'}}
+          styleOuter={{bottom: '10vh'}}
         >
           <img 
-              src={layer35}
+              src={layer45_des}
               alt={'background'}
-              style={{width:'15%'}}
+              style={{width:'80%'}}
               draggable='false' 
           />
         </Parallax>
         <Parallax
-          y={[-40,60]}
+          y={[0,120]}
         >
           <img 
-              src={layer3}
+              src={layer4_des}
               alt={'background'}
               style={{width:'100%'}}
               draggable='false' 
           />
         </Parallax>
         <Parallax
-          x={[0,3]}
-          y={[0,15]}
-          styleOuter={{left: '-5rem', bottom: '12rem'}}
+          x={[0,-4]}
+          y={[0,120]}
+          styleOuter={{bottom: '8vh'}}
         >
           <img 
-              src={layer25}
+              src={layer35_des}
               alt={'background'}
-              style={{width:'50%'}}
+              style={{width:'90%'}}
+              draggable='false' 
+          />
+        </Parallax>
+        <Parallax
+          y={[0,90]}
+        >
+          <img 
+              src={layer3_des}
+              alt={'background'}
+              style={{width:'100%'}}
+              draggable='false' 
+          />
+        </Parallax>
+        <Parallax
+          y={[-200,100]}
+          styleOuter={{bottom: '50vh'}}
+        >
+          <Intro screenWidth={this.props.screenWidth}/>
+        </Parallax>
+        <Parallax
+          x={[0,-8]}
+          y={[-20,60]}
+          styleOuter={{left: '-5rem', bottom: '12vh'}}
+        >
+          <img 
+              src={layer25_des}
+              alt={'background'}
+              style={{width:'80%'}}
               draggable='false' 
           />
         </Parallax>
@@ -170,36 +192,30 @@ class Background extends React.Component {
           y={[0,60]}
         >
           <img 
-              src={layer2}
+              src={layer2_des}
               alt={'background'}
               style={{width: '100%'}}
               draggable='false' 
           />
         </Parallax>
         <Parallax
-          y={[0,80]}
-          styleOuter={{bottom: '80vh'}}
-        >
-          <Intro screenWidth={this.props.screenWidth}/>
-        </Parallax>
-        <Parallax
-          y={[0,20]}
+          y={[0,0]}
         >
           <img 
-              src={layer1}
+              src={layer1_des}
               alt={'background'}
               style={{width: '100%'}}
               draggable='false' 
           />
         </Parallax>
         <Parallax
-          x={[0,-7]}
+          x={[0,-10]}
           styleOuter={{bottom: '-12px'}}
         >
           <img 
               src={overlay}
               alt={'background'}
-              style={{width: '200%'}}
+              style={{width: '150%'}}
               draggable='false' 
           />
         </Parallax>
@@ -207,96 +223,96 @@ class Background extends React.Component {
         :
         <>
         <Parallax
-          y={[0,80]}
+          y={[-60,300]}
         >
           <img 
-              src={underlay}
+              src={underlay_mob}
               alt={'background'}
               style={{width:'100%'}}
               draggable='false' 
           />
         </Parallax>
         <Parallax
-          y={[0,80]}
+          y={[-80,400]}
         >
           <img 
-              src={layer6}
+              src={layer6_mob}
               alt={'background'}
               style={{width:'100%'}}
               draggable='false' 
           />
         </Parallax>
         <Parallax
-          y={[0,80]}
+          y={[-55,300]}
         >
           <img 
-              src={layer5}
+              src={layer5_mob}
               alt={'background'}
               style={{width: '100%'}}
               draggable='false' 
           />
         </Parallax>
         <Parallax
-          x={[0,3]}
-          y={[0,80]}
-          styleOuter={{left: '50vw', bottom: '29rem'}}
+          x={[0,-3]}
+          y={[-150,1200]}
+          styleOuter={{left: '50vw', bottom: '15rem'}}
         >
           <img 
-              src={layer45}
+              src={layer45_mob}
               alt={'background'}
               style={{width:'20%'}}
               draggable='false' 
           />
         </Parallax>
         <Parallax
-          y={[0,60]}
+          y={[-45,250]}
         >
           <img 
-              src={layer4}
+              src={layer4_mob}
               alt={'background'}
               style={{width:'100%'}}
               draggable='false' 
           />
         </Parallax>
         <Parallax
-          x={[0,-3]}
-          y={[0,150]}
-          styleOuter={{left: '75vw', bottom: '23rem'}}
+          x={[0,-5]}
+          y={[-25,400]}
+          styleOuter={{left: '75vw', bottom: '8rem'}}
         >
           <img 
-              src={layer35}
+              src={layer35_mob}
               alt={'background'}
               style={{width:'15%'}}
               draggable='false' 
           />
         </Parallax>
         <Parallax
-          y={[0,40]}
+          y={[-25,150]}
         >
           <img 
-              src={layer3}
+              src={layer3_mob}
               alt={'background'}
               style={{width:'100%'}}
               draggable='false' 
           />
         </Parallax>
         <Parallax
-          x={[0,3]}
-          y={[0,15]}
-          styleOuter={{left: '-5rem', bottom: '12rem'}}
+          x={[0,-7]}
+          y={[-25,65]}
+          styleOuter={{left: '-5rem', bottom: '5rem'}}
         >
           <img 
-              src={layer25}
+              src={layer25_mob}
               alt={'background'}
               style={{width:'50%'}}
               draggable='false' 
           />
         </Parallax>
         <Parallax
-          y={[0,40]}
+          y={[-20,100]}
         >
           <img 
-              src={layer2}
+              src={layer2_mob}
               alt={'background'}
               style={{width: '100%'}}
               draggable='false' 
@@ -309,17 +325,17 @@ class Background extends React.Component {
           <Intro screenWidth={this.props.screenWidth} loaded={this.props.loaded}/>
         </Parallax>
         <Parallax
-          y={[0,20]}
+          y={[0,0]}
         >
           <img 
-              src={layer1}
+              src={layer1_mob}
               alt={'background'}
               style={{width: '100%'}}
               draggable='false' 
           />
         </Parallax>
         <Parallax
-          x={[0,-7]}
+          x={[0,-10]}
           styleOuter={{bottom: '-12px'}}
         >
           <img 
