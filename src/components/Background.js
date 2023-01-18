@@ -3,31 +3,31 @@ import smoothscroll from 'smoothscroll-polyfill';
 import { Parallax } from 'react-scroll-parallax';
 
 //for both
-import overlay from '../images/banner3/Overlay.svg';
+import overlay from '../images/skyline1_desktop/Overlay.svg';
 
 // For desktop
-import underlay_des from '../images/banner3/Underlay.svg';
-import layer1_des from '../images/banner3/Layer01.svg';
-import layer2_des from '../images/banner3/Layer02.svg';
-import layer25_des from '../images/banner3/Layer02-5.svg';
-import layer3_des from '../images/banner3/Layer03.svg';
-import layer35_des from '../images/banner3/Layer03-5.svg';
-import layer4_des from '../images/banner3/Layer04.svg';
-import layer45_des from '../images/banner3/Layer04-5.svg';
-import layer5_des from '../images/banner3/Layer05.svg';
-import layer6_des from '../images/banner3/Layer06.svg';
+import underlay_des from '../images/skyline1_desktop/Underlay.svg';
+import layer1_des from '../images/skyline1_desktop/Layer01.svg';
+import layer2_des from '../images/skyline1_desktop/Layer02.svg';
+import layer25_des from '../images/skyline1_desktop/Layer02-5.svg';
+import layer3_des from '../images/skyline1_desktop/Layer03.svg';
+import layer35_des from '../images/skyline1_desktop/Layer03-5.svg';
+import layer4_des from '../images/skyline1_desktop/Layer04.svg';
+import layer45_des from '../images/skyline1_desktop/Layer04-5.svg';
+import layer5_des from '../images/skyline1_desktop/Layer05.svg';
+import layer6_des from '../images/skyline1_desktop/Layer06.svg';
 
 // For mobile
-import underlay_mob from '../images/banner/Underlay.svg';
-import layer1_mob from '../images/banner/Layer01.svg';
-import layer2_mob from '../images/banner/Layer02.svg';
-import layer25_mob from '../images/banner/Layer02-5.svg';
-import layer3_mob from '../images/banner/Layer03.svg';
-import layer35_mob from '../images/banner/Layer03-5.svg';
-import layer4_mob from '../images/banner/Layer04.svg';
-import layer45_mob from '../images/banner/Layer04-5.svg';
-import layer5_mob from '../images/banner/Layer05.svg';
-import layer6_mob from '../images/banner/Layer06.svg';
+import underlay_mob from '../images/skyline1_mobile/Underlay.svg';
+import layer1_mob from '../images/skyline1_mobile/Layer01.svg';
+import layer2_mob from '../images/skyline1_mobile/Layer02.svg';
+import layer25_mob from '../images/skyline1_mobile/Layer02-5.svg';
+import layer3_mob from '../images/skyline1_mobile/Layer03.svg';
+import layer35_mob from '../images/skyline1_mobile/Layer03-5.svg';
+import layer4_mob from '../images/skyline1_mobile/Layer04.svg';
+import layer45_mob from '../images/skyline1_mobile/Layer04-5.svg';
+import layer5_mob from '../images/skyline1_mobile/Layer05.svg';
+import layer6_mob from '../images/skyline1_mobile/Layer06.svg';
 
 smoothscroll.polyfill();
 

@@ -589,354 +589,6 @@ div.content {
             width: 100%;
             margin-top: toRem(0);
         }
-
-        // div.about {
-        //     width: 100%;
-        //     display: flex;
-        //     flex-flow: row wrap;
-        //     justify-content: center;
-
-        //     .text {
-        //         width: 50%;
-        //         margin-bottom: toRem(30);
-        //         flex-grow: 1;
-
-        //         p {
-        //             max-width: 100%;
-        //             margin-top: 0;
-        //         }
-        //     }
-
-        //     .textMobile {
-        //         width: 100%;
-        //         margin-bottom: toRem(30);
-        //         flex-grow: 1;
-
-        //         p {
-        //             max-width: 100%;
-        //             margin-top: 0;
-        //         }
-        //     }
-
-        //     .pic {
-        //         display: flex;
-        //         align-self: flex-start;
-        //         margin-bottom: toRem(50);
-
-        //         border-radius: toRem(500);
-        //         overflow: hidden;
-
-        //         .lazyload-wrapper {
-        //             width: 100%;
-        //             height: 100%;
-
-        //             display: flex;
-        //             align-self: flex-start;
-                    
-        //             img {
-        //                 width: 100%;
-        //                 align-self: flex-start;
-        //             }
-        //         }
-                
-        //     }
-
-        //     .desktop {
-        //         width: 50%;
-        //         min-width: toRem(50);
-        //         max-width: toRem(300);
-        //         height: auto;
-        //         margin-left: 5%;              
-        //     }
-
-        //     .mobile {
-        //         width: 100%;
-        //         max-width: toRem(250);
-        //         height: auto;
-        //         margin-left: 0;
-        //     }
-        // }
-
-        // div.resume {
-        //     position: relative;
-        //     width: 100%;
-
-        //     display: flex;
-        //     flex-flow: column;
-        //     justify-content: flex-start;
-        //     align-items: flex-start;
-
-        //     div.education {
-        //         position: relative;
-        //         width: 100%;
-        //         min-width: toRem(240);
-        //         margin: auto;
-        //         margin-top: 0;
-        //         margin-bottom: toRem(50);
-        
-        //         display: flex;
-        //         flex-flow: column;
-        //         justify-content: flex-start;
-        //         align-items: flex-start;
-
-        //         h4 {
-        //             margin-bottom: toRem(5);
-        //             font-family: 'Poppins', sans-serif;
-        //             font-style: normal;
-        //             font-weight: 500;
-        //             font-size: toRem(20);
-        //         }
-
-        //         h4:first-of-type {
-        //             margin-bottom: toRem(10);
-        //             font-family: 'Poppins', sans-serif;
-        //             font-style: normal;
-        //             font-weight: 600;
-        //             font-size: $size_h4;
-        //         }                
-        
-        //         h5 {
-        //             margin: toRem(3) 0;
-        //             font-family: 'Poppins', sans-serif;
-        //             font-style: normal;
-        //             font-weight: 500;
-        //             font-size: $size_p;
-        //         }
-        //     }
-
-        //     div.experience {
-        //         position: relative;
-        //         width: 100%;
-        //         min-width: toRem(240);
-        //         margin: auto;
-        //         margin-top: 0;
-        //         margin-bottom: toRem(50);
-            
-        //         display: flex;
-        //         flex-flow: row wrap;
-        //         justify-content: center;
-        //         align-items: stretch;
-
-        //         h4 {
-        //             margin-bottom: toRem(10);
-        //             font-family: 'Poppins', sans-serif;
-        //             font-style: normal;
-        //             font-weight: 600;
-        //             font-size: $size_h4;
-        //         }
-
-        //         div.listing {
-        //             width: 45%;
-        //             height: auto;
-        //             margin: toRem(16);
-
-        //             display: flex;
-        //             flex-flow: column;
-        //             justify-content: flex-start;
-                    
-        //             padding: toRem(32) toRem(32);
-
-        //             border-radius: toRem(10);
-        //             border: none;
-        //             background-color: #ffffff;
-        //             // -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
-        //             // -moz-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
-        //             // -ms-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
-        //             // -o-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
-        //             // filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
-        //             // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10);
-
-
-        //             h4 {
-        //                 margin-bottom: toRem(5);
-        //                 font-family: 'Poppins', sans-serif;
-        //                 font-style: normal;
-        //                 font-weight: 600;
-        //                 font-size: toRem(20);
-        //             }
-
-        //             h5 {
-        //                 margin: toRem(3) 0;
-        //                 font-family: 'Poppins', sans-serif;
-        //                 font-style: normal;
-        //                 font-weight: 500;
-        //                 font-size: $size_p;
-        //             }
-        //         }
-
-        //         div.listingM {
-        //             width: 100%;
-        //             height: auto;
-        //             margin: auto;
-        //             margin-bottom: toRem(24);
-
-        //             display: flex;
-        //             flex-flow: column;
-                    
-        //             padding: toRem(32) toRem(32);
-
-        //             border-radius: toRem(10);
-        //             border: none;
-        //             background-color: #ffffff;
-        //             // -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
-        //             // -moz-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
-        //             // -ms-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
-        //             // -o-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
-        //             // filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
-        //             // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10);
-
-
-        //             h4 {
-        //                 margin-bottom: toRem(5);
-        //                 font-family: 'Poppins', sans-serif;
-        //                 font-style: normal;
-        //                 font-weight: 600;
-        //                 font-size: toRem(20);
-        //             }
-
-        //             h5 {
-        //                 margin: toRem(3) 0;
-        //                 font-family: 'Poppins', sans-serif;
-        //                 font-style: normal;
-        //                 font-weight: 500;
-        //                 font-size: $size_p;
-        //             }
-        //         }
-
-        //         // div.listing:last-child {
-        //         //     // margin-bottom: toRem(0);
-        //         // }
-        //     }
-
-        //     div.skills {
-        //         position: relative;
-        //         width: 100%;
-        //         min-width: toRem(240);
-            
-        //         display: flex;
-        //         flex-flow: row wrap;
-        //         justify-content: center;
-        //         align-items: stretch;
-
-        //         h4 {
-        //             margin-bottom: toRem(10);
-        //             font-family: 'Poppins', sans-serif;
-        //             font-style: normal;
-        //             font-weight: 600;
-        //             font-size: $size_h4;
-        //         }                
-                
-        //         .phrases {
-        //             width: 25%;
-        //             height: auto;
-        //             margin: toRem(16);
-        //             min-width: toRem(240);
-        //             padding: toRem(32);
-
-        //             background-color: #ffffff;
-        //             border-radius: toRem(10);
-        //             display: flex;
-        //             flex-flow: column;
-        //             justify-content: flex-start;
-        //             align-items: flex-start;
-                    
-
-        //             h4 {
-        //             margin-bottom: toRem(5);
-        //             font-family: 'Poppins', sans-serif;
-        //             font-style: normal;
-        //             font-weight: 500;
-        //             font-size: toRem(20);
-        //             }
-
-        //             h5 {
-        //                 margin: toRem(3) 0;
-        //                 font-family: 'Poppins', sans-serif;
-        //                 font-style: normal;
-        //                 font-weight: 500;
-        //                 font-size: $size_p;
-        //             }
-        //         }    
-                
-        //         .phrasesM {
-        //             width: 100%;
-        //             height: auto;
-        //             margin: toRem(16);
-        //             min-width: toRem(240);
-        //             padding: toRem(32);
-
-        //             background-color: #ffffff;
-        //             border-radius: toRem(10);
-        //             display: flex;
-        //             flex-flow: column;
-        //             justify-content: flex-start;
-        //             align-items: flex-start;
-                    
-
-        //             h4 {
-        //             margin-bottom: toRem(5);
-        //             font-family: 'Poppins', sans-serif;
-        //             font-style: normal;
-        //             font-weight: 500;
-        //             font-size: toRem(20);
-        //             }
-
-        //             h5 {
-        //                 margin: toRem(3) 0;
-        //                 font-family: 'Poppins', sans-serif;
-        //                 font-style: normal;
-        //                 font-weight: 500;
-        //                 font-size: $size_p;
-        //             }
-
-        //             .phrase {
-        //                 display: flex;
-        //                 width: 90%;
-        //                 margin-bottom: toRem(10);
-    
-        //                 flex-flow: row;
-        //                 justify-content: flex-start;
-        //                 align-items: flex-start;
-    
-        //                 img {
-        //                     margin: toRem(9) toRem(10);
-        //                     width: toRem(8);
-        //                     height: auto;
-        //                 }
-    
-        //                 p {
-        //                     margin: 0 toRem(5);    
-        //                 }
-        //             }
-        //         }   
-        //     }
-            
-        //     .phrases {
-        //         width: 100%;
-        //         margin-top: toRem(10);
-        //         margin-bottom: toRem(0);
-
-        //         .phrase {
-        //             display: flex;
-        //             width: 90%;
-        //             margin-bottom: toRem(10);
-
-        //             flex-flow: row;
-        //             justify-content: flex-start;
-        //             align-items: flex-start;
-
-        //             img {
-        //                 margin: toRem(9) toRem(10);
-        //                 width: toRem(8);
-        //                 height: auto;
-        //             }
-
-        //             p {
-        //                 margin: 0 toRem(5);    
-        //             }
-        //         }
-        //     }
-        // }
     }
 
     div.projects {
@@ -1477,6 +1129,7 @@ div.content {
         filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.10));
         box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.10);
     }
+
     div.pages {
         position: relative;
         width: 65%;
@@ -1915,6 +1568,7 @@ div.content {
     width: 50%;
     height: toRem(50);
     bottom: 0px;
+    z-index: 10;
 
     display: flex;
     flex-flow: column;
@@ -1936,6 +1590,7 @@ div.content {
 .footerM {
     width: 100%;
     height: toRem(50);
+    z-index: 10;
 
     display: flex;
     flex-flow: column;
@@ -1961,6 +1616,7 @@ button.topButton {
     width: toRem(50);
     height: toRem(50);
     padding: toRem(10) toRem(20);
+    z-index: 10;
 
     display: flex;
     justify-content: center;
@@ -1978,6 +1634,7 @@ button.topButton {
 
 button.hide.topButton{
     opacity: 0;
+    z-index: 10;
 }
 
 
@@ -2355,12 +2012,12 @@ div.about {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        overflow: visible;
+        overflow: hidden;
         z-index: 0;
 
         .parallax-outer {
             bottom: 0;
-            overflow: hidden;
+            // overflow: hidden;
         }
     }
 }

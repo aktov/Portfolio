@@ -4,15 +4,22 @@ import { Parallax } from 'react-scroll-parallax';
 import Title from '../Title';
 
 import prof from '../../images/profilePic3.jpeg';
-import toplay from '../../images/banner/Toplay.svg';
-import overlay from '../../images/banner/Overlay.svg';
-// import underlay from '../../images/banner2/underlay.svg';
-import layer1 from '../../images/banner2/Layer01.svg';
-import layer2 from '../../images/banner2/Layer02.svg';
-import layer3 from '../../images/banner2/Layer03.svg';
-import layer4 from '../../images/banner2/Layer04.svg';
-import layer5 from '../../images/banner2/Layer05.svg';
-// import layer6 from '../../images/banner2/Layer06.svg';
+import toplay from '../../images/skyline1_mobile/Toplay.svg';
+import overlay from '../../images/skyline1_desktop/Overlay.svg';
+
+// for desktop
+import layer1_des from '../../images/skyline2_desktop/Layer01.svg';
+import layer2_des from '../../images/skyline2_desktop/Layer02.svg';
+import layer3_des from '../../images/skyline2_desktop/Layer03.svg';
+import layer4_des from '../../images/skyline2_desktop/Layer04.svg';
+import layer5_des from '../../images/skyline2_desktop/Layer05.svg';
+
+// for mobile
+import layer1_mob from '../../images/skyline2_mobile/Layer01.svg';
+import layer2_mob from '../../images/skyline2_mobile/Layer02.svg';
+import layer3_mob from '../../images/skyline2_mobile/Layer03.svg';
+import layer4_mob from '../../images/skyline2_mobile/Layer04.svg';
+import layer5_mob from '../../images/skyline2_mobile/Layer05.svg';
 
 
 const styleDesktop = {
@@ -43,12 +50,20 @@ class About extends React.Component {
     return (
       <div className='about'>
         <div id='about' className='anchor' style={this.props.screenWidth > 640 ? {top: '15rem'} : {top: '1rem'}}></div>
-        <img src={toplay} alt='clouds' draggable='false' style={{position: 'absolute', width: '100%', top: '0'}}/> 
+        <img src={toplay} alt='clouds' draggable='false' style={{position: 'absolute', width: '100%', top: '0', zIndex: '2'}}/> 
 
         {this.props.screenWidth > 640 ? 
-          <Parallax y={[-10,70]} styleOuter={{position: 'relative', marginBottom: '5rem'}}>
+          <Parallax y={[0,70]} styleOuter={{position: 'relative', marginBottom: '5rem'}}>
             <div className='content' style={styleDesktop}>
-              <div className='prof'>
+              <div 
+                className='prof'
+                data-aos='fade' 
+                data-aos-offset='50' 
+                data-aos-easing='ease-out-sine'
+                data-aos-duration='400'
+                data-aos-delay='100'
+                data-aos-once={true}
+              >
                 <img 
                   src={prof} 
                   className='actual' 
@@ -68,46 +83,46 @@ class About extends React.Component {
               </div>
               <div 
                 className='text' 
-                style={this.props.screenWidth > 640 ? {marginLeft: '7rem'} : {width: '100%'}}
+                style={this.props.screenWidth > 640 ? {marginLeft: '7rem', marginBottom: '70vh'} : {width: '100%'}}
               >
                 <Title title='about' screenWidth={this.props.screenWidth} />
                 <p
-                  // data-aos='fade' 
-                  // data-aos-offset='50' 
-                  // data-aos-easing='ease-out-sine'
-                  // data-aos-duration='400'
-                  // data-aos-delay='100'
-                  // data-aos-once={true}
+                  data-aos='fade' 
+                  data-aos-offset='50' 
+                  data-aos-easing='ease-out-sine'
+                  data-aos-duration='400'
+                  data-aos-delay='100'
+                  data-aos-once={true}
                 > {line1} </p>
                 <p
-                  // data-aos='fade' 
-                  // data-aos-offset='50' 
-                  // data-aos-easing='ease-out-sine'
-                  // data-aos-duration='400'
-                  // data-aos-delay='200'
-                  // data-aos-once={true}
+                  data-aos='fade' 
+                  data-aos-offset='50' 
+                  data-aos-easing='ease-out-sine'
+                  data-aos-duration='400'
+                  data-aos-delay='200'
+                  data-aos-once={true}
                 > {line2} </p>
                 <p
-                  // data-aos='fade' 
-                  // data-aos-offset='50' 
-                  // data-aos-easing='ease-out-sine'
-                  // data-aos-duration='400'
-                  // data-aos-delay='300'
-                  // data-aos-once={true}
+                  data-aos='fade' 
+                  data-aos-offset='50' 
+                  data-aos-easing='ease-out-sine'
+                  data-aos-duration='400'
+                  data-aos-delay='300'
+                  data-aos-once={true}
                 > {line3} </p>
                 <p
-                  // data-aos='fade' 
-                  // data-aos-offset='50' 
-                  // data-aos-easing='ease-out-sine'
-                  // data-aos-duration='400'
-                  // data-aos-delay='300'
-                  // data-aos-once={true}
+                  data-aos='fade' 
+                  data-aos-offset='50' 
+                  data-aos-easing='ease-out-sine'
+                  data-aos-duration='400'
+                  data-aos-delay='300'
+                  data-aos-once={true}
                 > {line4} </p>
               </div>
             </div>
           </Parallax>
           :
-          <Parallax y={[0,10]} styleOuter={{position: 'relative', marginBottom: '5rem'}}>
+          <Parallax y={[0,10]} styleOuter={{position: 'relative', marginBottom: '8rem'}}>
             <div className='content' style={styleMobile}>
               <Title title='about' screenWidth={this.props.screenWidth} />
               <div className='prof' style={{marginTop: '2rem', marginBottom: '1rem', alignSelf: 'center', maxWidth: '85%'}}>
@@ -168,76 +183,64 @@ class About extends React.Component {
         {this.props.screenWidth > 640 ? 
         <>
           <div className='background_about'>
-            <Parallax y={[-20,80]} styleOuter={{position: 'relative', overflow: 'visible'}}>
+            <Parallax 
+              x={[0,0]} 
+              styleOuter={{
+                position: 'relative'}}
+            >
               <img 
-                  src={layer5}
+                  src={layer5_des}
                   alt={'background'}
                   style={{width:'100%'}}
-                  // data-aos='fade' 
-                  // data-aos-offset='-300' 
-                  // data-aos-easing='ease-out-sine'
-                  // data-aos-duration='400'
-                  // data-aos-delay='0'
-                  // data-aos-once={true}
+                  draggable='false' 
               />
             </Parallax>
-            <Parallax y={[0,60]} styleOuter={{overflow: 'visible'}}>
+            <Parallax
+              x={[0,-2]} 
+            >
               <img 
-                  src={layer4}
+                  src={layer4_des}
                   alt={'background'}
-                  style={{width:'100%'}}
-                  // data-aos='fade' 
-                  // data-aos-offset='-300' 
-                  // data-aos-easing='ease-out-sine'
-                  // data-aos-duration='400'
-                  // data-aos-delay='100'
-                  // data-aos-once={true}
+                  style={{width:'105%'}}
+                  draggable='false' 
               />
             </Parallax>
-            <Parallax y={[0,40]} styleOuter={{overflow: 'visible'}}>
+            <Parallax
+              x={[0,-4]} 
+            >
               <img 
-                  src={layer3}
+                  src={layer3_des}
                   alt={'background'}
-                  style={{width:'100%'}}
-                  // data-aos='fade' 
-                  // data-aos-offset='-300' 
-                  // data-aos-easing='ease-out-sine'
-                  // data-aos-duration='400'
-                  // data-aos-delay='200'
-                  // data-aos-once={true}
+                  style={{width:'105%'}}
+                  draggable='false' 
               />
             </Parallax>
-            <Parallax y={[0,20]} styleOuter={{overflow: 'visible'}}>
+            <Parallax
+              x={[0,-6]} 
+            >
               <img 
-                  src={layer2}
+                  src={layer2_des}
                   alt={'background'}
-                  style={{width:'100%'}}
-                  // data-aos='fade' 
-                  // data-aos-offset='-300' 
-                  // data-aos-easing='ease-out-sine'
-                  // data-aos-duration='400'
-                  // data-aos-delay='300'
-                  // data-aos-once={true}
+                  style={{width:'110%'}}
+                  draggable='false' 
               />
             </Parallax>
-            <Parallax y={[0,0]}>
+            <Parallax
+              x={[0,-8]} 
+            >
               <img 
-                  src={layer1}
+                  src={layer1_des}
                   alt={'background'}
-                  style={{width:'100%'}}
-                  // data-aos='fade' 
-                  // data-aos-offset='-300' 
-                  // data-aos-easing='ease-out-sine'
-                  // data-aos-duration='400'
-                  // data-aos-delay='400'
-                  // data-aos-once={true}
+                  style={{width:'110%'}}
+                  draggable='false' 
               />
             </Parallax>
-            <Parallax x={[0,-10]} styleOuter={{bottom: '-10px'}}>
+            <Parallax x={[0,10]} styleOuter={{bottom: '-10px'}}>
               <img 
                   src={overlay}
                   alt={'background'}
-                  style={{width:'200%'}}
+                  style={{width:'150%', float: 'right'}}
+                  draggable='false' 
               />
             </Parallax>
           </div>
@@ -245,46 +248,46 @@ class About extends React.Component {
         :
         <>
           <div className='background_about'>
-            <Parallax y={[-160,140]} styleOuter={{position: 'relative', overflow: 'visible'}}>
+            <Parallax x={[0,0]} styleOuter={{position: 'relative', overflow: 'visible'}}>
               <img 
-                  src={layer5}
+                  src={layer5_mob}
                   alt={'background'}
                   style={{width:'100%'}}
               />
             </Parallax>
-            <Parallax y={[-140,120]} styleOuter={{overflow: 'visible'}}>
+            <Parallax x={[0,-2]} styleOuter={{overflow: 'visible'}}>
               <img 
-                  src={layer4}
+                  src={layer4_mob}
                   alt={'background'}
-                  style={{width:'100%'}}
+                  style={{width:'105%'}}
               />
             </Parallax>
-            <Parallax y={[-120,100]} styleOuter={{overflow: 'visible'}}>
+            <Parallax x={[0,-4]} styleOuter={{overflow: 'visible'}}>
               <img 
-                  src={layer3}
+                  src={layer3_mob}
                   alt={'background'}
-                  style={{width:'100%'}}
+                  style={{width:'105%'}}
               />
             </Parallax>
-            <Parallax y={[-80,60]} styleOuter={{overflow: 'visible'}}>
+            <Parallax x={[0,-6]} styleOuter={{overflow: 'visible'}}>
               <img 
-                  src={layer2}
+                  src={layer2_mob}
                   alt={'background'}
-                  style={{width:'100%'}}
+                  style={{width:'110%'}}
               />
             </Parallax>
-            <Parallax y={[20,0]} styleOuter={{overflow: 'visible'}}>
+            <Parallax x={[0,-8]} styleOuter={{overflow: 'visible'}}>
               <img 
-                  src={layer1}
+                  src={layer1_mob}
                   alt={'background'}
-                  style={{width:'100%'}}
+                  style={{width:'110%'}}
               />
             </Parallax>
-            <Parallax x={[0,-10]} styleOuter={{bottom: '-10px'}}>
+            <Parallax x={[0,20]} styleOuter={{bottom: '-10px', overflow: 'hidden'}}>
               <img 
                   src={overlay}
                   alt={'background'}
-                  style={{width:'200%'}}
+                  style={{width:'200%', float:'right'}}
               />
             </Parallax>
           </div>
