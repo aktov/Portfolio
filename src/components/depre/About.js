@@ -7,7 +7,7 @@ import NavMenu from '../NavMenu.js';
 import Contact from '../Contact.js';
 
 import prof from '../../images/profilePic3.jpeg';
-import background from '../../images/backgroundIV.svg';
+// import background from '../../images/backgroundIV.svg';
 
 
 const backgroundStyle = {

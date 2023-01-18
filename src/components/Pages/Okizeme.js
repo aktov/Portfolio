@@ -9,8 +9,8 @@ import Contact from '../Contact.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
 
-import banner from '../../images/Banners/banner_edushare.png';
-import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_edushare.png';
+import banner from '../../images/Banners/banner_okizeme.png';
+import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_okizeme.png';
 import figma from '../../images/figmaLogo_black.svg';
 import pic1 from '../../images/Pages/edushare/1.jpg';
 import pic2 from '../../images/Pages/edushare/2.png';
@@ -31,15 +31,6 @@ import pic16 from '../../images/Pages/edushare/16.png';
 import pic17 from '../../images/Pages/edushare/17.png';
 import pic18 from '../../images/Pages/edushare/18.png';
 
-// const Bullets = (props) => {
-//   return (
-//   <div className='phrases'>
-//     {props.info.map((phrase, index) => 
-//       <Phrase key={'yahoo/' + index} text={phrase}/>
-//     )}
-//   </div>
-//   );
-// };
 
 const Image = (props) => {
   return (
@@ -73,17 +64,17 @@ const Tags = (props) => {
   );
 }
 
-const tags = ['wireframing', 'mockups', 'prototyping'];
+const tags = ['prototyping'];
 
 
 const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
-const color = '#BBE2F2'
+const color = '#F5C0B9'
 
 
 
 
-class Edushare extends React.Component {
+class Okizeme extends React.Component {
   constructor(props) {
     super(props);
 
@@ -151,7 +142,7 @@ class Edushare extends React.Component {
               data-aos-delay='200'
               data-aos-once={true}
             > 
-              {'Edushare'.toUpperCase()} 
+              {'Okizeme'.toUpperCase()} 
             </h3>
 
             <div className='intro'>
@@ -281,4 +272,4 @@ class Edushare extends React.Component {
   }
 }
 
-export default Edushare;
+export default Okizeme;

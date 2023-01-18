@@ -6,7 +6,7 @@ import NavMenu from '../NavMenu.js';
 import Contact from '../Contact.js';
 // import ResumeActual from '../Resume.js';
 
-import background from '../../images/backgroundIII.svg';
+// import background from '../../images/backgroundIII.svg';
 
 
 const backgroundStyle = {

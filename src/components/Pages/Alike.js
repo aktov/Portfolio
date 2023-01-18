@@ -9,21 +9,21 @@ import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
 
-import banner from '../../images/banner_alike.png';
-import imgM_alike from '../../images/cardImageM_alike.png';
+import banner from '../../images/Banners/banner_alike.png';
+import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_alike.png';
 import open from '../../images/open.svg';
 
-import pic1 from '../../images/alike/1.png';
-import pic2 from '../../images/alike/2.png';
-import pic3 from '../../images/alike/3.png';
-import pic4 from '../../images/alike/4.png';
-import pic5 from '../../images/alike/5.png';
-import pic6 from '../../images/alike/6.png';
-import pic7 from '../../images/alike/7.png';
-import pic8 from '../../images/alike/8.png';
-import pic9 from '../../images/alike/9.png';
-import pic10 from '../../images/alike/10.png';
-import pic11 from '../../images/alike/11.png';
+import pic1 from '../../images/Pages/alike/1.png';
+import pic2 from '../../images/Pages/alike/2.png';
+import pic3 from '../../images/Pages/alike/3.png';
+import pic4 from '../../images/Pages/alike/4.png';
+import pic5 from '../../images/Pages/alike/5.png';
+import pic6 from '../../images/Pages/alike/6.png';
+import pic7 from '../../images/Pages/alike/7.png';
+import pic8 from '../../images/Pages/alike/8.png';
+import pic9 from '../../images/Pages/alike/9.png';
+import pic10 from '../../images/Pages/alike/10.png';
+import pic11 from '../../images/Pages/alike/11.png';
 
 const Bullets = (props) => {
   return (
@@ -132,7 +132,7 @@ class Alike extends React.Component {
           <div id='anchor_page' className='anchor' style={{top: '-1000px'}}></div>
           <img 
             className='banner' 
-            src={this.props.screenWidth > 640 ? banner : imgM_alike} 
+            src={this.props.screenWidth > 640 ? banner : banner_mob} 
             alt='Banner' 
             draggable='false'          
             data-aos='fade' 
@@ -169,7 +169,7 @@ class Alike extends React.Component {
                 <h4 className='heading'> ROLE </h4>
                 <h4> UI/UX Designer </h4>              
                 <br/>
-                <h4 className='heading'> LINKS </h4>
+                {/* <h4 className='heading'> LINKS </h4>
                 <div className='buttons'>
                   <a 
                     href='https://www.alike.dating/'
@@ -179,7 +179,7 @@ class Alike extends React.Component {
                     <img src={open} alt='link' draggable='false' /> 
                     <span className='toolTip'> Check out Alike! </span> 
                   </a> 
-                </div>
+                </div> */}
                 <br/>
               </div>
               <div 

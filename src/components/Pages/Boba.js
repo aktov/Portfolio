@@ -9,22 +9,22 @@ import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
 
-import banner from '../../images/banner_boba.png';
-import imgM_boba from '../../images/cardImageM_boba.png';
+import banner from '../../images/Banners/banner_boba.png';
+import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_boba.png';
 import figma from '../../images/figmaLogo_black.svg';
-import pic1 from '../../images/boba/1.png';
-import pic2 from '../../images/boba/2.png';
-import pic3 from '../../images/boba/3.png';
-import pic4 from '../../images/boba/4.png';
-import pic5 from '../../images/boba/5.png';
-import pic6 from '../../images/boba/6.png';
-import pic7 from '../../images/boba/7.png';
-import pic8 from '../../images/boba/8.png';
-import pic9 from '../../images/boba/9.png';
-import pic10 from '../../images/boba/10.png';
-import pic11 from '../../images/boba/11.png';
-import pic12 from '../../images/boba/12.png';
-import pic13 from '../../images/boba/13.png';
+import pic1 from '../../images/Pages/boba/1.png';
+import pic2 from '../../images/Pages/boba/2.png';
+import pic3 from '../../images/Pages/boba/3.png';
+import pic4 from '../../images/Pages/boba/4.png';
+import pic5 from '../../images/Pages/boba/5.png';
+import pic6 from '../../images/Pages/boba/6.png';
+import pic7 from '../../images/Pages/boba/7.png';
+import pic8 from '../../images/Pages/boba/8.png';
+import pic9 from '../../images/Pages/boba/9.png';
+import pic10 from '../../images/Pages/boba/10.png';
+import pic11 from '../../images/Pages/boba/11.png';
+import pic12 from '../../images/Pages/boba/12.png';
+import pic13 from '../../images/Pages/boba/13.png';
 
 const Bullets = (props) => {
   return (
@@ -156,7 +156,7 @@ class Boba extends React.Component {
           <div id='anchor_page' className='anchor' style={{top: '-1000px'}}></div>
           <img 
             className='banner' 
-            src={this.props.screenWidth > 640 ? banner : imgM_boba} 
+            src={this.props.screenWidth > 640 ? banner : banner_mob} 
             alt='Banner' 
             draggable='false'          
             data-aos='fade' 

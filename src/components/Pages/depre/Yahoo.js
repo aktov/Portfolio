@@ -9,25 +9,25 @@ import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
 
-import banner from '../../images/banner_yahoo.png';
+import banner from '../../images/Banners/banner_yahoo.png';
 import figma1 from '../../images/figma1.svg';
 import figma2 from '../../images/figma2.svg';
-import pic1 from '../../images/yahoo/1.png';
-import pic2 from '../../images/yahoo/2.png';
-import pic3 from '../../images/yahoo/3.png';
-import pic4 from '../../images/yahoo/4.png';
-import pic5 from '../../images/yahoo/5.png';
-import pic6 from '../../images/yahoo/6.png';
-import pic7 from '../../images/yahoo/7.png';
-import pic8 from '../../images/yahoo/8.png';
-import pic9 from '../../images/yahoo/9.png';
-import pic10 from '../../images/yahoo/10.png';
-import pic11 from '../../images/yahoo/11.png';
-import pic12 from '../../images/yahoo/12.png';
-import pic13 from '../../images/yahoo/13.png';
-import pic14 from '../../images/yahoo/14.png';
-import pic15 from '../../images/yahoo/15.png';
-// import pic16 from '../../images/yahoo/16.png';
+import pic1 from '../../images/Pages/yahoo/1.png';
+import pic2 from '../../images/Pages/yahoo/2.png';
+import pic3 from '../../images/Pages/yahoo/3.png';
+import pic4 from '../../images/Pages/yahoo/4.png';
+import pic5 from '../../images/Pages/yahoo/5.png';
+import pic6 from '../../images/Pages/yahoo/6.png';
+import pic7 from '../../images/Pages/yahoo/7.png';
+import pic8 from '../../images/Pages/yahoo/8.png';
+import pic9 from '../../images/Pages/yahoo/9.png';
+import pic10 from '../../images/Pages/yahoo/10.png';
+import pic11 from '../../images/Pages/yahoo/11.png';
+import pic12 from '../../images/Pages/yahoo/12.png';
+import pic13 from '../../images/Pages/yahoo/13.png';
+import pic14 from '../../images/Pages/yahoo/14.png';
+import pic15 from '../../images/Pages/yahoo/15.png';
+// import pic16 from '../../images/Pages/yahoo/16.png';
 
 const Bullets = (props) => {
   return (

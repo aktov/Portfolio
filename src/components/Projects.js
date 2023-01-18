@@ -4,39 +4,30 @@ import React from 'react';
 import Card from './Card.js';
 import Title from './Title';
 
-// import imgM_inTune from '../images/cardImageM_inTune.png';
-// import imgM_prepd from '../images/cardImageM_prepd.png';
 // Mobile images
-// import imgM_portfolio from '../images/cardImageM_portfolio.png';
-import imgM_okizeme from '../images/cardImageM_okizeme.png';
-import imgM_memo from '../images/cardImageM_memo.png';
-// import imgM_chrispy from '../images/cardImageM_chrispy.png';
-import imgM_alike from '../images/cardImageM_alike.png';
-import imgM_boba from '../images/cardImageM_boba.png';
-import imgM_signup from '../images/cardImageM_signup.png';
-import imgM_hon from '../images/cardImageM_hon.png';
-import imgM_csa from '../images/cardImageM_csa.png';
-// import imgM_yahoo from '../images/cardImageM_yahoo.png';
-// import imgM_parking from '../images/cardImageM_parking.png';
-// Desktop images
-// import img_portfolio from '../images/cardImage_portfolio.png';
-import img_okizeme from '../images/cardImage_okizeme.png';
-import img_memo from '../images/cardImage_memo.png';
-// import img_chrispy from '../images/cardImage_chrispy.png';
-import img_alike from '../images/cardImage_alike.png';
-import img_boba from '../images/cardImage_boba.png';
-import img_signup from '../images/cardImage_signup.png';
-import img_hon from '../images/cardImage_hon.png';
-import img_csa from '../images/cardImage_csa.png';
-// import img_yahoo from '../images/cardImage_yahoo.png';
-// import img_parking from '../images/cardImage_parking.png';
+import imgM_okizeme from '../images/Thumbnails/Mobile/cardImageM_okizeme.png';
+import imgM_memo from '../images/Thumbnails/Mobile/cardImageM_memo.png';
+import imgM_alike from '../images/Thumbnails/Mobile/cardImageM_alike.png';
+import imgM_boba from '../images/Thumbnails/Mobile/cardImageM_boba.png';
+import imgM_edushare from '../images/Thumbnails/Mobile/cardImageM_edushare.png';
+import imgM_hon from '../images/Thumbnails/Mobile/cardImageM_hon.png';
+import imgM_csa from '../images/Thumbnails/Mobile/cardImageM_csa.png';
 
-const projects_figma = [
+// Desktop images
+import img_okizeme from '../images/Thumbnails/Desktop/cardImage_okizeme.png';
+import img_memo from '../images/Thumbnails/Desktop/cardImage_memo.png';
+import img_alike from '../images/Thumbnails/Desktop/cardImage_alike.png';
+import img_boba from '../images/Thumbnails/Desktop/cardImage_boba.png';
+import img_edushare from '../images/Thumbnails/Desktop/cardImage_edushare.png';
+import img_hon from '../images/Thumbnails/Desktop/cardImage_hon.png';
+import img_csa from '../images/Thumbnails/Desktop/cardImage_csa.png';
+
+const projects_mocks = [
   {
     title: 'edushare',
     descr: 'A sign up flow for an app where teachers can socialize and share ideas in one community!',
-    image: img_signup,
-    imageM: imgM_signup,
+    image: img_edushare,
+    imageM: imgM_edushare,
     tags: ['wireframing', 'mockups', 'prototyping'],
     color: '#BBE2F2',
     figma: 'https://www.figma.com/proto/zMITtMqtG9hcvJLDGtUC8G/Edushare?node-id=10%3A84&viewport=-523%2C272%2C0.2671932876110077&scaling=scale-down',
@@ -51,7 +42,8 @@ const projects_figma = [
     color: '#F5C0B9',
     figmaM: 'https://www.figma.com/proto/MgWQKucfltlZVzvE0cxUhQ/Okizeme-Design?page-id=106%3A81&node-id=106%3A82&viewport=366%2C-150%2C0.25410154461860657&scaling=scale-down',
     figmaD: 'https://www.figma.com/proto/MgWQKucfltlZVzvE0cxUhQ/Okizeme-Design?page-id=0%3A1&node-id=1%3A2&viewport=411%2C660%2C0.10949171334505081&scaling=scale-down-width',
-    default: 'https://okizeme.com/'
+    // default: 'https://okizeme.com/'
+    link: '/okizeme'
   },
   {
     title: 'memos',
@@ -86,7 +78,7 @@ const projects_figma = [
   //   link: undefined
   // },
 ];
-const projects_design = [
+const projects_casestudies = [
   {
     title: 'alike',
     descr: 'A showcase of the work I\'ve done for my current internship at Alike!',
@@ -151,35 +143,6 @@ const projects_design = [
   //   link: '/parking'
   // },
 ];
-// const projects_web = [
-//   {
-//     title: 'hour memo',
-//     descr: 'A web app for Spotify and Last.fm users to visualize the music history and genres of themselves and their friends',
-//     image: undefined,
-//     tags: ['HTML', 'CSS', 'bootstrap', 'javascript', 'jquery', 'firebase', 'node.js', 'last.fm api'],
-//     color: '#87B573',
-//     github: undefined,
-//     link: undefined,
-//   },
-//   {
-//     title: 'intune visualizer',
-//     descr: 'A web app for Spotify and Last.fm users to visualize the music history and genres of themselves and their friends',
-//     imageM: imgM_inTune,
-//     tags: ['HTML', 'CSS', 'bootstrap', 'javascript', 'jquery', 'firebase', 'node.js', 'last.fm api'],
-//     color: '#709CE3',
-//     github: 'https://github.com/aktov/inTuneVisualizer',
-//     link: undefined,
-//   },
-//   {
-//     title: 'prepd',
-//     descr: 'A web app to aid meal prepping by supplying the user with quick access to recipes and easy organization',
-//     imageM: imgM_prepd,
-//     tags: ['HTML', 'CSS', 'bootstrap', 'javascript', 'jquery', 'node.js'],
-//     color: '#FFAC46',
-//     github: 'https://github.com/aktov/Prepd',
-//     link: undefined
-//   },
-// ];
 
 
 
@@ -225,9 +188,9 @@ class Projects extends React.Component {
         <Title title='projects' screenWidth={this.props.screenWidth} /> 
 
         <h4 style={{marginBottom: '.625rem', fontWeight: '600', fontSize:'1.5rem'}}> {'case studies'.toUpperCase()} </h4>
-        <Others projects={projects_design} screenWidth={this.props.screenWidth} />
+        <Others projects={projects_casestudies} screenWidth={this.props.screenWidth} />
         <h4 style={{marginBottom: '.625rem', fontWeight: '600', fontSize:'1.5rem' }}> {'UI mockup & prototype designs'.toUpperCase()} </h4>
-        <Others projects={projects_figma} screenWidth={this.props.screenWidth} />
+        <Others projects={projects_mocks} screenWidth={this.props.screenWidth} />
       </div> 
     );
   }

@@ -9,66 +9,67 @@ import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
 
-import banner from '../../images/banner_csa.png';
+import banner from '../../images/Banners/banner_csa.png';
+import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_csa.png';
 import figmaD from '../../images/figmaD.svg';
 import figmaM from '../../images/figmaM.svg';
-import pic1 from '../../images/csa/1.png';
-import pic2 from '../../images/csa/2.png';
-import pic3 from '../../images/csa/3.png';
-import pic4 from '../../images/csa/4.png';
-import pic5 from '../../images/csa/5.png';
-import pic6 from '../../images/csa/6.png';
-// import pic7 from '../../images/csa/7.png';
-import pic8 from '../../images/csa/8.png';
-import pic9 from '../../images/csa/9.png';
-// import pic10 from '../../images/csa/10.png';
-// import pic11 from '../../images/csa/11.png';
-// import pic12 from '../../images/csa/12.png';
-// import pic13 from '../../images/csa/13.png';
-// import pic14 from '../../images/csa/14.png';
-// import pic15 from '../../images/csa/15.png';
-import pic16 from '../../images/csa/16.png';
-import pic17 from '../../images/csa/17.png';
-import pic18 from '../../images/csa/18.png';
-import pic19 from '../../images/csa/19.png';
-import pic20 from '../../images/csa/20.png';
-// import pic21 from '../../images/csa/21.png';
-// import pic22 from '../../images/csa/22.png';
-// import pic23 from '../../images/csa/23.png';
-// import pic24 from '../../images/csa/24.png';
-// import pic25 from '../../images/csa/25.png';
-// import pic26 from '../../images/csa/26.png';
-// import pic27 from '../../images/csa/27.png';
-// import pic28 from '../../images/csa/28.png';
-// import pic29 from '../../images/csa/29.png';
-// import pic30 from '../../images/csa/30.png';
-import pic31 from '../../images/csa/31.png';
-import pic32 from '../../images/csa/32.png';
-import pic33 from '../../images/csa/33.png';
-import pic34 from '../../images/csa/34.png';
-import pic35 from '../../images/csa/35.png';
-import pic36 from '../../images/csa/36.png';
-import pic37 from '../../images/csa/37.png';
-import pic38 from '../../images/csa/38.png';
-import pic39 from '../../images/csa/39.png';
-import pic40 from '../../images/csa/40.png';
-import pic41 from '../../images/csa/41.png';
-// import pic42 from '../../images/csa/42.png';
-// import pic43 from '../../images/csa/43.png';
-import pic44 from '../../images/csa/44.png';
-import pic45 from '../../images/csa/45.png';
-import pic46 from '../../images/csa/46.png';
-import pic47 from '../../images/csa/47.png';
-// import pic48 from '../../images/csa/48.png';
-// import pic49 from '../../images/csa/49.png';
-// import pic50 from '../../images/csa/50.png';
-// import pic51 from '../../images/csa/51.png';
-// import pic52 from '../../images/csa/52.png';
-// import pic53 from '../../images/csa/53.png';
-// import pic54 from '../../images/csa/54.png';
-// import pic55 from '../../images/csa/55.png';
-import pic56 from '../../images/csa/56.png';
-import pic57 from '../../images/csa/57.png';
+import pic1 from '../../images/Pages/csa/1.png';
+import pic2 from '../../images/Pages/csa/2.png';
+import pic3 from '../../images/Pages/csa/3.png';
+import pic4 from '../../images/Pages/csa/4.png';
+import pic5 from '../../images/Pages/csa/5.png';
+import pic6 from '../../images/Pages/csa/6.png';
+// import pic7 from '../../images/Pages/csa/7.png';
+import pic8 from '../../images/Pages/csa/8.png';
+import pic9 from '../../images/Pages/csa/9.png';
+// import pic10 from '../../images/Pages/csa/10.png';
+// import pic11 from '../../images/Pages/csa/11.png';
+// import pic12 from '../../images/Pages/csa/12.png';
+// import pic13 from '../../images/Pages/csa/13.png';
+// import pic14 from '../../images/Pages/csa/14.png';
+// import pic15 from '../../images/Pages/csa/15.png';
+import pic16 from '../../images/Pages/csa/16.png';
+import pic17 from '../../images/Pages/csa/17.png';
+import pic18 from '../../images/Pages/csa/18.png';
+import pic19 from '../../images/Pages/csa/19.png';
+import pic20 from '../../images/Pages/csa/20.png';
+// import pic21 from '../../images/Pages/csa/21.png';
+// import pic22 from '../../images/Pages/csa/22.png';
+// import pic23 from '../../images/Pages/csa/23.png';
+// import pic24 from '../../images/Pages/csa/24.png';
+// import pic25 from '../../images/Pages/csa/25.png';
+// import pic26 from '../../images/Pages/csa/26.png';
+// import pic27 from '../../images/Pages/csa/27.png';
+// import pic28 from '../../images/Pages/csa/28.png';
+// import pic29 from '../../images/Pages/csa/29.png';
+// import pic30 from '../../images/Pages/csa/30.png';
+import pic31 from '../../images/Pages/csa/31.png';
+import pic32 from '../../images/Pages/csa/32.png';
+import pic33 from '../../images/Pages/csa/33.png';
+import pic34 from '../../images/Pages/csa/34.png';
+import pic35 from '../../images/Pages/csa/35.png';
+import pic36 from '../../images/Pages/csa/36.png';
+import pic37 from '../../images/Pages/csa/37.png';
+import pic38 from '../../images/Pages/csa/38.png';
+import pic39 from '../../images/Pages/csa/39.png';
+import pic40 from '../../images/Pages/csa/40.png';
+import pic41 from '../../images/Pages/csa/41.png';
+// import pic42 from '../../images/Pages/csa/42.png';
+// import pic43 from '../../images/Pages/csa/43.png';
+import pic44 from '../../images/Pages/csa/44.png';
+import pic45 from '../../images/Pages/csa/45.png';
+import pic46 from '../../images/Pages/csa/46.png';
+import pic47 from '../../images/Pages/csa/47.png';
+// import pic48 from '../../images/Pages/csa/48.png';
+// import pic49 from '../../images/Pages/csa/49.png';
+// import pic50 from '../../images/Pages/csa/50.png';
+// import pic51 from '../../images/Pages/csa/51.png';
+// import pic52 from '../../images/Pages/csa/52.png';
+// import pic53 from '../../images/Pages/csa/53.png';
+// import pic54 from '../../images/Pages/csa/54.png';
+// import pic55 from '../../images/Pages/csa/55.png';
+import pic56 from '../../images/Pages/csa/56.png';
+import pic57 from '../../images/Pages/csa/57.png';
 
 const Bullets = (props) => {
   return (
@@ -214,7 +215,7 @@ class CSA extends React.Component {
           <div id='anchor_page' className='anchor' style={{top: '-1000px'}}></div>
           <img 
             className='banner' 
-            src={banner} 
+            src={this.props.screenWidth > 640 ? banner : banner_mob} 
             alt='Banner' 
             draggable='false'           
             data-aos='fade' 

@@ -9,31 +9,32 @@ import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
 
-import banner from '../../images/banner_hon.png';
+import banner from '../../images/Banners/banner_hon.png';
+import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_hon.png';
 import figma from '../../images/figmaLogo_black.svg';
 import open from '../../images/open.svg';
 
-import pic1 from '../../images/hon/1.png';
-import pic2 from '../../images/hon/2.png';
-import pic3 from '../../images/hon/3.png';
-import pic4 from '../../images/hon/4.png';
-import pic6 from '../../images/hon/6.png';
-import pic7 from '../../images/hon/7.png';
-import pic8 from '../../images/hon/8.png';
-// import pic9 from '../../images/hon/9.png';
-// import pic10 from '../../images/hon/10.png';
-// import pic11 from '../../images/hon/11.png';
-// import pic12 from '../../images/hon/12.png';
-import pic13 from '../../images/hon/13.png';
-// import pic14 from '../../images/hon/14.png';
-import pic15 from '../../images/hon/15.png';
-import pic16 from '../../images/hon/16.png';
-import pic17 from '../../images/hon/17.png';
-import pic18 from '../../images/hon/18.png';
-import pic19 from '../../images/hon/19.png';
-import pic20 from '../../images/hon/20.png';
-import pic21 from '../../images/hon/21.png';
-import pic22 from '../../images/hon/22.png';
+import pic1 from '../../images/Pages/hon/1.png';
+import pic2 from '../../images/Pages/hon/2.png';
+import pic3 from '../../images/Pages/hon/3.png';
+import pic4 from '../../images/Pages/hon/4.png';
+import pic6 from '../../images/Pages/hon/6.png';
+import pic7 from '../../images/Pages/hon/7.png';
+import pic8 from '../../images/Pages/hon/8.png';
+// import pic9 from '../../images/Pages/hon/9.png';
+// import pic10 from '../../images/Pages/hon/10.png';
+// import pic11 from '../../images/Pages/hon/11.png';
+// import pic12 from '../../images/Pages/hon/12.png';
+import pic13 from '../../images/Pages/hon/13.png';
+// import pic14 from '../../images/Pages/hon/14.png';
+import pic15 from '../../images/Pages/hon/15.png';
+import pic16 from '../../images/Pages/hon/16.png';
+import pic17 from '../../images/Pages/hon/17.png';
+import pic18 from '../../images/Pages/hon/18.png';
+import pic19 from '../../images/Pages/hon/19.png';
+import pic20 from '../../images/Pages/hon/20.png';
+import pic21 from '../../images/Pages/hon/21.png';
+import pic22 from '../../images/Pages/hon/22.png';
 
 const Bullets = (props) => {
   return (
@@ -149,7 +150,7 @@ class Hon extends React.Component {
           <div id='anchor_page' className='anchor' style={{top: '-1000px'}}></div>
           <img 
             className='banner' 
-            src={banner} 
+            src={this.props.screenWidth > 640 ? banner : banner_mob} 
             alt='Banner' 
             draggable='false'          
             data-aos='fade' 
@@ -188,14 +189,14 @@ class Hon extends React.Component {
                 <br/>
                 <h4 className='heading'> FIGMA LINKS </h4>
                 <div className='buttons'>
-                  <a 
+                  {/* <a 
                     href='https://blog.hon-media.com/'
                     target='_blank' 
                     rel='noopener noreferrer'
                   >
                     <img src={open} alt='link' draggable='false' /> 
                     <span className='toolTip'> Check out the blog! </span> 
-                  </a> 
+                  </a>  */}
 
                   <a 
                     href='https://www.figma.com/proto/4IWvFVdQfykksXa7kEZE95/blog.hon-media?node-id=266%3A5650&viewport=8238%2C659%2C0.7337678074836731&scaling=scale-down-width'

@@ -11,13 +11,15 @@ import Mobile from './components/Mobile.js';
 import About from './components/Pages/About.js'; 
 import Resume from './components/Pages/Resume.js'; 
 
+// Case Studies
 import Alike from './components/Pages/Alike.js'; 
 import Boba from './components/Pages/Boba.js'; 
-import Edushare from './components/Pages/Edushare.js'; 
 import Hon from './components/Pages/Hon.js'; 
 import CSA from './components/Pages/CSA.js';
-import Yahoo from './components/Pages/Yahoo.js';
-// import Parking from './components/Pages/Parking.js';
+
+// Mockups
+import Edushare from './components/Pages/Edushare.js'; 
+import Okizeme from './components/Pages/Okizeme.js'; 
 
 const breakpoint = 768;
 
@@ -69,14 +71,12 @@ class App extends React.Component {
             <Resume screenWidth={this.state.screenWidth}/>
           </Route>
 
+          {/* Case Studies */}
           <Route path='/alike'>
             <Alike screenWidth={this.state.screenWidth}/>
           </Route>
           <Route path='/boba'>
             <Boba screenWidth={this.state.screenWidth}/>
-          </Route>
-          <Route path='/edushare'>
-            <Edushare screenWidth={this.state.screenWidth}/>
           </Route>
           <Route path='/hon'>
             <Hon screenWidth={this.state.screenWidth}/>
@@ -84,8 +84,13 @@ class App extends React.Component {
           <Route path='/csa'>
             <CSA screenWidth={this.state.screenWidth}/>
           </Route>
-          <Route path='/yahoo'>
-            <Yahoo screenWidth={this.state.screenWidth}/>
+
+          {/* Mockups */}
+          <Route path='/edushare'>
+            <Edushare screenWidth={this.state.screenWidth}/>
+          </Route>
+          <Route path='/okizeme'>
+            <Okizeme screenWidth={this.state.screenWidth}/>
           </Route>
         </Router>
       </ParallaxProvider>
