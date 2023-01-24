@@ -165,10 +165,10 @@ class Edushare extends React.Component {
                 data-aos-delay='400'
                 data-aos-once={true}
               > 
-                <h4 className='heading'> ROLE </h4>
+                {/* <h4 className='heading'> ROLE </h4>
                 <h4> UI/UX Designer </h4>              
-                <br/>
-                <h4 className='heading'> FIGMA LINKS </h4>
+                <br/> */}
+                <h4 className='heading'> FIGMA LINK </h4>
                 <div className='buttons'>
                   <a 
                     href='https://www.figma.com/proto/zMITtMqtG9hcvJLDGtUC8G/Edushare?node-id=10%3A84&viewport=-523%2C272%2C0.2671932876110077&scaling=scale-down'

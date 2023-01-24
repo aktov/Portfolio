@@ -11,25 +11,34 @@ import TopButton from '../TopButton.js';
 
 import banner from '../../images/Banners/banner_okizeme.png';
 import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_okizeme.png';
-import figma from '../../images/figmaLogo_black.svg';
-import pic1 from '../../images/Pages/edushare/1.jpg';
-import pic2 from '../../images/Pages/edushare/2.png';
-import pic3 from '../../images/Pages/edushare/3.png';
-import pic4 from '../../images/Pages/edushare/4.png';
-import pic5 from '../../images/Pages/edushare/5.png';
-import pic6 from '../../images/Pages/edushare/6.png';
-import pic7 from '../../images/Pages/edushare/7.png';
-import pic8 from '../../images/Pages/edushare/8.png';
-import pic9 from '../../images/Pages/edushare/9.png';
-import pic10 from '../../images/Pages/edushare/10.png';
-import pic11 from '../../images/Pages/edushare/11.png';
-import pic12 from '../../images/Pages/edushare/12.png';
-import pic13 from '../../images/Pages/edushare/13.png';
-import pic14 from '../../images/Pages/edushare/14.png';
-import pic15 from '../../images/Pages/edushare/15.png';
-import pic16 from '../../images/Pages/edushare/16.png';
-import pic17 from '../../images/Pages/edushare/17.png';
-import pic18 from '../../images/Pages/edushare/18.png';
+import figmaD from '../../images/figmaD.svg';
+import figmaM from '../../images/figmaM.svg';
+import open from '../../images/open.svg';
+
+import picLogosD from '../../images/Pages/okizeme/Logos_Desktop.svg';
+import picLogosM from '../../images/Pages/okizeme/Logos_Mobile.svg';
+import picPaletteD from '../../images/Pages/okizeme/Palette_Desktop.svg';
+import picPaletteM from '../../images/Pages/okizeme/Palette_Mobile.svg';
+import picMoodD from '../../images/Pages/okizeme/Mood_Desktop.png';
+import picMoodM from '../../images/Pages/okizeme/Mood_Mobile.png';
+import picApex from '../../images/Pages/okizeme/apex.png';
+import picMoto from '../../images/Pages/okizeme/moto.png';
+import picIcon1 from '../../images/Pages/okizeme/icon1.png';
+import picIcon2 from '../../images/Pages/okizeme/icon2.png';
+import picGraphics from '../../images/Pages/okizeme/Graphics.png';
+import picGraphicsM from '../../images/Pages/okizeme/Graphics_Mobile.png';
+
+import picMobile1 from '../../images/Pages/okizeme/Mobile1.png';
+import picMobile2 from '../../images/Pages/okizeme/Mobile2.png';
+import picMobile3 from '../../images/Pages/okizeme/Mobile3.png';
+import picMobile4 from '../../images/Pages/okizeme/Mobile4.png';
+import picMobile5 from '../../images/Pages/okizeme/Mobile5.png';
+import picDesktop1 from '../../images/Pages/okizeme/Desktop01.png';
+import picDesktop2 from '../../images/Pages/okizeme/Desktop02.png';
+import picDesktop3 from '../../images/Pages/okizeme/Desktop03.png';
+import picDesktop4 from '../../images/Pages/okizeme/Desktop04.png';
+
+
 
 
 const Image = (props) => {
@@ -69,6 +78,7 @@ const tags = ['prototyping'];
 
 const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
+const imageMarginNone = {marginTop: '0rem', marginBottom: '0rem'};
 const color = '#F5C0B9'
 
 
@@ -156,18 +166,34 @@ class Okizeme extends React.Component {
                 data-aos-delay='400'
                 data-aos-once={true}
               > 
-                <h4 className='heading'> ROLE </h4>
+                {/* <h4 className='heading'> ROLE </h4>
                 <h4> UI/UX Designer </h4>              
-                <br/>
-                <h4 className='heading'> FIGMA LINKS </h4>
+                <br/> */}
+                <h4 className='heading'> LINKS </h4>
                 <div className='buttons'>
                   <a 
-                    href='https://www.figma.com/proto/zMITtMqtG9hcvJLDGtUC8G/Edushare?node-id=10%3A84&viewport=-523%2C272%2C0.2671932876110077&scaling=scale-down'
+                    href='https://okizeme.com/'
                     target='_blank' 
                     rel='noopener noreferrer'
                   >
-                    <img src={figma} alt='figma' draggable='false' /> 
-                    <span className='toolTip'> Figma prototype </span> 
+                    <img src={open} alt='open' draggable='false' /> 
+                    <span className='toolTip'> Live website </span> 
+                  </a> 
+                  <a 
+                    href='https://www.figma.com/proto/MgWQKucfltlZVzvE0cxUhQ/Okizeme-Design?page-id=0%3A1&node-id=1%3A2&viewport=411%2C660%2C0.10949171334505081&scaling=scale-down-width'
+                    target='_blank' 
+                    rel='noopener noreferrer'
+                  >
+                    <img src={figmaD} alt='figmaD' draggable='false' /> 
+                    <span className='toolTip'> Desktop prototype </span> 
+                  </a> 
+                  <a 
+                    href='https://www.figma.com/proto/MgWQKucfltlZVzvE0cxUhQ/Okizeme-Design?page-id=106%3A81&node-id=106%3A82&viewport=366%2C-150%2C0.25410154461860657&scaling=scale-down'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <img src={figmaM} alt='figmaM' draggable='false' /> 
+                    <span className='toolTip'> Mobile prototype </span> 
                   </a> 
                 </div>
                 <br/>
@@ -184,80 +210,155 @@ class Okizeme extends React.Component {
               >
                 <h4 className='heading'> SUMMARY </h4>
                 <h4> 
-                  I designed a potential sign up flow for an app where teachers can share ideas and socialize. These would be the screens users would encounter upon signing up for their first time.
+                  I produced a redesign for my client's website that improved the visuals and user experience. The ideation phase and final design are shown further below.
                 </h4> 
               </div>
             </div>
 
             <div className='section'>
               <SectionTitle title='intro'/> 
-              <h4 className='heading'> MOTIVATION </h4>
               <p> 
-                The designs you see below are the result of me finishing a short design challenge where I was tasked with creating screens for a sign up flow for teachers.
-                I took the liberty in fleshing out the purpose of the app, the user objectives, and design details.
+                Okizeme Gaming recently revised their branding and mission, and reached out to me for a website redesign that would reflect the new changes.
               </p>
-            </div>          
-                      
-            <div className='section'>
-              <SectionTitle title='sketches'/> 
-              <p> 
-                My initial rough sketch about the screens I had in mind, based off your typical sign up elements and flow.
+              <p>
+                The company strives to help further develop the talents and skills of their users — whether it be "streaming, training, and professional gaming" — 
+                through a mentor-like relationship.
               </p>
-              <Image src={pic1} style={this.props.screenWidth > 640 ? {width: '40%'} : {width: '90%'}}/>
-            </div>      
+            </div>     
 
             <div className='section'>
-              <SectionTitle title='wireframing'/> 
-              <Image src={pic2} style={imageMarginNoTop}/>
-              <h4 className='heading'> INITIAL TYPOGRAPHY & COLORS </h4>
-              <Image src={pic3} style={imageMarginNoTop} />
+              <SectionTitle title='goals'/> 
+              <h4 className='heading'> 1. IMPROVE THE VISUALS </h4>
+              <p> 
+                Enhance the visuals by incorporating the branding and genre into the site better.
+              </p>
+              <br/>
+              <h4 className='heading'> 2. STREAMLINE THE USER EXPERIENCE </h4>
+              <p> 
+                Improve the user's navigational experience. Simplify the process to find an article and to continue reading new ones after.
+              </p>
+            </div>          
+
+            <div className='section'>
+              <SectionTitle title='inspiration'/> 
+              <p> 
+                The websites and graphics below depict various themes and visuals that we wanted to encapsulate within the site.
+                <br/>
+                I took heavy inspiration from the bold font faces and it's layout within the overall structure of the site.
+              </p>
+              <br/>
+
+              <h4 className='heading'> WEBSITES </h4>
+              <div className={this.props.screenWidth > 640 ? 'wide' : 'narrow'}>
+                <a 
+                  className='okizemeLink'
+                  href='https://www.behance.net/gallery/100767627/APEX-LEGENDS-New-website-2020?tracking_source=search_projects_recommended%7Cwebsite'
+                  target='_blank' 
+                  rel='noopener noreferrer'
+                >
+                  <Image src={picApex} style={imageMarginNone} />
+                  APEX LEGENDS - Redesign
+                </a> 
+                <a 
+                  className='okizemeLink'
+                  href='https://www.behance.net/gallery/100006865/MXGP-Website-2020?tracking_source=search_projects_recommended%7Cwebsite'
+                  target='_blank' 
+                  rel='noopener noreferrer'
+                >
+                  <Image src={picMoto} style={imageMarginNone} />
+                  MXGP - Website 2020
+                </a> 
+                <a 
+                  className='okizemeLink'
+                  href='https://iconagency.gg/'
+                  target='_blank' 
+                  rel='noopener noreferrer'
+                >
+                  <Image src={picIcon1} style={imageMarginNone} />
+                  ICON
+                </a> 
+                <a 
+                  className='okizemeLink'
+                  href='https://iconagency.gg/'
+                  target='_blank' 
+                  rel='noopener noreferrer'
+                >
+                  <Image src={picIcon2} style={imageMarginNone} />
+                  ICON Loading Screen
+                </a> 
+              </div>
+
+              <h4 className='heading'> GRAPHICS </h4>
+              <a 
+                className='okizemeLink'
+                href='https://creativemarket.com/irenedemetri/2465467-Japanese-Patterns-Vector-Handdrawn#fullscreen'
+                target='_blank' 
+                rel='noopener noreferrer'
+              >
+                <Image 
+                  src={this.props.screenWidth > 640 ? picGraphics : picGraphicsM} 
+                  style={imageMarginNone} 
+                />
+                Japanese Patterns - Youandigraphics
+              </a> 
+
+              <h4 className='heading'> MOOD BOARD </h4>
+              <Image src={this.props.screenWidth > 640 ? picMoodD : picMoodM} style={imageMarginNoTop}/>
             </div>  
 
             <div className='section'>
-              <SectionTitle title='mockups'/> 
+              <SectionTitle title='initial ideation'/> 
+              <h4 className='heading'> LOGO DESIGNS </h4>
+              <Image src={this.props.screenWidth > 640 ? picLogosD : picLogosM} style={imageMarginNoTop}/>
+              
+              <h4 className='heading'> COLOR PALETTE </h4>
+              <Image src={this.props.screenWidth > 640 ? picPaletteD : picPaletteM} style={imageMarginNoTop}/>
+            </div>  
+
+            <div className='section'>
+              <SectionTitle title='prototypes'/> 
               <h4 className='heading'> MOBILE </h4>
-              <Image src={pic4} style={imageMarginLessBottom}/>
-              <Image src={pic5} style={imageMarginNoTop}/>
-
-              <h4 className='heading'> DESKTOP </h4>
-              <p>
-                Here are some of the desktop screens as well, they're pretty similar to mobile.
-              </p>
-              <Image src={pic6} style={imageMarginLessBottom}/>
-              <Image src={pic7} style={imageMarginLessBottom}/>
-
               {this.props.screenWidth > 640 ? 
                 <>
-                  <Image src={pic8} style={imageMarginNoTop}/>
+                  <Image src={picMobile1} style={imageMarginLessBottom}/>
+                  <Image src={picMobile2} style={imageMarginNoTop}/>
                 </>
                 :
                 <>
-                  <Image src={pic15} style={imageMarginLessBottom}/>
-                  <Image src={pic16} style={imageMarginLessBottom}/>
-                  <Image src={pic17} style={imageMarginLessBottom}/>
-                  <Image src={pic18} style={imageMarginLessBottom}/>
+                  <Image src={picMobile3} style={imageMarginLessBottom}/>
+                  <Image src={picMobile4} style={imageMarginLessBottom}/>
+                  <Image src={picMobile5} style={imageMarginNoTop}/>
                 </>
               }
 
-              <h4 className='heading'> COLORS </h4>
-              <Image src={this.props.screenWidth > 640 ? pic9 : pic12} style={imageMarginNoTop}/>
-              <h4 className='heading'> TYPOGRAPHY </h4>
-              <Image src={this.props.screenWidth > 640 ? pic10 : pic13} style={imageMarginNoTop}/>
-              <h4 className='heading'> ICONOGRAPHY </h4>
-              <Image src={this.props.screenWidth > 640 ? pic11 : pic14} style={imageMarginNoTop}/>
+              <h4 className='heading'> DESKTOP </h4>
+              <Image src={picDesktop4} style={imageMarginLessBottom}/>
+              <Image src={picDesktop3} style={imageMarginLessBottom}/>
+              <Image src={picDesktop2} style={imageMarginLessBottom}/>
+              <Image src={picDesktop1} style={imageMarginNoTop}/>
+
+              {/* <h4 className='heading'> COLORS </h4> */}
+              {/* <Image src={this.props.screenWidth > 640 ? pic9 : pic12} style={imageMarginNoTop}/> */}
+              {/* <h4 className='heading'> TYPOGRAPHY </h4> */}
+              {/* <Image src={this.props.screenWidth > 640 ? pic10 : pic13} style={imageMarginNoTop}/> */}
             </div>
 
             <div className='section'>
               <SectionTitle title='lessons learned'/> 
               <p>
-                My main takeaway from this design challenge was practice with task prioritization. <br/>
-                It was due to the time limit I imposed on myself that forced me to rethink the way I usually start off my design projects or tasks.
-                Which things are most important? I need to dedicate most of my time to that. Which things are least important? 
-                Ok for these things I will really need to keep track of the time as I work on them. <br/>
-                Out of this challenge, I realized how vital it is for me as a designer to prioritize the steps in my design process.
+                From this collaboration with Okizeme, I developed better skills for the UI portion of UI/UX Design. 
+                I've always been confident in claiming that UI Design is different from graphics/marketing design, and although it is canonically, I would be lying if I said
+                that there was no overlap.
               </p>
               <p>
-                My mentor told me this quote, "You can achieve anything but you can't achieve everything."
+                While designing the layout of a webpage or app screen, it's important to focus on location and ease of access first, however the visual aesthetics of the design is equally as
+                pivotal in user satisfaction and ultimately retention. 
+              </p>
+              <p>
+                <b> The design of a website or app should exemplify the company's brand and purpose.  </b>
+              </p>
+              <p>
+                In the same way that a Dyson or Apple advertisement screams their name, despite their minimalistic style, a company — or at least their brand — should be recognizeable from their sites or apps.
               </p>
             </div>
 

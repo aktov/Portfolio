@@ -8,7 +8,7 @@ smoothscroll.polyfill();
 //   'projects', 'experience', 'about', 'resume'
 // ]
 const headerCategories = [
-  'projects', 'about', 'resume'
+  'work', 'about', 'resume'
 ]
 
 // Button component

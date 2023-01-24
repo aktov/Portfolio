@@ -62,7 +62,7 @@ const Tags = (props) => {
   return (
     <div className='tags'>
       {props.names.map((name) =>
-        <h5 key={name} style={{color: props.color}}> {name.toUpperCase()} </h5>
+        <h5 key={name} style={{color: props.color2}}> {name.toUpperCase()} </h5>
       )}
     </div>
   );
@@ -104,6 +104,7 @@ const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
 const smallerImage = {marginTop: '0rem', width: '70%'}
 const smallerImageLess = {marginTop: '0rem', marginBottom: '2rem', width: '70%'}
 const color = '#E0F1F3'
+const color2 = '#BEE3E8'
 
 
 
@@ -166,7 +167,7 @@ class Boba extends React.Component {
             data-aos-once={true}  
           />
           <div className='pages' style={this.props.screenWidth > 640 ? {marginTop:'3rem'} : {width: '75%', marginTop:'3rem'}}>
-            <Tags names={tags} color={color}/>
+            <Tags names={tags} color={color} color2={color2}/>
             <h3 
               className='title'
               data-aos='fade' 
@@ -190,10 +191,10 @@ class Boba extends React.Component {
                 data-aos-delay='400'
                 data-aos-once={true}
               > 
-                <h4 className='heading'> ROLE </h4>
+                {/* <h4 className='heading'> ROLE </h4>
                 <h4> UI/UX Designer </h4>              
-                <br/>
-                <h4 className='heading'> FIGMA LINKS </h4>
+                <br/> */}
+                <h4 className='heading'> FIGMA LINK </h4>
                 <div className='buttons'>
                   <a 
                     href='https://www.figma.com/proto/A4YCf5Qx8THEGF7iDGfwJa/Boba-Buddy?node-id=6%3A755&viewport=589%2C191%2C0.09667579084634781&scaling=scale-down'

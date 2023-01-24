@@ -194,7 +194,7 @@ class Alike extends React.Component {
               >
                 <h4 className='heading'> SUMMARY </h4>
                 <h4> 
-                  During the duration of my internship at Alike, I've designed screens and user flows that have helped quadruple our user conversion rates and boosted our DAU rates.
+                  During my internship at Alike, I designed and redesigned app screens and user flows that improved the overall user experience. Below are just a few of the screens I worked on.
                 </h4> 
               </div>
             </div>

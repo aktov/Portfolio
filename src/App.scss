@@ -591,7 +591,7 @@ div.content {
         }
     }
 
-    div.projects {
+    div.work {
         position: relative;
         width: 100%;
         margin: auto;
@@ -625,7 +625,7 @@ div.content {
     
         div.cardsDesktop {
             position: relative;
-            width: 79%;
+            width: 75%;
             margin: auto;
             margin-bottom: $sectionMarginBottom;
 
@@ -634,7 +634,7 @@ div.content {
             justify-content: center;
             align-items: flex-start;
         
-            overflow: hidden;
+            overflow: visible;
 
             .lazyload-wrapper  {
                 width: 100%;
@@ -677,7 +677,8 @@ div.content {
 
         div.cardDesktop {
             position: relative;
-            width: 95%;
+            width: 100%;
+            // max-width: 46%;
             height: toRem(500);
             max-height: toRem(500);
             margin: $projCardMargin;
@@ -690,7 +691,7 @@ div.content {
             align-self: flex-start;
             overflow: hidden;
     
-            border-radius: toRem(10);
+            border-radius: toRem(16);
             border: none;
             background-color: #ffffff;
             -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
@@ -924,7 +925,7 @@ div.content {
             }
 
             div.expand {
-                height: 27%;
+                height: 32%;
                 // -webkit-transform: translateY(-80%) scaleY(1.8);
                 // -moz-transform: translateY(-80%) scaleY(1.8);
                 // -ms-transform: translateY(-80%) scaleY(1.8);
@@ -946,7 +947,7 @@ div.content {
             align-self: stretch;
             overflow: hidden;
     
-            border-radius: toRem(5);
+            border-radius: toRem(16);
             border: none;
             background-color: #ffffff;
             -webkit-filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
@@ -1303,6 +1304,49 @@ div.content {
                         height: 100%;
                     }
                 }
+            }
+
+            div.wide {
+                margin-bottom: toRem(100);
+
+                display: flex;
+                flex-flow: row wrap;
+
+                a.okizemeLink {
+                    max-width: 50%;
+                }
+            }
+
+            div.narrow {
+                margin-bottom: toRem(100);
+
+                display: flex;
+                flex-flow: column wrap;
+            }
+        
+            a.okizemeLink {
+                margin-bottom: toRem(30);
+                max-width: 100%;
+
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+
+                text-align: center;
+                text-decoration: none;
+                font-family: 'Poppins', sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: $size_p;
+                line-height: normal;
+            
+                white-space: normal;
+                -ms-word-wrap: normal;
+                word-wrap: normal;
+                -ms-word-break: normal;
+                word-break: normal;
+            
+                color: $baseTextColor;
             }
         }
 

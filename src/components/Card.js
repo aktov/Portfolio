@@ -93,7 +93,7 @@ class Card extends React.Component {
       {this.props.screenWidth > 768 ?      
         <div 
           className='cardDesktop'
-          style={this.props.screenWidth >= 480 ? {margin: '1rem 1.5rem'} : {margin: '1rem 1rem'}}
+          style={this.props.screenWidth >= 480 ? {margin: '2rem 1.5rem'} : {margin: '1rem 1rem'}}
           onMouseEnter={this.handleMouseEnter} 
           onMouseLeave={this.handleMouseLeave}
           data-aos='fade' 
@@ -135,7 +135,7 @@ class Card extends React.Component {
             <div className='other'>
               {this.state.mouseEntered && <>
                 <Buttons props={this.props} />
-                {this.props.tags && <Tags names={this.props.tags} color={this.props.color} />}
+                {this.props.tags && <Tags names={this.props.tags} color={this.props.color2 || this.props.color} />}
               </>}
             </div>
           </div>
@@ -168,7 +168,7 @@ class Card extends React.Component {
             <h4 className='cardTitle'> {this.props.title.toUpperCase()} </h4>
             <p> {this.props.desc} </p>
         
-            {this.props.tags && <Tags names={this.props.tags} color={this.props.color} />}
+            {this.props.tags && <Tags names={this.props.tags} color={this.props.color2 || this.props.color} />}
             <Buttons props={this.props} />
           </div>
         </div>

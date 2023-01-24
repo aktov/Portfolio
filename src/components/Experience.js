@@ -154,7 +154,7 @@ class Experience extends React.Component {
         >
           <JobListing 
             screenWidth={this.props.screenWidth}
-            title='Lead UI/UX Designer'
+            title='UI/UX Designer'
             location='Artist Crowdfund Exchange'
             link='https://www.ace.fan/'
             period='August 2021 - October 2022'

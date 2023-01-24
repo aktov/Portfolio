@@ -8,8 +8,8 @@ import './App.scss';
 import Desktop from './components/Desktop.js'; 
 import Mobile from './components/Mobile.js';
 
-import About from './components/Pages/About.js'; 
-import Resume from './components/Pages/Resume.js'; 
+// import About from './components/Pages/About.js'; 
+// import Resume from './components/Pages/Resume.js'; 
 
 // Case Studies
 import Alike from './components/Pages/Alike.js'; 
@@ -64,12 +64,12 @@ class App extends React.Component {
             <Mobile screenWidth={this.state.screenWidth}/>
             }
           </Route>
-          <Route path='/about'>
+          {/* <Route path='/about'>
             <About screenWidth={this.state.screenWidth}/>
           </Route>
           <Route path='/resume'>
             <Resume screenWidth={this.state.screenWidth}/>
-          </Route>
+          </Route> */}
 
           {/* Case Studies */}
           <Route path='/alike'>

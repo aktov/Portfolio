@@ -187,7 +187,7 @@ class Hon extends React.Component {
                 <h4 className='heading'> ROLE </h4>
                 <h4> UI/UX Designer </h4>              
                 <br/>
-                <h4 className='heading'> FIGMA LINKS </h4>
+                <h4 className='heading'> FIGMA LINK </h4>
                 <div className='buttons'>
                   {/* <a 
                     href='https://blog.hon-media.com/'
