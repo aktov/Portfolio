@@ -12,6 +12,7 @@ import Mobile from './components/Mobile.js';
 // import Resume from './components/Pages/Resume.js'; 
 
 // Case Studies
+import ACE from './components/Pages/ACE.js'; 
 import Alike from './components/Pages/Alike.js'; 
 import Okizeme from './components/Pages/Okizeme.js'; 
 import Hon from './components/Pages/Hon.js'; 
@@ -74,6 +75,9 @@ class App extends React.Component {
           </Route> */}
 
           {/* Case Studies */}
+          <Route path='/ace'>
+            <ACE screenWidth={this.state.screenWidth}/>
+          </Route>
           <Route path='/alike'>
             <Alike screenWidth={this.state.screenWidth}/>
           </Route>

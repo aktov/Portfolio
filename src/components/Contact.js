@@ -13,7 +13,7 @@ const buttons = [
     toolTip: 'github.com/aktov'
   },
   {
-    href: 'https://www.linkedin.com/in/alex-tov-32047a184/',
+    href: 'https://www.linkedin.com/in/alex-tov/',
     src: linkedin, 
     alt: 'LinkedIn',
     toolTip: 'LinkedIn'
@@ -25,10 +25,10 @@ const buttons = [
     toolTip: '+1 (415) 994-9888'
   },
   {
-    href: 'mailto:alextov.works@gmail.com',
+    href: 'mailto:alextovdesign@gmail.com',
     src: mail, 
     alt: 'Email',
-    toolTip: 'alextov.works@gmail.com'
+    toolTip: 'alextovdesign@gmail.com'
   },
 ]
 

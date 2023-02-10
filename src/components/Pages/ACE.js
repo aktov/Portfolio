@@ -9,8 +9,8 @@ import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
 
-import banner from '../../images/Banners/banner_alike.png';
-import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_alike.png';
+import banner from '../../images/Banners/banner_ace.png';
+import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_ace.png';
 import open from '../../images/open.svg';
 
 import pic3 from '../../images/Pages/alike/3.png';
@@ -60,13 +60,13 @@ const Tags = (props) => {
   return (
     <div className='tags'>
       {props.names.map((name) =>
-        <h5 key={name} style={{color: props.color}}> {name.toUpperCase()} </h5>
+        <h5 key={name} style={{color: props.color2}}> {name.toUpperCase()} </h5>
       )}
     </div>
   );
 }
 
-const tags = ['wireframing', 'mockups', 'prototyping'];
+const tags = ['ux research', 'wireframing', 'mockups', 'prototyping', 'user testing']
 
 const descr = [
   'Modified and updated existing app screens with UI designs more aligned with modern trends and styles (e.g. navigation bar, headers, icons, and many other specific screens)',
@@ -75,12 +75,12 @@ const descr = [
   'Helped quadruple the conversion rate of app downloads to users'
 ];
 
-
 const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
 const smallerImage = {marginTop: '0rem', width: '70%'}
 const smallerImageLess = {marginTop: '0rem', marginBottom: '2rem', width: '70%'}
-const color = '#688CD0'
+const color = '#FBE7E7'
+const color2 = '#EAA4C1'
 
 // Returns style based on breakpoints, of which there are 2
 const decideMarginWidth = function(value) {
@@ -95,7 +95,7 @@ const decideMarginWidth = function(value) {
 
 
 
-class Alike extends React.Component {
+class ACE extends React.Component {
   constructor(props) {
     super(props);
 
@@ -153,7 +153,7 @@ class Alike extends React.Component {
             data-aos-once={true}  
           />
           <div className='pages' style={decideMarginWidth(this.props.screenWidth)}>
-            <Tags names={tags} color={color}/>
+            <Tags names={tags} color={color} color2={color2}/>
             <h3 
               className='title'
               data-aos='fade' 
@@ -163,7 +163,7 @@ class Alike extends React.Component {
               data-aos-delay='200'
               data-aos-once={true}
             > 
-              {'Alike'.toUpperCase()} 
+              {'Artist Crowdfund Exchange (ACE)'.toUpperCase()} 
             </h3>
 
             <div className='intro'>
@@ -180,17 +180,17 @@ class Alike extends React.Component {
                 <h4 className='heading'> Role </h4>
                 <p> UI/UX Designer </p>              
                 <br/>
-                {/* <h4 className='heading'> LINKS </h4>
+                <h4 className='heading'> Links </h4>
                 <div className='buttons'>
                   <a 
-                    href='https://www.alike.dating/'
+                    href='https://www.ace.fan/'
                     target='_blank' 
                     rel='noopener noreferrer'
                   >
                     <img src={open} alt='link' draggable='false' /> 
-                    <span className='toolTip'> Check out Alike! </span> 
+                    <span className='toolTip'> Check out ACE! </span> 
                   </a> 
-                </div> */}
+                </div>
                 <br/>
               </div>
               <div 
@@ -205,124 +205,43 @@ class Alike extends React.Component {
               >
                 <h4 className='heading'> Summary </h4>
                 <p> 
-                  During my internship at Alike, I designed and redesigned app screens and user flows that improved the overall user experience. Below are just a few of the screens I worked on.
+                  Here's a brief showcase of the designs I created during the year I spent working at ACE! <br/>
+                  The features shown below are currently live on the app.
                 </p> 
+                <br/>
                 <h4 className='heading'> Team </h4>
-                <p> I worked very closely with the CEO and the other UI/UX designer on the team. </p>
-                <p> Hanmin Yang [CEO] <br/> Courtney Mercado [UI/UX Designer] </p>
+                <p> We were a small startup, so I worked closely with our founders and engineers. Of the team, here are those I worked most with: </p>
+                <div className='teamColumns'>
+                  <p> <b> Founders </b> <br/> Omi Iyamu [CTO] <br/> Darren [CEO] <br/> DJ [COO] </p>
+                  <p> <b> Product </b> <br/> Erick Wahome [Product Manager] <br/> Jade French [Marketing Lead] </p>
+                </div>
+                <p> <b> Front End Engineers </b> <br/> Jose Ambrosio <br/> Erik German <br/> Deep Bhavsar <br/> Jignesh Maheshwari <br/> Bharat Sindhav </p>
+                <br/>
               </div>
             </div>
 
             <div className='section'>
-              <SectionTitle title='background'/> 
-              <h4 className='heading'> What's Alike? </h4>
-              <p> 
-                Alike is a <i>video</i> dating app that celebrates the asian experience! Emphasis on video. <br/>
-                We're creating a platform where users can get a better sense of another's vibes and character through videos!
+              <SectionTitle title='Coming Soon'/> 
+              <p>
+                I'm still working it out with Omi on which features of the app I can showcase. For now, you'll need to wait a bit. 
               </p>
               <p>
-                Skipping the text prompts and jumping straight into video prompts to allow users to share their story and personality in the best way, through videos and pictures, 
-                all in hopes that we can inspire more genuine connections and conversations for people.
-                If pictures are worth a thousand words, then videos must be worth millions. 
+                Sorry about that!
               </p>
-              <p>
-                This is just a brief description, for more details, check out the link above!
-              </p>
-              <br/>
+              <h4 className='heading'> Check out my other work in the meantime! </h4>
 
-              <h4 className='heading'> My Impact </h4>
-              <p> 
-                I joined Alike while the app was in it's beta stages, and worked in a team consisting of a lead UI/UX Designer and the CEO himself, Hanmin. <br/>
-                So far in my internship, I've done the following:
-              </p>
-                
-              <Bullets info={descr}/> 
-              <br/>
-
-              <h4 className='heading'> Personas </h4>
-              <p> Here are a couple of the personae our team had in mind while designing our screens: </p>
-              <br/>
-              <>
-                {this.props.screenWidth > 768 ? 
-                  <Image src={picPersona} style={imageMarginLessBottom}/>
-                  :
-                  <>
-                    <Image src={pic5} style={imageMarginLessBottom}/>
-                    <Image src={pic6} style={imageMarginNoTop}/>    
-                  </>
-                }
-              </>
             </div>           
 
-            <div className='section'>
-              <SectionTitle title='components'/> 
-              <h4 className='heading'> Nav Bar & Headers </h4>
-              <p>
-                Prior to my onboarding, the nav bars and headers on our screens weren't components, which I thought was a major oversight. 
-                Moreso, our headers were inconsistent throughout the app e.g. different heights, fonts, and element placements.
-              </p>
-              <p>  
-                Figma unveiled their 'Variants' feature not too long ago, so I took the opportunity to use those to standardize the various different nav bars and headers we
-                had across our app and turned them into component variants. This will save us valuable time in the future if we decide to update our nav bars or headers.
-              </p>
-              <br/>
-              <Image src={pic4} style={this.props.screenWidth > 768 ? smallerImage : imageMarginNoTop}/>
-
-              <h4 className='heading'> Buttons </h4>
-              <p>
-                Similarly, I turned our buttons throughout the app screens into components for easier changes down the line.
-              </p>
-              <br/>
-              <Image src={pic7} style={this.props.screenWidth > 768 ? smallerImage : imageMarginNoTop}/>
-            </div>
-
-            <div className='section'>
-              <SectionTitle title='updated screens'/> 
-              <p>
-                Here are just a few of the screens that I've updated so far:
-              </p>
-
-              {this.props.screenWidth > 768 ? 
-              <>
-                <h4 className='heading' style={{alignSelf: 'center'}}> OLD </h4>
-                <Image src={pic8} style={imageMarginLessBottom}/>
-                <h4 className='heading' style={{alignSelf: 'center'}}> UPDATED </h4>
-                <Image src={pic9} style={imageMarginNoTop}/>
-              </>
-              :
-              <>
-                <h4 className='heading' style={{alignSelf: 'center'}}> OLD vs. UPDATED </h4>
-                <Image src={pic11} style={imageMarginLessBottom}/>
-              </>
-              }
-            </div>
-            
-            <div className='section'>
-              <SectionTitle title='highlights'/> 
-              <p>
-                I can't unveil too much yet since this feature is in the works but here's a sneak peak at some screens!
-              </p>
-              <Image src={this.props.screenWidth > 768 ? pic3 : pic10} style={imageMarginLessBottom}/>
-            </div>
-
-            <div className='section'>
-              <SectionTitle title='thoughts'/> 
-              <p>
-                So far it's been a great learning and growing experience at Alike. I've learned a lot from my lead UI/UX Designer teammate and also from Hanmin as well!
-                It's amazing to have my ideas heard and so well implemented in the app and that feeling of seeing my designs come to life can't be beat. 
-                As I continue accomplishing tasks and working here at Alike, I'll definitely add more to this page, check back soon!
-              </p>
-            </div>
 
           </div>
         </div>
       </div>
 
-      <TopButton color={color} />
+      <TopButton color={color2} />
       <Footer screenWidth={this.props.screenWidth} />
       </>
     );
   }
 }
 
-export default Alike;
+export default ACE;

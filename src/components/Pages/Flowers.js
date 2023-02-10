@@ -213,7 +213,7 @@ class Flowers extends React.Component {
                 <h4 className='heading'> LINKS </h4>
                 <div className='buttons'>
                   <a 
-                    href='https://www.figma.com/proto/MgWQKucfltlZVzvE0cxUhQ/Okizeme-Design?page-id=0%3A1&node-id=1%3A2&viewport=411%2C660%2C0.10949171334505081&scaling=scale-down-width'
+                    href='https://www.figma.com/proto/5gbXEMOUCFgvECx3gFsD4Q/Pretty-Nice-Flowers?page-id=205%3A1662&node-id=205%3A1663&viewport=342%2C655%2C0.24&scaling=min-zoom&starting-point-node-id=205%3A1663&hide-ui=1'
                     target='_blank' 
                     rel='noopener noreferrer'
                   >
@@ -347,9 +347,15 @@ class Flowers extends React.Component {
                   <Image src={picText} style={imageMarginLessBottom}/>
                 }
               </>
-
-              
             </div>  
+
+            <div className='section'>
+              <SectionTitle title='Prototype'/> 
+              <p>
+                Even though this was more of a simple redesign as opposed to a UX research project, it was still a great learning experience into Figma's components, variants, and layout grids.
+              </p>
+              {/* <iframe style={{border: '1px solid rgba(0, 0, 0, 0.1)', width:'100%', height:'50rem'}} src={'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F5gbXEMOUCFgvECx3gFsD4Q%2FPretty-Nice-Flowers%3Fpage-id%3D205%253A1662%26node-id%3D205%253A1663%26viewport%3D588%252C633%252C0.33%26scaling%3Dscale-down%26starting-point-node-id%3D205%253A1663'} allowfullscreen></iframe> */}
+            </div>
 
             <div className='section'>
               <SectionTitle title='Looking towards the future'/> 
