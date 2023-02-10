@@ -11,7 +11,7 @@ import TopButton from '../TopButton.js';
 
 import banner from '../../images/Banners/banner_boba.png';
 import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_boba.png';
-import figma from '../../images/figmaLogo_black.svg';
+import figma from '../../images/figmaLogo.svg';
 import pic1 from '../../images/Pages/boba/1.png';
 import pic2 from '../../images/Pages/boba/2.png';
 import pic3 from '../../images/Pages/boba/3.png';
@@ -30,7 +30,7 @@ const Bullets = (props) => {
   return (
   <div className='phrases'>
     {props.info.map((phrase, index) => 
-      <Phrase key={'yahoo/' + index} text={phrase}/>
+      <Phrase key={'boba/' + index} text={phrase}/>
     )}
   </div>
   );
@@ -101,12 +101,20 @@ const design = [
 
 const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
-const smallerImage = {marginTop: '0rem', width: '70%'}
-const smallerImageLess = {marginTop: '0rem', marginBottom: '2rem', width: '70%'}
+const smallerImage = {marginTop: '0rem', width: '80%'}
+const smallerImageLess = {marginTop: '0rem', marginBottom: '2rem', width: '80%'}
 const color = '#E0F1F3'
 const color2 = '#BEE3E8'
 
-
+// Returns style based on breakpoints, of which there are 2
+const decideMarginWidth = function(value) {
+  if (value > 1280) {
+    return {marginTop:'3rem'}
+  } else if (value > 768) {
+    return {width: '70%', marginTop:'3rem'}
+  }
+  return {width: '75%', marginTop:'3rem'}
+} 
 
 
 class Boba extends React.Component {
@@ -157,7 +165,7 @@ class Boba extends React.Component {
           <div id='anchor_page' className='anchor' style={{top: '-1000px'}}></div>
           <img 
             className='banner' 
-            src={this.props.screenWidth > 640 ? banner : banner_mob} 
+            src={this.props.screenWidth > 768 ? banner : banner_mob} 
             alt='Banner' 
             draggable='false'          
             data-aos='fade' 
@@ -166,7 +174,7 @@ class Boba extends React.Component {
             data-aos-duration='400'
             data-aos-once={true}  
           />
-          <div className='pages' style={this.props.screenWidth > 640 ? {marginTop:'3rem'} : {width: '75%', marginTop:'3rem'}}>
+          <div className='pages' style={decideMarginWidth(this.props.screenWidth)}>
             <Tags names={tags} color={color} color2={color2}/>
             <h3 
               className='title'
@@ -183,7 +191,7 @@ class Boba extends React.Component {
             <div className='intro'>
               <div 
                 className='col' 
-                style={this.props.screenWidth > 640 ? null : {width: '100%'}}
+                style={this.props.screenWidth > 768 ? null : {width: '100%'}}
                 data-aos='fade' 
                 data-aos-offset='50' 
                 data-aos-easing='ease-out-sine'
@@ -194,7 +202,7 @@ class Boba extends React.Component {
                 {/* <h4 className='heading'> ROLE </h4>
                 <h4> UI/UX Designer </h4>              
                 <br/> */}
-                <h4 className='heading'> FIGMA LINK </h4>
+                <h4 className='heading'> Figma Link </h4>
                 <div className='buttons'>
                   <a 
                     href='https://www.figma.com/proto/A4YCf5Qx8THEGF7iDGfwJa/Boba-Buddy?node-id=6%3A755&viewport=589%2C191%2C0.09667579084634781&scaling=scale-down'
@@ -209,7 +217,7 @@ class Boba extends React.Component {
               </div>
               <div 
                 className='col' 
-                style={this.props.screenWidth > 640 ? null : {width: '100%'}}
+                style={this.props.screenWidth > 768 ? null : {width: '100%'}}
                 data-aos='fade' 
                 data-aos-offset='50' 
                 data-aos-easing='ease-out-sine'
@@ -217,17 +225,17 @@ class Boba extends React.Component {
                 data-aos-delay='400'
                 data-aos-once={true}
               >
-                <h4 className='heading'> SUMMARY </h4>
-                <h4> 
+                <h4 className='heading'> Summary </h4>
+                <p> 
                   I designed an app meant to help users watch and keep track of their boba tea spending. I sent out surveys for user research, drafted wireframes
                   and mockups, and then designed a prototype upon which I conducted user testing.  
-                </h4> 
+                </p> 
               </div>
             </div>
 
             <div className='section'>
               <SectionTitle title='intro'/> 
-              <h4 className='heading'> MOTIVATION </h4>
+              <h4 className='heading'> Motivation </h4>
               <p> 
                   I was inspired to create this when I found out my friend bought one boba tea drink most days of the week, which definitely adds up over the month. 
                   I was in shock. Hopefully a real-life version of this app may help her in this regard!
@@ -236,12 +244,12 @@ class Boba extends React.Component {
                       
             <div className='section'>
               <SectionTitle title='user research & data'/> 
-              <h4 className='heading'> SURVEY & DATA </h4>
+              <h4 className='heading'> Survey Data </h4>
               <p> 
                 Here are snippets of some of the questions and respective answers from the initial survey I sent out:
               </p>
               
-              {this.props.screenWidth > 640 ? 
+              {this.props.screenWidth > 768 ? 
                 <>
                   <Image src={pic5} style={imageMarginNoTop}/>
                 </>
@@ -252,7 +260,7 @@ class Boba extends React.Component {
                 </>
               }
 
-              <h4 className='heading'> BREAKING IT DOWN </h4>
+              <h4 className='heading'> Breaking It Down </h4>
               <p>
                 Most users do like to get boba and get it often, and half of them do feel as though they spend a lot on boba tea.
               </p>
@@ -269,21 +277,21 @@ class Boba extends React.Component {
               </p>
               <br/>
 
-              <h4 className='heading'> FEATURES & FUNCTIONALITIES </h4>
+              <h4 className='heading'> Features & Functionalities </h4>
               <p> 
                 After analyzing the data, I compiled a list of features and functionalities that users would seem to benefit from.
               </p>
               <Bullets info={features}/>
               <br/>
 
-              <h4 className='heading'> PERSONAE </h4>
-              <Image src={pic1} style={this.props.screenWidth > 640 ? smallerImageLess : imageMarginLessBottom}/>
-              <Image src={pic2} style={this.props.screenWidth > 640 ? smallerImage : imageMarginNoTop}/>
+              <h4 className='heading'> Personas </h4>
+              <Image src={pic1} style={this.props.screenWidth > 768 ? smallerImageLess : imageMarginLessBottom}/>
+              <Image src={pic2} style={this.props.screenWidth > 768 ? smallerImage : imageMarginNoTop}/>
             </div>      
 
             <div className='section'>
               <SectionTitle title='wireframes'/> 
-              {this.props.screenWidth > 640 ? 
+              {this.props.screenWidth > 768 ? 
                 <>
                   <Image src={pic10} style={smallerImageLess}/>
                   <Image src={pic11} style={smallerImageLess}/>
@@ -298,7 +306,7 @@ class Boba extends React.Component {
 
             <div className='section'>
               <SectionTitle title='mockups'/> 
-              {this.props.screenWidth > 640 ? 
+              {this.props.screenWidth > 768 ? 
                 <>
                   <Image src={pic6} style={smallerImageLess}/>
                   <Image src={pic7} style={smallerImageLess}/>
@@ -313,14 +321,14 @@ class Boba extends React.Component {
 
             <div className='section'>
               <SectionTitle title='user testing & results'/> 
-              <h4 className='heading'> USER TASKS </h4>
+              <h4 className='heading'> User Tasks </h4>
               <p>
                 Here are the tasks I had in mind for users to accomplish:
               </p>
               <Bullets info={tasks}/>
               <br/>
 
-              <h4 className='heading'> POST-TESTING FEEDBACK QUESTIONS </h4>
+              <h4 className='heading'> Post-Testing Feedback Questions </h4>
               <p><b>UX Questions</b></p>
               <Bullets info={experience}/>
               <br/>
@@ -329,7 +337,7 @@ class Boba extends React.Component {
               <Bullets info={design}/>
               <br/>
 
-              <h4 className='heading'> TAKEAWAYS </h4>
+              <h4 className='heading'> Takeaways </h4>
               <p>
                 From this round of user testing, I wanted to takeaway these 4 things. Here's a summary of what I discovered.
               </p>

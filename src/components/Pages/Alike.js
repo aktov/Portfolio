@@ -13,8 +13,6 @@ import banner from '../../images/Banners/banner_alike.png';
 import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_alike.png';
 import open from '../../images/open.svg';
 
-import pic1 from '../../images/Pages/alike/1.png';
-import pic2 from '../../images/Pages/alike/2.png';
 import pic3 from '../../images/Pages/alike/3.png';
 import pic4 from '../../images/Pages/alike/4.png';
 import pic5 from '../../images/Pages/alike/5.png';
@@ -24,12 +22,13 @@ import pic8 from '../../images/Pages/alike/8.png';
 import pic9 from '../../images/Pages/alike/9.png';
 import pic10 from '../../images/Pages/alike/10.png';
 import pic11 from '../../images/Pages/alike/11.png';
+import picPersona from '../../images/Pages/alike/Persona.png';
 
 const Bullets = (props) => {
   return (
   <div className='phrases'>
     {props.info.map((phrase, index) => 
-      <Phrase key={'yahoo/' + index} text={phrase}/>
+      <Phrase key={'alike/' + index} text={phrase}/>
     )}
   </div>
   );
@@ -83,6 +82,18 @@ const smallerImage = {marginTop: '0rem', width: '70%'}
 const smallerImageLess = {marginTop: '0rem', marginBottom: '2rem', width: '70%'}
 const color = '#688CD0'
 
+// Returns style based on breakpoints, of which there are 2
+const decideMarginWidth = function(value) {
+  if (value > 1280) {
+    return {marginTop:'3rem'}
+  } else if (value > 768) {
+    return {width: '70%', marginTop:'3rem'}
+  }
+  return {width: '75%', marginTop:'3rem'}
+} 
+
+
+
 
 class Alike extends React.Component {
   constructor(props) {
@@ -132,7 +143,7 @@ class Alike extends React.Component {
           <div id='anchor_page' className='anchor' style={{top: '-1000px'}}></div>
           <img 
             className='banner' 
-            src={this.props.screenWidth > 640 ? banner : banner_mob} 
+            src={this.props.screenWidth > 768 ? banner : banner_mob} 
             alt='Banner' 
             draggable='false'          
             data-aos='fade' 
@@ -141,7 +152,7 @@ class Alike extends React.Component {
             data-aos-duration='400'
             data-aos-once={true}  
           />
-          <div className='pages' style={this.props.screenWidth > 640 ? {marginTop:'3rem'} : {width: '75%', marginTop:'3rem'}}>
+          <div className='pages' style={decideMarginWidth(this.props.screenWidth)}>
             <Tags names={tags} color={color}/>
             <h3 
               className='title'
@@ -158,7 +169,7 @@ class Alike extends React.Component {
             <div className='intro'>
               <div 
                 className='col' 
-                style={this.props.screenWidth > 640 ? null : {width: '100%'}}
+                style={this.props.screenWidth > 768 ? null : {width: '100%'}}
                 data-aos='fade' 
                 data-aos-offset='50' 
                 data-aos-easing='ease-out-sine'
@@ -166,8 +177,8 @@ class Alike extends React.Component {
                 data-aos-delay='400'
                 data-aos-once={true}
               > 
-                <h4 className='heading'> ROLE </h4>
-                <h4> UI/UX Designer </h4>              
+                <h4 className='heading'> Role </h4>
+                <p> UI/UX Designer </p>              
                 <br/>
                 {/* <h4 className='heading'> LINKS </h4>
                 <div className='buttons'>
@@ -184,7 +195,7 @@ class Alike extends React.Component {
               </div>
               <div 
                 className='col' 
-                style={this.props.screenWidth > 640 ? null : {width: '100%'}}
+                style={this.props.screenWidth > 768 ? null : {width: '100%'}}
                 data-aos='fade' 
                 data-aos-offset='50' 
                 data-aos-easing='ease-out-sine'
@@ -192,19 +203,21 @@ class Alike extends React.Component {
                 data-aos-delay='400'
                 data-aos-once={true}
               >
-                <h4 className='heading'> SUMMARY </h4>
-                <h4> 
+                <h4 className='heading'> Summary </h4>
+                <p> 
                   During my internship at Alike, I designed and redesigned app screens and user flows that improved the overall user experience. Below are just a few of the screens I worked on.
-                </h4> 
+                </p> 
               </div>
             </div>
 
             <div className='section'>
               <SectionTitle title='background'/> 
-              <h4 className='heading'> WHAT'S ALIKE? </h4>
+              <h4 className='heading'> What's Alike? </h4>
               <p> 
                 Alike is a <i>video</i> dating app that celebrates the asian experience! Emphasis on video. <br/>
-                We're creating a platform where users can get a better sense of another's vibes and character through videos! <br/>
+                We're creating a platform where users can get a better sense of another's vibes and character through videos!
+              </p>
+              <p>
                 Skipping the text prompts and jumping straight into video prompts to allow users to share their story and personality in the best way, through videos and pictures, 
                 all in hopes that we can inspire more genuine connections and conversations for people.
                 If pictures are worth a thousand words, then videos must be worth millions. 
@@ -214,7 +227,7 @@ class Alike extends React.Component {
               </p>
               <br/>
 
-              <h4 className='heading'> MY IMPACT </h4>
+              <h4 className='heading'> My Impact </h4>
               <p> 
                 I joined Alike while the app was in it's beta stages, and worked in a team consisting of a lead UI/UX Designer and the CEO himself, Hanmin. <br/>
                 So far in my internship, I've done the following:
@@ -223,16 +236,24 @@ class Alike extends React.Component {
               <Bullets info={descr}/> 
               <br/>
 
-              <h4 className='heading'> PERSONAE </h4>
+              <h4 className='heading'> Personas </h4>
               <p> Here are a couple of the personae our team had in mind while designing our screens: </p>
               <br/>
-              <Image src={this.props.screenWidth > 640 ? pic1 : pic5} style={imageMarginLessBottom}/>
-              <Image src={this.props.screenWidth > 640 ? pic2 : pic6} style={imageMarginNoTop}/>
+              <>
+                {this.props.screenWidth > 768 ? 
+                  <Image src={picPersona} style={imageMarginLessBottom}/>
+                  :
+                  <>
+                    <Image src={pic5} style={imageMarginLessBottom}/>
+                    <Image src={pic6} style={imageMarginNoTop}/>    
+                  </>
+                }
+              </>
             </div>           
 
             <div className='section'>
               <SectionTitle title='components'/> 
-              <h4 className='heading'> NAV BARS & HEADERS </h4>
+              <h4 className='heading'> Nav Bar & Headers </h4>
               <p>
                 Prior to my onboarding, the nav bars and headers on our screens weren't components, which I thought was a major oversight. 
                 Moreso, our headers were inconsistent throughout the app e.g. different heights, fonts, and element placements.
@@ -242,14 +263,14 @@ class Alike extends React.Component {
                 had across our app and turned them into component variants. This will save us valuable time in the future if we decide to update our nav bars or headers.
               </p>
               <br/>
-              <Image src={pic4} style={this.props.screenWidth > 640 ? smallerImage : imageMarginNoTop}/>
+              <Image src={pic4} style={this.props.screenWidth > 768 ? smallerImage : imageMarginNoTop}/>
 
-              <h4 className='heading'> BUTTONS </h4>
+              <h4 className='heading'> Buttons </h4>
               <p>
                 Similarly, I turned our buttons throughout the app screens into components for easier changes down the line.
               </p>
               <br/>
-              <Image src={pic7} style={this.props.screenWidth > 640 ? smallerImage : imageMarginNoTop}/>
+              <Image src={pic7} style={this.props.screenWidth > 768 ? smallerImage : imageMarginNoTop}/>
             </div>
 
             <div className='section'>
@@ -258,12 +279,12 @@ class Alike extends React.Component {
                 Here are just a few of the screens that I've updated so far:
               </p>
 
-              {this.props.screenWidth > 640 ? 
+              {this.props.screenWidth > 768 ? 
               <>
                 <h4 className='heading' style={{alignSelf: 'center'}}> OLD </h4>
-                <Image src={pic8} style={smallerImageLess}/>
+                <Image src={pic8} style={imageMarginLessBottom}/>
                 <h4 className='heading' style={{alignSelf: 'center'}}> UPDATED </h4>
-                <Image src={pic9} style={smallerImage}/>
+                <Image src={pic9} style={imageMarginNoTop}/>
               </>
               :
               <>
@@ -278,7 +299,7 @@ class Alike extends React.Component {
               <p>
                 I can't unveil too much yet since this feature is in the works but here's a sneak peak at some screens!
               </p>
-              <Image src={this.props.screenWidth > 640 ? pic3 : pic10} style={this.props.screenWidth > 640 ? smallerImageLess : imageMarginLessBottom}/>
+              <Image src={this.props.screenWidth > 768 ? pic3 : pic10} style={imageMarginLessBottom}/>
             </div>
 
             <div className='section'>

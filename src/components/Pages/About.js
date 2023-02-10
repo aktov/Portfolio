@@ -41,9 +41,10 @@ const styleMobile = {
 }
 
 const line1 = "I'm Alex, and I often find my head stuck in daydreams and clouds. Why? It's simply because I like to think of ideas that can be materialized through design."
-const line2 = "I've come to truly believe that good user-centric design has the potential to greatly benefit the world. Design isn't just about “making things look good”; it's much more than that. It's about providing an excellent overall user experience that will ensure the user's satisfaction. "
-const line3 = "If you're interested in getting to know me more or want to hear more about my projects, feel free to message me. I'd love to connect or collaborate! "
-const line4 = "I’m currently looking for full-time opportunities to bring what I love doing onto the team to create outstanding experiences for your users! "
+const line2 = "I've come to truly believe that good user-centric design has the potential to greatly benefit the world. UI/UX Design isn't just about “making things look good”; it's much more than that. It's about providing an excellent overall user experience that will ensure the user's satisfaction. "
+const line3 = "Outside of the UI/UX realm, you can catch me designing games, creating 3D models, or contemplating the price tag on yet another Lego set. I'm really not kidding when I say that I'm always thinking about design."
+const line4 = "If you're interested in getting to know me more or want to hear more about my projects, feel free to message me. I'd love to connect or collaborate! "
+const line5 = "I’m currently looking for full-time opportunities to bring what I love doing onto the team to create outstanding experiences for your users! "
 
 class About extends React.Component { 
   render() {

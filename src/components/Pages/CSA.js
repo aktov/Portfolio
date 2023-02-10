@@ -75,7 +75,7 @@ const Bullets = (props) => {
   return (
   <div className='phrases'>
     {props.info.map((phrase, index) => 
-      <Phrase key={'yahoo/' + index} text={phrase}/>
+      <Phrase key={'csa/' + index} text={phrase}/>
     )}
   </div>
   );
@@ -168,9 +168,21 @@ const pages = [
 
 const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
-const smallerImage = {marginTop: '0rem', width: '70%'}
-const smallerImageLess = {marginTop: '0rem', marginBottom: '2rem', width: '70%'}
+const smallerImage = {marginTop: '0rem', width: '100%'}
+const smallerImageLess = {marginTop: '0rem', marginBottom: '2rem', width: '100%'}
 const color = '#DA8484';
+
+// Returns style based on breakpoints, of which there are 2
+const decideMarginWidth = function(value) {
+  if (value > 1280) {
+    return {marginTop:'3rem'}
+  } else if (value > 768) {
+    return {width: '70%', marginTop:'3rem'}
+  }
+  return {width: '75%', marginTop:'3rem'}
+} 
+
+
 
 class CSA extends React.Component {
   constructor(props) {
@@ -215,7 +227,7 @@ class CSA extends React.Component {
           <div id='anchor_page' className='anchor' style={{top: '-1000px'}}></div>
           <img 
             className='banner' 
-            src={this.props.screenWidth > 640 ? banner : banner_mob} 
+            src={this.props.screenWidth > 768 ? banner : banner_mob} 
             alt='Banner' 
             draggable='false'           
             data-aos='fade' 
@@ -224,19 +236,16 @@ class CSA extends React.Component {
             data-aos-duration='400'
             data-aos-once={true}  
           />
-          <div className='pages' style={this.props.screenWidth > 640 ? {marginTop:'3rem'} : {width: '75%', marginTop:'3rem'}}>
+          <div className='pages' style={decideMarginWidth(this.props.screenWidth)}>
             <Tags names={tags} color={color}/>
             <h3 className='title'> {'CSA Website Design'.toUpperCase()} </h3>
 
             <div className='intro'>
-              <div className='col' style={this.props.screenWidth > 640 ? null : {width: '100%'} }> 
-                <h4 className='heading'> ROLE </h4>
-                <h4> UI/UX Designer </h4>
+              <div className='col' style={this.props.screenWidth > 768 ? null : {width: '100%'} }> 
+                <h4 className='heading'> Role </h4>
+                <p> UI/UX Designer </p>
                 <br/>
-                <h4 className='heading'> TEAM </h4>
-                <h4> Alex Tov, Hao Yang He, Elaine Nguyen, Elizabeth Turrubiartes-Campos </h4>
-                <br/>
-                <h4 className='heading'> FIGMA LINKS </h4>
+                <h4 className='heading'> Figma Links </h4>
                 <div className='buttons'>
                   <a 
                     href='https://www.figma.com/proto/HK3nRrbz73hPQqSlTNTDmu/CSA-Website-Design?node-id=236%3A2&viewport=147%2C303%2C0.03458884358406067&scaling=scale-down-width'
@@ -257,30 +266,34 @@ class CSA extends React.Component {
                 </div>
                 <br/>
               </div>
-              <div className='col' style={this.props.screenWidth > 640 ? null : {width: '100%'} }>
-                <h4 className='heading'> SUMMARY </h4>
-                <h4> 
+              <div className='col' style={this.props.screenWidth > 768 ? null : {width: '100%'} }>
+                <h4 className='heading'> Summary </h4>
+                <p> 
                   My team and I designed a brand new website for CSA, an organization at UCSD. We worked alongside them
                   and made sure that our design was right on track with what they envisioned.
-                </h4>
+                </p>
+                <br/>
+                <h4 className='heading'> Team </h4>
+                <p> Alex Tov <br/> Hao Yang He <br/> Elaine Nguyen <br/> Elizabeth Turrubiartes-Campos </p>
+                <br/>
               </div>
             </div>
 
             <div className='section'>
               <SectionTitle title='intro'/> 
-              <h4 className='heading'> MOTIVATION </h4>
+              <h4 className='heading'> Motivation </h4>
               <p> 
                 Our task was to find ourselves a client in need of a new website and design them a functional website prototype
                 based on their users' needs and goals.
               </p>
               <br/>
-              <h4 className='heading'> GOALS </h4>
+              <h4 className='heading'> Goals </h4>
               <Bullets info={goals}/>  
             </div>          
                       
             <div className='section'>
               <SectionTitle title='client interviews'/> 
-              <h4 className='heading'> GETTING TO KNOW OUR CLIENT </h4>
+              <h4 className='heading'> Getting To Know Our Client </h4>
               <p> 
                 Cambodian Student Association (CSA) was our client. 
               </p>
@@ -340,7 +353,7 @@ class CSA extends React.Component {
                 you saw a Cambodian restaurant?” is what Janica asked us. 
               </p>
               <br/> */}
-              <h4 className='heading'> PRIORITY LIST </h4>
+              <h4 className='heading'> Priority List </h4>
               <p> 
                 After breaking down the information Janica and Keith provided, we created a prioritized list of goals 
                 to help us keep track of their expectations throughout this project timeline.
@@ -350,7 +363,7 @@ class CSA extends React.Component {
 
             <div className='section'>
               <SectionTitle title='users & need finding'/> 
-              <h4 className='heading'> USER INTERVIEWS </h4>
+              <h4 className='heading'> User Interviews </h4>
               <p>
                 Our best approach at finding users to interview was to message Janica and Keith and ask them about potential 
                 org members and affiliates. Does CSA have any sponsors? What about faculty advisors? Other affiliated 
@@ -359,7 +372,7 @@ class CSA extends React.Component {
               </p>
               <br/>
 
-              <h4 className='heading'> PERSONAS </h4>
+              <h4 className='heading'> Personas </h4>
               {/* <p>
                 We were able to conduct and record data for at least nine interviews, which were a mix of students, alumnis 
                 of the org, and faculty advisors for the org. From talking and interviewing them, we were able to gain a 
@@ -367,20 +380,20 @@ class CSA extends React.Component {
                 interviews, we were able to extrapolate three main groups of users: students, university affiliates, and 
                 alumni; these would become our personas.
               </p> */}
-              <Image src={pic1} style={this.props.screenWidth > 640 ? smallerImage : imageMarginLessBottom}/>
-              <Image src={pic2} style={this.props.screenWidth > 640 ? smallerImage : imageMarginLessBottom}/>
-              <Image src={pic3} style={this.props.screenWidth > 640 ? smallerImage : imageMarginNoTop}/>
+              <Image src={pic1} style={this.props.screenWidth > 768 ? smallerImage : imageMarginLessBottom}/>
+              <Image src={pic2} style={this.props.screenWidth > 768 ? smallerImage : imageMarginLessBottom}/>
+              <Image src={pic3} style={this.props.screenWidth > 768 ? smallerImage : imageMarginNoTop}/>
 
-              <h4 className='heading'> USE CASES </h4>
+              <h4 className='heading'> Use Cases </h4>
               {/* <p>
                 For each of the personas, we created a couple user scenarios for each, and various use cases for each of 
                 those scenarios. We tried to cover as many possible user cases that came to mind. We asked ourselves, 
                 “What would be my goal for coming onto this website?”. The scenarios and respective user cases that we 
                 created are charted below.
               </p> */}
-              <Image src={pic4} style={this.props.screenWidth > 640 ? smallerImageLess : imageMarginLessBottom}/>
-              <Image src={pic5} style={this.props.screenWidth > 640 ? smallerImageLess : imageMarginLessBottom}/>
-              <Image src={pic6} style={this.props.screenWidth > 640 ? smallerImage : imageMarginNoTop}/>
+              <Image src={pic4} style={this.props.screenWidth > 768 ? smallerImageLess : imageMarginLessBottom}/>
+              <Image src={pic5} style={this.props.screenWidth > 768 ? smallerImageLess : imageMarginLessBottom}/>
+              <Image src={pic6} style={this.props.screenWidth > 768 ? smallerImage : imageMarginNoTop}/>
 
               {/* <h4 className='subheading'> USE CASES SUMMARY TABLE </h4>
               <p>
@@ -391,7 +404,7 @@ class CSA extends React.Component {
               </p>
               <Image src={pic7} style={smallerImage} /> */}
 
-              <h4 className='heading'> FEATURES & FUNCTIONALITIES </h4>
+              <h4 className='heading'> Features & Functionalities </h4>
               <p>
                 {/* To further break down the information we gathered from our use cases, we materialized the use cases 
                 into actual features, elements, and functions that can be added onto the website (the left-most 
@@ -401,9 +414,9 @@ class CSA extends React.Component {
 
                 Here were the use cases broken down into a readable table.
               </p>
-              <Image src={pic8} style={this.props.screenWidth > 640 ? smallerImage : imageMarginNoTop}/>
+              <Image src={pic8} style={this.props.screenWidth > 768 ? smallerImage : imageMarginNoTop}/>
 
-              <h4 className='heading'> KEY USER NEEDS </h4>
+              <h4 className='heading'> Key User Needs </h4>
               <p>
                 From the data we gathered and the tables we made, we were able to visualize and identify four main
                 user needs across all three personas as follows:
@@ -424,7 +437,7 @@ class CSA extends React.Component {
               <Bullets info={elements} />
               <br/>
 
-              <h4 className='heading'> COMPETITOR SITES </h4>
+              <h4 className='heading'> Competitor Sites </h4>
               <Image src={pic9} style={imageMarginNoTop} />
 
               {/* <h4 className='subheading'> BRANDING </h4>
@@ -465,17 +478,17 @@ class CSA extends React.Component {
                  fonts that is bold in appearance and easily readable.
               </p> */}
               <br/>
-              <h4 className='heading'> COLORS </h4>
+              <h4 className='heading'> Colors </h4>
               <Image src={pic16} style={imageMarginLessBottom} />
-              <h4 className='heading'> IMAGERY </h4>
+              <h4 className='heading'> Imagery </h4>
               <Image src={pic17} style={imageMarginLessBottom} />
-              <h4 className='heading'> WEBSITE LAYOUT </h4>
+              <h4 className='heading'> Website Layout </h4>
               <Image src={pic18} style={imageMarginNoTop} />
             </div>
 
             <div className='section'>
               <SectionTitle title='wireframing'/> 
-              <h4 className='heading'> SITE ARCHITECTURE </h4>
+              <h4 className='heading'> Site Architecture </h4>
               <p>
                 From what we observed from our competitive analysis, we saw that other college org sites more or less 
                 had these elements below. We thought it was for the best if we use a similar structure as well.
@@ -483,10 +496,10 @@ class CSA extends React.Component {
               <Bullets info={pages} />
               <Image src={pic19} style={imageMarginNoTop} />
 
-              <h4 className='heading'> SKETCHES </h4>
+              <h4 className='heading'> Sketches </h4>
               <Image src={pic20} style={imageMarginNoTop} />
 
-              <h4 className='heading'> WIREFRAMES </h4>
+              <h4 className='heading'> Wireframes </h4>
               <p>
                 Here are just a few screens of our wireframes!
               </p>
@@ -587,7 +600,7 @@ class CSA extends React.Component {
 
             <div className='section'>
               <SectionTitle title='prototyping'/>
-              <h4 className='heading'> FIRST ITERATION </h4>
+              <h4 className='heading'> First Iteration </h4>
               <p>
                 With content finally received from our client, we were able to add images, content, and color
                 onto our first prototype.
@@ -615,14 +628,14 @@ class CSA extends React.Component {
               <Image src={pic36}  style={imageMarginLessBottom} />
               <Image src={pic37}  style={imageMarginNoTop} />
 
-              <h4 className='heading'> FINAL ITERATION </h4>
+              <h4 className='heading'> Final Iteration </h4>
               <p>
                 We weren't too satisfied with the first iteration, and CSA was able to provide us with more images,
                 so for round two, we decided to go all out with the images. CSA is a student organization after all, 
                 and they're trying to make themselves seem welcoming; let's have images speak for themselves. 
               </p>
               <br/>
-              <h4 className='subheading'> LINKS </h4>
+              <h4 className='subheading'> Links </h4>
               <div className='buttons'>
                   <a 
                     href='https://www.figma.com/proto/HK3nRrbz73hPQqSlTNTDmu/CSA-Website-Design?node-id=236%3A2&viewport=147%2C303%2C0.03458884358406067&scaling=scale-down-width'
@@ -646,7 +659,7 @@ class CSA extends React.Component {
 
 
 
-              <h4 className='subheading'> HOME </h4>
+              <h4 className='subheading'> Home </h4>
               {/* <p>
                 We gave the home page, and other pages as well, image carousel banners that line the tops and middles
                 to give a more friendly, down-to-earth feel. The announcements card has been replaced with a toggleable
@@ -655,7 +668,7 @@ class CSA extends React.Component {
               <Image src={pic38}  style={imageMarginLessBottom} />
               <Image src={pic39}  style={imageMarginNoTop} />
 
-              <h4 className='subheading'> ABOUT </h4>
+              <h4 className='subheading'> About </h4>
               <Image src={pic40}  style={imageMarginLessBottom} />
               <Image src={pic41}  style={imageMarginNoTop} />
 
@@ -663,11 +676,11 @@ class CSA extends React.Component {
               <Image src={pic42}  style={imageMarginLessBottom} />
               <Image src={pic43}  style={imageMarginNoTop} /> */}
 
-              <h4 className='subheading'> MEMBERS </h4>
+              <h4 className='subheading'> Members </h4>
               <Image src={pic44}  style={imageMarginLessBottom} />
               <Image src={pic45}  style={imageMarginNoTop} />
 
-              <h4 className='subheading'> EVENTS </h4>
+              <h4 className='subheading'> Events </h4>
               <Image src={pic46}  style={imageMarginLessBottom} />
               <Image src={pic47}  style={imageMarginNoTop} />
 

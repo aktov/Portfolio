@@ -5,7 +5,7 @@ import Header from '../Header.js';
 import Footer from '../Footer.js';
 import NavMenu from '../NavMenu.js';
 import Contact from '../Contact.js';
-// import Phrase from '../Phrase.js';
+import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
 
@@ -39,7 +39,15 @@ import picDesktop3 from '../../images/Pages/okizeme/Desktop03.png';
 import picDesktop4 from '../../images/Pages/okizeme/Desktop04.png';
 
 
-
+const Bullets = (props) => {
+  return (
+  <div className='phrases'>
+    {props.info.map((phrase, index) => 
+      <Phrase key={'okizeme/' + index} text={phrase}/>
+    )}
+  </div>
+  );
+};
 
 const Image = (props) => {
   return (
@@ -75,12 +83,25 @@ const Tags = (props) => {
 
 const tags = ['prototyping'];
 
+const descr = [
+  'Improve the visuals. Enhance the visuals by incorporating the branding and genre into the site better.',
+  'Streamline the user experience. Improve the user\'s navigational experience. Simplify the process to find an article and to continue reading new ones after.'
+];
 
 const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
 const imageMarginNone = {marginTop: '0rem', marginBottom: '0rem'};
 const color = '#F5C0B9'
 
+// Returns style based on breakpoints, of which there are 2
+const decideMarginWidth = function(value) {
+  if (value > 1280) {
+    return {marginTop:'3rem'}
+  } else if (value > 768) {
+    return {width: '70%', marginTop:'3rem'}
+  }
+  return {width: '75%', marginTop:'3rem'}
+} 
 
 
 
@@ -132,7 +153,7 @@ class Okizeme extends React.Component {
           <div id='anchor_page' className='anchor' style={{top: '-1000px'}}></div>
           <img 
             className='banner' 
-            src={this.props.screenWidth > 640 ? banner : banner_mob} 
+            src={this.props.screenWidth > 768 ? banner : banner_mob} 
             alt='Banner' 
             draggable='false'          
             data-aos='fade' 
@@ -141,7 +162,7 @@ class Okizeme extends React.Component {
             data-aos-duration='400'
             data-aos-once={true}  
           />
-          <div className='pages' style={this.props.screenWidth > 640 ? {marginTop:'3rem'} : {width: '75%', marginTop:'3rem'}}>
+          <div className='pages' style={decideMarginWidth(this.props.screenWidth)}>
             <Tags names={tags} color={color}/>
             <h3 
               className='title'
@@ -158,7 +179,7 @@ class Okizeme extends React.Component {
             <div className='intro'>
               <div 
                 className='col' 
-                style={this.props.screenWidth > 640 ? null : {width: '100%'}}
+                style={this.props.screenWidth > 768 ? null : {width: '100%'}}
                 data-aos='fade' 
                 data-aos-offset='50' 
                 data-aos-easing='ease-out-sine'
@@ -169,7 +190,7 @@ class Okizeme extends React.Component {
                 {/* <h4 className='heading'> ROLE </h4>
                 <h4> UI/UX Designer </h4>              
                 <br/> */}
-                <h4 className='heading'> LINKS </h4>
+                <h4 className='heading'> Links </h4>
                 <div className='buttons'>
                   <a 
                     href='https://okizeme.com/'
@@ -200,7 +221,7 @@ class Okizeme extends React.Component {
               </div>
               <div 
                 className='col' 
-                style={this.props.screenWidth > 640 ? null : {width: '100%'}}
+                style={this.props.screenWidth > 768 ? null : {width: '100%'}}
                 data-aos='fade' 
                 data-aos-offset='50' 
                 data-aos-easing='ease-out-sine'
@@ -208,10 +229,10 @@ class Okizeme extends React.Component {
                 data-aos-delay='400'
                 data-aos-once={true}
               >
-                <h4 className='heading'> SUMMARY </h4>
-                <h4> 
+                <h4 className='heading'> Summary </h4>
+                <p> 
                   I produced a redesign for my client's website that improved the visuals and user experience. The ideation phase and final design are shown further below.
-                </h4> 
+                </p> 
               </div>
             </div>
 
@@ -228,7 +249,9 @@ class Okizeme extends React.Component {
 
             <div className='section'>
               <SectionTitle title='goals'/> 
-              <h4 className='heading'> 1. IMPROVE THE VISUALS </h4>
+              <Bullets info={descr}/> 
+
+              {/* <h4 className='heading'> 1. IMPROVE THE VISUALS </h4>
               <p> 
                 Enhance the visuals by incorporating the branding and genre into the site better.
               </p>
@@ -236,7 +259,7 @@ class Okizeme extends React.Component {
               <h4 className='heading'> 2. STREAMLINE THE USER EXPERIENCE </h4>
               <p> 
                 Improve the user's navigational experience. Simplify the process to find an article and to continue reading new ones after.
-              </p>
+              </p> */}
             </div>          
 
             <div className='section'>
@@ -248,8 +271,8 @@ class Okizeme extends React.Component {
               </p>
               <br/>
 
-              <h4 className='heading'> WEBSITES </h4>
-              <div className={this.props.screenWidth > 640 ? 'wide' : 'narrow'}>
+              <h4 className='heading'> Websites </h4>
+              <div className={this.props.screenWidth > 768 ? 'wide' : 'narrow'}>
                 <a 
                   className='okizemeLink'
                   href='https://www.behance.net/gallery/100767627/APEX-LEGENDS-New-website-2020?tracking_source=search_projects_recommended%7Cwebsite'
@@ -288,7 +311,7 @@ class Okizeme extends React.Component {
                 </a> 
               </div>
 
-              <h4 className='heading'> GRAPHICS </h4>
+              <h4 className='heading'> Graphics </h4>
               <a 
                 className='okizemeLink'
                 href='https://creativemarket.com/irenedemetri/2465467-Japanese-Patterns-Vector-Handdrawn#fullscreen'
@@ -296,29 +319,29 @@ class Okizeme extends React.Component {
                 rel='noopener noreferrer'
               >
                 <Image 
-                  src={this.props.screenWidth > 640 ? picGraphics : picGraphicsM} 
+                  src={this.props.screenWidth > 768 ? picGraphics : picGraphicsM} 
                   style={imageMarginNone} 
                 />
                 Japanese Patterns - Youandigraphics
               </a> 
 
-              <h4 className='heading'> MOOD BOARD </h4>
-              <Image src={this.props.screenWidth > 640 ? picMoodD : picMoodM} style={imageMarginNoTop}/>
+              <h4 className='heading'> Mood Board </h4>
+              <Image src={this.props.screenWidth > 768 ? picMoodD : picMoodM} style={imageMarginNoTop}/>
             </div>  
 
             <div className='section'>
               <SectionTitle title='initial ideation'/> 
-              <h4 className='heading'> LOGO DESIGNS </h4>
-              <Image src={this.props.screenWidth > 640 ? picLogosD : picLogosM} style={imageMarginNoTop}/>
+              <h4 className='heading'> Logo Designs </h4>
+              <Image src={this.props.screenWidth > 768 ? picLogosD : picLogosM} style={imageMarginNoTop}/>
               
-              <h4 className='heading'> COLOR PALETTE </h4>
-              <Image src={this.props.screenWidth > 640 ? picPaletteD : picPaletteM} style={imageMarginNoTop}/>
+              <h4 className='heading'> Color Palette </h4>
+              <Image src={this.props.screenWidth > 768 ? picPaletteD : picPaletteM} style={imageMarginNoTop}/>
             </div>  
 
             <div className='section'>
               <SectionTitle title='prototypes'/> 
-              <h4 className='heading'> MOBILE </h4>
-              {this.props.screenWidth > 640 ? 
+              <h4 className='heading'> Mobile </h4>
+              {this.props.screenWidth > 768 ? 
                 <>
                   <Image src={picMobile1} style={imageMarginLessBottom}/>
                   <Image src={picMobile2} style={imageMarginNoTop}/>
@@ -331,16 +354,16 @@ class Okizeme extends React.Component {
                 </>
               }
 
-              <h4 className='heading'> DESKTOP </h4>
+              <h4 className='heading'> Desktop </h4>
               <Image src={picDesktop4} style={imageMarginLessBottom}/>
               <Image src={picDesktop3} style={imageMarginLessBottom}/>
               <Image src={picDesktop2} style={imageMarginLessBottom}/>
               <Image src={picDesktop1} style={imageMarginNoTop}/>
 
               {/* <h4 className='heading'> COLORS </h4> */}
-              {/* <Image src={this.props.screenWidth > 640 ? pic9 : pic12} style={imageMarginNoTop}/> */}
+              {/* <Image src={this.props.screenWidth > 768 ? pic9 : pic12} style={imageMarginNoTop}/> */}
               {/* <h4 className='heading'> TYPOGRAPHY </h4> */}
-              {/* <Image src={this.props.screenWidth > 640 ? pic10 : pic13} style={imageMarginNoTop}/> */}
+              {/* <Image src={this.props.screenWidth > 768 ? pic10 : pic13} style={imageMarginNoTop}/> */}
             </div>
 
             <div className='section'>

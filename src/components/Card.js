@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 
 import open from '../images/open.svg';
 import github from '../images/GitHub-Mark-120px-plus.png';
-import figma from '../images/figmaLogo_black.svg';
+import figma from '../images/figmaLogo.svg';
 import figmaM from '../images/figmaM.svg';
 import figmaD from '../images/figmaD.svg';
-import figmaA from '../images/figmaA.svg';
-import figmaB from '../images/figmaB.svg';
-import figma1 from '../images/figma1.svg';
-import figma2 from '../images/figma2.svg';
+// import figmaA from '../images/figmaA.svg';
+// import figmaB from '../images/figmaB.svg';
+// import figma1 from '../images/figma1.svg';
+// import figma2 from '../images/figma2.svg';
 
 const Tags = (props) => {
   return (
@@ -41,7 +41,7 @@ const Buttons = (props) => {
           <img src={figmaM} alt='figmaMobile' draggable='false' /> 
           <span className='toolTip'> Mobile prototype </span> 
       </a> }
-      {props.props.figmaA && <a href={props.props.figmaA} target="_blank" rel="noopener noreferrer">
+      {/* {props.props.figmaA && <a href={props.props.figmaA} target="_blank" rel="noopener noreferrer">
           <img src={figmaA} alt='figmaA' draggable='false' /> 
           <span className='toolTip'> figma version A </span> 
       </a> }
@@ -56,7 +56,7 @@ const Buttons = (props) => {
       {props.props.figma2 && <a href={props.props.figma2} target="_blank" rel="noopener noreferrer">
           <img src={figma2} alt='figma1' draggable='false' /> 
           <span className='toolTip'> Redesign 2 proto </span> 
-      </a> }
+      </a> } */}
       {props.props.link && <Link to={props.props.link} rel="noopener noreferrer">
           <img src={open} alt='open' draggable='false' /> 
           <span className='toolTip'> Read more! </span>

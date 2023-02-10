@@ -69,8 +69,8 @@ $size_h2: toRem(40);
 $size_h3: toRem(30);
 $size_h4: toRem(22);
 $size_h5: toRem(18);
-$size_h6: toRem(12);
-$size_p: toRem(16);
+$size_h6: toRem(14);
+$size_p: toRem(18);
 
 h1 {
     font-family: 'Zilla Slab', serif;
@@ -735,6 +735,8 @@ div.content {
                             position: relative;
                             width: auto;
                             height: 100%;
+                            // width: 100%;
+                            // height: auto;
                         }
                     }
                 }
@@ -833,7 +835,7 @@ div.content {
                     div.buttons {
                         position: relative;
                         width: 100%;
-                        height: toRem(30);
+                        height: toRem(40);
                         margin-left: auto;
                         margin-bottom: toRem(5);
 
@@ -844,7 +846,6 @@ div.content {
 
                         a:hover {
                             img {
-                                // height: toRem(25);
                                 -webkit-transform: scale(1.25, 1.25);
                                 -moz-transform: scale(1.25, 1.25);
                                 -ms-transform: scale(1.25, 1.25);
@@ -862,8 +863,8 @@ div.content {
 
                         a {
                             position: relative;
-                            width: toRem(35);
-                            height: toRem(35);
+                            width: toRem(40);
+                            height: toRem(40);
                             margin-left: toRem(16);
 
                             border-radius: toRem(100);
@@ -882,7 +883,7 @@ div.content {
                             img {
                                 position: relative;
                                 width: auto;
-                                height: toRem(20);
+                                height: toRem(32);
                                 margin: auto;
 
                                 display: flex;
@@ -1133,7 +1134,7 @@ div.content {
 
     div.pages {
         position: relative;
-        width: 65%;
+        width: 50%;
         margin: auto;
         margin-bottom: $sectionMarginBottom;
         
@@ -1160,13 +1161,13 @@ div.content {
             align-items: flex-start;
 
             div.col:first-of-type {
-                width: 30%;
+                width: 20%;
                 min-width: toRem(100);
                 margin-right: 10%;
             }
 
             div.col {
-                width: 60%;
+                width: 70%;
                 min-width: toRem(100);
                 h4 {
                     margin: 0;
@@ -1531,7 +1532,7 @@ div.content {
             font-family: 'Poppins', sans-serif;
             font-style: normal;
             font-weight: 500;
-            font-size: $size_p;
+            // font-size: $size_p;
         }
 
         p {
@@ -1847,7 +1848,7 @@ div.resume {
     background-color: #ffffff;
 
     .container {
-        width: 45%;
+        width: 50%;
         margin: auto;
         margin-top: 5rem;
         margin-bottom: 5rem;
@@ -1880,9 +1881,14 @@ div.resume {
             h5 {
                 font-family: 'Poppins', serif;
                 font-weight: 500;
-                font-size: toRem(16); 
+                // font-size: toRem(16); 
                 margin-top: 0;
                 margin-bottom: toRem(8);
+            }
+
+            p {
+                margin-top: 0;
+                margin-bottom: toRem(16);
             }
 
             .skills {
@@ -1928,12 +1934,6 @@ div.resume {
                     margin: toRem(8) 0;
                 }
 
-                p {
-                    font-weight: 400;
-                    margin-top: 0;
-                    margin-bottom: toRem(8);
-                }
-
                 a {
                     color: #8CA7BF;
                     text-decoration: none;
@@ -1954,7 +1954,7 @@ div.resume {
                     align-items: flex-start;
 
                     img {
-                        margin: toRem(7) toRem(16);
+                        margin: toRem(9) toRem(16);
                     }
                 }
             }

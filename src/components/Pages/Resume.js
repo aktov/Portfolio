@@ -4,6 +4,8 @@ import Title from '../Title';
 import Experience from '../Experience';
 import Skills from '../Skills';
 
+const lessMargins = {marginBottom: '.5rem'}
+
 class Resume extends React.Component { 
   render() {
     return (
@@ -16,19 +18,21 @@ class Resume extends React.Component {
           <Title title='resume' screenWidth={this.props.screenWidth} />
           <div className='section'>
             <h3> SUMMARY </h3>
-            <h5>
+            <p>
               Detail-oriented UI/UX Designer with over 3 years of project and work experience and a passion for user-centered design. 
+            </p>
+            <p>
               Currently seeking opportunities to design innovative solutions that will improve user satisfaction and experiences!
-            </h5>
+            </p>
           </div>
           <div className='section'>
             <h3> EDUCATION </h3>
             <h4>
               B.S. Cognitive Science, <br/>
-              Human Computer Interaction Specialization
+              Human Computer Interaction
             </h4>
-            <h5> University of California San Diego </h5>
-            <h5> March 2020 </h5>
+            <p style={lessMargins}> University of California San Diego </p>
+            <p style={lessMargins}> March 2020 </p>
           </div>
           <div className='section'>
             <h3> EXPERIENCE </h3>
@@ -40,30 +44,6 @@ class Resume extends React.Component {
           </div>
         </div>
         
-        {/* <div className='background_about'>
-          <Parallax y={[0,20]} >
-            <img 
-                src={layer5}
-                alt={'background'}
-                style={{width:'100%'}}
-            />
-          </Parallax>
-          <Parallax y={[0,25]} >
-            <img 
-                src={layer4}
-                alt={'background'}
-                style={{width:'100%'}}
-            />
-          </Parallax>
-          <Parallax y={[0,0]} styleOuter={{position: 'relative'}}>
-            <img 
-                src={overlay}
-                alt={'background'}
-                style={{width:'200%'}}
-            />
-          </Parallax>
-        </div> */}
-
       </div>
       
     );

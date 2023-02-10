@@ -6,6 +6,7 @@ import Title from './Title';
 
 // Mobile images
 import imgM_okizeme from '../images/Thumbnails/Mobile/cardImageM_okizeme.png';
+import imgM_flowers from '../images/Thumbnails/Mobile/cardImageM_flowers.png';
 import imgM_memo from '../images/Thumbnails/Mobile/cardImageM_memo.png';
 import imgM_alike from '../images/Thumbnails/Mobile/cardImageM_alike.png';
 import imgM_boba from '../images/Thumbnails/Mobile/cardImageM_boba.png';
@@ -15,6 +16,7 @@ import imgM_csa from '../images/Thumbnails/Mobile/cardImageM_csa.png';
 
 // Desktop images
 import img_okizeme from '../images/Thumbnails/Desktop/cardImage_okizeme.png';
+import img_flowers from '../images/Thumbnails/Desktop/cardImage_flowers.png';
 import img_memo from '../images/Thumbnails/Desktop/cardImage_memo.png';
 import img_alike from '../images/Thumbnails/Desktop/cardImage_alike.png';
 import img_boba from '../images/Thumbnails/Desktop/cardImage_boba.png';
@@ -36,8 +38,18 @@ const projects_mocks = [
     link: '/boba'
   },
   {
+    title: 'flowers',
+    descr: 'A simple check-out flow for a website where you can buy, gift, and send flowers to other people of your choice.',
+    image: img_flowers,
+    imageM: imgM_flowers,
+    tags: ['mockups', 'prototyping'],
+    color: '#92C999',
+    figma: 'https://www.figma.com/proto/zMITtMqtG9hcvJLDGtUC8G/Edushare?node-id=10%3A84&viewport=-523%2C272%2C0.2671932876110077&scaling=scale-down',
+    link: '/flowers'
+  },
+  {
     title: 'edushare',
-    descr: 'A sign up flow for an app where teachers can socialize and share ideas in one community.',
+    descr: 'An onboarding flow for an app where teachers can socialize and share ideas in one community.',
     image: img_edushare,
     imageM: imgM_edushare,
     tags: ['wireframing', 'mockups', 'prototyping'],
@@ -45,16 +57,16 @@ const projects_mocks = [
     figma: 'https://www.figma.com/proto/zMITtMqtG9hcvJLDGtUC8G/Edushare?node-id=10%3A84&viewport=-523%2C272%2C0.2671932876110077&scaling=scale-down',
     link: '/edushare'
   },
-  {
-    title: 'memos',
-    descr: 'A partial prototype of a quick and simple to-do list app to keep track of your personal tasks.',
-    image: img_memo,
-    imageM: imgM_memo,
-    tags: ['prototyping'],
-    color: '#BFDFCC',
-    figma: 'https://www.figma.com/proto/pYpfd7iu01oqtaIC9lmUkQ/Memo-App?node-id=3%3A545&viewport=553%2C217%2C0.19214384257793427&scaling=scale-down',
-    default: 'https://www.figma.com/proto/pYpfd7iu01oqtaIC9lmUkQ/Memo-App?node-id=3%3A545&viewport=553%2C217%2C0.19214384257793427&scaling=scale-down'
-  },
+  // {
+  //   title: 'memos',
+  //   descr: 'A partial prototype of a quick and simple to-do list app to keep track of your personal tasks.',
+  //   image: img_memo,
+  //   imageM: imgM_memo,
+  //   tags: ['prototyping'],
+  //   color: '#BFDFCC',
+  //   figma: 'https://www.figma.com/proto/pYpfd7iu01oqtaIC9lmUkQ/Memo-App?node-id=3%3A545&viewport=553%2C217%2C0.19214384257793427&scaling=scale-down',
+  //   default: 'https://www.figma.com/proto/pYpfd7iu01oqtaIC9lmUkQ/Memo-App?node-id=3%3A545&viewport=553%2C217%2C0.19214384257793427&scaling=scale-down'
+  // },
   // {
   //   title: 'chrispyroll',
   //   descr: 'A mockup mimicry of the desktop version of twist.moe, with two different versions A & B',

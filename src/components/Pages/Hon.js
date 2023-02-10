@@ -40,7 +40,7 @@ const Bullets = (props) => {
   return (
   <div className='phrases'>
     {props.info.map((phrase, index) => 
-      <Phrase key={'yahoo/' + index} text={phrase}/>
+      <Phrase key={'hon/' + index} text={phrase}/>
     )}
   </div>
   );
@@ -99,6 +99,15 @@ const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
 const color = '#9F9FDF'
 
+// Returns style based on breakpoints, of which there are 2
+const decideMarginWidth = function(value) {
+  if (value > 1280) {
+    return {marginTop:'3rem'}
+  } else if (value > 768) {
+    return {width: '70%', marginTop:'3rem'}
+  }
+  return {width: '75%', marginTop:'3rem'}
+} 
 
 
 
@@ -150,7 +159,7 @@ class Hon extends React.Component {
           <div id='anchor_page' className='anchor' style={{top: '-1000px'}}></div>
           <img 
             className='banner' 
-            src={this.props.screenWidth > 640 ? banner : banner_mob} 
+            src={this.props.screenWidth > 768 ? banner : banner_mob} 
             alt='Banner' 
             draggable='false'          
             data-aos='fade' 
@@ -159,7 +168,7 @@ class Hon extends React.Component {
             data-aos-duration='400'
             data-aos-once={true}  
           />
-          <div className='pages' style={this.props.screenWidth > 640 ? {marginTop:'3rem'} : {width: '75%', marginTop:'3rem'}}>
+          <div className='pages' style={decideMarginWidth(this.props.screenWidth)}>
             <Tags names={tags} color={color}/>
             <h3 
               className='title'
@@ -176,7 +185,7 @@ class Hon extends React.Component {
             <div className='intro'>
               <div 
                 className='col' 
-                style={this.props.screenWidth > 640 ? null : {width: '100%'}}
+                style={this.props.screenWidth > 768 ? null : {width: '100%'}}
                 data-aos='fade' 
                 data-aos-offset='50' 
                 data-aos-easing='ease-out-sine'
@@ -184,10 +193,10 @@ class Hon extends React.Component {
                 data-aos-delay='400'
                 data-aos-once={true}
               > 
-                <h4 className='heading'> ROLE </h4>
-                <h4> UI/UX Designer </h4>              
+                <h4 className='heading'> Role </h4>
+                <p> UI/UX Designer </p>              
                 <br/>
-                <h4 className='heading'> FIGMA LINK </h4>
+                <h4 className='heading'> Figma Link </h4>
                 <div className='buttons'>
                   {/* <a 
                     href='https://blog.hon-media.com/'
@@ -211,7 +220,7 @@ class Hon extends React.Component {
               </div>
               <div 
                 className='col' 
-                style={this.props.screenWidth > 640 ? null : {width: '100%'}}
+                style={this.props.screenWidth > 768 ? null : {width: '100%'}}
                 data-aos='fade' 
                 data-aos-offset='50' 
                 data-aos-easing='ease-out-sine'
@@ -219,17 +228,17 @@ class Hon extends React.Component {
                 data-aos-delay='400'
                 data-aos-once={true}
               >
-                <h4 className='heading'> SUMMARY </h4>
-                <h4> 
+                <h4 className='heading'> Summary </h4>
+                <p> 
                   I designed a blogsite for Hon-Media that has features two different views, one for regular users, 
                   and one for the company's developers.
-                </h4> 
+                </p> 
               </div>
             </div>
 
             <div className='section'>
               <SectionTitle title='intro'/> 
-              <h4 className='heading'> MOTIVATION </h4>
+              <h4 className='heading'> Motivation </h4>
               <p> 
                 Hon-Media ultimately wants to aid San Diego companies in need during this pandemic, and to 
                 be able to do that effectively, they want to get their name and branding out there.
@@ -243,13 +252,13 @@ class Hon extends React.Component {
                       
             <div className='section'>
               <SectionTitle title='need finding'/> 
-              <h4 className='heading'> USER NEEDS </h4>
+              <h4 className='heading'> User Needs </h4>
               <p> 
                 Based on how Hon-Media described their blog, it's clear to me that there are two main user groups
                 to design for.
               </p>
               <br/>
-              <h4 className='subheading'> CLIENTS & VIEWERS </h4>
+              <h4 className='subheading'> Clients & Viewers </h4>
               <p> 
                 This is the main user group that I want the site to target. Ultimately, Hon-Media wants this site
                 to funnel users to their main site, where they can learn more about the company and eventually 
@@ -259,7 +268,7 @@ class Hon extends React.Component {
               <Bullets info={needsClients}/>  
               <br/>
               
-              <h4 className='subheading'> HON-MEDIA TEAM MEMBERS </h4>
+              <h4 className='subheading'> Hon-Media Team Members </h4>
               <p>
                 Since Hon-Media will be the ones posting, they want convenient and fluid ways to create and manage posts
                 and other content on the site.
@@ -270,7 +279,7 @@ class Hon extends React.Component {
 
             <div className='section'>
               <SectionTitle title='wireframing'/> 
-              <h4 className='heading'> SITE ARCHITECTURE </h4>
+              <h4 className='heading'> Site Architecture </h4>
               <p> 
                 Based on the user needs described above, it seems like the site should have four main features,
                 one of which is exclusive to Hon-Media team members. From the home page, users should be able to 
@@ -285,10 +294,10 @@ class Hon extends React.Component {
               </p> */}
               <Image src={pic1} />
 
-              <h4 className='heading'> HOME PAGE </h4>
+              <h4 className='heading'> Home Page </h4>
               <p> The home page starts off with a featured blogs section, with recent posts below. </p>
               <Image src={pic2} style={imageMarginNoTop}/>
-              <h4 className='heading'> BLOG POST PAGE </h4>
+              <h4 className='heading'> Blog Post Page </h4>
               <p> 
                 Each post will have it's own blog page, which looks like what you expect. Viewers can interact 
                 with the post by liking or commenting, and they can also share the post on their social media.
@@ -298,7 +307,7 @@ class Hon extends React.Component {
                 serve as a way to find related articles.
               </p>
               <Image src={pic3} style={imageMarginNoTop}/>
-              <h4 className='heading'> CREATE & MANAGE POSTS </h4>
+              <h4 className='heading'> Create & Manage Posts </h4>
               <p> 
                 These pages will be exclusive to Hon-Media team members and will probably be accessed with a login.
                 They'll let the team members easily create new posts as well as edit/delete old ones.
@@ -314,13 +323,13 @@ class Hon extends React.Component {
               </p>
               <br/>
 
-              <h4 className='heading'> HOME PAGE </h4>
+              <h4 className='heading'> Home Page </h4>
               <p> 
                 The look of the home page isn't too different, but a lot more details have been added. 
               </p>
               <Image src={pic6} style={imageMarginNoTop}/>
 
-              <h4 className='heading'> NAVIGATION & FOOTER </h4>
+              <h4 className='heading'> Navigation & Footer </h4>
               <p> 
                 The main navbar now has a third element, 'success stories', which are a dedicated page to articles
                 about clients that Hon-Media has worked with. A secondary navbar allows viewers to more easily find
@@ -365,7 +374,7 @@ class Hon extends React.Component {
               </p>
               <Image src={pic12} style={imageMarginNoTop}/> */}
 
-              <h4 className='subheading'> POST CREATION </h4>
+              <h4 className='subheading'> Post Creation </h4>
               <p>
                 Team members have a variety of selections to make as they create a post.
                 Aside from content such as title and text, they can also choose from or create new tags to assign
@@ -382,7 +391,7 @@ class Hon extends React.Component {
               </p>
               <Image src={pic14} style={imageMarginNoTop}/> */}
 
-              <h4 className='subheading'> MANAGING POSTS </h4>
+              <h4 className='subheading'> Managing Posts </h4>
               <p>
                 Team members also have the option to mass manage posts, all from one page, rather than individually
                 through the post's gear icon. When multiple posts are selected, the options to feature, delete, or 
@@ -391,7 +400,7 @@ class Hon extends React.Component {
               </p>
               <Image src={pic15} style={imageMarginNoTop}/>
 
-              <h4 className='heading'> SUCCESS STORIES </h4>
+              <h4 className='heading'> Success Stories </h4>
               <p>
                 Success stories are a way of highlighting the clients that Hon-Media has worked with. It allow groups
                 posts about that specific client to make it easier for viewers to find and read.
@@ -404,7 +413,7 @@ class Hon extends React.Component {
               </p>
               <Image src={pic16} style={imageMarginNoTop}/>
 
-              <h4 className='heading'> BLOG POSTS </h4>
+              <h4 className='heading'> Blog Posts </h4>
               <p>
                 A typical blog post will look like this to the viewer. Viewers can engage with the post via the like,
                 comment, and share buttons along the right side of the screen, or at the top and bottom of the post.
@@ -423,7 +432,7 @@ class Hon extends React.Component {
               <Image src={pic19} style={imageMarginLessBottom}/>
               <Image src={pic20} style={imageMarginNoTop}/>
 
-              <h4 className='heading'> FINAL ITERATION </h4>
+              <h4 className='heading'> Final Iteration </h4>
               <p>
                 After assessing the amount of articles Hon-Media currently has and the timecrunch for the devs, I decided to strip 
                 down the blog site to this simpler but cleaner version.

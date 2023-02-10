@@ -11,7 +11,7 @@ import TopButton from '../TopButton.js';
 
 import banner from '../../images/Banners/banner_edushare.png';
 import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_edushare.png';
-import figma from '../../images/figmaLogo_black.svg';
+import figma from '../../images/figmaLogo.svg';
 import pic1 from '../../images/Pages/edushare/1.jpg';
 import pic2 from '../../images/Pages/edushare/2.png';
 import pic3 from '../../images/Pages/edushare/3.png';
@@ -80,7 +80,15 @@ const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
 const color = '#BBE2F2'
 
-
+// Returns style based on breakpoints, of which there are 2
+const decideMarginWidth = function(value) {
+  if (value > 1280) {
+    return {marginTop:'3rem'}
+  } else if (value > 768) {
+    return {width: '70%', marginTop:'3rem'}
+  }
+  return {width: '75%', marginTop:'3rem'}
+} 
 
 
 class Edushare extends React.Component {
@@ -131,7 +139,7 @@ class Edushare extends React.Component {
           <div id='anchor_page' className='anchor' style={{top: '-1000px'}}></div>
           <img 
             className='banner' 
-            src={this.props.screenWidth > 640 ? banner : banner_mob} 
+            src={this.props.screenWidth > 768 ? banner : banner_mob} 
             alt='Banner' 
             draggable='false'          
             data-aos='fade' 
@@ -140,7 +148,7 @@ class Edushare extends React.Component {
             data-aos-duration='400'
             data-aos-once={true}  
           />
-          <div className='pages' style={this.props.screenWidth > 640 ? {marginTop:'3rem'} : {width: '75%', marginTop:'3rem'}}>
+          <div className='pages' style={decideMarginWidth(this.props.screenWidth)}>
             <Tags names={tags} color={color}/>
             <h3 
               className='title'
@@ -157,7 +165,7 @@ class Edushare extends React.Component {
             <div className='intro'>
               <div 
                 className='col' 
-                style={this.props.screenWidth > 640 ? null : {width: '100%'}}
+                style={this.props.screenWidth > 768 ? null : {width: '100%'}}
                 data-aos='fade' 
                 data-aos-offset='50' 
                 data-aos-easing='ease-out-sine'
@@ -166,9 +174,9 @@ class Edushare extends React.Component {
                 data-aos-once={true}
               > 
                 {/* <h4 className='heading'> ROLE </h4>
-                <h4> UI/UX Designer </h4>              
+                <p> UI/UX Designer </p>              
                 <br/> */}
-                <h4 className='heading'> FIGMA LINK </h4>
+                <h4 className='heading'> Figma Link </h4>
                 <div className='buttons'>
                   <a 
                     href='https://www.figma.com/proto/zMITtMqtG9hcvJLDGtUC8G/Edushare?node-id=10%3A84&viewport=-523%2C272%2C0.2671932876110077&scaling=scale-down'
@@ -183,7 +191,7 @@ class Edushare extends React.Component {
               </div>
               <div 
                 className='col' 
-                style={this.props.screenWidth > 640 ? null : {width: '100%'}}
+                style={this.props.screenWidth > 768 ? null : {width: '100%'}}
                 data-aos='fade' 
                 data-aos-offset='50' 
                 data-aos-easing='ease-out-sine'
@@ -191,16 +199,16 @@ class Edushare extends React.Component {
                 data-aos-delay='400'
                 data-aos-once={true}
               >
-                <h4 className='heading'> SUMMARY </h4>
-                <h4> 
+                <h4 className='heading'> Summary </h4>
+                <p> 
                   I designed a potential sign up flow for an app where teachers can share ideas and socialize. These would be the screens users would encounter upon signing up for their first time.
-                </h4> 
+                </p> 
               </div>
             </div>
 
             <div className='section'>
               <SectionTitle title='intro'/> 
-              <h4 className='heading'> MOTIVATION </h4>
+              <h4 className='heading'> Motivation </h4>
               <p> 
                 The designs you see below are the result of me finishing a short design challenge where I was tasked with creating screens for a sign up flow for teachers.
                 I took the liberty in fleshing out the purpose of the app, the user objectives, and design details.
@@ -212,30 +220,30 @@ class Edushare extends React.Component {
               <p> 
                 My initial rough sketch about the screens I had in mind, based off your typical sign up elements and flow.
               </p>
-              <Image src={pic1} style={this.props.screenWidth > 640 ? {width: '40%'} : {width: '90%'}}/>
+              <Image src={pic1} style={this.props.screenWidth > 768 ? {width: '40%'} : {width: '90%'}}/>
             </div>      
 
             <div className='section'>
               <SectionTitle title='wireframing'/> 
               <Image src={pic2} style={imageMarginNoTop}/>
-              <h4 className='heading'> INITIAL TYPOGRAPHY & COLORS </h4>
+              <h4 className='heading'> Initial Typography & Colors </h4>
               <Image src={pic3} style={imageMarginNoTop} />
             </div>  
 
             <div className='section'>
               <SectionTitle title='mockups'/> 
-              <h4 className='heading'> MOBILE </h4>
+              <h4 className='heading'> Mobile </h4>
               <Image src={pic4} style={imageMarginLessBottom}/>
               <Image src={pic5} style={imageMarginNoTop}/>
 
-              <h4 className='heading'> DESKTOP </h4>
+              <h4 className='heading'> Desktop </h4>
               <p>
                 Here are some of the desktop screens as well, they're pretty similar to mobile.
               </p>
               <Image src={pic6} style={imageMarginLessBottom}/>
               <Image src={pic7} style={imageMarginLessBottom}/>
 
-              {this.props.screenWidth > 640 ? 
+              {this.props.screenWidth > 768 ? 
                 <>
                   <Image src={pic8} style={imageMarginNoTop}/>
                 </>
@@ -248,12 +256,12 @@ class Edushare extends React.Component {
                 </>
               }
 
-              <h4 className='heading'> COLORS </h4>
-              <Image src={this.props.screenWidth > 640 ? pic9 : pic12} style={imageMarginNoTop}/>
-              <h4 className='heading'> TYPOGRAPHY </h4>
-              <Image src={this.props.screenWidth > 640 ? pic10 : pic13} style={imageMarginNoTop}/>
-              <h4 className='heading'> ICONOGRAPHY </h4>
-              <Image src={this.props.screenWidth > 640 ? pic11 : pic14} style={imageMarginNoTop}/>
+              <h4 className='heading'> Colors </h4>
+              <Image src={this.props.screenWidth > 768 ? pic9 : pic12} style={imageMarginNoTop}/>
+              <h4 className='heading'> Typography </h4>
+              <Image src={this.props.screenWidth > 768 ? pic10 : pic13} style={imageMarginNoTop}/>
+              <h4 className='heading'> Iconography </h4>
+              <Image src={this.props.screenWidth > 768 ? pic11 : pic14} style={imageMarginNoTop}/>
             </div>
 
             <div className='section'>
@@ -261,7 +269,11 @@ class Edushare extends React.Component {
               <p>
                 My main takeaway from this design challenge was practice with task prioritization. <br/>
                 It was due to the time limit I imposed on myself that forced me to rethink the way I usually start off my design projects or tasks.
+              </p>
+              <p>
                 Which things are most important? I need to dedicate most of my time to that. Which things are least important? 
+              </p>
+              <p>
                 Ok for these things I will really need to keep track of the time as I work on them. <br/>
                 Out of this challenge, I realized how vital it is for me as a designer to prioritize the steps in my design process.
               </p>

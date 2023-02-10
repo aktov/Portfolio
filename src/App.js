@@ -13,13 +13,15 @@ import Mobile from './components/Mobile.js';
 
 // Case Studies
 import Alike from './components/Pages/Alike.js'; 
-import Boba from './components/Pages/Boba.js'; 
+import Okizeme from './components/Pages/Okizeme.js'; 
 import Hon from './components/Pages/Hon.js'; 
 import CSA from './components/Pages/CSA.js';
 
 // Mockups
+import Boba from './components/Pages/Boba.js'; 
+import Flowers from './components/Pages/Flowers.js'; 
 import Edushare from './components/Pages/Edushare.js'; 
-import Okizeme from './components/Pages/Okizeme.js'; 
+
 
 const breakpoint = 768;
 
@@ -75,8 +77,8 @@ class App extends React.Component {
           <Route path='/alike'>
             <Alike screenWidth={this.state.screenWidth}/>
           </Route>
-          <Route path='/boba'>
-            <Boba screenWidth={this.state.screenWidth}/>
+          <Route path='/okizeme'>
+            <Okizeme screenWidth={this.state.screenWidth}/>
           </Route>
           <Route path='/hon'>
             <Hon screenWidth={this.state.screenWidth}/>
@@ -86,11 +88,14 @@ class App extends React.Component {
           </Route>
 
           {/* Mockups */}
+          <Route path='/boba'>
+            <Boba screenWidth={this.state.screenWidth}/>
+          </Route>
+          <Route path='/flowers'>
+            <Flowers screenWidth={this.state.screenWidth}/>
+          </Route>
           <Route path='/edushare'>
             <Edushare screenWidth={this.state.screenWidth}/>
-          </Route>
-          <Route path='/okizeme'>
-            <Okizeme screenWidth={this.state.screenWidth}/>
           </Route>
         </Router>
       </ParallaxProvider>
