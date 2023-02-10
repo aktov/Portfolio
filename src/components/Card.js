@@ -119,8 +119,7 @@ class Card extends React.Component {
             </div>  
             {/* </LazyLoad> */}
           </div>
-         
-
+        
           <div className={this.state.mouseEntered ? 'descWrapper expand' : 'descWrapper'} style={false ? {height:'27%'} : null}>
             {this.state.mouseEntered ? 
               <div className='text'>
@@ -140,7 +139,9 @@ class Card extends React.Component {
             </div>
           </div>
         </div>
+
       :
+
         <div 
           className='cardMobile'
           style={this.props.screenWidth >= 768 ? {margin: '1rem 1.5rem'} : {margin: '1rem inherit'}}

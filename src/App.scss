@@ -8,31 +8,38 @@ $headerHeight: 4rem;
 $baseTextColor: #444444;
 
 $sectionMarginBottom: toRem(150);
-$projCardWidth: toRem(250);
+$projCardWidth: toRem(256);
 $projCardMargin: toRem(16);
 $transitionTimingCard: .2s;
 $transitionTimingMenu: .3s;
 
+$size_h1: toRem(50);
+$size_h2: toRem(40);
+$size_h3: toRem(30);
+$size_h4: toRem(22);
+$size_h5: toRem(18);
+$size_h6: toRem(14);
+$size_p: toRem(18);
 
-@media (min-width: 769px) {
+@media only screen and  (min-width: 769px) {
     $size_h1: toRem(50);
     $size_h2: toRem(20);
     $size_p: toRem(16);    
 }
 
-@media (max-width: 768px) {
+@media only screen and  (max-width: 768px) {
     $size_h1: toRem(48);
     $size_h2: toRem(18);
     $size_p: toRem(14);
 }
 
-@media (max-width: 480px) {
+@media only screen and  (max-width: 480px) {
     $size_h1: toRem(42);
     $size_h2: toRem(14);
     $size_p: toRem(10);
 }
 
-@media (max-width: 200px) {
+@media only screen and (max-width: 200px) {
     $size_h1: toRem(36);
     $size_h2: toRem(10);
     $size_p: toRem(6);
@@ -63,14 +70,6 @@ div.app {
     max-width: toRem(1920);
     margin: auto;
 }
-
-$size_h1: toRem(50);
-$size_h2: toRem(40);
-$size_h3: toRem(30);
-$size_h4: toRem(22);
-$size_h5: toRem(18);
-$size_h6: toRem(14);
-$size_p: toRem(18);
 
 h1 {
     font-family: 'Zilla Slab', serif;
@@ -789,6 +788,8 @@ div.content {
 
                         font-family: 'Poppins', sans-serif;
                         font-weight: 600;
+
+                        white-space: nowrap;
                     }
 
                     h4.alone {
@@ -961,7 +962,7 @@ div.content {
             transition: all ease-in-out $transitionTimingCard;
     
             div.imageHolder {
-                width: $projCardWidth;
+                width: 100%;
                 max-height: $projCardWidth;
     
                 background-color: #aaaaaa;
@@ -990,9 +991,9 @@ div.content {
                 width: $projCardWidth;
                 max-width: 100%;
                 height: 100%;
-                min-height: $projCardWidth;
                 padding: toRem(20);
                 padding-bottom: toRem(10);
+                background-color: #FFFFFF;
     
                 display: flex;
                 flex-flow: column;
@@ -1002,16 +1003,19 @@ div.content {
                 h4.cardTitle {
                     width: 100%;
                     max-width: 100%;
-                    margin-top: toRem(-5);
+                    margin-bottom: toRem(8);
                     margin-left: 0;
                     font-family: 'Poppins', sans-serif;
                     font-weight: 600;
+                    font-size: toRem(18);
                 }
     
                 p {
                     max-width: 100%;
-                    margin-top: toRem(-20);
-                    margin-bottom: toRem(30);
+                    margin-top: toRem(0);
+                    margin-bottom: toRem(16);
+                    font-size: toRem(14);
+                    // font-size: $size_p;
                 }          
             }
     
@@ -1024,31 +1028,32 @@ div.content {
                 flex-flow: row wrap;
                 justify-content: flex-start;
                 align-items: flex-start;
-                margin-bottom: auto;
+                margin-bottom: toRem(8);
     
                 h6 {
-                    margin-top: toRem(-10);
+                    margin: toRem(0);
                     padding-right: toRem(10);
     
                     font-family: 'Poppins', sans-serif;
                     font-style: normal;
                     font-weight: 600;
-                    line-height: toRem(3);
+                    font-size: toRem(12);
                 }
             }  
 
             div.buttons {
                 position: relative;
                 width: 100%;
-                height: toRem(30);
+                height: toRem(40);
                 margin-top: auto;
                 margin-bottom: toRem(5);
                 margin-left: auto;
 
                 display: flex;
                 flex-flow: row nowrap;
-                justify-content: flex-end;
+                justify-content: space-between;
                 align-items: stretch;
+                column-gap: toRem(24);
 
                 a:only-child {
                     margin-left: auto;
@@ -1056,9 +1061,8 @@ div.content {
 
                 a {
                     position: relative;
-                    width: toRem(35);
-                    height: toRem(35);
-                    margin-left: toRem(16);
+                    width: toRem(40);
+                    height: toRem(40);
 
                     border-radius: toRem(100);
                     border: none;
@@ -1076,7 +1080,7 @@ div.content {
                     img {
                         position: relative;
                         width: auto;
-                        height: toRem(20);
+                        height: toRem(32);
                         margin: auto;
 
                         display: flex;
@@ -1544,7 +1548,6 @@ div.content {
             font-family: 'Poppins', sans-serif;
             font-style: normal;
             font-weight: 500;
-            // font-size: $size_p;
         }
 
         p {
