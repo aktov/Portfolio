@@ -745,12 +745,12 @@ div.content {
                 position: absolute;
                 width: 100%;
                 max-width: 100%;
-                height: 15%;//toRem(150);
-                padding: toRem(15) 0;
+                padding: toRem(24) 8%;
+                padding-bottom: toRem(32);
     
                 display: flex;
-                flex-flow: row;
-                justify-content: center;
+                flex-flow: column;
+                justify-content: flex-start;
                 align-items: center;
                 align-self: flex-end;
 
@@ -763,27 +763,24 @@ div.content {
                 filter: drop-shadow(0px -1px 14px rgba(0, 0, 0, 0.10));
                 box-shadow: 0px -1px 14px rgba(0, 0, 0, 0.10);
 
-                -webkit-transition: all .2s ease-out;
-                -moz-transition: all .2s ease-out;
-                -ms-transition: all .2s ease-out;
-                -o-transition: all .2s ease-out;
-                transition: all .2s ease-out;
-    
-                div.text {
+                -webkit-transition: height .3s ease-out;
+                -moz-transition: height .3s ease-out;
+                -ms-transition: height .3s ease-out;
+                -o-transition: height .3s ease-out;
+                transition: height .3s ease-out;
+
+                div.topRow {
                     position: relative;
-                    width: 50%;
-                    height: 80%;
-                    margin-right: 5%;
+                    width: 100%;
+                    height: toRem(40);
 
                     display: flex;
-                    flex-flow: column;
+                    flex-flow: row;
                     justify-content: space-between;
-                    align-content: center;
+                    align-items: flex-end;
 
                     h4.cardTitle {
-                        width: 100%;
-                        max-width: 100%;
-                        margin-left: 0;
+                        width: auto;
                         margin: 0;
 
                         font-family: 'Poppins', sans-serif;
@@ -791,59 +788,17 @@ div.content {
 
                         white-space: nowrap;
                     }
-
-                    h4.alone {
-                        margin: auto;
-                    }
         
-                    p {
-                        max-width: 100%;
-                        margin: 0;
-                    }
-                }
-
-                div.other {
-                    position: relative;
-                    width: 25%;
-                    height: 80%;
-
-                    display: flex;
-                    flex-flow: column;
-                    justify-content: space-between;
-                    align-content: flex-start;
-
-                    div.tags {
-                        position: relative;
-                        width: 100%;
-                        margin-left: auto;
-                        
-                        display: flex;
-                        flex-flow: row wrap;
-                        justify-content: flex-end;
-                        align-items: flex-start;
-            
-                        h6 {
-                            margin: 0;
-                            padding-right: toRem(10);
-            
-                            font-family: 'Poppins', sans-serif;
-                            font-style: normal;
-                            font-weight: 600;
-                            line-height: normal;
-                        }
-                    }  
-
                     div.buttons {
                         position: relative;
-                        width: 100%;
-                        height: toRem(40);
-                        margin-left: auto;
-                        margin-bottom: toRem(5);
+                        width: auto;
+                        height: auto;
 
                         display: flex;
                         flex-flow: row nowrap;
                         justify-content: flex-end;
-                        align-items: center;
+                        align-items: flex-end;
+                        column-gap: toRem(16);
 
                         a:hover {
                             img {
@@ -866,7 +821,7 @@ div.content {
                             position: relative;
                             width: toRem(40);
                             height: toRem(40);
-                            margin-left: toRem(16);
+                            // margin-left: toRem(16);
 
                             border-radius: toRem(100);
                             border: none;
@@ -923,16 +878,54 @@ div.content {
                             }
                         }
                     }
+                }
+
+                div.botRow {
+                    position: relative;
+                    width: 100%;
+                    height: 50%;
+                    margin-top: toRem(16);
+
+                    display: flex;
+                    flex-flow: row;
+                    justify-content: space-between;
+                    align-content: flex-start;
+
+                    div.tags {
+                        position: relative;
+                        width: 30%;
+                        margin-left: auto;
+                        
+                        display: flex;
+                        flex-flow: row wrap;
+                        justify-content: flex-end;
+                        align-content: flex-start;
+                        align-items: flex-start;
+            
+                        h6 {
+                            margin: 0;
+                            padding-right: toRem(10);
+            
+                            font-family: 'Poppins', sans-serif;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal;
+                        }
+                    }  
+
+                    p {
+                        width: 70%;
+                        margin: 0;
+                    }
                 }          
             }
 
-            div.expand {
+            div.collapsed {
+                height: toRem(96);
+            }
+
+            div.expanded {
                 height: 32%;
-                // -webkit-transform: translateY(-80%) scaleY(1.8);
-                // -moz-transform: translateY(-80%) scaleY(1.8);
-                // -ms-transform: translateY(-80%) scaleY(1.8);
-                // -o-transform: translateY(-80%) scaleY(1.8);
-                // transform: translateY(-80%) scaleY(1.8);
             }
         }
 

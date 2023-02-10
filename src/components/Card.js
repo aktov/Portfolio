@@ -119,24 +119,19 @@ class Card extends React.Component {
             </div>  
             {/* </LazyLoad> */}
           </div>
-        
-          <div className={this.state.mouseEntered ? 'descWrapper expand' : 'descWrapper'} style={false ? {height:'27%'} : null}>
-            {this.state.mouseEntered ? 
-              <div className='text'>
-                <h4 className='cardTitle'> {this.props.title.toUpperCase()} </h4>
-                <p> {this.props.desc} </p> 
-              </div>
-              :
-              <div className='text'>
-                <h4 className='cardTitle alone'> {this.props.title.toUpperCase()} </h4>
-              </div>             
-            }
-            <div className='other'>
-              {this.state.mouseEntered && <>
-                <Buttons props={this.props} />
-                {this.props.tags && <Tags names={this.props.tags} color={this.props.color2 || this.props.color} />}
-              </>}
+    
+          <div className={this.state.mouseEntered ? 'descWrapper expanded' : 'descWrapper collapsed'} >
+            <div className='topRow'>
+              <h4 className='cardTitle'> {this.props.title.toUpperCase()} </h4>
+              {this.state.mouseEntered && <Buttons props={this.props}/>}
             </div>
+            
+            {this.state.mouseEntered &&
+              <div className='botRow'>
+                <p> {this.props.desc} </p> 
+                {this.props.tags && <Tags names={this.props.tags} color={this.props.color2 || this.props.color} />} 
+              </div>
+            }
           </div>
         </div>
 
