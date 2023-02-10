@@ -13,16 +13,35 @@ import banner from '../../images/Banners/banner_ace.png';
 import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_ace.png';
 import open from '../../images/open.svg';
 
-import pic3 from '../../images/Pages/alike/3.png';
-import pic4 from '../../images/Pages/alike/4.png';
-import pic5 from '../../images/Pages/alike/5.png';
-import pic6 from '../../images/Pages/alike/6.png';
-import pic7 from '../../images/Pages/alike/7.png';
-import pic8 from '../../images/Pages/alike/8.png';
-import pic9 from '../../images/Pages/alike/9.png';
-import pic10 from '../../images/Pages/alike/10.png';
-import pic11 from '../../images/Pages/alike/11.png';
-import picPersona from '../../images/Pages/alike/Persona.png';
+import pic1 from '../../images/Pages/ace/01.png';
+import pic2 from '../../images/Pages/ace/02.png';
+import pic3 from '../../images/Pages/ace/03.png';
+import pic4 from '../../images/Pages/ace/04.png';
+import pic5 from '../../images/Pages/ace/05.png';
+import pic6 from '../../images/Pages/ace/06.png';
+import pic7 from '../../images/Pages/ace/07.png';
+import pic8 from '../../images/Pages/ace/08.png';
+import pic9 from '../../images/Pages/ace/09.png';
+import pic10 from '../../images/Pages/ace/10.png';
+import pic11 from '../../images/Pages/ace/11.png';
+import pic12 from '../../images/Pages/ace/12.png';
+import pic13 from '../../images/Pages/ace/13.png';
+import pic14 from '../../images/Pages/ace/14.png';
+import pic15 from '../../images/Pages/ace/15.png';
+import pic16 from '../../images/Pages/ace/16.png';
+import pic17 from '../../images/Pages/ace/17.png';
+import pic18 from '../../images/Pages/ace/18.png';
+import pic19 from '../../images/Pages/ace/19.png';
+import pic20 from '../../images/Pages/ace/20.png';
+import pic21 from '../../images/Pages/ace/21.png';
+import pic22 from '../../images/Pages/ace/22.png';
+import pic23 from '../../images/Pages/ace/23.png';
+import pic24 from '../../images/Pages/ace/24.png';
+import pic25 from '../../images/Pages/ace/25.png';
+import pic26 from '../../images/Pages/ace/26.png';
+import pic27 from '../../images/Pages/ace/27.png';
+import pic28 from '../../images/Pages/ace/28.png';
+
 
 const Bullets = (props) => {
   return (
@@ -213,7 +232,7 @@ class ACE extends React.Component {
                 <p> We were a small startup, so I worked closely with our founders and engineers. Of the team, here are those I worked most with: </p>
                 <div className='teamColumns'>
                   <p> <b> Founders </b> <br/> Omi Iyamu [CTO] <br/> Darren [CEO] <br/> DJ [COO] </p>
-                  <p> <b> Product </b> <br/> Erick Wahome [Product Manager] <br/> Jade French [Marketing Lead] </p>
+                  <p> <b> Product </b> <br/> Erick Wahome [Product Manager] <br/> Jade French [Marketing Lead] <br/> Deepa Patil [UX Researcher] </p>
                 </div>
                 <p> <b> Front End Engineers </b> <br/> Jose Ambrosio <br/> Erik German <br/> Deep Bhavsar <br/> Jignesh Maheshwari <br/> Bharat Sindhav </p>
                 <br/>
@@ -221,14 +240,48 @@ class ACE extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Coming Soon'/> 
+              <SectionTitle title='A Work in Progress'/> 
               <p>
-                I'm still working it out with Omi on which features of the app I can showcase. For now, you'll need to wait a bit. 
+                I'm still working it out with Omi on which features of the app I can showcase and talk about. For now, I've added screenshots of designs I created down below. 
               </p>
-              <p>
-                Sorry about that!
-              </p>
-              <h4 className='heading'> Check out my other work in the meantime! </h4>
+              <br/>
+              <br/>
+
+              <h4 className='heading'> Modals & Pop Ups </h4>
+              <div className='imageGallery'>
+                <Image src={pic1} style={imageMarginLessBottom}/>
+                <Image src={pic2} style={imageMarginLessBottom}/>
+                <Image src={pic3} style={imageMarginLessBottom}/>
+                <Image src={pic4} style={imageMarginLessBottom}/>
+                <Image src={pic5} style={imageMarginLessBottom}/>
+                <Image src={pic6} style={imageMarginLessBottom}/>
+                <Image src={pic7} style={imageMarginLessBottom}/>
+                <Image src={pic8} style={imageMarginLessBottom}/>
+                <Image src={pic9} style={imageMarginLessBottom}/>
+                <Image src={pic10} style={imageMarginLessBottom}/>
+                <Image src={pic11} style={imageMarginLessBottom}/>
+                <Image src={pic12} style={imageMarginLessBottom}/>
+                <Image src={pic13} style={imageMarginLessBottom}/>
+                <Image src={pic14} style={imageMarginLessBottom}/>
+                <Image src={pic15} style={imageMarginLessBottom}/>
+                <Image src={pic16} style={imageMarginLessBottom}/>
+                <Image src={pic17} style={imageMarginLessBottom}/>
+                <Image src={pic18} style={imageMarginLessBottom}/>
+                <Image src={pic19} style={imageMarginLessBottom}/>
+                <Image src={pic20} style={imageMarginLessBottom}/>
+                <Image src={pic21} style={imageMarginLessBottom}/>
+                <Image src={pic22} style={imageMarginLessBottom}/>
+                <Image src={pic23} style={imageMarginNoTop}/>
+              </div>
+
+              <h4 className='heading'> Modals & Pop Ups </h4>
+              <div className='imageGallery'>
+                <Image src={pic24} style={imageMarginLessBottom}/>
+                <Image src={pic25} style={imageMarginLessBottom}/>
+                <Image src={pic26} style={imageMarginLessBottom}/>
+                <Image src={pic27} style={imageMarginLessBottom}/>
+                <Image src={pic28} style={imageMarginNoTop}/>
+              </div>
 
             </div>           
 
