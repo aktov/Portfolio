@@ -700,7 +700,7 @@ div.content {
             filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
 
-            transition: all ease-in-out $transitionTimingCard;
+            // transition: all ease-in-out $transitionTimingCard;
     
             div.imageHolder {
                 width: 100%;
@@ -1470,11 +1470,11 @@ div.content {
             flex-flow: row wrap;
             justify-content: flex-start;
             align-items: flex-start;
-            margin-bottom: auto;
+            margin-bottom: toRem(16);
 
             h5 {
-                margin-top: toRem(-10);
-                padding-right: toRem(10);
+                margin: toRem(0);
+                padding-right: toRem(16);
 
                 font-family: 'Poppins', sans-serif;
                 font-style: normal;

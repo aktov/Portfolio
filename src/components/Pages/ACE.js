@@ -42,6 +42,13 @@ import pic26 from '../../images/Pages/ace/26.png';
 import pic27 from '../../images/Pages/ace/27.png';
 import pic28 from '../../images/Pages/ace/28.png';
 
+function importImages(r) {
+  return r.keys().map(r);
+}
+const iconsOutlined = importImages(require.context('../../images/Pages/ace/iconsOutlined', false, /\.(png|jpe?g|svg)$/));
+const iconsFilled = importImages(require.context('../../images/Pages/ace/iconsFilled', false, /\.(png|jpe?g|svg)$/));
+const iconsUnused = importImages(require.context('../../images/Pages/ace/iconsUnused', false, /\.(png|jpe?g|svg)$/));
+
 
 const Bullets = (props) => {
   return (
@@ -87,19 +94,25 @@ const Tags = (props) => {
 
 const tags = ['ux research', 'wireframing', 'mockups', 'prototyping', 'user testing']
 
-const descr = [
-  'Modified and updated existing app screens with UI designs more aligned with modern trends and styles (e.g. navigation bar, headers, icons, and many other specific screens)',
-  'Designed prototypes of new app screens and new user flows on Figma for the dev team to create',
-  'Used Figma Prototyping to turn our static prototype screens into a functional, interactable flow which better helped the developers visualize the app and its functionality',
-  'Helped quadruple the conversion rate of app downloads to users'
-];
-
 const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
-const smallerImage = {marginTop: '0rem', width: '70%'}
-const smallerImageLess = {marginTop: '0rem', marginBottom: '2rem', width: '70%'}
 const color = '#FBE7E7'
 const color2 = '#EAA4C1'
+
+const iconGallery = {
+  display: 'flex',
+  flexFlow: 'row wrap',
+  justifyContent: 'center',
+  rowGap: '24px',
+  columnGap: '24px',
+
+  marginTop: '16px',
+  marginBottom: '64px'
+}
+
+const imageIcon = {width: '32px', margin: 0}
+const imageIconMobile = {width: '32px', margin: 0}
+
 
 // Returns style based on breakpoints, of which there are 2
 const decideMarginWidth = function(value) {
@@ -242,12 +255,20 @@ class ACE extends React.Component {
             <div className='section'>
               <SectionTitle title='A Work in Progress'/> 
               <p>
-                I'm still working it out with Omi on which features of the app I can showcase and talk about. For now, I've added screenshots of designs I created down below. 
+                I'm still working it out with Omi on which features of the app I can showcase and talk about, so I can't specifically talk about the features I worked on in detail just yet.
               </p>
-              <br/>
-              <br/>
+              <p>
+                In the meantime, this page will be a showcase of various screens and icons that I've designed. <br/>
+                Connect with or message me if you'd like to hear more about my time at ACE!
+              </p>
+              <p>
+                <b> Disclaimer: There's a lot of images on this page, so please be patient and give them some time to load! </b>
+              </p>
+            </div>
 
-              <h4 className='heading'> Modals & Pop Ups </h4>
+            <div className='section'>
+              <SectionTitle title='Screens'/> 
+              <h4 className='heading'> Feature Showcase </h4>
               <div className='imageGallery'>
                 <Image src={pic1} style={imageMarginLessBottom}/>
                 <Image src={pic2} style={imageMarginLessBottom}/>
@@ -282,7 +303,37 @@ class ACE extends React.Component {
                 <Image src={pic27} style={imageMarginLessBottom}/>
                 <Image src={pic28} style={imageMarginNoTop}/>
               </div>
+            </div>
 
+            <div className='section'>
+              <SectionTitle title='Icons'/> 
+              <p>
+                I designed over 90% of the icons that are used in the app. Here's a quick overview showing them all. <br/>
+                Within our Figma style library, they're categorized into two groups, either 'outlined' or 'filled'.
+              </p>
+              <br/>
+
+              <h4 className='heading'> Outlined </h4>
+              <div style={iconGallery}>
+                {iconsOutlined.map((img) => 
+                  <Image src={img} style={this.props.screenWidth > 768 ? imageIcon : imageIconMobile}/>
+                )}
+              </div>
+              
+              <h4 className='heading'> Filled </h4>
+              <div style={iconGallery}>
+                {iconsFilled.map((img) => 
+                  <Image src={img} style={this.props.screenWidth > 768 ? imageIcon : imageIconMobile}/>
+                )}
+              </div>
+              
+              <h4 className='heading'> Unused </h4>
+              <p> Here are icons that didn't make the cut, but I'd like to show them off. </p>
+              <div style={iconGallery}>
+                {iconsUnused.map((img) => 
+                  <Image src={img} style={this.props.screenWidth > 768 ? imageIcon : imageIconMobile}/>
+                )}
+              </div>
             </div>           
 
 

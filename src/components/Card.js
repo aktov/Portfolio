@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef  } from 'react';
 import LazyLoad from 'react-lazyload';
 import { Link } from 'react-router-dom';
 
@@ -66,6 +66,167 @@ const Buttons = (props) => {
 }
 
 
+
+// function Info(props) {
+//   const [height, setHeight] = useState('96px');
+//   const [expandedHeight, setUpper] = useState('40%');
+//   const ref = useRef()
+//   const isFirstRender = useRef(true);
+//   // const maxHeightRef = useRef('40%');
+
+
+//   const getHeight = () => {
+//     const newHeight = ref.current.offsetHeight;
+//     setHeight(newHeight);
+//   }
+//   const getExpandedHeight = () => {
+//     const expandedHeight = ref.current.offsetHeight;
+//     setUpper(expandedHeight);
+//   }
+
+
+//   useEffect(() => {
+//     if (ref.current && !isFirstRender.current) {
+//       // maxHeightRef.current = ref.current.offsetHeight;
+//       getHeight();
+//     } 
+
+//     if (props.mouseEntered && isFirstRender.current) {
+//       isFirstRender.current = false;
+//       getExpandedHeight();
+//       console.log(expandedHeight);
+//     }
+
+//     console.log(height);
+//   }, [props.mouseEntered])
+
+//   const expanded = {
+//     height: 'auto'
+//   }
+  
+//   const collapsed = {
+//     height: '96px'
+//   }
+
+//   return (
+//     <div className={props.mouseEntered ? 'descWrapper expanded' : 'descWrapper collapsed'} style={props.mouseEntered ? { maxHeight: expandedHeight } : { maxHeight: height}} ref={ref} >
+//       <div className='topRow'>
+//         <h4 className='cardTitle'> {props.props.title.toUpperCase()} </h4>
+//         {props.mouseEntered && <Buttons props={props.props}/>}
+//       </div>
+      
+//       {props.mouseEntered &&
+//         <div className='botRow'>
+//           <p> {props.props.desc} </p> 
+//           {props.props.tags && <Tags names={props.props.tags} color={props.props.color2 || props.props.color} />} 
+//         </div>
+//       }
+//     </div>
+//   )
+// }
+
+
+
+// function Card(props) {
+//   const [mouseEntered, setMouse] = useState(false);
+
+//   const handleMouseEnter = () => {
+//     setMouse(true);
+//   }
+
+//   const handleMouseLeave = () => {
+//     setMouse(false);
+//   }
+
+//   return (
+//     <>
+//       {props.screenWidth > 768 ?      
+//         <div 
+//           className='cardDesktop'
+//           style={props.screenWidth >= 480 ? {margin: '2rem 1.5rem'} : {margin: '1rem 1rem'}}
+//           onMouseEnter={handleMouseEnter} 
+//           onMouseLeave={handleMouseLeave}
+//           data-aos='fade' 
+//           data-aos-offset='50' 
+//           data-aos-easing='ease-out-sine'
+//           data-aos-duration='400'
+//           data-aos-once={true}
+//         >
+          
+//           <div className='imageHolder' style={{backgroundColor: props.color}}>
+//             <LazyLoad height={200} offset={100}>
+//             <div className='lazyload-wrapper'>
+//               {props.default &&
+//                 <a href={props.default} target="_blank" rel="noopener noreferrer">
+//                   <img src={props.image} alt={props.title} draggable='false' />
+//                 </a>
+//               }
+//               {props.link &&
+//                 <Link to={props.link} rel="noopener noreferrer">
+//                   <img src={props.image} alt={props.title} draggable='false' />
+//                 </Link>
+//               } 
+//             </div>  
+//             </LazyLoad>
+//           </div>
+    
+//           <Info props={props} mouseEntered={mouseEntered}> </Info>
+
+//           {/* <div className={mouseEntered ? 'descWrapper expanded' : 'descWrapper collapsed'} >
+//             <div className='topRow'>
+//               <h4 className='cardTitle'> {props.title.toUpperCase()} </h4>
+//               {mouseEntered && <Buttons props={props}/>}
+//             </div>
+            
+//             {mouseEntered &&
+//               <div className='botRow'>
+//                 <p> {props.desc} </p> 
+//                 {props.tags && <Tags names={props.tags} color={props.color2 || props.color} />} 
+//               </div>
+//             }
+//           </div> */}
+//         </div> 
+
+//       :
+
+//         <div 
+//           className='cardMobile'
+//           style={props.screenWidth >= 768 ? {margin: '1rem 1.5rem'} : {margin: '1rem inherit'}}
+//           onMouseEnter={handleMouseEnter} 
+//           onMouseLeave={handleMouseLeave}
+//         >
+//           <div className='imageHolder'>
+//             <LazyLoad height={250} offset={2000} overflow={true}>
+//             {/* <div className='lazyload-wrapper'> */}
+//               {props.default &&
+//                 <a href={props.default} target="_blank" rel="noopener noreferrer">
+//                   <img src={props.imageM} alt={props.title} draggable='false' />
+//                 </a>
+//               }
+//               {props.link &&
+//                 <Link to={props.link} rel="noopener noreferrer">
+//                   <img src={props.imageM} alt={props.title} draggable='false' />
+//                 </Link>
+//               } 
+//             {/* </div> */}
+//             </LazyLoad>
+//           </div>
+        
+//           <div className='text'>
+//             <h4 className='cardTitle'> {props.title.toUpperCase()} </h4>
+//             <p> {props.desc} </p>
+        
+//             {props.tags && <Tags names={props.tags} color={props.color2 || props.color} />}
+//             <Buttons props={props} />
+//           </div>
+//         </div>
+//       }  
+//     </>
+//   )
+// }
+
+
+
 class Card extends React.Component {
   constructor(props) {
     super(props);
@@ -104,7 +265,7 @@ class Card extends React.Component {
         >
           
           <div className='imageHolder' style={{backgroundColor: this.props.color}}>
-            {/* <LazyLoad height={200} offset={100}> */}
+            <LazyLoad height={200} offset={100}>
             <div className='lazyload-wrapper'>
               {this.props.default &&
                 <a href={this.props.default} target="_blank" rel="noopener noreferrer">
@@ -117,7 +278,7 @@ class Card extends React.Component {
                 </Link>
               } 
             </div>  
-            {/* </LazyLoad> */}
+            </LazyLoad>
           </div>
     
           <div className={this.state.mouseEntered ? 'descWrapper expanded' : 'descWrapper collapsed'} >
