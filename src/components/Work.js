@@ -8,7 +8,6 @@ import Title from './Title';
 import imgM_boba from '../images/Thumbnails/Mobile/cardImageM_boba.png';
 import imgM_flowers from '../images/Thumbnails/Mobile/cardImageM_flowers.png';
 import imgM_edushare from '../images/Thumbnails/Mobile/cardImageM_edushare.png';
-import imgM_memo from '../images/Thumbnails/Mobile/cardImageM_memo.png';
 
 import imgM_ace from '../images/Thumbnails/Mobile/cardImageM_ace.png';
 import imgM_alike from '../images/Thumbnails/Mobile/cardImageM_alike.png';
@@ -20,7 +19,6 @@ import imgM_csa from '../images/Thumbnails/Mobile/cardImageM_csa.png';
 import img_boba from '../images/Thumbnails/Desktop/cardImage_boba.png';
 import img_flowers from '../images/Thumbnails/Desktop/cardImage_flowers.png';
 import img_edushare from '../images/Thumbnails/Desktop/cardImage_edushare.png';
-import img_memo from '../images/Thumbnails/Desktop/cardImage_memo.png';
 
 import img_ace from '../images/Thumbnails/Desktop/cardImage_ace.png';
 import img_alike from '../images/Thumbnails/Desktop/cardImage_alike.png';
@@ -48,7 +46,7 @@ const projects_mocks = [
     imageM: imgM_flowers,
     tags: ['mockups', 'prototyping'],
     color: '#92C999',
-    figma: 'https://www.figma.com/proto/5gbXEMOUCFgvECx3gFsD4Q/Pretty-Nice-Flowers?page-id=205%3A1662&node-id=205%3A1663&viewport=342%2C655%2C0.24&scaling=min-zoom&starting-point-node-id=205%3A1663&hide-ui=1',
+    figma: 'https://www.figma.com/proto/5gbXEMOUCFgvECx3gFsD4Q/Pretty-Nice-Flowers?page-id=205%3A1662&node-id=227%3A4386&viewport=205%2C372%2C0.08&scaling=min-zoom&starting-point-node-id=227%3A4386&hide-ui=1',
     link: '/flowers'
   },
   {

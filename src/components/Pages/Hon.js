@@ -12,7 +12,7 @@ import TopButton from '../TopButton.js';
 import banner from '../../images/Banners/banner_hon.png';
 import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_hon.png';
 import figma from '../../images/figmaLogo_black.svg';
-import open from '../../images/open.svg';
+// import open from '../../images/open.svg';
 
 import pic1 from '../../images/Pages/hon/1.png';
 import pic2 from '../../images/Pages/hon/2.png';

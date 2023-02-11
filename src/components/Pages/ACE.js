@@ -5,7 +5,6 @@ import Header from '../Header.js';
 import Footer from '../Footer.js';
 import NavMenu from '../NavMenu.js';
 import Contact from '../Contact.js';
-import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
 
@@ -48,17 +47,6 @@ function importImages(r) {
 const iconsOutlined = importImages(require.context('../../images/Pages/ace/iconsOutlined', false, /\.(png|jpe?g|svg)$/));
 const iconsFilled = importImages(require.context('../../images/Pages/ace/iconsFilled', false, /\.(png|jpe?g|svg)$/));
 const iconsUnused = importImages(require.context('../../images/Pages/ace/iconsUnused', false, /\.(png|jpe?g|svg)$/));
-
-
-const Bullets = (props) => {
-  return (
-  <div className='phrases'>
-    {props.info.map((phrase, index) => 
-      <Phrase key={'alike/' + index} text={phrase}/>
-    )}
-  </div>
-  );
-};
 
 const Image = (props) => {
   return (

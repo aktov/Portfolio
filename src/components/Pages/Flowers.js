@@ -20,6 +20,7 @@ import picV1b from '../../images/Pages/flowers/V1-2.png';
 import picV1c from '../../images/Pages/flowers/V1-3.png';
 
 import picV2a from '../../images/Pages/flowers/V2-1.png';
+import picV2aFilled from '../../images/Pages/flowers/V2-1a.png';
 import picV2b from '../../images/Pages/flowers/V2-2.png';
 import picV2c from '../../images/Pages/flowers/V2-3.png';
 import picV2d from '../../images/Pages/flowers/V2-4.png';
@@ -83,6 +84,7 @@ const Tags = (props) => {
 }
 
 const tags = ['mockups', 'prototyping'];
+const link = 'https://www.figma.com/proto/5gbXEMOUCFgvECx3gFsD4Q/Pretty-Nice-Flowers?page-id=205%3A1662&node-id=227%3A4386&viewport=205%2C372%2C0.08&scaling=min-zoom&starting-point-node-id=227%3A4386&hide-ui=1'
 
 const introPoints = [
   'Shipping',
@@ -103,7 +105,7 @@ const futureQuestions = [
 
 const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
-const imageMarginNone = {marginTop: '0rem', marginBottom: '0rem'};
+// const imageMarginNone = {marginTop: '0rem', marginBottom: '0rem'};
 const smallerImage = {marginTop: '0rem', width: '70%'}
 const smallerImageLess = {marginTop: '0rem', marginBottom: '2rem', width: '70%'}
 const borderShadow = {
@@ -215,7 +217,7 @@ class Flowers extends React.Component {
                 <h4 className='heading'> LINKS </h4>
                 <div className='buttons'>
                   <a 
-                    href='https://www.figma.com/proto/5gbXEMOUCFgvECx3gFsD4Q/Pretty-Nice-Flowers?page-id=205%3A1662&node-id=205%3A1663&viewport=342%2C655%2C0.24&scaling=min-zoom&starting-point-node-id=205%3A1663&hide-ui=1'
+                    href={link}
                     target='_blank' 
                     rel='noopener noreferrer'
                   >
@@ -296,6 +298,7 @@ class Flowers extends React.Component {
 
               <Bullets info={secondIterPoints}/> 
               <Image src={picV2a} style={imageMarginLessBottom}/>
+              <Image src={picV2aFilled} style={imageMarginLessBottom}/>
 
               <h4 className='heading'> Why did I remove the right side? </h4>
               <p>
@@ -351,13 +354,13 @@ class Flowers extends React.Component {
               </>
             </div>  
 
-            <div className='section'>
+            {/* <div className='section'>
               <SectionTitle title='Prototype'/> 
               <p>
                 Even though this was more of a simple redesign as opposed to a UX research project, it was still a great learning experience into Figma's components, variants, and layout grids.
               </p>
-              {/* <iframe style={{border: '1px solid rgba(0, 0, 0, 0.1)', width:'100%', height:'50rem'}} src={'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F5gbXEMOUCFgvECx3gFsD4Q%2FPretty-Nice-Flowers%3Fpage-id%3D205%253A1662%26node-id%3D205%253A1663%26viewport%3D588%252C633%252C0.33%26scaling%3Dscale-down%26starting-point-node-id%3D205%253A1663'} allowfullscreen></iframe> */}
-            </div>
+              <iframe style={{border: '1px solid rgba(0, 0, 0, 0.1)', width:'100%', height:'50rem'}} src={'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F5gbXEMOUCFgvECx3gFsD4Q%2FPretty-Nice-Flowers%3Fpage-id%3D205%253A1662%26node-id%3D205%253A1663%26viewport%3D588%252C633%252C0.33%26scaling%3Dscale-down%26starting-point-node-id%3D205%253A1663'} allowfullscreen></iframe>
+            </div> */}
 
             <div className='section'>
               <SectionTitle title='Looking towards the future'/> 

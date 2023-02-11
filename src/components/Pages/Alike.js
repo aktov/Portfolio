@@ -11,7 +11,7 @@ import TopButton from '../TopButton.js';
 
 import banner from '../../images/Banners/banner_alike.png';
 import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_alike.png';
-import open from '../../images/open.svg';
+// import open from '../../images/open.svg';
 
 import pic3 from '../../images/Pages/alike/3.png';
 import pic4 from '../../images/Pages/alike/4.png';
@@ -79,7 +79,6 @@ const descr = [
 const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
 const smallerImage = {marginTop: '0rem', width: '70%'}
-const smallerImageLess = {marginTop: '0rem', marginBottom: '2rem', width: '70%'}
 const color = '#688CD0'
 
 // Returns style based on breakpoints, of which there are 2
