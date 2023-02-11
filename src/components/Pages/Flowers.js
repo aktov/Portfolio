@@ -26,6 +26,8 @@ import picV2d from '../../images/Pages/flowers/V2-4.png';
 
 import picV2Cola from '../../images/Pages/flowers/V2-ColumnsA.png';
 import picV2Colb from '../../images/Pages/flowers/V2-ColumnsB.png';
+import picV2ColaMob from '../../images/Pages/flowers/V2-ColumnsAMob.png';
+import picV2ColbMob from '../../images/Pages/flowers/V2-ColumnsBMob.png';
 import picCompDesk from '../../images/Pages/flowers/ComponentsDesk.png';
 import picCompMob from '../../images/Pages/flowers/ComponentsMob.png';
 import picCompGifDesk from '../../images/Pages/flowers/ComponentsDesk.gif';
@@ -319,14 +321,14 @@ class Flowers extends React.Component {
               <p>
                 The outer edges in the green are variable, and would widen with wider displays, or narrow with smaller displays. On mobile these would vanish.
               </p>
-              <Image src={picV2Cola} style={imageMarginNoTop}/>
+              <Image src={this.props.screenWidth > 768 ? picV2Cola : picV2ColaMob} style={imageMarginNoTop}/>
 
               <h4 className='subheading'> A More Standard Layout </h4>
               <p>
                 A more standard grid layout would alter the widths of the elements, notably making most fields 259px on this display. <br/>
                 Not the biggest deal, but I do prefer my dimensions to be in multiples of either 4 or 8.
               </p>
-              <Image src={picV2Colb} style={imageMarginNoTop}/>
+              <Image src={this.props.screenWidth > 768 ? picV2Colb : picV2ColbMob} style={imageMarginNoTop}/>
             </div>
 
             <div className='section'>
