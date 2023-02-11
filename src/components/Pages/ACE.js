@@ -304,14 +304,14 @@ class ACE extends React.Component {
               <h4 className='heading'> Outlined </h4>
               <div style={iconGallery}>
                 {iconsOutlined.map((img) => 
-                  <Image src={img} style={this.props.screenWidth > 768 ? imageIcon : imageIconMobile}/>
+                  <Image src={img} key={img} style={this.props.screenWidth > 768 ? imageIcon : imageIconMobile}/>
                 )}
               </div>
               
               <h4 className='heading'> Filled </h4>
               <div style={iconGallery}>
                 {iconsFilled.map((img) => 
-                  <Image src={img} style={this.props.screenWidth > 768 ? imageIcon : imageIconMobile}/>
+                  <Image src={img} key={img} style={this.props.screenWidth > 768 ? imageIcon : imageIconMobile}/>
                 )}
               </div>
               
@@ -319,7 +319,7 @@ class ACE extends React.Component {
               <p> Here are icons that didn't make the cut, but I'd like to show them off. </p>
               <div style={iconGallery}>
                 {iconsUnused.map((img) => 
-                  <Image src={img} style={this.props.screenWidth > 768 ? imageIcon : imageIconMobile}/>
+                  <Image src={img} key={img} style={this.props.screenWidth > 768 ? imageIcon : imageIconMobile}/>
                 )}
               </div>
             </div>           
