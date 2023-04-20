@@ -162,10 +162,10 @@ class Experience extends React.Component {
             info={[
               'Conducted user interviews and surveys to gather data to drive my initial designs for new features and updates.',
               'Led prototyping sessions with our developers to respond to their questions and ensured they understood the functionality of new features and visual animations.',
-              'Guided monthly UX-focused feature backlog prioritizations to strike a balance between company goals and user needs.',
-              'Collaborated with company founders to create pitch decks for prospective stakeholders and seed fundraising.',
-              'Built a style guide and flexible component library in our Figma Team for brand consistency and design cohesion throughout different screens and features.',
-              'Designed 5 new & major features, 3 of which are currently live on the app, accounting for 50% of the app’s screens. (Onboarding, Events, Profiles)'
+              'Guided monthly UX-focused feature backlog prioritizations to strike a balance between company goals and user needs (which increased user satisfaction whenever a requested feature was implemented).',
+              'Collaborated with company founders to create pitch decks for prospective stakeholders and seed fundraising. I contributed user data (such as DAU) as info and ensured a consistent design style throughout each slide.',
+              'Built a style guide and flexible component library in our Figma Team for brand consistency and design cohesion throughout different screens and features, which greatly increased the design team\'s work efficiency.',
+              'Designed 5 new & major features, 3 of which are currently live on the app, accounting for 50% of the app’s screens (Onboarding, Events, Profiles). Ultimately increased user engagement with our app.'
             ]}
           />
           <JobListing 
@@ -178,7 +178,8 @@ class Experience extends React.Component {
             info={[
               'Updated existing app screens with designs more aligned with modern trends and styles.',
               'Worked directly with the CEO to draft wireframes of future features to meet the needs and expectations of our users.',
-              'Transformed static mockup screens into interactive prototypes to better help the developers visualize app features and functionality.'
+              'Transformed static mockup screens into interactive prototypes to better help the developers visualize app features and functionality.',
+              'Identified a key issue with our onboarding flow which deterred users from signing up and designed a fix that increased user acquisition.'
             ]}
           />
           <JobListing 
@@ -191,7 +192,7 @@ class Experience extends React.Component {
             info={[
               'Spearheaded the company\'s blog website development by designing its initial wireframes, mockups, and final prototype.',
               'Organized design critique sessions with project managers and software developers to showcase usability flows and features.',
-              'Ensured the web & mobile responsiveness of the blog site by utilizing Tailwind CSS.'
+              'Ensured the web & mobile responsiveness and stylings of the blog site by utilizing Tailwind CSS.'
             ]}
           />
           <JobListing 
@@ -201,9 +202,10 @@ class Experience extends React.Component {
             link='https://extension.ucsd.edu/courses-and-programs?gclid=CjwKCAjwq7aGBhADEiwA6uGZp8glMnCeS0HOaSlp0KuQzu7T42I22yywjRB6MzFP-S1DLl8k889VIBoCNugQAvD_BwE'
             period='September 2017 - March 2020'
             info={[
-              'Solved technical issues that instructors struggled with e.g. projector connectivity, audio, internet.',
-              'Improved the team’s workflow efficiency by actively reorganizing computer components based on their frequency of usage.',
-              'Upgraded computer hardware/software e.g. RAM, memory, hard drive images.'
+              'Solved technical issues that instructors struggled with e.g. projector, audio, internet connectivity which were pivotal to their class session.',
+              'Improved the team\'s workflow efficiency by actively reorganizing computer components based on their frequency of usage.',
+              'Upgraded computer hardware/software e.g. RAM, memory, hard drive images.',
+              'Updated the software of our campus administrative workers\'s PC desktops and iMacs e.g. Adobe Suite, Microsoft Office, web browsers, Adobe Flash, Java.'
             ]}
           />
           <JobListing 
@@ -213,7 +215,7 @@ class Experience extends React.Component {
             link='https://www.ustrading.com/en/'
             period='June 2017 - August 2017'
             info={[
-              'Photographed new products.',
+              'Photographed new products in a controlled studio space and learned how to balance f-stop, aperture, and shutter speed. Also managed a three-point lighting set up.',
               'Edited product photos in Adobe Lightroom and Photoshop for pre-uploading.',
               'Used Adobe InDesign to update the existing website catalog with new photos.'
             ]}
