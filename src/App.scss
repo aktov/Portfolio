@@ -1432,6 +1432,39 @@ div.content {
             
                 color: $baseTextColor;
             }
+
+            // div.cardsDesktop {
+            //     display: flex;
+            //     flex-flow: row wrap;
+            //     justify-content: space-between;
+            //     column-gap: toRem(64);
+            //     row-gap: toRem(64);
+
+            //     div.cardDesktop {
+            //         margin: 0;
+            //         width: 45%;
+            //         min-width: toRem(256);
+            //         height: toRem(256);
+                    
+            //         display: flex;
+            //         flex-flow: column;
+            //         overflow: hidden;
+
+            //         border-radius: toRem(16);
+            //         border: none;
+            //         background-color: #ffffff;
+            //         -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
+            //         -moz-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
+            //         -ms-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
+            //         -o-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
+            //         filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
+            //         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+
+            //         div.imageHolder {
+            //             margin: 0;
+            //         }
+            //     }
+            // }
         }
 
         div.buttons {
@@ -1888,6 +1921,7 @@ div.background {
 .title {
     position: relative;
     width: 100%;
+    margin-bottom: 1.5rem;
 
     h3.outline {
         color: rgba(255, 255, 255, 0);
