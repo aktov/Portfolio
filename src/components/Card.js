@@ -8,11 +8,6 @@ import github from '../images/GitHub-Mark-120px-plus.png';
 import figma from '../images/figmaLogo.svg';
 import figmaM from '../images/figmaM.svg';
 import figmaD from '../images/figmaD.svg';
-import { set } from 'lodash';
-// import figmaA from '../images/figmaA.svg';
-// import figmaB from '../images/figmaB.svg';
-// import figma1 from '../images/figma1.svg';
-// import figma2 from '../images/figma2.svg';
 
 const Tags = (props) => {
   return (
@@ -129,7 +124,7 @@ function Info(props) {
       ref={ref} 
     >
       <div className='topRow'>
-        <h4 className='cardTitle'> {props.props.title.toUpperCase()} </h4>
+        <h4 className='cardTitle'> {props.props.title} </h4>
         {props.mouseEntered && <Buttons props={props.props}/>}
       </div>
       
@@ -231,7 +226,7 @@ function Card(props) {
           </div>
         
           <div className='text'>
-            <h4 className='cardTitle'> {props.title.toUpperCase()} </h4>
+            <h4 className='cardTitle'> {props.title} </h4>
             <p> {props.desc} </p>
         
             {props.tags && <Tags names={props.tags} color={props.color2 || props.color} />}

@@ -86,7 +86,7 @@ class About extends React.Component {
                 className='text' 
                 style={this.props.screenWidth > 640 ? {marginLeft: '7rem', marginBottom: '70vh'} : {width: '100%'}}
               >
-                <Title title='about' screenWidth={this.props.screenWidth} />
+                <Title title='About' screenWidth={this.props.screenWidth} />
                 <p
                   data-aos='fade' 
                   data-aos-offset='50' 

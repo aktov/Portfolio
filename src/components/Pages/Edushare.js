@@ -159,7 +159,7 @@ class Edushare extends React.Component {
               data-aos-delay='200'
               data-aos-once={true}
             > 
-              {'Edushare'.toUpperCase()} 
+              {'Edushare'} 
             </h3>
 
             <div className='intro'>
@@ -207,7 +207,7 @@ class Edushare extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='intro'/> 
+              <SectionTitle title='Intro'/> 
               <h4 className='heading'> Motivation </h4>
               <p> 
                 The designs you see below are the result of me finishing a short design challenge where I was tasked with creating screens for a sign up flow for teachers.
@@ -216,7 +216,7 @@ class Edushare extends React.Component {
             </div>          
                       
             <div className='section'>
-              <SectionTitle title='sketches'/> 
+              <SectionTitle title='Sketches'/> 
               <p> 
                 My initial rough sketch about the screens I had in mind, based off your typical sign up elements and flow.
               </p>
@@ -224,14 +224,14 @@ class Edushare extends React.Component {
             </div>      
 
             <div className='section'>
-              <SectionTitle title='wireframing'/> 
+              <SectionTitle title='Wireframing'/> 
               <Image src={pic2} style={imageMarginNoTop}/>
               <h4 className='heading'> Initial Typography & Colors </h4>
               <Image src={pic3} style={imageMarginNoTop} />
             </div>  
 
             <div className='section'>
-              <SectionTitle title='mockups'/> 
+              <SectionTitle title='Mockups'/> 
               <h4 className='heading'> Mobile </h4>
               <Image src={pic4} style={imageMarginLessBottom}/>
               <Image src={pic5} style={imageMarginNoTop}/>
@@ -265,7 +265,7 @@ class Edushare extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='lessons learned'/> 
+              <SectionTitle title='Lessons Learned'/> 
               <p>
                 My main takeaway from this design challenge was practice with task prioritization. <br/>
                 It was due to the time limit I imposed on myself that forced me to rethink the way I usually start off my design projects or tasks.

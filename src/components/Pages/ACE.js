@@ -183,7 +183,7 @@ class ACE extends React.Component {
               data-aos-delay='200'
               data-aos-once={true}
             > 
-              {'Artist Crowdfund Exchange (ACE)'.toUpperCase()} 
+              {'Artist Crowdfund Exchange (ACE)'} 
             </h3>
 
             <div className='intro'>

@@ -162,7 +162,7 @@ class Alike extends React.Component {
               data-aos-delay='200'
               data-aos-once={true}
             > 
-              {'Alike'.toUpperCase()} 
+              {'Alike'} 
             </h3>
 
             <div className='intro'>
@@ -213,7 +213,7 @@ class Alike extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='background'/> 
+              <SectionTitle title='Background'/> 
               <h4 className='heading'> What's Alike? </h4>
               <p> 
                 Alike is a <i>video</i> dating app that celebrates the asian experience! Emphasis on video. <br/>
@@ -254,7 +254,7 @@ class Alike extends React.Component {
             </div>           
 
             <div className='section'>
-              <SectionTitle title='components'/> 
+              <SectionTitle title='Components'/> 
               <h4 className='heading'> Nav Bar & Headers </h4>
               <p>
                 Prior to my onboarding, the nav bars and headers on our screens weren't components, which I thought was a major oversight. 
@@ -276,7 +276,7 @@ class Alike extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='updated screens'/> 
+              <SectionTitle title='Updated Screens'/> 
               <p>
                 Here are just a few of the screens that I've updated so far:
               </p>
@@ -297,7 +297,7 @@ class Alike extends React.Component {
             </div>
             
             <div className='section'>
-              <SectionTitle title='highlights'/> 
+              <SectionTitle title='Highlights'/> 
               <p>
                 I can't unveil too much yet since this feature is in the works but here's a sneak peak at some screens!
               </p>
@@ -305,7 +305,7 @@ class Alike extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='thoughts'/> 
+              <SectionTitle title='Thoughts'/> 
               <p>
                 So far it's been a great learning and growing experience at Alike. I've learned a lot from my lead UI/UX Designer teammate and also from Hanmin as well!
                 It's amazing to have my ideas heard and so well implemented in the app and that feeling of seeing my designs come to life can't be beat. 

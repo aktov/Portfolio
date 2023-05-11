@@ -197,7 +197,7 @@ class Flowers extends React.Component {
               data-aos-delay='200'
               data-aos-once={true}
             > 
-              {'Flowers'.toUpperCase()} 
+              {'Flowers'} 
             </h3>
 
             <div className='intro'>
@@ -245,7 +245,7 @@ class Flowers extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='intro'/> 
+              <SectionTitle title='Intro'/> 
               <p> 
                 Here's a perfect replica mockup I created of the original image presented to me. <br/>
                 It's definitely outdated in terms of style, however I'll admit that it is still very much functional.
@@ -363,7 +363,7 @@ class Flowers extends React.Component {
             </div> */}
 
             <div className='section'>
-              <SectionTitle title='Looking towards the future'/> 
+              <SectionTitle title='Looking Towards the Future'/> 
               <p>
                 Even though this was more of a simple redesign as opposed to a UX research project, it was still a great learning experience into Figma's components, variants, and layout grids.
               </p>

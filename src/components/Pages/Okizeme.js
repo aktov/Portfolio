@@ -1,6 +1,8 @@
 import React from 'react';
 import LazyLoad from 'react-lazyload';
 
+import Cards from '../Cards.js';
+
 import Header from '../Header.js';
 import Footer from '../Footer.js';
 import NavMenu from '../NavMenu.js';
@@ -173,7 +175,7 @@ class Okizeme extends React.Component {
               data-aos-delay='200'
               data-aos-once={true}
             > 
-              {'Okizeme'.toUpperCase()} 
+              {'Okizeme'} 
             </h3>
 
             <div className='intro'>
@@ -237,7 +239,7 @@ class Okizeme extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='intro'/> 
+              <SectionTitle title='Intro'/> 
               <p> 
                 Okizeme Gaming recently revised their branding and mission, and reached out to me for a website redesign that would reflect the new changes.
               </p>
@@ -248,7 +250,7 @@ class Okizeme extends React.Component {
             </div>     
 
             <div className='section'>
-              <SectionTitle title='goals'/> 
+              <SectionTitle title='Goals'/> 
               <Bullets info={descr}/> 
 
               {/* <h4 className='heading'> 1. IMPROVE THE VISUALS </h4>
@@ -263,7 +265,7 @@ class Okizeme extends React.Component {
             </div>          
 
             <div className='section'>
-              <SectionTitle title='inspiration'/> 
+              <SectionTitle title='Inspiration'/> 
               <p> 
                 The websites and graphics below depict various themes and visuals that we wanted to encapsulate within the site.
                 <br/>
@@ -330,7 +332,7 @@ class Okizeme extends React.Component {
             </div>  
 
             <div className='section'>
-              <SectionTitle title='initial ideation'/> 
+              <SectionTitle title='Initial Ideation'/> 
               <h4 className='heading'> Logo Designs </h4>
               <Image src={this.props.screenWidth > 768 ? picLogosD : picLogosM} style={imageMarginNoTop}/>
               
@@ -339,7 +341,7 @@ class Okizeme extends React.Component {
             </div>  
 
             <div className='section'>
-              <SectionTitle title='prototypes'/> 
+              <SectionTitle title='Prototypes'/> 
               <h4 className='heading'> Mobile </h4>
               {this.props.screenWidth > 768 ? 
                 <>
@@ -367,7 +369,7 @@ class Okizeme extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='lessons learned'/> 
+              <SectionTitle title='Lessons Learned'/> 
               <p>
                 From this collaboration with Okizeme, I developed better skills for the UI portion of UI/UX Design. 
                 I've always been confident in claiming that UI Design is different from graphics/marketing design, and although it is canonically, I would be lying if I said
@@ -384,6 +386,11 @@ class Okizeme extends React.Component {
                 In the same way that a Dyson or Apple advertisement screams their name, despite their minimalistic style, a company — or at least their brand — should be recognizeable from their sites or apps.
               </p>
             </div>
+
+            {/* <div className='section'>
+              <SectionTitle title='Check out my other work!'/> 
+              <Cards group={'casestudies'} screenWidth={this.props.screenWidth} />  
+            </div> */}
 
           </div>
         </div>

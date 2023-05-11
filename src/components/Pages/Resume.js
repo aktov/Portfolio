@@ -15,7 +15,7 @@ class Resume extends React.Component {
 
         
         <div className='container' style={this.props.screenWidth > 640 ? null : {width: '75%'}}>
-          <Title title='resume' screenWidth={this.props.screenWidth} />
+          <Title title='Resume' screenWidth={this.props.screenWidth} />
           {/* <div className='section'>
             <h3> SUMMARY </h3>
             <p>
@@ -26,18 +26,18 @@ class Resume extends React.Component {
             </p>
           </div> */}
           <div className='section'>
-            <h3> EDUCATION </h3>
+            <h3> Education </h3>
             <h4>
               B.S. Human Computer Interaction
             </h4>
             <p style={lessMargins}> University of California, San Diego (2020)</p>
           </div>
           <div className='section'>
-            <h3> EXPERIENCE </h3>
+            <h3> Experience </h3>
             <Experience screenWidth={this.props.screenWidth}/>
           </div>
           <div className='section'>
-            <h3> SKILLS & TOOLS </h3>
+            <h3> Skills & Tools </h3>
             <Skills screenWidth={this.props.screenWidth}/>
           </div>
         </div>

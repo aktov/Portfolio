@@ -179,7 +179,7 @@ class Hon extends React.Component {
               data-aos-delay='200'
               data-aos-once={true}
             > 
-              {'Hon-Media Blogsite Design'.toUpperCase()} 
+              {'Hon-Media'} 
             </h3>
 
             <div className='intro'>
@@ -237,7 +237,7 @@ class Hon extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='intro'/> 
+              <SectionTitle title='Intro'/> 
               <h4 className='heading'> Motivation </h4>
               <p> 
                 Hon-Media ultimately wants to aid San Diego companies in need during this pandemic, and to 
@@ -251,7 +251,7 @@ class Hon extends React.Component {
             </div>          
                       
             <div className='section'>
-              <SectionTitle title='need finding'/> 
+              <SectionTitle title='Need Finding'/> 
               <h4 className='heading'> User Needs </h4>
               <p> 
                 Based on how Hon-Media described their blog, it's clear to me that there are two main user groups
@@ -278,7 +278,7 @@ class Hon extends React.Component {
             </div>      
 
             <div className='section'>
-              <SectionTitle title='wireframing'/> 
+              <SectionTitle title='Wireframing'/> 
               <h4 className='heading'> Site Architecture </h4>
               <p> 
                 Based on the user needs described above, it seems like the site should have four main features,
@@ -316,7 +316,7 @@ class Hon extends React.Component {
             </div>  
 
             <div className='section'>
-              <SectionTitle title='prototyping'/> 
+              <SectionTitle title='Prototyping'/> 
               <p>
                 With the wireframes finished and feedback received from Hon-Media, I worked on fleshing out the
                 designs and features. 
@@ -442,7 +442,7 @@ class Hon extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='final thoughts'/> 
+              <SectionTitle title='Final Thoughts'/> 
               <p>
                 I've got to say, I was a bit intimidated by this project at the start. It was my first time
                 having the freedom to design as I pleased. In all the past projects I've done, I have had at least

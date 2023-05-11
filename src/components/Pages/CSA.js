@@ -238,7 +238,7 @@ class CSA extends React.Component {
           />
           <div className='pages' style={decideMarginWidth(this.props.screenWidth)}>
             <Tags names={tags} color={color}/>
-            <h3 className='title'> {'CSA Website Design'.toUpperCase()} </h3>
+            <h3 className='title'> {'CSA Website Design'} </h3>
 
             <div className='intro'>
               <div className='col' style={this.props.screenWidth > 768 ? null : {width: '100%'} }> 
@@ -280,7 +280,7 @@ class CSA extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='intro'/> 
+              <SectionTitle title='Intro'/> 
               <h4 className='heading'> Motivation </h4>
               <p> 
                 Our task was to find ourselves a client in need of a new website and design them a functional website prototype
@@ -292,7 +292,7 @@ class CSA extends React.Component {
             </div>          
                       
             <div className='section'>
-              <SectionTitle title='client interviews'/> 
+              <SectionTitle title='Client Interviews'/> 
               <h4 className='heading'> Getting To Know Our Client </h4>
               <p> 
                 Cambodian Student Association (CSA) was our client. 
@@ -362,7 +362,7 @@ class CSA extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='users & need finding'/> 
+              <SectionTitle title='Users & Need Finding'/> 
               <h4 className='heading'> User Interviews </h4>
               <p>
                 Our best approach at finding users to interview was to message Janica and Keith and ask them about potential 
@@ -425,7 +425,7 @@ class CSA extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='competitive analysis'/> 
+              <SectionTitle title='Competitive Analysis'/> 
               <p>
                 To further generate more ideas on our design for our client’s website, we decided to analyze the 
                 websites of five competitor sites. Our competitors are the sites of other college organizations.
@@ -466,7 +466,7 @@ class CSA extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='mood boards'/> 
+              <SectionTitle title='Mood Boards'/> 
               {/* <p>
                 This website will have a minimalist appearance that is at the same time attention-grabbing. Because 
                 our client is a cultural organization that focuses on social aspects, we also want to portray a tone
@@ -487,7 +487,7 @@ class CSA extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='wireframing'/> 
+              <SectionTitle title='Wireframing'/> 
               <h4 className='heading'> Site Architecture </h4>
               <p>
                 From what we observed from our competitive analysis, we saw that other college org sites more or less 
@@ -599,7 +599,7 @@ class CSA extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='prototyping'/>
+              <SectionTitle title='Prototyping'/>
               <h4 className='heading'> First Iteration </h4>
               <p>
                 With content finally received from our client, we were able to add images, content, and color
@@ -702,7 +702,7 @@ class CSA extends React.Component {
             </div> 
 
             <div className='section'>
-              <SectionTitle title='lessons learned'/> 
+              <SectionTitle title='Lessons Learned'/> 
               <p>
                 For our first time working with actual clients outside the classroom, this was an amazing learning
                 experience. As excited as we were to jump right into designing, we realized how important communication

@@ -185,7 +185,7 @@ class Boba extends React.Component {
               data-aos-delay='200'
               data-aos-once={true}
             > 
-              {'Boba Tracker'.toUpperCase()} 
+              {'Boba Tracker'} 
             </h3>
 
             <div className='intro'>
@@ -234,7 +234,7 @@ class Boba extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='intro'/> 
+              <SectionTitle title='Intro'/> 
               <h4 className='heading'> Motivation </h4>
               <p> 
                   I was inspired to create this when I found out my friend bought one boba tea drink most days of the week, which definitely adds up over the month. 
@@ -243,7 +243,7 @@ class Boba extends React.Component {
             </div>          
                       
             <div className='section'>
-              <SectionTitle title='user research & data'/> 
+              <SectionTitle title='User Research & Data'/> 
               <h4 className='heading'> Survey Data </h4>
               <p> 
                 Here are snippets of some of the questions and respective answers from the initial survey I sent out:
@@ -290,7 +290,7 @@ class Boba extends React.Component {
             </div>      
 
             <div className='section'>
-              <SectionTitle title='wireframes'/> 
+              <SectionTitle title='Wireframes'/> 
               {this.props.screenWidth > 768 ? 
                 <>
                   <Image src={pic10} style={smallerImageLess}/>
@@ -305,7 +305,7 @@ class Boba extends React.Component {
             </div>  
 
             <div className='section'>
-              <SectionTitle title='mockups'/> 
+              <SectionTitle title='Mockups'/> 
               {this.props.screenWidth > 768 ? 
                 <>
                   <Image src={pic6} style={smallerImageLess}/>
@@ -320,7 +320,7 @@ class Boba extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='user testing & results'/> 
+              <SectionTitle title='Usability Testing & Results'/> 
               <h4 className='heading'> User Tasks </h4>
               <p>
                 Here are the tasks I had in mind for users to accomplish:
@@ -388,7 +388,7 @@ class Boba extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='FINAL THOUGHTS'/> 
+              <SectionTitle title='Final Thoughts'/> 
               <p>
                 This was an extremely fun personal project I took on earlier this year! It was great interacting with people who filled out my survey and learning more about
                 their boba spending habits. There were definitely some interesting finds I had too! For example most people were willing to spend over $7 on one cup of boba tea.
