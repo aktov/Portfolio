@@ -16,7 +16,7 @@ class Resume extends React.Component {
         
         <div className='container' style={this.props.screenWidth > 640 ? null : {width: '75%'}}>
           <Title title='resume' screenWidth={this.props.screenWidth} />
-          <div className='section'>
+          {/* <div className='section'>
             <h3> SUMMARY </h3>
             <p>
               Detail-oriented UI/UX Designer with over 3 years of project and work experience and a passion for user-centered design. 
@@ -24,22 +24,20 @@ class Resume extends React.Component {
             <p>
               Currently seeking opportunities to design innovative solutions that will improve user satisfaction and experiences!
             </p>
-          </div>
+          </div> */}
           <div className='section'>
             <h3> EDUCATION </h3>
             <h4>
-              B.S. Cognitive Science, <br/>
-              Human Computer Interaction
+              B.S. Human Computer Interaction
             </h4>
-            <p style={lessMargins}> University of California San Diego </p>
-            <p style={lessMargins}> March 2020 </p>
+            <p style={lessMargins}> University of California, San Diego (2020)</p>
           </div>
           <div className='section'>
             <h3> EXPERIENCE </h3>
             <Experience screenWidth={this.props.screenWidth}/>
           </div>
           <div className='section'>
-            <h3> SKILLS </h3>
+            <h3> SKILLS & TOOLS </h3>
             <Skills screenWidth={this.props.screenWidth}/>
           </div>
         </div>

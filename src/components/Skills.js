@@ -3,38 +3,41 @@ import React from 'react';
 import Phrase from './Phrase.js';
 
 const skillsList = {
-  'Programming': [
-    'HTML/CSS',
-    'JavaScript',
-    'Lua'
+  'Research': [
+    'Design Thinking',
+    'User Research',
+    'Need Finding',
+    'Storyboarding',
+    'Competitive Analysis',
+    'Usability Testing',
   ],
-  'Frameworks': [
-    'Experience w React.js',
-    'Tailwind CSS',
-    'Sass',
-    'MJML'
-  ],
-  'UI Methods': [
+
+  'Design': [
+    'Design Systems',
+    'Information Architecture',
     'Wireframing',
     'Mockups',
     'Prototyping'
   ],
-  'UX Methods': [
-    'User Testing',
-    'Personas',
-    'Storyboards',
-    'Competitive Analyses',
-    'Affinity Diagrams',
-    'Mood Boards'
+  
+  'Programming & Frameworks': [
+    'HTML/CSS',
+    'JavaScript',
+    'Lua',
+    'React.js',
+    'Tailwind CSS',
+    'Sass',
+    'MJML'
   ],
-  'Applications & Software': [
+
+  'Applications': [
     'Figma',
     'Maze.co',
     'Typeform',
     'Squarespace',
-    'Adobe Lightroom',
     'Google Suite',
     'Microsoft Office',
+    'GitHub',
   ]
 }
 

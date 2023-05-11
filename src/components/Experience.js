@@ -57,7 +57,7 @@ const JobListing = (props) => {
             </div> */}
             <h4> {props.title} </h4>
             {/* <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {'@' + props.location} <img src={open}/></a> </h5> */}
-            <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {'@' + props.location} </a> </h5>
+            <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {props.location} </a> </h5>
             <h5> {props.period} </h5> 
             <div className='phrases'>
               {props.info.map((phrase, index) => 
@@ -68,7 +68,7 @@ const JobListing = (props) => {
           :
           <>
             <h4> {props.title} </h4>
-            <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {'@' + props.location} </a> </h5>
+            <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {props.location} </a> </h5>
             <h5> {props.period} </h5> 
             <div className='phrases'>
               {props.info.map((phrase, index) => 
@@ -114,7 +114,7 @@ const JobListing = (props) => {
               />
             </div>
             <h4> {props.title} </h4>
-            <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {'@' + props.location} </a> </h5>
+            <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {props.location} </a> </h5>
             <h5> {props.period} </h5> 
             <div className='phrases'>
               {props.info.map((phrase, index) => 
@@ -125,7 +125,7 @@ const JobListing = (props) => {
           :
           <>
             <h4> {props.title} </h4>
-            <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {'@' + props.location} </a> </h5>
+            <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {props.location} </a> </h5>
             <h5> {props.period} </h5> 
             <div className='phrases'>
               {props.info.map((phrase, index) => 
@@ -160,12 +160,11 @@ class Experience extends React.Component {
             period='August 2021 - October 2022'
             // highlight={true}
             info={[
-              'Conducted user interviews and surveys to gather data to drive my initial designs for new features and updates.',
-              'Led prototyping sessions with our developers to respond to their questions and ensured they understood the functionality of new features and visual animations.',
-              'Guided monthly UX-focused feature backlog prioritizations to strike a balance between company goals and user needs (which increased user satisfaction whenever a requested feature was implemented).',
-              'Collaborated with company founders to create pitch decks for prospective stakeholders and seed fundraising. I contributed user data (such as DAU) as info and ensured a consistent design style throughout each slide.',
-              'Built a style guide and flexible component library in our Figma Team for brand consistency and design cohesion throughout different screens and features, which greatly increased the design team\'s work efficiency.',
-              'Designed 5 new & major features, 3 of which are currently live on the app, accounting for 50% of the app’s screens (Onboarding, Events, Profiles). Ultimately increased user engagement with our app.'
+              'Collaborated with company founders to create pitch decks for prospective stakeholders and seed fundraising. ',
+              'Reduced the shipment time of our features by leading design prototyping sessions with our developers to ensure they understood the functionality of new features and visual animations prior and during their building. ',
+              'Guided monthly UX-focused feature backlog prioritizations to strike a balance between company goals and user needs. User needs were identified and gathered from conducted interviews and surveys. ',
+              'Built and operated a style guide and flexible component library in our Figma Team for brand consistency and design cohesion throughout different screens and features, which increased our design-work efficiency.',
+              'Designed 5 new & major features, 3 of which are currently live on the app, accounting for 50% of the app\'s screens (Onboarding, Events, Profiles). Just Profiles feature alone boosted our DAU by 20% over its first week by presenting users with better options for personalizing and expressing their profiles.'
             ]}
           />
           <JobListing 
@@ -176,10 +175,9 @@ class Experience extends React.Component {
             period='March 2021 - August 2021'
             // highlight={true}
             info={[
-              'Updated existing app screens with designs more aligned with modern trends and styles.',
               'Worked directly with the CEO to draft wireframes of future features to meet the needs and expectations of our users.',
-              'Transformed static mockup screens into interactive prototypes to better help the developers visualize app features and functionality.',
-              'Identified a key issue with our onboarding flow which deterred users from signing up and designed a fix that increased user acquisition.'
+              'Updated existing app screens with designs more aligned with modern trends and styles. Transformed static mockup screens into interactive prototypes to better help the developers visualize app features and functionality. ',
+              'Increased user conversion rate from 20% to 65% by identifying a key issue with our onboarding flow which deterred users from signing up and designing a fix.'
             ]}
           />
           <JobListing 
@@ -190,9 +188,9 @@ class Experience extends React.Component {
             period='September 2020 - July 2021'
             // highlight={true}
             info={[
-              'Spearheaded the company\'s blog website development by designing its initial wireframes, mockups, and final prototype.',
-              'Organized design critique sessions with project managers and software developers to showcase usability flows and features.',
-              'Ensured the web & mobile responsiveness and stylings of the blog site by utilizing Tailwind CSS.'
+              'Spearheaded the company\'s blog website development by implementing the following iterative design process: Research > Wireframes > Testing & Feedback > Prototype > Testing > Build > QA. ',
+              'Organized and guided design critique sessions with project managers and software developers to showcase usability flows and features.',
+              'Ensured the web & mobile responsiveness and styling of the blog site by utilizing Tailwind CSS to edit properties of our React components in our front-end code.'
             ]}
           />
           <JobListing 
