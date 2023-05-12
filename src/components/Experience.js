@@ -164,7 +164,7 @@ class Experience extends React.Component {
               'Reduced the shipment time of our features by leading design prototyping sessions with our developers to ensure they understood the functionality of new features and visual animations prior and during their building. ',
               'Guided monthly UX-focused feature backlog prioritizations to strike a balance between company goals and user needs. User needs were identified and gathered from conducted interviews and surveys. ',
               'Built and operated a style guide and flexible component library in our Figma Team for brand consistency and design cohesion throughout different screens and features, which increased our design-work efficiency.',
-              'Designed 5 new & major features, 3 of which are currently live on the app, accounting for 50% of the app\'s screens (Onboarding, Events, Profiles). Just Profiles feature alone boosted our DAU by 20% over its first week by presenting users with better options for personalizing and expressing their profiles.'
+              'Designed 5 new & major features, 3 of which are currently live on the app, accounting for 50% of the app\'s screens (Onboarding, Events, Profiles). Just Profiles feature alone boosted our DAU by 12% over its first week by presenting users with better options for personalizing and expressing their profiles.'
             ]}
           />
           <JobListing 
@@ -176,7 +176,7 @@ class Experience extends React.Component {
             // highlight={true}
             info={[
               'Worked directly with the CEO to draft wireframes of future features to meet the needs and expectations of our users.',
-              'Updated existing app screens with designs more aligned with modern trends and styles. Transformed static mockup screens into interactive prototypes to better help the developers visualize app features and functionality. ',
+              'Updated existing app screens with more accessible designs. Transformed static mockup screens into interactive prototypes to better help the developers visualize app features and functionality. ',
               'Increased user conversion rate from 20% to 65% by identifying a key issue with our onboarding flow which deterred users from signing up and designing a fix.'
             ]}
           />
