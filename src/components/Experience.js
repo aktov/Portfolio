@@ -163,7 +163,7 @@ class Experience extends React.Component {
               'Collaborated with company founders to create pitch decks for prospective stakeholders and seed fundraising. ',
               'Reduced the shipment time of our features by leading design prototyping sessions with our developers to ensure they understood the functionality of new features and visual animations prior and during their building. ',
               'Guided monthly UX-focused feature backlog prioritizations to strike a balance between company goals and user needs. User needs were identified and gathered from conducted interviews and surveys. ',
-              'Built and operated a style guide and flexible component library in our Figma Team for brand consistency and design cohesion throughout different screens and features, which increased our design-work efficiency.',
+              'Built our design system in Figma for brand consistency and design cohesion throughout different screens and features, which increased our design-work efficiency.',
               'Designed 5 new & major features, 3 of which are currently live on the app, accounting for 50% of the app\'s screens (Onboarding, Events, Profiles). Just Profiles feature alone boosted our DAU by 12% over its first week by presenting users with better options for personalizing and expressing their profiles.'
             ]}
           />
