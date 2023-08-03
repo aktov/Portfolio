@@ -83,7 +83,7 @@ const Tags = (props) => {
   );
 }
 
-const tags = ['prototyping'];
+const tags = ['prototyping', 'branding', 'gaming'];
 
 const descr = [
   'Improve the visuals. Enhance the visuals by incorporating the branding and genre into the site better.',
@@ -189,9 +189,9 @@ class Okizeme extends React.Component {
                 data-aos-delay='400'
                 data-aos-once={true}
               > 
-                {/* <h4 className='heading'> ROLE </h4>
-                <h4> UI/UX Designer </h4>              
-                <br/> */}
+                <h4 className='heading'> Role </h4>
+                <h4> UX Designer </h4>              
+                <br/>
                 <h4 className='heading'> Links </h4>
                 <div className='buttons'>
                   <a 

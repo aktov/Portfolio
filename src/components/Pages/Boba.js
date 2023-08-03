@@ -68,7 +68,7 @@ const Tags = (props) => {
   );
 }
 
-const tags = ['wireframing', 'mockups', 'user testing'];
+const tags = ['selfcare', 'finance'];
 
 const features = [
   'Calendar for users to easily see which days they bought boba',

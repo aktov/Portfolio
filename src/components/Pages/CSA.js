@@ -113,7 +113,7 @@ const Tags = (props) => {
   );
 }
 
-const tags = ['wireframing', 'prototyping', 'user testing'];
+const tags = ['ux design', 'collaboration', 'culture', 'student org'];
 
 const goals = [
   'Learn how to build a strong, communicative relationship with our client, as well as how to be flexible during times where they are unresponsive',
@@ -243,7 +243,7 @@ class CSA extends React.Component {
             <div className='intro'>
               <div className='col' style={this.props.screenWidth > 768 ? null : {width: '100%'} }> 
                 <h4 className='heading'> Role </h4>
-                <p> UI/UX Designer </p>
+                <p> UX Designer </p>
                 <br/>
                 <h4 className='heading'> Figma Links </h4>
                 <div className='buttons'>

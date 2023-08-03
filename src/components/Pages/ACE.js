@@ -5,6 +5,7 @@ import Header from '../Header.js';
 import Footer from '../Footer.js';
 import NavMenu from '../NavMenu.js';
 import Contact from '../Contact.js';
+import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
 
@@ -48,6 +49,16 @@ const iconsOutlined = importImages(require.context('../../images/Pages/ace/icons
 const iconsFilled = importImages(require.context('../../images/Pages/ace/iconsFilled', false, /\.(png|jpe?g|svg)$/));
 const iconsUnused = importImages(require.context('../../images/Pages/ace/iconsUnused', false, /\.(png|jpe?g|svg)$/));
 
+const Bullets = (props) => {
+  return (
+  <div className='phrases'>
+    {props.info.map((phrase, index) => 
+      <Phrase key={'alike/' + index} text={phrase}/>
+    )}
+  </div>
+  );
+};
+
 const Image = (props) => {
   return (
     <div className='imageHolder' style={props.style || null}>
@@ -80,7 +91,12 @@ const Tags = (props) => {
   );
 }
 
-const tags = ['ux research', 'wireframing', 'mockups', 'prototyping', 'user testing']
+const tags = ['ux design', 'web3', 'blockchain', 'crowdfunding', 'social networking']
+
+const problemGoals = [
+  'Better clarity and instructions for our creators',
+  'Increased discoverability for their fans',
+];
 
 const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
@@ -183,7 +199,7 @@ class ACE extends React.Component {
               data-aos-delay='200'
               data-aos-once={true}
             > 
-              {'Artist Crowdfund Exchange (ACE)'} 
+              {'Artist Crowdfund Exchange'} 
             </h3>
 
             <div className='intro'>
@@ -198,7 +214,7 @@ class ACE extends React.Component {
                 data-aos-once={true}
               > 
                 <h4 className='heading'> Role </h4>
-                <p> UI/UX Designer </p>              
+                <p> UX Designer </p>              
                 <br/>
                 <h4 className='heading'> Links </h4>
                 <div className='buttons'>
@@ -229,20 +245,21 @@ class ACE extends React.Component {
                   The features shown below are currently live on the app.
                 </p> 
                 <br/>
-                <h4 className='heading'> Team </h4>
+                {/* <h4 className='heading'> Team </h4>
                 <p> We were a small startup, so I worked closely with our founders and engineers. Of the team, here are those I worked most with: </p>
                 <div className='teamColumns'>
                   <p> <b> Founders </b> <br/> Omi Iyamu [CTO] <br/> Darren [CEO] <br/> DJ [COO] </p>
                   <p> <b> Product </b> <br/> Erick Wahome [Product Manager] <br/> Jade French [Marketing Lead] <br/> Deepa Patil [UX Researcher] </p>
                 </div>
                 <p> <b> Front End Engineers </b> <br/> Jose Ambrosio <br/> Erik German <br/> Deep Bhavsar <br/> Jignesh Maheshwari <br/> Bharat Sindhav </p>
-                <br/>
+                <br/> */}
               </div>
             </div>
 
             <div className='section'>
-              <SectionTitle title='A Work in Progress'/> 
-              <p>
+              <SectionTitle title='Intro'/> 
+              <h4 className='heading'> What's Artist Crowdfund Exchange? </h4>
+              {/* <p>
                 I'm still working it out with Omi on which features of the app I can showcase and talk about, so I can't specifically talk about the features I worked on in detail just yet.
               </p>
               <p>
@@ -251,10 +268,107 @@ class ACE extends React.Component {
               </p>
               <p>
                 <b> Disclaimer: There's a lot of images on this page, so please be patient and give them some time to load! </b>
+              </p> */}
+              <p>
+                Artist Crowdfund Exchange (ACE) is a Web3 crowdfunding platform which allows creators to directly raise income from their followers to grow independently without the hassle of ad sponsorships or contracts.
               </p>
+              <br/> <br/> <br/>
+
+              <h4 className='heading'> The Team </h4>
+              <p>
+                We were a small startup, so I worked closely with our founders and engineers. Of the team, here are those I worked most with:
+              </p>
+              <br/>
+              <div className='grid'>
+                <div className='gridCell'>
+                  <h4 className='subheading'> Founders </h4>
+                  <p> Omi Iyamu, CTO <br/> Darren, CEO <br/> DJ, COO </p>
+                </div>
+                <div className='gridCell'>
+                  <h4 className='subheading'> Product </h4>
+                  <p> Erick Wahome, PM <br/> Jade French, Marketing Lead <br/> Deepa Patil, UX Researcher </p>
+                  <br/>
+                </div>
+                <div className='gridCell'>
+                  <h4 className='subheading'> Front-End Developers </h4>
+                  <p> Jose Ambrosio <br/> Erik German <br/> Deep Bhavsar <br/> Jignesh Maheshwari <br/> Bharat Sindhav </p>
+                </div>
+              </div>
+
             </div>
 
             <div className='section'>
+              <SectionTitle title='Users'/> 
+              <h4 className='heading'>
+                Our two key audiences we were designing for:
+              </h4>
+              <br/>
+              <div className='grid'>
+                <div className='gridCell'>
+                  <h4 className='subheading'> Creators </h4>
+                  <p>
+                    Users that would set up their Access Tokens and their token benefits.
+                  </p>
+                  <p>
+                    Typically came from other platforms and already have decent fame or following.
+                  </p>
+                  <p>
+                    We encouraged these users to tell their followers about ACE to bring them along.
+                  </p>
+                  <br/>
+                </div>
+                <div className='gridCell'>
+                  <h4 className='subheading'> Fans </h4>
+                  <p>
+                    Users who would buy creator tokens and gain access to exclusive content, typically from creators they're interested in.
+                  </p>
+                  <p>
+                    Most of these users would be brought into ACE by their creator.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className='section'>
+              <SectionTitle title='Problem'/> 
+              <p> 
+                Creators were eager to join the platform but were confused on how to activate their Access Tokens. 
+              </p>
+              <p>
+                Our Access Tokens feature needed:
+              </p>
+              <Bullets info={problemGoals}/> 
+              <br/> <br/> <br/>
+
+
+              <h4 className='heading'> Identifying the Details </h4>
+              <br/>
+              <h4 className='subheading'> Competitive Analysis </h4>
+              <p>
+                Research on our competition revealed that the onboarding processes for their apps could be done from anywhere, anytime, and more importantly, effortlessly.
+              </p>
+              <br/>
+
+              <h4 className='subheading'> Surveys </h4>
+              <p>
+                Conducted a usability survey with participants from two sources.
+              </p>
+              <br/> <br/> <br/>
+
+
+              <h4 className='heading'> Our Findings </h4>
+              <p>
+              Users were not comfortable recording a video at the time, or had a lack of time to record. 
+              </p>
+              <p>
+              Recording video required time, space, and composure to ensure it was profile-worthy. 
+              </p>
+              <p>
+              Users wanted to look their best at the time of onboarding, which was rare.
+              </p>
+            </div>
+
+            {/* <div className='section'>
               <SectionTitle title='Screens'/> 
               <h4 className='heading'> Feature Showcase </h4>
               <div className='imageGallery'>
@@ -291,13 +405,15 @@ class ACE extends React.Component {
                 <Image src={pic27} style={imageMarginLessBottom}/>
                 <Image src={pic28} style={imageMarginNoTop}/>
               </div>
-            </div>
+            </div> */}
 
             <div className='section'>
               <SectionTitle title='Icons'/> 
               <p>
-                I designed over 90% of the icons that are used in the app. Here's a quick overview showing them all. <br/>
-                Within our Figma style library, they're categorized into two groups, either 'outlined' or 'filled'.
+                I designed over 90% of the icons that are used in the app. Here's a quick overview showing them all.
+              </p>
+              <p>
+                Within our design system, they're categorized into two groups, "outlined" and "filled".
               </p>
               <br/>
 
@@ -316,7 +432,7 @@ class ACE extends React.Component {
               </div>
               
               <h4 className='heading'> Unused </h4>
-              <p> Here are icons that didn't make the cut, but I'd like to show them off. </p>
+              <p> Here are icons that didn't make the cut, but I'd like to show them off just because I'm pretty proud of how they look. </p>
               <div style={iconGallery}>
                 {iconsUnused.map((img) => 
                   <Image src={img} key={img} style={this.props.screenWidth > 768 ? imageIcon : imageIconMobile}/>

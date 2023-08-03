@@ -945,14 +945,15 @@ div.content {
                         margin-left: auto;
                         
                         display: flex;
-                        flex-flow: row wrap;
+                        flex-flow: column nowrap;
                         justify-content: flex-end;
                         align-content: flex-start;
-                        align-items: flex-start;
+                        align-items: flex-end;
             
                         h6 {
                             margin: 0;
                             padding-right: toRem(10);
+                            white-space: nowrap;
             
                             font-family: 'Poppins', sans-serif;
                             font-style: normal;
@@ -962,7 +963,7 @@ div.content {
                     }  
 
                     p {
-                        width: 80%;
+                        width: 70%;
                         margin: 0;
                     }
                 }
@@ -1652,6 +1653,24 @@ div.content {
 
         p {
             margin-top: toRem(5);
+            width: 70%;
+        }
+
+        div.grid {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: start;
+            column-gap: 10%;
+
+            div.gridCell {
+                width: 45%;
+                min-width: toRem(256);
+                margin: 0;
+
+                p {
+                    width: 100%;
+                }    
+            }
         }
 
         // div.about {

@@ -83,7 +83,7 @@ const Tags = (props) => {
   );
 }
 
-const tags = ['mockups', 'prototyping'];
+const tags = ['checkout'];
 const link = 'https://www.figma.com/proto/5gbXEMOUCFgvECx3gFsD4Q/Pretty-Nice-Flowers?page-id=205%3A1662&node-id=227%3A4386&viewport=205%2C372%2C0.08&scaling=min-zoom&starting-point-node-id=227%3A4386&hide-ui=1'
 
 const introPoints = [

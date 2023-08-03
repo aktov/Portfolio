@@ -78,7 +78,7 @@ const Tags = (props) => {
   );
 }
 
-const tags = ['mockups', 'prototyping'];
+const tags = ['ux design', 'blog', 'design consulting'];
 
 const needsClients = [
   'read posts easily',
@@ -194,7 +194,7 @@ class Hon extends React.Component {
                 data-aos-once={true}
               > 
                 <h4 className='heading'> Role </h4>
-                <p> UI/UX Designer </p>              
+                <p> UX Designer </p>              
                 <br/>
                 <h4 className='heading'> Figma Link </h4>
                 <div className='buttons'>

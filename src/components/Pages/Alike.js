@@ -66,13 +66,18 @@ const Tags = (props) => {
   );
 }
 
-const tags = ['wireframing', 'mockups', 'prototyping'];
+const tags = ['ux design', 'social networking', 'dating'];
 
 const descr = [
   'Modified and updated existing app screens with UI designs more aligned with modern trends and styles (e.g. navigation bar, headers, icons, and many other specific screens)',
   'Designed prototypes of new app screens and new user flows on Figma for the dev team to create',
   'Used Figma Prototyping to turn our static prototype screens into a functional, interactable flow which better helped the developers visualize the app and its functionality',
   'Helped quadruple the conversion rate of app downloads to users'
+];
+
+const survey = [
+  'Users that have the app downloaded but have not onboarded, via push notifications',
+  'New users from Subtle Asian Traits, a facebook group'
 ];
 
 
@@ -177,7 +182,7 @@ class Alike extends React.Component {
                 data-aos-once={true}
               > 
                 <h4 className='heading'> Role </h4>
-                <p> UI/UX Designer </p>              
+                <p> UX Designer </p>              
                 <br/>
                 {/* <h4 className='heading'> LINKS </h4>
                 <div className='buttons'>
@@ -204,41 +209,177 @@ class Alike extends React.Component {
               >
                 <h4 className='heading'> Summary </h4>
                 <p> 
-                  During my internship at Alike, I designed and redesigned app screens and user flows that improved the overall user experience. Below are just a few of the screens I worked on.
+                In addition to updating user flows and improving user experiences, my main objective was to tackle Alike's primary goal at the time, growth, 
+                without sacrificing the company's mission of pushing video to the forefront of networking.
                 </p> 
-                <h4 className='heading'> Team </h4>
-                <p> I worked very closely with the CEO and the other UI/UX designer on the team. </p>
-                <p> Hanmin Yang [CEO] <br/> Courtney Mercado [UI/UX Designer] </p>
+                {/* <h4 className='heading'> Team </h4>
+                <p> I worked directly with the CEO. </p>
+                <p> Hanmin Yang [CEO]  </p> */}
               </div>
             </div>
 
             <div className='section'>
-              <SectionTitle title='Background'/> 
+              <SectionTitle title='Intro'/> 
               <h4 className='heading'> What's Alike? </h4>
               <p> 
-                Alike is a <i>video</i> dating app that celebrates the asian experience! Emphasis on video. <br/>
-                We're creating a platform where users can get a better sense of another's vibes and character through videos!
+                Alike is a video-first dating and social app centered on promoting Western Asian culture, where profiles are brought to life with video, showcasing personality, character, and vibes.
               </p>
               <p>
-                Skipping the text prompts and jumping straight into video prompts to allow users to share their story and personality in the best way, through videos and pictures, 
-                all in hopes that we can inspire more genuine connections and conversations for people.
-                If pictures are worth a thousand words, then videos must be worth millions. 
+                Alike strives to foster a community where each individual can connect with others over topics about their culture, upbringing, or way of life. 
               </p>
               <p>
-                This is just a brief description, for more details, check out the link above!
+                We want to bring profiles to life by incorporating video, in addition to just photos and texts, because we believe that it emphasizes an individual's personality,
+                all in hopes that it'll inspire more genuine connections and conversations for everyone.
               </p>
-              <br/>
+            </div>    
 
-              <h4 className='heading'> My Impact </h4>
+            <div className='section'>
+              <SectionTitle title='Problem'/> 
               <p> 
-                I joined Alike while the app was in it's beta stages, and worked in a team consisting of a lead UI/UX Designer and the CEO himself, Hanmin. <br/>
-                So far in my internship, I've done the following:
+                Analytics revealed our app yielded a low conversion rate, with the video upload step of onboarding being determined as the drop-off point. 
               </p>
-                
-              <Bullets info={descr}/> 
+              <p>
+                This step requires users to respond to at least 1 prompt of their choice in the form of a video, but it seemed that users did not want to, and consequently abandoned their signup. 
+              </p>
+              <p> 
+                We needed a way to encourage new users to successfully sign up without compromising the app's key philosophy - video.
+              </p>
+              <br/> <br/> <br/>
+
+
+              <h4 className='heading'> Identifying the Details </h4>
+              <br/>
+              <h4 className='subheading'> Competitive Analysis </h4>
+              <p>
+                Research on our competition revealed that the onboarding processes for their apps could be done from anywhere, anytime, and more importantly, effortlessly.
+              </p>
               <br/>
 
-              <h4 className='heading'> Personas </h4>
+              <h4 className='subheading'> Surveys </h4>
+              <p>
+                Conducted a usability survey with participants from two sources.
+              </p>
+              <Bullets info={survey}/>
+              <br/> <br/> <br/>
+
+
+              <h4 className='heading'> Our Findings </h4>
+              <p>
+              Users were not comfortable recording a video at the time, or had a lack of time to record. 
+              </p>
+              <p>
+              Recording video required time, space, and composure to ensure it was profile-worthy. 
+              </p>
+              <p>
+              Users wanted to look their best at the time of onboarding, which was rare.
+              </p>
+            </div>
+            
+            <div className='section'>
+              <SectionTitle title='Goal'/>
+              <h4 className='heading'> Growth. </h4>
+              <p>
+                Increase our app's user conversion rate.
+              </p>
+            </div>
+
+            <div className='section'>
+              <SectionTitle title='Potential Solutions'/>
+              <h4 className='heading'> 01. </h4>
+              <h4 className='heading'> A guest mode that would allow users to skip account creation and jump straight into the app.  </h4>
+              {/* <p>
+                A guest mode that would allow users to skip account creation and jump straight into the app. 
+              </p> */}
+              <br/>
+              <div className='grid'>
+                <div className='gridCell'>
+                  <h4 className='subheading'> Mindset </h4>
+                  <p>
+                    Perhaps seeing who's on the platform would entice new users to go back and create their profiles.
+                  </p>
+                  <br/>
+                </div>
+                <div className='gridCell'>
+                  <h4 className='subheading'> Result </h4>
+                  <p>
+                    Decreased conversion rate.
+                  </p>
+                  <p>
+                    At the time, our small population of users meant that an individual could exhaust the list of potential matches/friends, and if they saw no one that interested them, they would quit.
+                  </p>
+                  <p>
+                    Still did not solve the main user breakdown.
+                  </p>
+                </div>
+              </div>
+              <br/> <br/> <br/> <br/> <br/>
+              
+              <h4 className='heading'> 02. </h4>
+              <h4 className='heading'> Allow users to skip video recording during onboarding but limit their access to features until they record. </h4>
+              {/* <p>
+                Allow users to skip video recording during onboarding but limit their access to features until they record.
+              </p> */}
+              <br/>
+              <div className='grid'>
+                <div className='gridCell'>
+                  <h4 className='subheading'> Mindset </h4>
+                  <p>
+                    Changed back to enforcing the majority of the onboarding flow, but allowed users to skip the video step.
+                  </p>
+                  <p>
+                    Allowed users to finish signing up and jump into the app to check out the community, and also record their video at a more convenient time.
+                  </p>
+                  <br/>
+                </div>
+                <div className='gridCell'>
+                  <h4 className='subheading'> Result </h4>
+                  <p>
+                  Increased our conversion rate by 25%
+                  </p>
+                </div>
+              </div>
+              <br/> <br/> <br/> <br/> <br/>
+              
+              <h4 className='heading'> 03. </h4>
+              <h4 className='heading'> Allow users to upload their own pre-recorded video, as opposed to forcing them to record on the spot. </h4>
+              <br/>
+              <div className='grid'>
+                <div className='gridCell'>
+                  <h4 className='subheading'> Mindset </h4>
+                  <p>
+                    Users can pre-record their responses when they are feeling ready or at their best, and upload whenever they continue the onboarding process.
+                  </p>
+                  <p>
+                    We ran 3 live user interviews and had them walk us through their onboarding process, and all 3 of them chose the upload path. 
+                  </p>
+                  <br/>
+                </div>
+                <div className='gridCell'>
+                  <h4 className='subheading'> Result </h4>
+                  <p>
+                  Increased our conversion rate by another 40%.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div className='section'>
+              <SectionTitle title='Results'/>
+              <h4 className='heading'> Our conversion rate increased from 20% to 65% following this solution. </h4>
+              <br/>
+              <p>
+                We kept implementation 2 and 3 in the live build, and considered this the solution to our initial problem of a low conversion rate. 
+              </p>
+              <p>
+                A stable growth figure allowed us to move onto designing features that users highly requested, and more pressing issues such as monetization.
+              </p>
+            </div>
+
+              {/* <Bullets info={descr}/> 
+              <br/> */}
+
+              {/* <h4 className='heading'> Personas </h4>
               <p> Here are a couple of the personae our team had in mind while designing our screens: </p>
               <br/>
               <>
@@ -250,10 +391,9 @@ class Alike extends React.Component {
                     <Image src={pic6} style={imageMarginNoTop}/>    
                   </>
                 }
-              </>
-            </div>           
+              </> */}   
 
-            <div className='section'>
+            {/* <div className='section'>
               <SectionTitle title='Components'/> 
               <h4 className='heading'> Nav Bar & Headers </h4>
               <p>
@@ -302,14 +442,16 @@ class Alike extends React.Component {
                 I can't unveil too much yet since this feature is in the works but here's a sneak peak at some screens!
               </p>
               <Image src={this.props.screenWidth > 768 ? pic3 : pic10} style={imageMarginLessBottom}/>
-            </div>
+            </div> */}
 
             <div className='section'>
               <SectionTitle title='Thoughts'/> 
               <p>
-                So far it's been a great learning and growing experience at Alike. I've learned a lot from my lead UI/UX Designer teammate and also from Hanmin as well!
+                I'm grateful to have had the opportunity to work together with Hanmin, the founder, so closely and understand his mindset behind the company and the product. 
                 It's amazing to have my ideas heard and so well implemented in the app and that feeling of seeing my designs come to life can't be beat. 
-                As I continue accomplishing tasks and working here at Alike, I'll definitely add more to this page, check back soon!
+              </p>
+              <p>
+                Successfully achieving our goal of increasing the growth of our app, through research, iterative processes, and design empowers my passion for UX Design and I can't wait to see what future projects hold.
               </p>
             </div>
 

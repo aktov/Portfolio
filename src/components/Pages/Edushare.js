@@ -73,7 +73,7 @@ const Tags = (props) => {
   );
 }
 
-const tags = ['wireframing', 'mockups', 'prototyping'];
+const tags = ['onboarding', 'signup'];
 
 
 const imageMarginNoTop = {marginTop: '0rem'};
