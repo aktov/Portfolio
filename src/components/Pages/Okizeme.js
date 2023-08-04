@@ -239,7 +239,7 @@ class Okizeme extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Intro'/> 
+              <SectionTitle title='Intro' color={color}/> 
               <p> 
                 Okizeme Gaming recently revised their branding and mission, and reached out to me for a website redesign that would reflect the new changes.
               </p>
@@ -250,7 +250,7 @@ class Okizeme extends React.Component {
             </div>     
 
             <div className='section'>
-              <SectionTitle title='Goals'/> 
+              <SectionTitle title='Goals' color={color}/> 
               <Bullets info={descr}/> 
 
               {/* <h4 className='heading'> 1. IMPROVE THE VISUALS </h4>
@@ -265,7 +265,7 @@ class Okizeme extends React.Component {
             </div>          
 
             <div className='section'>
-              <SectionTitle title='Inspiration'/> 
+              <SectionTitle title='Inspiration' color={color}/> 
               <p> 
                 The websites and graphics below depict various themes and visuals that we wanted to encapsulate within the site.
                 <br/>
@@ -332,7 +332,7 @@ class Okizeme extends React.Component {
             </div>  
 
             <div className='section'>
-              <SectionTitle title='Initial Ideation'/> 
+              <SectionTitle title='Initial Ideation' color={color}/> 
               <h4 className='heading'> Logo Designs </h4>
               <Image src={this.props.screenWidth > 768 ? picLogosD : picLogosM} style={imageMarginNoTop}/>
               
@@ -341,7 +341,7 @@ class Okizeme extends React.Component {
             </div>  
 
             <div className='section'>
-              <SectionTitle title='Prototypes'/> 
+              <SectionTitle title='Prototypes' color={color}/> 
               <h4 className='heading'> Mobile </h4>
               {this.props.screenWidth > 768 ? 
                 <>
@@ -369,7 +369,7 @@ class Okizeme extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Lessons Learned'/> 
+              <SectionTitle title='Lessons Learned' color={color}/> 
               <p>
                 From this collaboration with Okizeme, I developed better skills for the UI portion of UI/UX Design. 
                 I've always been confident in claiming that UI Design is different from graphics/marketing design, and although it is canonically, I would be lying if I said
@@ -388,7 +388,7 @@ class Okizeme extends React.Component {
             </div>
 
             {/* <div className='section'>
-              <SectionTitle title='Check out my other work!'/> 
+              <SectionTitle title='Check out my other work!' color={color}/> 
               <Cards group={'casestudies'} screenWidth={this.props.screenWidth} />  
             </div> */}
 

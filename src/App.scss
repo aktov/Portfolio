@@ -1216,14 +1216,28 @@ div.content {
         width: 50%;
         margin: auto;
         margin-bottom: $sectionMarginBottom;
+
+        // position: relative;
+        // width: 100%;
+        // margin: auto;
+        // margin-top: toRem(48);
+        // padding-left: 12.5%;
+        // padding-right: 12.5%;
+
+        // @media screen and (min-width: 768px){
+        //     padding-left: 25%;
+        //     padding-right: 25%;
+        // }
+        // margin-bottom: $sectionMarginBottom;
         
         .titleUnderscore {
             position: relative;
-            width: 3rem;
-            height: .2rem;
+            width: toRem(64);
+            height: toRem(6);
+            border-radius: toRem(16);
 
-            margin-top: toRem(-25);
-            margin-bottom: toRem(30);
+            margin-top: toRem(-40);
+            margin-bottom: toRem(32);
 
             background-color: $baseTextColor;
         }
@@ -1361,7 +1375,6 @@ div.content {
 
         div.section {
             position: relative;
-            width: 100%;
             margin: toRem(16) auto;
             margin-bottom: toRem(196);
 
@@ -1369,6 +1382,11 @@ div.content {
             flex-flow: column wrap;
             justify-content: flex-start;
             align-items: flex-start;   
+
+            width: 100%;
+            @media screen and (min-width: 768px){
+                width: 100%;
+            }
             
             div.imageHolder {
                 position: relative;
@@ -1624,49 +1642,30 @@ div.content {
             }
         } 
 
-        h3.title {
-            width: 100%;
-            max-width: 100%;
-            margin-top: 0;
-            margin-bottom: toRem(30);
-
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            font-size: toRem(48);
-
-            @media screen and (min-width: 768px){
-                font-size: toRem(64);          
-            }
-        }
-
         h3 {
             width: 100%;
             font-size: toRem(48);
+
+            &.title {
+                width: 100%;
+                max-width: 100%;
+                margin-top: 0;
+                margin-bottom: toRem(30);
+    
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+                font-size: toRem(48);
+    
+                @media screen and (min-width: 768px){
+                    font-size: toRem(64);          
+                }
+            }
+
+            &.number {
+                margin-top: 0;
+                margin-bottom: toRem(8);
+            }
         }
-
-        h4.heading {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            font-style: normal;
-            font-weight: 600;
-            font-size: $size_h4;    /* 22pt */
-
-            @media screen and (min-width: 768px){
-                font-size: toRem(28);          
-            }
-        }   
-
-        h4.subheading {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            font-style: normal;
-            font-weight: 600;
-            font-size: $size_h5;    /* 18pt */
-
-            @media screen and (min-width: 768px){
-                font-size: toRem(20);          
-            }
-        }   
 
         h4 {
             margin-bottom: toRem(0);
@@ -1674,6 +1673,30 @@ div.content {
             font-style: normal;
             font-weight: 400;
             font-size: toRem(20);
+
+            &.heading {
+                margin: 0;
+                font-family: 'Poppins', sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: $size_h4;    /* 22pt */
+    
+                @media screen and (min-width: 768px){
+                    font-size: toRem(28);          
+                }
+            }   
+    
+            &.subheading {
+                margin: 0;
+                font-family: 'Poppins', sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: $size_h5;    /* 18pt */
+    
+                @media screen and (min-width: 768px){
+                    font-size: toRem(20);          
+                }
+            }   
         }
 
         h5 {
@@ -1685,8 +1708,17 @@ div.content {
 
         p {
             margin-top: toRem(5);
-            width: 70%;
+            width: 100%;
+
+            @media screen and (min-width: 768px){
+                width: 70%;
+            }
+
+            &.bold {
+                font-weight: 600;
+            }
         }
+
 
         div.grid {
             display: flex;

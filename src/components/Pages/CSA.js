@@ -280,7 +280,7 @@ class CSA extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Intro'/> 
+              <SectionTitle title='Intro' color={color}/> 
               <h4 className='heading'> Motivation </h4>
               <p> 
                 Our task was to find ourselves a client in need of a new website and design them a functional website prototype
@@ -292,7 +292,7 @@ class CSA extends React.Component {
             </div>          
                       
             <div className='section'>
-              <SectionTitle title='Client Interviews'/> 
+              <SectionTitle title='Client Interviews' color={color}/> 
               <h4 className='heading'> Getting To Know Our Client </h4>
               <p> 
                 Cambodian Student Association (CSA) was our client. 
@@ -362,7 +362,7 @@ class CSA extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Users & Need Finding'/> 
+              <SectionTitle title='Users & Need Finding' color={color}/> 
               <h4 className='heading'> User Interviews </h4>
               <p>
                 Our best approach at finding users to interview was to message Janica and Keith and ask them about potential 
@@ -425,7 +425,7 @@ class CSA extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Competitive Analysis'/> 
+              <SectionTitle title='Competitive Analysis' color={color}/> 
               <p>
                 To further generate more ideas on our design for our client’s website, we decided to analyze the 
                 websites of five competitor sites. Our competitors are the sites of other college organizations.
@@ -466,7 +466,7 @@ class CSA extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Mood Boards'/> 
+              <SectionTitle title='Mood Boards' color={color}/> 
               {/* <p>
                 This website will have a minimalist appearance that is at the same time attention-grabbing. Because 
                 our client is a cultural organization that focuses on social aspects, we also want to portray a tone
@@ -487,7 +487,7 @@ class CSA extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Wireframing'/> 
+              <SectionTitle title='Wireframing' color={color}/> 
               <h4 className='heading'> Site Architecture </h4>
               <p>
                 From what we observed from our competitive analysis, we saw that other college org sites more or less 
@@ -599,7 +599,7 @@ class CSA extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Prototyping'/>
+              <SectionTitle title='Prototyping' color={color}/>
               <h4 className='heading'> First Iteration </h4>
               <p>
                 With content finally received from our client, we were able to add images, content, and color
@@ -702,7 +702,7 @@ class CSA extends React.Component {
             </div> 
 
             <div className='section'>
-              <SectionTitle title='Lessons Learned'/> 
+              <SectionTitle title='Lessons Learned' color={color}/> 
               <p>
                 For our first time working with actual clients outside the classroom, this was an amazing learning
                 experience. As excited as we were to jump right into designing, we realized how important communication

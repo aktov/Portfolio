@@ -176,7 +176,7 @@ class Edushare extends React.Component {
                 {/* <h4 className='heading'> ROLE </h4>
                 <p> UI/UX Designer </p>              
                 <br/> */}
-                <h4 className='heading'> Figma Link </h4>
+                <h4 className='heading'> Figma </h4>
                 <div className='buttons'>
                   <a 
                     href='https://www.figma.com/proto/zMITtMqtG9hcvJLDGtUC8G/Edushare?node-id=10%3A84&viewport=-523%2C272%2C0.2671932876110077&scaling=scale-down'
@@ -207,7 +207,7 @@ class Edushare extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Intro'/> 
+              <SectionTitle title='Intro' color={color}/> 
               <h4 className='heading'> Motivation </h4>
               <p> 
                 The designs you see below are the result of me finishing a short design challenge where I was tasked with creating screens for a sign up flow for teachers.
@@ -216,7 +216,7 @@ class Edushare extends React.Component {
             </div>          
                       
             <div className='section'>
-              <SectionTitle title='Sketches'/> 
+              <SectionTitle title='Sketches' color={color}/> 
               <p> 
                 My initial rough sketch about the screens I had in mind, based off your typical sign up elements and flow.
               </p>
@@ -224,14 +224,14 @@ class Edushare extends React.Component {
             </div>      
 
             <div className='section'>
-              <SectionTitle title='Wireframing'/> 
+              <SectionTitle title='Wireframing' color={color}/> 
               <Image src={pic2} style={imageMarginNoTop}/>
               <h4 className='heading'> Initial Typography & Colors </h4>
               <Image src={pic3} style={imageMarginNoTop} />
             </div>  
 
             <div className='section'>
-              <SectionTitle title='Mockups'/> 
+              <SectionTitle title='Mockups' color={color}/> 
               <h4 className='heading'> Mobile </h4>
               <Image src={pic4} style={imageMarginLessBottom}/>
               <Image src={pic5} style={imageMarginNoTop}/>
@@ -265,7 +265,7 @@ class Edushare extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Lessons Learned'/> 
+              <SectionTitle title='Final Thoughts' color={color}/> 
               <p>
                 My main takeaway from this design challenge was practice with task prioritization. <br/>
                 It was due to the time limit I imposed on myself that forced me to rethink the way I usually start off my design projects or tasks.

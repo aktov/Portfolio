@@ -214,7 +214,7 @@ class Flowers extends React.Component {
                 {/* <h4 className='heading'> ROLE </h4>
                 <h4> UI/UX Designer </h4>              
                 <br/> */}
-                <h4 className='heading'> LINKS </h4>
+                <h4 className='heading'> Figma </h4>
                 <div className='buttons'>
                   <a 
                     href={link}
@@ -237,7 +237,7 @@ class Flowers extends React.Component {
                 data-aos-delay='400'
                 data-aos-once={true}
               >
-                <h4 className='heading'> SUMMARY </h4>
+                <h4 className='heading'> Summary </h4>
                 <p> 
                   This design challenge I partook involved redesigning a check-out flow to improve the overall user experience and visuals.
                 </p> 
@@ -245,7 +245,7 @@ class Flowers extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Intro'/> 
+              <SectionTitle title='Intro' color={color}/> 
               <p> 
                 Here's a perfect replica mockup I created of the original image presented to me. <br/>
                 It's definitely outdated in terms of style, however I'll admit that it is still very much functional.
@@ -254,7 +254,7 @@ class Flowers extends React.Component {
             </div>     
 
             <div className='section'>
-              <SectionTitle title='First Interation'/> 
+              <SectionTitle title='First Iteration' color={color}/> 
               <h4 className='heading'> Design Choices </h4>
               <p> 
                 Here's my first iteration of mockups to improve the design of the UI.
@@ -290,7 +290,7 @@ class Flowers extends React.Component {
             </div>          
 
             <div className='section'>
-              <SectionTitle title='Second Interation'/> 
+              <SectionTitle title='Second Iteration' color={color}/> 
               <h4 className='heading'> Notable Changes </h4>
               <p> 
                 Taking a look back at this months later, here are the notable changes I made:
@@ -312,12 +312,12 @@ class Flowers extends React.Component {
               <br/>
               <br/>
 
-              <h4 className='heading'> Screens of the Other Pages </h4>
+              <h4 className='heading'> Screens of the other pages </h4>
               <Image src={picV2b} style={imageMarginLessBottom}/>
               <Image src={picV2c} style={imageMarginLessBottom}/>
               <Image src={picV2d} style={imageMarginNoTop}/>
 
-              <h4 className='heading'> Layout Grid of Columns </h4>
+              <h4 className='heading'> Layout grid of columns </h4>
               <p>
                 My grid layout for this page is a bit untraditional. It consists of three same-width columns, with differing gutter widths, spaced evenly between margins on the outer edges. <br/>
               </p>
@@ -326,7 +326,7 @@ class Flowers extends React.Component {
               </p>
               <Image src={this.props.screenWidth > 768 ? picV2Cola : picV2ColaMob} style={imageMarginNoTop}/>
 
-              <h4 className='subheading'> A More Standard Layout </h4>
+              <h4 className='subheading'> A more standard layout </h4>
               <p>
                 A more standard grid layout would alter the widths of the elements, notably making most fields 259px on this display. <br/>
                 Not the biggest deal, but I do prefer my dimensions to be in multiples of either 4 or 8.
@@ -335,7 +335,7 @@ class Flowers extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Components & Styling'/> 
+              <SectionTitle title='Components & Styling' color={color}/> 
               <h4 className='heading'> Figma Components </h4>
               <p>
                 I decided to use component variants for this iteration, to vastly speed up mockup design time. The conditional variants were a blessing as well; the amount of flexiblity and efficiency it allows for amazed me.
@@ -355,7 +355,7 @@ class Flowers extends React.Component {
             </div>  
 
             {/* <div className='section'>
-              <SectionTitle title='Prototype'/> 
+              <SectionTitle title='Prototype' color={color}/> 
               <p>
                 Even though this was more of a simple redesign as opposed to a UX research project, it was still a great learning experience into Figma's components, variants, and layout grids.
               </p>
@@ -363,7 +363,7 @@ class Flowers extends React.Component {
             </div> */}
 
             <div className='section'>
-              <SectionTitle title='Looking Towards the Future'/> 
+              <SectionTitle title='Looking towards the future' color={color}/> 
               <p>
                 Even though this was more of a simple redesign as opposed to a UX research project, it was still a great learning experience into Figma's components, variants, and layout grids.
               </p>

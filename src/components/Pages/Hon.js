@@ -11,7 +11,7 @@ import TopButton from '../TopButton.js';
 
 import banner from '../../images/Banners/banner_hon.png';
 import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_hon.png';
-import figma from '../../images/figmaLogo_black.svg';
+import figma from '../../images/figmaLogo.svg';
 // import open from '../../images/open.svg';
 
 import pic1 from '../../images/Pages/hon/1.png';
@@ -196,7 +196,7 @@ class Hon extends React.Component {
                 <h4 className='heading'> Role </h4>
                 <p> UX Designer </p>              
                 <br/>
-                <h4 className='heading'> Figma Link </h4>
+                <h4 className='heading'> Figma </h4>
                 <div className='buttons'>
                   {/* <a 
                     href='https://blog.hon-media.com/'
@@ -237,7 +237,7 @@ class Hon extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Intro'/> 
+              <SectionTitle title='Intro' color={color}/> 
               <h4 className='heading'> Motivation </h4>
               <p> 
                 Hon-Media ultimately wants to aid San Diego companies in need during this pandemic, and to 
@@ -251,7 +251,7 @@ class Hon extends React.Component {
             </div>          
                       
             <div className='section'>
-              <SectionTitle title='Need Finding'/> 
+              <SectionTitle title='Need Finding' color={color}/> 
               <h4 className='heading'> User Needs </h4>
               <p> 
                 Based on how Hon-Media described their blog, it's clear to me that there are two main user groups
@@ -278,7 +278,7 @@ class Hon extends React.Component {
             </div>      
 
             <div className='section'>
-              <SectionTitle title='Wireframing'/> 
+              <SectionTitle title='Wireframing' color={color}/> 
               <h4 className='heading'> Site Architecture </h4>
               <p> 
                 Based on the user needs described above, it seems like the site should have four main features,
@@ -316,7 +316,7 @@ class Hon extends React.Component {
             </div>  
 
             <div className='section'>
-              <SectionTitle title='Prototyping'/> 
+              <SectionTitle title='Prototyping' color={color}/> 
               <p>
                 With the wireframes finished and feedback received from Hon-Media, I worked on fleshing out the
                 designs and features. 
@@ -442,7 +442,7 @@ class Hon extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Final Thoughts'/> 
+              <SectionTitle title='Final Thoughts' color={color}/> 
               <p>
                 I've got to say, I was a bit intimidated by this project at the start. It was my first time
                 having the freedom to design as I pleased. In all the past projects I've done, I have had at least

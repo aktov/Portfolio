@@ -224,7 +224,7 @@ class Alike extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Intro'/> 
+              <SectionTitle title='Intro' color={color}/> 
               <h4 className='heading'> What's Alike? </h4>
               <p> 
                 Alike is a video-first dating and social app centered on promoting Western Asian culture, where profiles are brought to life with video, showcasing personality, character, and vibes.
@@ -239,7 +239,7 @@ class Alike extends React.Component {
             </div>    
 
             <div className='section'>
-              <SectionTitle title='Problem'/> 
+              <SectionTitle title='Problem' color={color}/> 
               <h4 className='heading'> We had a low signup conversion rate. </h4>
               <p> 
                 Analytics revealed our app yielded a low conversion rate, with the video upload step of onboarding being determined as the drop-off point. 
@@ -261,7 +261,7 @@ class Alike extends React.Component {
                   <Bullets info={survey}/>
                 </div>
                 <div className='gridCell'>
-                  <h4 className='subheading'> Competitive Analysis </h4>
+                  <h4 className='subheading'> Competitive analysis </h4>
                   <p>
                     Research on our competition revealed that the onboarding processes for their apps could be done from anywhere, anytime, and more importantly, effortlessly.
                   </p>
@@ -269,7 +269,7 @@ class Alike extends React.Component {
               </div>
               <br/> <br/> <br/>
 
-              <h4 className='heading'> Our Findings </h4>
+              <h4 className='heading'> Our findings </h4>
               <p>
               Users were not comfortable recording a video at the time, or had a lack of time to record. 
               </p>
@@ -282,9 +282,9 @@ class Alike extends React.Component {
             </div>
             
             <div className='section'>
-              <SectionTitle title='Goals'/>
+              <SectionTitle title='Goals' color={color}/>
               <h4 className='heading'> 
-                Encourage new users to sign up without compromising <br/> the app's key philosophy, video
+                Encourage new users to sign up without compromising the app's key philosophy, video
               </h4>
               <p>
                 Our findings indicated that our users were reluctant to record their videos during onboarding. 
@@ -306,40 +306,43 @@ class Alike extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Potential Solutions'/>
-              <h4 className='heading'> 01. </h4>
-              <h4 className='heading'> A guest mode that would allow users to skip account creation and jump straight into the app.  </h4>
-              {/* <p>
-                A guest mode that would allow users to skip account creation and jump straight into the app. 
-              </p> */}
+              <SectionTitle title='Potential Solutions' color={color}/>
+              <h3 className='number'> 01. </h3>
+              <h4 className='heading'> A guest mode that lets users jump right into the app.  </h4>
+              <p>
+                On the sign up screen, new users are presented with the option to continue as a guest, instead of proceeding with the onboarding flow.
+              </p>
               <br/>
               <div className='grid'>
                 <div className='gridCell'>
                   <h4 className='subheading'> Mindset </h4>
                   <p>
+                    Guests that wanted to perform actions or use features were prompted with a pop up to sign up.
+                  </p>
+                  <p>
                     Perhaps seeing who's on the platform would entice new users to go back and create their profiles.
                   </p>
                 </div>
                 <div className='gridCell'>
-                  <h4 className='subheading'> Result </h4>
-                  <p>
-                    Decreased conversion rate.
-                  </p>
+                  <h4 className='subheading'> Results </h4>
                   <p>
                     At the time, our small population of users meant that an individual could exhaust the list of potential matches/friends, and if they saw no one that interested them, they would quit.
+                  </p>
+                  <p className='bold'>
+                    Decreased conversion rate.
                   </p>
                   <p>
                     Still did not solve the main user breakdown.
                   </p>
                 </div>
               </div>
-              <br/> <br/> <br/> <br/> <br/>
+              <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
               
-              <h4 className='heading'> 02. </h4>
-              <h4 className='heading'> Allow users to skip video recording during onboarding but limit their access to features until they record. </h4>
-              {/* <p>
-                Allow users to skip video recording during onboarding but limit their access to features until they record.
-              </p> */}
+              <h3 className='number'> 02. </h3>
+              <h4 className='heading'> Allow users to skip video recording during onboarding. </h4>
+              <p>
+                These users would have certain actions restricted and limited to specific features. An attempt to interact with those features will prompt them to record their video.
+              </p>
               <br/>
               <div className='grid'>
                 <div className='gridCell'>
@@ -354,14 +357,20 @@ class Alike extends React.Component {
                 <div className='gridCell'>
                   <h4 className='subheading'> Result </h4>
                   <p>
-                  Increased our conversion rate by 25%
+                    Saw more users complete the onboarding, however most of them skipping the video step. This was acceptable.
+                  </p>
+                  <p className='bold'>
+                    Increased our conversion rate by 25%
                   </p>
                 </div>
               </div>
-              <br/> <br/> <br/> <br/> <br/>
+              <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
               
-              <h4 className='heading'> 03. </h4>
-              <h4 className='heading'> Allow users to upload their own pre-recorded video, as opposed to forcing them to record on the spot. </h4>
+              <h3 className='number'> 03. </h3>
+              <h4 className='heading'> Give users the option to upload their own pre-recorded video. </h4>
+              <p>
+                As opposed to requiring users to record their video responses on the spot, I designed an option for uploading a video from their album/gallery.
+              </p>
               <br/>
               <div className='grid'>
                 <div className='gridCell'>
@@ -376,7 +385,10 @@ class Alike extends React.Component {
                 <div className='gridCell'>
                   <h4 className='subheading'> Result </h4>
                   <p>
-                  Increased our conversion rate by another 40%.
+                    Most users opted to upload a pre-recorded video.
+                  </p>
+                  <p className='bold'>
+                    Increased our conversion rate by another 40%.
                   </p>
                 </div>
               </div>
@@ -384,8 +396,8 @@ class Alike extends React.Component {
 
 
             <div className='section'>
-              <SectionTitle title='Results'/>
-              <h4 className='heading'> Our conversion rate increased from 20% to 65% following this solution. </h4>
+              <SectionTitle title='Overall Results' color={color}/>
+              <h4 className='heading'> Our conversion rate increased from 20% to 65% following these solutions. </h4>
               <br/>
               <p>
                 We kept implementation 2 and 3 in the live build, and considered this the solution to our initial problem of a low conversion rate. 
@@ -413,7 +425,7 @@ class Alike extends React.Component {
               </> */}   
 
             {/* <div className='section'>
-              <SectionTitle title='Components'/> 
+              <SectionTitle title='Components' color={color}/> 
               <h4 className='heading'> Nav Bar & Headers </h4>
               <p>
                 Prior to my onboarding, the nav bars and headers on our screens weren't components, which I thought was a major oversight. 
@@ -435,7 +447,7 @@ class Alike extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Updated Screens'/> 
+              <SectionTitle title='Updated Screens' color={color}/> 
               <p>
                 Here are just a few of the screens that I've updated so far:
               </p>
@@ -456,7 +468,7 @@ class Alike extends React.Component {
             </div>
             
             <div className='section'>
-              <SectionTitle title='Highlights'/> 
+              <SectionTitle title='Highlights' color={color}/> 
               <p>
                 I can't unveil too much yet since this feature is in the works but here's a sneak peak at some screens!
               </p>
@@ -464,7 +476,7 @@ class Alike extends React.Component {
             </div> */}
 
             <div className='section'>
-              <SectionTitle title='Thoughts'/> 
+              <SectionTitle title='Final Thoughts' color={color}/> 
               <p>
                 I'm grateful to have had the opportunity to work together with Hanmin, the founder, so closely and understand his mindset behind the company and the product. 
                 It's amazing to have my ideas heard and so well implemented in the app and that feeling of seeing my designs come to life can't be beat. 

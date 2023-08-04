@@ -105,6 +105,12 @@ const kpis = [
   'Access Token transactions'
 ];
 
+const spotlightQuestions = [
+  'What content should I gate?',
+  'How should I price my tokens?',
+  'How does ACE interact with my repertoire of other social apps?'
+];
+
 const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
 const color = '#FBE7E7'
@@ -248,10 +254,16 @@ class ACE extends React.Component {
               >
                 <h4 className='heading'> Summary </h4>
                 <p>
-                  This case study will address the most pressing issue we faced, our product's growth, and will include our KPIs, research processes, and solutions for it.
+                  I'll cover the process of how we tackled our most pressing issue, highlighting our goals and design solutions along the way.
+                </p>
+                <br/>
+
+                <h4 className='heading'> Disclaimer </h4>
+                <p className='bold'>
+                  Please understand that I'm unable to provide detailed information about our data nor detailed designs.
                 </p>
                 <p>
-                  Although I can't share the specifics for the data we gathered, the info below should be enough to give the general idea.
+                  I'm limited in the designs I can showcase, but I'll do my best to incorporate them where necessary.
                 </p>
                 <br/>
                 {/* <h4 className='heading'> Team </h4>
@@ -266,7 +278,7 @@ class ACE extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Intro'/> 
+              <SectionTitle title='Intro' color={color2}/> 
               <h4 className='heading'> What's Artist Crowdfund Exchange? </h4>
               {/* <p>
                 I'm still working it out with Omi on which features of the app I can showcase and talk about, so I can't specifically talk about the features I worked on in detail just yet.
@@ -320,7 +332,7 @@ class ACE extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Users'/> 
+              <SectionTitle title='Users' color={color2}/> 
               <h4 className='heading'>
                 Our two audiences we were designing for:
               </h4>
@@ -380,8 +392,8 @@ class ACE extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Problem'/> 
-              <h4 className='heading'> Our total users metric grew significantly slower than trajected. </h4>
+              <SectionTitle title='Problem' color={color2}/> 
+              <h4 className='heading'> Our total users metric grew significantly slower than projected. </h4>
               <p>
                 We had successfully onboarded 100 creators, but the amount of total users fell short of our anticipated numbers.
               </p>
@@ -435,7 +447,7 @@ class ACE extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Goal'/>
+              <SectionTitle title='Goal' color={color2}/>
               <h4 className='heading'> Improve our Access Tokens feature </h4>
               <p>
                 Our Access Tokens feature needed:
@@ -448,7 +460,7 @@ class ACE extends React.Component {
 
               <h4 className='subheading'> We expected a direct causation between Access Tokens and growth. </h4>
               <p>
-                Access Tokens were the supposed to be the main motivator in bringing on a creator's followers.
+                Access Tokens were supposed to be the main motivator in bringing on a creator's followers.
               </p>
               <br/> <br/> <br/>
 
@@ -458,11 +470,160 @@ class ACE extends React.Component {
               <p>
                 Access Token transactions was also a good indicator of user engagement, and would directly drive profit.
               </p>
+            </div>
 
+            
+            <div className='section'>
+              <SectionTitle title='Designing our solutions' color={color2}/> 
+              <h3 className='number'> 01. </h3>
+              <h4 className='heading'> Increase the discoverability of Access Tokens throughout the platform. </h4>
+              <p>
+                We incorporated Access Tokens to the profile page and event pages, and gave it its own independent section in the settings page.
+              </p>
+              <br/>
+              <div className='grid'>
+                <div className='gridCell'>
+                  <h4 className='subheading'> Mindset </h4>
+                  <p>
+                    Previously creators the starting point to the Access Tokens activation flow resided in the settings, but by adding it in the profile page, we increased its findability.
+                  </p>
+                  <p>
+                    Events was our first major feature I designed, and being a highly sought feature, it was a perfect opportunity to incorporate Access Tokens.
+                  </p>
+                </div>
+                <div className='gridCell'>
+                  <h4 className='subheading'> Result </h4>
+                  <p>
+                    User testing validated that users frequented their profile page more than settings, and results showed that more users started their Access Tokens activation flow from here instead of the latter.
+                  </p>
+                  <p className='bold'>
+                    We observed an increase in the amount of activated creators after this update.
+                  </p>
+                </div>
+              </div>
+              <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+              
+              <h3 className='number'> 02. </h3>
+              <h4 className='heading'> Include a section in onboarding for info about Access Tokens. </h4>
+              <p>
+                After completing their profile information, users would arrive at a section on Access Tokens. We gave users the option to skip this section.
+              </p>
+              <br/>
+              <div className='grid'>
+                <div className='gridCell'>
+                  <h4 className='subheading'> Mindset </h4>
+                  <p>
+                    We hypothesized that onboarding could be a good location to showcase Access Tokens, since every new user needed to go through this flow.
+                  </p>
+                  <p>
+                    It's important to note that this idea was implemented at the same time as our onboarding revamp. In addition to this section, there were also sections on
+                    adding payment options and including even more profile details, though these were all optional as well.
+                  </p>
+                </div>
+                <div className='gridCell'>
+                  <h4 className='subheading'> Results </h4>
+                  <p>
+                    Users found our onboarding process too long and tedious. 
+                  </p>
+                  <p>
+                    User testing revealed that some participants were even discouraged from completing onboarding.
+                  </p>
+                  <p className='bold'>
+                    This update negatively impacted our signup conversion rate, consequently decreasing our KPIs.
+                  </p>
+                  <p>
+                    Unfortunately this change was live for several weeks before we had the bandwidth to revert it.
+                  </p>
+                </div>
+              </div>
+              <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+              
+              <h3 className='number'> 03. </h3>
+              <h4 className='heading'> A Creator Spotlight program where we guide creators through everything Access Tokens related. </h4>
+              <p>
+                The marketing team devised a Creator Spotlight program where we targeted specific creators with potential, gauged by their content on other social platforms.
+              </p>
+              <p>
+                They were then invited to join ACE, and provided with weekly scheduled calls to lead them through activating their Access Tokens, defining their benefits, and strategizing their sales to maximize their profits.
+              </p>
+              <br/>
+              <div className='grid'>
+                <div className='gridCell'>
+                  <h4 className='subheading'> Mindset </h4>
+                  <p>
+                    By running through Access Tokens with creators, we hoped to lower their cognitive load and ensure a smooth experience activating. 
+                  </p>
+                  <p>
+                    A substantial amount of creators needed help devising strategies. 
+                  </p>
+                  <Bullets info={spotlightQuestions}/> 
+                </div>
+                <div className='gridCell'>
+                  <h4 className='subheading'> Result </h4>
+                  <p>
+                    Creators that went through this program saw more Access Token sales on average than creators that did not.
+                  </p>
+                  <p className='bold'>
+                    This program saw the most success in increasing our KPIs.
+                  </p>
+                  <p>
+                    An uptick in total registered users and DAU resulted from these creators bringing their followers onto the platform. 
+                  </p>
+                </div>
+              </div>
+              <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+              
+              <h3 className='number'> 04. </h3>
+              <h4 className='heading'> Access-gated posts on the activity feed to drive interest and engagement. </h4>
+              <p>
+                Access Token-locked posts were displayed on the activity feed for everyone.
+              </p>
+              <p>
+                When tapped, info about the creator and their token benefits would appear. <br/>
+                Those that didn't know about Access Tokens, had the option to be redirected to the activation flow, where they can find more information.
+              </p>
+              <br/>
+              <div className='grid'>
+                <div className='gridCell'>
+                  <h4 className='subheading'> Mindset </h4>
+                  <p>
+                    User testing showed curiosity towards these posts when initially running into them. We hoped that seeing these posts would motivate creators to activate.
+                  </p>
+                  <p>
+                    These posts would be unlocked when the user acquires enough tokens to reach the specified tier.
+                  </p>
+                </div>
+                <div className='gridCell'>
+                  <h4 className='subheading'> Result </h4>
+                  <p>
+                    Increased engagement with creators that posted access-gated posts, validated from posts-to-profile funnel.
+                  </p>
+                  <p className='bold'>
+                    An increase in DAU, perhaps from fans checking to see if their creator had posted new content.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className='section'>
+              <SectionTitle title='Overall Results' color={color2}/> 
+              <h4 className='heading'> Did we address our user breakdowns? </h4>
+              <p> 
+                We still had a few users that asked about Access Tokens occasionally, but analytics showed an increase in Access Tokens engagement on a per-user basis.
+              </p>
+              <br/>
+
+              <h4 className='heading'> Did we meet our goal? </h4>
+              <p> 
+                At the time of my leaving in October of 2022, our total registered users amounted to roughly 8k, and we were indeed projected to hit that 10k figure by the end of the year.
+              </p>
+              <p className='bold'>
+                We observed a significant increase in our KPIs due to implementing solutions 1, 3, and 4, notably the most from solution 3.
+              </p>
             </div>
 
             {/* <div className='section'>
-              <SectionTitle title='Screens'/> 
+              <SectionTitle title='Screens' color={color2}/> 
               <h4 className='heading'> Feature Showcase </h4>
               <div className='imageGallery'>
                 <Image src={pic1} style={imageMarginLessBottom}/>
@@ -501,7 +662,7 @@ class ACE extends React.Component {
             </div> */}
 
             {/* <div className='section'>
-              <SectionTitle title='Icons'/> 
+              <SectionTitle title='Icons' color={color2}/> 
               <p>
                 I designed over 90% of the icons that are used in the app. Here's a quick overview showing them all.
               </p>
@@ -535,9 +696,14 @@ class ACE extends React.Component {
 
 
             <div className='section'>
-              <SectionTitle title='Final Thoughts'/> 
+              <SectionTitle title='Final Thoughts' color={color2}/> 
               <p> 
-                My thoughts go here.
+                In regards to the design of Access Token tiers and benefits, I tried to make it as intuitive as possible, relating these to real-life elements 
+                (the tiers being bronze, silver, gold, diamond which are common placements in competitions).
+              </p>
+              <p>
+                Access Tiers, along with Events, were two of my first projects I took on at ACE, and although I was proud of them at the time, 
+                looking back now I wish I had the opportunity to go back to iterate on them and use techniques I've learned since then.
               </p> 
 
               <br/> <br/> <br/>

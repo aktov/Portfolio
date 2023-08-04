@@ -202,7 +202,7 @@ class Boba extends React.Component {
                 {/* <h4 className='heading'> ROLE </h4>
                 <h4> UI/UX Designer </h4>              
                 <br/> */}
-                <h4 className='heading'> Figma Link </h4>
+                <h4 className='heading'> Figma </h4>
                 <div className='buttons'>
                   <a 
                     href='https://www.figma.com/proto/A4YCf5Qx8THEGF7iDGfwJa/Boba-Buddy?node-id=6%3A755&viewport=589%2C191%2C0.09667579084634781&scaling=scale-down'
@@ -234,7 +234,7 @@ class Boba extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Intro'/> 
+              <SectionTitle title='Intro' color={color2}/> 
               <h4 className='heading'> Motivation </h4>
               <p> 
                   I was inspired to create this when I found out my friend bought one boba tea drink most days of the week, which definitely adds up over the month. 
@@ -243,8 +243,8 @@ class Boba extends React.Component {
             </div>          
                       
             <div className='section'>
-              <SectionTitle title='User Research & Data'/> 
-              <h4 className='heading'> Survey Data </h4>
+              <SectionTitle title='User Research & Data' color={color2}/> 
+              <h4 className='heading'> Survey data </h4>
               <p> 
                 Here are snippets of some of the questions and respective answers from the initial survey I sent out:
               </p>
@@ -260,7 +260,7 @@ class Boba extends React.Component {
                 </>
               }
 
-              <h4 className='heading'> Breaking It Down </h4>
+              <h4 className='heading'> Breaking it down </h4>
               <p>
                 Most users do like to get boba and get it often, and half of them do feel as though they spend a lot on boba tea.
               </p>
@@ -290,7 +290,7 @@ class Boba extends React.Component {
             </div>      
 
             <div className='section'>
-              <SectionTitle title='Wireframes'/> 
+              <SectionTitle title='Wireframes' color={color2}/> 
               {this.props.screenWidth > 768 ? 
                 <>
                   <Image src={pic10} style={smallerImageLess}/>
@@ -305,7 +305,7 @@ class Boba extends React.Component {
             </div>  
 
             <div className='section'>
-              <SectionTitle title='Mockups'/> 
+              <SectionTitle title='Mockups' color={color2}/> 
               {this.props.screenWidth > 768 ? 
                 <>
                   <Image src={pic6} style={smallerImageLess}/>
@@ -320,7 +320,7 @@ class Boba extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Usability Testing & Results'/> 
+              <SectionTitle title='Usability Testing & Results' color={color2}/> 
               <h4 className='heading'> User Tasks </h4>
               <p>
                 Here are the tasks I had in mind for users to accomplish:
@@ -328,7 +328,7 @@ class Boba extends React.Component {
               <Bullets info={tasks}/>
               <br/>
 
-              <h4 className='heading'> Post-Testing Feedback Questions </h4>
+              <h4 className='heading'> Post-testing feedback questions </h4>
               <p><b>UX Questions</b></p>
               <Bullets info={experience}/>
               <br/>
@@ -388,7 +388,7 @@ class Boba extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Final Thoughts'/> 
+              <SectionTitle title='Final Thoughts' color={color2}/> 
               <p>
                 This was an extremely fun personal project I took on earlier this year! It was great interacting with people who filled out my survey and learning more about
                 their boba spending habits. There were definitely some interesting finds I had too! For example most people were willing to spend over $7 on one cup of boba tea.
