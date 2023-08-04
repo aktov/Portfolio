@@ -70,7 +70,7 @@ const Image = (props) => {
           src={props.src} 
           alt='' 
           draggable='false'           
-          data-aos='fade' 
+          data-aos='fade-up' 
           data-aos-offset='50' 
           data-aos-easing='ease-out-sine'
           data-aos-duration='400'
@@ -103,6 +103,11 @@ const kpis = [
   'Amount of activated creators',
   'Daily Active Users (DAU)',
   'Access Token transactions'
+];
+
+const onboardingSurvey = [
+  'Do you remember seeing info about Access Tokens during sign up?',
+  'What are Access Tokens?'
 ];
 
 const spotlightQuestions = [
@@ -252,9 +257,9 @@ class ACE extends React.Component {
                 data-aos-delay='400'
                 data-aos-once={true}
               >
-                <h4 className='heading'> Summary </h4>
+                <h4> Improving the discoverability of creator-empowered features. </h4>
                 <p>
-                  I'll cover the process of how we tackled our most pressing issue, highlighting our goals and design solutions along the way.
+                  
                 </p>
                 <br/>
 
@@ -362,7 +367,7 @@ class ACE extends React.Component {
               </div>
               <br/> <br/> <br/>
 
-              <h4 className='heading'> User acquisition strategy </h4>
+              <h4 className='heading'> User Acquisition Strategy </h4>
               <p>
                 Marketing launched email campaigns to target creators with at least 1,000 followers total across their various different social platforms.
               </p>
@@ -393,9 +398,9 @@ class ACE extends React.Component {
 
             <div className='section'>
               <SectionTitle title='Problem' color={color2}/> 
-              <h4 className='heading'> Our total users metric grew significantly slower than projected. </h4>
+              <h4 className='heading'> Users did not adopt the app as quickly as we expected. </h4>
               <p>
-                We had successfully onboarded 100 creators, but the amount of total users fell short of our anticipated numbers.
+                Our total users metric grew significantly slower than projected and fell short of our anticipated numbers, even though we had successfully onboarded 100 creators.
               </p>
               <br/>
 
@@ -474,51 +479,95 @@ class ACE extends React.Component {
 
             
             <div className='section'>
-              <SectionTitle title='Designing our solutions' color={color2}/> 
+              <SectionTitle title='Designing our solution' color={color2}/> 
+              <h4 className='heading'> Our process is based on design thinking </h4>
+              <p>
+                The design process I established at ACE was based upon the principles of design thinking, such as empathizing, ideating, prototyping, and testing. Prior to me coming onboard, there was no defined process in place.
+              </p>
+              <p>
+                It was important for me to emphasize that this process was incredibly iterative. 
+              </p>
+              <ol>
+                <li> Understand </li>
+                <li> Ideate </li>
+                <li> Prototype </li>
+                <li> User Testing </li>
+                <li> Presentation </li>
+                <li> Implementation </li>
+              </ol>
+              <br/>
+
+              <h4 className='heading'> I created our design system </h4>
+              <p>
+                Since we'd constantly be coming back to our designs, I took on the initiative to set up our design system, 
+                which increased alignment with the developers and sped up stages of our design process.
+              </p>
+              <p>
+                At the end of the day, in order to meet our established goal and provide our users with a better experience, 
+                we needed to understand and empathize with our user's needs, goals, and pain points.
+              </p>
+              <br/>
+              <br/> <br/> <br/>
+
               <h3 className='number'> 01. </h3>
               <h4 className='heading'> Increase the discoverability of Access Tokens throughout the platform. </h4>
               <p>
                 We incorporated Access Tokens to the profile page and event pages, and gave it its own independent section in the settings page.
               </p>
               <br/>
+              
               <div className='grid'>
                 <div className='gridCell'>
-                  <h4 className='subheading'> Mindset </h4>
+                  <h4 className='subheading'> Ideation </h4>
                   <p>
-                    Previously creators the starting point to the Access Tokens activation flow resided in the settings, but by adding it in the profile page, we increased its findability.
+                    Previously, the starting point to the Access Tokens activation flow resided in the settings, but analytics revealed a low tap-through rate. 
+                  </p>
+                  <p>
+                    This was further validated with a round of usability testing, where we asked participants to find the start of the Access Tokens activation flow. Most participants struggled to find the flow within our ideal time.
+                  </p>
+                  <p>
+                    Analytics revealed that users frequented their profile page more than settings, so adding an alternate route here should increase findability. Another round of the prior usability testing, with different participants, showed significantly improved times.
                   </p>
                   <p>
                     Events was our first major feature I designed, and being a highly sought feature, it was a perfect opportunity to incorporate Access Tokens.
                   </p>
                 </div>
                 <div className='gridCell'>
-                  <h4 className='subheading'> Result </h4>
+                  <h4 className='subheading'> Results </h4>
                   <p>
-                    User testing validated that users frequented their profile page more than settings, and results showed that more users started their Access Tokens activation flow from here instead of the latter.
+                    Usability testing validated our design choices, and analytics revealed more users starting their Access Tokens activation flow from the profile page.
                   </p>
                   <p className='bold'>
                     We observed an increase in the amount of activated creators after this update.
                   </p>
                 </div>
               </div>
+
               <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
               
               <h3 className='number'> 02. </h3>
-              <h4 className='heading'> Include a section in onboarding for info about Access Tokens. </h4>
+              <h4 className='heading'> Include Access Tokens information in onboarding. </h4>
               <p>
                 After completing their profile information, users would arrive at a section on Access Tokens. We gave users the option to skip this section.
+              </p>
+              <p>
+                It's important to note that this idea was implemented at the same time as our onboarding revamp. <br/>
+                In addition to this section, there were also sections on adding payment options and including even more profile details, though these were all optional as well.
               </p>
               <br/>
               <div className='grid'>
                 <div className='gridCell'>
-                  <h4 className='subheading'> Mindset </h4>
+                  <h4 className='subheading'> Ideation </h4>
                   <p>
                     We hypothesized that onboarding could be a good location to showcase Access Tokens, since every new user needed to go through this flow.
                   </p>
                   <p>
-                    It's important to note that this idea was implemented at the same time as our onboarding revamp. In addition to this section, there were also sections on
-                    adding payment options and including even more profile details, though these were all optional as well.
+                    A round of moderated usability testing with a very small sample size showed a somewhat improved understanding of Access Tokens. (We would later regret not continue these tests with more participants)
                   </p>
+                  <p>
+                    Their understanding of Access Tokens was gauged one week later with a survey with questions such as: 
+                  </p>
+                  <Bullets info={onboardingSurvey}/> 
                 </div>
                 <div className='gridCell'>
                   <h4 className='subheading'> Results </h4>
@@ -546,10 +595,17 @@ class ACE extends React.Component {
               <p>
                 They were then invited to join ACE, and provided with weekly scheduled calls to lead them through activating their Access Tokens, defining their benefits, and strategizing their sales to maximize their profits.
               </p>
+              <p>
+                I suggested opening this up to creators already on the platform, and designed advertisements for the program within the app. <br/>
+                I placed these ads within the Access Token pages, as well as in the form of a one-time pop up after this update went live.
+              </p>
               <br/>
               <div className='grid'>
                 <div className='gridCell'>
-                  <h4 className='subheading'> Mindset </h4>
+                  <h4 className='subheading'> Ideation </h4>
+                  <p>
+                    Monitoring our activity feed, we saw many users post their questions about Access Tokens, and we received a decent amount of emails through our Contact Us page.
+                  </p>
                   <p>
                     By running through Access Tokens with creators, we hoped to lower their cognitive load and ensure a smooth experience activating. 
                   </p>
@@ -561,13 +617,16 @@ class ACE extends React.Component {
                 <div className='gridCell'>
                   <h4 className='subheading'> Result </h4>
                   <p>
-                    Creators that went through this program saw more Access Token sales on average than creators that did not.
+                    Surveys sent out to creators on our platform indicated a better understanding of Access Tokens from those that were in the program.
                   </p>
-                  <p className='bold'>
-                    This program saw the most success in increasing our KPIs.
+                  <p>
+                    Creators that went through this program saw more Access Token sales on average than creators that did not.
                   </p>
                   <p>
                     An uptick in total registered users and DAU resulted from these creators bringing their followers onto the platform. 
+                  </p>
+                  <p className='bold'>
+                    Out of the other solutions, this increased our KPIs the most.
                   </p>
                 </div>
               </div>
@@ -582,15 +641,18 @@ class ACE extends React.Component {
                 When tapped, info about the creator and their token benefits would appear. <br/>
                 Those that didn't know about Access Tokens, had the option to be redirected to the activation flow, where they can find more information.
               </p>
+              <p>
+                These posts would be unlocked when the user acquires enough tokens to reach the specified tier.
+              </p>
               <br/>
               <div className='grid'>
                 <div className='gridCell'>
-                  <h4 className='subheading'> Mindset </h4>
+                  <h4 className='subheading'> Ideation </h4>
                   <p>
-                    User testing showed curiosity towards these posts when initially running into them. We hoped that seeing these posts would motivate creators to activate.
+                    Usability testing highlighted users' curiosity towards these posts when initially running into them.
                   </p>
                   <p>
-                    These posts would be unlocked when the user acquires enough tokens to reach the specified tier.
+                    We hypothesized that these posts would increase the tap-through rate for getting to the Access Tokens activation page, or at the very least, inspire some motivation to learn more about it.
                   </p>
                 </div>
                 <div className='gridCell'>
@@ -609,7 +671,7 @@ class ACE extends React.Component {
               <SectionTitle title='Overall Results' color={color2}/> 
               <h4 className='heading'> Did we address our user breakdowns? </h4>
               <p> 
-                We still had a few users that asked about Access Tokens occasionally, but analytics showed an increase in Access Tokens engagement on a per-user basis.
+                We still had a few users that asked about Access Tokens occasionally, but analytics indicated an increase in Access Tokens engagement on a per-user basis.
               </p>
               <br/>
 
@@ -617,14 +679,21 @@ class ACE extends React.Component {
               <p> 
                 At the time of my leaving in October of 2022, our total registered users amounted to roughly 8k, and we were indeed projected to hit that 10k figure by the end of the year.
               </p>
-              <p className='bold'>
+              <br/>
+
+              <h4 className='subheading'> Yes, we met our goal. </h4>
+              <p>
                 We observed a significant increase in our KPIs due to implementing solutions 1, 3, and 4, notably the most from solution 3.
               </p>
             </div>
 
-            {/* <div className='section'>
-              <SectionTitle title='Screens' color={color2}/> 
-              <h4 className='heading'> Feature Showcase </h4>
+            <div className='section'>
+              <SectionTitle title='Design Showcase' color={color2}/> 
+              <h4 className='heading'> My designs of other features </h4>
+              <p>
+                I designed a wide variety of other features on ACE, several of which were successfully shipped.
+              </p>
+              <br/>
               <div className='imageGallery'>
                 <Image src={pic1} style={imageMarginLessBottom}/>
                 <Image src={pic2} style={imageMarginLessBottom}/>
@@ -659,7 +728,7 @@ class ACE extends React.Component {
                 <Image src={pic27} style={imageMarginLessBottom}/>
                 <Image src={pic28} style={imageMarginNoTop}/>
               </div>
-            </div> */}
+            </div>
 
             {/* <div className='section'>
               <SectionTitle title='Icons' color={color2}/> 
@@ -712,7 +781,7 @@ class ACE extends React.Component {
                 ACE has been a highlight in my UX Design career, and although I'd love to share all about it, I can only feature so much in this case study.
               </p> 
               <p>
-                Check out my resume entry for ACE or contact me to hear more about my other accomplishments and responsibilities at ACE!
+                Check out my resume entry for ACE or contact me to hear more about my other designs, accomplishments, and impact at ACE!
               </p>              
             </div>
 

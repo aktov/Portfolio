@@ -31,7 +31,7 @@ const groupsList = {
   casestudies: [
     {
       title: 'Artist Crowdfund Exchange (ACE)',
-      descr: 'A brief showcase of several features I designed as the company\'s UI/UX designer.',
+      descr: 'Improving the discoverability of creator-empowered features.',
       image: img_ace,
       imageM: imgM_ace,
       tags: ['ux design', 'web3', 'blockchain', 'crowdfunding', 'social networking'],

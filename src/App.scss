@@ -1674,6 +1674,17 @@ div.content {
             font-weight: 400;
             font-size: toRem(20);
 
+            &.hook {
+                font-family: 'Zilla+Slab';
+                font-weight: 400;
+                font-style: italic;
+                font-size: $size_h4;
+
+                @media screen and (min-width: 768px){
+                    font-size: toRem(40);          
+                }
+            }
+
             &.heading {
                 margin: 0;
                 font-family: 'Poppins', sans-serif;
@@ -1719,6 +1730,19 @@ div.content {
             }
         }
 
+        ol {
+            // list-style-type: ;
+            margin-top: 0;
+            padding-inline-start: toRem(32);
+            
+
+            li {
+                font-family: 'Poppins', sans-serif;
+                font-style: normal;
+                font-size: toRem(18);
+                color: $baseTextColor;
+            }
+        }
 
         div.grid {
             display: flex;

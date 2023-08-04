@@ -240,9 +240,12 @@ class Alike extends React.Component {
 
             <div className='section'>
               <SectionTitle title='Problem' color={color}/> 
-              <h4 className='heading'> We had a low signup conversion rate. </h4>
+              <h4 className='heading'> Users were downloading our app, but were not signing up. </h4>
               <p> 
-                Analytics revealed our app yielded a low conversion rate, with the video upload step of onboarding being determined as the drop-off point. 
+                Analytics revealed our app yielded a low signup conversion rate, despite a high downloads conversion rate. 
+              </p>
+              <p>
+                The drop-off point of our onboarding flow was determined to be the video upload step. 
               </p>
               <p>
                 This step requires users to respond to at least 1 prompt of their choice in the form of a video, but it seemed that users did not want to, and consequently abandoned their signup. 
@@ -306,7 +309,36 @@ class Alike extends React.Component {
             </div>
 
             <div className='section'>
-              <SectionTitle title='Potential Solutions' color={color}/>
+              <SectionTitle title='Designing our solution' color={color}/>
+              <p>
+                To solve our problem of low signups, I emphasized that we needed to take on a user-centered design approach to inform our ideation and decisions. 
+              </p>
+              <p>
+                At the end of the day, we wanted this to be a community for our users, so it was important for us to understand and empathize with our user's needs, goals, and pain points.
+              </p>
+              <br/>
+
+              <h4 className='heading'> Our design process </h4>
+              <p>
+                I designed several potential routes that we took in finding an eventual solution.
+              </p>
+              <p>
+                Here was our process for each route:
+              </p>
+              <ol>
+                <li> Understand </li>
+                <li> Ideate </li>
+                <li> Prototype </li>
+                <li> User Testing </li>
+                <li> Presentation </li>
+                <li> Implementation </li>
+              </ol>
+              <p>
+                After the implementation of a route, we'd monitor our conversion rate for a 2-week period to decide if results matched our initial findings from testing. 
+                If our results didn't line up, we'd iterate on our prototype and testing phases and push out an update.
+              </p>
+              <br/> <br/> <br/>
+
               <h3 className='number'> 01. </h3>
               <h4 className='heading'> A guest mode that lets users jump right into the app.  </h4>
               <p>
@@ -315,7 +347,7 @@ class Alike extends React.Component {
               <br/>
               <div className='grid'>
                 <div className='gridCell'>
-                  <h4 className='subheading'> Mindset </h4>
+                  <h4 className='subheading'> Ideation </h4>
                   <p>
                     Guests that wanted to perform actions or use features were prompted with a pop up to sign up.
                   </p>
@@ -346,7 +378,7 @@ class Alike extends React.Component {
               <br/>
               <div className='grid'>
                 <div className='gridCell'>
-                  <h4 className='subheading'> Mindset </h4>
+                  <h4 className='subheading'> Ideation </h4>
                   <p>
                     Changed back to enforcing the majority of the onboarding flow, but allowed users to skip the video step.
                   </p>
@@ -374,12 +406,12 @@ class Alike extends React.Component {
               <br/>
               <div className='grid'>
                 <div className='gridCell'>
-                  <h4 className='subheading'> Mindset </h4>
+                  <h4 className='subheading'> Ideation </h4>
                   <p>
                     Users can pre-record their responses when they are feeling ready or at their best, and upload whenever they continue the onboarding process.
                   </p>
                   <p>
-                    We ran 3 live user interviews and had them walk us through their onboarding process, and all 3 of them chose the upload path. 
+                    We ran 3 moderated usability tests, and had participants walk us through their onboarding process, and all 3 of them chose the upload path. 
                   </p>
                 </div>
                 <div className='gridCell'>
@@ -484,6 +516,15 @@ class Alike extends React.Component {
               <p>
                 Successfully achieving our goal of increasing the growth of our app, through research, iterative processes, and design empowers my passion for UX Design and I can't wait to see what future projects hold.
               </p>
+              <br/> <br/> <br/>
+
+              <h4 className='heading'> Still interested? </h4>
+              <p>
+                Check out my resume entry for Alike or contact me to hear more about my other designs, accomplishments, and impact at Alike!
+              </p>   
+              {/* <p>
+                Or check out my other work! I highly recommend Artist Crowdfund Exchange!
+              </p> */}
             </div>
 
           </div>

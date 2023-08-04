@@ -57,7 +57,7 @@ const Image = (props) => {
           src={props.src} 
           alt='' 
           draggable='false'           
-          data-aos='fade' 
+          data-aos='fade-up' 
           data-aos-offset='50' 
           data-aos-easing='ease-out-sine'
           data-aos-duration='400'
