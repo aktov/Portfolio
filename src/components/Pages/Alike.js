@@ -68,11 +68,16 @@ const Tags = (props) => {
 
 const tags = ['ux design', 'social networking', 'dating'];
 
-const descr = [
-  'Modified and updated existing app screens with UI designs more aligned with modern trends and styles (e.g. navigation bar, headers, icons, and many other specific screens)',
-  'Designed prototypes of new app screens and new user flows on Figma for the dev team to create',
-  'Used Figma Prototyping to turn our static prototype screens into a functional, interactable flow which better helped the developers visualize the app and its functionality',
-  'Helped quadruple the conversion rate of app downloads to users'
+// const descr = [
+//   'Modified and updated existing app screens with UI designs more aligned with modern trends and styles (e.g. navigation bar, headers, icons, and many other specific screens)',
+//   'Designed prototypes of new app screens and new user flows on Figma for the dev team to create',
+//   'Used Figma Prototyping to turn our static prototype screens into a functional, interactable flow which better helped the developers visualize the app and its functionality',
+//   'Helped quadruple the conversion rate of app downloads to users'
+// ];
+
+const kpis = [
+  'Downloads',
+  'Total Registered Users',
 ];
 
 const survey = [
@@ -235,33 +240,34 @@ class Alike extends React.Component {
 
             <div className='section'>
               <SectionTitle title='Problem'/> 
+              <h4 className='heading'> We had a low signup conversion rate. </h4>
               <p> 
                 Analytics revealed our app yielded a low conversion rate, with the video upload step of onboarding being determined as the drop-off point. 
               </p>
               <p>
                 This step requires users to respond to at least 1 prompt of their choice in the form of a video, but it seemed that users did not want to, and consequently abandoned their signup. 
               </p>
-              <p> 
-                We needed a way to encourage new users to successfully sign up without compromising the app's key philosophy - video.
-              </p>
               <br/> <br/> <br/>
 
 
-              <h4 className='heading'> Identifying the Details </h4>
+              <h4 className='heading'> Identifying the breakdowns </h4>
               <br/>
-              <h4 className='subheading'> Competitive Analysis </h4>
-              <p>
-                Research on our competition revealed that the onboarding processes for their apps could be done from anywhere, anytime, and more importantly, effortlessly.
-              </p>
-              <br/>
-
-              <h4 className='subheading'> Surveys </h4>
-              <p>
-                Conducted a usability survey with participants from two sources.
-              </p>
-              <Bullets info={survey}/>
+              <div className='grid'>
+                <div className='gridCell'>
+                 <h4 className='subheading'> Surveys </h4>
+                  <p>
+                    Conducted a usability survey with participants from two sources.
+                  </p>
+                  <Bullets info={survey}/>
+                </div>
+                <div className='gridCell'>
+                  <h4 className='subheading'> Competitive Analysis </h4>
+                  <p>
+                    Research on our competition revealed that the onboarding processes for their apps could be done from anywhere, anytime, and more importantly, effortlessly.
+                  </p>
+                </div>
+              </div>
               <br/> <br/> <br/>
-
 
               <h4 className='heading'> Our Findings </h4>
               <p>
@@ -276,11 +282,27 @@ class Alike extends React.Component {
             </div>
             
             <div className='section'>
-              <SectionTitle title='Goal'/>
-              <h4 className='heading'> Growth. </h4>
+              <SectionTitle title='Goals'/>
+              <h4 className='heading'> 
+                Encourage new users to sign up without compromising <br/> the app's key philosophy, video
+              </h4>
               <p>
-                Increase our app's user conversion rate.
+                Our findings indicated that our users were reluctant to record their videos during onboarding. 
               </p>
+              <p>
+                How can we successfully onboard our users, but still require them to record videos?
+              </p>
+              <br/> <br/> <br/>
+              <h4 className='heading'> Increase our signup conversion rate </h4>
+              <p>
+                Updates to our build would regularly be released weekly, and each week we'd compare our downloads rate to total registered users.
+              </p>
+              <h4 className='subheading'> Here are the KPIs we defined for this goal: </h4>
+              <br/>
+              <Bullets info={kpis}/> 
+              {/* <p>
+                I also wanted to point out that our download conversion rate was decent due to our marketing team, so we weren't too concerned with that conversion.
+              </p> */}
             </div>
 
             <div className='section'>
@@ -297,7 +319,6 @@ class Alike extends React.Component {
                   <p>
                     Perhaps seeing who's on the platform would entice new users to go back and create their profiles.
                   </p>
-                  <br/>
                 </div>
                 <div className='gridCell'>
                   <h4 className='subheading'> Result </h4>
@@ -329,7 +350,6 @@ class Alike extends React.Component {
                   <p>
                     Allowed users to finish signing up and jump into the app to check out the community, and also record their video at a more convenient time.
                   </p>
-                  <br/>
                 </div>
                 <div className='gridCell'>
                   <h4 className='subheading'> Result </h4>
@@ -352,7 +372,6 @@ class Alike extends React.Component {
                   <p>
                     We ran 3 live user interviews and had them walk us through their onboarding process, and all 3 of them chose the upload path. 
                   </p>
-                  <br/>
                 </div>
                 <div className='gridCell'>
                   <h4 className='subheading'> Result </h4>

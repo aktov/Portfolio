@@ -12,9 +12,9 @@ class Work extends React.Component {
         <div id='work' className='anchor' style={this.props.screenWidth > 768 ? null : {marginTop: '-1rem'}}></div>
         <Title title='Work' screenWidth={this.props.screenWidth} /> 
 
-        <h4 style={{marginBottom: '.625rem', fontWeight: '700', fontSize:'1.5rem'}}> {'Case Studies'} </h4>
+        <h4 className='heading'> {'Case Studies'} </h4>
         <Cards group={'casestudies'} screenWidth={this.props.screenWidth} />
-        <h4 style={{marginBottom: '.625rem', fontWeight: '700', fontSize:'1.5rem' }}> {'UI Mockup & Prototype Designs'} </h4>
+        <h4 className='heading'> {'Prototype Designs'} </h4>
         <Cards group={'mocks'} screenWidth={this.props.screenWidth} />
       </div> 
     );

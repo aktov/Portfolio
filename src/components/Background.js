@@ -65,7 +65,7 @@ class Intro extends React.Component {
     return (
       <div className='intro'> 
         <div className='text' style={this.props.screenWidth <= 768 ? {width: '75%'} : null}>
-          <h1 style={{ fontSize: this.props.screenWidth < 480 ? '2.5rem' : '3.125rem' }}> 
+          <h1 style={{ fontSize: this.props.screenWidth < 480 ? '3rem' : '4rem' }}> 
             I'm Alex, 
           </h1>
           <h1 style={{ fontSize: this.props.screenWidth < 480 ? '2rem' : '2.8rem', marginTop: '-2rem' }}> 

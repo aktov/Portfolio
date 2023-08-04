@@ -98,6 +98,13 @@ const problemGoals = [
   'Increased discoverability for their fans',
 ];
 
+const kpis = [
+  'Total Registered Users',
+  'Amount of activated creators',
+  'Daily Active Users (DAU)',
+  'Access Token transactions'
+];
+
 const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
 const color = '#FBE7E7'
@@ -240,10 +247,12 @@ class ACE extends React.Component {
                 data-aos-once={true}
               >
                 <h4 className='heading'> Summary </h4>
-                <p> 
-                  Here's a brief showcase of the designs I created during the year I spent working at ACE! <br/>
-                  The features shown below are currently live on the app.
-                </p> 
+                <p>
+                  This case study will address the most pressing issue we faced, our product's growth, and will include our KPIs, research processes, and solutions for it.
+                </p>
+                <p>
+                  Although I can't share the specifics for the data we gathered, the info below should be enough to give the general idea.
+                </p>
                 <br/>
                 {/* <h4 className='heading'> Team </h4>
                 <p> We were a small startup, so I worked closely with our founders and engineers. Of the team, here are those I worked most with: </p>
@@ -272,11 +281,24 @@ class ACE extends React.Component {
               <p>
                 Artist Crowdfund Exchange (ACE) is a Web3 crowdfunding platform which allows creators to directly raise income from their followers to grow independently without the hassle of ad sponsorships or contracts.
               </p>
+              <br/>
+
+              <h4 className='subheading'> How do creators make money? </h4>
+              <p>
+                Creators that join ACE are able to create and sell their own "Access Tokens", which unlock exclusive perks or benefits for their token holders. <br/>
+                The amount of tokens put up for sale and its selling price is entirely decided by the creator to induce whatever demand and worth they're seeking.
+              </p>
+              <p>
+                Think of it like Patreon, where monthly donations from subscribers unlock exclusives for them, such as behind-the-scenes or unreleased videos or merch.
+              </p>
+              <p>
+                The difference at ACE however, allows Access Tokens to be resold, which potentially increases the worth of the creator's tokens. <br/>
+              </p>
               <br/> <br/> <br/>
 
               <h4 className='heading'> The Team </h4>
               <p>
-                We were a small startup, so I worked closely with our founders and engineers. Of the team, here are those I worked most with:
+                ACE was an early-stage startup, so I had the opportunity to work closely with our entire team. <br/> Here are those I worked most with:
               </p>
               <br/>
               <div className='grid'>
@@ -300,7 +322,7 @@ class ACE extends React.Component {
             <div className='section'>
               <SectionTitle title='Users'/> 
               <h4 className='heading'>
-                Our two key audiences we were designing for:
+                Our two audiences we were designing for:
               </h4>
               <br/>
               <div className='grid'>
@@ -315,7 +337,6 @@ class ACE extends React.Component {
                   <p>
                     We encouraged these users to tell their followers about ACE to bring them along.
                   </p>
-                  <br/>
                 </div>
                 <div className='gridCell'>
                   <h4 className='subheading'> Fans </h4>
@@ -327,45 +348,117 @@ class ACE extends React.Component {
                   </p>
                 </div>
               </div>
+              <br/> <br/> <br/>
+
+              <h4 className='heading'> User acquisition strategy </h4>
+              <p>
+                Marketing launched email campaigns to target creators with at least 1,000 followers total across their various different social platforms.
+              </p>
+              <br/>
+              
+              <div className='grid'>
+                <div className='gridCell'>
+                  <h4 className='subheading'> 10,000 users by the end of Q4 2022 </h4>
+                  <p>
+                    Bring on 100 creators, who in turn would bring on at least 10% of their followers.
+                  </p>    
+                  <p>  
+                    100 (1 creator ✕ 100 followers each) = 10,000 total users
+                  </p>
+                </div>
+                <div className='gridCell'>
+                  <h4 className='subheading'> Focus on acquiring creators </h4>
+                  <p>
+                    We assumed that the creators would take on the task of bringing on their followers, so our main focus was on acquiring creators.
+                  </p>
+                </div>
+              </div>
+              <br/>
+
+              
+              
             </div>
 
             <div className='section'>
               <SectionTitle title='Problem'/> 
-              <p> 
-                Creators were eager to join the platform but were confused on how to activate their Access Tokens. 
+              <h4 className='heading'> Our total users metric grew significantly slower than trajected. </h4>
+              <p>
+                We had successfully onboarded 100 creators, but the amount of total users fell short of our anticipated numbers.
               </p>
+              <br/>
+
+              <h4 className='subheading'> Creators didn't know about Access Tokens. </h4>
+              <p> 
+                Creators were eager to join the platform but either were confused about Access Tokens or haven't heard about it at all. 
+              </p>
+              <br/> <br/> <br/>
+
+              <h4 className='heading'> Identifying the breakdowns </h4>
+              <br/>
+              <div className='grid'>
+                <div className='gridCell'>
+                  <h4 className='subheading'> Surveys </h4>
+                  <p>
+                    Email surveys sent out to our users asked if they joined ACE as a creator, or as a follower of a creator.
+                  </p>
+                  <p>
+                    Majority of the responses stated they were creators.
+                  </p>
+                  <p>
+                    Of these creators, majority also did not know how to activate their Access Tokens.
+                  </p>
+                </div>
+                <div className='gridCell'>
+                  <h4 className='subheading'> Analytics </h4>
+                  <p>
+                    Most creators haven't discovered the Access Tokens page, and of those that did, failed to complete the activation flow.
+                  </p>
+                  <p>
+                    For creators that have activated their tokens, sales transactions were rare.
+                  </p> 
+                </div>
+                <div className='gridCell'>
+                  <h4 className='subheading'> Activity Feed </h4>
+                  <p>
+                    Users often posted questions or asked how to make money on the platform, tagging our official ACE profile.
+                  </p>
+                  <br/>
+                </div>
+              </div>
+              <br/> <br/> <br/>
+
+              <h4 className='heading'> Our Findings </h4>
+              <p>
+                Most of our users did not know what Access Tokens were. <br/>
+                Creators did however, understand they could make profit on the platform.
+              </p>
+            </div>
+
+            <div className='section'>
+              <SectionTitle title='Goal'/>
+              <h4 className='heading'> Improve our Access Tokens feature </h4>
               <p>
                 Our Access Tokens feature needed:
               </p>
               <Bullets info={problemGoals}/> 
-              <br/> <br/> <br/>
-
-
-              <h4 className='heading'> Identifying the Details </h4>
               <br/>
-              <h4 className='subheading'> Competitive Analysis </h4>
-              <p>
-                Research on our competition revealed that the onboarding processes for their apps could be done from anywhere, anytime, and more importantly, effortlessly.
-              </p>
-              <br/>
+              {/* <p>
+                Add more information about the feature. Include step-by-step guides walking our creators through activation. Incorporate examples of use cases.
+              </p> */}
 
-              <h4 className='subheading'> Surveys </h4>
+              <h4 className='subheading'> We expected a direct causation between Access Tokens and growth. </h4>
               <p>
-                Conducted a usability survey with participants from two sources.
+                Access Tokens were the supposed to be the main motivator in bringing on a creator's followers.
               </p>
               <br/> <br/> <br/>
 
+              <h4 className='heading'> Our KPIs </h4> 
+              <br/>
+              <Bullets info={kpis}/> 
+              <p>
+                Access Token transactions was also a good indicator of user engagement, and would directly drive profit.
+              </p>
 
-              <h4 className='heading'> Our Findings </h4>
-              <p>
-              Users were not comfortable recording a video at the time, or had a lack of time to record. 
-              </p>
-              <p>
-              Recording video required time, space, and composure to ensure it was profile-worthy. 
-              </p>
-              <p>
-              Users wanted to look their best at the time of onboarding, which was rare.
-              </p>
             </div>
 
             {/* <div className='section'>
@@ -407,7 +500,7 @@ class ACE extends React.Component {
               </div>
             </div> */}
 
-            <div className='section'>
+            {/* <div className='section'>
               <SectionTitle title='Icons'/> 
               <p>
                 I designed over 90% of the icons that are used in the app. Here's a quick overview showing them all.
@@ -438,8 +531,24 @@ class ACE extends React.Component {
                   <Image src={img} key={img} style={this.props.screenWidth > 768 ? imageIcon : imageIconMobile}/>
                 )}
               </div>
-            </div>           
+            </div>            */}
 
+
+            <div className='section'>
+              <SectionTitle title='Final Thoughts'/> 
+              <p> 
+                My thoughts go here.
+              </p> 
+
+              <br/> <br/> <br/>
+              <h4 className='heading'> Still interested? </h4>
+              <p> 
+                ACE has been a highlight in my UX Design career, and although I'd love to share all about it, I can only feature so much in this case study.
+              </p> 
+              <p>
+                Check out my resume entry for ACE or contact me to hear more about my other accomplishments and responsibilities at ACE!
+              </p>              
+            </div>
 
           </div>
         </div>

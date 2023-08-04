@@ -619,7 +619,26 @@ div.content {
             
             font-family: 'Poppins', sans-serif;
             font-style: normal;
-            font-weight: 500;
+            font-weight: 700;
+            font-size: toRem(24);    
+        }
+
+        h4.heading {
+            position: relative;
+            width: 75%;
+            margin-top: toRem(0);
+            margin-left: 12.5%;
+            margin-bottom: toRem(16);
+            
+            font-family: 'Poppins', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: toRem(32);    
+
+            @media screen and (min-width: 768px){
+                font-size: toRem(36);     
+                font-weight: 600;     
+            }
         }
     
         div.cardsDesktop {
@@ -1343,8 +1362,8 @@ div.content {
         div.section {
             position: relative;
             width: 100%;
-            margin: toRem(10) auto;
-            margin-bottom: toRem(100);
+            margin: toRem(16) auto;
+            margin-bottom: toRem(196);
 
             display: flex;
             flex-flow: column wrap;
@@ -1613,11 +1632,16 @@ div.content {
 
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
-            font-size: toRem(40);
+            font-size: toRem(48);
+
+            @media screen and (min-width: 768px){
+                font-size: toRem(64);          
+            }
         }
 
         h3 {
             width: 100%;
+            font-size: toRem(48);
         }
 
         h4.heading {
@@ -1625,7 +1649,11 @@ div.content {
             font-family: 'Poppins', sans-serif;
             font-style: normal;
             font-weight: 600;
-            font-size: $size_h4;
+            font-size: $size_h4;    /* 22pt */
+
+            @media screen and (min-width: 768px){
+                font-size: toRem(28);          
+            }
         }   
 
         h4.subheading {
@@ -1633,7 +1661,11 @@ div.content {
             font-family: 'Poppins', sans-serif;
             font-style: normal;
             font-weight: 600;
-            font-size: $size_h5;
+            font-size: $size_h5;    /* 18pt */
+
+            @media screen and (min-width: 768px){
+                font-size: toRem(20);          
+            }
         }   
 
         h4 {
@@ -1661,6 +1693,7 @@ div.content {
             flex-flow: row wrap;
             justify-content: start;
             column-gap: 10%;
+            row-gap: toRem(32);
 
             div.gridCell {
                 width: 45%;
@@ -1943,12 +1976,12 @@ div.background {
     margin-bottom: 1.5rem;
 
     h3.outline {
-        color: rgba(255, 255, 255, 0);
-        top: 0;
-        left: 0;
+        color: #bbbbbb;
+        top: 4px;
+        left: 4px;
         
-        -webkit-text-stroke-width: 3px;
-        -webkit-text-stroke-color:#aaaaaa;
+        // -webkit-text-stroke-width: 3px;
+        // -webkit-text-stroke-color:#bbbbbb;
         
         // text-shadow: 1px -1px 0 #444444, 
         //             -1px 1px 0 #444444, 
@@ -1958,16 +1991,16 @@ div.background {
 
     h3.fill {
         color: #444444;
-        top: 6px;
-        left: 6px;
+        top: 0;
+        left: 0;
     }
 
     h3 {
         position: absolute; 
         margin-bottom: 0;
         margin-top: 0;
-        font-size: toRem(80);
-        font-weight: 800;
+        font-size: toRem(64);
+        font-weight: 700;
     }
 }
 
