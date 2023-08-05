@@ -9,8 +9,7 @@ import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
 
-import banner from '../../images/Banners/banner_alike.png';
-import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_alike.png';
+import {getEntryProperty} from '../WorkEntries.js'; // This is a table imported from this file, make edits to case studies and designs there
 // import open from '../../images/open.svg';
 
 import pic1 from '../../images/Pages/alike/new/01.png';
@@ -42,6 +41,12 @@ import pic25 from '../../images/Pages/alike/new/25.png';
 // import persona1 from '../../images/Pages/alike/5.png';
 // import persona2 from '../../images/Pages/alike/6.png';
 // import picPersona from '../../images/Pages/alike/Persona.png';
+
+const tags = getEntryProperty('casestudies', 'alike', 'tags')
+const color = getEntryProperty('casestudies', 'alike', 'color')
+const title = getEntryProperty('casestudies', 'alike', 'title')
+const banner = getEntryProperty('casestudies', 'alike', 'banner')
+const banner_mob = getEntryProperty('casestudies', 'alike', 'bannerM')
 
 const Bullets = (props) => {
   return (
@@ -85,8 +90,6 @@ const Tags = (props) => {
   );
 }
 
-const tags = ['ux design', 'social networking', 'dating'];
-
 // const descr = [
 //   'Modified and updated existing app screens with UI designs more aligned with modern trends and styles (e.g. navigation bar, headers, icons, and many other specific screens)',
 //   'Designed prototypes of new app screens and new user flows on Figma for the dev team to create',
@@ -108,7 +111,7 @@ const survey = [
 // const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
 // const smallerImage = {marginTop: '0rem', width: '70%'}
-const color = '#688CD0'
+
 
 // Returns style based on breakpoints, of which there are 2
 const decideMarginWidth = function(value) {
@@ -191,7 +194,7 @@ class Alike extends React.Component {
               data-aos-delay='200'
               data-aos-once={true}
             > 
-              {'Alike'} 
+              {title} 
             </h3>
 
             <div className='intro'>
@@ -341,13 +344,14 @@ class Alike extends React.Component {
 
             <div className='section'>
               <SectionTitle title='Designing our solution' color={color}/>
+              <h4 className='heading'> A user-centered design approach </h4>
               <p>
                 To solve our problem of low signups, I emphasized that we needed to take on a user-centered design approach to inform our ideation and decisions. 
               </p>
               <p>
                 At the end of the day, we wanted this to be a community for our users, so it was important for us to understand and empathize with our user's needs, goals, and pain points.
               </p>
-              <br/>
+              <br/> <br/> <br/>
 
               <h4 className='heading'> Our design process </h4>
               <p>

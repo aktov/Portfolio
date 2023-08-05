@@ -9,8 +9,8 @@ import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
 
-import banner from '../../images/Banners/banner_hon.png';
-import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_hon.png';
+import {getEntryProperty} from '../WorkEntries.js'; // This is a table imported from this file, make edits to case studies and designs there
+
 import figma from '../../images/figmaLogo.svg';
 // import open from '../../images/open.svg';
 
@@ -36,6 +36,13 @@ import pic20 from '../../images/Pages/hon/20.png';
 import pic21 from '../../images/Pages/hon/21.png';
 import pic22 from '../../images/Pages/hon/22.png';
 
+const tags = getEntryProperty('casestudies', 'hon', 'tags')
+const color = getEntryProperty('casestudies', 'hon', 'color')
+const title = getEntryProperty('casestudies', 'hon', 'title')
+const banner = getEntryProperty('casestudies', 'hon', 'banner')
+const banner_mob = getEntryProperty('casestudies', 'hon', 'bannerM')
+const link = getEntryProperty('casestudies', 'hon', 'figma')
+
 const Bullets = (props) => {
   return (
   <div className='phrases'>
@@ -57,7 +64,7 @@ const Image = (props) => {
           src={props.src} 
           alt='' 
           draggable='false'           
-          data-aos='fade-up' 
+          data-aos='fade' 
           data-aos-offset='50' 
           data-aos-easing='ease-out-sine'
           data-aos-duration='400'
@@ -78,8 +85,6 @@ const Tags = (props) => {
   );
 }
 
-const tags = ['ux design', 'blog', 'design consulting'];
-
 const needsClients = [
   'read posts easily',
   'find more related posts to read',
@@ -97,7 +102,6 @@ const needsDevs = [
 
 const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
-const color = '#9F9FDF'
 
 // Returns style based on breakpoints, of which there are 2
 const decideMarginWidth = function(value) {
@@ -179,7 +183,7 @@ class Hon extends React.Component {
               data-aos-delay='200'
               data-aos-once={true}
             > 
-              {'Hon-Media'} 
+              {title} 
             </h3>
 
             <div className='intro'>
@@ -208,7 +212,7 @@ class Hon extends React.Component {
                   </a>  */}
 
                   <a 
-                    href='https://www.figma.com/proto/4IWvFVdQfykksXa7kEZE95/blog.hon-media?node-id=266%3A5650&viewport=8238%2C659%2C0.7337678074836731&scaling=scale-down-width'
+                    href={link}
                     target='_blank' 
                     rel='noopener noreferrer'
                   >

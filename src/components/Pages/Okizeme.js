@@ -1,8 +1,6 @@
 import React from 'react';
 import LazyLoad from 'react-lazyload';
 
-import Cards from '../Cards.js';
-
 import Header from '../Header.js';
 import Footer from '../Footer.js';
 import NavMenu from '../NavMenu.js';
@@ -11,8 +9,8 @@ import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
 
-import banner from '../../images/Banners/banner_okizeme.png';
-import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_okizeme.png';
+import {getEntryProperty} from '../WorkEntries.js'; // This is a table imported from this file, make edits to case studies and designs there
+
 import figmaD from '../../images/figmaD.svg';
 import figmaM from '../../images/figmaM.svg';
 import open from '../../images/open.svg';
@@ -40,6 +38,13 @@ import picDesktop2 from '../../images/Pages/okizeme/Desktop02.png';
 import picDesktop3 from '../../images/Pages/okizeme/Desktop03.png';
 import picDesktop4 from '../../images/Pages/okizeme/Desktop04.png';
 
+const tags = getEntryProperty('casestudies', 'okizeme', 'tags')
+const color = getEntryProperty('casestudies', 'okizeme', 'color')
+const title = getEntryProperty('casestudies', 'okizeme', 'title')
+const banner = getEntryProperty('casestudies', 'okizeme', 'banner')
+const banner_mob = getEntryProperty('casestudies', 'okizeme', 'bannerM')
+const linkM = getEntryProperty('casestudies', 'okizeme', 'figmaM')
+const linkD = getEntryProperty('casestudies', 'okizeme', 'figmaD')
 
 const Bullets = (props) => {
   return (
@@ -83,8 +88,6 @@ const Tags = (props) => {
   );
 }
 
-const tags = ['prototyping', 'branding', 'gaming'];
-
 const descr = [
   'Improve the visuals. Enhance the visuals by incorporating the branding and genre into the site better.',
   'Streamline the user experience. Improve the user\'s navigational experience. Simplify the process to find an article and to continue reading new ones after.'
@@ -93,7 +96,6 @@ const descr = [
 const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
 const imageMarginNone = {marginTop: '0rem', marginBottom: '0rem'};
-const color = '#F5C0B9'
 
 // Returns style based on breakpoints, of which there are 2
 const decideMarginWidth = function(value) {
@@ -175,7 +177,7 @@ class Okizeme extends React.Component {
               data-aos-delay='200'
               data-aos-once={true}
             > 
-              {'Okizeme'} 
+              {title} 
             </h3>
 
             <div className='intro'>
@@ -203,7 +205,7 @@ class Okizeme extends React.Component {
                     <span className='toolTip'> Live website </span> 
                   </a> 
                   <a 
-                    href='https://www.figma.com/proto/MgWQKucfltlZVzvE0cxUhQ/Okizeme-Design?page-id=0%3A1&node-id=1%3A2&viewport=411%2C660%2C0.10949171334505081&scaling=scale-down-width'
+                    href={linkD}
                     target='_blank' 
                     rel='noopener noreferrer'
                   >
@@ -211,7 +213,7 @@ class Okizeme extends React.Component {
                     <span className='toolTip'> Desktop prototype </span> 
                   </a> 
                   <a 
-                    href='https://www.figma.com/proto/MgWQKucfltlZVzvE0cxUhQ/Okizeme-Design?page-id=106%3A81&node-id=106%3A82&viewport=366%2C-150%2C0.25410154461860657&scaling=scale-down'
+                    href={linkM}
                     target='_blank'
                     rel='noopener noreferrer'
                   >

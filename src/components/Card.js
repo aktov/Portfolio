@@ -87,7 +87,7 @@ function Info(props) {
 
   const handleResize = () => {
     setCount(2);
-    console.log('testing ' + mouseEnterCount)
+    // console.log('testing ' + mouseEnterCount)
     setHeight('96px');
     setUpper('auto');
   }
@@ -105,14 +105,14 @@ function Info(props) {
     if (ref.current && mouseEnterCount === 1) {
       getCollapsedHeight();
       incrementCount();
-      console.log('collapsed height: ' + collapsedHeight);
+      // console.log('collapsed height: ' + collapsedHeight);
     } 
 
     // Get expanded height on first mouse leave
     if (props.mouseEntered && mouseEnterCount === 2) {
       getExpandedHeight();
       incrementCount();
-      console.log('expanded height: ' + expandedHeight);
+      // console.log('expanded height: ' + expandedHeight);
     }
 
   }, [props.mouseEntered])

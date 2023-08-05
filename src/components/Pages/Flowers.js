@@ -9,8 +9,8 @@ import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
 
-import banner from '../../images/Banners/banner_flowers.png';
-import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_flowers.png';
+import {getEntryProperty} from '../WorkEntries.js'; // This is a table imported from this file, make edits to case studies and designs there
+
 import figma from '../../images/figmaLogo.svg';
 
 import picOrigM from '../../images/Pages/flowers/OriginalMock.png';
@@ -39,7 +39,12 @@ import picColorDesk from '../../images/Pages/flowers/ColorStylesDesk.png';
 import picText from '../../images/Pages/flowers/TextStyles.png';
 import picTextDesk from '../../images/Pages/flowers/TextStylesDesk.png';
 
-
+const tags = getEntryProperty('designs', 'flowers', 'tags')
+const color = getEntryProperty('designs', 'flowers', 'color')
+const title = getEntryProperty('designs', 'flowers', 'title')
+const banner = getEntryProperty('designs', 'flowers', 'banner')
+const banner_mob = getEntryProperty('designs', 'flowers', 'bannerM')
+const link = getEntryProperty('designs', 'flowers', 'figma')
 
 const Bullets = (props) => {
   return (
@@ -83,9 +88,6 @@ const Tags = (props) => {
   );
 }
 
-const tags = ['checkout'];
-const link = 'https://www.figma.com/proto/5gbXEMOUCFgvECx3gFsD4Q/Pretty-Nice-Flowers?page-id=205%3A1662&node-id=227%3A4386&viewport=205%2C372%2C0.08&scaling=min-zoom&starting-point-node-id=227%3A4386&hide-ui=1'
-
 const introPoints = [
   'Shipping',
   'Recipient Note',
@@ -115,7 +117,6 @@ const borderShadow = {
   boxShadow: '0px 0px 32px 0px rgba(0, 0, 0, .15)',
   overflow: 'hidden'
 };
-const color = '#92C999'
 
 // Returns style based on breakpoints, of which there are 2
 const decideMarginWidth = function(value) {
@@ -197,7 +198,7 @@ class Flowers extends React.Component {
               data-aos-delay='200'
               data-aos-once={true}
             > 
-              {'Flowers'} 
+              {title} 
             </h3>
 
             <div className='intro'>

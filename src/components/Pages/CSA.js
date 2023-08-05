@@ -9,8 +9,8 @@ import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
 
-import banner from '../../images/Banners/banner_csa.png';
-import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_csa.png';
+import {getEntryProperty} from '../WorkEntries.js'; // This is a table imported from this file, make edits to case studies and designs there
+
 import figmaD from '../../images/figmaD.svg';
 import figmaM from '../../images/figmaM.svg';
 import pic1 from '../../images/Pages/csa/1.png';
@@ -71,6 +71,14 @@ import pic47 from '../../images/Pages/csa/47.png';
 import pic56 from '../../images/Pages/csa/56.png';
 import pic57 from '../../images/Pages/csa/57.png';
 
+const tags = getEntryProperty('casestudies', 'csa', 'tags')
+const color = getEntryProperty('casestudies', 'csa', 'color')
+const title = getEntryProperty('casestudies', 'csa', 'title')
+const banner = getEntryProperty('casestudies', 'csa', 'banner')
+const banner_mob = getEntryProperty('casestudies', 'csa', 'bannerM')
+const linkM = getEntryProperty('casestudies', 'csa', 'figmaM')
+const linkD = getEntryProperty('casestudies', 'csa', 'figmaD')
+
 const Bullets = (props) => {
   return (
   <div className='phrases'>
@@ -112,8 +120,6 @@ const Tags = (props) => {
     </div>
   );
 }
-
-const tags = ['ux design', 'collaboration', 'culture', 'branding'];
 
 const goals = [
   'Learn how to build a strong, communicative relationship with our client, as well as how to be flexible during times where they are unresponsive',
@@ -170,7 +176,6 @@ const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
 const smallerImage = {marginTop: '0rem', width: '100%'}
 const smallerImageLess = {marginTop: '0rem', marginBottom: '2rem', width: '100%'}
-const color = '#DA8484';
 
 // Returns style based on breakpoints, of which there are 2
 const decideMarginWidth = function(value) {
@@ -238,7 +243,7 @@ class CSA extends React.Component {
           />
           <div className='pages' style={decideMarginWidth(this.props.screenWidth)}>
             <Tags names={tags} color={color}/>
-            <h3 className='title'> {'CSA Website Design'} </h3>
+            <h3 className='title'> {title} </h3>
 
             <div className='intro'>
               <div className='col' style={this.props.screenWidth > 768 ? null : {width: '100%'} }> 
@@ -248,7 +253,7 @@ class CSA extends React.Component {
                 <h4 className='heading'> Figma Links </h4>
                 <div className='buttons'>
                   <a 
-                    href='https://www.figma.com/proto/HK3nRrbz73hPQqSlTNTDmu/CSA-Website-Design?node-id=236%3A2&viewport=147%2C303%2C0.03458884358406067&scaling=scale-down-width'
+                    href={linkD}
                     target='_blank' 
                     rel='noopener noreferrer'
                   >
@@ -256,7 +261,7 @@ class CSA extends React.Component {
                     <span className='toolTip'> Desktop prototype </span> 
                   </a> 
                   <a 
-                    href='https://www.figma.com/proto/HK3nRrbz73hPQqSlTNTDmu/CSA-Website-Design?node-id=241%3A0&viewport=176%2C217%2C0.07083262503147125&scaling=scale-down'
+                    href={linkM}
                     target='_blank'
                     rel='noopener noreferrer'
                   >

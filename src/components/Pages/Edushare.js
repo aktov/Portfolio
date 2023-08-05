@@ -9,8 +9,8 @@ import Contact from '../Contact.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
 
-import banner from '../../images/Banners/banner_edushare.png';
-import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_edushare.png';
+import {getEntryProperty} from '../WorkEntries.js'; // This is a table imported from this file, make edits to case studies and designs there
+
 import figma from '../../images/figmaLogo.svg';
 import pic1 from '../../images/Pages/edushare/1.jpg';
 import pic2 from '../../images/Pages/edushare/2.png';
@@ -30,6 +30,13 @@ import pic15 from '../../images/Pages/edushare/15.png';
 import pic16 from '../../images/Pages/edushare/16.png';
 import pic17 from '../../images/Pages/edushare/17.png';
 import pic18 from '../../images/Pages/edushare/18.png';
+
+const tags = getEntryProperty('designs', 'edushare', 'tags')
+const color = getEntryProperty('designs', 'edushare', 'color')
+const title = getEntryProperty('designs', 'edushare', 'title')
+const banner = getEntryProperty('designs', 'edushare', 'banner')
+const banner_mob = getEntryProperty('designs', 'edushare', 'bannerM')
+const link = getEntryProperty('designs', 'edushare', 'figma')
 
 // const Bullets = (props) => {
 //   return (
@@ -73,12 +80,8 @@ const Tags = (props) => {
   );
 }
 
-const tags = ['onboarding', 'signup'];
-
-
 const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
-const color = '#BBE2F2'
 
 // Returns style based on breakpoints, of which there are 2
 const decideMarginWidth = function(value) {
@@ -159,7 +162,7 @@ class Edushare extends React.Component {
               data-aos-delay='200'
               data-aos-once={true}
             > 
-              {'Edushare'} 
+              {title} 
             </h3>
 
             <div className='intro'>
@@ -179,7 +182,7 @@ class Edushare extends React.Component {
                 <h4 className='heading'> Figma </h4>
                 <div className='buttons'>
                   <a 
-                    href='https://www.figma.com/proto/zMITtMqtG9hcvJLDGtUC8G/Edushare?node-id=10%3A84&viewport=-523%2C272%2C0.2671932876110077&scaling=scale-down'
+                    href={link}
                     target='_blank' 
                     rel='noopener noreferrer'
                   >

@@ -9,8 +9,8 @@ import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
 
-import banner from '../../images/Banners/banner_ace.png';
-import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_ace.png';
+import {getEntryProperty} from '../WorkEntries.js'; // This is a table imported from this file, make edits to case studies and designs there
+
 import open from '../../images/open.svg';
 
 import pic1 from '../../images/Pages/ace/01.png';
@@ -48,6 +48,15 @@ import pic32 from '../../images/Pages/ace/32.png';
 import pic33 from '../../images/Pages/ace/33.png';
 import pic34 from '../../images/Pages/ace/34.png';
 import pic35 from '../../images/Pages/ace/35.png';
+
+const tags = getEntryProperty('casestudies', 'ace', 'tags')
+const color = getEntryProperty('casestudies', 'ace', 'color')
+const color2 = getEntryProperty('casestudies', 'ace', 'color2')
+const title = getEntryProperty('casestudies', 'ace', 'title')
+const banner = getEntryProperty('casestudies', 'ace', 'banner')
+const banner_mob = getEntryProperty('casestudies', 'ace', 'bannerM')
+const link = getEntryProperty('casestudies', 'ace', 'website')
+
 
 function importImages(r) {
   return r.keys().map(r);
@@ -98,7 +107,6 @@ const Tags = (props) => {
   );
 }
 
-const tags = ['ux design', 'web3', 'blockchain', 'crowdfunding', 'social networking']
 
 const problemGoals = [
   'Better clarity and instructions for our creators',
@@ -125,8 +133,6 @@ const spotlightQuestions = [
 
 const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
-const color = '#FBE7E7'
-const color2 = '#EAA4C1'
 
 const iconGallery = {
   display: 'flex',
@@ -224,7 +230,7 @@ class ACE extends React.Component {
               data-aos-delay='200'
               data-aos-once={true}
             > 
-              {'Artist Crowdfund Exchange'} 
+              {title} 
             </h3>
 
             <div className='intro'>
@@ -244,7 +250,7 @@ class ACE extends React.Component {
                 <h4 className='heading'> Links </h4>
                 <div className='buttons'>
                   <a 
-                    href='https://www.ace.fan/'
+                    href={link}
                     target='_blank' 
                     rel='noopener noreferrer'
                   >

@@ -9,8 +9,8 @@ import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
 
-import banner from '../../images/Banners/banner_boba.png';
-import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_boba.png';
+import {getEntryProperty} from '../WorkEntries.js'; // This is a table imported from this file, make edits to case studies and designs there
+
 import figma from '../../images/figmaLogo.svg';
 import pic1 from '../../images/Pages/boba/1.png';
 import pic2 from '../../images/Pages/boba/2.png';
@@ -25,6 +25,14 @@ import pic10 from '../../images/Pages/boba/10.png';
 import pic11 from '../../images/Pages/boba/11.png';
 import pic12 from '../../images/Pages/boba/12.png';
 import pic13 from '../../images/Pages/boba/13.png';
+
+const tags = getEntryProperty('designs', 'boba', 'tags')
+const color = getEntryProperty('designs', 'boba', 'color')
+const color2 = getEntryProperty('designs', 'boba', 'color2')
+const title = getEntryProperty('designs', 'boba', 'title')
+const banner = getEntryProperty('designs', 'boba', 'banner')
+const banner_mob = getEntryProperty('designs', 'boba', 'bannerM')
+const link = getEntryProperty('designs', 'boba', 'figma')
 
 const Bullets = (props) => {
   return (
@@ -68,8 +76,6 @@ const Tags = (props) => {
   );
 }
 
-const tags = ['selfcare', 'finance'];
-
 const features = [
   'Calendar for users to easily see which days they bought boba',
   'A list view, to show the same info but in a different way, possibly with more detail than what a calendar can show at a glance',
@@ -103,8 +109,6 @@ const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
 const smallerImage = {marginTop: '0rem', width: '80%'}
 const smallerImageLess = {marginTop: '0rem', marginBottom: '2rem', width: '80%'}
-const color = '#E0F1F3'
-const color2 = '#BEE3E8'
 
 // Returns style based on breakpoints, of which there are 2
 const decideMarginWidth = function(value) {
@@ -185,7 +189,7 @@ class Boba extends React.Component {
               data-aos-delay='200'
               data-aos-once={true}
             > 
-              {'Boba Tracker'} 
+              {title} 
             </h3>
 
             <div className='intro'>
@@ -205,7 +209,7 @@ class Boba extends React.Component {
                 <h4 className='heading'> Figma </h4>
                 <div className='buttons'>
                   <a 
-                    href='https://www.figma.com/proto/A4YCf5Qx8THEGF7iDGfwJa/Boba-Buddy?node-id=6%3A755&viewport=589%2C191%2C0.09667579084634781&scaling=scale-down'
+                    href={link}
                     target='_blank' 
                     rel='noopener noreferrer'
                   >
