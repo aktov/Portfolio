@@ -1215,7 +1215,7 @@ div.content {
         position: relative;
         width: 50%;
         margin: auto;
-        margin-bottom: $sectionMarginBottom;
+        // margin-bottom: $sectionMarginBottom;
 
         // position: relative;
         // width: 100%;
@@ -1856,14 +1856,15 @@ div.content {
 
         padding-left: 2rem;
         font-family: 'Poppins';
-        font-weight: 400;
+        font-weight: 500;
         font-size: '.875rem';
     }
+
 }
 
 .footerM {
     width: 100%;
-    height: toRem(50);
+    height: 0;
     z-index: 10;
 
     display: flex;
@@ -1878,18 +1879,151 @@ div.content {
 
         padding-left: 2rem;
         font-family: 'Poppins';
-        font-weight: 400;
+        font-weight: 500;
         font-size: '.875rem';
+    }
+}
+
+.footerSeeAlso {
+    width: 100%;
+    // margin-top: toRem(128);
+    padding-top: toRem(64);
+    padding-bottom: toRem(196);
+    
+    @media screen and (min-width: 1280px){    
+        padding-left: 25%;
+        padding-right: 25%;      
+    }
+
+
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    background-color: #FAFAFA;
+
+    div.container {
+        margin: 0 auto;
+
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        row-gap: toRem(32);
+    }
+
+    // .titleUnderscore {
+    //     position: relative;
+    //     width: toRem(64);
+    //     height: toRem(6);
+    //     border-radius: toRem(16);
+
+    //     margin-top: toRem(-40);
+    //     margin-bottom: toRem(32);
+
+    //     background-color: $baseTextColor;
+    // }
+
+    a {
+        margin: toRem(16) 0;
+        
+        text-decoration: none;
+    }
+
+    h3 {
+        width: 100%;
+        font-size: toRem(48);
+
+        &.title {
+            width: 100%;
+            max-width: 100%;
+            margin-top: 0;
+            margin-bottom: toRem(30);
+
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: toRem(48);
+
+            @media screen and (min-width: 768px){
+                font-size: toRem(64);          
+            }
+        }
+
+        &.number {
+            margin-top: 0;
+            margin-bottom: toRem(8);
+        }
+    }
+
+    h4 {
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: toRem(20);
+
+        &.heading {
+            margin: 0;
+            margin-bottom: toRem(8);
+            font-family: 'Poppins', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: $size_h4;    /* 22pt */
+
+            @media screen and (min-width: 768px){
+                font-size: toRem(28);          
+            }
+        }   
+
+        &.subheading {
+            margin: 0;
+            margin-bottom: toRem(8);
+            font-family: 'Poppins', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: $size_h5;    /* 18pt */
+
+            @media screen and (min-width: 768px){
+                font-size: toRem(20);          
+            }
+        }   
+    }
+
+    h5 {
+        margin: toRem(3) 0;
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+    }
+
+    p {
+        margin-top: toRem(5);
+        width: 100%;
+
+        @media screen and (min-width: 768px){
+            width: 70%;
+        }
+
+        &.bold {
+            font-weight: 600;
+        }
     }
 }
 
 button.topButton {
     position: fixed;
-    bottom: toRem(30);
-    right: toRem(30);
-    width: toRem(50);
-    height: toRem(50);
-    padding: toRem(10) toRem(20);
+    bottom: toRem(32);
+    right: toRem(32);
+    width: toRem(48);
+    height: toRem(48);
+
+    @media screen and (min-width: 768px){
+        bottom: toRem(48);
+        right: toRem(48);
+        width: toRem(64);
+        height: toRem(64);
+    }
+
     z-index: 10;
 
     display: flex;
@@ -1904,6 +2038,14 @@ button.topButton {
 
     opacity: 1;
     transition: opacity ease-out $transitionTimingCard;
+
+    img {
+        width: toRem(24);
+
+        @media screen and (min-width: 768px){
+            width: toRem(32);
+        }
+    }
 }
 
 button.hide.topButton{

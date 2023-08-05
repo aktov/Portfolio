@@ -3,6 +3,7 @@ import LazyLoad from 'react-lazyload';
 
 import Header from '../Header.js';
 import Footer from '../Footer.js';
+import FooterSeeAlso from '../FooterSeeAlso.js';
 import NavMenu from '../NavMenu.js';
 import Contact from '../Contact.js';
 import Phrase from '../Phrase.js';
@@ -42,6 +43,7 @@ import pic25 from '../../images/Pages/alike/new/25.png';
 // import persona2 from '../../images/Pages/alike/6.png';
 // import picPersona from '../../images/Pages/alike/Persona.png';
 
+const key = getEntryProperty('casestudies', 'alike', 'key')
 const tags = getEntryProperty('casestudies', 'alike', 'tags')
 const color = getEntryProperty('casestudies', 'alike', 'color')
 const title = getEntryProperty('casestudies', 'alike', 'title')
@@ -612,7 +614,7 @@ class Alike extends React.Component {
                 Check out my resume entry for Alike or contact me to hear more about my other designs, accomplishments, and impact at Alike!
               </p>   
               {/* <p>
-                Or check out my other work! I highly recommend Artist Crowdfund Exchange!
+                Or check out my other work! I highly recommend 
               </p> */}
             </div>
 
@@ -621,6 +623,7 @@ class Alike extends React.Component {
       </div>
 
       <TopButton color={color} />
+      <FooterSeeAlso page={key} width={decideMarginWidth(this.props.screenWidth)} />
       <Footer screenWidth={this.props.screenWidth} />
       </>
     );

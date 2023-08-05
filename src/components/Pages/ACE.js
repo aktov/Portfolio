@@ -3,6 +3,7 @@ import LazyLoad from 'react-lazyload';
 
 import Header from '../Header.js';
 import Footer from '../Footer.js';
+import FooterSeeAlso from '../FooterSeeAlso.js';
 import NavMenu from '../NavMenu.js';
 import Contact from '../Contact.js';
 import Phrase from '../Phrase.js';
@@ -49,6 +50,7 @@ import pic33 from '../../images/Pages/ace/33.png';
 import pic34 from '../../images/Pages/ace/34.png';
 import pic35 from '../../images/Pages/ace/35.png';
 
+const key = getEntryProperty('casestudies', 'ace', 'key')
 const tags = getEntryProperty('casestudies', 'ace', 'tags')
 const color = getEntryProperty('casestudies', 'ace', 'color')
 const color2 = getEntryProperty('casestudies', 'ace', 'color2')
@@ -887,6 +889,7 @@ class ACE extends React.Component {
       </div>
 
       <TopButton color={color2} />
+      <FooterSeeAlso page={key} width={decideMarginWidth(this.props.screenWidth)} />
       <Footer screenWidth={this.props.screenWidth} />
       </>
     );

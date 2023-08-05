@@ -5,7 +5,7 @@ class Footer extends React.Component {
 
   render() {
     return (
-      <div className={this.props.screenWidth <= 1280 ? 'footerM' : 'footer'} style={this.props.screenWidth < 1280 && this.props.color ? {backgroundColor: '#405E7A'} : null}>
+      <div className={this.props.screenWidth <= 768 ? 'footerM' : 'footer'} >
         <h6> Designed and built by Alex Tov </h6>
       </div>
     );

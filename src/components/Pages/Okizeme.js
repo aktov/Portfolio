@@ -3,6 +3,7 @@ import LazyLoad from 'react-lazyload';
 
 import Header from '../Header.js';
 import Footer from '../Footer.js';
+import FooterSeeAlso from '../FooterSeeAlso.js';
 import NavMenu from '../NavMenu.js';
 import Contact from '../Contact.js';
 import Phrase from '../Phrase.js';
@@ -38,6 +39,7 @@ import picDesktop2 from '../../images/Pages/okizeme/Desktop02.png';
 import picDesktop3 from '../../images/Pages/okizeme/Desktop03.png';
 import picDesktop4 from '../../images/Pages/okizeme/Desktop04.png';
 
+const key = getEntryProperty('casestudies', 'okizeme', 'key')
 const tags = getEntryProperty('casestudies', 'okizeme', 'tags')
 const color = getEntryProperty('casestudies', 'okizeme', 'color')
 const title = getEntryProperty('casestudies', 'okizeme', 'title')
@@ -399,6 +401,7 @@ class Okizeme extends React.Component {
       </div>
 
       <TopButton color={color} />
+      <FooterSeeAlso page={key} width={decideMarginWidth(this.props.screenWidth)} />
       <Footer screenWidth={this.props.screenWidth} />
       </>
     );

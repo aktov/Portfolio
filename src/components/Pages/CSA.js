@@ -3,6 +3,7 @@ import LazyLoad from 'react-lazyload';
 
 import Header from '../Header.js';
 import Footer from '../Footer.js';
+import FooterSeeAlso from '../FooterSeeAlso.js';
 import NavMenu from '../NavMenu.js';
 import Contact from '../Contact.js';
 import Phrase from '../Phrase.js';
@@ -71,6 +72,7 @@ import pic47 from '../../images/Pages/csa/47.png';
 import pic56 from '../../images/Pages/csa/56.png';
 import pic57 from '../../images/Pages/csa/57.png';
 
+const key = getEntryProperty('casestudies', 'csa', 'key')
 const tags = getEntryProperty('casestudies', 'csa', 'tags')
 const color = getEntryProperty('casestudies', 'csa', 'color')
 const title = getEntryProperty('casestudies', 'csa', 'title')
@@ -749,6 +751,7 @@ class CSA extends React.Component {
       </div>
 
       <TopButton color={color} />
+      <FooterSeeAlso page={key} width={decideMarginWidth(this.props.screenWidth)} />
       <Footer screenWidth={this.props.screenWidth} />
       </>
     );

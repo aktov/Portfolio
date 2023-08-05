@@ -3,6 +3,7 @@ import LazyLoad from 'react-lazyload';
 
 import Header from '../Header.js';
 import Footer from '../Footer.js';
+import FooterSeeAlso from '../FooterSeeAlso.js';
 import NavMenu from '../NavMenu.js';
 import Contact from '../Contact.js';
 import Phrase from '../Phrase.js';
@@ -26,6 +27,7 @@ import pic11 from '../../images/Pages/boba/11.png';
 import pic12 from '../../images/Pages/boba/12.png';
 import pic13 from '../../images/Pages/boba/13.png';
 
+const key = getEntryProperty('designs', 'boba', 'key')
 const tags = getEntryProperty('designs', 'boba', 'tags')
 const color = getEntryProperty('designs', 'boba', 'color')
 const color2 = getEntryProperty('designs', 'boba', 'color2')
@@ -415,6 +417,7 @@ class Boba extends React.Component {
       </div>
 
       <TopButton color={color} />
+      <FooterSeeAlso page={key} width={decideMarginWidth(this.props.screenWidth)} />
       <Footer screenWidth={this.props.screenWidth} />
       </>
     );

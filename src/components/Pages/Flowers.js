@@ -3,6 +3,7 @@ import LazyLoad from 'react-lazyload';
 
 import Header from '../Header.js';
 import Footer from '../Footer.js';
+import FooterSeeAlso from '../FooterSeeAlso.js';
 import NavMenu from '../NavMenu.js';
 import Contact from '../Contact.js';
 import Phrase from '../Phrase.js';
@@ -39,6 +40,7 @@ import picColorDesk from '../../images/Pages/flowers/ColorStylesDesk.png';
 import picText from '../../images/Pages/flowers/TextStyles.png';
 import picTextDesk from '../../images/Pages/flowers/TextStylesDesk.png';
 
+const key = getEntryProperty('designs', 'flowers', 'key')
 const tags = getEntryProperty('designs', 'flowers', 'tags')
 const color = getEntryProperty('designs', 'flowers', 'color')
 const title = getEntryProperty('designs', 'flowers', 'title')
@@ -390,6 +392,7 @@ class Flowers extends React.Component {
       </div>
 
       <TopButton color={color} />
+      <FooterSeeAlso page={key} width={decideMarginWidth(this.props.screenWidth)} />
       <Footer screenWidth={this.props.screenWidth} />
       </>
     );

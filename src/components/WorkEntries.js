@@ -29,6 +29,7 @@ import banner_okizeme from '../images/Banners/banner_okizeme.png';
 import banner_hon from '../images/Banners/banner_hon.png';
 import banner_csa from '../images/Banners/banner_csa.png';
 
+import banner_stacker from '../images/Banners/banner_stacker.png';
 import banner_boba from '../images/Banners/banner_boba.png';
 import banner_flowers from '../images/Banners/banner_flowers.png';
 import banner_edushare from '../images/Banners/banner_edushare.png';
@@ -40,6 +41,7 @@ import bannerM_okizeme from '../images/Thumbnails/Mobile/cardImageM_okizeme.png'
 import bannerM_hon from '../images/Thumbnails/Mobile/cardImageM_hon.png';
 import bannerM_csa from '../images/Thumbnails/Mobile/cardImageM_csa.png';
 
+import bannerM_stacker from '../images/Thumbnails/Mobile/cardImageM_stacker.png';
 import bannerM_boba from '../images/Thumbnails/Mobile/cardImageM_boba.png';
 import bannerM_flowers from '../images/Thumbnails/Mobile/cardImageM_flowers.png';
 import bannerM_edushare from '../images/Thumbnails/Mobile/cardImageM_edushare.png';
@@ -93,7 +95,7 @@ const entries = {
     },
     {
       title: 'Okizeme',
-      descr: 'Redesigning a modern look to elevate Okizeme\'s brand and identity.',
+      descr: 'Designing a modern look to elevate Okizeme\'s brand and identity.',
       // descr: 'A modern redesign that better incorporates my client\'s company branding.',
       image: img_okizeme,
       imageM: imgM_okizeme,
@@ -164,14 +166,15 @@ const entries = {
       descr: 'A minigame featuring Figma\'s new variables feature. A more in-depth guide on how I made this is coming soon!',
       image: img_stacker,
       imageM: imgM_stacker,
-      banner: banner_boba,
-      bannerM: bannerM_boba,
+      banner: banner_stacker,
+      bannerM: bannerM_stacker,
       tags: ['variables', 'minigame'],
       color: '#F8EEEE',
       color2: '#FFC6CA',
       figma: 'https://www.figma.com/proto/Sobk5FvyGSjzB6KM7Rfrm7/Stacker?page-id=0%3A1&type=design&node-id=146-692&viewport=-2952%2C-1585%2C0.18&t=SngxUk9oa4V2el6S-1&scaling=min-zoom&starting-point-node-id=146%3A692&mode=design',
-      default: 'https://www.figma.com/proto/Sobk5FvyGSjzB6KM7Rfrm7/Stacker?page-id=0%3A1&type=design&node-id=146-692&viewport=-2952%2C-1585%2C0.18&t=SngxUk9oa4V2el6S-1&scaling=min-zoom&starting-point-node-id=146%3A692&mode=design',
+      // default: 'https://www.figma.com/proto/Sobk5FvyGSjzB6KM7Rfrm7/Stacker?page-id=0%3A1&type=design&node-id=146-692&viewport=-2952%2C-1585%2C0.18&t=SngxUk9oa4V2el6S-1&scaling=min-zoom&starting-point-node-id=146%3A692&mode=design',
       // link: 'https://www.linkedin.com/feed/update/urn:li:activity:7082475571913363456/'
+      link: '/stacker',
       key: 'stacker'
     },
     {

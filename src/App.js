@@ -18,7 +18,8 @@ import Okizeme from './components/Pages/Okizeme.js';
 import Hon from './components/Pages/Hon.js'; 
 import CSA from './components/Pages/CSA.js';
 
-// Mockups
+// Designs
+import Stacker from './components/Pages/Stacker.js'; 
 import Boba from './components/Pages/Boba.js'; 
 import Flowers from './components/Pages/Flowers.js'; 
 import Edushare from './components/Pages/Edushare.js'; 
@@ -92,6 +93,9 @@ class App extends React.Component {
           </Route>
 
           {/* Mockups */}
+          <Route path='/stacker'>
+            <Stacker screenWidth={this.state.screenWidth}/>
+          </Route>
           <Route path='/boba'>
             <Boba screenWidth={this.state.screenWidth}/>
           </Route>
