@@ -159,7 +159,7 @@ function Card(props) {
           // style={props.screenWidth >= 480 ? {margin: '2rem 1.5rem'} : {margin: '1rem 1rem'}}
           onMouseEnter={handleMouseEnter} 
           onMouseLeave={handleMouseLeave}
-          data-aos='fade' 
+          data-aos='fade-up' 
           data-aos-offset='50' 
           data-aos-easing='ease-out-sine'
           data-aos-duration='400'

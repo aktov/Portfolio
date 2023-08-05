@@ -12,7 +12,7 @@ const JobListing = (props) => {
       <div 
         className='listing'
         style={props.highlight ? {paddingLeft: '5%'} : null}
-        data-aos='fade' 
+        data-aos='fade-up' 
         data-aos-offset='50' 
         data-aos-easing='ease-out-sine'
         data-aos-duration='400'
@@ -82,7 +82,7 @@ const JobListing = (props) => {
     :
       <div 
         className='listing'
-        data-aos='fade' 
+        data-aos='fade-up' 
         data-aos-offset='50' 
         data-aos-easing='ease-out-sine'
         data-aos-duration='400'
@@ -143,15 +143,7 @@ const JobListing = (props) => {
 class Experience extends React.Component {
   render() {
     return (
-        <div 
-          className='experience'
-          data-aos='fade' 
-          data-aos-offset='100' 
-          data-aos-easing='ease-out-sine'
-          data-aos-duration='400'
-          data-aos-delay='300'
-          data-aos-once={true}
-        >
+        <div>
           <JobListing 
             screenWidth={this.props.screenWidth}
             title='UI/UX Designer'

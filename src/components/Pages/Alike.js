@@ -13,16 +13,35 @@ import banner from '../../images/Banners/banner_alike.png';
 import banner_mob from '../../images/Thumbnails/Mobile/cardImageM_alike.png';
 // import open from '../../images/open.svg';
 
-import pic3 from '../../images/Pages/alike/3.png';
-import pic4 from '../../images/Pages/alike/4.png';
-import pic5 from '../../images/Pages/alike/5.png';
-import pic6 from '../../images/Pages/alike/6.png';
-import pic7 from '../../images/Pages/alike/7.png';
-import pic8 from '../../images/Pages/alike/8.png';
-import pic9 from '../../images/Pages/alike/9.png';
-import pic10 from '../../images/Pages/alike/10.png';
-import pic11 from '../../images/Pages/alike/11.png';
-import picPersona from '../../images/Pages/alike/Persona.png';
+import pic1 from '../../images/Pages/alike/new/01.png';
+import pic2 from '../../images/Pages/alike/new/02.png';
+import pic3 from '../../images/Pages/alike/new/03.png';
+import pic4 from '../../images/Pages/alike/new/04.png';
+import pic5 from '../../images/Pages/alike/new/05.png';
+import pic6 from '../../images/Pages/alike/new/06.png';
+import pic7 from '../../images/Pages/alike/new/07.png';
+import pic8 from '../../images/Pages/alike/new/08.png';
+import pic9 from '../../images/Pages/alike/new/09.png';
+import pic10 from '../../images/Pages/alike/new/10.png';
+import pic11 from '../../images/Pages/alike/new/11.png';
+import pic12 from '../../images/Pages/alike/new/12.png';
+import pic13 from '../../images/Pages/alike/new/13.png';
+import pic14 from '../../images/Pages/alike/new/14.png';
+import pic15 from '../../images/Pages/alike/new/15.png';
+import pic16 from '../../images/Pages/alike/new/16.png';
+import pic17 from '../../images/Pages/alike/new/17.png';
+import pic18 from '../../images/Pages/alike/new/18.png';
+import pic19 from '../../images/Pages/alike/new/19.png';
+import pic20 from '../../images/Pages/alike/new/20.png';
+import pic21 from '../../images/Pages/alike/new/21.png';
+import pic22 from '../../images/Pages/alike/new/22.png';
+import pic23 from '../../images/Pages/alike/new/23.png';
+import pic24 from '../../images/Pages/alike/new/24.png';
+import pic25 from '../../images/Pages/alike/new/25.png';
+
+// import persona1 from '../../images/Pages/alike/5.png';
+// import persona2 from '../../images/Pages/alike/6.png';
+// import picPersona from '../../images/Pages/alike/Persona.png';
 
 const Bullets = (props) => {
   return (
@@ -45,7 +64,7 @@ const Image = (props) => {
           src={props.src} 
           alt='' 
           draggable='false'           
-          data-aos='fade' 
+          data-aos='fade-up' 
           data-aos-offset='50' 
           data-aos-easing='ease-out-sine'
           data-aos-duration='400'
@@ -86,9 +105,9 @@ const survey = [
 ];
 
 
-const imageMarginNoTop = {marginTop: '0rem'};
+// const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
-const smallerImage = {marginTop: '0rem', width: '70%'}
+// const smallerImage = {marginTop: '0rem', width: '70%'}
 const color = '#688CD0'
 
 // Returns style based on breakpoints, of which there are 2
@@ -215,7 +234,7 @@ class Alike extends React.Component {
                 <h4 className='heading'> Summary </h4>
                 <p> 
                 In addition to updating user flows and improving user experiences, my main objective was to tackle Alike's primary goal at the time, growth, 
-                without sacrificing the company's mission of pushing video to the forefront of networking.
+                without sacrificing the company's mission of elevating video to the forefront of community interactions.
                 </p> 
                 {/* <h4 className='heading'> Team </h4>
                 <p> I worked directly with the CEO. </p>
@@ -236,6 +255,11 @@ class Alike extends React.Component {
                 We want to bring profiles to life by incorporating video, in addition to just photos and texts, because we believe that it emphasizes an individual's personality,
                 all in hopes that it'll inspire more genuine connections and conversations for everyone.
               </p>
+              {/* <br/>
+              <div className='imageGallery'>
+                <Image src={persona1} style={imageMarginLessBottom}/>
+                <Image src={persona2} style={imageMarginLessBottom}/>
+              </div> */}
             </div>    
 
             <div className='section'>
@@ -282,6 +306,13 @@ class Alike extends React.Component {
               <p>
               Users wanted to look their best at the time of onboarding, which was rare.
               </p>
+              <br/>
+
+              <div className='imageGallery'>
+                <Image src={pic1} style={imageMarginLessBottom}/>
+                <Image src={pic2} style={imageMarginLessBottom}/>
+                <Image src={pic3} style={imageMarginLessBottom}/>
+              </div>
             </div>
             
             <div className='section'>
@@ -368,6 +399,12 @@ class Alike extends React.Component {
                   </p>
                 </div>
               </div>
+              <br/>
+              <div className='imageGallery'>
+                <Image src={pic4} style={imageMarginLessBottom}/>
+                <Image src={pic5} style={imageMarginLessBottom}/>
+                <Image src={pic6} style={imageMarginLessBottom}/>
+              </div>
               <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
               
               <h3 className='number'> 02. </h3>
@@ -396,6 +433,12 @@ class Alike extends React.Component {
                   </p>
                 </div>
               </div>
+              <br/>
+              <div className='imageGallery'>
+                <Image src={pic7} style={imageMarginLessBottom}/>
+                <Image src={pic8} style={imageMarginLessBottom}/>
+                <Image src={pic9} style={imageMarginLessBottom}/>
+              </div>
               <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
               
               <h3 className='number'> 03. </h3>
@@ -423,6 +466,15 @@ class Alike extends React.Component {
                     Increased our conversion rate by another 40%.
                   </p>
                 </div>
+              </div>
+              <br/>
+              <div className='imageGallery'>
+                <Image src={pic10} style={imageMarginLessBottom}/>
+                <Image src={pic11} style={imageMarginLessBottom}/>
+              </div>
+              <div className='imageGallery'>
+                <Image src={pic12} style={imageMarginLessBottom}/>
+                <Image src={pic13} style={imageMarginLessBottom}/>
               </div>
             </div>
 
@@ -498,14 +550,47 @@ class Alike extends React.Component {
               </>
               }
             </div>
-            
+          
+            */}
+
             <div className='section'>
-              <SectionTitle title='Highlights' color={color}/> 
+              <SectionTitle title='Other designs I worked on' color={color}/> 
+              <h4 className='heading'> Camera update </h4>
               <p>
-                I can't unveil too much yet since this feature is in the works but here's a sneak peak at some screens!
+                Users requested that we change the white in our camera page to black to be consistent with their other camera experiences.
               </p>
-              <Image src={this.props.screenWidth > 768 ? pic3 : pic10} style={imageMarginLessBottom}/>
-            </div> */}
+              <div className='imageGallery'>
+                <Image src={pic14} style={imageMarginLessBottom}/>
+                <Image src={pic15} style={imageMarginLessBottom}/>
+                <Image src={pic16} style={imageMarginLessBottom}/>
+              </div>
+              <br/> <br/> <br/>
+
+              <h4 className='heading'> Highlights </h4>
+              <p>
+                I'm not able to unveil details of this feature, but here's a sneak peak at its first iteration.
+              </p>
+              <div className='imageGallery'>
+                <Image src={pic17} style={imageMarginLessBottom}/>
+                <Image src={pic18} style={imageMarginLessBottom}/>
+                <Image src={pic19} style={imageMarginLessBottom}/>
+              </div>
+              <br/> <br/> <br/>
+              
+              <h4 className='heading'> Monetization </h4>
+              <p>
+                Similarly, here are the first iteration of our monetization screens.
+              </p>
+              <div className='imageGallery'>
+                <Image src={pic20} style={imageMarginLessBottom}/>
+                <Image src={pic21} style={imageMarginLessBottom}/>
+                <Image src={pic22} style={imageMarginLessBottom}/>
+                <Image src={pic23} style={imageMarginLessBottom}/>
+                <Image src={pic24} style={imageMarginLessBottom}/>
+                <Image src={pic25} style={imageMarginLessBottom}/>
+              </div>
+              <br/> <br/> <br/>
+            </div>
 
             <div className='section'>
               <SectionTitle title='Final Thoughts' color={color}/> 

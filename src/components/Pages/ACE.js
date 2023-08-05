@@ -41,6 +41,13 @@ import pic25 from '../../images/Pages/ace/25.png';
 import pic26 from '../../images/Pages/ace/26.png';
 import pic27 from '../../images/Pages/ace/27.png';
 import pic28 from '../../images/Pages/ace/28.png';
+import pic29 from '../../images/Pages/ace/29.png';
+import pic30 from '../../images/Pages/ace/30.png';
+import pic31 from '../../images/Pages/ace/31.png';
+import pic32 from '../../images/Pages/ace/32.png';
+import pic33 from '../../images/Pages/ace/33.png';
+import pic34 from '../../images/Pages/ace/34.png';
+import pic35 from '../../images/Pages/ace/35.png';
 
 function importImages(r) {
   return r.keys().map(r);
@@ -257,9 +264,10 @@ class ACE extends React.Component {
                 data-aos-delay='400'
                 data-aos-once={true}
               >
-                <h4> Improving the discoverability of creator-empowered features. </h4>
+                {/* <h4> Improving the discoverability of creator-empowered features. </h4> */}
+                <h4 className='heading'> Summary </h4>
                 <p>
-                  
+                  Here's the story of how we tackled our most pressing issue afflicting our Access Tokens feature, where I'll highlight our goals, design process, and solutions.
                 </p>
                 <br/>
 
@@ -542,6 +550,12 @@ class ACE extends React.Component {
                   </p>
                 </div>
               </div>
+              <br/>
+              <div className='imageGallery'>
+                <Image src={pic9} style={imageMarginLessBottom}/>
+                <Image src={pic6} style={imageMarginLessBottom}/>
+                <Image src={pic29} style={imageMarginLessBottom}/>
+              </div>
 
               <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
               
@@ -665,6 +679,12 @@ class ACE extends React.Component {
                   </p>
                 </div>
               </div>
+              <br/>
+              <div className='imageGallery'>
+                <Image src={pic30} style={imageMarginLessBottom}/>
+                <Image src={pic31} style={imageMarginLessBottom}/>
+                <Image src={pic32} style={imageMarginLessBottom}/>
+              </div>
             </div>
 
             <div className='section'>
@@ -691,22 +711,56 @@ class ACE extends React.Component {
               <SectionTitle title='Design Showcase' color={color2}/> 
               <h4 className='heading'> My designs of other features </h4>
               <p>
-                I designed a wide variety of other features on ACE, several of which were successfully shipped.
+                I designed a wide variety of other features on ACE, several of which were successfully shipped. 
+              </p>
+              <p>
+                I won't go into the details and design processes for these, since most of these features had many routes of engagement which required separate research and testing. <br/>
+                If you want to hear more about these, feel free to contact me and we can schedule a chat!
+              </p>
+              <p className='bold'>
+                Please be patient, as these images might take a while to load.
+              </p>
+              <br/> <br/> <br/>
+
+              <h4 className='heading'> Profile </h4>
+              <p>
+                Arguably the most important page to our users, so meticulously researched, designed, and iterated to ensure it satisfied our users' expectations. <br/>
               </p>
               <br/>
               <div className='imageGallery'>
-                <Image src={pic1} style={imageMarginLessBottom}/>
-                <Image src={pic2} style={imageMarginLessBottom}/>
-                <Image src={pic3} style={imageMarginLessBottom}/>
                 <Image src={pic4} style={imageMarginLessBottom}/>
                 <Image src={pic5} style={imageMarginLessBottom}/>
                 <Image src={pic6} style={imageMarginLessBottom}/>
                 <Image src={pic7} style={imageMarginLessBottom}/>
                 <Image src={pic8} style={imageMarginLessBottom}/>
-                <Image src={pic9} style={imageMarginLessBottom}/>
-                <Image src={pic10} style={imageMarginLessBottom}/>
-                <Image src={pic11} style={imageMarginLessBottom}/>
-                <Image src={pic12} style={imageMarginLessBottom}/>
+              </div>
+              <br/> <br/> <br/> <br/> <br/> <br/>
+
+              <h4 className='heading'> Finance & Transactions </h4>
+              <p>
+                Our platform had a variety of transactions, so it was important to be able to visualize all of that from a Transactions page.
+              </p>
+              <p>
+                A wallet page was essential for users to keep track of their funds and purchased goods, like Access Tokens and event tickets.
+              </p>
+              <br/>
+              <div className='imageGallery'>
+                <Image src={pic1} style={imageMarginLessBottom}/>
+                <Image src={pic3} style={imageMarginLessBottom}/>
+                <Image src={pic2} style={imageMarginLessBottom}/>
+                <Image src={pic33} style={imageMarginLessBottom}/>
+                <Image src={pic34} style={imageMarginLessBottom}/>
+                <Image src={pic35} style={imageMarginLessBottom}/>
+              </div> 
+              <br/> <br/> <br/> <br/> <br/> <br/>
+
+              <h4 className='heading'> Events </h4>
+              <p>
+                Our events feature took me several months to research and design. There's a variety of different actions, such as discovering events and buying tickets,
+                just to name a couple.
+              </p>
+              <br/>
+              <div className='imageGallery'>
                 <Image src={pic13} style={imageMarginLessBottom}/>
                 <Image src={pic14} style={imageMarginLessBottom}/>
                 <Image src={pic15} style={imageMarginLessBottom}/>
@@ -714,13 +768,50 @@ class ACE extends React.Component {
                 <Image src={pic17} style={imageMarginLessBottom}/>
                 <Image src={pic18} style={imageMarginLessBottom}/>
                 <Image src={pic19} style={imageMarginLessBottom}/>
+              </div>
+              <br/> <br/> <br/> <br/> <br/> <br/>
+
+              <h4 className='heading'> Access Tokens and Tiers </h4>
+              <p>
+                Access Tokens was our platform's main selling point, allowing creators to define their benefits and make a direct profit.
+              </p>
+              <br/>
+              <div className='imageGallery'>
+                <Image src={pic11} style={imageMarginLessBottom}/>
+                <Image src={pic23} style={imageMarginLessBottom}/>
+              </div>
+              <br/> <br/> <br/> <br/> <br/> <br/>
+
+              <h4 className='heading'> Sharing </h4>
+              <p>
+                Essential to growing the community, the sharing experience needed to be smooth and familiar.
+                I conducted a competitive analysis of sharing features on other social platforms and took the best elements from each.
+              </p>
+              <br/>
+              <div className='imageGallery'>
                 <Image src={pic20} style={imageMarginLessBottom}/>
                 <Image src={pic21} style={imageMarginLessBottom}/>
                 <Image src={pic22} style={imageMarginLessBottom}/>
-                <Image src={pic23} style={imageMarginNoTop}/>
               </div>
+              <br/> <br/> <br/> <br/> <br/> <br/>
+
+              <h4 className='heading'> Settings & Update screen </h4>
+              <p>
+                As we had a lot of features on the app, all the routes and options on the settings page needed to organized in an intuitive manner.
+              </p>
+              <br/>
+              <div className='imageGallery'>
+                <Image src={pic9} style={imageMarginLessBottom}/>
+                <Image src={pic10} style={imageMarginLessBottom}/>
+                <Image src={pic12} style={imageMarginLessBottom}/>
+              </div>
+              <br/> <br/> <br/> <br/> <br/> <br/>
 
               <h4 className='heading'> Modals & Pop Ups </h4>
+              <p>
+                We had various pop ups and modals that were needed for specific tasks, though they mostly existed in transactions flows.
+              </p>
+              <br/>
               <div className='imageGallery'>
                 <Image src={pic24} style={imageMarginLessBottom}/>
                 <Image src={pic25} style={imageMarginLessBottom}/>

@@ -113,7 +113,7 @@ const Tags = (props) => {
   );
 }
 
-const tags = ['ux design', 'collaboration', 'culture', 'student org'];
+const tags = ['ux design', 'collaboration', 'culture', 'branding'];
 
 const goals = [
   'Learn how to build a strong, communicative relationship with our client, as well as how to be flexible during times where they are unresponsive',
@@ -272,24 +272,27 @@ class CSA extends React.Component {
                   My team and I designed a brand new website for CSA, an organization at UCSD. We worked alongside them
                   and made sure that our design was right on track with what they envisioned.
                 </p>
-                <br/>
-                <h4 className='heading'> Team </h4>
-                <p> Alex Tov <br/> Hao Yang He <br/> Elaine Nguyen <br/> Elizabeth Turrubiartes-Campos </p>
-                <br/>
               </div>
             </div>
 
             <div className='section'>
               <SectionTitle title='Intro' color={color}/> 
-              <h4 className='heading'> Motivation </h4>
+              <h4 className='heading'> What's CSA? </h4>
               <p> 
-                Our task was to find ourselves a client in need of a new website and design them a functional website prototype
-                based on their users' needs and goals.
+                Cambodian Student Association (CSA) is a student organization at UCSD, dedicated to promoting Cambodian culture and history. <br/>
               </p>
-              <br/>
-              <h4 className='heading'> Goals </h4>
-              <Bullets info={goals}/>  
+              <br/> <br/> <br/>
+
+              <h4 className='heading'> Team </h4>
+              <p> Alex Tov <br/> Hao Yang He <br/> Elaine Nguyen <br/> Elizabeth Turrubiartes-Campos </p>
             </div>          
+
+            <div className='section'>
+              <SectionTitle title='Goals' color={color}/> 
+              <h4 className='heading'> My personal goals I gave to myself </h4>
+              <br/>
+              <Bullets info={goals}/>  
+            </div>
                       
             <div className='section'>
               <SectionTitle title='Client Interviews' color={color}/> 
@@ -302,7 +305,16 @@ class CSA extends React.Component {
                 what the org is, who their users are, and what goals they wanted the site to meet.
               </p>
               {/* <Bullets info={categories}/>   */}
-              <br/>
+              <br/> <br/> <br/>
+
+              <h4 className='heading'> CSA needed a website </h4>
+              <p> 
+                This was our problem to solve. CSA needed a website to act as a virtual space for current members and new members.
+              </p>
+              <p>
+                It would be the destination for new members, and current ones, to go to learn more about the org, upcoming events, and Cambodian culture.
+              </p>
+              <br/> <br/> <br/>
               {/* <h4 className='subheading'> HISTORY & BACKGROUND </h4>
               <p>
                 Our client is a non-profit organization started in 2004 to provide a community for UCSD Cambodian students, 
@@ -370,9 +382,10 @@ class CSA extends React.Component {
                 organizations? We also interviewed random students on campus, but because CSA was a particularly small org, 
                 we weren’t surprised when a lot of them haven’t heard of CSA. 
               </p>
-              <br/>
+              <br/> <br/> <br/> 
 
               <h4 className='heading'> Personas </h4>
+              <br/>
               {/* <p>
                 We were able to conduct and record data for at least nine interviews, which were a mix of students, alumnis 
                 of the org, and faculty advisors for the org. From talking and interviewing them, we were able to gain a 
@@ -385,6 +398,7 @@ class CSA extends React.Component {
               <Image src={pic3} style={this.props.screenWidth > 768 ? smallerImage : imageMarginNoTop}/>
 
               <h4 className='heading'> Use Cases </h4>
+              <br/>
               {/* <p>
                 For each of the personas, we created a couple user scenarios for each, and various use cases for each of 
                 those scenarios. We tried to cover as many possible user cases that came to mind. We asked ourselves, 

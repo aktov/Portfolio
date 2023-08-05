@@ -1435,14 +1435,20 @@ div.content {
             }
 
             div.imageGallery {
+                width: 130%;
+                margin-left: -15%;
+                margin-bottom: toRem(32);
                 display: flex;
                 flex-flow: row wrap;
-                justify-content: flex-start;
-                align-items: flex-start;   
+                justify-content: center;
+                align-items: flex-start; 
 
                 div.imageHolder {
                     width: 30%;
-                    min-width: toRem(256)
+                    margin-left: toRem(8);
+                    margin-right: toRem(8);
+                    min-width: toRem(256);
+                    max-width: toRem(336)
                 }
             }
         

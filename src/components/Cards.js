@@ -31,7 +31,7 @@ const groupsList = {
   casestudies: [
     {
       title: 'Artist Crowdfund Exchange (ACE)',
-      descr: 'Improving the discoverability of creator-empowered features.',
+      descr: 'Improving the discoverability of empowering features for our creators.',
       image: img_ace,
       imageM: imgM_ace,
       tags: ['ux design', 'web3', 'blockchain', 'crowdfunding', 'social networking'],
@@ -42,7 +42,7 @@ const groupsList = {
     },
     {
       title: 'Alike',
-      descr: 'A showcase of the work I\'ve done for my internship at Alike!',
+      descr: 'Expanding our community by streamlining our sign up experience.',
       image: img_alike,
       imageM: imgM_alike,
       tags: ['ux design', 'social networking', 'dating'],
@@ -52,7 +52,8 @@ const groupsList = {
     },
     {
       title: 'Okizeme',
-      descr: 'A modern redesign that better incorporates my client\'s company branding.',
+      descr: 'Redesigning a modern look to elevate Okizeme\'s brand and identity.',
+      // descr: 'A modern redesign that better incorporates my client\'s company branding.',
       image: img_okizeme,
       imageM: imgM_okizeme,
       tags: ['prototyping', 'branding', 'gaming'],
@@ -64,7 +65,8 @@ const groupsList = {
     },
     {
       title: 'Hon-Media',
-      descr: 'A desktop design for Hon-Media\'s upcoming blog website.',
+      descr: 'Building an attractive blogsite to promote Hon-Media\'s mission.',
+      // descr: 'A desktop design for Hon-Media\'s upcoming blog website.',
       image: img_hon,
       imageM: imgM_hon,
       tags: ['ux design', 'blog', 'design consulting'],
@@ -74,10 +76,11 @@ const groupsList = {
     },
     {
       title: 'CSA Website Design',
-      descr: 'A website prototype for Cambodian Student Association @UCSD, built for desktop & mobile.',
+      descr: 'Designing a virtual hub to foster community engagement for Cambodian Student Association @UCSD.',
+      // descr: 'A website prototype for Cambodian Student Association @UCSD, built for desktop & mobile.',
       image: img_csa,
       imageM: imgM_csa,
-      tags: ['ux design', 'collaboration', 'culture', 'student org'],
+      tags: ['ux design', 'collaboration', 'culture', 'branding'],
       color: '#DA8484',
       figmaD: 'https://www.figma.com/proto/HK3nRrbz73hPQqSlTNTDmu/CSA-Website-Design?node-id=236%3A2&viewport=147%2C303%2C0.03458884358406067&scaling=scale-down-width',
       figmaM: 'https://www.figma.com/proto/HK3nRrbz73hPQqSlTNTDmu/CSA-Website-Design?node-id=241%3A0&viewport=176%2C217%2C0.07083262503147125&scaling=scale-down',

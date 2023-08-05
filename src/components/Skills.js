@@ -49,7 +49,7 @@ class Skills extends React.Component {
           <div 
             className='listing minimized'
             key={key}
-            data-aos='fade' 
+            data-aos='fade-up' 
             data-aos-offset='50' 
             data-aos-easing='ease-out-sine'
             data-aos-duration='400'
