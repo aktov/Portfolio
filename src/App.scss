@@ -1885,23 +1885,28 @@ div.content {
 }
 
 .footerSeeAlso {
+    position: relative;
     width: 100%;
     // margin-top: toRem(128);
-    padding-top: toRem(64);
-    padding-bottom: toRem(196);
+    padding-top: toRem(128);
+    padding-bottom: toRem(176);
     
     @media screen and (min-width: 1280px){    
         padding-left: 25%;
         padding-right: 25%;      
     }
 
-
+    @media screen and (min-width: 768px){    
+        padding-top: toRem(196);    
+    }
+    
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
     align-items: flex-start;
 
-    background-color: #FAFAFA;
+    // background-color: #FAFAFA;
+    background-color: #F0E6E7;
 
     div.container {
         margin: 0 auto;
@@ -1910,7 +1915,7 @@ div.content {
         flex-flow: column;
         justify-content: flex-start;
         align-items: flex-start;
-        row-gap: toRem(32);
+        row-gap: toRem(8);
     }
 
     // .titleUnderscore {
@@ -1926,9 +1931,34 @@ div.content {
     // }
 
     a {
-        margin: toRem(16) 0;
-        
+        margin: toRem(32) 0;
         text-decoration: none;
+
+        &:hover {
+            img {
+                margin-left: toRem(16);
+                fill: white;
+            }
+        }
+
+        div {
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-start;
+            align-content: flex-start;
+            column-gap: toRem(8);
+
+            div.imageHolder {
+                height: toRem(30);
+                
+                img {
+                    width: toRem(20);
+                    height: auto;
+
+                    transition: margin $transitionTimingCard ease-in-out;
+                }
+            }
+        }
     }
 
     h3 {
@@ -1989,13 +2019,6 @@ div.content {
         }   
     }
 
-    h5 {
-        margin: toRem(3) 0;
-        font-family: 'Poppins', sans-serif;
-        font-style: normal;
-        font-weight: 500;
-    }
-
     p {
         margin-top: toRem(5);
         width: 100%;
@@ -2006,6 +2029,18 @@ div.content {
 
         &.bold {
             font-weight: 600;
+        }
+    }
+
+    img.clouds {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+
+        width: 200%;
+
+        @media screen and (min-width: 768px){    
+            width: 100%;
         }
     }
 }

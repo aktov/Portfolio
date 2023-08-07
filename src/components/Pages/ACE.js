@@ -279,14 +279,14 @@ class ACE extends React.Component {
                 </p>
                 <br/>
 
-                <h4 className='heading'> Disclaimer </h4>
+                {/* <h4 className='heading'> Disclaimer </h4>
                 <p className='bold'>
                   Please understand that I'm unable to provide detailed information about our data nor detailed designs.
                 </p>
                 <p>
                   I'm limited in the designs I can showcase, but I'll do my best to incorporate them where necessary.
                 </p>
-                <br/>
+                <br/> */}
                 {/* <h4 className='heading'> Team </h4>
                 <p> We were a small startup, so I worked closely with our founders and engineers. Of the team, here are those I worked most with: </p>
                 <div className='teamColumns'>
