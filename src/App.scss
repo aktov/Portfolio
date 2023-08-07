@@ -1890,6 +1890,7 @@ div.content {
     // margin-top: toRem(128);
     padding-top: toRem(128);
     padding-bottom: toRem(176);
+    overflow: hidden;
     
     @media screen and (min-width: 1280px){    
         padding-left: 25%;
@@ -1897,7 +1898,7 @@ div.content {
     }
 
     @media screen and (min-width: 768px){    
-        padding-top: toRem(196);    
+        padding-top: toRem(228);    
     }
     
     display: flex;
@@ -1907,6 +1908,11 @@ div.content {
 
     // background-color: #FAFAFA;
     background-color: #F0E6E7;
+
+    .title {
+        margin-bottom: toRem(40);
+        height: auto;
+    }
 
     div.container {
         margin: 0 auto;
@@ -1937,7 +1943,6 @@ div.content {
         &:hover {
             img {
                 margin-left: toRem(16);
-                fill: white;
             }
         }
 

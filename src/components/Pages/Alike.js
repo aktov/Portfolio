@@ -38,6 +38,7 @@ import pic22 from '../../images/Pages/alike/new/22.png';
 import pic23 from '../../images/Pages/alike/new/23.png';
 import pic24 from '../../images/Pages/alike/new/24.png';
 import pic25 from '../../images/Pages/alike/new/25.png';
+import picDesignProcess from '../../images/Pages/alike/new/designProcess.svg';
 
 // import persona1 from '../../images/Pages/alike/5.png';
 // import persona2 from '../../images/Pages/alike/6.png';
@@ -112,6 +113,7 @@ const survey = [
 
 // const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
+const imageLarger = {marginTop: '4rem', marginBottom: '4rem', width: '120%'};
 // const smallerImage = {marginTop: '0rem', width: '70%'}
 
 
@@ -362,6 +364,9 @@ class Alike extends React.Component {
               <p>
                 Here was our process for each route:
               </p>
+              {/* <div className='imageGallery'>
+                <Image src={picDesignProcess} style={imageLarger}/>
+              </div> */}
               <ol>
                 <li> Understand </li>
                 <li> Ideate </li>

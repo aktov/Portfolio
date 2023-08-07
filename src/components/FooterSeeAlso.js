@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import {entries, getEntryProperty} from './WorkEntries.js'; // This is a table imported from this file, make edits to case studies and designs there
 
 import SectionTitle from './SectionTitle.js';
+import Title from './Title';
 import img_arrow from '../images/arrow.svg';
 import img_clouds from '../images/cloudCover.svg';
 
@@ -93,9 +94,10 @@ class FooterSeeAlso extends React.Component {
   render() {
     return (
       <div className='footerSeeAlso'>
-        <img className='clouds' src={img_clouds} alt='Read' />
+        <img className='clouds' src={img_clouds} alt='' draggable='false'/>
         <div className='container' style={this.props.width}>
-          <SectionTitle title='Discover more'/>
+          {/* <SectionTitle title='Discover more'/> */}
+          <Title title='discover more' screenWidth={this.props.screenWidth} /> 
 
           {/* This function call passes in the page we're on and grabs 3 other pages to advertise */}
           {this.state.chosenEntries.map((entry) => 
@@ -103,7 +105,7 @@ class FooterSeeAlso extends React.Component {
               <div>
                 <h4 className='subheading'> {entry.title} </h4>
                 <div className='imageHolder'>
-                  <img src={img_arrow} alt='Read' />
+                  <img src={img_arrow} alt='Read' draggable='false'/>
                   {/* <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.5 6.5H16.5M16.5 6.5L11 1M16.5 6.5L11 12" stroke="#444444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="blue"/>
                   </svg> */}
