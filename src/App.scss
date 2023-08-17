@@ -1972,12 +1972,12 @@ div.content {
             div.imageHolder {
                 height: toRem(30);
                 
-                // img {
-                //     width: toRem(20);
-                //     height: auto;
+                img {
+                    width: toRem(20);
+                    height: auto;
 
-                //     transition: margin $transitionTimingCard ease-in-out;
-                // }
+                    transition: margin $transitionTimingCard ease-in-out;
+                }
             }
         }
 
