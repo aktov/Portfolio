@@ -713,6 +713,11 @@ class ACE extends React.Component {
               <p>
                 We observed a significant increase in our KPIs due to implementing solutions 1, 3, and 4, notably the most from solution 3.
               </p>
+              <ol className='solutions'>
+                <li> <span> Increase the discoverability of Access Tokens throughout the platform. </span> </li>
+                <li> <span> A Creator Spotlight program where we guide creators through everything Access Tokens related. </span> </li>
+                <li> <span> Access-gated posts on the activity feed to drive interest and engagement. </span> </li>
+              </ol>
             </div>
 
             <div className='section'>

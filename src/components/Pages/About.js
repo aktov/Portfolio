@@ -50,7 +50,7 @@ class About extends React.Component {
   render() {
     return (
       <div className='about'>
-        <div id='about' className='anchor' style={this.props.screenWidth > 640 ? {top: '15rem'} : {top: '1rem'}}></div>
+        <div id='about' className='anchor' style={this.props.screenWidth > 640 ? {top: '30rem'} : {top: '1rem'}}></div>
         <img src={toplay} alt='clouds' draggable='false' style={{position: 'absolute', width: '100%', top: '0', zIndex: '2'}}/> 
 
         {this.props.screenWidth > 640 ? 

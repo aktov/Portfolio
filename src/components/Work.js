@@ -9,7 +9,7 @@ class Work extends React.Component {
       <div 
         className='work'
       > 
-        <div id='work' className='anchor' style={this.props.screenWidth > 768 ? null : {marginTop: '-1rem'}}></div>
+        <div id='work' className='anchor' style={this.props.screenWidth > 768 ? {marginTop: '-2.5rem'} : {marginTop: '-2rem'}}></div>
         <Title title='Work' screenWidth={this.props.screenWidth} /> 
 
         <h4 className='heading'> {'Case Studies'} </h4>

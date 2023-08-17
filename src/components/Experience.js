@@ -58,6 +58,7 @@ const JobListing = (props) => {
             <h4> {props.title} </h4>
             {/* <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {'@' + props.location} <img src={open}/></a> </h5> */}
             <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {props.location} </a> </h5>
+            {/* <h5> {props.location} </h5> */}
             <h5> {props.period} </h5> 
             <div className='phrases'>
               {props.info.map((phrase, index) => 
@@ -69,6 +70,7 @@ const JobListing = (props) => {
           <>
             <h4> {props.title} </h4>
             <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {props.location} </a> </h5>
+            {/* <h5> {props.location} </h5> */}
             <h5> {props.period} </h5> 
             <div className='phrases'>
               {props.info.map((phrase, index) => 
@@ -152,11 +154,12 @@ class Experience extends React.Component {
             period='August 2021 - October 2022'
             // highlight={true}
             info={[
-              'Collaborated with company founders to create pitch decks for prospective stakeholders and seed fundraising. ',
-              'Reduced the shipment time of our features by leading design prototyping sessions with our developers to ensure they understood the functionality of new features and visual animations prior and during their building. ',
-              'Guided monthly UX-focused feature backlog prioritizations to strike a balance between company goals and user needs. User needs were identified and gathered from conducted interviews and surveys. ',
-              'Built our design system in Figma for brand consistency and design cohesion throughout different screens and features, which increased our design-work efficiency.',
-              'Designed 5 new & major features, 3 of which are currently live on the app, accounting for 50% of the app\'s screens (Onboarding, Events, Profiles). Just Profiles feature alone boosted our DAU by 12% over its first week by presenting users with better options for personalizing and expressing their profiles.'
+              'Established our design process and design system, which boosted design and development efficiency, solidified brand identity, and increased consistency throughout the app.',
+              'Led design and prototyping sessions to enhance alignment with developers, notably reducing shipment times for projects and features.',
+              'Guided monthly UX-focused feature backlog prioritizations to strike a balance between company goals and user needs. ',
+              'Designed and launched 3 major features (Onboarding, Events, Profiles), accounting for majority of the app\'s screens at release. The Profiles feature alone increased DAU by 12% in its first week by presenting users with enhanced profile personalization options.',
+              'Collaborated with company founders to create pitch decks for prospective stakeholders and seed fundraising. '
+
             ]}
           />
           <JobListing 
@@ -167,9 +170,10 @@ class Experience extends React.Component {
             period='March 2021 - August 2021'
             // highlight={true}
             info={[
-              'Worked directly with the CEO to draft wireframes of future features to meet the needs and expectations of our users.',
-              'Updated existing app screens with more accessible designs. Transformed static mockup screens into interactive prototypes to better help the developers visualize app features and functionality. ',
-              'Increased user conversion rate from 20% to 65% by identifying a key issue with our onboarding flow which deterred users from signing up and designing a fix.'
+              'Worked directly with the CEO to conceptualize and design features to drive product growth and user engagement. ',
+              'Converted static mockup screens into interactive prototypes to better help developers visualize app features and functionality.',
+              'Increased user conversion rate from 20% to 65% by identifying and solving a critical issue with our onboarding flow which had deterred users from signing up.'
+
             ]}
           />
           <JobListing 
@@ -180,7 +184,7 @@ class Experience extends React.Component {
             period='September 2020 - July 2021'
             // highlight={true}
             info={[
-              'Spearheaded the company\'s blog website development by implementing the following iterative design process: Research > Wireframes > Testing & Feedback > Prototype > Testing > Build > QA. ',
+              'Spearheaded the company\'s blog website development by implementing an iterative design process.',
               'Organized and guided design critique sessions with project managers and software developers to showcase usability flows and features.',
               'Ensured the web & mobile responsiveness and styling of the blog site by utilizing Tailwind CSS to edit properties of our React components in our front-end code.'
             ]}

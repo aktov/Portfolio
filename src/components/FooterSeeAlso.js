@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import {entries, getEntryProperty} from './WorkEntries.js'; // This is a table imported from this file, make edits to case studies and designs there
+import {entries} from './WorkEntries.js'; // This is a table imported from this file, make edits to case studies and designs there
 
 import SectionTitle from './SectionTitle.js';
 import Title from './Title';
@@ -106,29 +106,12 @@ class FooterSeeAlso extends React.Component {
                 <h4 className='subheading'> {entry.title} </h4>
                 <div className='imageHolder'>
                   <img src={img_arrow} alt='Read' draggable='false'/>
-                  {/* <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.5 6.5H16.5M16.5 6.5L11 1M16.5 6.5L11 12" stroke="#444444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="blue"/>
-                  </svg> */}
                 </div>
               </div>
               <h4 className='heading'> {entry.descr} </h4>
+              {/* <div className='underline'></div> */}
             </Link>
           )}
-
-          {/* <Link to={'/ace'} rel="noopener noreferrer">
-            <h4 className='subheading'> Artist Crowdfund Exchange </h4>
-            <h4 className='heading'> Improving the discoverability of empowering features for our creators. </h4>
-          </Link>
-
-          <Link to={'/alike'} rel="noopener noreferrer">
-            <h4 className='subheading'> Alike </h4>
-            <h4 className='heading'> Expanding our community by streamlining our sign up experience. </h4>
-          </Link>
-
-          <Link to={'/okizeme'} rel="noopener noreferrer">
-            <h4 className='subheading'> Okizeme </h4>
-            <h4 className='heading'> Designing a modern look to elevate Okizeme's brand and identity. </h4>
-          </Link> */}
         </div>
       </div>
     );

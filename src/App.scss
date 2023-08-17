@@ -1476,39 +1476,6 @@ div.content {
             
                 color: $baseTextColor;
             }
-
-            // div.cardsDesktop {
-            //     display: flex;
-            //     flex-flow: row wrap;
-            //     justify-content: space-between;
-            //     column-gap: toRem(64);
-            //     row-gap: toRem(64);
-
-            //     div.cardDesktop {
-            //         margin: 0;
-            //         width: 45%;
-            //         min-width: toRem(256);
-            //         height: toRem(256);
-                    
-            //         display: flex;
-            //         flex-flow: column;
-            //         overflow: hidden;
-
-            //         border-radius: toRem(16);
-            //         border: none;
-            //         background-color: #ffffff;
-            //         -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
-            //         -moz-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
-            //         -ms-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
-            //         -o-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
-            //         filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
-            //         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
-
-            //         div.imageHolder {
-            //             margin: 0;
-            //         }
-            //     }
-            // }
         }
 
         div.buttons {
@@ -1737,16 +1704,61 @@ div.content {
         }
 
         ol {
-            // list-style-type: ;
             margin-top: 0;
-            padding-inline-start: toRem(32);
+            padding-inline-start: toRem(0);
+            list-style: none;
+            counter-reset: li-index;
             
-
             li {
+                margin-bottom: toRem(8);
+                counter-increment: li-index;
+                
                 font-family: 'Poppins', sans-serif;
                 font-style: normal;
                 font-size: toRem(18);
                 color: $baseTextColor;
+            }
+
+            li::before {
+                margin-right: toRem(8);
+                content: counter(li-index) '.';
+                font-weight: 600;
+            }
+        }
+
+        ol.solutions {
+            padding-inline-start: toRem(0);
+            list-style: none;
+            counter-reset: solution 2;
+
+            li {
+                margin-bottom: toRem(16);
+                position: relative;
+                display: inline-block;
+            }
+
+            li::before {
+                margin-right: toRem(8);
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                content: 'Solution ' counter(solution) ':';
+                font-weight: 600;
+            }
+
+            li:nth-child(1)::before {
+                content: 'Solution 1:';
+            }
+
+            li:nth-child(2), li:nth-child(3) {
+                counter-increment: solution;
+            }
+
+            li span {
+                display: inline-block;
+                text-indent: toRem(0);
+                margin-left: toRem(108);
             }
         }
 
@@ -1944,6 +1956,10 @@ div.content {
             img {
                 margin-left: toRem(16);
             }
+
+            // div.underline {
+            //     width: 100%;
+            // }
         }
 
         div {
@@ -1956,38 +1972,23 @@ div.content {
             div.imageHolder {
                 height: toRem(30);
                 
-                img {
-                    width: toRem(20);
-                    height: auto;
+                // img {
+                //     width: toRem(20);
+                //     height: auto;
 
-                    transition: margin $transitionTimingCard ease-in-out;
-                }
-            }
-        }
-    }
-
-    h3 {
-        width: 100%;
-        font-size: toRem(48);
-
-        &.title {
-            width: 100%;
-            max-width: 100%;
-            margin-top: 0;
-            margin-bottom: toRem(30);
-
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            font-size: toRem(48);
-
-            @media screen and (min-width: 768px){
-                font-size: toRem(64);          
+                //     transition: margin $transitionTimingCard ease-in-out;
+                // }
             }
         }
 
-        &.number {
-            margin-top: 0;
-            margin-bottom: toRem(8);
+        div.underline {
+            width: 0%;
+            height: 4px;
+            margin-top: toRem(16);
+            border-radius: toRem(24);
+
+            background-color: #555555;
+            transition: width $transitionTimingCard ease-in-out, margin-bottom $transitionTimingCard ease-in-out;
         }
     }
 
@@ -2022,19 +2023,6 @@ div.content {
                 font-size: toRem(20);          
             }
         }   
-    }
-
-    p {
-        margin-top: toRem(5);
-        width: 100%;
-
-        @media screen and (min-width: 768px){
-            width: 70%;
-        }
-
-        &.bold {
-            font-weight: 600;
-        }
     }
 
     img.clouds {
@@ -2216,10 +2204,13 @@ div.background {
 
 .title {
     position: relative;
+    display: flex;
     width: 100%;
     margin-bottom: 1.5rem;
 
+
     h3.outline {
+        position: absolute; 
         color: #bbbbbb;
         top: 4px;
         left: 4px;
@@ -2235,14 +2226,15 @@ div.background {
 
     h3.fill {
         color: #444444;
-        top: 0;
-        left: 0;
+        z-index: 1;
+        // top: 0;
+        // left: 0;
     }
 
     h3 {
-        position: absolute; 
         margin-bottom: 0;
         margin-top: 0;
+
         font-size: toRem(64);
         font-weight: 700;
     }
@@ -2273,29 +2265,39 @@ div.resume {
             position: relative;
             display: flex;
             flex-direction: column;
-            margin-bottom: toRem(40);
+            margin-bottom: toRem(128);
 
             h3 {
-                font-family: 'Poppins', serif;
-                font-weight: 700;
-                font-size: toRem(24); 
-                margin: toRem(8) 0;
+                // font-family: 'Poppins', serif;
+                // font-weight: 700;
+                // font-size: toRem(24); 
+                // margin: toRem(8) 0;
+
+                margin: 0;
+                margin-bottom: toRem(16);
+                font-family: 'Poppins', sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: toRem(28); 
+    
+                // @media screen and (min-width: 768px){
+                    font-size: toRem(32);          
+                // }
             }
 
             h4 {
-                font-family: 'Poppins', serif;
-                font-weight: 600;
-                font-size: toRem(20);
                 margin: 0;
                 margin-bottom: toRem(8);
+                font-family: 'Poppins', serif;
+                font-weight: 600;
+                font-size: toRem(22);
             }
 
             h5 {
-                font-family: 'Poppins', serif;
-                font-weight: 500;
-                // font-size: toRem(16); 
                 margin-top: 0;
                 margin-bottom: toRem(8);
+                font-family: 'Poppins', serif;
+                font-weight: 500;
             }
 
             p {
@@ -2314,9 +2316,9 @@ div.resume {
             }
 
             .listing {
-                margin-top: toRem(16);
-                margin-bottom: toRem(24);
-                padding: toRem(16) toRem(24);
+                // margin-top: toRem(16);
+                margin-bottom: toRem(40);
+                padding: toRem(24) toRem(24);
                 // border-width: toRem(4);
                 // border-color: #aaaaaa;
                 // border-style: solid;
@@ -2333,17 +2335,8 @@ div.resume {
                 filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
                 box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
 
-                h3 {
-                    font-weight: 600;
-                    font-size: toRem(20);
-                }
-
-                h4 {
-                    font-family: 'Poppins', serif;
-                    font-style: normal;
-                    font-weight: 600;
-                    font-size: toRem(20); 
-                    margin: toRem(8) 0;
+                &:last-child {
+                    margin-bottom: toRem(0);
                 }
 
                 a {
