@@ -168,9 +168,9 @@ const entries = {
       imageM: imgM_stacker,
       banner: banner_stacker,
       bannerM: bannerM_stacker,
-      tags: ['variables', 'minigame'],
+      tags: ['variables', 'variants', 'components', 'minigame'],
       color: '#F8EEEE',
-      color2: '#FFC6CA',
+      color2: '#F5C0B9',
       figma: 'https://www.figma.com/proto/Sobk5FvyGSjzB6KM7Rfrm7/Stacker?page-id=0%3A1&type=design&node-id=146-692&viewport=-2952%2C-1585%2C0.18&t=SngxUk9oa4V2el6S-1&scaling=min-zoom&starting-point-node-id=146%3A692&mode=design',
       // default: 'https://www.figma.com/proto/Sobk5FvyGSjzB6KM7Rfrm7/Stacker?page-id=0%3A1&type=design&node-id=146-692&viewport=-2952%2C-1585%2C0.18&t=SngxUk9oa4V2el6S-1&scaling=min-zoom&starting-point-node-id=146%3A692&mode=design',
       // link: 'https://www.linkedin.com/feed/update/urn:li:activity:7082475571913363456/'

@@ -1701,6 +1701,18 @@ div.content {
             &.bold {
                 font-weight: 600;
             }
+
+            &.caption {
+                font-size: toRem(16);
+                font-weight: 300;
+                color: #888888;
+            }
+
+            &.code {
+                font-size: toRem(16);
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: 400;
+            }
         }
 
         ol {
@@ -1778,6 +1790,19 @@ div.content {
                     width: 100%;
                 }    
             }
+        }
+
+        div.codeblock {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+            
+            padding: 16px;
+            padding-left: 24px;
+            padding-top: 24px;
+            background-color: #f3f3f3;
+            border-radius: 8px;
         }
 
         // div.about {
