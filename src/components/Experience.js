@@ -150,7 +150,7 @@ class Experience extends React.Component {
             screenWidth={this.props.screenWidth}
             title='UI/UX Designer'
             location='Artist Crowdfund Exchange'
-            link='https://www.ace.fan/'
+            // link='https://www.ace.fan/'
             period='August 2021 - October 2022'
             // highlight={true}
             info={[
@@ -166,7 +166,7 @@ class Experience extends React.Component {
             screenWidth={this.props.screenWidth}
             title='UI/UX Designer'
             location='Alike'
-            link='https://www.alike.dating/'
+            // link='https://www.alike.dating/'
             period='March 2021 - August 2021'
             // highlight={true}
             info={[
@@ -180,7 +180,7 @@ class Experience extends React.Component {
             screenWidth={this.props.screenWidth}
             title='UI/UX Designer'
             location='Hon-Media'
-            link='https://hon-media.com/'
+            // link='https://hon-media.com/'
             period='September 2020 - July 2021'
             // highlight={true}
             info={[
@@ -193,20 +193,19 @@ class Experience extends React.Component {
             screenWidth={this.props.screenWidth}
             title='Computing Services Technical Assistant'
             location='UCSD Extension'
-            link='https://extension.ucsd.edu/courses-and-programs?gclid=CjwKCAjwq7aGBhADEiwA6uGZp8glMnCeS0HOaSlp0KuQzu7T42I22yywjRB6MzFP-S1DLl8k889VIBoCNugQAvD_BwE'
+            // link='https://extension.ucsd.edu/courses-and-programs?gclid=CjwKCAjwq7aGBhADEiwA6uGZp8glMnCeS0HOaSlp0KuQzu7T42I22yywjRB6MzFP-S1DLl8k889VIBoCNugQAvD_BwE'
             period='September 2017 - March 2020'
             info={[
-              'Solved technical issues that instructors struggled with e.g. projector, audio, internet connectivity which were pivotal to their class session.',
-              'Improved the team\'s workflow efficiency by actively reorganizing computer components based on their frequency of usage.',
-              'Upgraded computer hardware/software e.g. RAM, memory, hard drive images.',
-              'Updated the software of our campus administrative workers\'s PC desktops and iMacs e.g. Adobe Suite, Microsoft Office, web browsers, Adobe Flash, Java.'
+              'Diagnosed and resolved technical issues that our end-users (instructors) encountered during class sessions such as projector/audio and wifi connectivity issues. Conducted over the phone and in person.',
+              'Improved our IT team\'s productivity by reorganizing computer components based on their frequency of usage and updating documentation and diagrams for those components.',
+              'Upgraded computer hardware (RAM, memory, hard drives) and updated software (Microsoft Office, Adobe Creative Cloud, installed apps) of our campus administrative staff\'s PCs and iMacs.'
             ]}
           />
           <JobListing 
             screenWidth={this.props.screenWidth}
             title='Website Graphics Designer'
             location='US Trading Co.'
-            link='https://www.ustrading.com/en/'
+            // link='https://www.ustrading.com/en/'
             period='June 2017 - August 2017'
             info={[
               'Photographed new products in a controlled studio space and learned how to balance f-stop, aperture, and shutter speed. Also managed a three-point lighting set up.',

@@ -22,10 +22,12 @@ class Resume extends React.Component {
           </div>
           <div className='section'>
             <h3> Education </h3>
-            <h4>
-              B.S. Human Computer Interaction (HCI)
-            </h4>
-            <p style={lessMargins}> University of California, San Diego (2020)</p>
+            <div className='education'>
+              <h4>
+                B.S. Human Computer Interaction (HCI)
+              </h4>
+              <p style={lessMargins}> University of California, San Diego (2020)</p>
+            </div>
           </div>
           <div className='section'>
             <h3> Skills & Tools </h3>

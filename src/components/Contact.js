@@ -2,7 +2,6 @@ import React from 'react';
 
 import linkedin from '../images/iconIn.png';
 import mail from '../images/iconEmail.svg';
-// import phone from '../images/iconPhone.png';
 import github from '../images/GitHub-Mark-120px-plus.png';
 
 const buttons = [
@@ -18,12 +17,6 @@ const buttons = [
     alt: 'LinkedIn',
     toolTip: 'LinkedIn'
   },
-  // {
-  //   href: 'tel:+14159949888',
-  //   src: phone, 
-  //   alt: 'Phone',
-  //   toolTip: '+1 (415) 994-9888'
-  // },
   {
     href: 'mailto:alextovdesign@gmail.com',
     src: mail, 

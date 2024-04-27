@@ -8,9 +8,6 @@ import './App.scss';
 import Desktop from './components/Desktop.js'; 
 import Mobile from './components/Mobile.js';
 
-// import About from './components/Pages/About.js'; 
-// import Resume from './components/Pages/Resume.js'; 
-
 // Case Studies
 import ACE from './components/Pages/ACE.js'; 
 import Alike from './components/Pages/Alike.js'; 

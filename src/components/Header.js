@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import smoothscroll from 'smoothscroll-polyfill';
 
-import logo from '../images/logoBlack.svg';
+import logo from '../images/logo.svg';
 
 import Navigation from './Navigation.js';
 
@@ -21,10 +21,11 @@ class Header extends React.Component {
       <div className='left'> 
         <Link to='/'> 
           <button 
-            className='outlineNone'
             onClick={this.handleClick}
             aria-label='Go back to top'>
-            <img src={logo} alt='Back to top' draggable='false' /> 
+
+            {/* Change logo size depending on device */}
+            <img className='logo' style={this.props.useMobileNav == true ? {width: '2.5rem'} : null} src={logo} alt='Take me back to the home page' draggable='false' /> 
           </button> 
         </Link>
       </div>

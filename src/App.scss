@@ -4,7 +4,7 @@
 }
 
 $questrial: 'Questrial', sans-serif;
-$headerHeight: 4rem; 
+$headerHeight: 6rem; 
 $baseTextColor: #444444;
 
 $sectionMarginBottom: toRem(150);
@@ -56,10 +56,6 @@ img { -ms-interpolation-mode: bicubic; }
 // .outline {
 //     outline: solid;
 // }
-
-.outlineNone {
-    outline: none;
-}
 
 button, a {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -184,9 +180,8 @@ p {
 }     
 
 header {
-    $divRight: 24rem;
-    $divLeft: 5rem;
-    $marginWidth: 2rem;
+    $divLeft: 8rem;
+    $marginWidth: 1rem;
 
     position: fixed;
     top: 0;
@@ -199,91 +194,40 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    overflow: hidden;
-    -webkit-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.10));
-    -moz-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.10));
-    -ms-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.10));
-    -o-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.10));
-    filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.10));
-    box-shadow: 0px 1px 24px rgba(0, 0, 0, 0.10);
-    background-color: #ffffff;
-
-    img {
-        width: $divLeft/2;
-        max-width: 100%;
-    }
-
-    img.navIcon {
-        width: $divLeft/3;
-        max-width: 100%;
-    }
-
-    .left {
-        width: $divLeft;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        margin-left: $marginWidth/2;
-    }
-
-    .right {
-        width: $divRight;
-        height: 100%;
-        display: flex;
-        flex-flow: row;
-        align-items: center;
-
-        margin-right: $marginWidth;
-
-        .buttons {
-            width: 100%;
-            height: 100%;
-
-            display: flex;
-            flex-flow: row;
-            justify-content: space-between;
-            align-items: center;
-
-            .buttonNav {
-                width: auto;
-                height: inherit;
-                padding: 0 toRem(20);
-              
-                font-family: 'Poppins';
-                font-style: normal;
-                font-weight: 500;
-                font-size: $size_h5;
-                line-height: $headerHeight;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                color: $baseTextColor;
-                background-color: transparent; 
-                
-                cursor: pointer;
-            }
-        
-            .buttonNav:hover {
-                font-family: 'Poppins';
-                color: #aaaaaa;
-            }
-
-            a {
-                text-decoration: none;
-            }
-        }
-    }
+    // overflow: hidden;
+    // -webkit-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.10));
+    // -moz-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.10));
+    // -ms-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.10));
+    // -o-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.10));
+    // filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.10));
+    // box-shadow: 0px 1px 24px rgba(0, 0, 0, 0.10);
+    // background-color: #ffffff;
+    // backdrop-filter: blur(1px);
 
     button {
-        width: $divLeft/1.5;
-        height: $divLeft/1.5;
+        width: $headerHeight;
+        height: 100%;
+        padding: 0;
 
         border: none;
         background-color: transparent;
 
         cursor: pointer;
+        img {
+            width: toRem(48);
+            max-width: 100%;
+
+            &.logo {
+                width: toRem(48);
+                height: auto;
+            }  
+
+            &.navIcon {
+                width: toRem(40);
+                max-width: 100%;
+            }
+
+        }
 
         .toolTip {
             position: absolute;
@@ -300,10 +244,77 @@ header {
             opacity: 0;
             transition: opacity ease-out $transitionTimingCard;
         }
+
+        &:hover .toolTip {
+            opacity: 1;
+        }
     }
 
-    button:hover .toolTip {
-        opacity: 1;
+    .left {
+        width: $headerHeight;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        margin-left: $marginWidth;
+        
+        a {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .right {
+        width: auto;
+        height: 100%;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+
+        margin-right: $marginWidth;
+
+        .buttons {
+            width: auto;
+            height: 100%;
+
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-end;
+            align-items: center;
+            gap: toRem(16);
+
+            .buttonNav {
+                width: auto;
+                height: 100%;
+                margin: auto;
+                padding: 0 toRem(32);
+              
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 600;
+                font-size: $size_h5;
+                line-height: $headerHeight;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50px;
+
+                color: $baseTextColor;
+                background-color: transparent; 
+                backdrop-filter: blur(1px);
+                
+                cursor: pointer;
+
+                &:hover {
+                    color: #aaaaaa;
+                }
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
     }
 }
 
@@ -388,19 +399,20 @@ div.menu {
             align-self: flex-end;
 
             button {
-                width: $divLeft/1.5;
-                height: $divLeft/1.5;
+                width: $divLeft;
+                height: $divLeft;
 
                 border: none;
                 background-color: transparent;
 
                 cursor: pointer;
+
+                img.navIcon {
+                    width: toRem(40);
+                    max-width: 100%;
+                }
             }
 
-            img.navIcon {
-                width: $divLeft/3;
-                max-width: 100%;
-            }
         }
 
         div.buttons {
@@ -1875,28 +1887,75 @@ div.content {
 }
 
 .footer {
-    position: fixed;
-    width: 50%;
-    height: toRem(50);
-    bottom: 0px;
-    z-index: 10;
+    width: 100%;
+    height: auto;
 
-    display: flex;
-    flex-flow: column;
-    justify-content: flex-end;
-    align-items: center;
+    .container {    
+        width: 60%;
+        margin: auto;
+        margin-bottom: toRem(96);
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        
+        &.mobile {
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: toRem(40);
+        }
 
-    overflow: visible;
+        .columns {
+            width: auto;
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-start;
 
-    h6 {
-        margin-right: auto;
+            .column {
+                width: auto;
+                margin-right: toRem(128);
+                display: flex;
+                flex-flow: column;
+                justify-content: flex-end;
+                gap: toRem(24);
 
-        padding-left: 2rem;
-        font-family: 'Poppins';
-        font-weight: 500;
-        font-size: '.875rem';
-    }
+                // .item {
+                //     display: flex;
+                //     flex-flow: row;
+                //     justify-content: center;
+                // }
+            }
 
+        }
+
+        h6 {
+            margin: 0;
+    
+            font-family: 'Poppins';
+            font-weight: 500;
+            // font-size: '.875rem';
+        }
+
+        a {
+            text-decoration: none;
+            color: $baseTextColor;
+
+            display: flex;
+            flex: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: toRem(8);
+
+            &:hover {
+                color: #aaaaaa;
+            }
+
+            img {
+                width: toRem(20);
+            }
+        }
+    }    
 }
 
 .footerM {
@@ -2145,7 +2204,7 @@ div.background {
     height: 100vh;
     // max-height: toRem(600);
     position: relative;
-    margin-top: $headerHeight + toRem(-1);
+    // margin-top: $headerHeight + toRem(-1);
     margin-bottom: toRem(50);
     display: flex;
     flex-flow: row;
@@ -2277,7 +2336,7 @@ div.resume {
     background-color: #ffffff;
 
     .container {
-        width: 50%;
+        width: 60%;
         margin: auto;
         margin-top: 5rem;
         margin-bottom: 5rem;
@@ -2330,18 +2389,8 @@ div.resume {
                 margin-bottom: toRem(16);
             }
 
-            .skills {
-                display: flex;
-                flex-flow: row wrap;
-                justify-content: space-between;
-                align-items: stretch;
-                margin: toRem(-12);
-                margin-top: toRem(4);
-                margin-bottom: toRem(24);
-            }
-
-            .listing {
-                // margin-top: toRem(16);
+            .education {
+                margin-top: toRem(16);
                 margin-bottom: toRem(40);
                 padding: toRem(24) toRem(24);
                 // border-width: toRem(4);
@@ -2359,10 +2408,37 @@ div.resume {
                 -o-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
                 filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
                 box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+            }
 
-                &:last-child {
-                    margin-bottom: toRem(0);
-                }
+            .skills {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                align-items: stretch;
+                margin: toRem(-12);
+                margin-top: toRem(4);
+                margin-bottom: toRem(24);
+            }
+
+            .listing {
+                margin-top: toRem(16);
+                margin-bottom: toRem(40);
+                padding: toRem(24) toRem(24);
+                // border-width: toRem(4);
+                // border-color: #aaaaaa;
+                // border-style: solid;
+                border-radius: toRem(8);
+
+                width: 100%;
+                background-color: #ffffff;
+                overflow: hidden;
+
+                -webkit-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
+                -moz-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
+                -ms-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
+                -o-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
+                filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
+                box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
 
                 a {
                     color: #8CA7BF;

@@ -22,7 +22,7 @@ const Tags = (props) => {
 const Buttons = (props) => {
   return (
     <div className='buttons'>
-      {props.props.github && <a href={props.props.github} target="_blank" rel="noopener noreferrer">
+      {/* {props.props.github && <a href={props.props.github} target="_blank" rel="noopener noreferrer">
           <img src={github} alt='github' draggable='false' />     
           <span className='toolTip'> Github </span>
       </a> }
@@ -37,7 +37,7 @@ const Buttons = (props) => {
       {props.props.figmaM && <a href={props.props.figmaM} target="_blank" rel="noopener noreferrer">
           <img src={figmaM} alt='figmaMobile' draggable='false' /> 
           <span className='toolTip'> Mobile prototype </span> 
-      </a> }
+      </a> } */}
       {/* {props.props.figmaA && <a href={props.props.figmaA} target="_blank" rel="noopener noreferrer">
           <img src={figmaA} alt='figmaA' draggable='false' /> 
           <span className='toolTip'> figma version A </span> 

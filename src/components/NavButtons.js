@@ -4,9 +4,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 import smoothscroll from 'smoothscroll-polyfill';
 smoothscroll.polyfill();
 
-// const headerCategories = [
-//   'projects', 'experience', 'about', 'resume'
-// ]
+
 const headerCategories = [
   'work', 'about', 'resume'
 ]
@@ -29,13 +27,13 @@ const Button = (props) => {
 
   return (
     <Link to={window.location.hash === '#/' || window.location.hash.includes('#/#') ? '/' : '/#' + props.text}> 
-    <button  
+    <div  
       id={'button_'+ props.text} 
-      className='buttonNav outlineNone'
+      className='buttonNav'
       onClick={handleClick}
-      aria-label={`Go to ${props.text}`}>
+      aria-label={`Scroll to ${props.text}`}>
       {props.text}
-    </button>
+    </div>
     </Link>
   );
 }

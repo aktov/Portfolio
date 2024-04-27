@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Contact from './Contact.js';
+// import Contact from './Contact.js';
 import NavButtons from './NavButtons.js';
 
 import close from '../images/close.svg';
@@ -27,7 +27,7 @@ class NavMenu extends React.Component {
             <button onClick={this.closeMenu}> <img className='navIcon' src={close} alt='Close'/> </button>
           </div>
           <NavButtons closeMenu={this.closeMenu}/>
-          <Contact screenWidth={this.props.screenWidth} /> 
+          {/* <Contact screenWidth={this.props.screenWidth} />  */}
         </div>
       </div>
     );
