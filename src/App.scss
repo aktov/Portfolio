@@ -524,10 +524,10 @@ div.contact {
                 height: auto;
                 opacity: 1;
 
-                -webkit-transition: -webkit-transform .15s ease-out;
-                -moz-transition: -moz-transform .15s ease-out;
-                -ms-transition: -ms-transform .15s ease-out;
-                -o-transition: -o-transform .15s ease-out;
+                // -webkit-transition: -webkit-transform .15s ease-out;
+                // -moz-transition: -moz-transform .15s ease-out;
+                // -ms-transition: -ms-transform .15s ease-out;
+                // -o-transition: -o-transform .15s ease-out;
                 transition: transform .15s ease-out;
             }
         }  
@@ -723,37 +723,37 @@ div.content {
             width: 100%;
             max-width: 47.5%;
             // min-width: toRem(500);
-            height: toRem(500);
-            max-height: toRem(500);
-            // margin: $projCardMargin;
+            // height: toRem(500);
+            // max-height: toRem(500);
 
             display: flex;
-            flex-flow: row;
+            flex-flow: column;
             flex-shrink: 0;
-            justify-content: center;
-            align-items: flex-start;
+            justify-content: flex-start;
+            align-items: center;
             align-self: flex-start;
-            overflow: hidden;
+            // overflow: visible; 
     
             border-radius: toRem(16);
             // border-left: 4px solid;
             // border-top: 4px solid;
             // border-color: $primaryTextColor;
-            background-color: #ffffff;
-            -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
-            -moz-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
-            -ms-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
-            -o-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
-            filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+            // background-color: #ffffff;
+            // -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
+            // -moz-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
+            // -ms-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
+            // -o-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
+            // filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
+            // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
 
             // box-shadow: 8px 8px 0px rgba(187, 187, 187, 1);
     
             div.imageHolder {
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: 100%;
-                // height: 80%;
-                height: 85%;
-                max-height: 100%;
+                height: toRem(448);
                 padding: toRem(4);
                 padding-top: toRem(16);
     
@@ -761,10 +761,32 @@ div.content {
                 justify-content: center;
                 align-items: center;
 
-                // border-radius: toRem(16);
+                border-radius: toRem(16);
+                -webkit-filter: drop-shadow(0px 0px 4px rgba(87, 87, 87, 0.15));
+                -moz-filter: drop-shadow(0px 0px 4px rgba(87, 87, 87, 0.15));
+                -ms-filter: drop-shadow(0px 0px 4px rgba(87, 87, 87, 0.15));
+                -o-filter: drop-shadow(0px 0px 4px rgba(87, 87, 87, 0.15));
+                filter: drop-shadow(0px 0px 4px rgba(87, 87, 87, 0.15));
+                // filter: drop-shadow(0px 0px 0px rgba(187, 187, 187, 0));
+                // box-shadow: 0px 0px 4px rgba(87, 87, 87, 0.1);
+                transition: filter $transitionTimingCard ease-in-out, 
+                    top $transitionTimingCard ease-out,
+                    left $transitionTimingCard ease-out,
+                    width $transitionTimingCard ease-out,
+                    padding $transitionTimingCard ease-out;
 
                 background-color: #bbbbbb;
                 cursor: pointer;
+
+                &:hover {
+                    top: toRem(-8);
+                    left: toRem(-8);
+                    width: calc(100% + #{toRem(8)});
+                    padding-left: toRem(4);
+                    padding-right: toRem(4);
+                    // filter: drop-shadow(0px 4px 12px rgba(87, 87, 87, 0.2));
+                    filter: drop-shadow(10px 10px 0px rgba(187, 187, 187, 0.6));
+                }
     
                 .lazyload-wrapper  {
                     width: 100%;
@@ -774,7 +796,7 @@ div.content {
                     align-items: center;
 
                     a {
-                        position: relative;
+                        // position: relative;
                         width:100%;
                         height: 100%;        
                         display: flex;    
@@ -782,7 +804,7 @@ div.content {
                         align-items: center;
 
                         img {
-                            position: relative;
+                            // position: relative;
                             width: 100%;
                             height: auto;
                         }
@@ -791,12 +813,13 @@ div.content {
             }
 
             div.descWrapper {
-                position: absolute;
+                // position: absolute;
                 width: 100%;
                 max-width: 100%;
-                padding: toRem(24) 8%;
+                // padding: toRem(24) 8%;
+                margin-top: toRem(448);
                 padding-bottom: toRem(32);
-                // padding-top: toRem(16);
+                padding-top: toRem(16);
     
                 display: flex;
                 flex-flow: column;
@@ -804,22 +827,20 @@ div.content {
                 align-items: center;
                 align-self: flex-end;
 
-                background-color: #ffffff;
+                // background-color: #ffffff;
 
-                pointer-events: none;
+                // -webkit-filter: drop-shadow(0px -1px 14px rgba(0, 0, 0, 0.10));
+                // -moz-filter: drop-shadow(0px -1px 14px rgba(0, 0, 0, 0.10));
+                // -ms-filter: drop-shadow(0px -1px 14px rgba(0, 0, 0, 0.10));
+                // -o-filter: drop-shadow(0px -1px 14px rgba(0, 0, 0, 0.10));
+                // filter: drop-shadow(0px -1px 14px rgba(0, 0, 0, 0.10));
+                // box-shadow: 0px -1px 14px rgba(0, 0, 0, 0.10);
 
-                -webkit-filter: drop-shadow(0px -1px 14px rgba(0, 0, 0, 0.10));
-                -moz-filter: drop-shadow(0px -1px 14px rgba(0, 0, 0, 0.10));
-                -ms-filter: drop-shadow(0px -1px 14px rgba(0, 0, 0, 0.10));
-                -o-filter: drop-shadow(0px -1px 14px rgba(0, 0, 0, 0.10));
-                filter: drop-shadow(0px -1px 14px rgba(0, 0, 0, 0.10));
-                box-shadow: 0px -1px 14px rgba(0, 0, 0, 0.10);
-
-                -webkit-transition: height .2s ease-out;
-                -moz-transition: height .2s ease-out;
-                -ms-transition: height .2s ease-out;
-                -o-transition: height .2s ease-out;
-                transition: height .2s ease-out;
+                // -webkit-transition: height .2s ease-out;
+                // -moz-transition: height .2s ease-out;
+                // -ms-transition: height .2s ease-out;
+                // -o-transition: height .2s ease-out;
+                // transition: height .2s ease-out;
 
                 div.topRow {
                     position: relative;
@@ -830,6 +851,11 @@ div.content {
                     flex-flow: row;
                     justify-content: space-between;
                     align-items: flex-end;
+
+                    a {
+                        width: 100%;
+                        text-decoration: none;
+                    }
 
                     h4.cardTitle {
                         width: 80%;
@@ -1050,30 +1076,38 @@ div.content {
             justify-content: flex-start;
             align-items: flex-start;
             align-self: stretch;
-            overflow: hidden;
+            overflow: visible;
     
             border-radius: toRem(16);
             border: none;
             background-color: #ffffff;
-            -webkit-filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
-            -moz-filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
-            -ms-filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
-            -o-filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
-            filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
-            box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
+            // -webkit-filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
+            // -moz-filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
+            // -ms-filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
+            // -o-filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
+            // filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
+            // box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
 
-            transition: all ease-in-out $transitionTimingCard;
+            // transition: all ease-in-out $transitionTimingCard;
     
             div.imageHolder {
                 width: 100%;
+                height: $projCardWidth;
                 max-height: $projCardWidth;
     
                 background-color: #bbbbbb;
-                cursor: pointer;
+                border-radius: toRem(16);
+                // overflow: hidden;
+                
+                -webkit-filter: drop-shadow(0px 0px 4px rgba(87, 87, 87, 0.15));
+                -moz-filter: drop-shadow(0px 0px 4px rgba(87, 87, 87, 0.15));
+                -ms-filter: drop-shadow(0px 0px 4px rgba(87, 87, 87, 0.15));
+                -o-filter: drop-shadow(0px 0px 4px rgba(87, 87, 87, 0.15));
+                filter: drop-shadow(0px 0px 4px rgba(87, 87, 87, 0.15));
 
                 .lazyload-wrapper  {
                     width: 100%;
-                    height: 100%;
+                    height: auto;
                     max-width: 100%;
                     max-height: 100%;
                     display: flex;    
@@ -1086,6 +1120,7 @@ div.content {
                         max-width: 100%;
                         height: auto;
                         max-height: $projCardWidth;
+                        border-radius: toRem(16);
                     }
                 }    
             }
@@ -1096,6 +1131,8 @@ div.content {
                 height: 100%;
                 padding: toRem(20);
                 padding-bottom: toRem(10);
+                padding-left: 0;
+                padding-right: 0;
                 background-color: #ffffff;
     
                 display: flex;

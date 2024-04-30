@@ -157,8 +157,8 @@ function Card(props) {
         <div 
           className={props.screenWidth > 1280 ? 'cardDesktop' : 'cardDesktop wide'} 
           // style={props.screenWidth >= 480 ? {margin: '2rem 1.5rem'} : {margin: '1rem 1rem'}}
-          onMouseEnter={handleMouseEnter} 
-          onMouseLeave={handleMouseLeave}
+          // onMouseEnter={handleMouseEnter} 
+          // onMouseLeave={handleMouseLeave}
           data-aos='fade-up' 
           data-aos-offset='50' 
           data-aos-easing='ease-out-sine'
@@ -183,21 +183,24 @@ function Card(props) {
             </LazyLoad>
           </div>
     
-          <Info props={props} mouseEntered={mouseEntered} screenWidth={props.screenWidth}> </Info>
-
-          {/* <div className={mouseEntered ? 'descWrapper expanded' : 'descWrapper collapsed'} >
+          {/* <Info props={props} mouseEntered={mouseEntered} screenWidth={props.screenWidth}> </Info> */}
+          <div 
+            className={'descWrapper'} 
+          >
             <div className='topRow'>
-              <h4 className='cardTitle'> {props.title.toUpperCase()} </h4>
-              {mouseEntered && <Buttons props={props}/>}
+              {props.link &&
+                <Link to={props.link} rel="noopener noreferrer">
+                  <h4 className='cardTitle'> {props.title} </h4>
+                </Link>
+              } 
             </div>
             
-            {mouseEntered &&
-              <div className='botRow'>
-                <p> {props.desc} </p> 
-                {props.tags && <Tags names={props.tags} color={props.color2 || props.color} />} 
-              </div>
-            }
-          </div> */}
+            {/* <div className={props.screenWidth > 1280 ? 'botRow' : 'botRowWide'}> */}
+            <div className='botRow'>
+              <p> {props.desc} </p> 
+              {props.tags && <Tags names={props.tags} color={props.color2 || props.color} />} 
+            </div>
+          </div>
         </div> 
 
       :
@@ -205,8 +208,8 @@ function Card(props) {
         <div 
           className='cardMobile'
           // style={props.screenWidth >= 768 ? {margin: '1rem 1.5rem'} : {margin: '1rem inherit'}}
-          onMouseEnter={handleMouseEnter} 
-          onMouseLeave={handleMouseLeave}
+          // onMouseEnter={handleMouseEnter} 
+          // onMouseLeave={handleMouseLeave}
         >
           <div className='imageHolder'>
             <LazyLoad height={250} offset={2000} overflow={true}>

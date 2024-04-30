@@ -163,7 +163,7 @@ const entries = {
   designs: [
     {
       title: 'Stacker',
-      descr: 'A minigame featuring Figma\'s new variables feature. A more in-depth guide on how I made this is coming soon!',
+      descr: 'A minigame built entirely with Figma\'s variables feature.',
       image: img_stacker,
       imageM: imgM_stacker,
       banner: banner_stacker,
