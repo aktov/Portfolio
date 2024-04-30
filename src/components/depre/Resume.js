@@ -46,7 +46,7 @@ class Resume extends React.Component {
         doc={this.props.doc}
       />
 
-      <div className='app' style={{backgroundColor: '#F0E6E7'}}>
+      <div className='app' style={{backgroundColor: '#f0e6e7'}}>
         {/* Show Navmenu if on mobile */}
         {!(this.props.screenWidth > 768) &&
           <NavMenu toggleMenu={this.toggleMenu} screenWidth={this.props.screenWidth} menuOpen={this.state.menuOpen}/> 
@@ -56,7 +56,7 @@ class Resume extends React.Component {
           <Contact screenWidth={this.props.screenWidth} /> 
         }
 
-        <div className='content' style={{marginTop:'3rem', backgroundColor: '#F0E6E7'}}>
+        <div className='content' style={{marginTop:'3rem', backgroundColor: '#f0e6e7'}}>
           <div id='anchor_page' className='anchor' style={{top: '-1000px'}}></div>
           {/* <img 
             className='banner' 

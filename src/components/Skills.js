@@ -3,24 +3,35 @@ import React from 'react';
 import Phrase from './Phrase.js';
 
 const skillsList = {
-  'Research': [
+  'UX Research': [
+    'Usability Testing',
+    'A/B Testing',
     'Design Thinking',
     'User Research',
-    'Need Finding',
     'Storyboarding',
     'Competitive Analysis',
-    'Usability Testing',
   ],
 
-  'Design': [
+  'UI Design': [
     'Design Systems',
     'Information Architecture',
     'Wireframing',
     'Mockups',
     'Prototyping'
   ],
+
+  'Design Tools': [
+    'Figma',
+    'Webflow',
+    'Maze.co',
+    'Typeform',
+    'Squarespace',
+    'Adobe Lightroom',
+    'Adobe Photoshop',
+    'GitHub',
+  ],
   
-  'Programming & Frameworks': [
+  'Frameworks & Coding': [
     'HTML/CSS',
     'JavaScript',
     'Lua',
@@ -28,16 +39,6 @@ const skillsList = {
     'Tailwind CSS',
     'Sass',
     'MJML'
-  ],
-
-  'Applications': [
-    'Figma',
-    'Maze.co',
-    'Typeform',
-    'Squarespace',
-    'Google Suite',
-    'Microsoft Office',
-    'GitHub',
   ]
 }
 
@@ -47,7 +48,7 @@ class Skills extends React.Component {
       <div className='skills'>
         {Object.keys(skillsList).map(key =>
           <div 
-            className='listing minimized'
+            className='listing'
             key={key}
             data-aos='fade-up' 
             data-aos-offset='50' 

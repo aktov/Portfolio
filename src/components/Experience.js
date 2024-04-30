@@ -8,7 +8,6 @@ const JobListing = (props) => {
   return (
     <>
     {props.screenWidth > 768 ?
-      <>
       <div 
         className='listing'
         style={props.highlight ? {paddingLeft: '5%'} : null}
@@ -18,124 +17,49 @@ const JobListing = (props) => {
         data-aos-duration='400'
         data-aos-once={true}
       >
-        {props.highlight ? 
-          <>
-            <div
-              style={{
-                position: 'absolute',
-                top: '0',
-                left: '0',
-                width: '3%',
-                minWidth: '16px',
-                height: '100%',
-                backgroundColor: '#8CA7BF',
-                zIndex: -1
-              }}
-            />
-            {/* <div
-              style={{
-                position: 'absolute',
-                top: '0rem',
-                right: '0rem',
-                width: '8rem',
-                height: '8rem',
-                backgroundColor: '#8CA7BF',
-                overflow: 'hidden'
-              }}
-            >
-              <div
-                style={{
-                  position: 'absolute',
-                  top: '0',
-                  right: '0',
-                  width: '16rem',
-                  height: '16rem',
-                  backgroundColor: '#FFFFFF',
-                  borderRadius: '8rem',
-                }}
-              />
-            </div> */}
-            <h4> {props.title} </h4>
-            {/* <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {'@' + props.location} <img src={open}/></a> </h5> */}
-            <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {props.location} </a> </h5>
-            {/* <h5> {props.location} </h5> */}
-            <h5> {props.period} </h5> 
-            <div className='phrases'>
-              {props.info.map((phrase, index) => 
-                <Phrase key={props.title + '/' + index} text={phrase}/>
-              )}
-            </div>
-          </>
-          :
-          <>
-            <h4> {props.title} </h4>
-            <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {props.location} </a> </h5>
-            {/* <h5> {props.location} </h5> */}
-            <h5> {props.period} </h5> 
-            <div className='phrases'>
-              {props.info.map((phrase, index) => 
-                <Phrase key={props.title + '/' + index} text={phrase}/>
-              )}
-            </div>
-          </>
-        }
+        {/* <div className='left'>
+          <h4> {props.title} </h4>
+          <h5> {props.location} </h5>
+        </div>
+        <div className='right'>
+          <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {props.location} </a> </h5> 
+          <h5> {props.location} </h5>
+          <p> {props.period} </p> 
+          <p> {props.duration} </p>
+        </div> */}
+
+        <div className='left'>
+          <h4> {props.title} </h4>
+          <h5> {props.location} </h5>
+          <p> {props.period} </p> 
+          {/* <p> {props.duration} </p> */}
+        </div>
+        <div className='right'>
+          <div className='phrases'>
+            {props.info.map((phrase, index) => 
+              <Phrase key={props.title + '/' + index} text={phrase}/>
+            )}
+          </div>
+        </div>
       </div>
-      </>
     :
       <div 
-        className='listing'
+        className='listing mobile'
         data-aos='fade-up' 
         data-aos-offset='50' 
         data-aos-easing='ease-out-sine'
         data-aos-duration='400'
         data-aos-once={true}
       >
-        {props.highlight ? 
-          <>
-            <div
-              style={{
-                position: 'absolute',
-                top: '0rem',
-                right: '0rem',
-                width: '4rem',
-                height: '4rem',
-                backgroundColor: '#8CA7BF',
-                overflow: 'hidden'
-              }}
-            >
-              <div
-                style={{
-                  position: 'absolute',
-                  bottom: '-4rem',
-                  left: '-4rem',
-                  width: '8rem',
-                  height: '8rem',
-                  backgroundColor: '#FFFFFF',
-                  borderRadius: '4rem',
-                }}
-              />
-            </div>
-            <h4> {props.title} </h4>
-            <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {props.location} </a> </h5>
-            <h5> {props.period} </h5> 
-            <div className='phrases'>
-              {props.info.map((phrase, index) => 
-                <Phrase key={props.title + '/' + index} text={phrase}/>
-              )}
-            </div>
-          </>
-          :
-          <>
-            <h4> {props.title} </h4>
-            <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {props.location} </a> </h5>
-            <h5> {props.period} </h5> 
-            <div className='phrases'>
-              {props.info.map((phrase, index) => 
-                <Phrase key={props.title + '/' + index} text={phrase}/>
-              )}
-            </div>
-          </>
-        }
+        <h4> {props.title} </h4>
+        {/* <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {props.location} </a> </h5> */}
+        <h5> {props.location} </h5>
+        <p> {props.period} </p> 
+        {/* <div className='phrases'>
+          {props.info.map((phrase, index) => 
+            <Phrase key={props.title + '/' + index} text={phrase}/>
+          )}
+        </div> */}
       </div>   
     }
     </>
@@ -145,13 +69,14 @@ const JobListing = (props) => {
 class Experience extends React.Component {
   render() {
     return (
-        <div>
+        <div className='experience'>
           <JobListing 
             screenWidth={this.props.screenWidth}
             title='UI/UX Designer'
             location='Artist Crowdfund Exchange'
             // link='https://www.ace.fan/'
-            period='August 2021 - October 2022'
+            period='Aug 2021 - Oct 2022'
+            duration='1 yr 3 mo'
             // highlight={true}
             info={[
               'Established our design process and design system, which boosted design and development efficiency, solidified brand identity, and increased consistency throughout the app.',
@@ -167,7 +92,8 @@ class Experience extends React.Component {
             title='UI/UX Designer'
             location='Alike'
             // link='https://www.alike.dating/'
-            period='March 2021 - August 2021'
+            period='Mar 2021 - Aug 2021'
+            duration='6 mo'
             // highlight={true}
             info={[
               'Worked directly with the CEO to conceptualize and design features to drive product growth and user engagement. ',
@@ -181,7 +107,8 @@ class Experience extends React.Component {
             title='UI/UX Designer'
             location='Hon-Media'
             // link='https://hon-media.com/'
-            period='September 2020 - July 2021'
+            period='Sept 2020 - Jul 2021'
+            duration='11 mo'
             // highlight={true}
             info={[
               'Spearheaded the company\'s blog website development by implementing an iterative design process.',
@@ -194,7 +121,8 @@ class Experience extends React.Component {
             title='Computing Services Technical Assistant'
             location='UCSD Extension'
             // link='https://extension.ucsd.edu/courses-and-programs?gclid=CjwKCAjwq7aGBhADEiwA6uGZp8glMnCeS0HOaSlp0KuQzu7T42I22yywjRB6MzFP-S1DLl8k889VIBoCNugQAvD_BwE'
-            period='September 2017 - March 2020'
+            period='Sept 2017 - Mar 2020'
+            duration='2 yr 7 mo'
             info={[
               'Diagnosed and resolved technical issues that our end-users (instructors) encountered during class sessions such as projector/audio and wifi connectivity issues. Conducted over the phone and in person.',
               'Improved our IT team\'s productivity by reorganizing computer components based on their frequency of usage and updating documentation and diagrams for those components.',
@@ -206,7 +134,8 @@ class Experience extends React.Component {
             title='Website Graphics Designer'
             location='US Trading Co.'
             // link='https://www.ustrading.com/en/'
-            period='June 2017 - August 2017'
+            period='Jun 2017 - Aug 2017'
+            duration='3 mo'
             info={[
               'Photographed new products in a controlled studio space and learned how to balance f-stop, aperture, and shutter speed. Also managed a three-point lighting set up.',
               'Edited product photos in Adobe Lightroom and Photoshop for pre-uploading.',

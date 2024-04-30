@@ -5,7 +5,8 @@
 
 $questrial: 'Questrial', sans-serif;
 $headerHeight: 6rem; 
-$baseTextColor: #444444;
+$primaryTextColor: #444444;
+$skyPinkColor: #f0e6e7;
 
 $sectionMarginBottom: toRem(150);
 $projCardWidth: toRem(256);
@@ -80,7 +81,7 @@ h1 {
     -ms-word-break: normal;
     word-break: normal;
 
-    color: $baseTextColor;
+    color: $primaryTextColor;
 }
 
 h2 {
@@ -96,7 +97,7 @@ h2 {
     -ms-word-break: normal;
     word-break: normal;
 
-    color: $baseTextColor;
+    color: $primaryTextColor;
 }
 
 h3 {
@@ -112,7 +113,7 @@ h3 {
     -ms-word-break: normal;
     word-break: normal;
 
-    color: $baseTextColor;
+    color: $primaryTextColor;
 }
 
 h4 {
@@ -128,7 +129,7 @@ h4 {
     -ms-word-break: normal;
     word-break: normal;
 
-    color: $baseTextColor;
+    color: $primaryTextColor;
 }
 
 h5 {
@@ -144,7 +145,7 @@ h5 {
     -ms-word-break: normal;
     word-break: normal;
 
-    color: $baseTextColor;
+    color: $primaryTextColor;
 }
 
 h6 {
@@ -160,7 +161,7 @@ h6 {
     -ms-word-break: normal;
     word-break: normal;
 
-    color: $baseTextColor;
+    color: $primaryTextColor;
 }
 
 p {
@@ -176,7 +177,7 @@ p {
     -ms-word-break: normal;
     word-break: normal;
 
-    color: $baseTextColor;
+    color: $primaryTextColor;
 }     
 
 header {
@@ -193,6 +194,8 @@ header {
     flex-flow: row;
     justify-content: space-between;
     align-items: center;
+
+    pointer-events: none;
 
     // overflow: hidden;
     // -webkit-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.10));
@@ -213,6 +216,8 @@ header {
         background-color: transparent;
 
         cursor: pointer;
+        pointer-events: auto;
+
         img {
             width: toRem(48);
             max-width: 100%;
@@ -239,7 +244,7 @@ header {
             font-style: normal;
             font-weight: 500;
             font-size: toRem(13);
-            color: $baseTextColor;
+            color: $primaryTextColor;
 
             opacity: 0;
             transition: opacity ease-out $transitionTimingCard;
@@ -300,14 +305,15 @@ header {
                 align-items: center;
                 border-radius: 50px;
 
-                color: $baseTextColor;
+                color: $primaryTextColor;
                 background-color: transparent; 
                 backdrop-filter: blur(1px);
                 
                 cursor: pointer;
+                pointer-events: auto;
 
                 &:hover {
-                    color: #aaaaaa;
+                    color: #bbbbbb;
                 }
             }
 
@@ -442,7 +448,7 @@ div.menu {
                 align-items: center;
 
                 border: none;
-                color: $baseTextColor;
+                color: $primaryTextColor;
                 background-color: transparent;  
 
                 cursor: pointer;
@@ -506,7 +512,7 @@ div.contact {
             flex-shrink: 0;
             border-radius: toRem(100);
             border: none;
-            color: $baseTextColor;
+            color: $primaryTextColor;
             background-color: #ffffffff;     
             z-index: 3;       
 
@@ -542,7 +548,7 @@ div.contact {
 
             white-space: nowrap;
             border-radius: toRem(40);
-            color: $baseTextColor;
+            color: $primaryTextColor;
             background-color: #ffffff;
             opacity: 0;
             visibility: hidden;
@@ -572,7 +578,6 @@ div.content {
         top: toRem(-80);
     }
 
-    
     div.wrapper {
         position: relative;
         width: 75%;
@@ -587,7 +592,7 @@ div.content {
             margin-top: toRem(-25);
             margin-bottom: toRem(30);
 
-            background-color: $baseTextColor;
+            background-color: $primaryTextColor;
         }
 
         h3 {
@@ -616,7 +621,7 @@ div.content {
             margin-bottom: toRem(30);
             margin-left: 12.5%;
 
-            background-color: $baseTextColor;;
+            background-color: $primaryTextColor;;
         }
 
         h3 {
@@ -731,7 +736,9 @@ div.content {
             overflow: hidden;
     
             border-radius: toRem(16);
-            border: none;
+            // border-left: 4px solid;
+            // border-top: 4px solid;
+            // border-color: $primaryTextColor;
             background-color: #ffffff;
             -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
             -moz-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
@@ -739,18 +746,24 @@ div.content {
             -o-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
             filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.15));
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+
+            // box-shadow: 8px 8px 0px rgba(187, 187, 187, 1);
     
             div.imageHolder {
                 width: 100%;
+                // height: 80%;
                 height: 85%;
                 max-height: 100%;
-                padding: toRem(5);
+                padding: toRem(4);
+                padding-top: toRem(16);
     
                 display: flex;
                 justify-content: center;
                 align-items: center;
 
-                background-color: #aaaaaa;
+                // border-radius: toRem(16);
+
+                background-color: #bbbbbb;
                 cursor: pointer;
     
                 .lazyload-wrapper  {
@@ -783,6 +796,7 @@ div.content {
                 max-width: 100%;
                 padding: toRem(24) 8%;
                 padding-bottom: toRem(32);
+                // padding-top: toRem(16);
     
                 display: flex;
                 flex-flow: column;
@@ -791,6 +805,8 @@ div.content {
                 align-self: flex-end;
 
                 background-color: #ffffff;
+
+                pointer-events: none;
 
                 -webkit-filter: drop-shadow(0px -1px 14px rgba(0, 0, 0, 0.10));
                 -moz-filter: drop-shadow(0px -1px 14px rgba(0, 0, 0, 0.10));
@@ -869,7 +885,7 @@ div.content {
                             font-style: normal;
                             font-weight: 700;
                             font-size: $size_h1;
-                            color: $baseTextColor;
+                            color: $primaryTextColor;
                             background-color: transparent;
 
                             cursor: pointer;
@@ -908,7 +924,7 @@ div.content {
                             
                                 text-align: center;
                                 border-radius: toRem(40);
-                                color: $baseTextColor;
+                                color: $primaryTextColor;
                                 background-color: transparent;
                                 opacity: 0;
                                 // display: none;
@@ -1052,7 +1068,7 @@ div.content {
                 width: 100%;
                 max-height: $projCardWidth;
     
-                background-color: #aaaaaa;
+                background-color: #bbbbbb;
                 cursor: pointer;
 
                 .lazyload-wrapper  {
@@ -1080,7 +1096,7 @@ div.content {
                 height: 100%;
                 padding: toRem(20);
                 padding-bottom: toRem(10);
-                background-color: #FFFFFF;
+                background-color: #ffffff;
     
                 display: flex;
                 flex-flow: column;
@@ -1159,7 +1175,7 @@ div.content {
                     font-style: normal;
                     font-weight: 700;
                     font-size: $size_h1;
-                    color: $baseTextColor;
+                    color: $primaryTextColor;
                     background-color: transparent;
 
                     cursor: pointer;
@@ -1197,7 +1213,7 @@ div.content {
                     
                         text-align: center;
                         border-radius: toRem(40);
-                        color: $baseTextColor;
+                        color: $primaryTextColor;
                         background-color: transparent;
                         opacity: 0;
                     }
@@ -1251,7 +1267,7 @@ div.content {
             margin-top: toRem(-40);
             margin-bottom: toRem(32);
 
-            background-color: $baseTextColor;
+            background-color: $primaryTextColor;
         }
 
         div.intro {
@@ -1336,7 +1352,7 @@ div.content {
                     font-style: normal;
                     font-weight: 700;
                     font-size: $size_h1;
-                    color: $baseTextColor;
+                    color: $primaryTextColor;
                     background-color: transparent;
 
                     cursor: pointer;
@@ -1375,7 +1391,7 @@ div.content {
                     
                         text-align: center;
                         border-radius: toRem(40);
-                        color: $baseTextColor;
+                        color: $primaryTextColor;
                         background-color: transparent;
                         opacity: 0;
                         // display: none;
@@ -1486,7 +1502,7 @@ div.content {
                 -ms-word-break: normal;
                 word-break: normal;
             
-                color: $baseTextColor;
+                color: $primaryTextColor;
             }
         }
 
@@ -1532,7 +1548,7 @@ div.content {
                 font-style: normal;
                 font-weight: 700;
                 font-size: $size_h1;
-                color: $baseTextColor;
+                color: $primaryTextColor;
                 background-color: transparent;
 
                 cursor: pointer;
@@ -1571,7 +1587,7 @@ div.content {
                 
                     text-align: center;
                     border-radius: toRem(40);
-                    color: $baseTextColor;
+                    color: $primaryTextColor;
                     background-color: transparent;
                     opacity: 0;
                     // display: none;
@@ -1616,7 +1632,7 @@ div.content {
                 align-items: flex-start;
 
                 img {
-                    margin: toRem(9) toRem(10);
+                    margin: toRem(10) toRem(10);
                     width: toRem(8);
                     height: auto;
                 }
@@ -1740,7 +1756,7 @@ div.content {
                 font-family: 'Poppins', sans-serif;
                 font-style: normal;
                 font-size: toRem(18);
-                color: $baseTextColor;
+                color: $primaryTextColor;
             }
 
             li::before {
@@ -1889,17 +1905,31 @@ div.content {
 .footer {
     width: 100%;
     height: auto;
+    padding: toRem(64) 0 toRem(96) 0;
+    background-color: $skyPinkColor;
 
+    // content div is only on the home page, so this only applies to home page
+    .content & {
+        background-color: #ffffff;
+    }
+
+    // Default for width > 1280
     .container {    
-        width: 60%;
+        width: 50%;
         margin: auto;
-        margin-bottom: toRem(96);
         display: flex;
         flex-flow: row;
         justify-content: space-between;
         align-items: flex-end;
-        
+
+        // Display > 768 but < 1280
+        &.medium {
+            width: 70%;
+        }
+
+        // Display <= 768
         &.mobile {
+            width: 75%;
             flex-flow: column wrap;
             justify-content: flex-start;
             align-items: flex-start;
@@ -1938,47 +1968,36 @@ div.content {
         }
 
         a {
+            width: auto;
             text-decoration: none;
-            color: $baseTextColor;
+            color: $primaryTextColor;
 
             display: flex;
-            flex: row;
+            flex-flow: row;
             justify-content: flex-start;
-            align-items: center;
+            align-items: flex-start;
             gap: toRem(8);
-
-            &:hover {
-                color: #aaaaaa;
-            }
 
             img {
                 width: toRem(20);
+                transition: margin $transitionTimingCard ease-in-out, transform $transitionTimingCard ease-out;
+            }
+
+            &:hover {
+                h6 {
+                    color: #bbbbbb;
+                }
+
+                img {
+                    // margin-left: toRem(4);
+                    transform: rotate(45deg);
+                    filter: invert(75%) sepia(0%) saturate(253%) hue-rotate(140deg) brightness(95%) contrast(77%);
+                }
             }
         }
     }    
 }
 
-.footerM {
-    width: 100%;
-    height: 0;
-    z-index: 10;
-
-    display: flex;
-    flex-flow: column;
-    justify-content: flex-end;
-    align-items: center;
-
-    overflow: visible;
-
-    h6 {
-        margin-right: auto;
-
-        padding-left: 2rem;
-        font-family: 'Poppins';
-        font-weight: 500;
-        font-size: '.875rem';
-    }
-}
 
 .footerSeeAlso {
     position: relative;
@@ -2003,7 +2022,7 @@ div.content {
     align-items: flex-start;
 
     // background-color: #FAFAFA;
-    background-color: #F0E6E7;
+    background-color: $skyPinkColor;
 
     .title {
         margin-bottom: toRem(40);
@@ -2029,7 +2048,7 @@ div.content {
     //     margin-top: toRem(-40);
     //     margin-bottom: toRem(32);
 
-    //     background-color: $baseTextColor;
+    //     background-color: $primaryTextColor;
     // }
 
     a {
@@ -2041,9 +2060,9 @@ div.content {
                 margin-left: toRem(16);
             }
 
-            // div.underline {
-            //     width: 100%;
-            // }
+            div.underline {
+                width: 100%;
+            }
         }
 
         div {
@@ -2065,15 +2084,16 @@ div.content {
             }
         }
 
-        div.underline {
-            width: 0%;
-            height: 4px;
-            margin-top: toRem(16);
-            border-radius: toRem(24);
+        // div.underline {
+        //     width: 0%;
+        //     height: 4px;
+        //     margin-top: toRem(16);
+        //     border-radius: toRem(24);
 
-            background-color: #555555;
-            transition: width $transitionTimingCard ease-in-out, margin-bottom $transitionTimingCard ease-in-out;
-        }
+        //     background-color: #555555;
+
+        //     transition: width $transitionTimingCard ease-in-out, margin-bottom $transitionTimingCard ease-in-out;
+        // }
     }
 
     h4 {
@@ -2144,7 +2164,7 @@ button.topButton {
 
     border: none;
     border-radius: toRem(100);
-    color: $baseTextColor;
+    color: $primaryTextColor;
     cursor: pointer;
     outline: none;
 
@@ -2153,9 +2173,16 @@ button.topButton {
 
     img {
         width: toRem(24);
+        transition: margin $transitionTimingCard ease-in-out;
 
         @media screen and (min-width: 768px){
             width: toRem(32);
+        }
+    }
+
+    &:hover {
+        img {
+            margin-bottom: toRem(16);
         }
     }
 }
@@ -2182,7 +2209,7 @@ button.hide.topButton{
 
     border: none;
     border-radius: toRem(100);
-    color: $baseTextColor;
+    color: $primaryTextColor;
     background-color: #ffffff;  
 
     -webkit-filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
@@ -2212,7 +2239,7 @@ div.background {
     align-items: flex-end;
     overflow: hidden;
 
-    background-color: #F0E6E7;//#EAEFF7;
+    background-color: $skyPinkColor;
 
 
     div.intro {
@@ -2244,7 +2271,7 @@ div.background {
         h1 {
             font-family: 'Poppins';
             font-weight: 900;
-            color: $baseTextColor;
+            color: $primaryTextColor;
         }
     
         h5 {
@@ -2253,7 +2280,7 @@ div.background {
             font-family: 'Poppins';
             font-weight: 500;
             line-height: normal;
-            color: $baseTextColor;
+            color: $primaryTextColor;
         }
 
         button {
@@ -2269,10 +2296,10 @@ div.background {
             line-height: normal;
             align-self: center;
     
-            // border: toRem(2) dotted $baseTextColor;
+            // border: toRem(2) dotted $primaryTextColor;
             border: none;
             border-radius: toRem(100);
-            color: $baseTextColor;
+            color: $primaryTextColor;
             background-color: #ffffff;  
     
             -webkit-filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.25));
@@ -2292,7 +2319,6 @@ div.background {
     width: 100%;
     margin-bottom: 1.5rem;
 
-
     h3.outline {
         position: absolute; 
         color: #bbbbbb;
@@ -2302,14 +2328,14 @@ div.background {
         // -webkit-text-stroke-width: 3px;
         // -webkit-text-stroke-color:#bbbbbb;
         
-        // text-shadow: 1px -1px 0 #444444, 
-        //             -1px 1px 0 #444444, 
-        //             1px 1px 0 #444444, 
-        //             -1px -1px 0 #444444;
+        // text-shadow: 1px -1px 0 $primaryTextColor, 
+        //             -1px 1px 0 $primaryTextColor, 
+        //             1px 1px 0 $primaryTextColor, 
+        //             -1px -1px 0 $primaryTextColor;
     }
 
     h3.fill {
-        color: #444444;
+        color: $primaryTextColor;
         z-index: 1;
         // top: 0;
         // left: 0;
@@ -2336,10 +2362,9 @@ div.resume {
     background-color: #ffffff;
 
     .container {
-        width: 60%;
+        width: 50%;
         margin: auto;
         margin-top: 5rem;
-        margin-bottom: 5rem;
 
         .row {
             flex-direction: row;
@@ -2352,11 +2377,6 @@ div.resume {
             margin-bottom: toRem(128);
 
             h3 {
-                // font-family: 'Poppins', serif;
-                // font-weight: 700;
-                // font-size: toRem(24); 
-                // margin: toRem(8) 0;
-
                 margin: 0;
                 margin-bottom: toRem(16);
                 font-family: 'Poppins', sans-serif;
@@ -2389,59 +2409,79 @@ div.resume {
                 margin-bottom: toRem(16);
             }
 
-            .education {
-                margin-top: toRem(16);
-                margin-bottom: toRem(40);
-                padding: toRem(24) toRem(24);
-                // border-width: toRem(4);
-                // border-color: #aaaaaa;
-                // border-style: solid;
-                border-radius: toRem(8);
-
-                width: 100%;
-                background-color: #ffffff;
-                overflow: hidden;
-
-                -webkit-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
-                -moz-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
-                -ms-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
-                -o-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
-                filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
-                box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
-            }
-
-            .skills {
+            .experienceHeader {
                 display: flex;
-                flex-flow: row wrap;
+                flex-flow: row;
                 justify-content: space-between;
-                align-items: stretch;
-                margin: toRem(-12);
-                margin-top: toRem(4);
-                margin-bottom: toRem(24);
+                align-items: baseline;
+
+                &.mobile {
+                    display: block;
+                }
+
+                .pdf {
+                    display: flex;
+                    flex-flow: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: toRem(16);
+    
+                    a {
+                        position: relative;
+
+                        font-family: 'Poppins', serif;
+                        font-weight: 500;
+                        font-size: toRem(18);
+    
+                        text-decoration: none;
+                        color: $primaryTextColor;
+
+                        img {
+                            position: absolute;
+
+                            width: toRem(24);
+                            margin-left: toRem(8);
+                            transition: margin $transitionTimingCard ease-in-out, transform $transitionTimingCard ease-out;
+                        }
+
+                        &:hover {
+                            color: #888888;
+                            
+                            img {
+                                transform: rotate(45deg);
+                                filter: invert(75%) sepia(0%) saturate(253%) hue-rotate(140deg) brightness(95%) contrast(77%);
+                            }
+                        }
+                    }
+                }
             }
 
             .listing {
                 margin-top: toRem(16);
                 margin-bottom: toRem(40);
-                padding: toRem(24) toRem(24);
+                // padding: toRem(24) toRem(24);
                 // border-width: toRem(4);
-                // border-color: #aaaaaa;
+                // border-color: #bbbbbb;
                 // border-style: solid;
-                border-radius: toRem(8);
+                // border-radius: toRem(8);
 
                 width: 100%;
-                background-color: #ffffff;
+                // background-color: #ffffff;
                 overflow: hidden;
 
-                -webkit-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
-                -moz-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
-                -ms-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
-                -o-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
-                filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
-                box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+                // -webkit-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
+                // -moz-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
+                // -ms-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
+                // -o-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
+                // filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
+                // box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+            
+                // display: flex;
+                // flex-flow: row;
+                // justify-content: space-between;
 
                 a {
-                    color: #8CA7BF;
+                    color: #8ca7bF;
                     text-decoration: none;
 
                     img {
@@ -2450,27 +2490,106 @@ div.resume {
                     }
                 }
 
-                .phrases {
-                    margin-top: toRem(16);
-                }
-
                 .phrase {
                     display: flex;
                     flex-direction: row;
                     align-items: flex-start;
 
                     img {
-                        margin: toRem(9) toRem(16);
+                        margin: toRem(10) toRem(10);
+                        width: toRem(8);
+                    }
+
+                    p {
+                        margin-left: toRem(10);    
                     }
                 }
             }
 
-            .minimized {
-                width: auto;
-                min-width: 30%;
-                flex-grow: 2;
-                margin: toRem(12);
+            // .experience .listing {
+            //     display: flex;
+            //     flex-flow: row;
+            //     justify-content: space-between;
+            //     gap: toRem(64);
+
+            //     .right {
+            //         p {
+            //             text-align: right;
+            //         }
+            //     }
+            // }
+
+            .experience .listing {
+                margin-bottom: toRem(96);
+                display: flex;
+                flex-flow: row;
+                justify-content: space-between;
+                gap: toRem(64);
+
+                .left {
+                    min-width: 30%;
+                }
+
+                .right {
+                    max-width: 70%;
+                }
+
+                &.mobile {
+                    margin-bottom: toRem(56);
+                    display: block;
+                }
             }
+            
+
+            .education {
+                margin-top: toRem(16);
+                margin-bottom: toRem(40);
+                // padding: toRem(24) toRem(24);
+                // border-width: toRem(4);
+                // border-color: #bbbbbb;
+                // border-style: solid;
+                // border-radius: toRem(8);
+
+                // width: 100%;
+                // background-color: #ffffff;
+                overflow: hidden;
+
+                // -webkit-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
+                // -moz-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
+                // -ms-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
+                // -o-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
+                // filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
+                // box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+            }
+
+            .skills {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                align-items: stretch;
+                gap: toRem(32);
+                margin: toRem(-12);
+                margin-top: toRem(4);
+                margin-bottom: toRem(24);
+
+                .listing {
+                    width: auto;
+                    min-width: 24%;
+                    flex-grow: 1;
+                    margin: toRem(12);
+                }
+
+                .phrases {
+                    margin-top: toRem(16);
+                }
+            }
+
+            // .minimized {
+            //     width: auto;
+            //     min-width: 30%;
+            //     flex-grow: 0;
+            //     margin: toRem(12);
+            // }
         }
     }
 }
@@ -2481,7 +2600,7 @@ div.about {
     position: relative;
     width: 100%;
     margin: auto;
-    background-color: #F0E6E7;
+    background-color: $skyPinkColor;
 
     h3 {
         margin-left: 12.5%;
@@ -2506,7 +2625,7 @@ div.about {
                 width: 100%;
                 z-index: 2;
 
-                border-radius: toRem(8);
+                border-radius: toRem(16);
             }
 
             .outline {
@@ -2516,9 +2635,9 @@ div.about {
                 width: 100%;
 
                 border-width: toRem(4);
-                border-color: #aaaaaa;
+                border-color: #bbbbbb;
                 border-style: solid;
-                border-radius: toRem(8);
+                border-radius: toRem(16);
 
                 img {
                     opacity: 0;
@@ -2529,9 +2648,9 @@ div.about {
                 margin-left: 1.5rem;
                 margin-top: 1.5rem;
                 width: 100%;
-                border-radius: toRem(8);
+                border-radius: toRem(16);
 
-                background-color: #444444;
+                background-color: $primaryTextColor;
 
                 img {
                     opacity: 0;

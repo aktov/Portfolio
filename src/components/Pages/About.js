@@ -88,7 +88,7 @@ class About extends React.Component {
                 className='text' 
                 style={this.props.screenWidth > 640 ? {marginLeft: '7rem', marginBottom: '70vh'} : {width: '100%'}}
               >
-                <Title title='About' screenWidth={this.props.screenWidth} />
+                <Title title='a bit about me' screenWidth={this.props.screenWidth} />
                 <p
                   data-aos='fade' 
                   data-aos-offset='50' 
@@ -127,7 +127,7 @@ class About extends React.Component {
           :
           <Parallax y={[0,10]} styleOuter={{position: 'relative', marginBottom: '8rem'}}>
             <div className='content' style={styleMobile}>
-              <Title title='about' screenWidth={this.props.screenWidth} />
+              <Title title='a bit about me' screenWidth={this.props.screenWidth} />
               <div className='prof' style={{marginTop: '2rem', marginBottom: '1rem', alignSelf: 'center', maxWidth: '85%'}}>
                 <img src={prof} className='actual' alt='profile pic' draggable='false'/>
                 <Parallax x={[-2,2]} y={[-2,2]} styleOuter={{position: 'relative'}}>

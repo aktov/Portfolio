@@ -19,48 +19,48 @@ const Tags = (props) => {
   );
 }
 
-const Buttons = (props) => {
-  return (
-    <div className='buttons'>
-      {/* {props.props.github && <a href={props.props.github} target="_blank" rel="noopener noreferrer">
-          <img src={github} alt='github' draggable='false' />     
-          <span className='toolTip'> Github </span>
-      </a> }
-      {props.props.figma && <a href={props.props.figma} target="_blank" rel="noopener noreferrer">
-          <img src={figma} alt='figma' draggable='false' /> 
-          <span className='toolTip'> Figma prototype </span> 
-      </a> }
-      {props.props.figmaD && <a href={props.props.figmaD} target="_blank" rel="noopener noreferrer">
-          <img src={figmaD} alt='figmaDesktop' draggable='false' /> 
-          <span className='toolTip'> Desktop proto </span> 
-      </a> }
-      {props.props.figmaM && <a href={props.props.figmaM} target="_blank" rel="noopener noreferrer">
-          <img src={figmaM} alt='figmaMobile' draggable='false' /> 
-          <span className='toolTip'> Mobile prototype </span> 
-      </a> } */}
-      {/* {props.props.figmaA && <a href={props.props.figmaA} target="_blank" rel="noopener noreferrer">
-          <img src={figmaA} alt='figmaA' draggable='false' /> 
-          <span className='toolTip'> figma version A </span> 
-      </a> }
-      {props.props.figmaB && <a href={props.props.figmaB} target="_blank" rel="noopener noreferrer">
-          <img src={figmaB} alt='figmaB' draggable='false' /> 
-          <span className='toolTip'> figma version B </span> 
-      </a> }
-      {props.props.figma1 && <a href={props.props.figma1} target="_blank" rel="noopener noreferrer">
-          <img src={figma1} alt='figma1' draggable='false' /> 
-          <span className='toolTip'> Redesign 1 proto </span> 
-      </a> }
-      {props.props.figma2 && <a href={props.props.figma2} target="_blank" rel="noopener noreferrer">
-          <img src={figma2} alt='figma1' draggable='false' /> 
-          <span className='toolTip'> Redesign 2 proto </span> 
-      </a> } */}
-      {props.props.link && <Link to={props.props.link} rel="noopener noreferrer">
-          <img src={open} alt='open' draggable='false' /> 
-          <span className='toolTip'> Read more! </span>
-      </Link> }
-    </div>
-  );
-}
+// const Buttons = (props) => {
+//   return (
+//     <div className='buttons'>
+//       {/* {props.props.github && <a href={props.props.github} target="_blank" rel="noopener noreferrer">
+//           <img src={github} alt='github' draggable='false' />     
+//           <span className='toolTip'> Github </span>
+//       </a> }
+//       {props.props.figma && <a href={props.props.figma} target="_blank" rel="noopener noreferrer">
+//           <img src={figma} alt='figma' draggable='false' /> 
+//           <span className='toolTip'> Figma prototype </span> 
+//       </a> }
+//       {props.props.figmaD && <a href={props.props.figmaD} target="_blank" rel="noopener noreferrer">
+//           <img src={figmaD} alt='figmaDesktop' draggable='false' /> 
+//           <span className='toolTip'> Desktop proto </span> 
+//       </a> }
+//       {props.props.figmaM && <a href={props.props.figmaM} target="_blank" rel="noopener noreferrer">
+//           <img src={figmaM} alt='figmaMobile' draggable='false' /> 
+//           <span className='toolTip'> Mobile prototype </span> 
+//       </a> } */}
+//       {/* {props.props.figmaA && <a href={props.props.figmaA} target="_blank" rel="noopener noreferrer">
+//           <img src={figmaA} alt='figmaA' draggable='false' /> 
+//           <span className='toolTip'> figma version A </span> 
+//       </a> }
+//       {props.props.figmaB && <a href={props.props.figmaB} target="_blank" rel="noopener noreferrer">
+//           <img src={figmaB} alt='figmaB' draggable='false' /> 
+//           <span className='toolTip'> figma version B </span> 
+//       </a> }
+//       {props.props.figma1 && <a href={props.props.figma1} target="_blank" rel="noopener noreferrer">
+//           <img src={figma1} alt='figma1' draggable='false' /> 
+//           <span className='toolTip'> Redesign 1 proto </span> 
+//       </a> }
+//       {props.props.figma2 && <a href={props.props.figma2} target="_blank" rel="noopener noreferrer">
+//           <img src={figma2} alt='figma1' draggable='false' /> 
+//           <span className='toolTip'> Redesign 2 proto </span> 
+//       </a> } */}
+//       {/* {props.props.link && <Link to={props.props.link} rel="noopener noreferrer">
+//           <img src={open} alt='open' draggable='false' /> 
+//           <span className='toolTip'> Read more! </span>
+//       </Link> } */}
+//     </div>
+//   );
+// }
 
 
 
@@ -125,7 +125,7 @@ function Info(props) {
     >
       <div className='topRow'>
         <h4 className='cardTitle'> {props.props.title} </h4>
-        {props.mouseEntered && <Buttons props={props.props}/>}
+        {/* {props.mouseEntered && <Buttons props={props.props}/>} */}
       </div>
       
       {props.mouseEntered &&
@@ -230,7 +230,7 @@ function Card(props) {
             <p> {props.desc} </p>
         
             {props.tags && <Tags names={props.tags} color={props.color2 || props.color} />}
-            <Buttons props={props} />
+            {/* <Buttons props={props} /> */}
           </div>
         </div>
       }  

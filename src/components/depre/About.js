@@ -57,7 +57,7 @@ class About extends React.Component {
         doc={this.props.doc}
       />
 
-      <div className='app' style={{backgroundColor: '#F0E6E7'}}>
+      <div className='app' style={{backgroundColor: '#f0e6e7'}}>
         {/* Show Navmenu if on mobile */}
         {!(this.props.screenWidth > 768) &&
           <NavMenu toggleMenu={this.toggleMenu} screenWidth={this.props.screenWidth} menuOpen={this.state.menuOpen}/> 
@@ -67,7 +67,7 @@ class About extends React.Component {
           <Contact screenWidth={this.props.screenWidth} /> 
         }
 
-        <div className='content' style={{marginTop:'3rem', overflow: 'hidden', backgroundColor: '#F0E6E7'}}>
+        <div className='content' style={{marginTop:'3rem', overflow: 'hidden', backgroundColor: '#f0e6e7'}}>
           
           {/* <img 
             className='banner' 

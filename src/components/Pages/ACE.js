@@ -5,7 +5,6 @@ import Header from '../Header.js';
 import Footer from '../Footer.js';
 import FooterSeeAlso from '../FooterSeeAlso.js';
 import NavMenu from '../NavMenu.js';
-import Contact from '../Contact.js';
 import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
@@ -151,7 +150,7 @@ const imageIcon = {width: '32px', margin: 0}
 const imageIconMobile = {width: '32px', margin: 0}
 
 
-// Returns style based on breakpoints, of which there are 2
+// Returns style based on breakpoints, of which there are 3
 const decideMarginWidth = function(value) {
   if (value > 1280) {
     return {marginTop:'3rem'}
@@ -203,12 +202,8 @@ class ACE extends React.Component {
         {!(this.props.screenWidth > 768) &&
           <NavMenu toggleMenu={this.toggleMenu} screenWidth={this.props.screenWidth} menuOpen={this.state.menuOpen}/> 
         }
-        {/* Show Contact if on desktop */}
-        {this.props.screenWidth > 768 &&
-          <Contact screenWidth={this.props.screenWidth} /> 
-        }
 
-        <div className='content' style={{marginTop:'3rem'}}>
+        <div className='content'>
           <div id='anchor_page' className='anchor' style={{top: '-1000px'}}></div>
           <img 
             className='banner' 
