@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ParallaxProvider } from 'react-scroll-parallax';
@@ -65,12 +65,6 @@ class App extends React.Component {
             <Mobile screenWidth={this.state.screenWidth}/>
             }
           </Route>
-          {/* <Route path='/about'>
-            <About screenWidth={this.state.screenWidth}/>
-          </Route>
-          <Route path='/resume'>
-            <Resume screenWidth={this.state.screenWidth}/>
-          </Route> */}
 
           {/* Case Studies */}
           <Route path='/ace'>

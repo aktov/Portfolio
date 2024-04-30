@@ -1,6 +1,6 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
-import { HashLink as Link } from 'react-router-hash-link';
+import { Link, useHistory } from 'react-router-dom';
+// import { HashLink as Link } from 'react-router-hash-link';
 import smoothscroll from 'smoothscroll-polyfill';
 smoothscroll.polyfill();
 
@@ -9,11 +9,18 @@ const headerCategories = [
   'work', 'about', 'resume'
 ]
 
+
 // Button component
 const Button = (props) => {
-
+  const history = useHistory();
   function handleClick(e) {
     let anchor = document.getElementById(props.text);
+
+    if (props.text === '/') {
+      history.push('/');
+    } else {
+      history.push(`/${props.text}`);
+    }
     
     if (anchor) {
       setTimeout(() => {anchor.scrollIntoView({behavior: 'smooth', block: 'start'})}, 0);
@@ -26,7 +33,8 @@ const Button = (props) => {
   }
 
   return (
-    <Link to={window.location.hash === '#/' || window.location.hash.includes('#/#') ? '/' : '/#' + props.text}> 
+    // <Link to={window.location.hash === '#/' || window.location.hash.includes('#/#') ? '/' : '/#' + props.text}> 
+    <Link to="/">
     <div  
       id={'button_'+ props.text} 
       className='buttonNav'
