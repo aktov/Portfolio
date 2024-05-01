@@ -34,9 +34,13 @@ class Footer extends React.Component {
               </a>
             </div>
           </div>
-          
+
+          <div className='columns'>
+            <div className='column'>
               <h6> If you like what you see, please feel free to chat with me thru email or on LinkedIn! </h6>
-          {/* <h6> Designed and built with many, many iterations by Alex </h6> */}
+              {/* <h6> Designed and built with many, many iterations by Alex </h6> */}
+            </div>
+          </div>
         </div>
       </div>
     );

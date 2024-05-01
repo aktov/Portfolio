@@ -165,42 +165,39 @@ function Card(props) {
           data-aos-duration='400'
           data-aos-once={true}
         >
-          
-          <div className='imageHolder' style={{backgroundColor: props.color}}>
-            <LazyLoad height={200} offset={100}>
-            <div className='lazyload-wrapper'>
-              {props.default &&
-                <a href={props.default} target="_blank" rel="noopener noreferrer">
-                  <img src={props.image} alt={props.title} draggable='false' />
-                </a>
-              }
-              {props.link &&
-                <Link to={props.link} rel="noopener noreferrer">
-                  <img src={props.image} alt={props.title} draggable='false' />
-                </Link>
-              } 
-            </div>  
-            </LazyLoad>
-          </div>
-    
-          {/* <Info props={props} mouseEntered={mouseEntered} screenWidth={props.screenWidth}> </Info> */}
-          <div 
-            className={'descWrapper'} 
-          >
-            <div className='topRow'>
-              {props.link &&
-                <Link to={props.link} rel="noopener noreferrer">
-                  <h4 className='cardTitle'> {props.title} </h4>
-                </Link>
-              } 
-            </div>
-            
-            {/* <div className={props.screenWidth > 1280 ? 'botRow' : 'botRowWide'}> */}
-            <div className='botRow'>
-              <p> {props.desc} </p> 
-              {props.tags && <Tags names={props.tags} color={props.color2 || props.color} />} 
-            </div>
-          </div>
+          {props.link &&
+            <Link to={props.link} rel="noopener noreferrer">
+              <div className='imageHolder' style={{backgroundColor: props.color}}>
+                <LazyLoad height={200} offset={100}>
+                <div className='lazyload-wrapper'>
+                  {props.default &&
+                    <a href={props.default} target="_blank" rel="noopener noreferrer">
+                      <img src={props.image} alt={props.title} draggable='false' />
+                    </a>
+                  }
+                  {props.link &&
+                    <Link to={props.link} rel="noopener noreferrer">
+                      <img src={props.image} alt={props.title} draggable='false' />
+                    </Link>
+                  } 
+                </div>  
+                </LazyLoad>
+              </div>
+        
+              {/* <Info props={props} mouseEntered={mouseEntered} screenWidth={props.screenWidth}> </Info> */}
+              <div className={'descWrapper'} >
+                <div className='topRow'>
+                      <h4 className='cardTitle'> {props.title} </h4>
+                </div>
+                
+                {/* <div className={props.screenWidth > 1280 ? 'botRow' : 'botRowWide'}> */}
+                <div className='botRow'>
+                  <p> {props.desc} </p> 
+                  {props.tags && <Tags names={props.tags} color={props.color2 || props.color} />} 
+                </div>
+              </div>
+            </Link> 
+          }
         </div> 
 
       :
