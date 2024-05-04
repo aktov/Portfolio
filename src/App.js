@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+import ReactGA from 'react-ga';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ParallaxProvider } from 'react-scroll-parallax';
@@ -38,6 +39,12 @@ class App extends React.Component {
 
   componentDidMount() {
     window.addEventListener('resize', this.handleResize);
+
+    // For Google Analytics
+    ReactGA.initialize('G-4GVEGQE25F');
+
+    // Send a pageview event to Google Analytics
+    ReactGA.pageview(window.location.pathname + window.location.search);
     
     // if (window.sessionStorage.getItem('siteLoaded')) {
     //   this.setState({doAnimate: false});
@@ -52,6 +59,7 @@ class App extends React.Component {
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleResize);
   }
+
 
   render() {
     AOS.init();

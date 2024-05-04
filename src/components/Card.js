@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useRef  } from 'react';
+import ReactGA from 'react-ga';
 // import React from 'react';
 import LazyLoad from 'react-lazyload';
 import { Link } from 'react-router-dom';
 
-import open from '../images/open.svg';
-import github from '../images/GitHub-Mark-120px-plus.png';
-import figma from '../images/figmaLogo.svg';
-import figmaM from '../images/figmaM.svg';
-import figmaD from '../images/figmaD.svg';
+// import open from '../images/open.svg';
+// import github from '../images/GitHub-Mark-120px-plus.png';
+// import figma from '../images/figmaLogo.svg';
+// import figmaM from '../images/figmaM.svg';
+// import figmaD from '../images/figmaD.svg';
 
 const Tags = (props) => {
   return (
@@ -143,6 +144,16 @@ function Info(props) {
 function Card(props) {
   const [mouseEntered, setMouse] = useState(false);
 
+  const handleClick = () => {
+    // Send custom event to Google Analytics
+    ReactGA.event({
+      category: 'Work Card View',
+      action: 'Viewed',
+      label: `${props.title} viewed`, 
+      value: 1 // Optional numeric value
+    });
+  };
+
   const handleMouseEnter = () => {
     setMouse(true);
   }
@@ -166,7 +177,7 @@ function Card(props) {
           data-aos-once={true}
         >
           {props.link &&
-            <Link to={props.link} rel="noopener noreferrer">
+            <Link to={props.link} onClick={handleClick} rel="noopener noreferrer">
               <div className='imageHolder' style={{backgroundColor: props.color}}>
                 <LazyLoad height={200} offset={100}>
                 <div className='lazyload-wrapper'>
@@ -217,7 +228,7 @@ function Card(props) {
                 </a>
               }
               {props.link &&
-                <Link to={props.link} rel="noopener noreferrer">
+                <Link to={props.link}  onClick={handleClick} rel="noopener noreferrer">
                   <img src={props.imageM} alt={props.title} draggable='false' />
                 </Link>
               } 

@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 
 import open from '../images/open.svg';
 
@@ -13,6 +14,15 @@ const decideMarginWidth = function(value) {
 } 
 
 class Footer extends React.Component {
+  handleClick = () => {
+    // Send custom event to Google Analytics
+    ReactGA.event({
+      category: 'Footer Link Interaction',
+      action: 'Interacted',
+      label: 'Footer link interacted', 
+      value: 1 // Optional numeric value
+    });
+  };
 
   render() {
     return (

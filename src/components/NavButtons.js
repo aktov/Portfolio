@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 import { Link, useHistory } from 'react-router-dom';
 // import { HashLink as Link } from 'react-router-hash-link';
 import smoothscroll from 'smoothscroll-polyfill';
@@ -15,6 +16,14 @@ const Button = (props) => {
   const history = useHistory();
   function handleClick(e) {
     let anchor = document.getElementById(props.text);
+    
+    // Send custom event to Google Analytics
+    ReactGA.event({
+      category: 'Nav Button Interaction',
+      action: 'Viewed',
+      label: `${props.text} viewed`,
+      value: 1 // Optional numeric value
+    });
 
     if (props.text === '/') {
       history.push('/');

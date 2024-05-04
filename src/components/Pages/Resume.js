@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 
 import Title from '../Title';
 import Experience from '../Experience';
@@ -20,6 +21,16 @@ const decideMarginWidth = function(value) {
 const lessMargins = {marginBottom: '.5rem'}
 
 class Resume extends React.Component { 
+  handleClick = () => {
+    // Send custom event to Google Analytics
+    ReactGA.event({
+      category: 'Resume PDF View',
+      action: 'Viewed',
+      label: 'Resume PDF viewed', 
+      value: 1 // Optional numeric value
+    });
+  };
+
   render() {
     return (
       <div className='resume'>
@@ -34,7 +45,7 @@ class Resume extends React.Component {
               {this.props.screenWidth > 768 ? 
               <>
                 <div className='pdf'>
-                  <a href={resume_pdf} target="_blank" rel="noopener noreferrer">
+                  <a href={resume_pdf} handleClick={this.handleClick} target="_blank" rel="noopener noreferrer">
                     View as a PDF instead
                     <img src={open} alt='Follow link' draggable='false' /> 
                   </a>
@@ -51,7 +62,7 @@ class Resume extends React.Component {
             <> 
               <div className='experienceHeader mobile'>
                 <div className='pdf'>
-                  <a href={resume_pdf} target="_blank" rel="noopener noreferrer">
+                  <a href={resume_pdf} handleClick={this.handleClick} target="_blank" rel="noopener noreferrer">
                     View as a PDF instead
                     <img src={open} alt='Follow link' draggable='false' /> 
                   </a>

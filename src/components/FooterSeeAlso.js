@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 import { Link } from 'react-router-dom';
 
 import {entries} from './WorkEntries.js'; // This is a table imported from this file, make edits to case studies and designs there
@@ -86,6 +87,16 @@ class FooterSeeAlso extends React.Component {
     };
   }
 
+  handleClick = (entry) => {
+    // Send custom event to Google Analytics
+    ReactGA.event({
+      category: 'See Also View',
+      action: 'Viewed',
+      label: `${entry.title} viewed`, 
+      value: 1 // Optional numeric value
+    });
+  };
+
   componentDidMount() {
     const chosenEntries = getRandomEntries(3, this.props.page);
     this.setState({chosenEntries});
@@ -101,7 +112,7 @@ class FooterSeeAlso extends React.Component {
 
           {/* This function call passes in the page we're on and grabs 3 other pages to advertise */}
           {this.state.chosenEntries.map((entry) => 
-            <Link to={entry.link} rel="noopener noreferrer" key={entry.title}>
+            <Link to={entry.link} onClick={() => this.handleClick(entry)} rel="noopener noreferrer" key={entry.title}>
               <div>
                 <h4 className='subheading'> {entry.title} </h4>
                 <div className='imageHolder'>

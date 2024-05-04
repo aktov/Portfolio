@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 
 import img_arrow from '../images/arrowUp.svg';
 
@@ -18,6 +19,13 @@ class TopButton extends React.Component {
     if (document.getElementById('anchor_page') && this.state.visible) {
       document.getElementById('anchor_page').scrollIntoView({behavior: 'smooth', block: 'start'});
     }
+
+    ReactGA.event({
+      category: 'Top Button Interaction',
+      action: 'Interacted',
+      label: 'User went back to top of page', 
+      value: 1 // Optional numeric value
+    });
   }
 
   handleScroll() {
