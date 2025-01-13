@@ -72,6 +72,34 @@ class Experience extends React.Component {
         <div className='experience'>
           <JobListing 
             screenWidth={this.props.screenWidth}
+            title='UX Designer'
+            location='VEU Enterlink'
+            // link='https://www.ace.fan/'
+            period='May 2024 - Current'
+            // duration='1 yr 3 mo'
+            // highlight={true}
+            info={[
+              'Established the company\'s design process and design system, streamlining consistent design and development across our websites and web apps.',
+              'Designed Enterlink, a platform for creating, managing, and discovering online events and communities. ',
+              'Conducted a pilot study to assess product-market fit, increasing engagement by incorporating “personality type” themed questions. ',
+              'Facilitated design hand-offs in meetings to ensure user-first features and flows. '
+            ]}
+          />
+          <JobListing 
+            screenWidth={this.props.screenWidth}
+            title='UX Designer'
+            location='Geoffrey'
+            // link='https://www.ace.fan/'
+            period='Oct 2024 - Dec 2024'
+            duration='2 mo'
+            // highlight={true}
+            info={[
+              'Built and documented our component library and style guide, based on initial mocks and ideas.',
+              'Updated our initial mocks into organized, functional prototypes with increased consistency throughout user flows by utilizing reusable components and variants.',
+            ]}
+          />
+          <JobListing 
+            screenWidth={this.props.screenWidth}
             title='UI/UX Designer'
             location='Artist Crowdfund Exchange'
             // link='https://www.ace.fan/'
