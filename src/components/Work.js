@@ -16,7 +16,7 @@ class Work extends React.Component {
         <Cards group={'featured'} screenWidth={this.props.screenWidth} />
         <h4 className='heading'> {'Case Studies'} </h4>
         <Cards group={'casestudies'} screenWidth={this.props.screenWidth} />
-        <h4 className='heading'> {'Designs & Prototypes'} </h4>
+        <h4 className='heading'> {'Designs'} </h4>
         <Cards group={'designs'} screenWidth={this.props.screenWidth} />
       </div> 
     );

@@ -82,14 +82,14 @@ class Experience extends React.Component {
               'Established the company\'s design process and design system, streamlining consistent design and development across our websites and web apps.',
               'Designed Enterlink, a platform for creating, managing, and discovering online events and communities. ',
               'Conducted a pilot study to assess product-market fit, increasing engagement by incorporating “personality type” themed questions. ',
-              'Facilitated design hand-offs in meetings to ensure user-first features and flows. '
+              'Work closely with cross-functional teams and facilitate design hand-offs in meetings to ensure user needs and technical constraints are met.',
+              'Research and design solutions for features in our backlog by conducting competitive analysis, creating high-fidelity mockups, and user testing interactive prototypes.'
             ]}
           />
           <JobListing 
             screenWidth={this.props.screenWidth}
-            title='UX Designer'
+            title='UX Designer (Contract)'
             location='Geoffrey'
-            // link='https://www.ace.fan/'
             period='Oct 2024 - Dec 2024'
             duration='2 mo'
             // highlight={true}
