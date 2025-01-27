@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ad18b207.css",
-    "main.js": "/static/js/main.393a51c0.js",
+    "main.js": "/static/js/main.7497ba1e.js",
     "static/media/ComponentsDesk.gif": "/static/media/ComponentsDesk.35ab7525588cb9f60cb1.gif",
     "static/media/ComponentsMob.gif": "/static/media/ComponentsMob.15a519fdddfa04c8522e.gif",
     "static/media/Graphics_Mobile.png": "/static/media/Graphics_Mobile.f34290bf59164f0f9aed.png",
@@ -130,7 +130,7 @@
     "static/media/ColorStyles.png": "/static/media/ColorStyles.52574e57cadeb0717ee0.png",
     "static/media/ComponentsMob.png": "/static/media/ComponentsMob.e03155905f5c6e5dc7b6.png",
     "static/media/ComponentsDesk.png": "/static/media/ComponentsDesk.3ed00bf2dac0fd2e83f2.png",
-    "static/media/Resume_AlexTov.pdf": "/static/media/Resume_AlexTov.ca905b9c32bc07c823bb.pdf",
+    "static/media/Resume_AlexTov.pdf": "/static/media/Resume_AlexTov.02c5fcb9ec98f914aaea.pdf",
     "static/media/designProcess.svg": "/static/media/designProcess.9c477c27305010ae197de6c501c52093.svg",
     "static/media/ColorStylesDesk.png": "/static/media/ColorStylesDesk.aa611499ce94cf1262ca.png",
     "static/media/TextStylesDesk.png": "/static/media/TextStylesDesk.77adaf7dcc931e9797ff.png",
@@ -305,10 +305,10 @@
     "static/media/bullet.svg": "/static/media/bullet.b3b76ad2fc8eb2f392b457dcda836ee1.svg",
     "static/media/Layer06.svg": "/static/media/Layer06.9c6ab73ccd8fe69ffd20983501e0fde6.svg",
     "main.ad18b207.css.map": "/static/css/main.ad18b207.css.map",
-    "main.393a51c0.js.map": "/static/js/main.393a51c0.js.map"
+    "main.7497ba1e.js.map": "/static/js/main.7497ba1e.js.map"
   },
   "entrypoints": [
     "static/css/main.ad18b207.css",
-    "static/js/main.393a51c0.js"
+    "static/js/main.7497ba1e.js"
   ]
 }
