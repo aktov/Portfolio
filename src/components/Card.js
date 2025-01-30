@@ -4,21 +4,24 @@ import ReactGA from 'react-ga';
 import LazyLoad from 'react-lazyload';
 import { Link } from 'react-router-dom';
 
+import Tags from './Tags.js';
 // import open from '../images/open.svg';
 // import github from '../images/GitHub-Mark-120px-plus.png';
 // import figma from '../images/figmaLogo.svg';
 // import figmaM from '../images/figmaM.svg';
 // import figmaD from '../images/figmaD.svg';
 
-const Tags = (props) => {
-  return (
-    <div className='tags'>
-      {props.names.map((name) =>
-        <h6 key={name} style={{color: props.color}}> {name.toUpperCase()} </h6>
-      )}
-    </div>
-  );
-}
+// const Tags = (props) => {
+//   return (
+//     <div className='tags'>
+//       {props.names.map((name) =>
+//         <div className='tagWrapper' style={{borderColor: props.color}}>
+//           <h6 key={name} style={{color: props.color}}> {name} </h6>
+//         </div>
+//       )}
+//     </div>
+//   );
+// }
 
 // const Buttons = (props) => {
 //   return (

@@ -8,6 +8,7 @@ import NavMenu from '../NavMenu.js';
 import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
+import Tags from '../Tags.js';
 
 import {getEntryProperty} from '../WorkEntries.js'; // This is a table imported from this file, make edits to case studies and designs there
 
@@ -112,15 +113,15 @@ const Image = (props) => {
   );
 };
 
-const Tags = (props) => {
-  return (
-    <div className='tags'>
-      {props.names.map((name) =>
-        <h5 key={name} style={{color: props.color}}> {name.toUpperCase()} </h5>
-      )}
-    </div>
-  );
-}
+// const Tags = (props) => {
+//   return (
+//     <div className='tags'>
+//       {props.names.map((name) =>
+//         <h5 key={name} style={{color: props.color}}> {name.toUpperCase()} </h5>
+//       )}
+//     </div>
+//   );
+// }
 
 const goals = [
   'Learn how to build a strong, communicative relationship with our client, as well as how to be flexible during times where they are unresponsive',

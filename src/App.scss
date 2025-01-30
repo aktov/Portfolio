@@ -973,20 +973,39 @@ div.content {
                         align-content: flex-start;
                         align-items: flex-start;
             
+                        div.tagWrapper {
+                            border-radius: toRem(16);
+                            border: toRem(2) solid #cccccc;
+                            padding: toRem(2) toRem(8);
+                            margin-right: toRem(8);
+                        }
+
                         h6 {
                             margin: 0;
-                            padding-right: toRem(10);
+                            // padding-right: toRem(10);
             
-                            font-family: 'Poppins', sans-serif;
+                            font-family: 'DM Sans';
+                            // font-family: 'Host Grotesk';
+                            // font-family: 'Poppins', sans-serif;
                             font-style: normal;
                             font-weight: 600;
                             line-height: normal;
+
+                            color: #cccccc;
                         }
                     }  
 
                     p {
                         width: 100%;
                         margin: 0;
+    
+                        font-family: 'Host Grotesk';
+                        font-size: toRem(17);
+                        line-height: 150%;
+
+                        @media screen and (min-width: 768px){
+                            font-size: toRem(19);          
+                        }
                     }
                 }          
 
@@ -1150,8 +1169,10 @@ div.content {
                     max-width: 100%;
                     margin-top: toRem(0);
                     margin-bottom: toRem(16);
-                    font-size: toRem(14);
+                    font-size: toRem(15);
                     // font-size: $size_p;
+                    font-family: 'Host Grotesk';
+                    line-height: 150%;
                 }          
             }
     
@@ -1165,12 +1186,21 @@ div.content {
                 justify-content: flex-start;
                 align-items: flex-start;
                 margin-bottom: toRem(8);
-    
+
+                div.tagWrapper {
+                    border-radius: toRem(16);
+                    border: toRem(2) solid #cccccc;
+                    padding: toRem(2) toRem(8);
+                    margin-right: toRem(8);
+                    margin-bottom: toRem(8);
+                }
+
                 h6 {
                     margin: toRem(0);
-                    padding-right: toRem(10);
+                    // padding-right: toRem(10);
     
-                    font-family: 'Poppins', sans-serif;
+                    font-family: 'DM Sans';
+                    // font-family: 'Poppins', sans-serif;
                     font-style: normal;
                     font-weight: 600;
                     font-size: toRem(12);
@@ -1639,6 +1669,28 @@ div.content {
             align-items: flex-start;
             margin-bottom: toRem(16);
 
+            div.tagWrapper {
+                border-radius: toRem(16);
+                border: toRem(2) solid #cccccc;
+                padding: toRem(2) toRem(8);
+                margin-right: toRem(16);
+            }
+
+            h6 {
+                margin: 0;
+                // padding-right: toRem(10);
+
+                font-family: 'DM Sans';
+                // font-family: 'Host Grotesk';
+                // font-family: 'Poppins', sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: toRem(16);
+                line-height: normal;
+
+                color: #cccccc;
+            }
+
             h5 {
                 margin: toRem(0);
                 padding-right: toRem(16);
@@ -1752,8 +1804,15 @@ div.content {
         }
 
         p {
+            font-family: 'Host Grotesk';
+            font-size: toRem(17);
+            line-height: 150%;
             margin-top: toRem(5);
             width: 100%;
+
+            @media screen and (min-width: 768px){
+                font-size: toRem(19);          
+            }
 
             @media screen and (min-width: 768px){
                 width: 70%;
@@ -2543,6 +2602,13 @@ div.resume {
 
                     p {
                         margin-left: toRem(10);    
+                        font-family: 'Host Grotesk';
+                        // font-size: toRem(17);
+                        line-height: 150%;
+
+                        @media screen and (min-width: 768px){
+                            font-size: toRem(19);          
+                        }
                     }
                 }
             }
@@ -2666,7 +2732,7 @@ div.about {
                 width: 100%;
                 z-index: 2;
 
-                border-radius: toRem(16);
+                border-radius: toRem(32);
             }
 
             .outline {
@@ -2678,7 +2744,7 @@ div.about {
                 border-width: toRem(4);
                 border-color: $primaryTextColor;
                 border-style: solid;
-                border-radius: toRem(16);
+                border-radius: toRem(32);
 
                 img {
                     opacity: 0;
@@ -2689,7 +2755,7 @@ div.about {
                 margin-left: 1rem;
                 margin-top: 1rem;
                 width: 100%;
-                border-radius: toRem(16);
+                border-radius: toRem(32);
 
                 background-color: #aaaaaa77;
 
@@ -2703,6 +2769,16 @@ div.about {
             position: relative;
             margin-left: 12.5%;
             max-width: 50%;
+
+            p {
+                font-family: 'Host Grotesk';
+                font-size: toRem(17);
+                line-height: 150%;
+
+                @media screen and (min-width: 768px){
+                    font-size: toRem(19);          
+                }
+            }
         }
 
         .title {

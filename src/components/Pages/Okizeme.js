@@ -8,6 +8,7 @@ import NavMenu from '../NavMenu.js';
 import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
+import Tags from '../Tags.js';
 
 import {getEntryProperty} from '../WorkEntries.js'; // This is a table imported from this file, make edits to case studies and designs there
 
@@ -79,15 +80,15 @@ const Image = (props) => {
   );
 };
 
-const Tags = (props) => {
-  return (
-    <div className='tags'>
-      {props.names.map((name) =>
-        <h5 key={name} style={{color: props.color}}> {name.toUpperCase()} </h5>
-      )}
-    </div>
-  );
-}
+// const Tags = (props) => {
+//   return (
+//     <div className='tags'>
+//       {props.names.map((name) =>
+//         <h5 key={name} style={{color: props.color}}> {name.toUpperCase()} </h5>
+//       )}
+//     </div>
+//   );
+// }
 
 const descr = [
   'Improve the visuals. Enhance the visuals by incorporating the branding and genre into the site better.',

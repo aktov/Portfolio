@@ -8,6 +8,7 @@ import NavMenu from '../NavMenu.js';
 import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
+import Tags from '../Tags.js';
 
 import {getEntryProperty} from '../WorkEntries.js'; // This is a table imported from this file, make edits to case studies and designs there
 // import open from '../../images/open.svg';
@@ -82,15 +83,15 @@ const Image = (props) => {
   );
 };
 
-const Tags = (props) => {
-  return (
-    <div className='tags'>
-      {props.names.map((name) =>
-        <h5 key={name} style={{color: props.color}}> {name.toUpperCase()} </h5>
-      )}
-    </div>
-  );
-}
+// const Tags = (props) => {
+//   return (
+//     <div className='tags'>
+//       {props.names.map((name) =>
+//         <h5 key={name} style={{color: props.color}}> {name.toUpperCase()} </h5>
+//       )}
+//     </div>
+//   );
+// }
 
 // const descr = [
 //   'Modified and updated existing app screens with UI designs more aligned with modern trends and styles (e.g. navigation bar, headers, icons, and many other specific screens)',

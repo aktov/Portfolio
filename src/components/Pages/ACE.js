@@ -8,10 +8,11 @@ import NavMenu from '../NavMenu.js';
 import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
+import Tags from '../Tags.js';
 
 import {getEntryProperty} from '../WorkEntries.js'; // This is a table imported from this file, make edits to case studies and designs there
 
-import open from '../../images/open.svg';
+// import open from '../../images/open.svg';
 
 import pic1 from '../../images/Pages/ace/01.png';
 import pic2 from '../../images/Pages/ace/02.png';
@@ -98,15 +99,15 @@ const Image = (props) => {
   );
 };
 
-const Tags = (props) => {
-  return (
-    <div className='tags'>
-      {props.names.map((name) =>
-        <h5 key={name} style={{color: props.color2}}> {name.toUpperCase()} </h5>
-      )}
-    </div>
-  );
-}
+// const Tags = (props) => {
+//   return (
+//     <div className='tags'>
+//       {props.names.map((name) =>
+//         <h5 key={name} style={{color: props.color2}}> {name.toUpperCase()} </h5>
+//       )}
+//     </div>
+//   );
+// }
 
 
 const problemGoals = [
@@ -217,7 +218,7 @@ class ACE extends React.Component {
             data-aos-once={true}  
           />
           <div className='pages' style={decideMarginWidth(this.props.screenWidth)}>
-            <Tags names={tags} color={color} color2={color2}/>
+            <Tags names={tags} color={color2}/>
             <h3 
               className='title'
               data-aos='fade' 
@@ -244,7 +245,7 @@ class ACE extends React.Component {
                 <h4 className='heading'> Role </h4>
                 <p> UX Designer </p>              
                 <br/>
-                <h4 className='heading'> Links </h4>
+                {/* <h4 className='heading'> Links </h4>
                 <div className='buttons'>
                   <a 
                     href={link}
@@ -255,7 +256,7 @@ class ACE extends React.Component {
                     <span className='toolTip'> Check out ACE! </span> 
                   </a> 
                 </div>
-                <br/>
+                <br/> */}
               </div>
               <div 
                 className='col' 

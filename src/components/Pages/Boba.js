@@ -8,6 +8,7 @@ import NavMenu from '../NavMenu.js';
 import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
+import Tags from '../Tags.js';
 
 import {getEntryProperty} from '../WorkEntries.js'; // This is a table imported from this file, make edits to case studies and designs there
 
@@ -67,15 +68,15 @@ const Image = (props) => {
   );
 };
 
-const Tags = (props) => {
-  return (
-    <div className='tags'>
-      {props.names.map((name) =>
-        <h5 key={name} style={{color: props.color2}}> {name.toUpperCase()} </h5>
-      )}
-    </div>
-  );
-}
+// const Tags = (props) => {
+//   return (
+//     <div className='tags'>
+//       {props.names.map((name) =>
+//         <h5 key={name} style={{color: props.color2}}> {name.toUpperCase()} </h5>
+//       )}
+//     </div>
+//   );
+// }
 
 const features = [
   'Calendar for users to easily see which days they bought boba',
@@ -176,7 +177,7 @@ class Boba extends React.Component {
             data-aos-once={true}  
           />
           <div className='pages' style={decideMarginWidth(this.props.screenWidth)}>
-            <Tags names={tags} color={color} color2={color2}/>
+            <Tags names={tags} color={color2}/>
             <h3 
               className='title'
               data-aos='fade' 
