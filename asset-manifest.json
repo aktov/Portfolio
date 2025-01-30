@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ad18b207.css",
-    "main.js": "/static/js/main.7497ba1e.js",
+    "main.css": "/static/css/main.190d3d22.css",
+    "main.js": "/static/js/main.65fa587e.js",
     "static/media/ComponentsDesk.gif": "/static/media/ComponentsDesk.35ab7525588cb9f60cb1.gif",
     "static/media/ComponentsMob.gif": "/static/media/ComponentsMob.15a519fdddfa04c8522e.gif",
     "static/media/Graphics_Mobile.png": "/static/media/Graphics_Mobile.f34290bf59164f0f9aed.png",
@@ -35,7 +35,6 @@
     "static/media/44.png": "/static/media/44.0ef7829c72238468b0eb.png",
     "static/media/Mobile5.png": "/static/media/Mobile5.c34b73eef4df8884f3d9.png",
     "static/media/13.png": "/static/media/13.2610b11c1327903daef8.png",
-    "static/media/profilePic3.jpeg": "/static/media/profilePic3.46f726debed50dcfd6e6.jpeg",
     "static/media/banner_alike.png": "/static/media/banner_alike.2ea6a40f7b62f7206e3e.png",
     "static/media/cardImage_alike.png": "/static/media/cardImage_alike.fec09d1d42ac24ec82a0.png",
     "static/media/2.png": "/static/media/2.91a2add8432eaa641896.png",
@@ -136,6 +135,7 @@
     "static/media/TextStylesDesk.png": "/static/media/TextStylesDesk.77adaf7dcc931e9797ff.png",
     "static/media/TextStyles.png": "/static/media/TextStyles.c4df1d416a328c2e01ce.png",
     "static/media/Palette_Mobile.svg": "/static/media/Palette_Mobile.b7c0e10192801bfeffaac8833e259cb0.svg",
+    "static/media/profilePic3.jpeg": "/static/media/profilePic3.9f7626de62da707b18a6.jpeg",
     "static/media/Palette_Desktop.svg": "/static/media/Palette_Desktop.b452fa2b7d47b22377ae8600eb782bd3.svg",
     "static/media/Underlay.svg": "/static/media/Underlay.9ced1a89a81ee88f269f862e5fdae0e8.svg",
     "static/media/Logos_Desktop.svg": "/static/media/Logos_Desktop.e56f981576c5072ae82069d757452e41.svg",
@@ -304,11 +304,11 @@
     "static/media/arrow.svg": "/static/media/arrow.b0c2fb374e6df93a4e41bcc72497d01d.svg",
     "static/media/bullet.svg": "/static/media/bullet.b3b76ad2fc8eb2f392b457dcda836ee1.svg",
     "static/media/Layer06.svg": "/static/media/Layer06.9c6ab73ccd8fe69ffd20983501e0fde6.svg",
-    "main.ad18b207.css.map": "/static/css/main.ad18b207.css.map",
-    "main.7497ba1e.js.map": "/static/js/main.7497ba1e.js.map"
+    "main.190d3d22.css.map": "/static/css/main.190d3d22.css.map",
+    "main.65fa587e.js.map": "/static/js/main.65fa587e.js.map"
   },
   "entrypoints": [
-    "static/css/main.ad18b207.css",
-    "static/js/main.7497ba1e.js"
+    "static/css/main.190d3d22.css",
+    "static/js/main.65fa587e.js"
   ]
 }
