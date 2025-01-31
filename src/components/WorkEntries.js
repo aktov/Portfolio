@@ -1,4 +1,5 @@
 // Mobile images
+import imgM_veu from '../images/Thumbnails/Mobile/cardImageM_veu.png';
 import imgM_ace from '../images/Thumbnails/Mobile/cardImageM_ace.png';
 import imgM_alike from '../images/Thumbnails/Mobile/cardImageM_alike.png';
 import imgM_okizeme from '../images/Thumbnails/Mobile/cardImageM_okizeme.png';
@@ -11,6 +12,7 @@ import imgM_flowers from '../images/Thumbnails/Mobile/cardImageM_flowers.png';
 import imgM_edushare from '../images/Thumbnails/Mobile/cardImageM_edushare.png';
 
 // Desktop images
+import img_veu from '../images/Thumbnails/Desktop/cardImage_veu.png';
 import img_ace from '../images/Thumbnails/Desktop/cardImage_ace.png';
 import img_alike from '../images/Thumbnails/Desktop/cardImage_alike.png';
 import img_okizeme from '../images/Thumbnails/Desktop/cardImage_okizeme.png';
@@ -23,6 +25,7 @@ import img_flowers from '../images/Thumbnails/Desktop/cardImage_flowers.png';
 import img_edushare from '../images/Thumbnails/Desktop/cardImage_edushare.png';
 
 // Desktop Banners
+import banner_veu from '../images/Banners/banner_veu.png';
 import banner_ace from '../images/Banners/banner_ace.png';
 import banner_alike from '../images/Banners/banner_alike.png';
 import banner_okizeme from '../images/Banners/banner_okizeme.png';
@@ -35,6 +38,7 @@ import banner_flowers from '../images/Banners/banner_flowers.png';
 import banner_edushare from '../images/Banners/banner_edushare.png';
 
 // Mobile
+import bannerM_veu from '../images/Thumbnails/Mobile/cardImageM_veu.png';
 import bannerM_ace from '../images/Thumbnails/Mobile/cardImageM_ace.png';
 import bannerM_alike from '../images/Thumbnails/Mobile/cardImageM_alike.png';
 import bannerM_okizeme from '../images/Thumbnails/Mobile/cardImageM_okizeme.png';
@@ -98,6 +102,20 @@ const entries = {
     },
   ],
   casestudies: [
+    {
+      title: 'Enterlink',
+      descr: 'Streamlining event creation and community engagement for online spaces.',
+      image: img_veu,
+      imageM: imgM_veu,
+      banner: banner_veu,
+      bannerM: bannerM_veu,
+      tags: ['virtual events', 'VR', 'social networking', 'community'],
+      color: '#2C2D36',
+      color2: '#349CB9',
+      website: 'https://enterverse.com/',
+      link: '/veu',
+      key: 'veu'
+    },
     {
       title: 'Artist Crowdfund Exchange',
       descr: 'Improving the discoverability of empowering features for our creators.',

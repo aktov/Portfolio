@@ -5,7 +5,7 @@ class SectionTitle extends React.Component {
   render() {
     return (
       <div>
-        <h3> {this.props.title} </h3>
+        <h3 className='contentsTableTitle'> {this.props.title} </h3>
         <div className='titleUnderscore' style={this.props.color ? {backgroundColor: this.props.color} : null}></div>
       </div>
     );

@@ -10,6 +10,7 @@ import Desktop from './components/Desktop.js';
 import Mobile from './components/Mobile.js';
 
 // Case Studies
+import VEU from './components/Pages/VEU.js'; 
 import ACE from './components/Pages/ACE.js'; 
 import Alike from './components/Pages/Alike.js'; 
 import Okizeme from './components/Pages/Okizeme.js'; 
@@ -75,6 +76,9 @@ class App extends React.Component {
           </Route>
 
           {/* Case Studies */}
+          <Route path='/veu'>
+            <VEU screenWidth={this.state.screenWidth}/>
+          </Route>
           <Route path='/ace'>
             <ACE screenWidth={this.state.screenWidth}/>
           </Route>

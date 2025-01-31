@@ -1,5 +1,4 @@
 import React from 'react';
-import LazyLoad from 'react-lazyload';
 
 import Header from '../Header.js';
 import Footer from '../Footer.js';
@@ -9,6 +8,8 @@ import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
 import Tags from '../Tags.js';
+import Image from '../PageImage.js';
+import ContentsTable from '../ContentsTable.js';
 
 import {getEntryProperty} from '../WorkEntries.js'; // This is a table imported from this file, make edits to case studies and designs there
 
@@ -53,38 +54,6 @@ const concepts = [
   'Each switch allows the game to update the block position variable, which in turn updates the blocks position, moving the block across the screen (demo 2).',
 ];
 
-
-const Image = (props) => {
-  return (
-    <div className='imageHolder' style={props.style || null}>
-      <LazyLoad 
-        height={200} 
-        offset={100}
-      >
-        <img 
-          src={props.src} 
-          alt='' 
-          draggable='false'           
-          data-aos='fade' 
-          data-aos-offset='50' 
-          data-aos-easing='ease-out-sine'
-          data-aos-duration='400'
-          data-aos-once={true}
-        /> 
-      </LazyLoad>
-    </div>
-  );
-};
-
-// const Tags = (props) => {
-//   return (
-//     <div className='tags'>
-//       {props.names.map((name) =>
-//         <h5 key={name} style={{color: props.color}}> {name.toUpperCase()} </h5>
-//       )}
-//     </div>
-//   );
-// }
 
 // const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
@@ -223,6 +192,8 @@ class Stacker extends React.Component {
               </div>
             </div>
 
+            {this.props.screenWidth > 1280 ? <ContentsTable color={color2}/> : null} 
+
             <div className='section'>
               <SectionTitle title='Intro' color={color2}/> 
               <h4 className='heading'> A minigame built entirely on Figma </h4>
@@ -230,7 +201,7 @@ class Stacker extends React.Component {
                 Shortly after Config 2023, with the release of variables in Figma, I challenged myself to learn how to use them by attempting to create a game! 
               </p>
               <p>
-                I've always had a knack for designing prototypes for my team in my past experiences, and hearing about this feature live had me dreaming up ideas during the talk itself.
+                Not going to lie, when I heard about this feature during the keynote at Config, I zoned out for a bit ideating new possibilities for prototyping.
               </p>
               <br/>
               

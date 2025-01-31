@@ -9,8 +9,8 @@ class Tags extends React.Component {
     return ( 
       <div className='tags'>
         {this.props.names.map((name) =>
-          <div className='tagWrapper' style={{borderColor: this.props.color}}>
-            <h6 key={name} style={{color: this.props.color}}> {name} </h6>
+          <div key={name} className='tagWrapper' style={{borderColor: this.props.color}}>
+            <h6 style={{color: this.props.color}}> {name} </h6>
           </div>
         )}
       </div>

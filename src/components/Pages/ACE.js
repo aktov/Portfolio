@@ -1,5 +1,4 @@
 import React from 'react';
-import LazyLoad from 'react-lazyload';
 
 import Header from '../Header.js';
 import Footer from '../Footer.js';
@@ -9,6 +8,8 @@ import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
 import Tags from '../Tags.js';
+import Image from '../PageImage.js';
+import ContentsTable from '../ContentsTable.js';
 
 import {getEntryProperty} from '../WorkEntries.js'; // This is a table imported from this file, make edits to case studies and designs there
 
@@ -57,7 +58,7 @@ const color2 = getEntryProperty('casestudies', 'ace', 'color2')
 const title = getEntryProperty('casestudies', 'ace', 'title')
 const banner = getEntryProperty('casestudies', 'ace', 'banner')
 const banner_mob = getEntryProperty('casestudies', 'ace', 'bannerM')
-const link = getEntryProperty('casestudies', 'ace', 'website')
+// const link = getEntryProperty('casestudies', 'ace', 'website')
 
 
 function importImages(r) {
@@ -77,27 +78,27 @@ const Bullets = (props) => {
   );
 };
 
-const Image = (props) => {
-  return (
-    <div className='imageHolder' style={props.style || null}>
-      <LazyLoad 
-        height={200} 
-        offset={100}
-      >
-        <img 
-          src={props.src} 
-          alt='' 
-          draggable='false'           
-          data-aos='fade-up' 
-          data-aos-offset='50' 
-          data-aos-easing='ease-out-sine'
-          data-aos-duration='400'
-          data-aos-once={true}
-        /> 
-      </LazyLoad>
-    </div>
-  );
-};
+// const Image = (props) => {
+//   return (
+//     <div className='imageHolder' style={props.style || null}>
+//       {/* <LazyLoad 
+//         height={200} 
+//         offset={100}
+//       > */}
+//         <img 
+//           src={props.src} 
+//           alt='' 
+//           draggable='false'           
+//           data-aos='fade-up' 
+//           data-aos-offset='50' 
+//           data-aos-easing='ease-out-quad'
+//           data-aos-duration='400'
+//           data-aos-once={true}
+//         /> 
+//       {/* </LazyLoad> */}
+//     </div>
+//   );
+// };
 
 // const Tags = (props) => {
 //   return (
@@ -293,6 +294,8 @@ class ACE extends React.Component {
                 <br/> */}
               </div>
             </div>
+
+            {this.props.screenWidth > 1280 ? <ContentsTable color={color2}/> : null} 
 
             <div className='section'>
               <SectionTitle title='Intro' color={color2}/> 

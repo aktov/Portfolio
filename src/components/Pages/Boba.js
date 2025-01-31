@@ -1,5 +1,4 @@
 import React from 'react';
-import LazyLoad from 'react-lazyload';
 
 import Header from '../Header.js';
 import Footer from '../Footer.js';
@@ -9,6 +8,8 @@ import Phrase from '../Phrase.js';
 import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
 import Tags from '../Tags.js';
+import Image from '../PageImage.js';
+import ContentsTable from '../ContentsTable.js';
 
 import {getEntryProperty} from '../WorkEntries.js'; // This is a table imported from this file, make edits to case studies and designs there
 
@@ -46,37 +47,6 @@ const Bullets = (props) => {
   );
 };
 
-const Image = (props) => {
-  return (
-    <div className='imageHolder' style={props.style || null}>
-      <LazyLoad 
-        height={200} 
-        offset={100}
-      >
-        <img 
-          src={props.src} 
-          alt='' 
-          draggable='false'           
-          data-aos='fade' 
-          data-aos-offset='50' 
-          data-aos-easing='ease-out-sine'
-          data-aos-duration='400'
-          data-aos-once={true}
-        /> 
-      </LazyLoad>
-    </div>
-  );
-};
-
-// const Tags = (props) => {
-//   return (
-//     <div className='tags'>
-//       {props.names.map((name) =>
-//         <h5 key={name} style={{color: props.color2}}> {name.toUpperCase()} </h5>
-//       )}
-//     </div>
-//   );
-// }
 
 const features = [
   'Calendar for users to easily see which days they bought boba',
@@ -234,6 +204,8 @@ class Boba extends React.Component {
                 </p> 
               </div>
             </div>
+
+            {this.props.screenWidth > 1280 ? <ContentsTable color={color2}/> : null} 
 
             <div className='section'>
               <SectionTitle title='Intro' color={color2}/> 
