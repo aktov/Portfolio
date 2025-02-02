@@ -2,7 +2,7 @@ import React from 'react';
 
 import Header from './Header.js';
 import Background from './Background.js';
-// import Contact from './Contact.js';
+// import BackgroundCopy from './BackgroundCopy.js';
 import Content from './Content.js';
 import TopButton from './TopButton.js';
 
@@ -14,10 +14,10 @@ class Desktop extends React.Component {
   render() {
     return (
       <>
-      <Header useMobileNav={false} />
+      <Header useMobileNav={false} stickyUntil={1000} />
       <div className='app'>
         <Background screenWidth={this.props.screenWidth}/>
-        {/* <Contact screenWidth={this.props.screenWidth} />  */}
+        {/* <BackgroundCopy screenWidth={this.props.screenWidth}/> */}
         <Content screenWidth={this.props.screenWidth} />
       </div>
       

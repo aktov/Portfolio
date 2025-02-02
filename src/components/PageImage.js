@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import aos from "aos"; // Make sure to import AOS
-import LazyLoad from 'react-lazyload';
+// import LazyLoad from 'react-lazyload';
 
 const PageImage = (props) => {
   // Trigger AOS refresh once the image has loaded

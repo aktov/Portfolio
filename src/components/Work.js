@@ -12,8 +12,12 @@ class Work extends React.Component {
         <div id='work' className='anchor' style={this.props.screenWidth > 768 ? {marginTop: '-2.5rem'} : {marginTop: '-2rem'}}></div>
         <Title title='Work' screenWidth={this.props.screenWidth} /> 
 
-        <h4 className='heading'> {'Featured'} </h4>
-        <Cards group={'featured'} screenWidth={this.props.screenWidth} />
+        {this.props.screenWidth > 768 && 
+          <>
+            <h4 className='heading'> {'Featured'} </h4>
+            <Cards group={'featured'} screenWidth={this.props.screenWidth} />
+          </>
+        }
         <h4 className='heading'> {'Case Studies'} </h4>
         <Cards group={'casestudies'} screenWidth={this.props.screenWidth} />
         <h4 className='heading'> {'Designs'} </h4>

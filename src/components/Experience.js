@@ -1,8 +1,11 @@
 import React from 'react'
 
 import Phrase from './Phrase.js';
+import Tags from './Tags.js';
 
 // import open from '../images/open.svg';
+
+const tagColor = '#666666'
 
 const JobListing = (props) => {
   return (
@@ -40,6 +43,9 @@ const JobListing = (props) => {
               <Phrase key={props.title + '/' + index} text={phrase}/>
             )}
           </div>
+          <div>
+              {props.skills && <Tags names={props.skills} color={tagColor}/>}
+          </div>
         </div>
       </div>
     :
@@ -55,6 +61,9 @@ const JobListing = (props) => {
         {/* <h5> <a href={props.link} target="_blank" rel="noopener noreferrer"> {props.location} </a> </h5> */}
         <h5> {props.location} </h5>
         <p> {props.period} </p> 
+        {/* <div>
+          {props.skills && <Tags names={props.skills} color={tagColor}/>}
+        </div> */}
         {/* <div className='phrases'>
           {props.info.map((phrase, index) => 
             <Phrase key={props.title + '/' + index} text={phrase}/>
@@ -74,7 +83,7 @@ class Experience extends React.Component {
             screenWidth={this.props.screenWidth}
             title='UX Designer'
             location='VEU Enterlink'
-            // link='https://www.ace.fan/'
+            // link='https://www.enterverse.com/'
             period='May 2024 - Current'
             // duration='1 yr 3 mo'
             // highlight={true}
@@ -85,10 +94,11 @@ class Experience extends React.Component {
               'Work closely with cross-functional teams and facilitate design hand-offs in meetings to ensure user needs and technical constraints are met.',
               'Research and design solutions for features in our backlog by conducting competitive analysis, creating high-fidelity mockups, and user testing interactive prototypes.'
             ]}
+            // skills={['user research', 'design systems', '', 'prototyping']}
           />
           <JobListing 
             screenWidth={this.props.screenWidth}
-            title='UX Designer (Contract)'
+            title='UI Designer (Contract)'
             location='Geoffrey'
             period='Oct 2024 - Dec 2024'
             duration='2 mo'

@@ -126,7 +126,7 @@ const entries = {
       tags: ['web3', 'blockchain', 'crowdfunding', 'social networking'],
       color: '#FBE7E7',
       color2: '#EAA4C1',
-      website: 'https://www.ace.fan/',
+      // website: 'https://www.ace.fan/',
       link: '/ace',
       key: 'ace'
     },
@@ -139,7 +139,7 @@ const entries = {
       bannerM: bannerM_alike,
       tags: ['social networking', 'dating', 'community'],
       color: '#688CD0',
-      // default: 'https://www.alike.dating/',
+      // website: 'https://www.alike.dating/',
       link: '/alike',
       key: 'alike'
     },
@@ -155,7 +155,7 @@ const entries = {
       color: '#F5C0B9',
       figmaM: 'https://www.figma.com/proto/MgWQKucfltlZVzvE0cxUhQ/Okizeme-Design?page-id=106%3A81&node-id=106%3A82&viewport=366%2C-150%2C0.25410154461860657&scaling=scale-down',
       figmaD: 'https://www.figma.com/proto/MgWQKucfltlZVzvE0cxUhQ/Okizeme-Design?page-id=0%3A1&node-id=1%3A2&viewport=411%2C660%2C0.10949171334505081&scaling=scale-down-width',
-      // default: 'https://okizeme.com/'
+      website: 'https://okizeme.com/',
       link: '/okizeme',
       key: 'okizeme'
     },
@@ -176,7 +176,6 @@ const entries = {
     {
       title: 'CSA Website Design',
       descr: 'Designing a virtual hub to foster community engagement for Cambodian Student Association @UCSD.',
-      // descr: 'A website prototype for Cambodian Student Association @UCSD, built for desktop & mobile.',
       image: img_csa,
       imageM: imgM_csa,
       banner: banner_csa,
@@ -223,7 +222,6 @@ const entries = {
       color2: '#F5C0B9',
       figma: 'https://www.figma.com/proto/Sobk5FvyGSjzB6KM7Rfrm7/Stacker?page-id=0%3A1&type=design&node-id=146-692&viewport=-2952%2C-1585%2C0.18&t=SngxUk9oa4V2el6S-1&scaling=min-zoom&starting-point-node-id=146%3A692&mode=design',
       // default: 'https://www.figma.com/proto/Sobk5FvyGSjzB6KM7Rfrm7/Stacker?page-id=0%3A1&type=design&node-id=146-692&viewport=-2952%2C-1585%2C0.18&t=SngxUk9oa4V2el6S-1&scaling=min-zoom&starting-point-node-id=146%3A692&mode=design',
-      // link: 'https://www.linkedin.com/feed/update/urn:li:activity:7082475571913363456/'
       link: '/stacker',
       key: 'stacker'
     },

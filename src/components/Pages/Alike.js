@@ -39,7 +39,7 @@ import pic22 from '../../images/Pages/alike/new/22.png';
 import pic23 from '../../images/Pages/alike/new/23.png';
 import pic24 from '../../images/Pages/alike/new/24.png';
 import pic25 from '../../images/Pages/alike/new/25.png';
-import picDesignProcess from '../../images/Pages/alike/new/designProcess.svg';
+// import picDesignProcess from '../../images/Pages/alike/new/designProcess.svg';
 
 // import persona1 from '../../images/Pages/alike/5.png';
 // import persona2 from '../../images/Pages/alike/6.png';
@@ -82,21 +82,8 @@ const survey = [
 
 // const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
-const imageLarger = {marginTop: '4rem', marginBottom: '4rem', width: '120%'};
+// const imageLarger = {marginTop: '4rem', marginBottom: '4rem', width: '120%'};
 // const smallerImage = {marginTop: '0rem', width: '70%'}
-
-
-// Returns style based on breakpoints, of which there are 3
-const decideMarginWidth = function(value) {
-  if (value > 1280) {
-    return {marginTop:'3rem'}
-  } else if (value > 768) {
-    return {width: '70%', marginTop:'3rem'}
-  }
-  return {width: '75%', marginTop:'3rem'}
-} 
-
-
 
 
 class Alike extends React.Component {
@@ -152,7 +139,7 @@ class Alike extends React.Component {
             data-aos-duration='400'
             data-aos-once={true}  
           />
-          <div className='pages' style={decideMarginWidth(this.props.screenWidth)}>
+          <div className='pages'>
             <Tags names={tags} color={color}/>
             <h3 
               className='title'
@@ -595,7 +582,7 @@ class Alike extends React.Component {
       </div>
 
       <TopButton color={color} />
-      <FooterSeeAlso page={key} width={decideMarginWidth(this.props.screenWidth)} />
+      <FooterSeeAlso page={key}/>
       <Footer screenWidth={this.props.screenWidth} />
       </>
     );

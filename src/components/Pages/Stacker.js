@@ -59,15 +59,7 @@ const concepts = [
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
 const imageCaptioned = {marginTop: '0.5rem', marginBottom: '1rem', marginRight: 'auto', marginLeft: '0rem'};
 
-// Returns style based on breakpoints, of which there are 3
-const decideMarginWidth = function(value) {
-  if (value > 1280) {
-    return {marginTop:'3rem'}
-  } else if (value > 768) {
-    return {width: '70%', marginTop:'3rem'}
-  }
-  return {width: '75%', marginTop:'3rem'}
-} 
+
 
 
 class Stacker extends React.Component {
@@ -123,7 +115,7 @@ class Stacker extends React.Component {
             data-aos-duration='400'
             data-aos-once={true}  
           />
-          <div className='pages' style={decideMarginWidth(this.props.screenWidth)}>
+          <div className='pages'>
             <Tags names={tags} color={color2}/>
             <h3 
               className='title'
@@ -371,14 +363,14 @@ class Stacker extends React.Component {
               <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7082475506972962816" 
                 height={this.props.screenWidth > 768 ? 717 : 400} 
                 width={this.props.screenWidth > 768 ? 504 : 320} 
-                frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                frameBorder="0" allowFullScreen="" title="Embedded post"></iframe>
             </div>
           </div>          
         </div>  
       </div>      
 
       <TopButton color={color2} />
-      <FooterSeeAlso page={key} width={decideMarginWidth(this.props.screenWidth)} />
+      <FooterSeeAlso page={key}/>
       <Footer screenWidth={this.props.screenWidth} />
       </>
     );

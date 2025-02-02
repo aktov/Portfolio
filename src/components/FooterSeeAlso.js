@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 import {entries} from './WorkEntries.js'; // This is a table imported from this file, make edits to case studies and designs there
 
-import SectionTitle from './SectionTitle.js';
 import Title from './Title';
 import img_arrow from '../images/arrow.svg';
 import img_clouds from '../images/cloudCover.svg';
@@ -56,7 +55,7 @@ const getRandomEntries = function(amount, currentPageKey) {
     const selectedInt = getRandomInteger(0, entries[group].length - 1);
 
     // If this number hasn't been selected before, remember it
-    if (selectedInt != numberToAvoid && !chosenNumbers.includes(selectedInt)) {
+    if (selectedInt !== numberToAvoid && !chosenNumbers.includes(selectedInt)) {
       chosenNumbers.push(selectedInt);
     } 
   }
@@ -106,7 +105,7 @@ class FooterSeeAlso extends React.Component {
     return (
       <div className='footerSeeAlso'>
         <img className='clouds' src={img_clouds} alt='' draggable='false'/>
-        <div className='container' style={this.props.width}>
+        <div className='container'>
           {/* <SectionTitle title='Discover more'/> */}
           <Title title='discover more' screenWidth={this.props.screenWidth} /> 
 

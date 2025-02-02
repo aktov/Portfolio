@@ -3,16 +3,6 @@ import ReactGA from 'react-ga';
 
 import open from '../images/open.svg';
 
-// Returns style based on breakpoints, of which there are 3
-const decideMarginWidth = function(value) {
-  if (value > 1280) {
-    return 'container'
-  } else if (value > 768) {
-    return 'container medium'
-  }
-  return 'container mobile'
-} 
-
 class Footer extends React.Component {
   handleClick = () => {
     // Send custom event to Google Analytics
@@ -27,7 +17,7 @@ class Footer extends React.Component {
   render() {
     return (
       <div className='footer'>
-        <div className={decideMarginWidth(this.props.screenWidth)}>
+        <div className='container'>
           <div className='columns'>
             <div className='column'>
               <a href='mailto:alextovdesign@gmail.com' target="_blank" rel="noopener noreferrer">

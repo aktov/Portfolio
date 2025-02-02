@@ -1,66 +1,60 @@
 import React from 'react';
-import LazyLoad from 'react-lazyload';
+// import LazyLoad from 'react-lazyload';
 
 import Header from '../Header.js';
 import Footer from '../Footer.js';
 import FooterSeeAlso from '../FooterSeeAlso.js';
 import NavMenu from '../NavMenu.js';
-import Phrase from '../Phrase.js';
-import SectionTitle from '../SectionTitle.js';
+// import Phrase from '../Phrase.js';
+// import SectionTitle from '../SectionTitle.js';
 import TopButton from '../TopButton.js';
 import Tags from '../Tags.js';
-import ContentsTable from '../ContentsTable.js';
+// import ContentsTable from '../ContentsTable.js';
 
 import {getEntryProperty} from '../WorkEntries.js'; // This is a table imported from this file, make edits to case studies and designs there
 
 const key = getEntryProperty('casestudies', 'veu', 'key')
 const tags = getEntryProperty('casestudies', 'veu', 'tags')
-const color = getEntryProperty('casestudies', 'veu', 'color')
+// const color = getEntryProperty('casestudies', 'veu', 'color')
 const color2 = getEntryProperty('casestudies', 'veu', 'color2')
 const title = getEntryProperty('casestudies', 'veu', 'title')
 const banner = getEntryProperty('casestudies', 'veu', 'banner')
 const banner_mob = getEntryProperty('casestudies', 'veu', 'bannerM')
-const link = getEntryProperty('casestudies', 'veu', 'website')
+// const link = getEntryProperty('casestudies', 'veu', 'website')
 
 
-function importImages(r) {
-  return r.keys().map(r);
-}
-const iconsOutlined = importImages(require.context('../../images/Pages/ace/iconsOutlined', false, /\.(png|jpe?g|svg)$/));
-const iconsFilled = importImages(require.context('../../images/Pages/ace/iconsFilled', false, /\.(png|jpe?g|svg)$/));
-const iconsUnused = importImages(require.context('../../images/Pages/ace/iconsUnused', false, /\.(png|jpe?g|svg)$/));
 
-const Bullets = (props) => {
-  return (
-  <div className='phrases'>
-    {props.info.map((phrase, index) => 
-      <Phrase key={'alike/' + index} text={phrase}/>
-    )}
-  </div>
-  );
-};
+// const Bullets = (props) => {
+//   return (
+//   <div className='phrases'>
+//     {props.info.map((phrase, index) => 
+//       <Phrase key={'alike/' + index} text={phrase}/>
+//     )}
+//   </div>
+//   );
+// };
 
-const Image = (props) => {
-  return (
-    <div className='imageHolder' style={props.style || null}>
-      <LazyLoad 
-        height={200} 
-        offset={100}
-      >
-        <img 
-          src={props.src} 
-          alt='' 
-          draggable='false'           
-          data-aos='fade-up' 
-          data-aos-offset='50' 
-          data-aos-easing='ease-out-sine'
-          data-aos-duration='400'
-          data-aos-once={true}
-        /> 
-      </LazyLoad>
-    </div>
-  );
-};
+// const Image = (props) => {
+//   return (
+//     <div className='imageHolder' style={props.style || null}>
+//       <LazyLoad 
+//         height={200} 
+//         offset={100}
+//       >
+//         <img 
+//           src={props.src} 
+//           alt='' 
+//           draggable='false'           
+//           data-aos='fade-up' 
+//           data-aos-offset='50' 
+//           data-aos-easing='ease-out-sine'
+//           data-aos-duration='400'
+//           data-aos-once={true}
+//         /> 
+//       </LazyLoad>
+//     </div>
+//   );
+// };
 
 // const Tags = (props) => {
 //   return (
@@ -71,59 +65,6 @@ const Image = (props) => {
 //     </div>
 //   );
 // }
-
-
-const problemGoals = [
-  'Better clarity and instructions for our creators',
-  'Increased discoverability for their fans',
-];
-
-const kpis = [
-  'Total Registered Users',
-  'Amount of activated creators',
-  'Daily Active Users (DAU)',
-  'Access Token transactions'
-];
-
-const onboardingSurvey = [
-  'Do you remember seeing info about Access Tokens during sign up?',
-  'What are Access Tokens?'
-];
-
-const spotlightQuestions = [
-  'What content should I gate?',
-  'How should I price my tokens?',
-  'How does ACE interact with my repertoire of other social apps?'
-];
-
-const imageMarginNoTop = {marginTop: '0rem'};
-const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
-
-const iconGallery = {
-  display: 'flex',
-  flexFlow: 'row wrap',
-  justifyContent: 'center',
-  rowGap: '24px',
-  columnGap: '24px',
-
-  marginTop: '16px',
-  marginBottom: '64px'
-}
-
-const imageIcon = {width: '32px', margin: 0}
-const imageIconMobile = {width: '32px', margin: 0}
-
-
-// Returns style based on breakpoints, of which there are 3
-const decideMarginWidth = function(value) {
-  if (value > 1280) {
-    return {marginTop:'3rem'}
-  } else if (value > 768) {
-    return {width: '70%', marginTop:'3rem'}
-  }
-  return {width: '75%', marginTop:'3rem'}
-} 
-
 
 
 
@@ -180,7 +121,7 @@ class VEU extends React.Component {
             data-aos-duration='400'
             data-aos-once={true}  
           />
-          <div className='pages' style={decideMarginWidth(this.props.screenWidth)}>
+          <div className='pages'>
             <Tags names={tags} color={color2}/>
             <h3 
               className='title'
@@ -256,7 +197,7 @@ class VEU extends React.Component {
       </div>
 
       <TopButton color={color2} />
-      <FooterSeeAlso page={key} width={decideMarginWidth(this.props.screenWidth)} />
+      <FooterSeeAlso page={key}/>
       <Footer screenWidth={this.props.screenWidth} />
       </>
     );

@@ -45,7 +45,7 @@ class Resume extends React.Component {
               {this.props.screenWidth > 768 ? 
               <>
                 <div className='pdf'>
-                  <a href={resume_pdf} handleClick={this.handleClick} target="_blank" rel="noopener noreferrer">
+                  <a href={resume_pdf} onClick={this.handleClick} target="_blank" rel="noopener noreferrer">
                     View as a PDF instead
                     <img src={open} alt='Follow link' draggable='false' /> 
                   </a>
@@ -62,7 +62,7 @@ class Resume extends React.Component {
             <> 
               <div className='experienceHeader mobile'>
                 <div className='pdf'>
-                  <a href={resume_pdf} handleClick={this.handleClick} target="_blank" rel="noopener noreferrer">
+                  <a href={resume_pdf} onClick={this.handleClick} target="_blank" rel="noopener noreferrer">
                     View as a PDF instead
                     <img src={open} alt='Follow link' draggable='false' /> 
                   </a>

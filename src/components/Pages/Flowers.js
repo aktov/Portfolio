@@ -89,15 +89,7 @@ const borderShadow = {
   overflow: 'hidden'
 };
 
-// Returns style based on breakpoints, of which there are 3
-const decideMarginWidth = function(value) {
-  if (value > 1280) {
-    return {marginTop:'3rem'}
-  } else if (value > 768) {
-    return {width: '70%', marginTop:'3rem'}
-  }
-  return {width: '75%', marginTop:'3rem'}
-} 
+
 
 
 
@@ -154,7 +146,7 @@ class Flowers extends React.Component {
             data-aos-duration='400'
             data-aos-once={true}  
           />
-          <div className='pages' style={decideMarginWidth(this.props.screenWidth)}>
+          <div className='pages'>
             <Tags names={tags} color={color}/>
             <h3 
               className='title'
@@ -359,7 +351,7 @@ class Flowers extends React.Component {
       </div>
 
       <TopButton color={color} />
-      <FooterSeeAlso page={key} width={decideMarginWidth(this.props.screenWidth)} />
+      <FooterSeeAlso page={key}/>
       <Footer screenWidth={this.props.screenWidth} />
       </>
     );

@@ -53,7 +53,7 @@ import pic35 from '../../images/Pages/ace/35.png';
 
 const key = getEntryProperty('casestudies', 'ace', 'key')
 const tags = getEntryProperty('casestudies', 'ace', 'tags')
-const color = getEntryProperty('casestudies', 'ace', 'color')
+// const color = getEntryProperty('casestudies', 'ace', 'color')
 const color2 = getEntryProperty('casestudies', 'ace', 'color2')
 const title = getEntryProperty('casestudies', 'ace', 'title')
 const banner = getEntryProperty('casestudies', 'ace', 'banner')
@@ -61,12 +61,12 @@ const banner_mob = getEntryProperty('casestudies', 'ace', 'bannerM')
 // const link = getEntryProperty('casestudies', 'ace', 'website')
 
 
-function importImages(r) {
-  return r.keys().map(r);
-}
-const iconsOutlined = importImages(require.context('../../images/Pages/ace/iconsOutlined', false, /\.(png|jpe?g|svg)$/));
-const iconsFilled = importImages(require.context('../../images/Pages/ace/iconsFilled', false, /\.(png|jpe?g|svg)$/));
-const iconsUnused = importImages(require.context('../../images/Pages/ace/iconsUnused', false, /\.(png|jpe?g|svg)$/));
+// function importImages(r) {
+//   return r.keys().map(r);
+// }
+// const iconsOutlined = importImages(require.context('../../images/Pages/ace/iconsOutlined', false, /\.(png|jpe?g|svg)$/));
+// const iconsFilled = importImages(require.context('../../images/Pages/ace/iconsFilled', false, /\.(png|jpe?g|svg)$/));
+// const iconsUnused = importImages(require.context('../../images/Pages/ace/iconsUnused', false, /\.(png|jpe?g|svg)$/));
 
 const Bullets = (props) => {
   return (
@@ -137,32 +137,19 @@ const spotlightQuestions = [
 const imageMarginNoTop = {marginTop: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem'};
 
-const iconGallery = {
-  display: 'flex',
-  flexFlow: 'row wrap',
-  justifyContent: 'center',
-  rowGap: '24px',
-  columnGap: '24px',
+// const iconGallery = {
+//   display: 'flex',
+//   flexFlow: 'row wrap',
+//   justifyContent: 'center',
+//   rowGap: '24px',
+//   columnGap: '24px',
 
-  marginTop: '16px',
-  marginBottom: '64px'
-}
+//   marginTop: '16px',
+//   marginBottom: '64px'
+// }
 
-const imageIcon = {width: '32px', margin: 0}
-const imageIconMobile = {width: '32px', margin: 0}
-
-
-// Returns style based on breakpoints, of which there are 3
-const decideMarginWidth = function(value) {
-  if (value > 1280) {
-    return {marginTop:'3rem'}
-  } else if (value > 768) {
-    return {width: '70%', marginTop:'3rem'}
-  }
-  return {width: '75%', marginTop:'3rem'}
-} 
-
-
+// const imageIcon = {width: '32px', margin: 0}
+// const imageIconMobile = {width: '32px', margin: 0}
 
 
 class ACE extends React.Component {
@@ -218,7 +205,7 @@ class ACE extends React.Component {
             data-aos-duration='400'
             data-aos-once={true}  
           />
-          <div className='pages' style={decideMarginWidth(this.props.screenWidth)}>
+          <div className='pages'>
             <Tags names={tags} color={color2}/>
             <h3 
               className='title'
@@ -893,7 +880,7 @@ class ACE extends React.Component {
       </div>
 
       <TopButton color={color2} />
-      <FooterSeeAlso page={key} width={decideMarginWidth(this.props.screenWidth)} />
+      <FooterSeeAlso page={key} />
       <Footer screenWidth={this.props.screenWidth} />
       </>
     );

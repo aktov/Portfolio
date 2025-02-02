@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef  } from 'react';
+import React from 'react';
 import ReactGA from 'react-ga';
 // import React from 'react';
 import LazyLoad from 'react-lazyload';
@@ -67,85 +67,85 @@ import Tags from './Tags.js';
 // }
 
 
+// For the older design of card, no longer used
+// function Info(props) {
+//   let [collapsedHeight, setHeight] = useState();
+//   let [expandedHeight, setUpper] = useState();
+//   let [mouseEnterCount, setCount] = useState(1);
+//   const ref = useRef()
+//   const isFirstRender = useRef(true);
 
-function Info(props) {
-  let [collapsedHeight, setHeight] = useState();
-  let [expandedHeight, setUpper] = useState();
-  let [mouseEnterCount, setCount] = useState(1);
-  const ref = useRef()
-  const isFirstRender = useRef(true);
 
+//   const getCollapsedHeight = () => {
+//     const newHeight = ref.current.offsetHeight;
+//     setHeight(newHeight);
+//   }
+//   const getExpandedHeight = () => {
+//     const newHeight = ref.current.offsetHeight;
+//     setUpper(newHeight);
+//   }
 
-  const getCollapsedHeight = () => {
-    const newHeight = ref.current.offsetHeight;
-    setHeight(newHeight);
-  }
-  const getExpandedHeight = () => {
-    const newHeight = ref.current.offsetHeight;
-    setUpper(newHeight);
-  }
+//   const incrementCount = () => {
+//     setCount(mouseEnterCount += 1);
+//   }
 
-  const incrementCount = () => {
-    setCount(mouseEnterCount += 1);
-  }
+//   const handleResize = () => {
+//     setCount(2);
+//     // console.log('testing ' + mouseEnterCount)
+//     setHeight('96px');
+//     setUpper('auto');
+//   }
 
-  const handleResize = () => {
-    setCount(2);
-    // console.log('testing ' + mouseEnterCount)
-    setHeight('96px');
-    setUpper('auto');
-  }
+//   useEffect(() => {
+//     window.addEventListener('resize', handleResize, false);
+//   }, [])
 
-  useEffect(() => {
-    window.addEventListener('resize', handleResize, false);
-  }, [])
+//   useEffect(() => {
+//     if (ref.current && isFirstRender.current) {
+//       isFirstRender.current = false;
+//     }
 
-  useEffect(() => {
-    if (ref.current && isFirstRender.current) {
-      isFirstRender.current = false;
-    }
+//     // Get collapsed height on first mouse enter
+//     if (ref.current && mouseEnterCount === 1) {
+//       getCollapsedHeight();
+//       incrementCount();
+//       // console.log('collapsed height: ' + collapsedHeight);
+//     } 
 
-    // Get collapsed height on first mouse enter
-    if (ref.current && mouseEnterCount === 1) {
-      getCollapsedHeight();
-      incrementCount();
-      // console.log('collapsed height: ' + collapsedHeight);
-    } 
+//     // Get expanded height on first mouse leave
+//     if (props.mouseEntered && mouseEnterCount === 2) {
+//       getExpandedHeight();
+//       incrementCount();
+//       // console.log('expanded height: ' + expandedHeight);
+//     }
 
-    // Get expanded height on first mouse leave
-    if (props.mouseEntered && mouseEnterCount === 2) {
-      getExpandedHeight();
-      incrementCount();
-      // console.log('expanded height: ' + expandedHeight);
-    }
+//   }, [props.mouseEntered])
 
-  }, [props.mouseEntered])
-
-  return (
-    <div 
-      className={'descWrapper'} 
-      style={props.mouseEntered ? { height: expandedHeight } : { height: collapsedHeight}} 
-      ref={ref} 
-    >
-      <div className='topRow'>
-        <h4 className='cardTitle'> {props.props.title} </h4>
-        {/* {props.mouseEntered && <Buttons props={props.props}/>} */}
-      </div>
+//   return (
+//     <div 
+//       className={'descWrapper'} 
+//       style={props.mouseEntered ? { height: expandedHeight } : { height: collapsedHeight}} 
+//       ref={ref} 
+//     >
+//       <div className='topRow'>
+//         <h4 className='cardTitle'> {props.props.title} </h4>
+//         {/* {props.mouseEntered && <Buttons props={props.props}/>} */}
+//       </div>
       
-      {props.mouseEntered &&
-        <div className={props.props.screenWidth > 1280 ? 'botRow' : 'botRowWide'}>
-          <p> {props.props.desc} </p> 
-          {props.props.tags && <Tags names={props.props.tags} color={props.props.color2 || props.props.color} />} 
-        </div>
-      }
-    </div>
-  )
-}
+//       {props.mouseEntered &&
+//         <div className={props.props.screenWidth > 1280 ? 'botRow' : 'botRowWide'}>
+//           <p> {props.props.desc} </p> 
+//           {props.props.tags && <Tags names={props.props.tags} color={props.props.color2 || props.props.color} />} 
+//         </div>
+//       }
+//     </div>
+//   )
+// }
 
 
 
 function Card(props) {
-  const [mouseEntered, setMouse] = useState(false);
+  // const [setMouse] = useState(false);
 
   const handleClick = () => {
     // Send custom event to Google Analytics
@@ -157,13 +157,13 @@ function Card(props) {
     });
   };
 
-  const handleMouseEnter = () => {
-    setMouse(true);
-  }
+  // const handleMouseEnter = () => {
+  //   setMouse(true);
+  // }
 
-  const handleMouseLeave = () => {
-    setMouse(false);
-  }
+  // const handleMouseLeave = () => {
+  //   setMouse(false);
+  // }
 
   return (
     <>
@@ -184,16 +184,7 @@ function Card(props) {
               <div className='imageHolder' style={{backgroundColor: props.color}}>
                 <LazyLoad height={200} offset={100}>
                 <div className='lazyload-wrapper'>
-                  {props.default &&
-                    <a href={props.default} target="_blank" rel="noopener noreferrer">
-                      <img src={props.image} alt={props.title} draggable='false' />
-                    </a>
-                  }
-                  {props.link &&
-                    <Link to={props.link} rel="noopener noreferrer">
-                      <img src={props.image} alt={props.title} draggable='false' />
-                    </Link>
-                  } 
+                  {props.link && <img src={props.image} alt={props.title} draggable='false' /> } 
                 </div>  
                 </LazyLoad>
               </div>
@@ -225,11 +216,6 @@ function Card(props) {
           <div className='imageHolder'>
             <LazyLoad height={250} offset={2000} overflow={true}>
             {/* <div className='lazyload-wrapper'> */}
-              {props.default &&
-                <a href={props.default} target="_blank" rel="noopener noreferrer">
-                  <img src={props.imageM} alt={props.title} draggable='false' />
-                </a>
-              }
               {props.link &&
                 <Link to={props.link}  onClick={handleClick} rel="noopener noreferrer">
                   <img src={props.imageM} alt={props.title} draggable='false' />
