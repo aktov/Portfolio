@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Header from './Header.js';
-import Background from './Background.js';
+import Background from './Background1.js';
 import Content from './Content.js';
 import NavMenu from './NavMenu.js';
 import TopButton from './TopButton.js';

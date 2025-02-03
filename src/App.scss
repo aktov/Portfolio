@@ -66,7 +66,7 @@ button, a {
 
 div.app {
     width: 100%;
-    max-width: toRem(1920);
+    max-width: toRem(2560);
     margin: auto;
 }
 
@@ -584,6 +584,12 @@ div.contact {
 div.content {
     position: relative;
     width: 100%;
+
+    @media screen and (min-width: 2560px){
+        width: 70%;
+        margin: auto;
+        overflow-x: visible;
+    }
 
     display: flex;
     flex-flow: column wrap;
@@ -2401,20 +2407,106 @@ button.hide.topButton{
 .parallax-outer {
     position: absolute;
     width: 100%;
+
+    // .parallax-inner {
+    //     width: 100%;
+    // }
+
+    img {
+        width: 100%;
+    }
 }
 
 div.background {
     width: 100%;
     height: 100vh;
-    // max-height: toRem(600);
     position: relative;
-    // margin-top: $headerHeight + toRem(-1);
     margin-bottom: toRem(50);
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     justify-content: center;
     align-items: flex-end;
     overflow: hidden;
+
+    div {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+        display: flex;
+        flex: row;
+        justify-content: center;
+    }
+
+    img {
+        margin: auto;
+        width: 430px;
+
+        &.underlay {
+            width: calc(1.8 * 640px);
+        }
+
+        &.overlay {
+            width: calc(1.3 * 640px);
+        }
+
+        @media screen and (min-width: 430px){
+            margin: auto;
+            width: 640px;
+        }
+
+        @media screen and (min-width: 640px){
+            margin: auto;
+            width: 1280px;
+
+            &.underlay {
+                width: calc(1.8 * 1280px);
+            }
+
+            &.overlay {
+                width: calc(1.3 * 1280px);
+            }
+        }
+
+        @media screen and (min-width: 768px){
+            margin: auto;
+            width: 1600px;
+
+            &.underlay {
+                width: calc(1.8 * 1600px);
+            }
+
+            &.overlay {
+                width: calc(1.3 * 1600px);
+            }
+        }
+        
+        @media screen and (min-width: 1280px){
+            margin: auto;
+            width: 1920px;       
+            
+            &.underlay {
+                width: calc(1.8 * 1920px);
+            }
+
+            &.overlay {
+                width: calc(1.3 * 1920px);
+            }
+        }
+
+        @media screen and (min-width: 1921px){
+            margin: auto;
+            width: 2560px;            
+            
+            &.underlay {
+                width: calc(1.8 * 2560px);
+            }
+
+            &.overlay {
+                width: calc(1.3 * 2560px);
+            }
+        }
+    }
 
     background-color: $skyPinkColor;
 
@@ -2819,6 +2911,7 @@ div.about {
     width: 100%;
     margin: auto;
     background-color: $skyPinkColor;
+    overflow: clip;
 
     h3 {
         margin-left: 12.5%;
@@ -2826,6 +2919,12 @@ div.about {
 
     .content {
         width: 75%;
+        height: 150vh;
+
+        @media screen and (min-width: 768px){
+            height: 200vh;
+        }
+
         margin: auto;
         background-color: rgba(255, 255, 255, 0);
         overflow: visible;
@@ -2902,20 +3001,12 @@ div.about {
         }
     }
 
-    .background_about {
-        position: relative;
-        width: 100%;
-        height: auto;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        overflow: hidden;
-        z-index: 0;
-
-        .parallax-outer {
-            bottom: 0;
-            // overflow: hidden;
-        }
+    .background {
+        position: absolute;
+        bottom: 0;
+        height: 50vh;
+        margin-bottom: 0;
+        overflow-y: visible;
+        overflow-x: clip;
     }
 }

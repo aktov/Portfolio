@@ -20,7 +20,7 @@ const Header = (props) => {
     const handleScroll = throttle(() => {
       if (isManuallyVisible) return; // Prevent hiding if manually shown by mouse
 
-      if (window.scrollY > stickyUntil && window.scrollY > lastScrollY) {
+      if (window.scrollY > stickyUntil && window.scrollY > lastScrollY.current) {
         setIsHeaderVisible(false);
       } else {
         setIsHeaderVisible(true);

@@ -2,6 +2,7 @@ import React from 'react';
 import { Parallax } from 'react-scroll-parallax';
 
 import Title from '../Title';
+import Background from '../Background2.js';
 
 import prof from '../../images/profilePic3.jpeg';
 import toplay from '../../images/skyline1_mobile/Toplay.svg';
@@ -55,8 +56,8 @@ class About extends React.Component {
         <div id='about' className='anchor' style={this.props.screenWidth > 640 ? {top: '30rem'} : {top: '1rem'}}></div>
         <img src={toplay} alt='clouds' draggable='false' style={{position: 'absolute', width: '100%', top: '0', zIndex: '2'}}/> 
 
-        {this.props.screenWidth > 640 ? 
-          <Parallax y={[0,70]} styleOuter={{position: 'relative', marginBottom: '5rem'}}>
+        {this.props.screenWidth > 1280 ? 
+          <Parallax translateY={[0,70]} style={{position: 'relative', marginBottom: '5rem', zIndex: '2'}}>
             <div className='content' style={styleDesktop}>
               <div 
                 className='prof'
@@ -73,12 +74,12 @@ class About extends React.Component {
                   alt='profile pic' 
                   draggable='false'
                 />
-                <Parallax x={[-2,2]} y={[-2,2]}>
+                <Parallax translateX={[-2,2]} translateY={[-2,2]}>
                 <div className='outline'>
                   <img src={prof} alt='profile pic' draggable='false'/>
                 </div>
                 </Parallax>
-                <Parallax x={[2,-2]} y={[2,-2]} styleOuter={{position: 'relative'}}>
+                <Parallax translateX={[2,-2]} translateY={[2,-2]} style={{position: 'relative'}}>
                 <div className='fill'>
                   <img src={prof} alt='profile pic' draggable='false'/>
                 </div>
@@ -125,17 +126,17 @@ class About extends React.Component {
             </div>
           </Parallax>
           :
-          <Parallax y={[0,10]} styleOuter={{position: 'relative', marginBottom: '8rem'}}>
+          <Parallax translateY={[0,10]} style={{position: 'relative', marginBottom: '8rem', zIndex: '2'}}>
             <div className='content' style={styleMobile}>
               <Title title='a bit about me' screenWidth={this.props.screenWidth} />
               <div className='prof' style={{marginTop: '2rem', marginBottom: '1rem', alignSelf: 'center', maxWidth: '85%'}}>
                 <img src={prof} className='actual' alt='profile pic' draggable='false'/>
-                <Parallax x={[-2,2]} y={[-2,2]} styleOuter={{position: 'relative'}}>
+                <Parallax translateX={[-2,2]} translateY={[-2,2]} style={{position: 'relative'}}>
                 <div className='outline' style={{left: '-1rem', top: '-1rem'}}>
                   <img src={prof} alt='profile pic' draggable='false'/>
                 </div>
                 </Parallax>
-                <Parallax x={[2,-2]} y={[2,-2]} styleOuter={{position: 'relative'}}>
+                <Parallax translateX={[2,-2]} translateY={[2,-2]} style={{position: 'relative'}}>
                 <div className='fill' style={{marginLeft: '1rem', marginTop: '1rem'}}>
                   <img src={prof} alt='profile pic' draggable='false'/>
                 </div>
@@ -182,120 +183,8 @@ class About extends React.Component {
             </div>
           </Parallax>
         }
-        
-        {this.props.screenWidth > 640 ? 
-        <>
-          <div className='background_about'>
-            <Parallax 
-              x={[0,0]} 
-              styleOuter={{
-                position: 'relative'}}
-            >
-              <img 
-                  src={layer5_des}
-                  alt={'background'}
-                  style={{width:'100%'}}
-                  draggable='false' 
-              />
-            </Parallax>
-            <Parallax
-              x={[0,-2]} 
-            >
-              <img 
-                  src={layer4_des}
-                  alt={'background'}
-                  style={{width:'105%'}}
-                  draggable='false' 
-              />
-            </Parallax>
-            <Parallax
-              x={[0,-4]} 
-            >
-              <img 
-                  src={layer3_des}
-                  alt={'background'}
-                  style={{width:'105%'}}
-                  draggable='false' 
-              />
-            </Parallax>
-            <Parallax
-              x={[0,-6]} 
-            >
-              <img 
-                  src={layer2_des}
-                  alt={'background'}
-                  style={{width:'110%'}}
-                  draggable='false' 
-              />
-            </Parallax>
-            <Parallax
-              x={[0,-8]} 
-            >
-              <img 
-                  src={layer1_des}
-                  alt={'background'}
-                  style={{width:'110%'}}
-                  draggable='false' 
-              />
-            </Parallax>
-            <Parallax x={[0,10]} styleOuter={{bottom: '-10px'}}>
-              <img 
-                  src={overlay}
-                  alt={'background'}
-                  style={{width:'150%', float: 'right'}}
-                  draggable='false' 
-              />
-            </Parallax>
-          </div>
-        </>
-        :
-        <>
-          <div className='background_about'>
-            <Parallax x={[0,0]} styleOuter={{position: 'relative', overflow: 'visible'}}>
-              <img 
-                  src={layer5_mob}
-                  alt={'background'}
-                  style={{width:'100%'}}
-              />
-            </Parallax>
-            <Parallax x={[0,-2]} styleOuter={{overflow: 'visible'}}>
-              <img 
-                  src={layer4_mob}
-                  alt={'background'}
-                  style={{width:'105%'}}
-              />
-            </Parallax>
-            <Parallax x={[0,-4]} styleOuter={{overflow: 'visible'}}>
-              <img 
-                  src={layer3_mob}
-                  alt={'background'}
-                  style={{width:'105%'}}
-              />
-            </Parallax>
-            <Parallax x={[0,-6]} styleOuter={{overflow: 'visible'}}>
-              <img 
-                  src={layer2_mob}
-                  alt={'background'}
-                  style={{width:'110%'}}
-              />
-            </Parallax>
-            <Parallax x={[0,-8]} styleOuter={{overflow: 'visible'}}>
-              <img 
-                  src={layer1_mob}
-                  alt={'background'}
-                  style={{width:'110%'}}
-              />
-            </Parallax>
-            <Parallax x={[0,20]} styleOuter={{bottom: '-10px', overflow: 'hidden'}}>
-              <img 
-                  src={overlay}
-                  alt={'background'}
-                  style={{width:'200%', float:'right'}}
-              />
-            </Parallax>
-          </div>
-        </>
-        }
+
+        <Background screenWidth={this.props.screenWidth}/>
       </div>
     );
   }
