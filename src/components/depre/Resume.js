@@ -1,136 +1,111 @@
 import React from 'react';
 
-import Header from '../Header.js';
-import Footer from '../Footer.js';
-import NavMenu from '../NavMenu.js';
-import Contact from '../Contact.js';
-// import ResumeActual from '../Resume.js';
+import Experience from '../Experience.js';
+// import SectionTitle from './SectionTitle.js';
+import Phrase from '../Phrase.js';
 
-// import background from '../../images/backgroundIII.svg';
+const Education = (props) => {
+  return (
+    <div 
+      className='education'
+      data-aos='fade' 
+      data-aos-offset='50' 
+      data-aos-easing='ease-out-sine'
+      data-aos-duration='400'
+      data-aos-delay='200'
+      data-aos-once={true}
+    >
+      {/* <SectionTitle title='education'/> */}
+      <h4> {'education'.toUpperCase()} </h4>
 
+      <h4> {'B.S. Cognitive Science, Human Computer Interaction Specialization'} </h4>
+      <h5> {'University of California San Diego'} </h5>
+      {/* <h5> {'Human Computer Interaction Specialization'} </h5> */}
+      <h5> {'March 2020'}  </h5> 
+    </div>
+  );
+}
 
-const backgroundStyle = {
-  width:'100%',
-  height: 'auto',
-  zIndex: '2'
+const Skills = (props) => {
+  return (
+    <div className='skills'>
+      {/* <SectionTitle title='skills'/> */}
+      <h4> {'skills'.toUpperCase()} </h4>
+      
+      {Object.keys(skillsList).map(key =>
+        <div 
+          className={props.screenWidth <= 1024 ? 'phrasesM' : 'phrases'}
+          key={key}
+          data-aos='fade' 
+          data-aos-offset='50' 
+          data-aos-easing='ease-out-sine'
+          data-aos-duration='400'
+          data-aos-once={true}
+        >
+          <h4> {key} </h4>
+          {skillsList[key].map(phrase => 
+            <Phrase key={key + '/' + phrase} text={phrase}/>
+          )}
+        </div>
+      )}
+
+    </div>
+  );
 }
 
 
+const skillsList = {
+  'Languages & Info': [
+    'HTML/CSS',
+    'JavaScript',
+    'Lua'
+  ],
+  'Frameworks': [
+    'React.js',
+    'Tailwind CSS',
+    'Sass',
+  ],
+  'UI Methods': [
+    'Wireframing',
+    'Mockups',
+    'Prototyping'
+  ],
+  'UX Methods': [
+    'User Testing',
+    'Personas',
+    'Storyboards',
+    'Competitive Analyses',
+    'Affinity Diagrams',
+    'Mood Boards'
+  ],
+  'Design Apps': [
+    'Figma',
+    'Google: Slides, Drawings',
+    'Adobe: Photoshop, Lightroom',
+    'AutoCAD',
+    'Blender',
+    'SketchUp'
+  ]
+}
+
+
+
 class Resume extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      menuOpen: false,
-    }
-
-    this.toggleMenu = this.toggleMenu.bind(this);
-  }
-
-  goToTop(e) {
-    if (document.getElementById('anchor_page')) {
-      document.getElementById('anchor_page').scrollIntoView({behavior: 'smooth', block: 'start'});
-    }
-  }
-
-  toggleMenu() {
-    this.setState((state, props) => ({menuOpen: !state.menuOpen}));
-  }
-
   render() {
     return (
-      <>
-      <Header 
-        useMobileNav={this.props.screenWidth > 768 ? false : true} 
-        toggleMenu={this.props.screenWidth > 768 ? undefined : this.toggleMenu}
-        doc={this.props.doc}
-      />
+      <div 
+        className='wrapper' 
+        style={{width: '100%', marginBottom: '0rem'}}
+      >
+        {/* <div id='anchor_resume' className='anchor'></div> */}
+        {/* <SectionTitle title='resume'/>  */}
 
-      <div className='app' style={{backgroundColor: '#f0e6e7'}}>
-        {/* Show Navmenu if on mobile */}
-        {!(this.props.screenWidth > 768) &&
-          <NavMenu toggleMenu={this.toggleMenu} screenWidth={this.props.screenWidth} menuOpen={this.state.menuOpen}/> 
-        }
-        {/* Show Contact if on desktop */}
-        {this.props.screenWidth > 768 &&
-          <Contact screenWidth={this.props.screenWidth} /> 
-        }
-
-        <div className='content' style={{marginTop:'3rem', backgroundColor: '#f0e6e7'}}>
-          <div id='anchor_page' className='anchor' style={{top: '-1000px'}}></div>
-          {/* <img 
-            className='banner' 
-            src={this.props.screenWidth > 640 ? bannerD : bannerM} 
-            alt='Banner' 
-            draggable='false'          
-            data-aos='fade' 
-            data-aos-offset='50' 
-            data-aos-easing='ease-out-sine'
-            data-aos-duration='400'
-            data-aos-once={true}  
-          /> */}
-
-          <div className='pages' style={this.props.screenWidth > 640 ? {marginTop:'7rem', marginBottom: '0rem'} : {width: '75%', marginTop:'5rem', marginBottom: '0rem'}}>
-
-            <h3 
-              className='title'
-              data-aos='fade' 
-              data-aos-offset='50' 
-              data-aos-easing='ease-out-sine'
-              data-aos-duration='400'
-              data-aos-once={true}
-              // style={{marginTop: '5rem'}}
-            > 
-              {'UI/UX Designer'.toUpperCase()} 
-            </h3>
-
-            <div className='intro'>
-              {/* <div 
-                className='col' 
-                style={this.props.screenWidth > 640 ? null : {width: '100%'}}
-                data-aos='fade' 
-                data-aos-offset='50' 
-                data-aos-easing='ease-out-sine'
-                data-aos-duration='400'
-                data-aos-delay='400'
-                data-aos-once={true}
-              > 
-                <h4 className='heading'> TITLE </h4>
-                <h4> UI/UX Designer </h4>              
-
-                <br/>
-              </div> */}
-              <div 
-                className='col' 
-                style={this.props.screenWidth > 640 ? {width: '100%'} : {width: '100%'}}
-                data-aos='fade' 
-                data-aos-offset='50' 
-                data-aos-easing='ease-out-sine'
-                data-aos-duration='400'
-                data-aos-delay='100'
-                data-aos-once={true}
-              >
-                <h4 className='heading'> SUMMARY </h4>
-                <h4> 
-                  Detail-oriented UI/UX Designer with over 3 years of project and work experience and a passion for user-centered design. 
-                  Currently seeking opportunities to design innovative solutions that will improve user satisfaction and experiences!
-                </h4> 
-              </div>
-            </div>
-
-            <ResumeActual screenWidth={this.props.screenWidth} />        
-          </div>
+        <div className='resume'>
+          <Education/>
+          <Experience screenWidth={this.props.screenWidth}/>
+          <Skills screenWidth={this.props.screenWidth}/>
         </div>
-
-        <img 
-          src={background}
-          alt={'background'}
-          style={backgroundStyle}
-        /> 
-
-        <Footer screenWidth={this.props.screenWidth} color='#405E7A' />
-      </div>  
-      </>
+      </div>
     );
   }
 }

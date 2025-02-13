@@ -52,13 +52,10 @@ $size_p: toRem(18);
 //     -webkit-transform: translate3d(0, 0, 0);
 // }
 
+
 * { box-sizing: border-box; }
 
 img { -ms-interpolation-mode: bicubic; }
-
-// .outline {
-//     outline: solid;
-// }
 
 button, a {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -2633,7 +2630,7 @@ div.resume {
     .container {
         width: 50%;
         margin: auto;
-        margin-top: 5rem;
+        margin-top: 10rem;
 
         .row {
             flex-direction: row;
@@ -2737,13 +2734,6 @@ div.resume {
                 width: 100%;
                 // background-color: #ffffff;
                 overflow: hidden;
-
-                // -webkit-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
-                // -moz-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
-                // -ms-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
-                // -o-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
-                // filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
-                // box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
             
                 // display: flex;
                 // flex-flow: row;
@@ -2781,19 +2771,6 @@ div.resume {
                     }
                 }
             }
-
-            // .experience .listing {
-            //     display: flex;
-            //     flex-flow: row;
-            //     justify-content: space-between;
-            //     gap: toRem(64);
-
-            //     .right {
-            //         p {
-            //             text-align: right;
-            //         }
-            //     }
-            // }
 
             .experience .listing {
                 margin-bottom: toRem(96);
@@ -2850,7 +2827,6 @@ div.resume {
                 }  
             }
             
-
             .education {
                 margin-top: toRem(16);
                 margin-bottom: toRem(40);
@@ -2863,13 +2839,6 @@ div.resume {
                 // width: 100%;
                 // background-color: #ffffff;
                 overflow: hidden;
-
-                // -webkit-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
-                // -moz-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
-                // -ms-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
-                // -o-filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
-                // filter: drop-shadow(0px 1px 24px rgba(0, 0, 0, 0.15));
-                // box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
             }
 
             .skills {
@@ -2893,13 +2862,6 @@ div.resume {
                     margin-top: toRem(16);
                 }
             }
-
-            // .minimized {
-            //     width: auto;
-            //     min-width: 30%;
-            //     flex-grow: 0;
-            //     margin: toRem(12);
-            // }
         }
     }
 }

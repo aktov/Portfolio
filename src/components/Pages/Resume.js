@@ -20,8 +20,76 @@ const decideMarginWidth = function(value) {
 
 const lessMargins = {marginBottom: '.5rem'}
 
-class Resume extends React.Component { 
-  handleClick = () => {
+
+const jobs = [
+  {
+    title: 'UX Designer',
+    company: 'VEU Enterlink',
+    period: 'May 2024 - Current',
+    info: [
+      'Established the company\'s design process and design system, streamlining consistent design and development across our websites and web apps.',
+      'Designed Enterlink, a platform for creating, managing, and discovering online events and communities. ',
+      'Conducted a pilot study to assess product-market fit, increasing engagement by incorporating “personality type” themed questions. ',
+      'Work closely with cross-functional teams and facilitate design hand-offs in meetings to ensure user needs and technical constraints are met.',
+      'Research and design solutions for features in our backlog by conducting competitive analysis, creating high-fidelity mockups, and user testing interactive prototypes.'
+    ]
+  },
+  {
+    title: 'UI Designer (Contract)',
+    company: 'Geoffrey',
+    period: 'Oct 2024 - Dec 2024',
+    info: [
+      'Built and documented our component library and style guide, based on initial mocks and ideas.',
+      'Updated our initial mocks into organized, functional prototypes with increased consistency throughout user flows by utilizing reusable components and variants.',
+    ]
+  },
+  {
+    title: 'UI/UX Designer',
+    company: 'Artist Crowdfund Exchange',
+    period: 'Aug 2021 - Oct 2022',
+    info: [
+      'Established our design process and design system, which boosted design and development efficiency, solidified brand identity, and increased consistency throughout the app.',
+      'Led design and prototyping sessions to enhance alignment with developers, notably reducing shipment times for projects and features.',
+      'Guided monthly UX-focused feature backlog prioritizations to strike a balance between company goals and user needs. ',
+      'Designed and launched 3 major features (Onboarding, Events, Profiles), accounting for majority of the app\'s screens at release. The Profiles feature alone increased DAU by 12% in its first week by presenting users with enhanced profile personalization options.',
+      'Collaborated with company founders to create pitch decks for prospective stakeholders and seed fundraising. '
+    ]
+  },
+  {
+    title: 'UI/UX Designer',
+    company: 'Alike',
+    period: 'Mar 2021 - Aug 2021',
+    info: [
+      'Worked directly with the CEO to conceptualize and design features to drive product growth and user engagement. ',
+      'Converted static mockup screens into interactive prototypes to better help developers visualize app features and functionality.',
+      'Increased user conversion rate from 20% to 65% by identifying and solving a critical issue with our onboarding flow which had deterred users from signing up.'
+    ]
+  },
+  {
+    title: 'UI/UX Designer',
+    company: 'Hon-Media',
+    period: 'Sept 2020 - Jul 2021',
+    info: [
+      'Spearheaded the company\'s blog website development by implementing an iterative design process.',
+      'Organized and guided design critique sessions with project managers and software developers to showcase usability flows and features.',
+      'Ensured the web & mobile responsiveness and styling of the blog site by utilizing Tailwind CSS to edit properties of our React components in our front-end code.'
+    ]
+  },
+  {
+    title: 'Computing Services Technical Assistant',
+    company: 'UCSD Extension',
+    period: 'Sept 2017 - Mar 2020',
+    info: [
+      'Diagnosed and resolved technical issues that our end-users (instructors) encountered during class sessions such as projector/audio and wifi connectivity issues. Conducted over the phone and in person.',
+      'Improved our IT team\'s productivity by reorganizing computer components based on their frequency of usage and updating documentation and diagrams for those components.',
+      'Upgraded computer hardware (RAM, memory, hard drives) and updated software (Microsoft Office, Adobe Creative Cloud, installed apps) of our campus administrative staff\'s PCs and iMacs.'
+    ]
+  },
+]
+
+
+const Resume = (props) => { 
+  const handleClick = () => {
     // Send custom event to Google Analytics
     ReactGA.event({
       category: 'Resume PDF View',
@@ -31,65 +99,122 @@ class Resume extends React.Component {
     });
   };
 
-  render() {
-    return (
-      <div className='resume'>
-        <div id='resume' className='anchor' style={this.props.screenWidth > 768 ? {top: '-3rem'} : {top: '-1rem'}}></div>
+  return (
+    <div className='resume'>
+      <div id='resume' className='anchor' style={props.screenWidth > 768 ? {top: '3rem'} : {top: '-1rem'}}></div>
 
-        <div className='container' style={decideMarginWidth(this.props.screenWidth)}>
-          <Title title='Resume' screenWidth={this.props.screenWidth} />
+      <div className='container' style={decideMarginWidth(props.screenWidth)}>
+        <Title title='Resume' screenWidth={props.screenWidth} />
 
-          <div className='section'>
-            <div className={this.props.screenWidth > 768 ? 'experienceHeader' : 'experienceHeader mobile'}>
-              <h3> Experience </h3>
-              {this.props.screenWidth > 768 ? 
-              <>
-                <div className='pdf'>
-                  <a href={resume_pdf} onClick={this.handleClick} target="_blank" rel="noopener noreferrer">
-                    View as a PDF instead
-                    <img src={open} alt='Follow link' draggable='false' /> 
-                  </a>
-                </div>
-              </>
-              :
-              <> </>
-              }
-            </div>
-            <Experience screenWidth={this.props.screenWidth}/>
-            {this.props.screenWidth > 768 ? 
-            <></> 
-            : 
-            <> 
-              <div className='experienceHeader mobile'>
-                <div className='pdf'>
-                  <a href={resume_pdf} onClick={this.handleClick} target="_blank" rel="noopener noreferrer">
-                    View as a PDF instead
-                    <img src={open} alt='Follow link' draggable='false' /> 
-                  </a>
-                </div>
+        <div className='section'>
+          <div className={props.screenWidth > 768 ? 'experienceHeader' : 'experienceHeader mobile'}>
+            <h3> Experience </h3>
+            {props.screenWidth > 768 ? 
+            <>
+              <div className='pdf'>
+                <a href={resume_pdf} onClick={handleClick} target="_blank" rel="noopener noreferrer">
+                  View as a PDF instead
+                  <img src={open} alt='Follow link' draggable='false' /> 
+                </a>
               </div>
             </>
+            :
+            <> </>
             }
           </div>
-          <div className='section'>
-            <h3> Skills & Tools </h3>
-            <Skills screenWidth={this.props.screenWidth}/>
-          </div>
-          <div className='section'>
-            <h3> Education </h3>
-            <div className='education'>
-              <h4>
-                B.S. Human Computer Interaction (HCI)
-              </h4>
-              <h5 style={lessMargins}> University of California, San Diego (2020)</h5>
-            </div>
+
+          <Experience screenWidth={props.screenWidth} jobs={jobs}/>
+
+          {props.screenWidth > 768 ? 
+          <> </> 
+          : 
+          <> 
+            <div className='experienceHeader mobile'>
+              <div className='pdf'>
+                <a href={resume_pdf} onClick={handleClick} target="_blank" rel="noopener noreferrer">
+                  View as a PDF instead
+                  <img src={open} alt='Follow link' draggable='false' /> 
+                </a>
+              </div>
+            </div> 
+          </>
+          }
+        </div>
+
+        <div className='section'>
+          <h3> Skills & Tools </h3>
+          <Skills screenWidth={props.screenWidth}/>
+        </div>
+
+        <div className='section'>
+          <h3> Education </h3>
+          <div className='education'>
+            <h4>
+              B.S. Human Computer Interaction (HCI)
+            </h4>
+            <h5 style={lessMargins}> University of California, San Diego (2020)</h5>
           </div>
         </div>
-        
+
       </div>
+
       
-    );
-  }
+      {/* <div className='container' style={decideMarginWidth(props.screenWidth)}>
+        <Title title='Resume' screenWidth={props.screenWidth} />
+
+        <div className='section'>
+          <div className={props.screenWidth > 768 ? 'experienceHeader' : 'experienceHeader mobile'}>
+            <h3> Experience </h3>
+            {props.screenWidth > 768 ? 
+            <>
+              <div className='pdf'>
+                <a href={resume_pdf} onClick={handleClick} target="_blank" rel="noopener noreferrer">
+                  View as a PDF instead
+                  <img src={open} alt='Follow link' draggable='false' /> 
+                </a>
+              </div>
+            </>
+            :
+            <> </>
+            }
+          </div>
+          <Experience screenWidth={props.screenWidth}/>
+          {props.screenWidth > 768 ? 
+          <> </> 
+          : 
+          <> 
+            <div className='experienceHeader mobile'>
+              <div className='pdf'>
+                <a href={resume_pdf} onClick={handleClick} target="_blank" rel="noopener noreferrer">
+                  View as a PDF instead
+                  <img src={open} alt='Follow link' draggable='false' /> 
+                </a>
+              </div>
+            </div> 
+          </>
+          }
+        </div>
+
+        <div className='section'>
+          <h3> Skills & Tools </h3>
+          <Skills screenWidth={props.screenWidth}/>
+        </div>
+
+        <div className='section'>
+          <h3> Education </h3>
+          <div className='education'>
+            <h4>
+              B.S. Human Computer Interaction (HCI)
+            </h4>
+            <h5 style={lessMargins}> University of California, San Diego (2020)</h5>
+          </div>
+        </div>
+
+      </div> */}
+
+
+    </div>
+  );
 }
 
 export default Resume;

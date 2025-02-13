@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { Route, withRouter } from 'react-router-dom'
 import ReactGA from 'react-ga';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -31,87 +31,121 @@ class App extends React.Component {
     super(props);
     this.state = {
       screenWidth: window.innerWidth,
+      scrollBehavior: 'smooth'
     }
 
     this.handleResize = () => {
       this.setState({screenWidth: window.innerWidth});
     }
+
+    this.handleHashScroll = () => {
+      if (window.location.hash) {
+        setTimeout(() => {
+          const anchor = document.getElementById(window.location.hash.substring(1));
+          if (anchor) {
+            anchor.scrollIntoView({ behavior: this.state.scrollBehavior, block: "start" });
+          }
+        }, 100); // Small delay ensures the DOM has updated
+      }
+    };
   }
 
   componentDidMount() {
     window.addEventListener('resize', this.handleResize);
+    window.addEventListener("hashchange", this.handleHashScroll, false);
 
-    // For Google Analytics
+    // For Google Analytics. Send a pageview event to Google Analytics
     ReactGA.initialize('G-4GVEGQE25F');
-
-    // Send a pageview event to Google Analytics
     ReactGA.pageview(window.location.pathname + window.location.search);
-    
-    // if (window.sessionStorage.getItem('siteLoaded')) {
-    //   this.setState({doAnimate: false});
-    // }
-    // else {
-    //   this.setState({doAnimate: true});
-    //   window.sessionStorage.setItem('siteLoaded', 1);
-    //   window.location.reload();
-    // }
+
+    this.setScrollBehavior(window.location.pathname);
+    this.handleHashScroll();
   }
+
+  componentDidUpdate(prevProps, prevState) {
+    // Check if the path has changed and adjust scrollBehavior accordingly
+    if (window.location.pathname !== prevProps.location.pathname) {
+      this.setScrollBehavior(window.location.pathname);
+
+      setTimeout(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "instant" }); // Instantly scroll to top
+      }, 0);
+    }
+
+    if (window.location.hash !== prevProps?.location?.hash) {
+      this.handleHashScroll();
+    }
+  }
+
+  // Method to set scroll behavior based on current pathname
+  setScrollBehavior(pathname) {
+    if (pathname === '/') {
+      this.setState({ scrollBehavior: 'smooth' });
+    } else {
+      this.setState({ scrollBehavior: 'auto' });
+    }
+  }
+
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleResize);
+    window.removeEventListener("hashchange", this.handleHashScroll, false);
   }
 
 
+  
+
   render() {
     AOS.init();
+    document.documentElement.style.scrollBehavior = this.state.scrollBehavior;
+
     return (
       <ParallaxProvider>
-        <Router basename='/'>
-          <div id='anchor_page' className='anchor' style={{top: '-50rem'}}></div>
-          <Route exact path='/'>
-            {this.state.screenWidth > breakpoint ? 
-            <Desktop screenWidth={this.state.screenWidth}/> : 
-            <Mobile screenWidth={this.state.screenWidth}/>
-            }
-          </Route>
+        <div id='anchor_page' className='anchor' style={{top: '-50rem'}}></div>
 
-          {/* Case Studies */}
-          <Route path='/veu'>
-            <VEU screenWidth={this.state.screenWidth}/>
-          </Route>
-          <Route path='/ace'>
-            <ACE screenWidth={this.state.screenWidth}/>
-          </Route>
-          <Route path='/alike'>
-            <Alike screenWidth={this.state.screenWidth}/>
-          </Route>
-          <Route path='/okizeme'>
-            <Okizeme screenWidth={this.state.screenWidth}/>
-          </Route>
-          <Route path='/hon'>
-            <Hon screenWidth={this.state.screenWidth}/>
-          </Route>
-          <Route path='/csa'>
-            <CSA screenWidth={this.state.screenWidth}/>
-          </Route>
+        <Route exact path='/'>
+          {this.state.screenWidth > breakpoint ? 
+          <Desktop screenWidth={this.state.screenWidth}/> : 
+          <Mobile screenWidth={this.state.screenWidth}/>
+          }
+        </Route>
 
-          {/* Mockups */}
-          <Route path='/stacker'>
-            <Stacker screenWidth={this.state.screenWidth}/>
-          </Route>
-          <Route path='/boba'>
-            <Boba screenWidth={this.state.screenWidth}/>
-          </Route>
-          <Route path='/flowers'>
-            <Flowers screenWidth={this.state.screenWidth}/>
-          </Route>
-          <Route path='/edushare'>
-            <Edushare screenWidth={this.state.screenWidth}/>
-          </Route>
-        </Router>
+        {/* Case Studies */}
+        <Route path='/veu'>
+          <VEU screenWidth={this.state.screenWidth}/>
+        </Route>
+        <Route path='/ace'>
+          <ACE screenWidth={this.state.screenWidth}/>
+        </Route>
+        <Route path='/alike'>
+          <Alike screenWidth={this.state.screenWidth}/>
+        </Route>
+        <Route path='/okizeme'>
+          <Okizeme screenWidth={this.state.screenWidth}/>
+        </Route>
+        <Route path='/hon'>
+          <Hon screenWidth={this.state.screenWidth}/>
+        </Route>
+        <Route path='/csa'>
+          <CSA screenWidth={this.state.screenWidth}/>
+        </Route>
+
+        {/* Mockups */}
+        <Route path='/stacker'>
+          <Stacker screenWidth={this.state.screenWidth}/>
+        </Route>
+        <Route path='/boba'>
+          <Boba screenWidth={this.state.screenWidth}/>
+        </Route>
+        <Route path='/flowers'>
+          <Flowers screenWidth={this.state.screenWidth}/>
+        </Route>
+        <Route path='/edushare'>
+          <Edushare screenWidth={this.state.screenWidth}/>
+        </Route>
       </ParallaxProvider>
     );
   }
 }
 
-export default App;
+export default withRouter(App);

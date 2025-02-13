@@ -40,7 +40,7 @@ const Intro = (props) => {
           I'm Alex, 
         </h1>
         <h1 style={{ fontSize: props.screenWidth < 480 ? '2rem' : '2.8rem', marginTop: '-2rem' }}> 
-          a UX designer. 
+          a UX designer 
         </h1>
         {/* <h5 style={{ fontSize: this.props.screenWidth < 480 ? '1rem' : '1.25rem' }}> 
           I’m currently looking for full-time opportunities to bring what I love doing onto the team to create outstanding experiences for your users! 
