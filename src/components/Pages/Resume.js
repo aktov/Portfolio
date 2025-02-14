@@ -32,7 +32,8 @@ const jobs = [
       'Conducted a pilot study to assess product-market fit, increasing engagement by incorporating “personality type” themed questions. ',
       'Work closely with cross-functional teams and facilitate design hand-offs in meetings to ensure user needs and technical constraints are met.',
       'Research and design solutions for features in our backlog by conducting competitive analysis, creating high-fidelity mockups, and user testing interactive prototypes.'
-    ]
+    ],
+    industry: ['VR', 'events', 'online communities', 'gamification']
   },
   {
     title: 'UI Designer (Contract)',
@@ -41,7 +42,8 @@ const jobs = [
     info: [
       'Built and documented our component library and style guide, based on initial mocks and ideas.',
       'Updated our initial mocks into organized, functional prototypes with increased consistency throughout user flows by utilizing reusable components and variants.',
-    ]
+    ],
+    industry: ['service marketplace', 'booking system', 'on-demand services' ]
   },
   {
     title: 'UI/UX Designer',
@@ -53,7 +55,8 @@ const jobs = [
       'Guided monthly UX-focused feature backlog prioritizations to strike a balance between company goals and user needs. ',
       'Designed and launched 3 major features (Onboarding, Events, Profiles), accounting for majority of the app\'s screens at release. The Profiles feature alone increased DAU by 12% in its first week by presenting users with enhanced profile personalization options.',
       'Collaborated with company founders to create pitch decks for prospective stakeholders and seed fundraising. '
-    ]
+    ],
+    industry: ['web3', 'blockchain', 'social media', 'crowdfunding']
   },
   {
     title: 'UI/UX Designer',
@@ -63,7 +66,8 @@ const jobs = [
       'Worked directly with the CEO to conceptualize and design features to drive product growth and user engagement. ',
       'Converted static mockup screens into interactive prototypes to better help developers visualize app features and functionality.',
       'Increased user conversion rate from 20% to 65% by identifying and solving a critical issue with our onboarding flow which had deterred users from signing up.'
-    ]
+    ],
+    industry: ['dating app', 'social media', 'marketing']
   },
   {
     title: 'UI/UX Designer',
@@ -73,7 +77,8 @@ const jobs = [
       'Spearheaded the company\'s blog website development by implementing an iterative design process.',
       'Organized and guided design critique sessions with project managers and software developers to showcase usability flows and features.',
       'Ensured the web & mobile responsiveness and styling of the blog site by utilizing Tailwind CSS to edit properties of our React components in our front-end code.'
-    ]
+    ],
+    industry: ['design consulting', 'business strategy', 'local community']
   },
   {
     title: 'Computing Services Technical Assistant',
@@ -83,7 +88,19 @@ const jobs = [
       'Diagnosed and resolved technical issues that our end-users (instructors) encountered during class sessions such as projector/audio and wifi connectivity issues. Conducted over the phone and in person.',
       'Improved our IT team\'s productivity by reorganizing computer components based on their frequency of usage and updating documentation and diagrams for those components.',
       'Upgraded computer hardware (RAM, memory, hard drives) and updated software (Microsoft Office, Adobe Creative Cloud, installed apps) of our campus administrative staff\'s PCs and iMacs.'
-    ]
+    ],
+    industry: ['IT', 'help desk', 'troubleshooting', 'customer support']
+  },
+  {
+    title: 'Website Graphics Designer',
+    company: 'US Trading Co.',
+    period: 'Jun 2017 - Aug 2017',
+    info: [
+      'Photographed new products in a controlled studio space and learned how to balance f-stop, aperture, and shutter speed. Also managed a three-point lighting set up.',
+      'Edited product photos in Adobe Lightroom and Photoshop for pre-uploading.',
+      'Used Adobe InDesign to update the existing website catalog with new photos.'
+    ],
+    industry: ['import/export', 'grocery distributor', 'wholesale']
   },
 ]
 
@@ -108,45 +125,37 @@ const Resume = (props) => {
 
         <div className='section'>
           <div className={props.screenWidth > 768 ? 'experienceHeader' : 'experienceHeader mobile'}>
-            <h3> Experience </h3>
             {props.screenWidth > 768 ? 
-            <>
-              <div className='pdf'>
+              <>
+              <h3> Experience </h3>
+              <div className={props.screenWidth > 768 ? 'pdf' : 'pdf mobile'}>
                 <a href={resume_pdf} onClick={handleClick} target="_blank" rel="noopener noreferrer">
                   View as a PDF instead
                   <img src={open} alt='Follow link' draggable='false' /> 
                 </a>
               </div>
-            </>
-            :
-            <> </>
+              </>
+              :
+              <>
+              <div className={props.screenWidth > 768 ? 'pdf' : 'pdf mobile'}>
+                <a href={resume_pdf} onClick={handleClick} target="_blank" rel="noopener noreferrer">
+                  View as a PDF instead
+                  <img src={open} alt='Follow link' draggable='false' /> 
+                </a>
+              </div>
+              <h3> Experience </h3>
+              </>
             }
           </div>
-
           <Experience screenWidth={props.screenWidth} jobs={jobs}/>
-
-          {props.screenWidth > 768 ? 
-          <> </> 
-          : 
-          <> 
-            <div className='experienceHeader mobile'>
-              <div className='pdf'>
-                <a href={resume_pdf} onClick={handleClick} target="_blank" rel="noopener noreferrer">
-                  View as a PDF instead
-                  <img src={open} alt='Follow link' draggable='false' /> 
-                </a>
-              </div>
-            </div> 
-          </>
-          }
         </div>
 
         <div className='section'>
-          <h3> Skills & Tools </h3>
+          <h3> Expertise </h3>
           <Skills screenWidth={props.screenWidth}/>
         </div>
 
-        <div className='section'>
+        {/* <div className='section'>
           <h3> Education </h3>
           <div className='education'>
             <h4>
@@ -154,65 +163,11 @@ const Resume = (props) => {
             </h4>
             <h5 style={lessMargins}> University of California, San Diego (2020)</h5>
           </div>
-        </div>
+        </div> */}
 
       </div>
 
       
-      {/* <div className='container' style={decideMarginWidth(props.screenWidth)}>
-        <Title title='Resume' screenWidth={props.screenWidth} />
-
-        <div className='section'>
-          <div className={props.screenWidth > 768 ? 'experienceHeader' : 'experienceHeader mobile'}>
-            <h3> Experience </h3>
-            {props.screenWidth > 768 ? 
-            <>
-              <div className='pdf'>
-                <a href={resume_pdf} onClick={handleClick} target="_blank" rel="noopener noreferrer">
-                  View as a PDF instead
-                  <img src={open} alt='Follow link' draggable='false' /> 
-                </a>
-              </div>
-            </>
-            :
-            <> </>
-            }
-          </div>
-          <Experience screenWidth={props.screenWidth}/>
-          {props.screenWidth > 768 ? 
-          <> </> 
-          : 
-          <> 
-            <div className='experienceHeader mobile'>
-              <div className='pdf'>
-                <a href={resume_pdf} onClick={handleClick} target="_blank" rel="noopener noreferrer">
-                  View as a PDF instead
-                  <img src={open} alt='Follow link' draggable='false' /> 
-                </a>
-              </div>
-            </div> 
-          </>
-          }
-        </div>
-
-        <div className='section'>
-          <h3> Skills & Tools </h3>
-          <Skills screenWidth={props.screenWidth}/>
-        </div>
-
-        <div className='section'>
-          <h3> Education </h3>
-          <div className='education'>
-            <h4>
-              B.S. Human Computer Interaction (HCI)
-            </h4>
-            <h5 style={lessMargins}> University of California, San Diego (2020)</h5>
-          </div>
-        </div>
-
-      </div> */}
-
-
     </div>
   );
 }

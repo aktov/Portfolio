@@ -14,13 +14,13 @@ class Work extends React.Component {
 
         {this.props.screenWidth > 768 && 
           <>
-            <h4 className='heading'> {'Featured'} </h4>
+            <h3 className='heading'> {'Featured'} </h3>
             <Cards group={'featured'} screenWidth={this.props.screenWidth} />
           </>
         }
-        <h4 className='heading'> {'Case Studies'} </h4>
+        <h3 className='heading'> {'Case Studies'} </h3>
         <Cards group={'casestudies'} screenWidth={this.props.screenWidth} />
-        <h4 className='heading'> {'Designs'} </h4>
+        <h3 className='heading'> {'Designs'} </h3>
         <Cards group={'designs'} screenWidth={this.props.screenWidth} />
       </div> 
     );

@@ -43,7 +43,7 @@ const styleMobile = {
 
 // const line1 = "I'm Alex, and I often find my head stuck in daydreams and clouds. Why? It's simply because I like to think of ideas that can be materialized through design."
 // const line2 = "I've come to truly believe that good user-centric design has the potential to greatly benefit the world. UX Design isn't just about “making things look good”; it's much more than that. It's about providing an excellent overall user experience that will ensure the user's satisfaction. "
-const line1 = "I'm a UX Designer with several years of experience working at startups ranging from social media to web3, with the goal of designing, improving, and delivering products that create an enjoyable experience."
+const line1 = "I'm a UX Designer with several years of experience working at startups ranging from VR, web3, to social media, with the goal of designing, improving, and delivering products that create an enjoyable experience."
 const line2 = "I'm an advocate of people-centric design, so I love stepping into the shoes of our users to learn their needs and painpoints, and iteratively designing a usable yet elegant solution for those issues."
 const line3 = "Outside of the UI/UX realm, you can catch me designing games (sorta), exploring new hiking trails and restaurants in the bay, or contemplating the price tag on yet another Lego set."
 const line4 = "If you're interested in hearing more about my projects or experience, feel free to message me. I'd love to connect or collaborate! "
@@ -89,7 +89,7 @@ class About extends React.Component {
                 className='text' 
                 style={this.props.screenWidth > 640 ? {marginLeft: '7rem', marginBottom: '70vh'} : {width: '100%'}}
               >
-                <Title title='a bit about me' screenWidth={this.props.screenWidth} />
+                <Title title="just a bit 'bout me" screenWidth={this.props.screenWidth} />
                 <p
                   data-aos='fade' 
                   data-aos-offset='50' 
@@ -128,7 +128,7 @@ class About extends React.Component {
           :
           <Parallax translateY={[0,10]} style={{position: 'relative', marginBottom: '8rem', zIndex: '2'}}>
             <div className='content' style={styleMobile}>
-              <Title title='a bit about me' screenWidth={this.props.screenWidth} />
+              <Title title="just a bit 'bout me" screenWidth={this.props.screenWidth} />
               <div className='prof' style={{marginTop: '2rem', marginBottom: '1rem', alignSelf: 'center', maxWidth: '85%'}}>
                 <img src={prof} className='actual' alt='profile pic' draggable='false'/>
                 <Parallax translateX={[-2,2]} translateY={[-2,2]} style={{position: 'relative'}}>

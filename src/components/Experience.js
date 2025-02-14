@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState, useEffect, useRef } from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
 import Phrase from './Phrase.js';
@@ -118,6 +119,51 @@ const tagColor = '#666666'
 //   }
 // }
 
+
+// const Experience = ({ jobs, screenWidth }) => {
+//   return (
+//     <div className='experience'>
+      
+//     </div>
+//   );
+// };
+
+
+// const Experience = ({ jobs, screenWidth }) => {
+//   return (
+//     <div className="experience-container">
+//       {/* Sticky Left Column */}
+//       <div className="left-column">
+//         {jobs.map((job, index) => (
+//           <div key={index} className="company">
+//             {job.company}
+//           </div>
+//         ))}
+//       </div>
+
+//       {/* Parallax Right Column */}
+//       <Parallax pages={jobs.length} className="right-column">
+//         {jobs.map((job, index) => (
+//           <ParallaxLayer 
+//             key={index} 
+//             offset={index} 
+//             speed={0.5} 
+//             className="job-details"
+//           >
+//             <h3>{job.title}</h3>
+//             <p>{job.period}</p>
+//             <div className='phrases'>
+//               {job.info.map((phrase, index) => 
+//                 <Phrase key={jobs.title + '/' + index} text={phrase}/>
+//               )}
+//             </div>
+//           </ParallaxLayer>
+//         ))}
+//       </Parallax>
+//     </div>
+//   );
+// };
+
 const Experience = ({ jobs, screenWidth }) => {
   return (
     <div className='experience'>
@@ -126,25 +172,26 @@ const Experience = ({ jobs, screenWidth }) => {
           <div 
             className='listing'
             key={index}
-            // data-aos='fade-up' 
-            // data-aos-offset='50' 
-            // data-aos-easing='ease-out-sine'
-            // data-aos-duration='400'
-            // data-aos-once={true}
+            data-aos='fade-up' 
+            data-aos-offset='50' 
+            data-aos-easing='ease-out-sine'
+            data-aos-duration='400'
+            data-aos-once={true}
           >
             <div className='left'>
-              <h4> {jobs.title} </h4>
-              <h5> {jobs.company} </h5>
+              {/* <h4> {jobs.title} </h4> */}
+              <h4> {jobs.company} </h4>
               <p> {jobs.period} </p> 
+              <div>
+                  {jobs.industry && <Tags names={jobs.industry} color={tagColor}/>}
+              </div>
             </div>
             <div className='right'>
+              <h4> {jobs.title} </h4>
               <div className='phrases'>
                 {jobs.info.map((phrase, index) => 
                   <Phrase key={jobs.title + '/' + index} text={phrase}/>
                 )}
-              </div>
-              <div>
-                  {jobs.skills && <Tags names={jobs.skills} color={tagColor}/>}
               </div>
             </div>
           </div>
@@ -159,8 +206,11 @@ const Experience = ({ jobs, screenWidth }) => {
             data-aos-once={true}
           >
             <h4> {jobs.title} </h4>
-            <h5> {jobs.company} </h5>
-            <p> {jobs.period} </p> 
+            <h5> @{jobs.company} </h5>
+            <p className='period'> {jobs.period} </p> 
+            <div>
+                {jobs.industry && <Tags names={jobs.industry} color={tagColor}/>}
+            </div>
           </div>   
       ))}
     </div>

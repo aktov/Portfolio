@@ -651,6 +651,23 @@ div.content {
             margin-left: 12.5%;
         }
 
+        h3.heading {
+            position: relative;
+            width: 75%;
+            margin-top: toRem(0);
+            margin-left: 12.5%;
+            margin-bottom: toRem(16);
+            
+            font-family: 'Poppins', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: toRem(36);    
+
+            @media screen and (min-width: 768px){
+                font-size: toRem(48);   
+            }
+        }
+
         h4 {
             position: relative;
             width: 75%;
@@ -661,24 +678,6 @@ div.content {
             font-style: normal;
             font-weight: 700;
             font-size: toRem(24);    
-        }
-
-        h4.heading {
-            position: relative;
-            width: 75%;
-            margin-top: toRem(0);
-            margin-left: 12.5%;
-            margin-bottom: toRem(16);
-            
-            font-family: 'Poppins', sans-serif;
-            font-style: normal;
-            font-weight: 600;
-            font-size: toRem(32);    
-
-            @media screen and (min-width: 768px){
-                font-size: toRem(36);     
-                font-weight: 600;     
-            }
         }
     
         div.cardsDesktop {
@@ -2611,7 +2610,8 @@ div.background {
         margin-bottom: 0;
         margin-top: 0;
 
-        font-size: toRem(64);
+        // font-family: 'Host Grotesk';
+        font-size: toRem(72);
         font-weight: 700;
     }
 }
@@ -2648,11 +2648,11 @@ div.resume {
                 font-family: 'Poppins', sans-serif;
                 font-style: normal;
                 font-weight: 600;
-                font-size: toRem(28); 
+                font-size: toRem(36);   
     
-                // @media screen and (min-width: 768px){
-                    font-size: toRem(32);          
-                // }
+                @media screen and (min-width: 768px){
+                    font-size: toRem(48);     
+                }
             }
 
             h4 {
@@ -2661,18 +2661,36 @@ div.resume {
                 font-family: 'Poppins', serif;
                 font-weight: 600;
                 font-size: toRem(22);
+
+                @media screen and (min-width: 768px){
+                    font-size: toRem(24);          
+                }
             }
 
             h5 {
                 margin-top: 0;
                 margin-bottom: toRem(8);
                 font-family: 'Poppins', serif;
-                font-weight: 500;
+                font-weight: 600;
             }
 
             p {
                 margin-top: 0;
                 margin-bottom: toRem(16);
+                font-family: 'Host Grotesk';
+                font-size: toRem(17);
+
+                @media screen and (min-width: 768px){
+                    font-size: toRem(19);          
+                }
+
+                .period {
+                    font-size: toRem(15);
+
+                    @media screen and (min-width: 768px){
+                        font-size: toRem(19);
+                    }
+                }
             }
 
             .experienceHeader {
@@ -2691,6 +2709,17 @@ div.resume {
                     justify-content: flex-start;
                     align-items: center;
                     gap: toRem(16);
+
+                    &.mobile {
+                        border-radius: toRem(24);
+                        border-color: #888888;
+                        border: toRem(2) solid #cccccc;
+                        margin-bottom: toRem(64);
+                        padding: toRem(8) toRem(8);
+                        padding-right: toRem(24);
+
+                        justify-content: center;
+                    }
     
                     a {
                         position: relative;
@@ -2724,20 +2753,10 @@ div.resume {
 
             .listing {
                 margin-top: toRem(16);
-                margin-bottom: toRem(40);
-                // padding: toRem(24) toRem(24);
-                // border-width: toRem(4);
-                // border-color: #bbbbbb;
-                // border-style: solid;
-                // border-radius: toRem(8);
+                margin-bottom: toRem(96);
 
                 width: 100%;
-                // background-color: #ffffff;
                 overflow: hidden;
-            
-                // display: flex;
-                // flex-flow: row;
-                // justify-content: space-between;
 
                 a {
                     color: #8ca7bF;
@@ -2760,20 +2779,68 @@ div.resume {
                     }
 
                     p {
-                        margin-left: toRem(10);    
-                        font-family: 'Host Grotesk';
-                        // font-size: toRem(17);
+                        margin-left: toRem(10); 
                         line-height: 150%;
-
-                        @media screen and (min-width: 768px){
-                            font-size: toRem(19);          
-                        }
                     }
                 }
             }
 
+
+            div.tags {
+                position: relative;
+                width: 100%;
+                // margin-left: auto;
+                
+                display: flex;
+                flex-flow: row wrap;
+                row-gap: toRem(8);
+                justify-content: flex-start;
+                align-content: flex-start;
+                align-items: flex-start;
+
+                @media screen and (min-width: 768px){
+                    margin-top: toRem(8);
+                }
+    
+                div.tagWrapper {
+                    border-radius: toRem(48);
+                    border: toRem(2) solid #cccccc;
+                    padding: toRem(2) toRem(8);
+                    margin-right: toRem(8);
+
+                    padding: toRem(8) toRem(12);
+                    margin-right: toRem(8);
+                    margin-bottom: toRem(4);
+
+                    border-color:#aaaaaa !important;
+
+                    @media screen and (min-width: 768px){    
+                        padding: toRem(4) toRem(12);
+                        margin-right: toRem(12);
+                        margin-bottom: toRem(4);
+                    }
+                }
+
+                h6 {
+                    margin: 0;
+                    // padding-right: toRem(10);
+    
+                    font-family: 'DM Sans';
+                    // font-family: 'Host Grotesk';
+                    // font-family: 'Poppins', sans-serif;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+
+                    color: #cccccc;
+
+                    @media screen and (min-width: 768px){
+                        font-size: toRem(17);          
+                    }
+                }
+            }  
+
             .experience .listing {
-                margin-bottom: toRem(96);
                 display: flex;
                 flex-flow: row;
                 justify-content: space-between;
@@ -2788,43 +2855,9 @@ div.resume {
                 }
 
                 &.mobile {
-                    margin-bottom: toRem(56);
+                    margin-bottom: toRem(96);
                     display: block;
                 }
-
-                div.tags {
-                    position: relative;
-                    width: 100%;
-                    margin-left: auto;
-                    
-                    display: flex;
-                    flex-flow: row wrap;
-                    row-gap: toRem(8);
-                    justify-content: flex-start;
-                    align-content: flex-start;
-                    align-items: flex-start;
-        
-                    div.tagWrapper {
-                        border-radius: toRem(16);
-                        border: toRem(2) solid #cccccc;
-                        padding: toRem(2) toRem(8);
-                        margin-right: toRem(8);
-                    }
-
-                    h6 {
-                        margin: 0;
-                        // padding-right: toRem(10);
-        
-                        font-family: 'DM Sans';
-                        // font-family: 'Host Grotesk';
-                        // font-family: 'Poppins', sans-serif;
-                        font-style: normal;
-                        font-weight: 600;
-                        line-height: normal;
-
-                        color: #cccccc;
-                    }
-                }  
             }
             
             .education {
@@ -2844,22 +2877,73 @@ div.resume {
             .skills {
                 display: flex;
                 flex-flow: row wrap;
-                justify-content: space-between;
+                // justify-content: space-between;
                 align-items: stretch;
-                gap: toRem(32);
-                margin: toRem(-12);
+                // gap: toRem(32);
                 margin-top: toRem(4);
                 margin-bottom: toRem(24);
 
                 .listing {
-                    width: auto;
+                    width: 100%;
                     min-width: 24%;
+                    margin-bottom: toRem(96);
+
+                    display: flex;
+                    flex-flow: column;
                     flex-grow: 1;
-                    margin: toRem(12);
+
+                    .left {
+                        display: flex;
+                        flex-flow: column;
+
+                        @media screen and (min-width: 768px){    
+                            flex-flow: row wrap;
+                            column-gap: toRem(64);
+                        }
+                    }
                 }
 
-                .phrases {
-                    margin-top: toRem(16);
+                .tags {
+                    margin: 0;
+                    width: 100%;
+
+                    @media screen and (min-width: 768px){
+                        margin-top: toRem(8);
+                        width: 50%;
+                    }
+
+                    .tagWrapper {
+                        padding: toRem(8) toRem(12);
+                        margin-right: toRem(8);
+                        margin-bottom: toRem(4);
+                        border-radius: toRem(24);
+
+                        border-color:#aaaaaa !important;
+
+                        @media screen and (min-width: 768px){    
+                            padding: toRem(8) toRem(16);
+                            margin-right: toRem(16);
+                            margin-bottom: toRem(8);
+                        }
+                    }
+
+                    h6 {
+                        @media screen and (min-width: 768px){
+                            font-size: toRem(17);          
+                        }
+                    }
+                }
+
+                p {  
+                    font-family: 'Host Grotesk';
+                    font-size: toRem(17);
+                    line-height: 150%;
+                    width: 100%;
+
+                    @media screen and (min-width: 768px){
+                        width: 40%;
+                        font-size: toRem(19);          
+                    }
                 }
             }
         }
@@ -2881,7 +2965,7 @@ div.about {
 
     .content {
         width: 75%;
-        height: 150vh;
+        height: 200vh;
 
         @media screen and (min-width: 768px){
             height: 200vh;
