@@ -45,7 +45,8 @@ const link2 = 'https://enterlink.app/'
 
 const imageMarginNoTop = {marginTop: '0rem', marginLeft: '0rem'};
 const imageMarginLessBottom = {marginTop: '0rem', marginBottom: '2rem', marginLeft: '0rem'};
-const imageCaptioned = {marginTop: '0.5rem', marginBottom: '1rem', marginRight: 'auto', marginLeft: '0rem'};
+// const imageCaptioned = {marginTop: '0.5rem', marginBottom: '1rem', marginRight: 'auto', marginLeft: '0rem'};
+// const imageShadow = {boxShadow: '0px 0px 32px 0px rgba(0, 0, 0, 0.15)'};
 
 class VEU extends React.Component {
   constructor(props) {
@@ -156,7 +157,8 @@ class VEU extends React.Component {
                 <p>
                   Still working on how I'd like to tell this story. It's been a great experience overall and I'd love to share about it in the best way possible.
                 </p>
-                <br/>
+                <br/> 
+                <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
 
                 {/* <h4 className='heading'> Disclaimer </h4>
                 <p className='bold'>
