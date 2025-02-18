@@ -345,19 +345,19 @@ class Stacker extends React.Component {
               <SectionTitle title='Links' color={color2}/> 
               <h4 className='heading'> Play the game (Figma prototype) </h4>
               <p>
-                Here's the link to the <a href={link}> Figma prototype</a>, where you can play my minigame.
+                Here's the link to the <a href={link} target='_blank'> Figma prototype</a>, where you can play my minigame.
               </p>
               <br/> <br/> <br/>
 
               <h4 className='heading'> The build process (Figma file) </h4>
               <p>
-                Check out the actual <a href={link2}> Figma file</a>, where you can view all the variables, components, and screens required for this game.
+                Check out the actual <a href={link2} target='_blank'> Figma file</a>, where you can view all the variables, components, and screens required for this game.
               </p>
               <br/> <br/> <br/>
 
               <h4 className='heading'> Sharing the creativity </h4>
               <p>
-                Here's my <a href='https://www.linkedin.com/feed/update/urn:li:activity:7082475571913363456/'> Linkedin post</a> showcasing my test run of Stacker!
+                Here's my <a href='https://www.linkedin.com/feed/update/urn:li:activity:7082475571913363456/' target='_blank'> Linkedin post</a> showcasing my test run of Stacker!
               </p>
 
               <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7082475506972962816" 
