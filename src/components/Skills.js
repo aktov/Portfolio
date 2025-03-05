@@ -33,9 +33,7 @@ const skillsList = {
       'Figma',
       'Sketch',
       'Webflow',
-      'Maze.co',
-      'Typeform',
-      'Squarespace',
+      'Notion',
       'Adobe Lightroom',
       'Adobe Photoshop',
     ]
@@ -46,7 +44,7 @@ const skillsList = {
     'list': [
       'HTML/CSS',
       'JavaScript',
-      'React.js',
+      'React',
       'Tailwind CSS',
       'Sass',
       'Lua',
