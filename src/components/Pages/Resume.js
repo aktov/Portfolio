@@ -27,11 +27,10 @@ const jobs = [
     company: 'VEU Enterlink',
     period: 'May 2024 - Current',
     info: [
-      'Established the company\'s design process and design system, streamlining consistent design and development across our websites and web apps.',
-      'Designed Enterlink, a platform for creating, managing, and discovering online events and communities. ',
-      'Conducted a pilot study to assess product-market fit, increasing engagement by incorporating “personality type” themed questions. ',
-      'Work closely with cross-functional teams and facilitate design hand-offs in meetings to ensure user needs and technical constraints are met.',
-      'Research and design solutions for features in our backlog by conducting competitive analysis, creating high-fidelity mockups, and user testing interactive prototypes.'
+      'Established our design process and design system, streamlining consistent design and development across our websites and Enterlink, a platform for creating, managing, and discovering online events and communities.',
+      'Designed and prototyped Enterlink\'s entire UI, while ensuring intuitive and straightforward UX for our feature flows.',
+      'Conduct research through surveys and user testing to improve current user flows and validate new features. Rewarded participants with on-platform badges to encourage engagement.',
+      'Work cross-functionally to facilitate design hand-offs to ensure user-need fulfillment and alignment between design and development.'
     ],
     industry: ['VR', 'events', 'online communities', 'gamification']
   },
